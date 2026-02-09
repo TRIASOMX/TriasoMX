@@ -17,6 +17,7 @@ import AcordeonItemCol from "../unitComponents/AcordeonItemCol";
 import OSection from "../unitComponents/OSection.astro";
 import flag from "../../assets/images/Burners/flag.svg";
 import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
 <div class="w-full flex flex-col items-center justify-center font-bold mt-5 lg:mt-0">
@@ -114,21 +115,17 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
         <h2 class="text-2xl md:text-3xl my-6 text-center">
           Retractable Drag Slat for Efficient Transport and Operation
         </h2>
-        <div class="z-20">
-          <div class="w-full flex justify-center">
-            <video
-              class="lg:w-3/5"
-              playsinline
-              controls
-              poster="/Gallery/customdes.webp"
-              preload="metadata"
-              width="1280"
-              height="720"
-            >
-              <source src="/Videos/Webm/DMVideo1.webp" type="video/webm" />
-              <source src="/Videos/Mp4/DMVideo1.mp4" type="video/mp4" />
-            </video>
-          </div>
+        <div class="z-20 flex items-center justify-center">
+          <SmartVideo
+          client:visible
+          desktopWidth="70%"
+          desktopHeight="70%"
+          src="/Videos/Webm/PlaC140ET.webm"
+          poster="/Gallery/customdes.webp"
+          autoplayOnMobile={true}
+          isLoop={true}
+          />
+
         </div>
         <div class="flex justify-end py-10">
           <svg

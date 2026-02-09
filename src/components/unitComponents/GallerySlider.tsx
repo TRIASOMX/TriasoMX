@@ -144,7 +144,7 @@ export default function GallerySlider({
         </h2>
 
         {/* Contenedor principal de la imagen */}
-        <div className="relative flex items-center justify-center min-h-[400px] overflow-hidden">
+        <div className="relative flex items-center justify-center min-h-[200px] lg:min-h-[400px] overflow-hidden">
           {/* Botón anterior */}
           <button
             onClick={goToPrevious}
@@ -161,7 +161,7 @@ export default function GallerySlider({
               ref={imageRef}
               src={slides[currentIndex].image}
               alt={`Slide ${currentIndex + 1}`}
-              className="max-h-[400px] object-contain mx-auto"
+              className=" max-h-[200px] lg:max-h-[400px] object-contain mx-auto"
             />
           </div>
 
@@ -282,7 +282,7 @@ export default function GallerySlider({
           <img
             src={slides[currentIndex].image}
             alt={`Slide ${currentIndex + 1} en pantalla completa`}
-            className="max-h-[90vh] max-w-full object-contain"
+            className="lg:max-h-[90vh] max-w-full object-contain"
           />
         </div>
 
