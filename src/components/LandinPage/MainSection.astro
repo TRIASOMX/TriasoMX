@@ -86,7 +86,7 @@ const Cards = [
                 </div>
             </div>
             <div class="hidden lg:flex md:flex">
-                <HeroSlider slides={Cards} client:only />
+                <HeroSlider slides={Cards} client:idle />
             </div>
         </div>
     </div>
@@ -94,7 +94,7 @@ const Cards = [
     <div
         class="relative flex lg:hidden md:hidden w-full overflow-hidden max-w-7xl mx-auto px-8 py-10"
     >
-        <HeroSlider slides={Cards} client:only />
+        <HeroSlider slides={Cards} client:idle />
     </div>
 </div>
 

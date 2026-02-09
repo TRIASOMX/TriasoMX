@@ -99,6 +99,7 @@ export default function HeroSlider({
                     {slides.map((_, index) => (
                         <button
                             key={index}
+                            aria-label="Slider buttons"
                             onClick={() => setCurrent(index)}
                             className={`transition-all duration-300 rounded-full ${current === index
                                 ? "w-8 h-1.5 bg-red-600"

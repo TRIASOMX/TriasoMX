@@ -87,6 +87,7 @@ export default function ItemsSlider({ images }: Props) {
         <div className="hidden lg:flex absolute -bottom-4 right-2 gap-2">
           <button
             onClick={() => scroll("left")}
+            aria-label="Left slider button"
             className="
               p-2
               bg-white
@@ -114,6 +115,7 @@ export default function ItemsSlider({ images }: Props) {
 
           <button
             onClick={() => scroll("right")}
+            aria-label="Right slider button"
             className="
               p-2
               bg-white
