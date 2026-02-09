@@ -7,7 +7,7 @@ const { title = "TRIASOUS", description ="Manufacturer of high-quality asphalt p
 
 <!doctype html>
 <html lang="en" >
-	<head>
+	<head class="font-sans">
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" >
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -18,7 +18,7 @@ const { title = "TRIASOUS", description ="Manufacturer of high-quality asphalt p
 			content={description}>
 		<title>Astro Basics</title>
 	</head>
-	<body class="min-h-screen flex flex-col font-sans bg-bgMain">
+	<body class="min-h-screen flex flex-col bg-bgMain">
 		<Navbar/>
 		<main class="flex-grow">
 			<slot /> <!-- Aquí se inyectará el contenido de las páginas -->
