@@ -86,7 +86,7 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
         muted={isMuted}
         loop={isLoop} 
         playsInline 
-        preload="metadata"
+        preload="none"
         style={{ objectFit: 'cover', display: 'block', background:"#f4f5f6" }}
       />
     </div>

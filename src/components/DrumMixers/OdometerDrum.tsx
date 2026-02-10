@@ -59,7 +59,7 @@ const OdometerDrum = () => {
               <Odometer value={value6} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-grisP text-center lg:text-start">Range of hot-mix production</p>
+            <p className="text-[#4F4F4F] text-center lg:text-start">Range of hot-mix production</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -67,7 +67,7 @@ const OdometerDrum = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">%</p>
             </div>
-            <p className="text-grisP text-center lg:text-start">
+            <p className="text-[#4F4F4F] text-center lg:text-start">
               RAP (Recycled Asphalt Pavement) Incorporation
             </p>
           </div>
@@ -81,7 +81,7 @@ const OdometerDrum = () => {
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal lg:ml-3">million BTU/hr</p>
             </div>
-            <p className="text-grisP text-center lg:text-start w-full">
+            <p className="text-[#4F4F4F] text-center lg:text-start w-full">
               Modulating burner capacity
             </p>
           </div>

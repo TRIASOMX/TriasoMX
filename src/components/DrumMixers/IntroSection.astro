@@ -22,21 +22,29 @@ import SmartVideo from "../unitComponents/SmartVideo";
   </p>
   <br />
   <div class="relative w-full aspect-video overflow-hidden">
-    <SmartVideo
-    client:visible
-    src="/Videos/Webm/landingVideo.webm"
-    poster="/Gallery/customdes.webp"
-    autoplayOnMobile={false}
-    isLoop={false}
+    <img
+      src="/Gallery/customdes.webp"
+      alt="Hero background"
+      class="absolute inset-0 w-full h-full object-cover z-0"
+      fetchpriority="high"
+      decoding="async"
     />
-
+    <SmartVideo
+      client:visible
+      src="/Videos/Webm/landingVideo.webm"
+      poster="/Gallery/customdes.webp"
+      autoplayOnMobile={false}
+      isLoop={false}
+    />
   </div>
 
   <div
     class="bg-white py-8 px-2 md:px-20 rounded-2xl flex flex-col items-center justify-center my-10"
   >
     <details class="group w-full flex flex-col justify-between">
-      <summary class="flex flex-col justify-between items-center cursor-pointer list-none ">
+      <summary
+        class="flex flex-col justify-between items-center cursor-pointer list-none"
+      >
         <div class="w-full flex justify-between mb-6">
           <div class="flex flex-col gap-3">
             <h1 class="text-3xl md:text-5xl font-normal">Triaso Drum Mix</h1>
@@ -44,7 +52,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
           </div>
           <div>
             <svg
-            class="transition-transform duration-300 group-open:rotate-180"
+              class="transition-transform duration-300 group-open:rotate-180"
               width="64px"
               height="64px"
               viewBox="0 0 24 24"
