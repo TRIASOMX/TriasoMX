@@ -406,6 +406,7 @@ const DrumMixPlanos = () => {
                           FLIGHTS
                         </h1>
                         <button
+                          aria-label="See more about the flights section"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -455,6 +456,7 @@ const DrumMixPlanos = () => {
                           CONTROL & OPERATION
                         </h1>
                         <button
+                          aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -517,6 +519,7 @@ const DrumMixPlanos = () => {
                           COMPONENTS & ELECTRICAL
                         </h1>
                         <button
+                          aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -574,6 +577,7 @@ const DrumMixPlanos = () => {
                           BURNER SYSTEM
                         </h1>
                         <button
+                          aria-label="See more about the burner system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -651,6 +655,7 @@ const DrumMixPlanos = () => {
                           INTEGRATED BAGHOUSE CAPACITY
                         </h1>
                         <button
+                          aria-label="See more about the baghouse capacity"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -710,6 +715,7 @@ const DrumMixPlanos = () => {
                           DURABILITY & SAFETY
                         </h1>
                         <button
+                          aria-label="See more about the durability and safety of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -960,6 +966,7 @@ const DrumMixPlanos = () => {
                             DRUM DIMENSIONS
                           </h1>
                           <button
+                            aria-label="See more about the drum dimensions"
                             className="block md:hidden"
                             onClick={() =>
                               setOpenSections((prev) => ({
@@ -1173,6 +1180,7 @@ const DrumMixPlanos = () => {
                             PRODUCTION RATE
                           </h1>
                           <button
+                            aria-label="See more about the production rate"
                             className="block md:hidden"
                             onClick={() =>
                               setOpenSections((prev) => ({
@@ -1278,6 +1286,7 @@ const DrumMixPlanos = () => {
                           DRUM DRIVE SYSTEM
                         </h1>
                         <button
+                          aria-label="See more information about the Drum Drive System"
                           className="block"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1338,6 +1347,7 @@ const DrumMixPlanos = () => {
                           PORTABILITY
                         </h1>
                         <button
+                          aria-label="See more about the portability"
                           className="block"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1591,6 +1601,7 @@ const DrumMixPlanos = () => {
                           CONTROL CABIN DIMENSIONS
                         </h1>
                         <button
+                          aria-label="See more about the control cabin dimensions"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1664,6 +1675,7 @@ const DrumMixPlanos = () => {
                           CONTROL CABIN
                         </h1>
                         <button
+                          aria-label="See more about the control cabin"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1734,6 +1746,7 @@ const DrumMixPlanos = () => {
                           FLIGHTS
                         </h1>
                         <button
+
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
