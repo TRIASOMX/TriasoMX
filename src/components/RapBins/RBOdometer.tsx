@@ -23,7 +23,7 @@ const RPOdometer = () => {
 
           setTimeout(() => {
             setValue(14);
-            setValue1(21);
+            setValue1(20);
             setValue2(18);
             setValue4(120);
           }, 300); // Pequeño retraso para asegurar reinicio
