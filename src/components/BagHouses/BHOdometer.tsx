@@ -59,7 +59,7 @@ const BHOdometer = () => {
               <Odometer value={value5} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">thousand ACFM</p>
             </div>
-            <p className="text-grisP">Capacity of baghouses</p>
+            <p className="text-[#4F4F4F]">Capacity of baghouses</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -69,7 +69,7 @@ const BHOdometer = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">%</p>
             </div>
-            <p className="text-grisP">Filtration capturing fine particles</p>
+            <p className="text-[#4F4F4F]">Filtration capturing fine particles</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -79,7 +79,7 @@ const BHOdometer = () => {
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">tph</p>
             </div>
-            <p className="text-grisP text-start w-full">
+            <p className="text-[#4F4F4F] text-start w-full">
               Baghouses for asphalt plants ranges
             </p>
           </div>
