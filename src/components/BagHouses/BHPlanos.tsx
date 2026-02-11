@@ -344,6 +344,7 @@ const BHPlanos = () => {
                                                     CAPACITY
                                                 </h1>
                                                 <button
+                                                    aria-label="See the capacity of the baghouse"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -429,6 +430,7 @@ const BHPlanos = () => {
                                                     MAINTENANCE & ADVANTAGES
                                                 </h1>
                                                 <button
+                                                    aria-label="See more abour the Maintenance and Advantages"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -477,6 +479,7 @@ const BHPlanos = () => {
                                                     COMPONENTS & ELECTRICAL
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the components and electrical composition"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -533,6 +536,7 @@ const BHPlanos = () => {
                                                     CONTROL & OPERATION
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the control and the operation of the system"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -596,6 +600,7 @@ const BHPlanos = () => {
                                                     CLEANING OPERATION
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the cleaning operation"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -658,6 +663,7 @@ const BHPlanos = () => {
                                                 DURABILITY & SAFETY
                                             </h1>
                                             <button
+                                                aria-label="See more about the durability and safety of the system"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -723,6 +729,7 @@ const BHPlanos = () => {
                                                     COMPLIANCE WITH INDUSTRY STANDARS
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the compliance with industry standars"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -779,6 +786,7 @@ const BHPlanos = () => {
                                                 PORTABILITY
                                             </h1>
                                             <button
+                                                aria-label="See more about the portability"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
