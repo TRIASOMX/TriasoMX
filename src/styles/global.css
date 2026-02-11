@@ -47,9 +47,9 @@ video {
     background-color: #000;
 }
 
- * {
+ /* * {
     outline: 1px solid red !important;
-  } 
+  }  */
 @layer utilities {
     .reveal {
         @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
