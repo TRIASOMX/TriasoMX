@@ -89,7 +89,7 @@ export default function GallerySlider({ images }: Props) {
                     {images.map((img, i) => (
                         <div
                             key={i}
-                            className={`flex-shrink-0 px-2 ${isMobile ? "snap-start" : ""}`}
+                            className={`flex-shrink-0 flex flex-col px-2 ${isMobile ? "snap-start" : ""}`}
                             style={{
                                 width: isMobile ? "80%" : `${100 / images.length}%`,
                             }}
@@ -101,13 +101,15 @@ export default function GallerySlider({ images }: Props) {
                                 alt={img.title}
                                 className="w-full h-64 object-cover rounded shadow bg-white"
                             />
+                            <div className="w-1/2 mx-auto ">
+                                <button
+                                    onClick={() => setModalIndex(i)}
+                                    className="mt-3 w-full py-2 text-sm font-semibold text-blueMain bg-white rounded-full hover:bg-gray-100 transition"
+                                >
+                                    See more
+                                </button>
+                            </div>
 
-                            <button
-                                onClick={() => setModalIndex(i)}
-                                className="mt-3 w-full py-2 text-sm font-semibold text-blueMain bg-white rounded-full hover:bg-gray-100 transition"
-                            >
-                                See more
-                            </button>
                         </div>
                     ))}
                 </div>

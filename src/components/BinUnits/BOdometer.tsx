@@ -30,7 +30,7 @@ const BOdometer = () => {
             setValue(60);
             setValue3(500);
 
-            setValue1(10);
+            setValue1(14);
             setValue4(20);
 
             setValue2(18);

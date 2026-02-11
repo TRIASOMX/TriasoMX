@@ -49,7 +49,7 @@ const ASOdometer = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="max-w-7xl px-8 mx-auto lg:mt-40 lg:mb-40 md:mt-40 md:mb-40 ">
+    <div ref={sectionRef} className="max-w-7xl px-8 mx-auto lg:mt-16 lg:mb-16 md:mt-16 md:mb-16 ">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center pb-10">
         <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
           <div className="flex flex-col items-center justify-center">
