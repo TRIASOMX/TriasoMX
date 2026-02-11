@@ -24,6 +24,7 @@ import g1 from "../../assets/images/BagHouses/GallerySlider/BHG1.webp";
 import g2 from "../../assets/images/BagHouses/GallerySlider/BHG2.webp";
 import g3 from "../../assets/images/BagHouses/GallerySlider/BHG4.webp";
 import g4 from "../../assets/images/BagHouses/GallerySlider/BHG4.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
 
 const tanksSlides = [
   {
@@ -55,7 +56,13 @@ const tanksSlides = [
       </h1>
     </div>
     <div class="max-w-7xl px-8 mx-auto flex justify-center">
-      <Image src={img2} alt="Baghouse" class="hero-img lg:w-4/6 rounded-lg" fetchpriority="high" loading="lazy" />
+      <Image
+        src={img2}
+        alt="Baghouse"
+        class="hero-img lg:w-4/6 rounded-lg"
+        fetchpriority="high"
+        loading="lazy"
+      />
     </div>
     <div
       class="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center gap-6"
@@ -219,7 +226,7 @@ const tanksSlides = [
           bgColor="bg-bgBeige"
           image={img5.src}
           imageClassName="pb-[50px]"
-          client:idle
+          client:visible
         >
           <div class="w-full py-10 text-sm md:text-base text-grisT">
             <p>
@@ -248,7 +255,7 @@ const tanksSlides = [
           title="Triaso High Ratio System"
           bgColor="bg-bgBeige"
           image={img6.src}
-          client:idle
+          client:visible
         >
           <div class="w-full py-10 text-sm md:text-base text-grisT">
             <p>
@@ -287,17 +294,13 @@ const tanksSlides = [
   </div>
   <div class="max-w-7xl px-8 mx-auto pb-10">
     <div class="w-full flex justify-center">
-      <video
-        playsinline
-        controls
+      <SmartVideo
+        client:visible
+        src="/Videos/Webm/DMVideo.webm"
         poster="/Gallery/customdes.webp"
-        preload="metadata"
-        width="1280"
-        height="720"
-      >
-        <source src="/Videos/Webm/DMVideo.webp" type="video/webm" />
-        <source src="/Videos/Mp4/DMVideo.mp4" type="video/mp4" />
-      </video>
+        isLoop={true}
+        autoplayOnMobile={true}
+      />
     </div>
     <p class="text-sm pt-5 lg:pt-0 md:pt-0 lg:text-lg md:text-lg font-thin">
       After passing through the primary dust collector, the gas stream enters
@@ -319,18 +322,15 @@ const tanksSlides = [
     class="w-full grid grid-cols-1 md:grid-cols-2 md:gap-10 max-w-7xl px-8 mx-auto py-5"
   >
     <div class="w-full flex justify-center">
-      <video
-        class="w-4/5 lg:w-4/5 rounded-md"
-        playsinline
-        controls
+      <SmartVideo 
+        client:visible
+        src="/Videos/Webm/BHVideo.webm"
         poster="/Gallery/customdes.webp"
-        preload="metadata"
-        width="1280"
-        height="720"
-      >
-        <source src="/Videos/Webm/BHVideo.webp" type="video/webm" />
-        <source src="/Videos/Mp4/BHVideo.mp4" type="video/mp4" />
-      </video>
+        isLoop={true}
+        autoplayOnMobile={true}
+        desktopWidth="80%"
+      />
+
     </div>
     <div
       class="w-full rounded-2xl py-4 text-justify text-sm lg:text-lg md:text-lg text-grisT flex flex-col justify-center"
@@ -658,7 +658,6 @@ const tanksSlides = [
               class="bg-red-600 rounded-full flex items-center justify-center
          w-[44px] h-[44px] lg:w-16 lg:h-16"
             >
-              
               <svg
                 class="group-open:hidden transition h-[40px] w-[40px] lg:h-16 lg:w-16"
                 viewBox="0 0 24 24"
@@ -775,7 +774,7 @@ const tanksSlides = [
     <BHCustom />
   </div>
   <div class="w-full px-4">
-    <GallerySlider client:idle slides={tanksSlides} visibleThumbs={4} />
+    <GallerySlider client:visible slides={tanksSlides} visibleThumbs={4} />
   </div>
 </div>
 
