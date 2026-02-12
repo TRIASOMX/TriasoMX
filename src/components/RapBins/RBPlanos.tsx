@@ -1824,6 +1824,7 @@ const RBPlanos = () => {
                         SINGLE UNIT DIMENSIONS
                       </h1>
                       <button
+                        aria-label="See more about the single unit dimensions"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -1901,6 +1902,7 @@ const RBPlanos = () => {
                         CHASSIS & STRUCTURE
                       </h1>
                       <button
+                        aria-label="See more about the chassis and structure"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({

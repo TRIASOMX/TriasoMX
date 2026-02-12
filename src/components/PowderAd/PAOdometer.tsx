@@ -53,7 +53,7 @@ const PAOdometer = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">M3</p>
             </div>
-            <p className="text-grisP">Power additives capacity</p>
+            <p className="text-[#4F4F4F]">Power additives capacity</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -63,7 +63,7 @@ const PAOdometer = () => {
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">kg/min</p>
             </div>
-            <p className="text-grisP">Discharge range with adjustable speed</p>
+            <p className="text-[#4F4F4F]">Discharge range with adjustable speed</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -71,13 +71,13 @@ const PAOdometer = () => {
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">hp</p>
             </div>
-            <p className="text-grisP text-start w-full">
+            <p className="text-[#4F4F4F] text-start w-full">
               Rated capacity of the discharge motor
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-6">
+        <div className="flex flex-col items-center justify-center gap-6 pt-10">
           <div>
             <img src={img1.src} alt="Powder Additives VL" />
           </div>
