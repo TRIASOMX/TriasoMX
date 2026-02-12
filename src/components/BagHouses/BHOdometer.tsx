@@ -54,16 +54,22 @@ const BHOdometer = () => {
         <div className="flex flex-col items-start justify-center mx-auto py-10 lg:py-0 lg:mx-0 gap-10 md:gap-20">
           <div className="flex flex-col items-center lg:items-start justify-center">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
-              <Odometer value={value} format="(,ddd)" duration={2000} />
-              <p>-</p>
-              <Odometer value={value5} format="(,ddd)" duration={2000} />
+              <span className="w-[3.6ch] flex flex-row">
+                <Odometer value={value} format="(,ddd)" duration={2000} />
+
+
+                <p>-</p>
+
+                <Odometer value={value5} format="(,ddd)" duration={2000} />
+              </span>
+
               <p className="text-sm font-normal ml-3">thousand ACFM</p>
             </div>
             <p className="text-[#4F4F4F]">Capacity of baghouses</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6ch] lg:w-[5.1ch] md:w-[5.1ch]">
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p>.</p>
               <Odometer value={value1} format="(,ddd)" duration={2000} />
@@ -73,7 +79,7 @@ const BHOdometer = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normall justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6.7ch] lg:w-[6.4ch] md:w-[6.4ch]">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value3} format="(,ddd)" duration={2000} />

@@ -11,14 +11,14 @@ export default function Tab() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="max-w-7xl px-8 mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-8 mt-10 mb-4">
+    <div className="max-w-7xl px-8 mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center items-start gap-8 mt-10 mb-4">
       <div className="flex lg:flex-col items-stretch justify-around gap-4 md:gap-10">
         {images.map((img, index) => (
           <button
             aria-label="Select tab"
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`text-center md:text-start font-normal p-4 rounded-xl md:pr-4 md:w-8/12 text-sm md:text-base ${activeIndex === index
+            className={`text-center min-h-[80px] md:text-start font-normal p-4 rounded-xl md:pr-4 md:w-8/12 text-sm md:text-base ${activeIndex === index
                 ? "border-red-500 text-white bg-blueMain"
                 : "border-transparent bg-white text-grisT"
               }`}
@@ -40,6 +40,8 @@ export default function Tab() {
         src={images[activeIndex].src}
         alt={images[activeIndex].alt}
         className="border-2 border-blueMain rounded-2xl h-[350px] w-full object-contain md:object-cover lg:object-cover"
+        fetchPriority="high"
+        loading="eager"
       />
 
       <div>
