@@ -53,7 +53,7 @@ const MiniGallery: React.FC<SliderProps> = ({
   return (
     <div className="w-full max-w-7xl mx-auto px-4 md:px-8">
       <div className="relative">
-        <div 
+        <div
           className="relative w-full overflow-hidden rounded-2xl shadow-sm"
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
@@ -92,16 +92,18 @@ const MiniGallery: React.FC<SliderProps> = ({
           </div>
         </div>
         <div className="hidden md:flex absolute -bottom-14 right-0 items-center gap-3 z-30">
-          <button 
-            onClick={prevSlide} 
+          <button
+            aria-label="Go to the previous item"
+            onClick={prevSlide}
             className="p-2.5 bg-white border border-gray-200 rounded-full shadow-md hover:bg-gray-50 transition active:scale-90"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4d4d4d" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
-          <button 
-            onClick={nextSlide} 
+          <button
+            aria-label="Go to the next item"
+            onClick={nextSlide}
             className="p-2.5 bg-white border border-gray-200 rounded-full shadow-md hover:bg-gray-50 transition active:scale-90"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4d4d4d" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -114,13 +116,13 @@ const MiniGallery: React.FC<SliderProps> = ({
       <div className="flex justify-center items-center space-x-2 mt-8 md:mt-10">
         {slides.map((_, index) => (
           <button
+            aria-label="Total number of images available in the gallery"
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`transition-all duration-300 rounded-full ${
-              currentSlide === index 
-                ? "w-8 h-1.5 bg-blueMain" 
+            className={`transition-all duration-300 rounded-full ${currentSlide === index
+                ? "w-8 h-1.5 bg-blueMain"
                 : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"
-            }`}
+              }`}
           />
         ))}
       </div>

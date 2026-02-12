@@ -19,8 +19,8 @@ export default function Tab() {
             key={index}
             onClick={() => setActiveIndex(index)}
             className={`text-center min-h-[80px] md:text-start font-normal p-4 rounded-xl md:pr-4 md:w-8/12 text-sm md:text-base ${activeIndex === index
-                ? "border-red-500 text-white bg-blueMain"
-                : "border-transparent bg-white text-grisT"
+              ? "border-red-500 text-white bg-blueMain"
+              : "border-transparent bg-white text-grisT"
               }`}
           >
             {index === 0 ? (
@@ -35,14 +35,16 @@ export default function Tab() {
           </button>
         ))}
       </div>
+      <div className="relative w-full aspect-[16/9]">
+        <img
+          src={images[activeIndex].src}
+          alt={images[activeIndex].alt}
+          className="absolute inset-0 border-2 border-blueMain rounded-2xl h-[350px] w-full object-contain md:object-cover lg:object-cover"
+          fetchPriority="high"
+          loading="eager"
+        />
+      </div>
 
-      <img
-        src={images[activeIndex].src}
-        alt={images[activeIndex].alt}
-        className="border-2 border-blueMain rounded-2xl h-[350px] w-full object-contain md:object-cover lg:object-cover"
-        fetchPriority="high"
-        loading="eager"
-      />
 
       <div>
         <p className=" text-grisT text-sm lg:text-lg md:text-lg">

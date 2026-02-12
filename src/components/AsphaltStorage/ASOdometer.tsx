@@ -59,7 +59,7 @@ const ASOdometer = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">thousand gallons</p>
             </div>
-            <p className="text-grisP text-center lg:text-start font-normal w-full">
+            <p className="text-[#4F4F4F] text-center lg:text-start font-normal w-full">
               Asphalt storage capacity
             </p>
           </div>
@@ -69,7 +69,7 @@ const ASOdometer = () => {
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">°C</p>
             </div>
-            <p className="text-grisP text-center lg:text-start font-normal w-full">
+            <p className="text-[#4F4F4F] text-center lg:text-start font-normal w-full">
               Maximum achievable temperature
             </p>
           </div>
@@ -83,7 +83,7 @@ const ASOdometer = () => {
               <Odometer value={value6} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">million</p>
             </div>
-            <p className="text-grisP text-center lg:text-start font-normal w-full">
+            <p className="text-[#4F4F4F] text-center lg:text-start font-normal w-full">
               Btu/hr capacity
             </p>
           </div>

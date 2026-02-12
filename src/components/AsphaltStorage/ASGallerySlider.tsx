@@ -103,6 +103,7 @@ export default function GallerySlider({ images }: Props) {
                             />
                             <div className="w-1/2 mx-auto ">
                                 <button
+                                    aria-label="See more about the system"
                                     onClick={() => setModalIndex(i)}
                                     className="mt-3 w-full py-2 text-sm font-semibold text-blueMain bg-white rounded-full hover:bg-gray-100 transition"
                                 >
@@ -118,11 +119,11 @@ export default function GallerySlider({ images }: Props) {
             {!isMobile && (
                 <div className="max-w-7xl mx-auto">
                     <div className="w-full  flex justify-end items-center gap-5 md:flex ">
-                        <button onClick={prevSlide} className=" p-2 bg-white border border-gray-200 rounded-full shadow hover:bg-gray-50 transition active:scale-95 ">
+                        <button aria-label="Go to the previous item" onClick={prevSlide} className=" p-2 bg-white border border-gray-200 rounded-full shadow hover:bg-gray-50 transition active:scale-95 ">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4d4d4d" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" >
                                 <path d="M15 18l-6-6 6-6" /> </svg>
                         </button>
-                        <button onClick={nextSlide} className="p-2 bg-white border border-gray-200 rounded-full shadow hover:bg-gray-50 transition active:scale-95 ">
+                        <button aria-label="Go to the next item" onClick={nextSlide} className="p-2 bg-white border border-gray-200 rounded-full shadow hover:bg-gray-50 transition active:scale-95 ">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4d4d4d" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" >
                                 <path d="M9 18l6-6-6-6" /> </svg>
                         </button>
