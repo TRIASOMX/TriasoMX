@@ -1205,6 +1205,7 @@ const RBPlanos = () => {
                           FEEDING & DOSIGN SYSTEM
                         </h1>
                         <button
+                          aria-label="See more about the feeding and dosign system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1260,6 +1261,7 @@ const RBPlanos = () => {
                           DURABILITY & SAFETY
                         </h1>
                         <button
+                          aria-label="See more about the durability and safety"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1330,6 +1332,7 @@ const RBPlanos = () => {
                           CONTROL & OPERATION
                         </h1>
                         <button
+                          aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1405,6 +1408,7 @@ const RBPlanos = () => {
                           PORTABILITY
                         </h1>
                         <button
+                          aria-label="See more about the portability"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1476,6 +1480,7 @@ const RBPlanos = () => {
                         COMPONENTS & ELECTRICAL
                       </h1>
                       <button
+                        aria-label="See more about the components and electrical composition"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -1529,6 +1534,7 @@ const RBPlanos = () => {
                         OPERATING CONFIGURATION
                       </h1>
                       <button
+                        aria-label="See more about the operating configuration"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -1576,6 +1582,7 @@ const RBPlanos = () => {
                         COMPLIANCE WITH INDUSTRY STANDARDS
                       </h1>
                       <button
+                        aria-label="See more about the compliance with industry standards"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -1981,6 +1988,7 @@ const RBPlanos = () => {
                         BIN OPTIONS
                       </h1>
                       <button
+                        aria-label="See more about the bin options"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({

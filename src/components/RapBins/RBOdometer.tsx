@@ -47,13 +47,13 @@ const RPOdometer = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
         <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
           <div className="flex flex-col items-center lg:items-start justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-start items-baseline w-full">
+            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-start items-baseline w-[6.7ch] lg:w-full md:w-full">
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-grisP">RAP feeding capacity</p>
+            <p className="text-[#4F4F4F]">RAP feeding capacity</p>
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
@@ -63,7 +63,7 @@ const RPOdometer = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">M Tons</p>
             </div>
-            <p className="text-start text-grisP">RAP capacity</p>
+            <p className="text-start text-[#4F4F4F]">RAP capacity</p>
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
@@ -71,7 +71,7 @@ const RPOdometer = () => {
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">inches</p>
             </div>
-            <p className="text-grisP text-center lg:text-start w-full">Dosing belt</p>
+            <p className="text-[#4F4F4F] text-center lg:text-start w-full">Dosing belt</p>
           </div>
         </div>
 
