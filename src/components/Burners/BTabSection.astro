@@ -19,10 +19,15 @@ import SmartVideo from "../unitComponents/SmartVideo";
 
 <section class="w-full flex 2 mt-6 md:mt-20 flex-col gap-4 bg-gray-100">
   <div class="flex flex-col gap-4 mt-8">
-    <div class="flex w-full max-w-7xl mx-auto px-4 gap-2 sm:gap-4">
+    <div
+      role="tablist"
+      aria-label="Characteristics tabs"
+      class="flex w-full max-w-7xl mx-auto px-4 gap-2 sm:gap-4"
+    >
       <button
         class="tab-button-1 flex-1 py-3 px-2 font-bold text-xs sm:text-sm md:text-xl text-center leading-tight focus:outline-none"
         data-tab="tab1"
+        role="tab"
         aria-selected="true"
       >
         Combustion Performance and
@@ -33,6 +38,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
       <button
         class="tab-button-1 flex-1 py-3 px-2 font-bold text-xs sm:text-sm md:text-xl text-center leading-tight focus:outline-none"
         data-tab="tab2"
+        role="tab"
         aria-selected="false"
       >
         Asphalt Quality and Equipment
@@ -43,6 +49,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
       <button
         class="tab-button-1 flex-1 py-3 px-2 font-bold text-xs sm:text-sm md:text-xl text-center leading-tight focus:outline-none"
         data-tab="tab3"
+        role="tab"
         aria-selected="false"
       >
         Customization to adapt to specific
@@ -323,17 +330,14 @@ import SmartVideo from "../unitComponents/SmartVideo";
           <div class="w-full max-w-7xl mx-auto">
             <div class="w-full bg-white rounded-2xl p-8">
               <div class="w-full md:w-3/4 justify-center m-auto">
-                <video
-                  playsinline
-                  controls
+
+                <SmartVideo
+                  client:visible
+                  src="/Videos/Webm/AnPreHeat.webm"
                   poster="/Gallery/customdes.webp"
-                  preload="metadata"
-                  width="1280"
-                  height="720"
-                >
-                  <source src="/Videos/Webm/AnPreHeat.webp" type="video/webm" />
-                  <source src="/Videos/Mp4/AnPreHeat.mp4" type="video/mp4" />
-                </video>
+                  autoplayOnMobile={true}
+                  isLoop={true}
+                />
               </div>
               <div class="lg:px-20 text-center">
                 <h2 class="text-lg md:text-xl font-bold text-black">

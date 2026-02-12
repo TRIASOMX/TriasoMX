@@ -6,18 +6,20 @@ interface SmartVideoProps {
   width?: string | number;
   height?: string | number;
   className?: string;
-  autoplayOnMobile?: boolean; 
+  classVideo? :string
+  autoplayOnMobile?: boolean;
   isLoop?: boolean;
   desktopWidth?: string | number;
   desktopHeight?: string | number;
 }
 
-const SmartVideo: React.FC<SmartVideoProps> = ({ 
-  src, 
-  poster, 
-  width = "100%", 
+const SmartVideo: React.FC<SmartVideoProps> = ({
+  src,
+  poster,
+  width = "100%",
   height = "auto",
   className = "",
+  classVideo ="", 
   autoplayOnMobile = false,
   isLoop = false,
   desktopHeight,
@@ -30,9 +32,9 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const mediaQuery = window.matchMedia('(max-width: 768px)');
-    
+
     setIsMobile(mediaQuery.matches);
-    
+
     const handleResize = (e: MediaQueryListEvent) => setIsMobile(e.matches);
     mediaQuery.addEventListener('change', handleResize);
     return () => mediaQuery.removeEventListener('change', handleResize);
@@ -75,8 +77,9 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
   const isMuted = !isMobile || autoplayOnMobile;
 
   return (
-    <div className={`smart-video-container ${className}`} style={{ width:currentWidth, height:currentHeight }}>
+    <div className={`smart-video-container ${className}`} style={{ width: currentWidth, height: currentHeight }}>
       <video
+        className={classVideo}
         ref={videoRef}
         poster={poster}
         src={isVideoLoaded ? src : undefined}
@@ -84,10 +87,10 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
         height="100%"
         controls={showControls}
         muted={isMuted}
-        loop={isLoop} 
-        playsInline 
+        loop={isLoop}
+        playsInline
         preload="none"
-        style={{ objectFit: 'cover', display: 'block', background:"#f4f5f6" }}
+        style={{ objectFit: 'cover', display: 'block', background: "#f4f5f6" }}
       />
     </div>
   );
