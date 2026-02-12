@@ -113,7 +113,7 @@ const MiniGallery: React.FC<SliderProps> = ({
         </div>
       </div>
 
-      <div className="flex justify-center items-center space-x-2 mt-8 md:mt-10">
+      <div className="flex justify-center items-center space-x-3 mt-8 md:mt-10">
         {slides.map((_, index) => (
           <button
             aria-label="Total number of images available in the gallery"
@@ -121,7 +121,7 @@ const MiniGallery: React.FC<SliderProps> = ({
             onClick={() => setCurrentSlide(index)}
             className={`transition-all duration-300 rounded-full ${currentSlide === index
                 ? "w-8 h-1.5 bg-blueMain"
-                : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"
+                : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
               }`}
           />
         ))}

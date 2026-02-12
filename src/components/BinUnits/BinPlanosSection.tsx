@@ -2077,6 +2077,7 @@ const BinPlanosSection = () => {
                           FEEDING & DOSIGN SYSTEM
                         </h1>
                         <button
+                          aria-label="See more about the feeding and dosign system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2134,6 +2135,7 @@ const BinPlanosSection = () => {
                           DURABILITY & SAFETY
                         </h1>
                         <button
+                          aria-label="See more about the durability and safety of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2203,6 +2205,7 @@ const BinPlanosSection = () => {
                           CONTROL & OPERATION
                         </h1>
                         <button
+                          aria-label="See more about the control and the operation of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2278,6 +2281,7 @@ const BinPlanosSection = () => {
                           PORTABILITY
                         </h1>
                         <button
+                          aria-label="See more about the portability"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2349,6 +2353,7 @@ const BinPlanosSection = () => {
                         COMPONENTS & ELECTRICAL
                       </h1>
                       <button
+                        aria-label="See more abou the components and electrical composition"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2687,6 +2692,7 @@ const BinPlanosSection = () => {
                         SINGLE UNIT DIMENSIONS
                       </h1>
                       <button
+                        aria-label="See more about the single unit dimensions"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({

@@ -303,6 +303,7 @@ const ASPlanos = () => {
                           HEATING SYSTEM
                         </h1>
                         <button
+                          aria-label="See more about the heating system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -362,6 +363,7 @@ const ASPlanos = () => {
                           CONTROL & OPERATION
                         </h1>
                         <button
+                          aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -426,6 +428,7 @@ const ASPlanos = () => {
                           PORTABILITY
                         </h1>
                         <button
+                          aria-label="See more about the portability"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -497,6 +500,7 @@ const ASPlanos = () => {
                           COMPLIANCE WITH INDUSTRY STANDARDS
                         </h1>
                         <button
+                          aria-label="See more about the compliance with industry standards"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -544,6 +548,7 @@ const ASPlanos = () => {
                           COMPONENTS & ELECTRICAL
                         </h1>
                         <button
+                          aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -598,6 +603,7 @@ const ASPlanos = () => {
                           DURABILITY & SAFETY
                         </h1>
                         <button
+                          aria-label="See more abour the durability and safety of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -663,6 +669,7 @@ const ASPlanos = () => {
                         OPERATING TEMPERATURE
                       </h1>
                       <button
+                        aria-label="See more about the operating temperature"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -912,6 +919,7 @@ const ASPlanos = () => {
                         TANK DIMENSIONS
                       </h1>
                       <button
+                        aria-label="See more about the tank dimensions"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -996,6 +1004,7 @@ const ASPlanos = () => {
                         CHASSIS & STRUCTURE
                       </h1>
                       <button
+                        aria-label="See more about the chassis and structure"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
