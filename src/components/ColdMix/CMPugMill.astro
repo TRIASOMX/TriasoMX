@@ -18,6 +18,7 @@ import g5 from "../../assets/images/ColdMix/GallerySlider/CMG5.webp";
 import g6 from "../../assets/images/ColdMix/GallerySlider/CMG6.webp";
 import g7 from "../../assets/images/ColdMix/GallerySlider/CMG7.webp";
 import g8 from "../../assets/images/ColdMix/GallerySlider/CMG8.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
 
 const binSlides = [
   {
@@ -78,19 +79,18 @@ const binSlides = [
       <p class="text-sm md:text-lg">
         Our cold mix asphalt plants offer a wide range of optional features as
         flow detectors for precise monitoring, and vibrators to ensure smooth
-        material flow. Customizable with bin dividers, level indicators to
-        prevent high- and low-level conditions, extensions, and grizzlies, they
-        adapt to diverse material handling requirements, delivering efficiency
-        and reliability in any project.
+        material flow. Customizable, they adapt to diverse material handling
+        requirements, delivering efficiency and reliability in any project.
       </p>
     </div>
     <div slot="right" class="flex flex-col justify-center gap-3">
-      <h1 class="text-xl md:text-2xl">
-        24/7 customer service
-      </h1>
-      <ul class="text-sm lg:text-lg md:text-lg">
-        <p>Our team is available around the clock, ready to assist you at any time, even on weekends and holidays.</p>
-      </ul>
+      <h1 class="text-xl md:text-2xl">24/7 customer service</h1>
+      <div class="text-sm lg:text-lg md:text-lg">
+        <p>
+          Our team is available around the clock, ready to assist you at any
+          time, even on weekends and holidays.
+        </p>
+      </div>
     </div>
   </TwoColumnSection>
   <div
@@ -145,17 +145,13 @@ const binSlides = [
     </div>
   </div>
   <div class="w-full md:w-3/4 max-w-7xl mx-auto px-8 py-10">
-    <video
-      playsinline
-      controls
+    <SmartVideo
+      client:visible
+      src="/Videos/Webm/PGMC.webm"
       poster="/Gallery/customdes.webp"
-      preload="metadata"
-      width="1280"
-      height="720"
-    >
-      <source src="/Videos/Webm/PGMC.webp" type="video/webm" />
-      <source src="/Videos/Mp4/PGMC.mp4" type="video/mp4" />
-    </video>
+      isLoop={false}
+      autoplayOnMobile={false}
+    />
   </div>
   <div
     class="w-full flex flex-col justify-center items-center gap-10 max-w-7xl mx-auto px-8 py-10"
