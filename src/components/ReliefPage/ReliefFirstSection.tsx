@@ -128,7 +128,7 @@ export default function ReliefFirstSection() {
           <img src={img1.src} alt="Control System Dashboard" className="w-full lg:w-4/5 md:w-4/5 " />
         </div>
 
-        <p className="font-semibold text-base text-[#393939] text-start">
+        <p className="font-medium text-sm lg:text-lg md:text-lg text-[#393939] text-start">
           Offering a practical and efficient way to manage industrial equipment operations. With advanced monitoring and automation, it simplifies the control of key processes like temperature, material dosing, and production rates. Built to adapt to different setups, it ensures reliable performance while prioritizing safety and ease of use.
         </p>
       </div>
@@ -184,6 +184,8 @@ export default function ReliefFirstSection() {
               alt="Triaso App Interface"
               className="w-full h-full z-20 object-cover"
               style={{ filter: "drop-shadow(0px 10px 30px rgba(0,0,0,0.6))" }}
+              fetchPriority="high"
+              
             />
             <div className="pt-10 feature-item">
               <div className="flex flex-col justify-center items-center">

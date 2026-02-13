@@ -17,7 +17,7 @@ export default function ReliefLastSection() {
                         <h1 className='text-white font-bold text-2xl'>Operation System</h1>
                         <h2 className='text-white font-semibold text-xl'>Unique login</h2>
                         <h2 className='text-white font-semibold text-xl'>for each operator on shift</h2>
-                        <div>
+                        <div className='pt-5'>
                             <ul className='list-disc text-white text-start'>
                                 <li>Connection without the need for internet, with access to automatic backups</li>
                                 <li>Manual operation always available, with storage of operating data.</li>
@@ -31,7 +31,7 @@ export default function ReliefLastSection() {
                         <h1 className='text-white font-bold text-2xl'>Visualization system</h1>
                         <h2 className='text-white font-semibold text-xl'>Unlimited access</h2>
                         <h2 className='text-white font-semibold text-xl'>for asphalt plant visualization</h2>
-                        <div>
+                        <div className='pt-5'>
                             <ul className='list-disc text-white text-start'>
                                 <li>Connection through internet</li>
                             </ul>
@@ -40,7 +40,7 @@ export default function ReliefLastSection() {
                 </div>
             </div>
 
-            <div className=' relative flex justify-center items-center pt-5 bg-cover bg-center bg-no-repeat'
+            <div className=' relative aspect-[16/9] w-full flex justify-center items-center pt-5 bg-cover bg-center bg-no-repeat'
                 style={{ backgroundImage: `url(${img2.src})`, }}>
 
                 {/* bg */}
@@ -48,7 +48,7 @@ export default function ReliefLastSection() {
                 {/* contenido */}
                 <div className='relative w-full'>
                     <div className='max-w-7xl mx-auto px-8 space-y-5'>
-                        <div>
+                        <div className='pt-5 pb-5'>
                             <h1 className='font-bold text-4xl text-[#393939] text-center'>Control system upgrades</h1>
                         </div>
 
@@ -61,12 +61,12 @@ export default function ReliefLastSection() {
                             <h1 className='font-bold text-4xl text-[#393939] w-full md:w-1/2 text-center'>Available for monitoring of all Triaso equipment</h1>
                         </div>
 
-                        <div>
+                        <div className='w-full aspect-[16/9]'>
                             <img src={img1.src} alt="TRIASO OS on different systems" />
                         </div>
 
-                        <div className='pb-10'>
-                            <p className='font-semibold text-base md:text-lg text-[#393939]'>Provides the freedom to access detailed, real-time analysis from anywhere and on any device. Decision-making becomes faster, better-founded, and completely independent of physical location.</p>
+                        <div className='pb-20'>
+                            <p className='font-semibold text-lg lg:text-2xl md:text-2xl text-[#393939]'>Provides the freedom to access detailed, real-time analysis from anywhere and on any device. Decision-making becomes faster, better-founded, and completely independent of physical location.</p>
                         </div>
                     </div>
 
