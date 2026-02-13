@@ -1329,6 +1329,7 @@ const OHPlanos = () => {
                                             Dimensions
                                         </h1>
                                         <button
+                                            aria-label="See more about the dimensions"
                                             className="block md:hidden"
                                             onClick={() =>
                                                 setOpenSections((prev) => ({

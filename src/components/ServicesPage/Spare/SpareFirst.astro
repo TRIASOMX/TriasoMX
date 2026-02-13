@@ -1,5 +1,4 @@
 ---
-import Separator from "../../unitComponents/Separator.astro";
 import Boxes from "../../../assets/images/Boxes.webp";
 import { Image } from "astro:assets";
 ---
@@ -9,8 +8,9 @@ import { Image } from "astro:assets";
 >
   <div class="w-full flex flex-col items-end max-w-7xl">
     <h1 class="text-3xl md:text-5xl font-bold text-grisT">SPARE PARTS</h1>
-    <div>
-      <Separator />
+    <div class="mt-4 mb-6 flex self-end">
+      <div class="w-28 lg:w-44 h-0.5 bg-[#393939]"></div>
+      <div class="w-28 lg:w-44 h-0.5 bg-[#393939]"></div>
     </div>
   </div>
   <div class="w-full flex flex-col gap-10 font-bold max-w-7xl">
@@ -26,7 +26,11 @@ import { Image } from "astro:assets";
       maintenance for many years.
     </p>
     <div class="w-full flex justify-center">
-      <Image src={Boxes} alt="Boxes with the TRIASO logo" class="w-3/4 rounded-2xl" />
+      <Image
+        src={Boxes}
+        alt="Boxes with the TRIASO logo"
+        class="w-3/4 rounded-2xl"
+      />
     </div>
   </div>
 </section>

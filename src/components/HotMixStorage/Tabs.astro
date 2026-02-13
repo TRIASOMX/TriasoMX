@@ -39,7 +39,7 @@ const images = [
 ];
 ---
 
-<section class="w-full flex 2 mt-6 md:mt-20 flex-col gap-4 bg-gray-100">
+<section class="w-full flex  mt-6 md:mt-20 flex-col gap-4 bg-gray-100">
   <div class="flex flex-col gap-4 mt-8">
     <div
       class="flex w-full max-w-7xl mx-auto px-4 gap-2 sm:gap-4 justify-center items-center"
@@ -133,7 +133,7 @@ const images = [
         <div
           class="w-full max-w-7xl mx-auto px-4 flex flex-col justify-center gap-2 pt-10"
         >
-          <Collapsable client:only />
+          <Collapsable client:visible />
         </div>
         <div class="w-full max-w-7xl mx-auto px-8 py-10 flex justify-center">
           <Image src={HMI} alt="Triaso Relief system " class="w-4/5" />
@@ -214,7 +214,7 @@ const images = [
           >
             <div class="bg-white p-4 font-bold rounded-2xl">
               <AcordeonItem
-                client:only
+                client:visible
                 title="Essential Storage Solutions for Efficient Asphalt Operations"
                 content={`Hot mix storage silos are essential for maintaining the quality and efficiency of asphalt production and delivery operations. 
                                 
@@ -235,12 +235,12 @@ const images = [
               </div>
               <div class="flex flex-col gap-10">
                 <AcordeonItem
-                  client:only
+                  client:visible
                   title="Optimized Insulation Design"
                   content={`The silo walls are designed with high-efficiency insulation that not only preserves the hot-mix temperature but also minimizes heat loss, reducing energy consumption and ensuring the material stays at the ideal temperature for up to 72 hours — even in extreme weather conditions.`}
                 />
                 <AcordeonItem
-                  client:only
+                  client:visible
                   title="Enhanced Loading and Unloading Efficiency"
                   content={`The silos are designed with an optimized loading and unloading system that allows for faster material transfer, reducing wait times and improving overall throughput. This feature enhances productivity by streamlining the flow of materials during operations.`}
                 />
@@ -343,19 +343,19 @@ const images = [
               class="w-full flex flex-col items-center justify-center gap-6 mb-5"
             >
               <AcordeonItem
-                client:only
+                client:visible
                 title="Quick Replacement Parts Availability"
                 content="To ensure minimal downtime, the silos are designed with standard, easily replaceable parts. This reduces lead time for repairs and helps maintain smooth operations without extended interruptions."
               />
 
               <AcordeonItem
-                client:only
+                client:visible
                 title="Corrosion-Resistant Coating"
                 content="Equipped with a specialized corrosion-resistant coating that protects against wear and tear from weather elements and chemicals, ensuring durability and functionality even in harsh environments."
               />
 
               <AcordeonItem
-                client:only
+                client:visible
                 title="High-Quality Materials, Manufactured In-House"
                 content="Our silos are constructed using premium materials sourced directly by us, ensuring superior quality and long-lasting performance."
               />
@@ -369,6 +369,7 @@ const images = [
           <p>­­</p>
         </section>
       </div>
+
     </div>
   </div>
 </section>
