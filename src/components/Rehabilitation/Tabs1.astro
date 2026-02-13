@@ -11,10 +11,15 @@ import { Image } from "astro:assets";
   <div
     class="flex flex-col items-center justify-center gap-4 mt-8 max-w-7xl w-full"
   >
-    <div class="flex items-center justify-around w-full gap-4 px-8 md:px-52">
+    <div
+      role="tablist"
+      aria-label="Characteristics tabs"
+      class="flex items-center justify-around w-full gap-4 px-8 md:px-52"
+    >
       <button
         class="text-xl md:text-2xl tab-button-1 py-2 md:px-4 font-bold focus:outline-none"
         data-tab="tab1"
+        role="tab"
         aria-selected="true"
       >
         Asphalt Plants
@@ -22,6 +27,7 @@ import { Image } from "astro:assets";
       <button
         class="tab-button-1 py-2 md:px-4 font-bold text-xl md:text-2xl focus:outline-none"
         data-tab="tab2"
+        role="tab"
         aria-selected="false"
       >
         Rock Crushers
@@ -74,7 +80,7 @@ import { Image } from "astro:assets";
 
       // Ocultar todos menos el primero
       const selectedTab = tabSection.querySelector(
-        '.tab-button-1[aria-selected="true"]'
+        '.tab-button-1[aria-selected="true"]',
       );
       const selectedTabId = selectedTab?.getAttribute("data-tab");
 
@@ -88,7 +94,7 @@ import { Image } from "astro:assets";
           const tabId = button.getAttribute("data-tab");
 
           tabButtons.forEach((btn) =>
-            btn.setAttribute("aria-selected", "false")
+            btn.setAttribute("aria-selected", "false"),
           );
           button.setAttribute("aria-selected", "true");
 
@@ -97,7 +103,7 @@ import { Image } from "astro:assets";
           });
 
           const activeContent = tabSection.querySelector(
-            `.tab-content-1[data-tab-content="${tabId}"]`
+            `.tab-content-1[data-tab-content="${tabId}"]`,
           );
           if (activeContent) activeContent.classList.remove("hidden");
         });
