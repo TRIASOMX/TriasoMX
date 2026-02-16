@@ -223,7 +223,7 @@ export default function AnalisisInversion() {
               style={{ position: 'relative', zIndex: 9999 }}
               type="button"
             >
-              Descargar PDF
+              Download PDF
             </button>
           ) : (
             <button className="mt-4 md:mt-0 bg-gray-400 text-white font-bold py-2 px-4 rounded cursor-not-allowed">

@@ -1246,7 +1246,7 @@ const items = [
       <div
         class="bg-[#eaeaea] border border-black rounded-[30px] p-8 flex flex-col"
       >
-        <h3 class="text-xl font-bold mb-6 text-black">Lack of experience</h3>
+        <h1 class="text-xl font-bold mb-6 text-black">Lack of experience</h1>
         <ul class="list-disc ml-5 space-y-3 text-gray-800">
           <li>They do not know how to design asphalt mixes with RAP.</li>
           <li>
@@ -1263,7 +1263,7 @@ const items = [
       <div
         class="bg-[#eaeaea] border border-black rounded-[30px] p-8 flex flex-col"
       >
-        <h3 class="text-xl font-bold mb-6 text-black">Outdated perceptions</h3>
+        <h1 class="text-xl font-bold mb-6 text-black">Outdated perceptions</h1>
         <ul class="list-disc ml-5 space-y-3 text-gray-800">
           <li>
             They associate RAP with early recycling practices that lacked proper
@@ -1282,9 +1282,9 @@ const items = [
       <div
         class="bg-[#eaeaea] border border-black rounded-[30px] p-8 flex flex-col"
       >
-        <h3 class="text-xl font-bold mb-6 text-black">
+        <h1 class="text-xl font-bold mb-6 text-black">
           Inadequate plant technology
-        </h3>
+        </h1>
         <ul class="list-disc ml-5 space-y-3 text-gray-800">
           <li>
             They lack equipment capable of properly heating and blending RAP.
@@ -1299,9 +1299,9 @@ const items = [
       <div
         class="bg-[#eaeaea] border border-black rounded-[30px] p-8 flex flex-col"
       >
-        <h3 class="text-xl font-bold mb-6 text-black">
+        <h1 class="text-xl font-bold mb-6 text-black">
           Process control limitations
-        </h3>
+        </h1>
         <ul class="list-disc ml-5 space-y-3 text-gray-800">
           <li>
             They do not monitor RAP moisture, gradation, or binder content
@@ -1320,9 +1320,9 @@ const items = [
       <div
         class="bg-[#eaeaea] border border-black rounded-[30px] p-8 flex flex-col"
       >
-        <h3 class="text-xl font-bold mb-6 text-black">
+        <h1 class="text-xl font-bold mb-6 text-black">
           Risk aversion and conservative specifications
-        </h3>
+        </h1>
         <ul class="list-disc ml-5 space-y-3 text-gray-800">
           <li>
             They avoid RAP due to fear of performance claims or penalties.
@@ -1339,9 +1339,9 @@ const items = [
       <div
         class="bg-[#eaeaea] border border-black rounded-[30px] p-8 flex flex-col"
       >
-        <h3 class="text-xl font-bold mb-6 text-black">
+        <h1 class="text-xl font-bold mb-6 text-black">
           Lack of understanding and investigation of rejuvenators
-        </h3>
+        </h1>
         <ul class="list-disc ml-5 space-y-3 text-gray-800">
           <li>
             They do not fully understand how rejuvenators interact with aged RAP
@@ -1393,6 +1393,7 @@ const items = [
 
       <div class="flex items-center justify-between gap-4 md:gap-12">
         <button
+          aria-label="See previous item"
           id="prev"
           class="hidden md:flex flex-shrink-0 w-16 h-16 rounded-full border-[3px] border-black items-center justify-center hover:bg-gray-300 transition group"
         >
@@ -1451,6 +1452,7 @@ const items = [
           </div>
         </div>
         <button
+          aria-label="See next item"
           id="next"
           class="hidden md:flex flex-shrink-0 w-16 h-16 rounded-full border-[3px] border-black items-center justify-center hover:bg-gray-300 transition group"
         >
@@ -1471,9 +1473,15 @@ const items = [
       </div>
 
       <div class="flex justify-center gap-4 mt-8 md:hidden lg:hidden">
-        <button id="prev-mobile" class="px-4 py-2 bg-gray-300 rounded">←</button
+        <button
+          id="prev-mobile"
+          aria-label="See next item"
+          class="px-4 py-2 bg-gray-300 rounded">←</button
         >
-        <button id="next-mobile" class="px-4 py-2 bg-gray-300 rounded">→</button
+        <button
+          id="next-mobile"
+          aria-label="See previous item"
+          class="px-4 py-2 bg-gray-300 rounded">→</button
         >
       </div>
     </div>

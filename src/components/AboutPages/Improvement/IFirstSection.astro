@@ -16,7 +16,7 @@ import { Image } from "astro:assets";
 
 <section class="w-full">
   <div class="w-full flex justify-center">
-    <Image src={Planos} alt="Technical prints" />
+    <Image src={Planos} alt="Technical prints" fetchpriority="high" />
   </div>
   <div class="w-full max-w-7xl px-8 mx-auto font-bold my-10">
     <h1 class="text-3xl md:text-4xl text-grisT">
@@ -78,28 +78,53 @@ import { Image } from "astro:assets";
     <div
       class="max-w-7xl grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 gap-10 px-8 font-bold text-black text-base md:text-lg my-16"
     >
-      <Card>
-        <h3 class="text-center">Dust flow in a baghouse</h3>
-        <div class="w-full">
-          <Image src={IAD1} alt="Dust flow in a baghouse" class="min-w-full min-h-[250px]" />
+      <Card
+        className="p-4 rounded-2xl w-full bg-white flex flex-col items-center justify-center"
+      >
+        <div>
+          <h3 class="text-center">Dust flow in a baghouse</h3>
+        </div>
+
+        <div class="w-full my-auto">
+          <Image
+            src={IAD1}
+            alt="Dust flow in a baghouse"
+            class="w-full h-full"
+          />
         </div>
       </Card>
-      <Card>
+      <Card
+        className="p-4 rounded-2xl w-full bg-white flex flex-col items-center justify-center"
+      >
         <h3 class="text-center">Stress analysis of a chassis</h3>
-        <div class="w-full">
-          <Image src={IAD2} alt="Dust flow in a baghouse" class="min-w-full min-h-[250px]" />
+        <div class="w-full flex my-auto">
+          <Image
+            src={IAD2}
+            alt="Dust flow in a baghouse"
+            class="w-full h-full"
+          />
         </div>
       </Card>
-      <Card>
+      <Card
+        className="p-4 rounded-2xl w-full bg-white flex flex-col items-center justify-center"
+      >
         <h3 class="text-center">Vibration analysis of screens</h3>
-        <div class="w-full">
-          <Image src={IAD3} alt="Dust flow in a baghouse" class="min-w-full min-h-[250px]" />
+        <div class="w-full flex my-auto">
+          <Image
+            src={IAD3}
+            alt="Dust flow in a baghouse"
+            class="w-full h-full"
+          />
         </div>
       </Card>
       <Card>
         <h3 class="text-center">Airflow analysis inside the cyclone</h3>
-        <div class="w-full">
-          <Image src={IAD4} alt="Dust flow in a baghouse" class="min-w-full max-h-[250px]" />
+        <div class="w-full aspect-square">
+          <Image
+            src={IAD4}
+            alt="Dust flow in a baghouse"
+            class="w-full h-full"
+          />
         </div>
       </Card>
     </div>

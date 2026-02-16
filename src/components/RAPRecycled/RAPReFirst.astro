@@ -77,18 +77,21 @@ import { Image } from "astro:assets";
                         on, the RAP never touches the burner flame and is heated
                         by three simultaneous mechanisms:
                     </p>
-                    <li>
-                        direct contact with the preheated virgin aggregate from
-                        earlier in the drum,
-                    </li>
-                    <li>
-                        exposure to the hot gases flowing through the drum, and
-                    </li>
-                    <li>
-                        direct contact with heated internal plates, known as
-                        comales, which absorb radiant heat from the burner
-                        flame.
-                    </li>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            direct contact with the preheated virgin aggregate
+                            from earlier in the drum,
+                        </li>
+                        <li>
+                            exposure to the hot gases flowing through the drum,
+                            and
+                        </li>
+                        <li>
+                            direct contact with heated internal plates, known as
+                            comales, which absorb radiant heat from the burner
+                            flame.
+                        </li>
+                    </ul>
                 </div>
                 <div class="w-full flex justify-center py-5">
                     <Image
@@ -99,7 +102,11 @@ import { Image } from "astro:assets";
                 </div>
 
                 <div class="w-full flex justify-center py-5">
-                    <Image src={rap} alt="RAP Collar" class="w-1/2 lg:w-1/2 md:w-3/4" />
+                    <Image
+                        src={rap}
+                        alt="RAP Collar"
+                        class="w-1/2 lg:w-1/2 md:w-3/4"
+                    />
                 </div>
                 <div class="w-full text-white flex flex-col justify-center">
                     <h1 class="text-xl md:text-2xl font-bold">RAP COLLAR</h1><br
@@ -162,7 +169,11 @@ import { Image } from "astro:assets";
                 <div
                     class="w-full text-white flex flex-col justify-between py-5"
                 >
-                    <Image src={rapFlight} alt="RAP ENTRY FLIGHTS" class="w-full rounded-lg" />
+                    <Image
+                        src={rapFlight}
+                        alt="RAP ENTRY FLIGHTS"
+                        class="w-full rounded-lg"
+                    />
                     <p class="font-thin text-white">
                         This controlled triple-heating system allows a higher
                         percentage of RAP to be processed consistently, up to
@@ -203,6 +214,6 @@ import { Image } from "astro:assets";
             </div>
         </div>
     </section>
-    <RBDropdown2/>
-    <AnalisisInversion client:only/>
+    <RBDropdown2 />
+    <AnalisisInversion client:only />
 </section>

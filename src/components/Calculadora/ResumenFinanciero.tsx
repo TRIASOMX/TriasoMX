@@ -50,7 +50,7 @@ export default function ResumenFinanciero({ state }: Props) {
 
           <div className="text-md font-semibold text-gray-600">
             <p>Total variable costs</p>
-            <p className="text-xs text-gray-400">
+            <p className="text-xs text-gray-600">
               ({fmt(cosvariables)}/M3 x {Math.round(prodm3)} M3/Hr x {horasxmes} Hrs)
             </p>
           </div>
