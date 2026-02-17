@@ -1794,6 +1794,7 @@ const PlanoSection = () => {
                         CHASSIS & STRUCTURE
                       </h1>
                       <button
+                        aria-label="See more about the chassis and structure of the system"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2779,6 +2780,7 @@ const PlanoSection = () => {
                         CHASSIS & STRUCTURE
                       </h1>
                       <button
+                        aria-label="See more about the chassis and structure of the system"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({

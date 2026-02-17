@@ -58,7 +58,7 @@ const OdometerSection = () => {
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-grisP">Range of hot-mix production</p>
+            <p className="text-[#4F4F4F]">Range of hot-mix production</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -66,7 +66,7 @@ const OdometerSection = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">kW</p>
             </div>
-            <p className="text-grisP">Three-phase electric generator</p>
+            <p className="text-[#4F4F4F]">Three-phase electric generator</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -78,7 +78,7 @@ const OdometerSection = () => {
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">million BTU/hr</p>
             </div>
-            <p className="text-grisP text-center lg:text-start w-full">
+            <p className="text-[#4F4F4F] text-center lg:text-start w-full">
               Modulating burner capacity
             </p>
           </div>
