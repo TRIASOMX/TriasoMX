@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 import single from "../../assets/images/IntegralAsphalt/single.webp";
+import singleLow from "../../assets/images/IntegralAsphalt/singleLow.webp"
 
 const OdometerSection = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -85,7 +86,7 @@ const OdometerSection = () => {
 
         <div className="flex flex-col items-center justify-center gap-6">
           <div>
-            <img src={single.src} alt="Back of a Integral asphalt plant of 10 Tph" />
+            <img src={singleLow.src} alt="Back of a Integral asphalt plant of 10 Tph" />
           </div>
           <a
   href="#planosIntegral"
