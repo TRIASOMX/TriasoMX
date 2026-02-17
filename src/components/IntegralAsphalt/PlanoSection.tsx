@@ -2206,6 +2206,7 @@ const PlanoSection = () => {
                           DURABILITY & SAFETY
                         </h1>
                         <button
+                          aria-label="See more about the Durability and Safety"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2269,6 +2270,7 @@ const PlanoSection = () => {
                           CONTROL & OPERATION
                         </h1>
                         <button
+                          aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2340,6 +2342,7 @@ const PlanoSection = () => {
                           COMPONENTS & ELECTRICAL
                         </h1>
                         <button
+                          aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2430,6 +2433,7 @@ const PlanoSection = () => {
                           PORTABILITY
                         </h1>
                         <button
+                          aria-label="See more about the portability"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2492,6 +2496,7 @@ const PlanoSection = () => {
                         BURNER SYSTEM
                       </h1>
                       <button
+                        aria-label="See more about the burner system"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2540,6 +2545,7 @@ const PlanoSection = () => {
                         COMPLIANCE WITH INDUSTRY STANDARDS
                       </h1>
                       <button
+                        aria-label="See more about the compliance with industry standards"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2913,6 +2919,7 @@ const PlanoSection = () => {
                         DRUM MIXER
                       </h1>
                       <button
+                        aria-label="See more about the Drum Mixer Specifications"
                         className="block"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -3019,6 +3026,7 @@ const PlanoSection = () => {
                         ASPHALT TANK
                       </h1>
                       <button
+                        aria-label="See more about the Asphalt Tank specifications"
                         className="block"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -3114,6 +3122,7 @@ const PlanoSection = () => {
                         BIN UNITS
                       </h1>
                       <button
+                        aria-label="See more about the Bin Units specifications"
                         className="block"
                         onClick={() =>
                           setOpenSections((prev) => ({

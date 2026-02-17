@@ -54,6 +54,7 @@ const SliderHero = () => {
               src={slide.img.src}
               alt={`slide-${index}`}
               className="w-full object-cover h-[300px] md:h-[600px]"
+              fetchPriority="high"
             />
             <div className="absolute top-10 left-10 text-white p-6 max-w-sm md:max-w-md rounded-md ">
               <div className="absolute inset-0 bg-blueMain opacity-70 rounded-md "></div>

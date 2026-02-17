@@ -11,6 +11,7 @@ import icon4 from "../../assets/images/HotMix/icon4.webp";
 import icon5 from "../../assets/images/HotMix/icon5.webp";
 import SiloSAE from "../../assets/images/HotMix/SiloSAE.webp";
 import SiloAEVL from "../../assets/images/HotMix/SiloAEVL.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
 <section
@@ -58,18 +59,14 @@ import SiloAEVL from "../../assets/images/HotMix/SiloAEVL.webp";
           </p>
         </div>
         <div class="w-full max-w-7xl mx-auto px-8 flex justify-center">
-          <video
-            class="w-[90vw] md:w-[50vw]"
-            playsinline
-            controls
+          <SmartVideo
+            client:visible
+            src="/Videos/Webm/HMSilo.webm"
             poster="/Gallery/customdes.webp"
-            preload="metadata"
-            width="1280"
-            height="720"
-          >
-            <source src="/Videos/Webm/HMSilo.webp" type="video/webm" />
-            <source src="/Videos/Mp4/HMSilo.mp4" type="video/mp4" />
-          </video>
+            desktopWidth="80%"
+            isLoop={false}
+            autoplayOnMobile={false}
+          />
         </div>
         <div class="w-full text-center px-8 max-w-7xl mx-auto py-10">
           <h1 class="text-blueMain text-2xl md:text-3xl font-bold">
@@ -80,7 +77,9 @@ import SiloAEVL from "../../assets/images/HotMix/SiloAEVL.webp";
         <div class="w-full flex flex-col bg-[#2b2b2b]">
           <div class="text-white py-10 w-full">
             <details class="group max-w-7xl mx-auto px-8">
-              <summary class="flex flex-row items-center justify-between cursor-pointer list-none">
+              <summary
+                class="flex flex-row items-center justify-between cursor-pointer list-none"
+              >
                 <h1 class="font-bold text-2xl md:text-3xl">
                   Option for portability
                 </h1>
@@ -159,17 +158,13 @@ import SiloAEVL from "../../assets/images/HotMix/SiloAEVL.webp";
         </div>
 
         <div class="w-full max-w-7xl mx-auto px-8">
-          <video
-            playsinline
-            controls
+          <SmartVideo
+            client:visible
+            src="/Videos/Webm/HMSilo2.webm"
             poster="/Gallery/customdes.webp"
-            preload="metadata"
-            width="1280"
-            height="720"
-          >
-            <source src="/Videos/Webm/HMSilo2.webp" type="video/webm" />
-            <source src="/Videos/Mp4/HMSilo2.mp4" type="video/mp4" />
-          </video>
+            isLoop={true}
+            autoplayOnMobile={true}
+          />
         </div>
       </div>
       <!-- Second Section -->
@@ -188,17 +183,13 @@ import SiloAEVL from "../../assets/images/HotMix/SiloAEVL.webp";
           </p>
         </div>
         <div class="w-full max-w-7xl mx-auto px-8">
-          <video
-            playsinline
-            controls
+          <SmartVideo
+            client:visible
+            src="/Videos/Webm/HMinclinado.webm"
             poster="/Gallery/customdes.webp"
-            preload="metadata"
-            width="1280"
-            height="720"
-          >
-            <source src="/Videos/Webm/HMinclinado.webp" type="video/webm" />
-            <source src="/Videos/Mp4/HMinclinado.mp4" type="video/mp4" />
-          </video>
+            isLoop={true}
+            autoplayOnMobile={true}
+          />
         </div>
         <div class="w-full max-w-7xl mx-auto px-8 py-10">
           <h1 class="text-blueMain text-2xl md:text-3xl text-center">

@@ -16,6 +16,7 @@ import OSection from "../unitComponents/OSection.astro";
 import siloBG from "../../assets/images/HotMix/siloBG.webp";
 import Aislamiento from "../../assets/images/HotMix/Aislamiento.webp";
 import HMGallerySlider from "./HMGallerySlider";
+import SmartVideo from "../unitComponents/SmartVideo";
 
 const images = [
   {
@@ -254,17 +255,13 @@ const images = [
               </div>
             </div>
             <div class="w-full order-1 md:order-2">
-              <video
-                playsinline
-                controls
+              <SmartVideo 
+                client:visible
+                src="/Videos/Webm/HMAdv.webm"
                 poster="/Gallery/customdes.webp"
-                preload="metadata"
-                width="1280"
-                height="720"
-              >
-                <source src="/Videos/Webm/HMAdv.webp" type="video/webm" />
-                <source src="/Videos/Mp4/HMAdv.mp4" type="video/mp4" />
-              </video>
+                isLoop={true}
+                autoplayOnMobile={true}
+              />
             </div>
           </div>
 
@@ -402,28 +399,6 @@ const images = [
     color: var(--rojo-btn);
     border-bottom: 2px solid var(--rojo-btn);
   }
-
-  /* Animación de entrada para el contenido */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.4s ease-out forwards;
-  }
-
-  /* Asegura que el wrapper respete la transición */
-  #tabs-wrapper {
-    /* Esto asegura que si el JS falla, no se oculte el contenido */
-    min-height: 200px;
-  }
 </style>
 
 <script is:inline>
@@ -433,59 +408,35 @@ const images = [
     const buttons = document.querySelectorAll('.tab-button-1');
     
     let currentObserver = null;
-
-    // Función principal: Ajusta la altura del wrapper al contenido visible
     const setWrapperHeight = (element) => {
-      // scrollHeight nos da la altura total del contenido, incluso si es dinámico
       wrapper.style.height = element.scrollHeight + 'px';
     };
-
-    // Función para observar cambios internos (como tus acordeones)
     const observeActiveContent = (element) => {
-      // Si ya hay un observador corriendo, lo desconectamos
       if (currentObserver) {
         currentObserver.disconnect();
       }
-
-      // Creamos un nuevo observador
       currentObserver = new ResizeObserver(() => {
         setWrapperHeight(element);
       });
-
-      // Empezamos a observar el contenido activo
       currentObserver.observe(element);
     };
-
-    // 1. Inicialización: Ajustar altura al cargar la página
     const activeContent = document.querySelector('.tab-content-1:not(.hidden)');
     if (activeContent) {
       setWrapperHeight(activeContent);
       observeActiveContent(activeContent);
     }
-
-    // 2. Lógica de Click en Tabs
     buttons.forEach((btn) => {
       btn.addEventListener('click', () => {
         const targetId = btn.getAttribute('data-tab');
         const targetContent = document.querySelector(`.tab-content-1[data-tab-content="${targetId}"]`);
-
-        // Actualizar botones (visual)
         buttons.forEach(b => b.setAttribute('aria-selected', 'false'));
         btn.setAttribute('aria-selected', 'true');
-
-        // Ocultar todos los contenidos
         allContents.forEach(c => c.classList.add('hidden'));
-
-        // Mostrar el nuevo contenido
         targetContent.classList.remove('hidden');
-
-        // IMPORTANTE: Recalcular altura y reiniciar el observador
         setWrapperHeight(targetContent);
         observeActiveContent(targetContent);
       });
     });
-
-    // 3. Responsive: Recalcular altura si cambia el tamaño de la ventana
     window.addEventListener('resize', () => {
       const active = document.querySelector('.tab-content-1:not(.hidden)');
       if (active) setWrapperHeight(active);
