@@ -5,7 +5,7 @@ import img2 from "../../assets/images/Relief/5.webp"
 
 export default function ReliefLastSection() {
     return (
-        <div className='w-full'>
+        <div className='w-full min-h-[1315.09'>
            
             <div className='flex justify-center items-center bg-[#393939] p-4 md:p-10'>
                 <div className='max-w-7xl mx-auto px-8 text-center'>
