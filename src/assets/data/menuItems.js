@@ -149,10 +149,10 @@ export const menuItems = [
         title : "ABOUT US",
         url : "/AboutUs",
       },
-      // {
-      //   title : "NEWS ROOM",
-      //   url : "/",
-      // },
+      {
+        title : "NEWS ROOM",
+        url : "/Newsroom",
+      },
       {
         title: "ADVANTAGES",
         url: "/Advantages",
