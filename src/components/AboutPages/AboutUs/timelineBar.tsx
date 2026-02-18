@@ -106,17 +106,12 @@ const TimelineBar: React.FC<TimelineBarProps> = ({ dates, activeIndex, onSelect 
                   <div
                     key={d.id}
                     data-timeline-dot
-                    className="flex flex-col items-center shrink-0 px-4 sm:px-6"
+                    className="flex flex-col items-center shrink-0 px-4 pb-3 sm:px-6"
                     onClick={() => handleDotClick(i)}
                   >
                 
                     <span
-                      className="text-xs font-medium mb-2.5 transition-colors duration-300 select-none whitespace-nowrap font-display"
-                      style={{
-                        color: isActive
-                          ? "hsl(var(--timeline-accent))"
-                          : "hsl(var(--timeline-fg) / 0.5)",
-                      }}
+                      className="text-xs font-bold mb-2.5 transition-colors duration-300 select-none whitespace-nowrap font-display "
                     >
                       {d.label}
                     </span>

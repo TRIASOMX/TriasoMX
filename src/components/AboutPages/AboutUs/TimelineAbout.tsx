@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { timelineData } from "./timelineData";
 import TimelineBar from "./timelineBar";
 import TimelineContent from "./timelineContent";
+import { timelineDataRock } from "./timelineDataRock"
 
 const Index = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndexRock, setActiveIndexRock] = useState(0);
 
   return (
     <div className="min-h-screen">
@@ -23,6 +25,23 @@ const Index = () => {
         dates={timelineData}
         activeIndex={activeIndex}
         onSlideChange={setActiveIndex}
+      />
+
+
+      <div className="max-w-7xl mx-auto px-8 py-10">
+        <h1 className="uppercase text-2xl lg:text-5xl md:text-5xl font-bold">Rock Crushers</h1>
+      </div>
+
+      <TimelineBar
+        dates={timelineDataRock}
+        activeIndex={activeIndexRock}
+        onSelect={setActiveIndexRock}
+      />
+
+      <TimelineContent
+        dates={timelineDataRock}
+        activeIndex={activeIndexRock}
+        onSlideChange={setActiveIndexRock}
       />
 
       <div className="max-w-7xl mx-auto px-8">
@@ -49,10 +68,10 @@ const Index = () => {
       </div>
 
       <div className=" py-10">
-        <div className="w-full relative flex h-[30vh] bg-center bg-no-repeat"
+        <div className="max-w-[2000px] relative flex mx-auto h-[30vh] bg-center bg-no-repeat"
           style={{ backgroundImage: "url(/contraflujo.webp)" }}>
 
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/60 w-full"></div>
 
           <div className="flex flex-col w-full max-w-7xl mx-auto px-8 justify-center items-start ">
 
