@@ -199,7 +199,7 @@ export const menuItems = [
 
       {
         title: "EXPOS",
-        url: "/"
+        url: "/Expo"
       },
     ]
   },
