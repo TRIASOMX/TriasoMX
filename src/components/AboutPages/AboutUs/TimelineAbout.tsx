@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { timelineData } from "./timelineData";
 import TimelineBar from "./timelineBar";
 import TimelineContent from "./timelineContent";
-import { timelineDataRock } from "./timelineDataRock"
+// import { timelineDataRock } from "./timelineDataRock"
 
 const Index = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [activeIndexRock, setActiveIndexRock] = useState(0);
+  // const [activeIndexRock, setActiveIndexRock] = useState(0);
 
   return (
     <div className="min-h-screen">
@@ -28,7 +28,7 @@ const Index = () => {
       />
 
 
-      <div className="max-w-7xl mx-auto px-8 py-10">
+      {/* <div className="max-w-7xl mx-auto px-8 py-10">
         <h1 className="uppercase text-2xl lg:text-5xl md:text-5xl font-bold">Rock Crushers</h1>
       </div>
 
@@ -42,7 +42,7 @@ const Index = () => {
         dates={timelineDataRock}
         activeIndex={activeIndexRock}
         onSlideChange={setActiveIndexRock}
-      />
+      /> */}
 
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col space-y-5 ">
