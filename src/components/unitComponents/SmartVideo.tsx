@@ -2,15 +2,19 @@ import React, { useRef, useEffect, useState } from 'react';
 
 interface SmartVideoProps {
   src: string;
-  poster?: string;
+  poster?: any;
   width?: string | number;
   height?: string | number;
   className?: string;
-  classVideo? :string
+  classVideo?: string;
   autoplayOnMobile?: boolean;
   isLoop?: boolean;
   desktopWidth?: string | number;
   desktopHeight?: string | number;
+  /**
+   * @default false
+   */
+  isPosterHighPriority?: boolean;
 }
 
 const SmartVideo: React.FC<SmartVideoProps> = ({
@@ -19,15 +23,17 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
   width = "100%",
   height = "auto",
   className = "",
-  classVideo ="", 
+  classVideo = "",
   autoplayOnMobile = false,
   isLoop = false,
   desktopHeight,
-  desktopWidth
+  desktopWidth,
+  isPosterHighPriority = false,
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -50,17 +56,20 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
         if (entry.isIntersecting && !isVideoLoaded) {
           setIsVideoLoaded(true);
         }
+
         const shouldAutoplay = !isMobile || (isMobile && autoplayOnMobile);
 
         if (isVideoLoaded && shouldAutoplay) {
           if (entry.isIntersecting) {
             const playPromise = video.play();
             if (playPromise !== undefined) {
-              playPromise.catch(() => {
-              });
+              playPromise
+                .then(() => setIsPlaying(true))
+                .catch(() => {});
             }
           } else {
             video.pause();
+            setIsPlaying(false);
           }
         }
       });
@@ -77,11 +86,34 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
   const isMuted = !isMobile || autoplayOnMobile;
 
   return (
-    <div className={`smart-video-container ${className}`} style={{ width: currentWidth, height: currentHeight }}>
+    <div
+      className={`smart-video-container ${className}`}
+      style={{ position: 'relative', width: currentWidth, height: currentHeight }}
+    >
+      {poster && !isPlaying && showControls === false && (
+        <img
+          src={poster}
+          aria-hidden="true"
+          fetchPriority={isPosterHighPriority ? 'high' : 'auto'}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            pointerEvents: 'none',
+            opacity: isPlaying ? 0 : 1,
+            transition: 'opacity 0.3s ease',
+            zIndex: 1,
+          }}
+          alt=""
+        />
+      )}
+
       <video
         className={classVideo}
         ref={videoRef}
-        poster={poster}
+        poster={showControls ? poster : undefined}
         src={isVideoLoaded ? src : undefined}
         width="100%"
         height="100%"
@@ -90,7 +122,13 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
         loop={isLoop}
         playsInline
         preload="none"
-        style={{ objectFit: 'cover', display: 'block', background: "#f4f5f6" }}
+        style={{
+          objectFit: 'cover',
+          display: 'block',
+          background: "#f4f5f6",
+          position: 'relative',
+          zIndex: 0,
+        }}
       />
     </div>
   );

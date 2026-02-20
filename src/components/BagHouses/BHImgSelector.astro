@@ -19,6 +19,8 @@ import finesReturn from "../../assets/images/BagHouses/finesReturn.webp";
 import boquillasVL from "../../assets/images/BagHouses/Low/BoquillasVLLow.webp";
 import bgBack from "../../assets/images/BagHouses/test.webp";
 import { Image } from "astro:assets";
+import poster1 from "../../assets/images/BagHouses/GallerySlider/BHG4.webp"
+import poster2 from "../../assets/images/BagHouses/14.webp"
 
 import g1 from "../../assets/images/BagHouses/GallerySlider/BHG1.webp";
 import g2 from "../../assets/images/BagHouses/GallerySlider/BHG2.webp";
@@ -297,7 +299,7 @@ const tanksSlides = [
       <SmartVideo
         client:visible
         src="/Videos/Webm/DMVideo.webm"
-        poster="/Gallery/customdes.webp"
+        poster={poster1.src}
         isLoop={true}
         autoplayOnMobile={true}
       />
@@ -325,7 +327,7 @@ const tanksSlides = [
       <SmartVideo
         client:visible
         src="/Videos/Webm/BHVideo.webm"
-        poster="/Gallery/customdes.webp"
+        poster={poster2.src}
         isLoop={true}
         autoplayOnMobile={true}
         desktopWidth="80%"

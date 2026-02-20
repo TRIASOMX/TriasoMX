@@ -17,7 +17,6 @@ const { cover, title, date, images } = Astro.props
   <img
     src={cover}
     alt={title}
-    loading="lazy"
     fetchpriority="high"
     class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
   />
@@ -26,7 +25,7 @@ const { cover, title, date, images } = Astro.props
     class="absolute inset-0 bg-black/60 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300
            flex flex-col justify-end p-4 text-white"
   >
-    <h3 class="text-lg font-semibold leading-tight">{title}</h3>
+    <h1 class="text-lg font-semibold leading-tight">{title}</h1>
     <span class="text-sm opacity-80">{date}</span>
   </div>
 </div>

@@ -2,13 +2,13 @@ import React from "react";
 
 export default function FormSection() {
   return (
-    <div className="max-w-7xl mx-auto" style={{ marginTop: "100px" }}>
+    <div className="max-w-7xl px-8 mx-auto" style={{ marginTop: "100px" }}>
       <div className="w-full flex justify-center my-10">
         <h1 className="font-bold text-5xl text-[#14427c]">Contact Us</h1>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center ">
         <div className="flex flex-col justify-center items-center space-y-5 pb-5 gap-20">
-          <div>
+          <div className="w-4/5 lg:w-full flex justify-center items-center">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2939.729113871134!2d-83.20525970000001!3d42.539808699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824c65376ffbe87%3A0xad972dfb84215e22!2s1011%20S%20Adams%20Rd%20b%2C%20Birmingham%2C%20MI%2048009%2C%20EE.%20UU.!5e0!3m2!1ses!2smx!4v1767900201570!5m2!1ses!2smx"
               width="600"
@@ -19,7 +19,7 @@ export default function FormSection() {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div className="grid grid-cols-2">
+          <div className="grid  grid-cols-1 lg:grid-cols-2 space-y-5 ">
             <div className="my-auto space-y-5">
               <div className="flex flex-row items-center gap-5">
                 <svg
@@ -215,8 +215,8 @@ export default function FormSection() {
             </div>
           </div>
         </div>
-        <div className="mx-auto">
-          <img src="https://placehold.co/600x400/png" alt="" />
+        <div className="mx-auto pb-5">
+          <img src="https://placehold.co/600x400/png" alt="" className="rounded-lg" />
         </div>
       </div>
     </div>
