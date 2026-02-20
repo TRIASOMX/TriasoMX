@@ -17,23 +17,23 @@ const SpareGallery = () => {
   const [currentImg, setCurrentImg] = useState("");
   const [currentAlt, setCurrentAlt] = useState("");
   const ItemGallery = [
-    { title: "GEARBOXES", image: img1, altTitle:"GEARBOXES" },
-    { title: "ELECTRIC MOTORS", image: img2, altTitle:"ELECTRIC MOTORS" },
-    { title: "BANDS", image: img3, altTitle:"BANDS" },
-    { title: "ROLLERS", image: img4, altTitle:"ROLLERS" },
-    { title: "ELEVATOR CHAIN PARTS", image: img5, altTitle:"ELEVATOR CHAIN PARTS" },
-    { title: "PULLEYS", image: img6, altTitle:"PULLEYS" },
-    { title: "DRUM RINGS", image: img7, altTitle:"DRUM RINGS" },
-    { title: "ROLES", image: img8, altTitle:"ROLES" },
-    { title: "CONTROL COMPONENTS", image: img9, altTitle:"CONTROL COMPONENTS" },
-    { title: "ELECTRICAL PARTS", image: img10, altTitle:"ELECTRICAL PARTS" },
-    { title: "TRIASO VALVES", image: img11, altTitle:"TRIASO VALVES" },
-    { title: "EXPORT OF SPARE PARTS", image: img12, altTitle:"EXPORT OF SPARE PARTS" },
+    { title: "Gear Reducers", image: img1, altTitle:"Gear Reducers" },
+    { title: "Electric motors", image: img2, altTitle:"Electric motors" },
+    { title: "Belts", image: img3, altTitle:"Belts" },
+    { title: "Rollers", image: img4, altTitle:"Rollers"},
+    { title: "Parts for elevator chains", image: img5, altTitle:"Parts for elevator chains" },
+    { title: "Pulleys", image: img6, altTitle:"Pulleys" },
+    { title: "Drum tires", image: img7, altTitle:"Drum tires" },
+    { title: "Drum trunnions", image: img8, altTitle:"Drum trunnions" },
+    { title: "Control parts", image: img9, altTitle:"Control parts" },
+    { title: "Electric parts", image: img10, altTitle:"Electric parts" },
+    { title: "Triaso valves", image: img11, altTitle:"Triaso valves" },
+    { title: "Spare parts exportation", image: img12, altTitle:"Spare parts exportation" },
   ];
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="w-full mt-6 flex justify-center items-center">
-        <h1 className="font-bold text-xl md:text-2xl">GALLERY</h1>
+        <h1 className="font-bold text-xl lg:text-5xl md:text-5xl">GALLERY</h1>
       </div>
       <div className="w-full px-4 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 py-10 max-w-7xl">
         {ItemGallery.map((element, i) => (

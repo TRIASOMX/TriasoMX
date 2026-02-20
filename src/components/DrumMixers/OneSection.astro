@@ -17,21 +17,32 @@ import AcordeonItemCol from "../unitComponents/AcordeonItemCol";
 import OSection from "../unitComponents/OSection.astro";
 import flag from "../../assets/images/Burners/flag.svg";
 import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
-<div class="w-full flex flex-col items-center justify-center font-bold mt-5 lg:mt-0">
-  <div class="max-w-7xl px-8 lg:mb-28 mx-auto">
+<div
+  class="w-full flex flex-col items-center justify-center font-bold mt-5 lg:mt-0"
+>
+  <div class="max-w-7xl px-8 mb-10 lg:mb-28 mx-auto lg:pt-0">
     <h1 class="text-redBg text-xl lg:text-5xl md:text-5xl text-center">
       The One and Always
     </h1>
   </div>
-  <div class="max-w-7xl px-8 mx-auto flex justify-center">
+  <div class="hidden max-w-7xl px-8 mx-auto lg:flex justify-center">
     <Image
       src={obracivil}
       alt="Drum mixer on a construction zone"
       class="hero-img lg:w-4/5 rounded-lg"
     />
   </div>
+  <div class="flex max-w-7xl px-8 mx-auto lg:hidden md:flex justify-center">
+    <Image
+      src={obracivil}
+      alt="Drum mixer on a construction zone"
+      class="  lg:w-4/5 rounded-lg"
+    />
+  </div>
+
   <div
     class="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center gap-6"
   >
@@ -39,7 +50,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
       <h2 class="text-black text-lg md:text-xl">
         Engineered for Demanding Producers. Built for Performance.
       </h2>
-      <p class="text-grisT text-base md:text-lg text-justify">
+      <p class="text-grisT text-sm lg:text-base md:text-base text-justify">
         At Triaso, we know that no two asphalt operations are alike. That’s why
         our plants are precision-engineered to match each producer’s unique
         requirements. From heavy-duty construction designed for continuous
@@ -107,28 +118,23 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
   </div>
 
   <div
-    class="flex flex-col max-w-7xl px-8 mx-auto  items-center justify-center bg-white rounded-2xl relative"
+    class="flex flex-col max-w-7xl px-8 mx-auto items-center justify-center bg-white rounded-2xl relative"
   >
     <details class="group max-w-7xl">
       <summary class="cursor-pointer list-none">
         <h2 class="text-2xl md:text-3xl my-6 text-center">
           Retractable Drag Slat for Efficient Transport and Operation
         </h2>
-        <div class="z-20">
-          <div class="w-full flex justify-center">
-            <video
-              class="lg:w-3/5"
-              playsinline
-              controls
-              poster="/Gallery/customdes.webp"
-              preload="metadata"
-              width="1280"
-              height="720"
-            >
-              <source src="/Videos/Webm/DMVideo1.webp" type="video/webm" />
-              <source src="/Videos/Mp4/DMVideo1.mp4" type="video/mp4" />
-            </video>
-          </div>
+        <div class="z-20 flex items-center justify-center">
+          <SmartVideo
+            client:visible
+            desktopWidth="70%"
+            desktopHeight="70%"
+            src="/Videos/Webm/PlaC140ET.webm"
+            poster="/Gallery/customdes.webp"
+            autoplayOnMobile={true}
+            isLoop={true}
+          />
         </div>
         <div class="flex justify-end py-10">
           <svg
@@ -148,8 +154,10 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
           >
         </div>
       </summary>
-      <div class="w-full max-w-full flex flex-col items-center justify-center mt-20 z-20">
-        <p class="text-grisT text-justify text-base md:text-lg pb-5">
+      <div
+        class="w-full max-w-full flex flex-col items-center justify-center mt-20 z-20"
+      >
+        <p class="text-grisT text-justify text-sm lg:text-lg md:text-lg pb-5">
           The vertical drag slat features a retractable configuration that
           complies with DOT transportation height limits, ensuring safe and
           legal road transport. Once the drum mixer is installed on-site, the
@@ -187,7 +195,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
               >
                 Chain with a 4” pitch
               </h1>
-              <p class="text-grisT text-base lg:text-lg">
+              <p class="text-grisT text-base md:text-lg font-thin">
                 The 4” pitch chain is a key component of the elevator, designed
                 for heavy-duty operation. <span style="color:black;">
                   With a tensile strength of 50,000 lbs (22,700 kg) and
@@ -205,7 +213,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
               >
                 Self-aligning bearings
               </h1>
-              <p class="text-grisT text-base lg:text-lg">
+              <p class="text-grisT text-base md:text-lg font-thin">
                 Self-aligning bearings in the straight drag slat ensure smooth
                 operation by automatically compensating for misalignment. This
                 reduces wear, extends service life, and improves reliability in
@@ -234,10 +242,10 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
           </div>
           <div class="flex flex-col col-span-3 items-center gap-10">
             <div
-              class="bg-white rounded-2xl text-base lg:text-lg flex flex-col text-start lg:p-4 md:p-4 justify-center"
+              class="bg-white rounded-2xl text-base md:text-lg flex flex-col text-start lg:p-4 md:p-4 justify-center"
             >
-              <h1 class="text-black mb-4">Chain with a 4” pitch</h1>
-              <p class="text-grisT text-base lg:text-lg">
+              <h1 class="text-black mb-4 font-bold">Chain with a 4” pitch</h1>
+              <p class="text-grisT font-thin">
                 The 4” pitch chain is a key component of the elevator, designed
                 for heavy-duty operation. <span style="color:black;">
                   With a tensile strength of 50,000 lbs (22,700 kg) and
@@ -251,7 +259,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
               class="bg-white rounded-2xl text-base lg:text-lg flex flex-col text-start lg:p-4 md:p-4 justify-center"
             >
               <h1 class="text-black mb-4">Self-aligning bearings</h1>
-              <p class="text-grisT text-base lg:text-lg">
+              <p class="text-grisT text-base lg:text-lg font-thin">
                 Self-aligning bearings in the straight drag slat ensure smooth
                 operation by automatically compensating for misalignment. This
                 reduces wear, extends service life, and improves reliability in
@@ -286,7 +294,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
                 >
                   Automatic opening
                 </h1>
-                <h2>controlled by variables such as</h2>
+                <h2 class="font-medium">controlled by variables such as</h2>
                 <h1
                   class="text-black font-bold text-lg lg:text-3xl md:text-3xl"
                 >
@@ -302,7 +310,9 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
                 >
                   Integrated control
                 </h1>
-                <h2>in the console centralizes system management.</h2>
+                <h2 class="font-medium">
+                  in the console centralizes system management.
+                </h2>
               </div>
 
               <div
@@ -313,7 +323,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
                 >
                   Pneumatic opening
                 </h1>
-                <h2>with a</h2>
+                <h2 class="font-medium">with a</h2>
                 <h1
                   class="text-black font-bold text-lg lg:text-3xl md:text-3xl"
                 >
@@ -329,7 +339,9 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
                 >
                   Automatic or manual opening
                 </h1>
-                <h2>allows operation either manually or automatically</h2>
+                <h2 class="font-medium">
+                  allows operation either manually or automatically
+                </h2>
               </div>
 
               <div
@@ -340,7 +352,9 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
                 >
                   7.5 Hp air compressor <br /> with a 293-liter air tank
                 </h1>
-                <h2>supplies air for pneumatic operation</h2>
+                <h2 class="font-medium">
+                  supplies air for pneumatic operation
+                </h2>
               </div>
             </div>
           </div>
@@ -374,7 +388,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
     <div class="h-0.5 bg-blueMain w-1/4 pr-6 self-start"></div>
   </div>
   <div class="max-w-7xl">
-    <h2 class="text-2xl md:text-3xl text-center text-redBg mt-10">
+    <h2 class="text-xl md:text-3xl text-center text-redBg mt-10">
       With Triaso, Become the Exclusive Provider of Hot Mix <br /> for All Paving
       Projects in Your Region
     </h2>
@@ -433,7 +447,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
     </div>
   </TwoColumnSection>
   <div class="max-w-7xl px-2 mx-auto flex flex-col gap-3 my-10">
-    <AcordeonItemCol title="Extra-reinforced front shield" client:only>
+    <AcordeonItemCol title="Extra-reinforced front shield" client:idle>
       <div
         class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-center py-5"
       >
@@ -462,7 +476,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
         </div>
       </div>
     </AcordeonItemCol>
-    <AcordeonItemCol title="Optimized Insulation Design" client:only>
+    <AcordeonItemCol title="Optimized Insulation Design" client:idle>
       <div
         class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-center py-5"
       >
@@ -485,7 +499,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
         </div>
       </div>
     </AcordeonItemCol>
-    <AcordeonItemCol title="Single-Point Adjustment System" client:only>
+    <AcordeonItemCol title="Single-Point Adjustment System" client:idle>
       <div
         class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-center py-5"
       >
@@ -511,7 +525,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
         </div>
       </div>
     </AcordeonItemCol>
-    <AcordeonItemCol title="Drum Tires & Trunnions" client:only>
+    <AcordeonItemCol title="Drum Tires & Trunnions" client:idle>
       <div
         class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-center py-5"
       >
@@ -554,7 +568,7 @@ import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
         </p>
       </div>
     </AcordeonItemCol>
-    <AcordeonItemCol title="Triaso Thrust Rollers" client:only>
+    <AcordeonItemCol title="Triaso Thrust Rollers" client:idle>
       <div
         class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-center py-5"
       >

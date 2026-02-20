@@ -1,220 +1,224 @@
 export const menuItems = [
   {
-    title : "PRODUCTS",
-    url : "/",
-    children : [
+    title: "PRODUCTS",
+    url: "/",
+    children: [
       {
-        title : "ASPHALT PLANTS",
-        url : "/AsphaltPlant",
-        children : [
-        {
-          title : "DRUM MIXERS",
-          url : "/DrumMixers",
-        },
-        {
-          title : "BAG HOUSES",
-          url : "/BagHouses",
-        },
-        {
-          title : "ASPHALT STORAGE TANKS",
-          url : "/AsphaltStorage",
-        },
-        {
-          title: " BINS",
-          url: "/BinUnits",
-          children : [ 
-            {
-              title : "BIN UNITS",
-              url : "/BinUnits",
-            },
-            {
-              title : "RAP BINS",
-              url : "/RapBins",
-            },
-            {
-              title: "POWDER ADDITIVE BINS",
-              url: "/PowderAd",
-            }
-          ]
-        },
-        {
-          title : "HEATING SYSTEMS",
-          url : "/Burners",
-          children : [
-            {
-              title : "BURNERS",
-              url : "/Burners",
-            },
-            {
-              title : "FUEL PREHEATERS",
-              url : "/FuelPreHeaters",
-            },
-            {
-              title : "OIL HEATERS",
-              url : "/OilHeaters",
-            }
-          ]
-        },
-        {
-          title : "HOT-MIX STORAGE SILOS",
-          url : "/HotMix"
-        },
-        {
-          title : "COLD-MIX PLANTS",
-          url : "/ColdMix",
-        },
-        {
-          title : "10 TPH INTEGRAL ASPHALT PLANTS",
-          url : "/IntegralAphaltPlant",
-        }
-      ]
-      },
-      {
-        title : "ROCK CRUSHERS",
-        url : "/",
-        children : [
+        title: "ASPHALT PLANTS",
+        url: "/AsphaltPlant",
+        children: [
           {
-            title : "JAW CRUSHERS",
-            url : "/JawCrushers",
+            title: "DRUM MIXERS",
+            url: "/DrumMixers",
           },
           {
-            title : "CONE CRUSHERS",
-            url : "/ConeCrushers",
+            title: "BAG HOUSES",
+            url: "/BagHouses",
           },
           {
-            title : "INTEGRAL EQUIPPED CRUSHERS",
-            url : "/IntegralCrushers",
+            title: "ASPHALT STORAGE TANKS",
+            url: "/AsphaltStorage",
           },
           {
-            title : "BALL MILLS",
-            url : "/BallMills",
-          },
-          {
-            title : "MINI CRUSHERS",
-            url : "/MiniCrushers",
-          },
-          {
-            title : "CONVEYORS",
-            url : "/BeltConveyors",
-          },
-          {
-            title : "FEEDERS",
-            url : "/",
-            children : [
+            title: " BINS",
+            url: "/BinUnits",
+            children: [
               {
-                title : "BELT FEEDERS",
-                url : "/BeltFeeders",
+                title: "BIN UNITS",
+                url: "/BinUnits",
               },
               {
-                title : "VIBRATORY FEEDERS",
-                url : "/",
+                title: "RAP BINS",
+                url: "/RapBins",
+              },
+              {
+                title: "POWDER ADDITIVE BINS",
+                url: "/PowderAd",
               }
             ]
           },
           {
-            title : "VIBRATORY SCREENS",
-            url : "/VibratingScreens",
+            title: "HEATING SYSTEMS",
+            url: "/Burners",
+            children: [
+              {
+                title: "BURNERS",
+                url: "/Burners",
+              },
+              {
+                title: "FUEL PREHEATERS",
+                url: "/FuelPreHeaters",
+              },
+              {
+                title: "OIL HEATERS",
+                url: "/OilHeaters",
+              }
+            ]
+          },
+          {
+            title: "HOT-MIX STORAGE SILOS",
+            url: "/HotMix"
+          },
+          {
+            title: "COLD-MIX PLANTS",
+            url: "/ColdMix",
+          },
+          {
+            title: "10 TPH INTEGRAL ASPHALT PLANTS",
+            url: "/IntegralAphaltPlant",
+          }
+        ]
+      },
+      {
+        title: "ROCK CRUSHERS",
+        url: "/",
+        children: [
+          {
+            title: "JAW CRUSHERS",
+            url: "/JawCrushers",
+          },
+          {
+            title: "CONE CRUSHERS",
+            url: "/ConeCrushers",
+          },
+          {
+            title: "INTEGRAL EQUIPPED CRUSHERS",
+            url: "/IntegralCrushers",
+          },
+          {
+            title: "BALL MILLS",
+            url: "/BallMills",
+          },
+          {
+            title: "MINI CRUSHERS",
+            url: "/MiniCrushers",
+          },
+          {
+            title: "CONVEYORS",
+            url: "/BeltConveyors",
+          },
+          {
+            title: "FEEDERS",
+            url: "/",
+            children: [
+              {
+                title: "BELT FEEDERS",
+                url: "/BeltFeeders",
+              },
+              {
+                title: "VIBRATORY FEEDERS",
+                url: "/",
+              }
+            ]
+          },
+          {
+            title: "VIBRATORY SCREENS",
+            url: "/VibratingScreens",
           }
         ]
       },
     ]
   },
   {
-    title : "SERVICE",
-    url : "/",
-    children : [
+    title: "SERVICE",
+    url: "/",
+    children: [
       {
-        title : "SPARE PARTS",
-        url : "/Spare",
+        title: "SPARE PARTS",
+        url: "/Spare",
       },
       {
-        title : "COSTUME DESIGN",
-        url : "/CustomDesign",
+        title: "COSTUME DESIGN",
+        url: "/CustomDesign",
       },
       {
-        title : "MAINTENANCE",
-        url : "/Maintenance",
+        title: "MAINTENANCE",
+        url: "/Maintenance",
       },
       {
-        title : "REHABILITATION",
-        url : "/Rehabilitation",
+        title: "REHABILITATION",
+        url: "/Rehabilitation",
+      }
+    ]
+  },
+  {
+    title: "ABOUT",
+    url: "/",
+    children: [
+      {
+        title : "ABOUT US",
+        url : "/AboutUs",
       },
+      {
+        title : "NEWS ROOM",
+        url : "/Newsroom",
+      },
+      {
+        title: "ADVANTAGES",
+        url: "/Advantages",
+      },
+      // {
+      //   title : "HIGH QUALITY",
+      //   url : "/",
+      // },
+      {
+        title: "AESTHETIC SIDE PANELS",
+        url: "/AestheticSide",
+      },
+      {
+        title: "IMPROVMENT AND DESIGN",
+        url: "/Improvement",
+      },
+      {
+        title: "MANUFACTURE",
+        url: "/Manufacture",
+      },
+      {
+        title: "DELIVERY AND INSTALLATION",
+        url: "/Delivery",
+      },
+      {
+        title: "SOME TIPS FOR BUYING AN EQUIPMENT",
+        url: "/",
+        children: [
+          {
+            title: "ASPHALT PLANTS",
+            url: "/TipsAsphalt",
+          },
+          // {
+          //   title : "ROCK CRUSHERS",
+          //   url : "/",
+          // }
+        ]
+      },
+
+      {
+        title: "RAP RECYCLED ASPHALT PAVEMENT",
+        url: "/RapRecycled",
+      },
+
+      {
+        title: "EXPOS",
+        url: "/Expo"
+      },
+    ]
+  },
+  {
+    title: "AUTOMATION",
+    url: "/",
+    children: [
       {
         title: "TRIASO RELIEF",
         url: "/Relief"
       }
     ]
   },
+  // {
+  //   title : "VIDEOS",
+  //   url : "/",
+  // },
   {
-    title : "ABOUT",
-    url : "/",
-    children : [
-      {
-        title : "ABOUT US",
-        url : "/",
-      },
-      {
-        title : "NEWS ROOM",
-        url : "/",
-      },
-      {
-        title : "ADVANTAGES",
-        url : "/Advantages",
-      },
-      {
-        title : "HIGH QUALITY",
-        url : "/",
-      },
-      {
-        title : "AESTHETIC SIDE PANELS",
-        url : "/AestheticSide",
-      },
-      {
-        title : "IMPROVMENT AND DESIGN",
-        url : "/Improvement",
-      },
-      {
-        title : "MANUFACTURE",
-        url : "/Manufacture",
-      },
-      {
-        title : "DELIVERY AND INSTALLATION",
-        url : "/Delivery",
-      },
-      {
-        title : "SOME TIPS FOR BUYING AN EQUIPMENT",
-        url : "/",
-        children : [
-          {
-            title : "ASPHALT PLANTS",
-            url : "/TipsAsphalt",
-          },
-          {
-            title : "ROCK CRUSHERS",
-            url : "/",
-          }
-        ]
-      },
-      {
-        title : "ROCK CRUSHERS CONFIGURATION",
-        url : "/"
-      },
-      {
-        title : "RAP RECYCLED ASPHALT PAVEMENT",
-        url : "/RapRecycled",
-      }
-    ]
-  },
-  {
-    title : "EXPOS",
-    url : "/",
-  },
-  {
-    title : "VIDEOS",
-    url : "/",
-  },
-  {
-    title : "CONTACT",
-    url : "/Contact",
+    title: "CONTACT",
+    url: "/Contact",
   }
 ]

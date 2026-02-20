@@ -3,17 +3,18 @@ import img1Low from "../../assets/images/RapBins/Low/TolvaConfComplLow.webp";
 import Image from "astro/components/Image.astro";
 ---
 
-<div class="my-20">
+<div class="my-16">
     <h1 class="text-center text-3xl md:text-5xl text-redBg font-bold">
         Your best business begins here
     </h1>
 </div>
 
-<div class="w-full mx-auto px-5 text-center mb-5">
+<div class="w-full mx-auto px-5 text-center mb-5 min-h-[88px] ">
     <div class="mb-5">
-        <p class="font-thin text-lg lg:text-xl md:text-xl">
-            For very 10% of RAP, <br />
-            the cost of hot-mix production
+        <p class="font-thin text-xl lg:text-3xl md:text-3xl">
+           <span class="block">For very 10% of RAP, </span>
+           <span class="block">the cost of hot-mix production</span>
+            
         </p>
         <h2 class="font-bold text-2xl lg:text-3xl">decreases 7%</h2>
     </div>
@@ -53,6 +54,7 @@ import Image from "astro/components/Image.astro";
 
     <div class="">
         <button
+            aria-label="See more information about the customizable RAP units"
             class="text-blueMain px-4 py-2 rounded-2xl text-6xl"
             onclick="toggleDropdown()"
             id="dropdown-button"

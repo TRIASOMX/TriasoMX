@@ -48,6 +48,7 @@ const SliderAesthetic = () => {
           src={currentSlide.imagen}
           alt={currentSlide.nombre}
           className="w-full max-w-[700px] h-auto object-contain rounded-xl transition-all duration-500"
+          fetchPriority="high"
         />
       </div>
 

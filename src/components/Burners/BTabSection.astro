@@ -14,14 +14,20 @@ import QmdorSil from "../../assets/images/Burners/QmdorSil.webp";
 import { Image } from "astro:assets";
 import imgtab1 from "../../assets/images/Burners/14.webp";
 import imgtab1Low from "../../assets/images/Burners/Low/14Low.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
 <section class="w-full flex 2 mt-6 md:mt-20 flex-col gap-4 bg-gray-100">
   <div class="flex flex-col gap-4 mt-8">
-    <div class="flex w-full max-w-7xl mx-auto px-4 gap-2 sm:gap-4">
+    <div
+      role="tablist"
+      aria-label="Characteristics tabs"
+      class="flex w-full max-w-7xl mx-auto px-4 gap-2 sm:gap-4"
+    >
       <button
         class="tab-button-1 flex-1 py-3 px-2 font-bold text-xs sm:text-sm md:text-xl text-center leading-tight focus:outline-none"
         data-tab="tab1"
+        role="tab"
         aria-selected="true"
       >
         Combustion Performance and
@@ -32,6 +38,7 @@ import imgtab1Low from "../../assets/images/Burners/Low/14Low.webp";
       <button
         class="tab-button-1 flex-1 py-3 px-2 font-bold text-xs sm:text-sm md:text-xl text-center leading-tight focus:outline-none"
         data-tab="tab2"
+        role="tab"
         aria-selected="false"
       >
         Asphalt Quality and Equipment
@@ -42,6 +49,7 @@ import imgtab1Low from "../../assets/images/Burners/Low/14Low.webp";
       <button
         class="tab-button-1 flex-1 py-3 px-2 font-bold text-xs sm:text-sm md:text-xl text-center leading-tight focus:outline-none"
         data-tab="tab3"
+        role="tab"
         aria-selected="false"
       >
         Customization to adapt to specific
@@ -117,18 +125,16 @@ import imgtab1Low from "../../assets/images/Burners/Low/14Low.webp";
           class="w-full flex flex-col items-center justify-center font-bold mt-10 md:mt-20"
         >
           <div class="max-w-7xl px-8 mx-auto flex justify-center">
-            <video
-              class="hero-img lg:w-3/5 rounded-lg"
-              playsinline
-              controls
-              poster="/Gallery/customdes.webp"
-              preload="metadata"
-              width="1280"
-              height="720"
-            >
-              <source src="/Videos/Webm/bprov1.webp" type="video/webm" />
-              <source src="/Videos/Mp4/bprov1.mp4" type="video/mp4" />
-            </video>
+            <div class="hero-img">
+              <SmartVideo
+                client:visible
+                className="rounded-full"
+                src="/Videos/Webm/bprov1.webm"
+                poster="/Gallery/customdes.webp"
+                isLoop={true}
+                autoplayOnMobile={true}
+              />
+            </div>
           </div>
           <div
             class="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center gap-6"
@@ -270,7 +276,7 @@ import imgtab1Low from "../../assets/images/Burners/Low/14Low.webp";
             class="relative w-full max-w-7xl px-8 mx-auto bg-[url('/public/LogoTriasoUs.webp')] bg-contain bg-center bg-no-repeat"
           >
             <div class="absolute inset-0 bg-[#14427c]/70"></div>
-            
+
             <div class="relative z-10">
               <h1 class="text-white text-2xl md:text-4xl font-bold text-center">
                 Cleaner Mix, Longer-Lasting Pavement
@@ -324,17 +330,14 @@ import imgtab1Low from "../../assets/images/Burners/Low/14Low.webp";
           <div class="w-full max-w-7xl mx-auto">
             <div class="w-full bg-white rounded-2xl p-8">
               <div class="w-full md:w-3/4 justify-center m-auto">
-                <video
-                  playsinline
-                  controls
+
+                <SmartVideo
+                  client:visible
+                  src="/Videos/Webm/AnPreHeat.webm"
                   poster="/Gallery/customdes.webp"
-                  preload="metadata"
-                  width="1280"
-                  height="720"
-                >
-                  <source src="/Videos/Webm/AnPreHeat.webp" type="video/webm" />
-                  <source src="/Videos/Mp4/AnPreHeat.mp4" type="video/mp4" />
-                </video>
+                  autoplayOnMobile={true}
+                  isLoop={true}
+                />
               </div>
               <div class="lg:px-20 text-center">
                 <h2 class="text-lg md:text-xl font-bold text-black">
@@ -377,7 +380,7 @@ import imgtab1Low from "../../assets/images/Burners/Low/14Low.webp";
               <Image src={world} alt="World icon" class="w-[120px]" />
             </div>
             <div class="lg:w-1/2 flex justify-center items-center">
-              <p class=" text-start text-sm lg:text-lg md:text-lg font-thin">
+              <p class="text-start text-sm lg:text-lg md:text-lg font-thin">
                 With complete fuel burn and reduced NOx emissions, Triaso®
                 burners meet strict environmental standards. You get lower fuel
                 consumption and cleaner operation without compromising

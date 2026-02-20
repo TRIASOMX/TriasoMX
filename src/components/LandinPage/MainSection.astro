@@ -42,14 +42,22 @@ const Cards = [
 
 <div class="w-full flex flex-col items-center justify-center text-xl mt-10">
     <div class="relative w-full bg-black overflow-hidden mt-5">
+        <img
+            src="/Gallery/customdes.webp"
+            alt="Custom design equipment"
+            class="absolute inset-0 w-full h-full object-cover"
+            fetchpriority="high"
+            decoding="async"
+        />
+
         <video
             class="absolute inset-0 w-full h-full object-cover"
             playsinline
             autoplay
             muted
             loop
-            poster="/Gallery/customdes.webp"
-            preload="metadata"
+            preload="none"
+            aria-hidden="true"
         >
             <source src="/Videos/Webm/HeroVideo.webm" type="video/webm" />
         </video>
@@ -59,8 +67,10 @@ const Cards = [
         <div
             class="relative z-10 max-w-7xl mx-auto h-full flex flex-col justify-evenly px-8 lg:px-0 pb-10 gap-10"
         >
-            <div class="flex flex-col items-end text-right max-w-xl ml-auto mt-5">
-                <h1 class="uppercase text-white text-3xl md:text-5xl font-bold">
+            <div
+                class="flex flex-col items-end text-right  ml-auto mt-5"
+            >
+                <h1 class="uppercase text-white text-3xl lg:text-5xl font-bold">
                     Manufactured to last
                 </h1>
 
@@ -76,13 +86,15 @@ const Cards = [
                 </div>
             </div>
             <div class="hidden lg:flex md:flex">
-                <HeroSlider slides={Cards} client:only />
+                <HeroSlider slides={Cards} client:idle />
             </div>
         </div>
     </div>
 
-    <div class="relative flex lg:hidden md:hidden w-full overflow-hidden max-w-7xl mx-auto px-8 py-10 ">
-        <HeroSlider slides={Cards} client:only />
+    <div
+        class="relative flex lg:hidden md:hidden w-full overflow-hidden max-w-7xl mx-auto px-8 py-10"
+    >
+        <HeroSlider slides={Cards} client:idle />
     </div>
 </div>
 
@@ -103,6 +115,7 @@ const Cards = [
         >
             <Image
                 src={asphaltPlant}
+                width={800}  height={600}
                 class="h-full object-contain w-full p-2"
                 alt="Asphalt Plant"
                 widths={[400, 800, 1200]}
@@ -125,6 +138,7 @@ const Cards = [
         >
             <Image
                 src={rockCrusher}
+                width={800}  height={600}
                 class="h-full object-contain w-full p-2"
                 alt="Asphalt Plant"
                 widths={[400, 800, 1200]}

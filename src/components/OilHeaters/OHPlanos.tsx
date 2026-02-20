@@ -824,6 +824,7 @@ const OHPlanos = () => {
                                                     Design & Operation
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the design and operation"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -871,6 +872,7 @@ const OHPlanos = () => {
                                                     Construction and Materials
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the construction and materials"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -928,6 +930,7 @@ const OHPlanos = () => {
                                                     Control and Operation
                                                 </h1>
                                                 <button
+                                                aria-label="See more about the control and operation of the system"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -987,6 +990,7 @@ const OHPlanos = () => {
                                                     Safety and Maintenance
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the safety and maintenance of the system"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1034,6 +1038,7 @@ const OHPlanos = () => {
                                                     Electrical and Components and Capacity
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the electrical composition, components and capacity of the system"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1064,21 +1069,20 @@ const OHPlanos = () => {
                                                 </button>
                                             </div>
                                             <div
-                                                className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_2
+                                                className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6  ${openSections.C2_2
                                                     ? "max-h-96 opacity-1 mb-4"
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block md:mb-0`}
                                             >
-                                                <li>Siemens motors, controls, and electrical components.</li>
-                                                <li>Heavy-duty polarized wiring, grounded for motor protection.</li>
-                                                <li>Recirculation pump for thermal oil.</li>
-                                                <li>Pumps:</li>
-                                                <div className="pl-5">
-                                                    <li>2” pump with 10 HP motor for the 1,000,000 Btu/hr model.</li>
-                                                    <li>3” pump with 15 HP motor for the 2,400,000 Btu/hr model.</li>
-                                                </div>
+                                                <ul className="list-disc list-inside">
+                                                    <li>Siemens motors, controls, and electrical components.</li>
+                                                    <li>Heavy-duty polarized wiring, grounded for motor protection.</li>
+                                                    <li>Recirculation pump for thermal oil.</li>
+                                                    <li>Pumps:</li>
 
-
+                                                    <li className="pl-5">2” pump with 10 HP motor for the 1,000,000 Btu/hr model.</li>
+                                                    <li className="pl-5">3” pump with 15 HP motor for the 2,400,000 Btu/hr model.</li>
+                                                </ul>
                                             </div>
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
@@ -1087,6 +1091,7 @@ const OHPlanos = () => {
                                                     Performance and Capacity
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the performance and capacity"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1324,6 +1329,7 @@ const OHPlanos = () => {
                                             Dimensions
                                         </h1>
                                         <button
+                                            aria-label="See more about the dimensions"
                                             className="block md:hidden"
                                             onClick={() =>
                                                 setOpenSections((prev) => ({

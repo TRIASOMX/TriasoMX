@@ -14,6 +14,7 @@ import heroIMG from "../../assets/images/RapBins/heroBG.webp";
 import img4 from "../../assets/images/RapBins/RapProv6.webp";
 import img4Low from "../../assets/images/RapBins/Low/RapProv6Low.webp";
 import { Image } from "astro:assets";
+import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
 <section class="w-full font-bold">
@@ -127,7 +128,7 @@ import { Image } from "astro:assets";
         <Image
           src={img2}
           alt="Large-capacity RAP bin"
-          class="side-img rounded-2xl will-change-transform"
+          class="side-img rounded-2xl w-[85%] will-change-transform"
         />
       </div>
     </div>
@@ -175,7 +176,7 @@ import { Image } from "astro:assets";
       </p>
     </div>
     <div slot="right" class="flex flex-col justify-center gap-3">
-      <h1 class="text-xl md:text-2xl">AVAILABLE IN 14 OR 21-TONS</h1>
+      <h1 class="text-xl md:text-2xl">AVAILABLE IN 14 OR 20-TONS</h1>
       <p class="text-sm md:text-lg">
         With configurations of one, two, or three RAP bin units
       </p>
@@ -245,17 +246,13 @@ import { Image } from "astro:assets";
     </div>
   </div>
   <div class="w-full flex justify-center max-w-7xl px-4 mx-auto">
-    <video
-      playsinline
-      controls
+    <SmartVideo
+      client:visible
+      src="/Videos/Webm/ProvVideo1.webm"
       poster="/Gallery/customdes.webp"
-      preload="metadata"
-      width="1280"
-      height="720"
-    >
-      <source src="/Videos/Webm/ProvVideo1.webp" type="video/webm" />
-      <source src="/Videos/Mp4/ProvVideo1.mp4" type="video/mp4" />
-    </video>
+      isLoop={false}
+      autoplayOnMobile={false}
+    />
   </div>
 </section>
 

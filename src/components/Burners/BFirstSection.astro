@@ -1,4 +1,6 @@
 ---
+import SmartVideo from "../unitComponents/SmartVideo";
+
 
 ---
 
@@ -17,17 +19,13 @@
     </p>
   </div>
   <div class="lg:w-4/6 md:w-4/6 flex justify-center mx-auto">
-    <video
-      playsinline
-      controls
+    <SmartVideo
+      client:visible
+      src="/Videos/Webm/burnerVideo.webm"
       poster="/Gallery/customdes.webp"
-      preload="metadata"
-      width="1280"
-      height="720"
-    >
-      <source src="/Videos/Webm/burnerVideo.webp" type="video/webm" />
-      <source src="/Videos/Mp4/burnerVideo.mp4" type="video/mp4" />
-    </video>
+      isLoop={true}
+      autoplayOnMobile={true}
+    />
   </div>
   <div class="text-center">
     <h2 class="text-black text-xl md:text-2xl">

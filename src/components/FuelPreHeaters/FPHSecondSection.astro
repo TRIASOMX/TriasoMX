@@ -8,11 +8,12 @@ import FPH2Low from "../../assets/images/FuelPreHeaters/Low/FPH2Low.webp";
 import FPH3 from "../../assets/images/FuelPreHeaters/FPH3.webp";
 import fIcon from "../../assets/images/FuelPreHeaters/FlamaIcon.svg";
 import img1 from "../../assets/images/Burners/10.webp";
-import bgBanner from "../../assets/images/IntegralAsphalt/Hero1.webp"
+import bgBanner from "../../assets/images/IntegralAsphalt/Hero1.webp";
 import FPHPlanos from "./FPHPlanos";
 import FPHGallery from "./FPHGallery.astro";
 import { Image } from "astro:assets";
 import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro";
+import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
 <section class="w-full font-bold mt-20 flex flex-col">
@@ -20,19 +21,14 @@ import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro
     class="w-full max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-10 pb-10"
   >
     <div class="w-full flex flex-col gap-10">
-      <div class="w-full">
-        <video
-          class="w-full rounded-lg"
-          playsinline
-          controls
-          poster="/Gallery/customdes.webp"
-          preload="metadata"
-          width="1280"
-          height="720"
-        >
-          <source src="/Videos/Webm/bprov1.webp" type="video/webm" />
-          <source src="/Videos/Mp4/bprov1.mp4" type="video/mp4" />
-        </video>
+      <div class="w-full rounded-lg">
+        <SmartVideo 
+        client:visible
+        src="/Videos/Webm/bprov1.webm"
+        poster="/Gallery/customdes.webp"
+        isLoop={true}
+        autoplayOnMobile={true}
+        />
       </div>
       <div class="w-full">
         <h1 class="text-center font-bold text-2xl md:text-3xl">
@@ -267,14 +263,14 @@ import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro
       <!-- <Image src="" alt="" /> -->
     </div>
     <div class="w-full max-w-7xl mx-auto px-8 relative flex flex-col gap-6">
-      <div class="absolute top-0 left-[-100px] lg:top-0 lg:left-[-30px] w-1/4 -z-10 pointer-events-none">
+      <div
+        class="absolute top-0 left-[-100px] lg:top-0 lg:left-[-30px] w-1/4 -z-10 pointer-events-none"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
-        
           zoomAndPan="magnify"
           viewBox="0 0 900 899.99999"
-          
           preserveAspectRatio="xMidYMid meet"
           version="1.0"
           ><defs
@@ -363,7 +359,7 @@ import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro
   </div>
   <div
     class="w-full bg-center bg-cover bg-no-repeat my-10"
-     style={{ backgroundImage: `url(${bgBanner.src})` }}
+    style={{ backgroundImage: `url(${bgBanner.src})` }}
   >
     <div class="w-full bg-black/70 py-10 md:py-20 bg-cover h-full">
       <div class="max-w-7xl mx-auto items-center px-8">
@@ -388,8 +384,8 @@ import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro
       </div>
     </div>
   </div>
-  <FPHGallery/>
+  <FPHGallery />
   <FPHPlanos client:only />
   <!-- <CardSection /> -->
-   <CardSectionResponsive/>
+  <CardSectionResponsive />
 </section>

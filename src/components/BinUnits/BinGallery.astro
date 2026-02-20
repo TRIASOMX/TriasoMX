@@ -3,7 +3,7 @@ import GallerySlider from "../unitComponents/GallerySlider";
 import { Image } from "astro:assets";
 import Tred from "../../assets/images/AsphaltStorage/redT.webp";
 import Separator from "../unitComponents/Separator.astro";
-import sideP from "../../assets/images/DrumMixers/sideP.webp";
+import sideP from "../../assets/images/SidePanels/TolvasFE.webp";
 import LearnBtn from "../unitComponents/LearnBtn.astro";
 import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
 import BUFeeders from "../../assets/images/BinUnits/BUFeeders.webp";
@@ -16,31 +16,7 @@ import img5 from "../../assets/images/BinUnits/2.webp";
 import img6 from "../../assets/images/BinUnits/3.webp";
 import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 
-import g1 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC60P288TrabA.webp";
-import g2 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC60P288TrabB.webp";
-import g3 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC60P288TranspA.webp";
-import g4 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC60P288TranspB.webp";
-import g5 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC110P286Trab.webp";
-import g6 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC110P286TrabB.webp";
-import g7 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC110P286TranspA.webp";
-import g8 from "../../assets/images/BinUnits/GallerySlider/Big/TmbCE110P268TrabA.webp";
-import g9 from "../../assets/images/BinUnits/GallerySlider/Big/TmbCE110P268TrabB.webp";
-import g10 from "../../assets/images/BinUnits/GallerySlider/Big/TmbCE110P268TrabRapA.webp";
-import g11 from "../../assets/images/BinUnits/GallerySlider/Big/TmbCE110P268TranspA.webp";
-import g12 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TrabA.webp";
-import g13 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TrabB.webp";
-import g14 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TrabC.webp";
-import g15 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TrabD.webp";
-import g16 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TranspA.webp";
-import g17 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TranspB.webp";
-import g18 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TranspC.webp";
-import g19 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TranspD.webp";
-import g20 from "../../assets/images/BinUnits/GallerySlider/Big/consola.webp";
-import g21 from "../../assets/images/BinUnits/GallerySlider/Big/tanqueplusA.webp";
-import g22 from "../../assets/images/BinUnits/GallerySlider/Big/tanqueplusB.webp";
-import g23 from "../../assets/images/BinUnits/GallerySlider/Big/tanqueplusC.webp";
-import g24 from "../../assets/images/BinUnits/GallerySlider/Big/tanqueplusD.webp";
-import g29 from "../../assets/images/BinUnits/GallerySlider/Big/Cuadruple bin unit.webp"
+import g29 from "../../assets/images/BinUnits/GallerySlider/Big/Cuadruple bin unit.webp";
 import g25 from "../../assets/images/BinUnits/GallerySlider/Big/TlvP317P268A.webp";
 import g26 from "../../assets/images/BinUnits/GallerySlider/Big/TlvP317P268B.webp";
 import g27 from "../../assets/images/BinUnits/GallerySlider/Big/TlvP317P268C.webp";
@@ -49,7 +25,7 @@ import g28 from "../../assets/images/BinUnits/GallerySlider/Big/TlvP317P268D.web
 const binSlides2 = [
   {
     image: g29.src,
-    caption: "Cuadruple bin unit"
+    caption: "Cuadruple bin unit",
   },
 
   {
@@ -108,7 +84,7 @@ const binSlides2 = [
   <div
     class="w-full grid grid-cols-1 md:grid-cols-2 overflow-visible max-w-7xl px-8 mx-auto items-end"
   >
-    <div class="w-full pr-20">
+    <div class="w-full hidden lg:flex md:flex pr-20">
       <Image
         src={img1}
         alt="Manufacture of Belt Feeders with Rubberized Pulleys"
@@ -116,11 +92,19 @@ const binSlides2 = [
       />
     </div>
     <div class="w-full flex flex-col gap-10">
-      <div>
+      <div class="hidden lg:flex md:flex">
         <Image
           src={BUFeeders}
           alt="Belt Feeders with Rubberized Pulleys"
           class="rounded-2xl"
+        />
+      </div>
+
+      <div class="w-full flex lg:hidden md:hidden">
+        <Image
+          src={img1}
+          alt="Manufacture of Belt Feeders with Rubberized Pulleys"
+          class="rounded-lg"
         />
       </div>
       <div class="w-full flex flex-col justify-center">
@@ -135,6 +119,14 @@ const binSlides2 = [
           reliable performance, even under heavy loads or challenging
           conditions.
         </p>
+      </div>
+
+      <div class="flex lg:hidden md:hidden">
+        <Image
+          src={BUFeeders}
+          alt="Belt Feeders with Rubberized Pulleys"
+          class="rounded-2xl"
+        />
       </div>
     </div>
   </div>
@@ -345,7 +337,6 @@ const binSlides2 = [
 </div>
 
 <script>
-  
   const slider = document.getElementById("auto-slider");
 
   if (slider) {
@@ -362,14 +353,14 @@ const binSlides2 = [
         behavior: "smooth",
       });
     }
-   
+
     function pauseAutoplay() {
       clearInterval(interval);
       clearTimeout(resumeTimout);
 
       resumeTimout = setTimeout(() => {
         interval = setInterval(moveSlider, 4000);
-      }, 2000); 
+      }, 2000);
     }
 
     slider.addEventListener("touchstart", pauseAutoplay, { passive: true });

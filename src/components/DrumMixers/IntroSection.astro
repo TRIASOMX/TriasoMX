@@ -6,11 +6,12 @@ import item4 from "../../assets/images/DrumMixers/Low/a2Low.webp";
 import item5 from "../../assets/images/DrumMixers/a6.webp";
 import item6 from "../../assets/images/DrumMixers/a1.webp";
 import { Image } from "astro:assets";
+import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
 <div class="max-w-7xl mx-auto px-4 mt-20 md:mt-32 font-bold">
   <h1 class="text-2xl lg:text-4xl text-grisT">DRUM MIXERS</h1><br />
-  <p class="text-base md:text-lg text-grisT text-justify">
+  <p class="text-sm lg:text-lg md:text-lg text-grisT text-justify">
     Triaso® drum mixers are engineered for continuous and efficient hot-mix
     production, combining drying and mixing in a single integrated process.
     Built for durability and consistent performance, they ensure precise heat
@@ -21,33 +22,37 @@ import { Image } from "astro:assets";
   </p>
   <br />
   <div class="relative w-full aspect-video overflow-hidden">
-    <video
-      class="w-full h-full object-cover"
-      playsinline
-      controls
+    <img
+      src="/Gallery/customdes.webp"
+      alt="Hero background"
+      class="absolute inset-0 w-full h-full object-cover z-0"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <SmartVideo
+      client:visible
+      src="/Videos/Webm/landingVideo.webm"
       poster="/Gallery/customdes.webp"
-      preload="metadata"
-      width="1280"
-      height="720"
-    >
-      <source src="/Videos/Webm/landingVideo.webp" type="video/webm" />
-      <source src="/Videos/Mp4/landingVideo.mp4" type="video/mp4" />
-    </video>
+      autoplayOnMobile={false}
+      isLoop={false}
+    />
   </div>
 
   <div
     class="bg-white py-8 px-2 md:px-20 rounded-2xl flex flex-col items-center justify-center my-10"
   >
     <details class="group w-full flex flex-col justify-between">
-      <summary class="flex flex-col justify-between items-center cursor-pointer list-none ">
+      <summary
+        class="flex flex-col justify-between items-center cursor-pointer list-none"
+      >
         <div class="w-full flex justify-between mb-6">
           <div class="flex flex-col gap-3">
-            <h1 class="text-3xl md:text-5xl font-normal">Triaso Drum Mix</h1>
-            <h1 class="text-3xl md:text-5xl font-normal">Flights</h1>
+            <h1 class="text-2xl lg:text-5xl md:text-5xl font-normal">Triaso Drum Mix</h1>
+            <h1 class="text-2xl lg:text-5xl md:text-5xl font-normal">Flights</h1>
           </div>
           <div>
             <svg
-            class="transition-transform duration-300 group-open:rotate-180"
+              class="transition-transform duration-300 group-open:rotate-180"
               width="64px"
               height="64px"
               viewBox="0 0 24 24"
@@ -64,7 +69,7 @@ import { Image } from "astro:assets";
           </div>
         </div>
       </summary>
-      <p class="font-light px-2 lg:px-0 md:px-0">
+      <p class="font-light text-sm lg:text-base md:text-base px-2 lg:px-0 md:px-0">
         The Triaso drum mixer uses a counterflow design that enhances both
         drying and mixing efficiency. Its removable flight system optimizes the
         process, and with a VFD speed control, it achieves more efficient fuel
@@ -78,27 +83,27 @@ import { Image } from "astro:assets";
       class="grid grid-cols-3 md:grid-cols-6 items-start justify-around gap-5 my-10 w-full"
     >
       <div class="flex flex-col items-center justify-center font-light">
-        <Image src={item1} alt="Inlet Flight" />
+        <Image src={item1} width={200} height={200} alt="Inlet Flight" />
         <p>Inlet Flight</p>
       </div>
       <div class="flex flex-col items-center justify-center font-light">
-        <Image src={item2} alt="Pusher Flight" />
+        <Image src={item2} width={200} height={200}  alt="Pusher Flight" />
         <p class="text-center">Pusher Flight</p>
       </div>
       <div class="flex flex-col items-center justify-center font-light">
-        <Image src={item3} alt="Drying Flight" />
+        <Image src={item3} width={200} height={200}  alt="Drying Flight" />
         <p>Drying Flight</p>
       </div>
       <div class="flex flex-col items-center justify-center font-light">
-        <Image src={item4} alt="RAP Flight" />
+        <Image src={item4} width={200} height={200}  alt="RAP Flight" />
         <p>RAP Flight</p>
       </div>
       <div class="flex flex-col items-center justify-center font-light">
-        <Image src={item5} alt="Radiation Flight" />
+        <Image src={item5} width={200} height={200}  alt="Radiation Flight" />
         <p class="text-center">Radiation Flight</p>
       </div>
       <div class="flex flex-col items-center justify-center font-light">
-        <Image src={item6} alt="Mixing Flight" />
+        <Image src={item6} width={200} height={200}  alt="Mixing Flight" />
         <p>Mixing Flight</p>
       </div>
     </div>

@@ -14,7 +14,7 @@ import ASPanels from "../unitComponents/ASPanels.astro";
 import pugmill from "../../assets/images/DrumMixers/pugmill3.webp";
 import SlidersCarrusel from "../IntegralAsphalt/SlidersCarrusel";
 import OSection from "../unitComponents/OSection.astro";
-
+import SmartVideo from "../unitComponents/SmartVideo";
 import HeatingSystem from "./HeatingSystem.astro";
 import Baghouses from "./Baghouses.astro";
 import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
@@ -134,23 +134,18 @@ const images2 = [
         Asphalt plants for the smallest jobs to large projects
       </h1>
 
-      <div class="relative overflow-hidden bg-black transform-gpu">
-        <video
-          class="hero-video block w-full h-auto object-cover transform-gpu will-change-transform [backface-visibility:hidden] bg-black"
-          playsinline
-          controls
-          poster="/Gallery/customdes.webp"
-          preload="metadata"
-          width="1280"
-          height="720"
-        >
-          <source src="/Videos/Webm/landingVideo.webp" type="video/webm" />
-          <source src="/Videos/Mp4/landingVideo.mp4" type="video/mp4" />
-        </video>
+      <div class="relative overflow-hidden transform-gpu">
+        <SmartVideo
+          client:visible
+          poster="/Gallery/AsphaltPlantPoster/1.webp"
+          src="/Videos/Webm/landingVideo.webm"
+          className="bg-white"
+        />
       </div>
 
       <a
         href="/DrumMixers"
+        aria-label="View page drum Mixers"
         class="text-white text-center mb-5 mt-5 text-xs md:text-sm font-normal border-2 border-[#14427c] rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-[#14427c] hover:bg-transparent hover:text-[#14427c]"
       >
         Discover all asphalt <br /> plants ranges and models
@@ -189,74 +184,88 @@ const images2 = [
             The complete asphalt plant can be transported in only three trailer
             loads, simplifying logistics and reducing setup time.
           </p>
-        </div>
+          <details class="group w-full">
+            <summary
+              class="list-none cursor-pointer flex justify-center items-center"
+            >
+              <div class="text-blueMain px-4 py-2 rounded-2xl">
+                <svg
+                  width="84"
+                  height="84"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="transition-transform duration-300 group-open:rotate-180"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </summary>
 
-        <div
-          class="grid max-w-7xl mx-auto grid-cols-1 px-8 space-y-10 lg:min-h-[300px] md:min-h-[300px] lg:grid-cols-2 md:grid-cols-2"
-        >
-          <div
-            class="flex flex-col justify-start items-start space-y-3 lg:justify-end lg:items-start md:justify-end md:items-start text-white"
-          >
-            <h1 class="font-bold text-center text-2xl">
-              Integrated 5th wheel. Direct transport to site
-            </h1>
-            <div class="text-start pl-5 lg:pl-5 md:pl-5">
-              <li class="font-thin">No lowbed or flatbed trailer.</li>
+            <div
+              class="grid max-w-7xl mx-auto grid-cols-1 px-8 space-y-10 lg:min-h-[300px] md:min-h-[300px] lg:grid-cols-2 md:grid-cols-2 pb-10"
+            >
+              <div
+                class="flex flex-col justify-start items-start space-y-3 lg:justify-end lg:items-start md:justify-end md:items-start text-white"
+              >
+                <h1 class="font-bold text-center text-2xl">
+                  Integrated 5th wheel. Direct transport to site
+                </h1>
+                <div class="text-start pl-5 lg:pl-5 md:pl-5">
+                  <ul class="list-disc">
+                    <li class="font-thin">No lowbed or flatbed trailer.</li>
+                  </ul>
+                </div>
+
+                <p class="font-thin text-start lg:text-start md:text-start">
+                  The complete asphalt plant can be transported in <span
+                    class="font-bold">only three</span
+                  > trailer loads, simplifying logistics and reducing setup time.
+                </p>
+              </div>
+
+              <div
+                class="flex flex-col justify-start items-start lg:justify-start lg:items-start md:justify-start md:items-start text-white space-y-3 mb-20"
+              >
+                <h1 class="font-bold text-2xl">
+                  Entire plant in just three shipments
+                </h1>
+                <div class="pl-5 lg:text-start md:text-start">
+                  <ul class="list-disc">
+                    <li class="font-thin">Simplified logistics.</li>
+                    <li class="font-thin">Shorter installation time</li>
+                  </ul>
+                </div>
+                <p class="font-thin lg:text-start md:text-start">
+                  We design our equipment with an integrated fifth wheel,
+                  eliminating the need for a low-boy or a flatbed trailer during
+                  transport.
+                </p>
+              </div>
             </div>
-
-            <p class="font-thin text-start lg:text-start md:text-start">
-              The complete asphalt plant can be transported in <span
-                class="font-bold">only three</span
-              > trailer loads, simplifying logistics and reducing setup time.
-            </p>
-          </div>
-
-          <div
-            class="flex flex-col justify-start items-start lg:justify-start lg:items-start md:justify-start md:items-start text-white space-y-3 mb-20"
-          >
-            <h1 class="font-bold text-2xl">
-              Entire plant in just three shipments
-            </h1>
-            <div class="pl-5 lg:text-start md:text-start">
-              <li class="font-thin">Simplified logistics.</li>
-              <li class="font-thin">Shorter installation time</li>
-            </div>
-            <p class="font-thin lg:text-start md:text-start">
-              We design our equipment with an integrated fifth wheel,
-              eliminating the need for a low-boy or a flatbed trailer during
-              transport.
-            </p>
-          </div>
+          </details>
         </div>
       </div>
     </div>
     <div class="relative overflow-hidden max-w-7xl mx-auto transform-gpu">
-      <video
-        class="block w-full h-auto object-cover transform-gpu will-change-transform [backface-visibility:hidden] bg-black hero-video"
-        playsinline
-        controls
-        poster="/Gallery/customdes.webp"
-        preload="metadata"
-        width="1280"
-        height="720"
-      >
-        <source src="/Videos/Webm/asphaltVideo1.webp" type="video/webm" />
-        <source src="/Videos/Mp4/asphaltVideo1.mp4" type="video/mp4" />
-      </video>
+      <SmartVideo
+        client:visible
+        src="/Videos/Webm/asphaltVideo1.webm"
+        poster="/Gallery/AsphaltPlantPoster/2.webp"
+      />
     </div>
+
     <div class="relative overflow-hidden max-w-7xl mx-auto transform-gpu">
-      <video
-        class="block w-full h-auto object-cover transform-gpu will-change-transform [backface-visibility:hidden] bg-black hero-video"
-        playsinline
-        controls
-        poster="/Gallery/customdes.webp"
-        preload="metadata"
-        width="1280"
-        height="720"
-      >
-        <source src="/Videos/Webm/asphaltVideo2.webp" type="video/webm" />
-        <source src="/Videos/Mp4/asphaltVideo2.mp4" type="video/mp4" />
-      </video>
+      <SmartVideo
+        client:visible
+        src="/Videos/Webm/asphaltVideo2.webm"
+        poster="/Gallery/AsphaltPlantPoster/3.webp"
+      />
     </div>
 
     <div
@@ -265,19 +274,15 @@ const images2 = [
       <h2 class="text-lg font-semibold text-center lg:text-2xl md:text-3xl">
         Retractable Drag Slat for Efficient Transport and Operation
       </h2>
-      <div class="">
+      <div class="w-full">
         <div class="w-full flex justify-center">
-          <video
-            autoplay
-            class="w-full md:w-3/5"
-            playsinline
-            controls
-            poster="/Gallery/customdes.webp"
-            preload="metadata"
-          >
-            <source src="/Videos/Webm/DMVideo1.webp" type="video/webm" />
-            <source src="/Videos/Mp4/DMVideo1.mp4" type="video/mp4" />
-          </video>
+          <SmartVideo
+            client:visible
+            desktopWidth="80%"
+            src="/Videos/Webm/PlaC140ET.webm"
+            poster="/Gallery/AsphaltPlantPoster/4.webp"
+            autoplayOnMobile={true}
+          />
         </div>
         <p
           class="text-black text-center lg:text-justify md:text-justify font-medium lg:font-semibold md:font-semibold mt-5 mb-5"
@@ -285,7 +290,7 @@ const images2 = [
           The vertical drag slat features a retractable configuration that
           complies with DOT transportation height limits, ensuring safe and
           legal road transport. Once the drum mixer is installed on-site, the
-          elevator extends to its full operational height, allowing efficient
+          drag slat extends to its full operational height, allowing efficient
           material discharge into truck with minimal setup time. This smart
           design improves logistics while maintaining high performance during
           loading and discharge operations.
@@ -365,19 +370,21 @@ const images2 = [
       </div>
       <div class="flex justify-start items-start">
         <div>
-          <li class="font-bold text-lg lg:text-2xl md:text-2xl">
-            RAP ENTRY FLIGHTS
-          </li>
-          <li class="font-bold text-lg uppercase lg:text-2xl md:text-2xl">
-            Variable-Speed Rotation Drives
-          </li>
+          <ul class="list-disc">
+            <li class="font-bold text-lg lg:text-2xl md:text-2xl">
+              RAP ENTRY FLIGHTS
+            </li>
+            <li class="font-bold text-lg uppercase lg:text-2xl md:text-2xl">
+              Variable-Speed Rotation Drives
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
     <div class="w-full">
       <div class="w-full flex justify-center">
-        <LearnBtnBlue href="/RapRecycled" />
+        <LearnBtnBlue href="/RapRecycled" label="Go to page Rap Recylced" />
       </div>
       <Image
         src={HeroS2}
@@ -404,7 +411,7 @@ const images2 = [
           efficiency.
         </p>
         <Image src={img8} alt="Rap Bin" class="block md:hidden" />
-        <LearnBtn href="/BinUnits" />
+        <LearnBtn href="/BinUnits" label="Go to page Bin Units" />
       </div>
     </div>
     <ASPanels />
@@ -418,18 +425,12 @@ const images2 = [
         <span class="text-3xl md:text-4xl text-black">Pugmill</span>
       </h1>
       <div>
-        <video
-          autoplay
-          playsinline
-          controls
-          poster="/Gallery/customdes.webp"
-          preload="metadata"
-          width="1280"
-          height="720"
-        >
-          <source src="/Videos/Webm/PGMC.webp" type="video/webm" />
-          <source src="/Videos/Mp4/PGMC.mp4" type="video/mp4" />
-        </video>
+        <SmartVideo
+          client:visible
+          src="/Videos/Webm/PGMC.webm"
+          poster="/Gallery/AsphaltPlantPoster/5.webp"
+          autoplayOnMobile={true}
+        />
       </div>
       <div
         class="w-full grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-8 mt-20 mb-8"
@@ -457,7 +458,7 @@ const images2 = [
           class="hidden md:block"
         />
       </div>
-      <LearnBtn href="/ColdMix" />
+      <LearnBtn href="/ColdMix" label="Go to page Cold Mixers" />
     </div>
 
     <HeatingSystem />
@@ -570,21 +571,13 @@ const images2 = [
       </h2><br />
       <a
         href="/IntegralAphaltPlant"
+        aria-label="Go to page Integral Asphalt Plants"
         class="text-white text-center mb-5 mt-5 text-xs md:text-sm font-normal border-2 border-[#14427c] rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-[#14427c] hover:bg-transparent hover:text-[#14427c]"
       >
         Learn more about our 10 TPH asphalt plants
       </a>
     </div>
   </div>
+
+
 </html>
-
-  <script is:inline>
-    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-
-    if (isDesktop) {
-      document.querySelectorAll(".hero-video").forEach((video) => {
-        video.setAttribute("autoplay", "");
-        video.play().catch(() => {});
-      });
-    }
-  </script>

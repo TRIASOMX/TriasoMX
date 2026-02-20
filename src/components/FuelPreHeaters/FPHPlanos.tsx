@@ -192,6 +192,7 @@ const FPHPlanos = () => {
                           DESIGN
                         </h1>
                         <button
+                          aria-label="See more about the design"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -245,6 +246,7 @@ const FPHPlanos = () => {
                           HEATING & SYSTEM
                         </h1>
                         <button
+                          aria-label="See more about the heating system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -298,6 +300,7 @@ const FPHPlanos = () => {
                           COMPONENTS & ELECTRICAL
                         </h1>
                         <button
+                          aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -359,6 +362,7 @@ const FPHPlanos = () => {
                           FILTRATION SYSTEM
                         </h1>
                         <button
+                          aria-label="See more about the filtration system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -407,6 +411,7 @@ const FPHPlanos = () => {
                           CONTROL & OPERATION
                         </h1>
                         <button
+                          aria-label="See more about the control and operation"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -476,6 +481,7 @@ const FPHPlanos = () => {
                           DURABILITY & SAFETY
                         </h1>
                         <button
+                          aria-label="See more about the durability and safety"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -724,6 +730,7 @@ const FPHPlanos = () => {
                             DIMENSIONS
                           </h1>
                           <button
+                            aria-label="See more about the dimensions"
                             className="block md:hidden"
                             onClick={() =>
                               setOpenSections((prev) => ({

@@ -72,9 +72,9 @@ export default function ItemsSlider({ images }: Props) {
                   />
                 </div>
 
-                <h3 className="font-bold text-grisT text-sm md:text-base leading-tight line-clamp-2">
+                <h1 className="font-bold text-grisT text-sm md:text-base leading-tight line-clamp-2">
                   {img.title}
-                </h3>
+                </h1>
 
                 <p className="text-grisT text-xs md:text-sm leading-snug">
                   {img.texto}
@@ -87,6 +87,7 @@ export default function ItemsSlider({ images }: Props) {
         <div className="hidden lg:flex absolute -bottom-4 right-2 gap-2">
           <button
             onClick={() => scroll("left")}
+            aria-label="Left slider button"
             className="
               p-2
               bg-white
@@ -114,6 +115,7 @@ export default function ItemsSlider({ images }: Props) {
 
           <button
             onClick={() => scroll("right")}
+            aria-label="Right slider button"
             className="
               p-2
               bg-white

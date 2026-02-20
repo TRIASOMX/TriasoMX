@@ -21,6 +21,7 @@ import g13 from "../../assets/images/DrumMixers/Gallery/DM14.webp";
 import g14 from "../../assets/images/DrumMixers/Gallery/DM15.webp";
 import g15 from "../../assets/images/DrumMixers/Gallery/DM16.webp";
 import g16 from "../../assets/images/DrumMixers/Gallery/DM17.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
 
 const binSlides2 = [
   {
@@ -105,7 +106,7 @@ const binSlides2 = [
       <SeparatorBlue />
     </div>
     <div class="max-w-7xl">
-      <p class="text-base md:text-lg">
+      <p class="text-sm lg:text-lg md:text-lg">
         Baghouses are crucial for controlling dust and maintaining air quality
         in industrial settings. They efficiently capture particulate matter,
         ensuring compliance with environmental standards and creating a safer
@@ -152,7 +153,7 @@ const binSlides2 = [
       </div>
     </div>
     <div class="flex flex-col items-center justify-center">
-      <Image src={baghouse} alt="Baghouse" class="lg:max-w-[150%]" />
+      <Image src={baghouse} alt="Baghouse" class="w-full" />
     </div>
   </div>
 
@@ -169,12 +170,12 @@ const binSlides2 = [
         <h2 class="text-xl md:text-2xl mb-4 text-start">
           Mechanism of baghouses available in pulse jet and reverse jet
         </h2>
-        <p class="text-grisSubP mb-4 md:mb-0">
+        <p class="text-grisSubP text-sm lg:text-base md:text-base mb-4 md:mb-0">
           <span class="text-white">Pulse Jet:</span> A cleaning system that uses short
           bursts of compressed air to dislodge dust and debris from the filter bags,
           maintaining continuous airflow and filtration efficiency.
         </p><br />
-        <p class="text-grisSubP">
+        <p class="text-grisSubP text-sm lg:text-base md:text-base">
           <span class="text-white">Reverse Air:</span>
           A cleaning system that directs low-pressure air in the opposite direction
           to remove dust from the filter bags, typically used in larger baghouses
@@ -201,19 +202,13 @@ const binSlides2 = [
   <div
     class="max-w-7xl flex flex-col px-8 mx-auto justify-center items-center space-y-10"
   >
-    <video
-      class="lg:w-4/5 md:w-4/5"
-      playsinline
-      controls
-      poster="/Gallery/customdes.webp"
-      preload="metadata"
-      width="1280"
-      height="720"
-    >
-      <source src="/Videos/Webm/DMVideo.webp" type="video/webm" />
-      <source src="/Videos/Mp4/DMVideo.mp4" type="video/mp4" />
-    </video>
-
+  <SmartVideo
+  client:visible
+  src="/Videos/Webm/DMVideo.webm"
+  poster="/Gallery/customdes.webp"
+  autoplayOnMobile={true}
+  isLoop={true}
+  />
     <a
       href="/BagHouses"
       class="p-2 w-36 text-center rounded-3xl border border-[#14427c] text-[#14427c] mx-auto transition hover:bg-blueMain hover:text-white"
@@ -224,5 +219,5 @@ const binSlides2 = [
 </div>
 
 <div class="max-w-7xl px-8 mx-auto">
-  <GallerySlider client:only slides={binSlides2} visibleThumbs={6} />
+  <GallerySlider client:visible slides={binSlides2} visibleThumbs={6} />
 </div>

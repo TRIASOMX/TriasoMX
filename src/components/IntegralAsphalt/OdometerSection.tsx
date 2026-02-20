@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 import single from "../../assets/images/IntegralAsphalt/single.webp";
+import singleLow from "../../assets/images/IntegralAsphalt/singleLow.webp"
 
 const OdometerSection = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -57,7 +58,7 @@ const OdometerSection = () => {
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-grisP">Range of hot-mix production</p>
+            <p className="text-[#4F4F4F]">Range of hot-mix production</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -65,7 +66,7 @@ const OdometerSection = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">kW</p>
             </div>
-            <p className="text-grisP">Three-phase electric generator</p>
+            <p className="text-[#4F4F4F]">Three-phase electric generator</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -77,7 +78,7 @@ const OdometerSection = () => {
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">million BTU/hr</p>
             </div>
-            <p className="text-grisP text-center lg:text-start w-full">
+            <p className="text-[#4F4F4F] text-center lg:text-start w-full">
               Modulating burner capacity
             </p>
           </div>
@@ -85,7 +86,7 @@ const OdometerSection = () => {
 
         <div className="flex flex-col items-center justify-center gap-6">
           <div>
-            <img src={single.src} alt="Back of a Integral asphalt plant of 10 Tph" />
+            <img src={singleLow.src} alt="Back of a Integral asphalt plant of 10 Tph" />
           </div>
           <a
   href="#planosIntegral"
