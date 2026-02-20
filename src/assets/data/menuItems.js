@@ -128,7 +128,7 @@ export const menuItems = [
         url: "/Spare",
       },
       {
-        title: "COSTUME DESIGN",
+        title: "CUSTOM DESIGN",
         url: "/CustomDesign",
       },
       {

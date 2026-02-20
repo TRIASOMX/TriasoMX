@@ -1,3 +1,34 @@
+import img1 from "../../../assets/images/About/Timeline/Asphalt/1.webp"
+import img2 from "../../../assets/images/About/Timeline/Asphalt/2.webp"
+import img3 from "../../../assets/images/About/Timeline/Asphalt/3.webp"
+import img4 from "../../../assets/images/About/Timeline/Asphalt/4.webp"
+import img5 from "../../../assets/images/About/Timeline/Asphalt/5.webp"
+import img6 from "../../../assets/images/About/Timeline/Asphalt/6.webp"
+import img7 from "../../../assets/images/About/Timeline/Asphalt/7.webp"
+import img8 from "../../../assets/images/About/Timeline/Asphalt/8.webp"
+import img9 from "../../../assets/images/About/Timeline/Asphalt/9.webp"
+import img10 from "../../../assets/images/About/Timeline/Asphalt/10.webp"
+import img11 from "../../../assets/images/About/Timeline/Asphalt/11.webp"
+import img12 from "../../../assets/images/About/Timeline/Asphalt/12.webp"
+import img13 from "../../../assets/images/About/Timeline/Asphalt/13.webp"
+import img14 from "../../../assets/images/About/Timeline/Asphalt/14.webp"
+import img15 from "../../../assets/images/About/Timeline/Asphalt/15.webp"
+import img16 from "../../../assets/images/About/Timeline/Asphalt/16.webp"
+import img17 from "../../../assets/images/About/Timeline/Asphalt/17.webp"
+import img18 from "../../../assets/images/About/Timeline/Asphalt/18.webp"
+import img19 from "../../../assets/images/About/Timeline/Asphalt/19.webp"
+import img20 from "../../../assets/images/About/Timeline/Asphalt/20.webp"
+import img21 from "../../../assets/images/About/Timeline/Asphalt/21.webp"
+import img22 from "../../../assets/images/About/Timeline/Asphalt/22.webp"
+import img23 from "../../../assets/images/About/Timeline/Asphalt/23.webp"
+import img24 from "../../../assets/images/About/Timeline/Asphalt/24.webp"
+import img25 from "../../../assets/images/About/Timeline/Asphalt/25.webp"
+import img26 from "../../../assets/images/About/Timeline/Asphalt/26.webp"
+import img27 from "../../../assets/images/About/Timeline/Asphalt/27.webp"
+import img28 from "../../../assets/images/About/Timeline/Asphalt/28.webp"
+import img29 from "../../../assets/images/About/Timeline/Asphalt/29.webp"
+
+
 export interface TimelineEvent {
     id: string;
     title?: string;
@@ -17,7 +48,7 @@ export const timelineData: TimelineDate[] = [
         date: "2006",
         label: "2006",
         events: [
-            { id: "e1", description: "We introduced our open-flame burner design." , image:"https://placehold.co/600x400/png" },
+            { id: "e1", description: "We introduced our open-flame burner design." , image: img2.src },
         ],
     },
     {
@@ -25,7 +56,7 @@ export const timelineData: TimelineDate[] = [
         date: "2011",
         label: "2011",
         events: [
-            { id: "e2", description: "We introduced our counterflow drum paired with a pulse-jet baghouse.", image:"https://placehold.co/600x400/png" },
+            { id: "e2", description: "We introduced our counterflow drum paired with a pulse-jet baghouse.", image: img4.src },
         ],
     },
     {
@@ -33,7 +64,7 @@ export const timelineData: TimelineDate[] = [
         date: "2012",
         label: "2012",
         events: [
-            { id: "e4", description: "We introduced our curved elevator, a distinctive design that reduced truck unloading height and provided clear operational advantages. However, due to higher maintenance requirements, the design was later discontinued.", image:"https://placehold.co/600x400/png" },
+            { id: "e4", description: "We introduced our curved elevator, a distinctive design that reduced truck unloading height and provided clear operational advantages. However, due to higher maintenance requirements, the design was later discontinued.", image: img5.src },
         ],
     },
     {
@@ -41,8 +72,8 @@ export const timelineData: TimelineDate[] = [
         date: "2013",
         label: "2013",
         events: [
-            { id: "e5", description: "We launched our cold-mix plant for applications in construction, industrial, and mining sectors.", image:"https://placehold.co/600x400/png" },
-            { id: "e6", description: "We implemented an adjustable flight system in our counterflow drum.", image:"https://placehold.co/600x400/png" },
+            { id: "e5", description: "We launched our cold-mix plant for applications in construction, industrial, and mining sectors.", image:img6.src },
+            { id: "e6", description: "We implemented an adjustable flight system in our counterflow drum.", image:img7.src },
         ],
     },
     {
