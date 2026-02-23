@@ -27,7 +27,7 @@ import img26 from "../../../assets/images/About/Timeline/Asphalt/26.webp"
 import img27 from "../../../assets/images/About/Timeline/Asphalt/27.webp"
 import img28 from "../../../assets/images/About/Timeline/Asphalt/28.webp"
 import img29 from "../../../assets/images/About/Timeline/Asphalt/29.webp"
-import img30 from "../../../assets/imageS/OSHand.webp"
+import img30 from "../../../assets/images/OSHand.webp"
 
 
 export interface TimelineEvent {
