@@ -87,7 +87,7 @@ const OHPlanos = () => {
 
     return (
         <div className="w-full flex flex-col items-center justify-center">
-            <div className="h-[70vh] relative flex items-center justify-center bg-bgMain w-full">
+            <div className="h-[80vh] relative flex items-center justify-center bg-bgMain w-full">
                 <div
                     className="absolute bottom-0 w-full h-4/6 overflow-hidden"
                     style={{
@@ -387,7 +387,7 @@ const OHPlanos = () => {
                                         <img
                                             src={BPCalderaVS1.src}
                                             alt=""
-                                            className="w-1/3 h-auto"
+                                            className="lg:w-1/3 h-auto"
                                         />
                                     </div>
                                     <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10">
