@@ -52,7 +52,7 @@ const tanksSlides = [
   class="w-full flex flex-col justify-center items-center font-bold md:mt-20"
 >
   <div class="w-full flex flex-col items-center justify-center font-bold mt-10">
-    <div class="max-w-7xl px-8 lg:mb-20 mx-auto">
+    <div class="max-w-7xl px-8 mb-20 mx-auto">
       <h1 class="text-redBg text-xl md:text-3xl text-center">
         Your best business begins with us
       </h1>
@@ -61,7 +61,7 @@ const tanksSlides = [
       <Image
         src={img2}
         alt="Baghouse"
-        class="hero-img lg:w-4/6 rounded-lg"
+        class="hero-img md:w-4/5 lg:w-4/6 rounded-lg"
         fetchpriority="high"
         loading="lazy"
       />
@@ -102,17 +102,17 @@ const tanksSlides = [
       />
     </div>
 
-    <div class="relative flex flex-col lg:hidden">
+    <div class="relative flex flex-row px-8 gap-2 lg:hidden">
       <Image
         src={img7Low}
         alt="Baghouse cleaning system"
-        class="rounded-2xl w-[40%] translate-x-[200px] translate-y-5"
+        class="rounded-2xl w-1/2 object-contain"
       />
 
       <Image
         src={img3}
         alt="Baghouse"
-        class="absolute top-0 left-0 w-2/3 rounded-lg translate-x-1 translate-y-2"
+        class="rounded-lg w-1/2 object-contain"
       />
     </div>
   </div>
