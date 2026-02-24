@@ -12,39 +12,57 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
       class="grid grid-cols-1 items-center justify-evenly lg:grid-cols-2 space-y-10"
     >
       <!-- logo -->
-      <div class="flex flex-col items-center justify-center lg:items-start space-y-10">
-        <Image src={Logo} alt="Triaso US" class="w-4/6 " />
-        <p class="text-xs px-8 lg:px-0 md:px-0">Triaso we are a leading company in manufacturing and engineering development.</p>
+      <div
+        class="flex flex-col items-center justify-center lg:items-start space-y-10"
+      >
+        <Image src={Logo} alt="Triaso US" class="w-4/6" />
+        <p class="text-xs px-8 lg:px-0 md:px-0">
+          Triaso we are a leading company in manufacturing and engineering
+          development.
+        </p>
       </div>
 
-      <div class="flex flex-col lg:flex-row justify-evenly items-start px-8 space-y-5 lg:space-y-0 md:space-y-0">
+      <div
+        class="flex flex-col lg:flex-row justify-evenly items-start px-8 space-y-5 lg:space-y-0 md:space-y-0"
+      >
         <!-- 1 -->
         <div class="">
-          <h4 class="text-sm font-semibold uppercase tracking-wide mb-4 border-b border-white pb-2">
+          <h4
+            class="text-sm font-semibold uppercase tracking-wide mb-4 border-b border-white pb-2"
+          >
             Quick Links
           </h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="/AsphaltPlant" class="hover:text-white">Asphalt Plants</a></li>
-            <li><a href="#" class="hover:text-white">Rock Crushers</a></li>
-            <li><a href="/Relief" class="hover:text-white">TRIASO Relief</a></li>
+            <li>
+              <a href="/AsphaltPlant" class="hover:text-gray-400">Asphalt Plants</a
+              >
+            </li>
+            <li><a href="#" class="hover:text-gray-400">Rock Crushers</a></li>
+            <li>
+              <a href="/Relief" class="hover:text-gray-400">TRIASO Relief</a>
+            </li>
           </ul>
         </div>
 
         <!-- 2 -->
         <div class="">
-          <h4 class="text-sm font-semibold uppercase tracking-wide mb-4 border-b border-white pb-2">
+          <h4
+            class="text-sm font-semibold uppercase tracking-wide mb-4 border-b border-white pb-2"
+          >
             About
           </h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="/AboutUs" class="hover:text-white">About us</a></li>
-            <li><a href="/Newsroom" class="hover:text-white">News Room</a></li>
-            <li><a href="/Expo" class="hover:text-white">Expos</a></li>
+            <li><a href="/AboutUs" class="hover:text-gray-400">About us</a></li>
+            <li><a href="/Newsroom" class="hover:text-gray-400">News Room</a></li>
+            <li><a href="/Expo" class="hover:text-gray-400">Expos</a></li>
           </ul>
         </div>
 
         <!-- 3 -->
         <div>
-          <h4 class="text-sm font-semibold uppercase tracking-wide mb-4 border-b border-white pb-2">
+          <h4
+            class="text-sm font-semibold uppercase tracking-wide mb-4 border-b border-white pb-2"
+          >
             Contact Us
           </h4>
 
@@ -77,19 +95,23 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
           </a>
 
           <div class="text-sm space-y-1">
-            <div class="flex flex-row gap-2">
-              <Phone />
-              <p>+1 (248)-613-4885</p>
-            </div>
-            <div class="flex flex-row gap-2">
-              <Mail />
-              <a
-                href="mailto:sales@triasous.com"
-                class="underline hover:text-white"
-              >
-                sales@triasous.com
-              </a>
-            </div>
+            <a href=" tel:+12486134885
+            " class="hover:text-gray-400">
+              <div class="flex flex-row gap-2">
+                <Phone />
+                <p>+1 (248)-613-4885</p>
+              </div>
+            </a>
+
+            <a
+              href="mailto:sales@triasous.com"
+              class="underline hover:text-gray-400"
+            >
+              <div class="flex flex-row gap-2">
+                <Mail />
+                <p> sales@triasous.com </p>
+              </div>
+            </a>
           </div>
 
           <!-- SOCIAL -->
@@ -97,13 +119,14 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
             <a
               href="https://www.linkedin.com/company/triaso-us/"
               aria-label="Linkedin"
+              class="hover:text-gray-400"
             >
               <Linkedin />
             </a>
             <a
               href="https://www.instagram.com/triaso.us"
               aria-label="Instagram"
-              class="hover:text-white"
+              class="hover:text-gray-400"
             >
               <Instagram />
             </a>
@@ -111,7 +134,7 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
             <a
               href="https://www.facebook.com/people/Triaso-US/61560859853884/"
               aria-label="Facebook"
-              class="hover:text-white"
+              class="hover:text-gray-400"
             >
               <Facebook />
             </a>
@@ -124,10 +147,10 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
     <div
       class="flex flex-col lg:flex-row gap-10 items-center justify-center mt-5 text-center text-xs text-white"
     >
-      <p class="text-xs ">
-        Copyright © 2026 Triaso – All rights reserved
-      </p>
-      <a href="/TermsandConditions" class="hover:text-gray-400">Terms & Conditions</a>
+      <p class="text-xs">Copyright © 2026 Triaso – All rights reserved</p>
+      <a href="/TermsandConditions" class="hover:text-gray-400"
+        >Terms & Conditions</a
+      >
       <a href="/PrivacyPolicy" class="hover:text-gray-400">Privacy Policy</a>
     </div>
   </div>
