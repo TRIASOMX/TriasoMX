@@ -71,7 +71,7 @@ export const menuItems = [
       },
       {
         title: "ROCK CRUSHERS",
-        url: "/",
+        url: "/#",
         children: [
           {
             title: "JAW CRUSHERS",
