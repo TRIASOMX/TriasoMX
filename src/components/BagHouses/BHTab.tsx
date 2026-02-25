@@ -35,11 +35,13 @@ export default function Tab() {
           </button>
         ))}
       </div>
-      <div className="relative w-full aspect-[16/9]">
+
+      
+      <div className=" w-full aspect-[16/9]">
         <img
           src={images[activeIndex].src}
           alt={images[activeIndex].alt}
-          className="absolute inset-0 border-2 border-blueMain rounded-2xl h-[350px] w-full object-contain md:object-cover lg:object-cover"
+          className="border-2 border-blueMain rounded-2xl h-[350px] w-full object-contain md:object-cover lg:object-cover"
           fetchPriority="high"
           loading="eager"
         />

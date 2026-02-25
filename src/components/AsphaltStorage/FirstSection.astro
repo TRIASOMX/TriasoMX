@@ -11,7 +11,7 @@ import SliderAsphalt from "./SliderAsphalt";
 import ASCustom from "../AsphaltStorage/ASCustom.astro";
 import ASMainVideo from "../../assets/images/AsphaltStorage/ASMainVideo.mp4";
 import ASControl from "../../assets/images/AsphaltStorage/Low/ASControlLow.webp";
-
+import poster1 from "../../assets/images/AsphaltStorage/Tqe60.webp"
 import ASLevelSensor from "../../assets/images/AsphaltStorage/Low/ASLevelSensorLow.webp";
 import bannerAsphalt from "../../assets/images/AsphaltStorage/bannerStorage.webp";
 import OSHand from "../../assets/images/OSHandbgremoved.webp";
@@ -110,7 +110,7 @@ const iconos = [
     <SmartVideo
     client:visible
     src="/Videos/Webm/ASMainVideo.webm"
-    poster="/Gallery/customdes.webp"
+    poster={poster1.src}
     isLoop={false}
     autoplayOnMobile={false}
     />
@@ -200,9 +200,9 @@ const iconos = [
     </div>
     <div class="w-full">
       <section
-        class="max-w-7xl px-8 mx-auto grid grid-cols-1 lg:grid-cols-5 justify-center items-center gap-10 md:gap-0"
+        class="max-w-7xl  mx-auto grid grid-cols-1 lg:grid-cols-5 justify-center items-center gap-10 md:gap-0"
       >
-        <div class="col-span-1 lg:col-span-3 w-full">
+        <div class="col-span-1 lg:col-span-3 w-full px-8">
           <p class="text-sm lg:text-lg md:text-lg font-thin text-white">
             Offering a practical and efficient way to manage industrial
             equipment operations. With advanced monitoring and automation, it

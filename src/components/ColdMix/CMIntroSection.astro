@@ -2,6 +2,7 @@
 import CMG5 from "../../assets/images/ColdMix/GallerySlider/CMG5.webp";
 import HeroCold from "../../assets/images/ColdMix/HeroColdMix.webp";
 import { Image } from "astro:assets";
+import poster1 from "../../assets/images/ColdMix/GallerySlider/CMG1.webp"
 import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
@@ -55,7 +56,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
           <SmartVideo
             client:visible
             src="/Videos/Webm/CMVideo.webm"
-            poster="/Gallery/customdes.webp"
+            poster={poster1.src}
             isLoop={true}
             autoplayOnMobile={true}
           />

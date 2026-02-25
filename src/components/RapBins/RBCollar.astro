@@ -14,6 +14,7 @@ import heroIMG from "../../assets/images/RapBins/heroBG.webp";
 import img4 from "../../assets/images/RapBins/RapProv6.webp";
 import img4Low from "../../assets/images/RapBins/Low/RapProv6Low.webp";
 import { Image } from "astro:assets";
+import poster1 from "../../assets/images/RapBins/Gallery/RBG1.webp"
 import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
@@ -249,7 +250,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
     <SmartVideo
       client:visible
       src="/Videos/Webm/ProvVideo1.webm"
-      poster="/Gallery/customdes.webp"
+      poster={poster1.src}
       isLoop={false}
       autoplayOnMobile={false}
     />

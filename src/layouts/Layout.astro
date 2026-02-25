@@ -2,6 +2,7 @@
 import "../styles/global.css"
 import Footer from "../components/Main/Footer.astro"
 import Navbar from "../components/Main/Navbar.astro"
+import CookieBanner from "../components/AboutPages/Banner/CookieBanner.astro";
 const { title = "TRIASOUS", description ="Manufacturer of high-quality asphalt plants and equipment. Durable, efficient, and built for top performance in road construction projects worldwide." } = Astro.props;
 ---
 
@@ -22,9 +23,20 @@ const { title = "TRIASOUS", description ="Manufacturer of high-quality asphalt p
 		<Navbar/>
 		<main class="flex-grow">
 			<slot /> <!-- Aquí se inyectará el contenido de las páginas -->
+			<CookieBanner/>
 		</main>
 		<Footer />
 	</body>
+
+
+	 <script>
+      import { loadConsentedScripts, onConsentAccepted } from '../components/AboutPages/Banner/Consent';
+      import { trackedScripts } from '../components/AboutPages/Banner/Trackedscripts';
+
+      loadConsentedScripts(trackedScripts);
+
+      onConsentAccepted(trackedScripts);
+    </script>
 </html>
 
 <style>

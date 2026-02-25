@@ -5,6 +5,7 @@ import item3 from "../../assets/images/DrumMixers/a4.webp";
 import item4 from "../../assets/images/DrumMixers/Low/a2Low.webp";
 import item5 from "../../assets/images/DrumMixers/a6.webp";
 import item6 from "../../assets/images/DrumMixers/a1.webp";
+import poster from "../../assets/images/DrumMixers/Gallery/DM1.webp"
 import { Image } from "astro:assets";
 import SmartVideo from "../unitComponents/SmartVideo";
 ---
@@ -22,17 +23,17 @@ import SmartVideo from "../unitComponents/SmartVideo";
   </p>
   <br />
   <div class="relative w-full aspect-video overflow-hidden">
-    <img
-      src="/Gallery/customdes.webp"
+    <!-- <img
+      src={poster.src}
       alt="Hero background"
       class="absolute inset-0 w-full h-full object-cover z-0"
       fetchpriority="high"
       decoding="async"
-    />
+    /> -->
     <SmartVideo
       client:visible
       src="/Videos/Webm/landingVideo.webm"
-      poster="/Gallery/customdes.webp"
+      poster={poster.src}
       autoplayOnMobile={false}
       isLoop={false}
     />

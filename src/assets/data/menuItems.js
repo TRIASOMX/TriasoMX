@@ -71,7 +71,7 @@ export const menuItems = [
       },
       {
         title: "ROCK CRUSHERS",
-        url: "/",
+        url: "/#",
         children: [
           {
             title: "JAW CRUSHERS",
@@ -128,7 +128,7 @@ export const menuItems = [
         url: "/Spare",
       },
       {
-        title: "COSTUME DESIGN",
+        title: "CUSTOM DESIGN",
         url: "/CustomDesign",
       },
       {

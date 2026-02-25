@@ -1,6 +1,7 @@
 ---
 import Separator from "../unitComponents/Separator.astro";
 import SmartVideo from "../unitComponents/SmartVideo";
+import poster1 from "../../assets/images/PowderA/Gallery/PAF1.webp"
 ---
 
 <section
@@ -31,7 +32,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
     <SmartVideo
       client:visible
       src="/Videos/Webm/TolvaAdIng.webm"
-      poster="/Gallery/customdes.webp"
+      poster={poster1.src}
       isLoop={false}
       autoplayOnMobile={false}
     />

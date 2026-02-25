@@ -136,6 +136,7 @@ const images2 = [
 
       <div class="relative overflow-hidden transform-gpu">
         <SmartVideo
+          autoplayOnMobile={false}
           client:visible
           poster="/Gallery/AsphaltPlantPoster/1.webp"
           src="/Videos/Webm/landingVideo.webm"
@@ -252,7 +253,7 @@ const images2 = [
         </div>
       </div>
     </div>
-    <div class="relative overflow-hidden max-w-7xl mx-auto transform-gpu">
+    <!-- <div class="relative overflow-hidden max-w-7xl mx-auto transform-gpu">
       <SmartVideo
         client:visible
         src="/Videos/Webm/asphaltVideo1.webm"
@@ -266,7 +267,7 @@ const images2 = [
         src="/Videos/Webm/asphaltVideo2.webm"
         poster="/Gallery/AsphaltPlantPoster/3.webp"
       />
-    </div>
+    </div> -->
 
     <div
       class="max-w-7xl my-10 mx-5 lg:mx-auto md:mx-auto p-4 flex flex-col items-center justify-center bg-white rounded-2xl"
@@ -281,7 +282,8 @@ const images2 = [
             desktopWidth="80%"
             src="/Videos/Webm/PlaC140ET.webm"
             poster="/Gallery/AsphaltPlantPoster/4.webp"
-            autoplayOnMobile={true}
+            autoplayOnMobile={false}
+            isLoop={false}
           />
         </div>
         <p
@@ -429,7 +431,7 @@ const images2 = [
           client:visible
           src="/Videos/Webm/PGMC.webm"
           poster="/Gallery/AsphaltPlantPoster/5.webp"
-          autoplayOnMobile={true}
+          autoplayOnMobile={false}
         />
       </div>
       <div

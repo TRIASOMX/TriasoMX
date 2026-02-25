@@ -16,6 +16,7 @@ import OSection from "../unitComponents/OSection.astro";
 import siloBG from "../../assets/images/HotMix/siloBG.webp";
 import Aislamiento from "../../assets/images/HotMix/Aislamiento.webp";
 import HMGallerySlider from "./HMGallerySlider";
+import poster1 from "../../assets/images/HotMix/silos1.webp"
 import SmartVideo from "../unitComponents/SmartVideo";
 
 const images = [
@@ -258,7 +259,7 @@ const images = [
               <SmartVideo 
                 client:visible
                 src="/Videos/Webm/HMAdv.webm"
-                poster="/Gallery/customdes.webp"
+                poster={poster1.src}
                 isLoop={true}
                 autoplayOnMobile={true}
               />

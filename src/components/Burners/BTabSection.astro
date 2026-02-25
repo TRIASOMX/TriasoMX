@@ -14,7 +14,9 @@ import QmdorSil from "../../assets/images/Burners/QmdorSil.webp";
 import { Image } from "astro:assets";
 import imgtab1 from "../../assets/images/Burners/14.webp";
 import imgtab1Low from "../../assets/images/Burners/Low/14Low.webp";
+import poster1 from "../../assets/images/Burners/Gallery/B1.webp"
 import SmartVideo from "../unitComponents/SmartVideo";
+import poster2 from "../../assets/images/Burners/preHeat.webp"
 ---
 
 <section class="w-full flex 2 mt-6 md:mt-20 flex-col gap-4 bg-gray-100">
@@ -130,7 +132,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
                 client:visible
                 className="rounded-full"
                 src="/Videos/Webm/bprov1.webm"
-                poster="/Gallery/customdes.webp"
+                poster={poster1.src}
                 isLoop={true}
                 autoplayOnMobile={true}
               />
@@ -334,7 +336,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
                 <SmartVideo
                   client:visible
                   src="/Videos/Webm/AnPreHeat.webm"
-                  poster="/Gallery/customdes.webp"
+                  poster={poster2.src}
                   autoplayOnMobile={true}
                   isLoop={true}
                 />

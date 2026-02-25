@@ -11,6 +11,9 @@ import icon4 from "../../assets/images/HotMix/icon4.webp";
 import icon5 from "../../assets/images/HotMix/icon5.webp";
 import SiloSAE from "../../assets/images/HotMix/SiloSAE.webp";
 import SiloAEVL from "../../assets/images/HotMix/SiloAEVL.webp";
+import poster1 from "../../assets/images/HotMix/Gallery/HM1.webp";
+import poster2 from "../../assets/images/HotMix/Gallery/HM4.webp";
+import poster3 from "../../assets/images/HotMix/Gallery/HM5.webp";
 import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
@@ -62,7 +65,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
           <SmartVideo
             client:visible
             src="/Videos/Webm/HMSilo.webm"
-            poster="/Gallery/customdes.webp"
+            poster={poster1.src}
             desktopWidth="80%"
             isLoop={false}
             autoplayOnMobile={false}
@@ -161,7 +164,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
           <SmartVideo
             client:visible
             src="/Videos/Webm/HMSilo2.webm"
-            poster="/Gallery/customdes.webp"
+            poster={poster2.src}
             isLoop={true}
             autoplayOnMobile={true}
           />
@@ -186,7 +189,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
           <SmartVideo
             client:visible
             src="/Videos/Webm/HMinclinado.webm"
-            poster="/Gallery/customdes.webp"
+            poster={poster3.src}
             isLoop={true}
             autoplayOnMobile={true}
           />
