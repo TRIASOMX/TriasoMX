@@ -47,5 +47,8 @@ const Slides= [
 ---
 <Layout title="Custom Design Page">
     <CDFirstSection></CDFirstSection>
-    <GallerySlider client:only slides={Slides} visibleThumbs={4}></GallerySlider>
+    <div class="max-w-7xl mx-auto px-8">
+        <GallerySlider client:only slides={Slides} visibleThumbs={4}></GallerySlider>
+    </div>
+    
 </Layout>
