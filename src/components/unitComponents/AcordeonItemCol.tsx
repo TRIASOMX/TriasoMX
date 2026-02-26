@@ -94,7 +94,7 @@ export default function AcordeonItemCol({
 
       <div
         ref={contentRef}
-        className={`accordion-content w-full transition-all duration-300 overflow-hidden ${isOpen ? "max-h-[700px]" : "max-h-0"
+        className={`accordion-content w-full transition-all duration-300 overflow-hidden ${isOpen ? "max-h-[710px]" : "max-h-0"
           }`}
         style={{ transitionProperty: "max-height" }}
       >
