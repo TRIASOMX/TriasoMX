@@ -28,7 +28,7 @@ export default function GallerySlider({ images }: Props) {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const isMobile = windowWidth < 768;
+    const isMobile = windowWidth < 1025;
     const itemsPerPage = isMobile ? 1 : 4;
     const totalPages = Math.ceil(images.length / itemsPerPage);
 
@@ -94,7 +94,7 @@ export default function GallerySlider({ images }: Props) {
                                 width: isMobile ? "80%" : `${100 / images.length}%`,
                             }}
                         >
-                            <div className="mt-4 font-bold text-white mb-3">{img.title}</div>
+                            <div className="mt-4 font-bold text-white mb-3 text-sm">{img.title}</div>
 
                             <img
                                 src={img.src}

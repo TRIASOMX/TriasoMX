@@ -39,7 +39,7 @@ export function initScrollAnimations(): void {
             ".fade-img",
             { y: 60 },
             {
-                y: -50,
+                y: -20,
                 scrollTrigger: {
                     trigger: ".fade-img",
                     start: "top 90%",

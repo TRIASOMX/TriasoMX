@@ -127,21 +127,21 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
           class="w-full flex flex-col items-center justify-center font-bold mt-10 md:mt-20"
         >
           <div class="max-w-7xl px-8 mx-auto flex justify-center">
-            <div class="hero-img">
+            <div class="hero-img w-full md:w-4/6 lg:w-full rounded-2xl">
               <SmartVideo
                 client:visible
                 className="rounded-full"
                 src="/Videos/Webm/bprov1.webm"
                 poster={poster1.src}
                 isLoop={true}
-                autoplayOnMobile={true}
+                autoplayOnMobile={false}
               />
             </div>
           </div>
           <div
             class="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center gap-6"
           >
-            <div class="w-full mt-10">
+            <div class="w-full mt-10 md:mt-20 lg:mt-0">
               <h2 class="text-lg md:text-xl font-bold text-black">
                 Total Air Technology: Guaranteed Complete Combustion
               </h2><br />
@@ -337,7 +337,7 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
                   client:visible
                   src="/Videos/Webm/AnPreHeat.webm"
                   poster={poster2.src}
-                  autoplayOnMobile={true}
+                  autoplayOnMobile={false}
                   isLoop={true}
                 />
               </div>

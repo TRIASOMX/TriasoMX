@@ -17,7 +17,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ sections }) => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="flex md:w-1/2 w-full bg-white rounded-md shadow-md overflow-hidden">
+      <div className="flex lg:w-1/2 md:w-4/5 w-full bg-white rounded-md shadow-md overflow-hidden">
         {/* Sidebar */}
         <div className="flex flex-col items-center bg-redBg text-white p-2 space-y-2">
           {sections.map((section, idx) => (

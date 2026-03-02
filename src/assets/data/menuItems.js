@@ -179,7 +179,7 @@ export const menuItems = [
       },
       {
         title: "SOME TIPS FOR BUYING AN EQUIPMENT",
-        url: "/",
+        url: "/TipsAsphalt",
         children: [
           {
             title: "ASPHALT PLANTS",
