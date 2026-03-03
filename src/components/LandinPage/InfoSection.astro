@@ -8,18 +8,13 @@ import { Image } from "astro:assets";
 
 <section class="w-full flex flex-col justify-center items-center">
     <div class="w-full bg-[#2e2e2e] flex flex-col justify-center items-center">
-        <Image
-            src={logo}
-            alt="Triaso Logo"
-            class="w-[500px] lg:w-full md:w-full lg:pt-28 md:pt-28"
-        />
-        <div
-            class="w-full
-         bg-[url(/HeroS.webp)] bg-cover bg-center bg-no-repeat
-         h-[850px] md:h-[800px] lg:h-[900px]
-         flex flex-col justify-start pt-5 items-center"
-        >
-            <div class="flex flex-col mx-auto max-w-7xl px-8">
+        <div class="relative w-full flex items-center overflow-hidden">
+            <div
+                class="absolute inset-0 bg-[length:120%] md:bg-[length:100%] lg:bg-cover bg-center bg-no-repeat opacity-40"
+                style="background-image: url('/triasoLogo.webp')"
+            >
+            </div>
+            <div class="relative flex flex-col mx-auto max-w-7xl px-8 py-10">
                 <h1
                     class="text-white text-2xl lg:text-4xl font-bold text-center lg:text-start md:text-start"
                 >
@@ -35,8 +30,17 @@ import { Image } from "astro:assets";
                     installation directly on-site.
                 </p>
             </div>
+        </div>
 
-            <details class="group w-full">
+        <div
+            class="relative w-full
+         bg-[url(/fabricaBG.webp)] bg-cover bg-center bg-no-repeat
+         h-[850px] md:h-[800px] lg:h-[900px]
+         flex flex-col justify-start pt-5 items-center"
+        >
+            <div class="absolute inset-0 bg-gradient-to-b from-[#2e2e2e]/100 to-transparent"></div>
+
+            <details class="group relative w-full">
                 <summary
                     class="list-none cursor-pointer flex justify-center items-center"
                 >
@@ -88,7 +92,7 @@ import { Image } from "astro:assets";
             </details>
 
             <div
-                class="w-full md:pr-52 py-10 grid grid-cols-1 md:grid-cols-2 gap-10"
+                class="w-full md:pr-52 py-10 grid grid-cols-1 md:grid-cols-2 gap-10 relative"
             >
                 <div class="w-full flex flex-col gap-6 col-span-2">
                     <div class="w-3/4 md:pl-52 bg-redBg p-10 rounded-r-2xl">
@@ -99,7 +103,7 @@ import { Image } from "astro:assets";
                 </div>
             </div>
 
-            <div class="w-full lg:max-w-7xl flex justify-start items-start">
+            <div class="w-full lg:max-w-7xl flex justify-start items-start relative">
                 <div class="bg-blueMain p-10 rounded-2xl lg:w-1/2">
                     <h2 class="text-xl md:text-3xl font-bold text-white">
                         Versatile Configurations

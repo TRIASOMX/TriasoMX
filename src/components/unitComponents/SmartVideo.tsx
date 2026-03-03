@@ -31,6 +31,7 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
   isPosterHighPriority = false,
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null); // Referencia para el temporizador
   const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -46,37 +47,42 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
     return () => mediaQuery.removeEventListener('change', handleResize);
   }, []);
 
-  useEffect(() => {
+useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-
         if (entry.isIntersecting && !isVideoLoaded) {
           setIsVideoLoaded(true);
         }
-
         const shouldAutoplay = !isMobile || (isMobile && autoplayOnMobile);
-
         if (isVideoLoaded && shouldAutoplay) {
-          if (entry.isIntersecting) {
+          if (entry.intersectionRatio >= 0.5) {
+            if (timeoutRef.current) clearTimeout(timeoutRef.current);
+            
             const playPromise = video.play();
             if (playPromise !== undefined) {
               playPromise
                 .then(() => setIsPlaying(true))
                 .catch(() => {});
             }
-          } else {
+          } 
+          else if (entry.intersectionRatio <= 0.10) {
             video.pause();
-            setIsPlaying(false);
+            timeoutRef.current = setTimeout(() => {
+              setIsPlaying(false);
+            }, 800); 
           }
         }
       });
-    }, { threshold: 0.5 });
-
+    }, { threshold: [0.05, 0.5] }); 
     observer.observe(video);
-    return () => video && observer.unobserve(video);
+  
+    return () => {
+      if (video) observer.unobserve(video);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, [isMobile, isVideoLoaded, autoplayOnMobile]);
 
   const currentWidth = isMobile ? width : (desktopWidth ?? width);
@@ -90,7 +96,7 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
       className={`smart-video-container ${className}`}
       style={{ position: 'relative', width: currentWidth, height: currentHeight }}
     >
-      {poster && !isPlaying && showControls === false && (
+      {poster && showControls === false && (
         <img
           src={poster}
           aria-hidden="true"
@@ -102,8 +108,8 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
             height: '100%',
             objectFit: 'cover',
             pointerEvents: 'none',
-            opacity: isPlaying ? 0 : 1,
-            transition: 'opacity 0.3s ease',
+            opacity: isPlaying ? 0 : 1, 
+            transition: 'opacity 0.4s ease', 
             zIndex: 1,
           }}
           alt=""
