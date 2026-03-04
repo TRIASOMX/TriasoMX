@@ -36,7 +36,7 @@ export default function Tab() {
         ))}
       </div>
 
-      
+
       <div className=" w-full aspect-[16/9]">
         <img
           src={images[activeIndex].src}
@@ -50,9 +50,7 @@ export default function Tab() {
 
       <div>
         <p className=" text-grisT text-sm lg:text-lg md:text-lg">
-          Self-contained, integrated dust control systems for effective air
-          filtration and particle capture in asphalt plants—configurable for
-          both portable and stationary setups.
+          Self-contained and mounted integrated dust control systems designed for efficient air filtration and particulate capture in asphalt plants — configurable for both portable and stationary installations.
         </p>
       </div>
     </div>
