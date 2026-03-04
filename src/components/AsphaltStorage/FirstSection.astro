@@ -11,7 +11,7 @@ import SliderAsphalt from "./SliderAsphalt";
 import ASCustom from "../AsphaltStorage/ASCustom.astro";
 import ASMainVideo from "../../assets/images/AsphaltStorage/ASMainVideo.mp4";
 import ASControl from "../../assets/images/AsphaltStorage/Low/ASControlLow.webp";
-import poster1 from "../../assets/images/AsphaltStorage/Tqe60.webp"
+import poster1 from "../../../public/Videos/Webm/Posters/5.webp";
 import ASLevelSensor from "../../assets/images/AsphaltStorage/Low/ASLevelSensorLow.webp";
 import bannerAsphalt from "../../assets/images/AsphaltStorage/bannerStorage.webp";
 import OSHand from "../../assets/images/OSHandbgremoved.webp";
@@ -108,11 +108,11 @@ const iconos = [
 
   <div class="max-w-7xl px-8 mx-auto pt-10">
     <SmartVideo
-    client:visible
-    src="/Videos/Webm/ASMainVideo.webm"
-    poster={poster1.src}
-    isLoop={false}
-    autoplayOnMobile={false}
+      client:visible
+      src="/Videos/Webm/ASMainVideo.webm"
+      poster={poster1.src}
+      isLoop={false}
+      autoplayOnMobile={false}
     />
 
     <h1 class="text-center text-xl lg:text-3xl md:text-3xl text-blueMain pt-10">
@@ -120,7 +120,7 @@ const iconos = [
     </h1>
   </div>
   <div
-    class="w-full max-w-[2000px] grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-10  items-center mt-10 overflow-hidden"
+    class="w-full max-w-[1920px] grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-5 items-center mt-10 overflow-hidden lg:px-36"
   >
     <!-- TEXTO -->
     <div
@@ -200,7 +200,7 @@ const iconos = [
     </div>
     <div class="w-full">
       <section
-        class="max-w-7xl  mx-auto grid grid-cols-1 lg:grid-cols-5 justify-center items-center gap-10 md:gap-0"
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 justify-center items-center gap-10 md:gap-0"
       >
         <div class="col-span-1 lg:col-span-3 w-full px-8">
           <p class="text-sm lg:text-lg md:text-lg font-thin text-white">
@@ -209,10 +209,8 @@ const iconos = [
             simplifies the Asphalt Plant operation and personnel. Control of key
             processes like temperature, material dosing, and production rates.
           </p><br />
-          <div
-            class="w-full grid grid-cols-2 space-y-5 lg:grid-cols-4 "
-          >
-            <div class="w-[70px] flex flex-col mx-auto items-center ">
+          <div class="w-full grid grid-cols-2 space-y-5 lg:grid-cols-4">
+            <div class="w-[70px] flex flex-col mx-auto items-center">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -238,7 +236,7 @@ const iconos = [
                 Cloud historical reports
               </p>
             </div>
-            <div class="w-[70px] flex flex-col mx-auto items-center ">
+            <div class="w-[70px] flex flex-col mx-auto items-center">
               <svg
                 class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
                 viewBox="0 0 24 24"
@@ -312,7 +310,7 @@ const iconos = [
                 Artificial Intelligence
               </p>
             </div>
-            <div class="w-[70px] flex flex-col mx-auto items-center ">
+            <div class="w-[70px] flex flex-col mx-auto items-center">
               <svg
                 class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
                 stroke-width="2.2"
@@ -349,7 +347,7 @@ const iconos = [
                 Fewer operators full control
               </p>
             </div>
-            <div class="w-[70px] flex flex-col mx-auto items-center ">
+            <div class="w-[70px] flex flex-col mx-auto items-center">
               <svg
                 class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
                 stroke-width="2.2"
@@ -374,8 +372,14 @@ const iconos = [
               </p>
             </div>
 
-            <div class="col-span-2 lg:col-span-4 mx-auto flex justify-end items-end">
-              <a href="/Relief" class="text-black text-center mb-5 mt-5 text-xs md:text-sm font-normal border-2 border-white rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-white hover:bg-black hover:text-white hover:border-black">Learn More</a>
+            <div
+              class="col-span-2 lg:col-span-4 mx-auto flex justify-end items-end"
+            >
+              <a
+                href="/Relief"
+                class="text-black text-center mb-5 mt-5 text-xs md:text-sm font-normal border-2 border-white rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-white hover:bg-black hover:text-white hover:border-black"
+                >Learn More</a
+              >
             </div>
           </div>
         </div>
@@ -398,11 +402,13 @@ const iconos = [
           </h1><br />
           <p class="text-sm lg:text-lg md:text-lg font-thin">
             Asphalt level sensor with guided wave radar technology, designed for
-            continuous and accurate monitoring in real-time. 
+            continuous and accurate monitoring in real-time.
           </p>
-          <br>
-          <p class="text-sm lg:text-lg md:text-lg font-thin">Asphalt volume in the tank (accuracy with a margin of error of 11.3 liters
-            in 60,000 liters).</p>
+          <br />
+          <p class="text-sm lg:text-lg md:text-lg font-thin">
+            Asphalt volume in the tank (accuracy with a margin of error of 11.3
+            liters in 60,000 liters).
+          </p>
           <ul class="list-disc ml-6 text-sm lg:text-lg md:text-lg font-thin">
             <li>Consumption and refill history of asphalt.</li>
           </ul>
@@ -418,18 +424,42 @@ const iconos = [
     </div>
 
     <div class="max-w-7xl px-8 mx-auto py-20 flex flex-col gap-10">
-      <h2 class="text-center text-2xl text-bgBeige md:text-3xl">
-        Simplifying Operations with Triaso Intelligent Features
-      </h2>
-      <p class="text-sm lg:text-lg md:text-lg font-thin">
-        Beyond storage, our tanks are equipped with user-friendly features like
-        automated monitoring systems, real-time data tracking, and efficient
-        unloading mechanisms. These technologies help streamline operations,
-        reduce maintenance, and enhance productivity across the board. With
-        real-time access to trends, logs, and operational metrics,
-        decision-making becomes faster, more informed, and fully independent of
-        your physical location.
-      </p>
+      <details class="group flex flex-col justify-center items-center">
+        <summary
+          class="flex flex-col lg:flex-row md:flex-row items-center justify-between cursor-pointer list-none gap-5"
+        >
+          <h2 class="text-center text-2xl text-bgBeige md:text-3xl">
+            Simplifying Operations with Triaso Intelligent Features
+          </h2>
+
+          <svg
+            class="transition-transform duration-300 group-open:rotate-180"
+            width="64"
+            height="64"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#fffaea"
+            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+              <path
+                d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                fill="#fffaea"></path>
+            </g></svg
+          >
+        </summary>
+        <p class="text-sm lg:text-lg md:text-lg font-thin">
+          Beyond storage, our tanks are equipped with user-friendly features
+          like automated monitoring systems, real-time data tracking, and
+          efficient unloading mechanisms. These technologies help streamline
+          operations, reduce maintenance, and enhance productivity across the
+          board. With real-time access to trends, logs, and operational metrics,
+          decision-making becomes faster, more informed, and fully independent
+          of your physical location.
+        </p>
+      </details>
     </div>
   </div>
 
