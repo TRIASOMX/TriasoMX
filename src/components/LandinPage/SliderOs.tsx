@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 
 interface SliderItem {
   id: number;
@@ -95,7 +95,7 @@ function useVisibleCount() {
     return 4;
   });
 
-  useState(() => {
+  useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) setVisible(1);
       else if (window.innerWidth < 1024) setVisible(2);
@@ -103,67 +103,52 @@ function useVisibleCount() {
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  });
+  }, []);
 
   return visible;
 }
 
 export default function Slider() {
   const [index, setIndex] = useState(0);
-  const [sliding, setSliding] = useState<"left" | "right" | null>(null);
   const visibleCount = useVisibleCount();
+  
   const maxIndex = Math.max(0, items.length - visibleCount);
-
   const navigate = (dir: "left" | "right") => {
-    if (sliding) return;
-    if (dir === "left" && index === 0) return;
-    if (dir === "right" && index === maxIndex) return;
-
-    setSliding(dir);
-    setTimeout(() => {
-      setIndex((prev) => (dir === "right" ? prev + 1 : prev - 1));
-      setSliding(null);
-    }, 320);
+    if (dir === "left" && index > 0) {
+        setIndex((prev) => prev - 1);
+    }
+    if (dir === "right" && index < maxIndex) {
+        setIndex((prev) => prev + 1);
+    }
   };
 
   const goTo = (i: number) => {
-    if (sliding || i === index) return;
-    setSliding(i > index ? "right" : "left");
-    setTimeout(() => {
-      setIndex(i);
-      setSliding(null);
-    }, 320);
+    setIndex(i);
   };
-
-  const translateClass =
-    sliding === "right"
-      ? "-translate-x-8 opacity-0"
-      : sliding === "left"
-      ? "translate-x-8 opacity-0"
-      : "translate-x-0 opacity-100";
-
-  const visibleItems = items.slice(index, index + visibleCount);
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-10">
       <div className="overflow-hidden">
         <div
-          className={`grid gap-4 transition-all duration-300 ease-in-out ${translateClass}`}
+          className="flex transition-transform duration-700 ease-in-out"
           style={{
-            gridTemplateColumns: `repeat(${visibleCount}, minmax(0, 1fr))`,
+            transform: `translateX(-${index * (100 / visibleCount)}%)`,
           }}
         >
-          {visibleItems.map((item) => (
+          {items.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col items-center justify-start gap-3 text-center rounded-2xl p-6"
+              className="flex-none px-2" 
+              style={{ width: `${100 / visibleCount}%` }}
             >
-              <div className="flex items-center justify-center w-24 h-24">
-                {item.svg}
+              <div className="flex flex-col items-center justify-start gap-3 text-center rounded-2xl p-6 h-full">
+                <div className="flex items-center justify-center w-24 h-24">
+                  {item.svg}
+                </div>
+                <p className="font-bold text-white text-base leading-snug">
+                  {item.title}
+                </p>
               </div>
-              <p className="font-bold text-white text-base leading-snug">
-                {item.title}
-              </p>
             </div>
           ))}
         </div>
@@ -172,7 +157,7 @@ export default function Slider() {
       <div className="flex items-center justify-center gap-6 mt-8">
         <button
           onClick={() => navigate("left")}
-          disabled={index === 0 || !!sliding}
+          disabled={index === 0}
           aria-label="Anterior"
           className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white transition-opacity duration-200 disabled:opacity-30 disabled:cursor-not-allowed hover:border-white/50"
         >
@@ -187,7 +172,7 @@ export default function Slider() {
               key={i}
               onClick={() => goTo(i)}
               aria-label={`Slider number ${i + 1}`}
-              className={`h-2 rounded-full transition-all duration-300 ${
+              className={`h-2 rounded-full transition-all duration-700 ${
                 i === index ? "w-7 bg-white" : "w-2 bg-white/30"
               }`}
             />
@@ -196,7 +181,7 @@ export default function Slider() {
 
         <button
           onClick={() => navigate("right")}
-          disabled={index === maxIndex || !!sliding}
+          disabled={index === maxIndex}
           aria-label="Siguiente"
           className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white transition-opacity duration-200 disabled:opacity-30 disabled:cursor-not-allowed hover:border-white/50"
         >
