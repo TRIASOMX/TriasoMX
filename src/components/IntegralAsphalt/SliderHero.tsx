@@ -57,11 +57,14 @@ const SliderHero = () => {
               fetchPriority="high"
             />
             <div className="absolute top-10 left-10 text-white p-6 max-w-sm md:max-w-md rounded-md ">
-              <div className="absolute inset-0 bg-blueMain opacity-70 rounded-md "></div>
-              <h2 className="relative text-base md:text-2xl font-bold mb-2">
+              <div className="absolute inset-0 bg-blueMain opacity-70 rounded-md lg:w-[850px] "></div>
+              <h2 className="relative text-lg lg:text-4xl font-bold mb-2 lg:translate-x-1/2 lg:text-center">
                 {slide.titulo}
               </h2>
-              <p className=" relative text-xs md:text-base">{slide.texto}</p>
+              <div className="lg:w-[800px] lg:translate-x-1/5">
+                <p className=" relative w-full text-sm md:text-lg lg:text-lg  lg:text-center">{slide.texto}</p>
+              </div>
+              
             </div>
           </div>
         ))}
