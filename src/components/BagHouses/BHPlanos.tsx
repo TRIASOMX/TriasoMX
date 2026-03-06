@@ -123,6 +123,7 @@ const BHPlanos = () => {
     const [activeTab, setActiveTab] = useState(1);
     // valor de cm a pies
     const cmToFeet = 0.0328084;
+    const m3ToFt = 35.315;
     //animation
     const boxRef = useRef<HTMLDivElement>(null);
     const nextSectionRef = useRef<HTMLDivElement>(null);
@@ -157,6 +158,18 @@ const BHPlanos = () => {
         C4_2: false,
         C4_3: false,
     });
+
+    const tabToVersion: Record<number, string> = {
+        1: "12",
+        2: "16",
+        3: "20",
+        4: "24",
+        5: "30",
+        6: "31",
+        7: "32"
+    };
+
+
     const modelOptions = [
         { id: 1, label: "80-110 Tph" },
         { id: 2, label: "110-140 Tph" },
@@ -166,6 +179,12 @@ const BHPlanos = () => {
         { id: 6, label: "400-480 Tph" },
         { id: 7, label: "500-600 Tph" },
     ];
+
+    const handleTabChange = (tabId: number) => {
+        setActiveTab(tabId);
+        setActiveVersion(tabToVersion[tabId]);
+    };
+
 
     useClipPathScrollTrigger({
         enabled: activeTab === 1,
@@ -271,7 +290,7 @@ const BHPlanos = () => {
                             <div className="relative">
                                 <select
                                     value={activeTab}
-                                    onChange={(e) => setActiveTab(Number(e.target.value))}
+                                    onChange={(e) => handleTabChange(Number(e.target.value))}
                                     className="w-full px-5 py-3 pr-12 rounded-full bg-white text-gray-900 text-sm font-medium
                  appearance-none focus:outline-none focus:ring-2 focus:ring-white/50"
                                 >
@@ -308,7 +327,7 @@ const BHPlanos = () => {
                             {modelOptions.map((option) => (
                                 <button
                                     key={option.id}
-                                    onClick={() => setActiveTab(option.id)}
+                                    onClick={() => handleTabChange(option.id)}
                                     className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300 w-[150px]
                     ${activeTab === option.id
                                             ? "text-gray-900 bg-white border-white"
@@ -379,7 +398,7 @@ const BHPlanos = () => {
                                                 : "max-h-0 opacity-0"
                                                 } md:max-h-full md:opacity-100 md:block`}>
                                                 <div className="flex justify-between">
-                                                    <h1>Length:</h1>
+                                                    <h1>ACFM:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.acfm?.toFixed(
@@ -402,7 +421,7 @@ const BHPlanos = () => {
                                                             } m3`
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
-                                                                cmToFeet
+                                                                m3ToFt
                                                             ).toFixed(1)} ft3`}
                                                     </p>
                                                 </div>
@@ -894,7 +913,7 @@ const BHPlanos = () => {
                                                 : "max-h-0 opacity-0"
                                                 } md:max-h-full md:opacity-100 md:block`}>
                                                 <div className="flex justify-between">
-                                                    <h1>Length:</h1>
+                                                    <h1>ACFM:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.acfm?.toFixed(
@@ -917,7 +936,7 @@ const BHPlanos = () => {
                                                             } m3`
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
-                                                                cmToFeet
+                                                                m3ToFt
                                                             ).toFixed(1)} ft3`}
                                                     </p>
                                                 </div>
@@ -1404,7 +1423,7 @@ const BHPlanos = () => {
                                                 : "max-h-0 opacity-0"
                                                 } md:max-h-full md:opacity-100 md:block`}>
                                                 <div className="flex justify-between">
-                                                    <h1>Length:</h1>
+                                                    <h1>ACFM:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.acfm?.toFixed(
@@ -1427,7 +1446,7 @@ const BHPlanos = () => {
                                                             } m3`
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
-                                                                cmToFeet
+                                                                m3ToFt
                                                             ).toFixed(1)} ft3`}
                                                     </p>
                                                 </div>
@@ -1914,7 +1933,7 @@ const BHPlanos = () => {
                                                 : "max-h-0 opacity-0"
                                                 } md:max-h-full md:opacity-100 md:block`}>
                                                 <div className="flex justify-between">
-                                                    <h1>Length:</h1>
+                                                    <h1>ACFM:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.acfm?.toFixed(
@@ -1937,7 +1956,7 @@ const BHPlanos = () => {
                                                             } m3`
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
-                                                                cmToFeet
+                                                                m3ToFt
                                                             ).toFixed(1)} ft3`}
                                                     </p>
                                                 </div>
@@ -2424,7 +2443,7 @@ const BHPlanos = () => {
                                                 : "max-h-0 opacity-0"
                                                 } md:max-h-full md:opacity-100 md:block`}>
                                                 <div className="flex justify-between">
-                                                    <h1>Length:</h1>
+                                                    <h1>ACFM:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.acfm?.toFixed(
@@ -2447,7 +2466,7 @@ const BHPlanos = () => {
                                                             } m3`
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
-                                                                cmToFeet
+                                                                m3ToFt
                                                             ).toFixed(1)} ft3`}
                                                     </p>
                                                 </div>
@@ -2934,7 +2953,7 @@ const BHPlanos = () => {
                                                 : "max-h-0 opacity-0"
                                                 } md:max-h-full md:opacity-100 md:block`}>
                                                 <div className="flex justify-between">
-                                                    <h1>Length:</h1>
+                                                    <h1>ACFM:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.acfm?.toFixed(
@@ -2957,7 +2976,7 @@ const BHPlanos = () => {
                                                             } m3`
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
-                                                                cmToFeet
+                                                                m3ToFt
                                                             ).toFixed(1)} ft3`}
                                                     </p>
                                                 </div>
@@ -3444,7 +3463,7 @@ const BHPlanos = () => {
                                                 : "max-h-0 opacity-0"
                                                 } md:max-h-full md:opacity-100 md:block`}>
                                                 <div className="flex justify-between">
-                                                    <h1>Length:</h1>
+                                                    <h1>ACFM:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.acfm?.toFixed(
@@ -3467,7 +3486,7 @@ const BHPlanos = () => {
                                                             } m3`
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
-                                                                cmToFeet
+                                                                m3ToFt
                                                             ).toFixed(1)} ft3`}
                                                     </p>
                                                 </div>

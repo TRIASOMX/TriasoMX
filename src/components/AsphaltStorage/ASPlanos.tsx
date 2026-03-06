@@ -119,6 +119,15 @@ const ASPlanos = () => {
     C4_2: false,
     C4_3: false,
   });
+
+  const tabToVersion: Record<number, string> = {
+  1: "12",
+  2: "16",
+  3: "20",
+  4: "24",
+  5: "30",
+};
+
   const modelOptions = [
     { id: 1, label: "12,000 Gallons" },
     { id: 2, label: "16,000 Gallons" },
@@ -126,6 +135,12 @@ const ASPlanos = () => {
     { id: 4, label: "24,000 Gallons" },
     { id: 5, label: "30,000 Gallons" },
   ];
+
+  const handleTabChange = (tabId: number) => {
+  setActiveTab(tabId);
+  setActiveVersion(tabToVersion[tabId]);
+};
+
   useClipPathScrollTrigger({
     enabled: activeTab === 1,
 
@@ -230,7 +245,7 @@ const ASPlanos = () => {
               <div className="relative">
                 <select
                   value={activeTab}
-                  onChange={(e) => setActiveTab(Number(e.target.value))}
+                  onChange={(e) => handleTabChange(Number(e.target.value))}
                   className="w-full px-5 py-3 pr-12 rounded-full bg-white text-gray-900 text-sm font-medium
                  appearance-none focus:outline-none focus:ring-2 focus:ring-white/50"
                 >
@@ -267,7 +282,7 @@ const ASPlanos = () => {
               {modelOptions.map((option) => (
                 <button
                   key={option.id}
-                  onClick={() => setActiveTab(option.id)}
+                  onClick={() => handleTabChange(option.id)}
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300 w-[150px]
                     ${activeTab === option.id
                       ? "text-gray-900 bg-white border-white"

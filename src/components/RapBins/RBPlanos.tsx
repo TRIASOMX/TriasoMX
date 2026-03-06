@@ -31,9 +31,13 @@ const toggleConfig = [
   {
     id: "1",
     dimensions: {
+      //Without Aesthetic Side Panels
       width: 268.22,
       height: 381,
       length: 722.37,
+      singleLength: 365.75,
+      singleHeight: 201.17,
+      tLenght: 1088.14,
       tph: 60,
     },
   },
