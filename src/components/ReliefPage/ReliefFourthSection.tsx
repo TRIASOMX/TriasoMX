@@ -288,10 +288,12 @@ export default function ReliefFourthSection() {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto flex flex-col justify-center items-center space-y-5 pt-5 pb-5">
-                <div className="flex justify-center items-center px-4">
+            <div className="max-w-7xl mx-auto flex flex-col justify-center items-center space-y-5 py-14">
+                <div className="flex flex-col justify-center items-center px-4">
                     <h1 className=" font-bold text-2xl md:text-4xl text-center">
                         Plant operation depends on fewer operators,
+                    </h1>
+                    <h1 className="font-bold text-2xl md:text-4xl text-center">
                         without compromising control or production quality.
                     </h1>
                 </div>

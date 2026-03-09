@@ -11,7 +11,7 @@ export default function TabsIntegral() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-8 mt-10 mb-4 max-w-7xl mx-auto px-4">
+    <div className="w-full flex flex-col justify-center items-center  mt-10 mb-2 max-w-7xl mx-auto px-4">
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full text-center gap-2">
         {images.map((img, index) => (
@@ -19,7 +19,7 @@ export default function TabsIntegral() {
             aria-label="Tab Selector"
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`min-w-0 break-words border-b-2 py-2 px-2 text-sm sm:text-base ${activeIndex === index
+            className={`min-w-0 break-words border-b-2 py-2 px-2 text-lg md:text-base lg:text-base ${activeIndex === index
                 ? "border-redBg text-black font-bold"
                 : "border-transparent text-grisT font-normal"
               }`}

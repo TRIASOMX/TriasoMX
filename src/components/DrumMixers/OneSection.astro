@@ -17,7 +17,7 @@ import AcordeonItemCol from "../unitComponents/AcordeonItemCol";
 import OSection from "../unitComponents/OSection.astro";
 import flag from "../../assets/images/Burners/flag.svg";
 import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
-import poster1 from "../../assets/images/DrumMixers/Gallery/DM9.webp"
+import poster1 from "../../../public/Videos/Webm/Posters/drummixers2.webp";
 import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
@@ -40,7 +40,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
     <Image
       src={obracivil}
       alt="Drum mixer on a construction zone"
-      class="  lg:w-4/5 rounded-lg"
+      class="lg:w-4/5 rounded-lg"
     />
   </div>
 
@@ -57,11 +57,6 @@ import SmartVideo from "../unitComponents/SmartVideo";
         requirements. From heavy-duty construction designed for continuous
         operation to configurations that improve efficiency and safety, every
         component serves a defined purpose.
-        <br /><br />
-        With a range of capacities and fully customizable features, our plants adapt
-        to your operation—not the other way around. Whether you're expanding capacity
-        or optimizing your process, Triaso delivers the flexibility, performance,
-        and reliability you need to stay ahead in a competitive market.
       </p>
     </div>
 
@@ -389,9 +384,18 @@ import SmartVideo from "../unitComponents/SmartVideo";
     <div class="h-0.5 bg-blueMain w-1/4 pr-6 self-start"></div>
   </div>
   <div class="max-w-7xl">
-    <h2 class="text-xl md:text-3xl text-center text-redBg mt-10">
+    <h2
+      class="text-xl md:text-3xl text-center text-redBg mt-10 hidden md:hidden lg:flex lg:justify-center lg:items-center"
+    >
       With Triaso, Become the Exclusive Provider of Hot Mix <br /> for All Paving
       Projects in Your Region
+    </h2>
+
+    <h2
+      class="text-xl md:text-3xl text-center text-redBg mt-10 flex justify-center items-center lg:hidden"
+    >
+      With Triaso, Become the Exclusive <br /> Provider of Hot Mix for All <br
+      /> Paving Projects in Your Region
     </h2>
     <Image
       src={img3}
@@ -400,17 +404,17 @@ import SmartVideo from "../unitComponents/SmartVideo";
     />
   </div>
   <OSection />
-  <div class="px-4">
-    <h2 class="text-2xl md:text-3xl text-center text-redBg mt-10">
-      Lower fuel consumption than any other asphalt plant
-    </h2>
-  </div>
   <div
     class="w-full bg-[url(/newBanner.webp)] bg-no-repeat bg-center bg-cover px-8 py-10 lg:py-20 mt-10"
   >
     <div class="max-w-7xl mx-auto flex flex-col">
       <div class="w-full flex justify-center">
         <Image src={flag} alt="Flag icon" class="w-[125px] md:w-[200px]" />
+      </div>
+      <div class="">
+        <h2 class="text-2xl md:text-3xl text-center text-redBg my-10 text-white">
+          Lower fuel consumption than any other asphalt plant
+        </h2>
       </div>
       <p
         class="text-white font-bold text-center lg:text-justify md:text-justify text-base lg:text-xl"

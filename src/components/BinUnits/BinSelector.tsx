@@ -88,7 +88,7 @@ export default function BinSelector() {
               <button
                 key={num}
                 onClick={() => setSelectedBins(num)}
-                className={`px-4 py-2 text-sm sm:text-base md:text-lg font-bold rounded-full
+                className={`px-4 py-2 text-base lg:text-2xl md:text-xl font-bold rounded-full
                 ${selectedBins === num ? "bg-blueMain text-white" : "bg-white text-black"}
               `}
               >
