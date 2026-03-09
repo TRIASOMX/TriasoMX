@@ -15,54 +15,74 @@ import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScroll
 gsap.registerPlugin(ScrollTrigger);
 
 const singleUnit = {
-  length: 365.75,
-  width: 268.22,
-  height: 201.17,
   capacity: "20 tons",
 };
 const structure = {
-  length: 1088.14,
   axleConfi: "One Axle",
-  wheel: 134.11,
-  width: 260,
-  height: 381,
 };
 const toggleConfig = [
   {
     id: "1",
     dimensions: {
       //Without Aesthetic Side Panels
+      singleLength: 365.75,
       width: 268.22,
+      singleHeight: 201.17,
       height: 381,
       length: 722.37,
-      singleLength: 365.75,
-      singleHeight: 201.17,
       tLenght: 1088.14,
+      tWheel: 134.11,
+      tStructurew: 260,
+      hOperation: 381,
       tph: 60,
+
+
+       //with Aesthetic Side Panels
+      aSingleLength: 365.75,
+      aWidth: 268.22,
+      aSingleHeight: 201.17,
+      aHeight: 381,
+      aLength: 722.37,
+      aTlenght: 1088.14,
+      aTwheel: 134.11,
+      aTstructurew: 260,
+      aHoperation: 381,
+      aTph: 60,
     },
   },
   {
     id: "2",
     dimensions: {
+      //Without Aesthetic Side Panels
+      singleLength: 365.75,
       width: 268.22,
+      singleHeight: 201.17,
       height: 381,
       length: 1088.14,
-      tph: 120,
-    },
-  },
-  {
-    id: "3",
-    dimensions: {
-      width: 268.22,
-      height: 381,
-      length: 957.9,
-      tph: 120,
+      tLenght: 1088.14,
+      tWheel: 134.11,
+      tStructurew: 260,
+      hOperation: 381,
+      tph: 60,
+
+
+       //with Aesthetic Side Panels
+      aSingleLength: 365.75,
+      aWidth: 268.22,
+      aSingleHeight: 201.17,
+      aHeight: 381,
+      aLength: 957.90,
+      aTlenght: 1088.14,
+      aTwheel: 134.11,
+      aTstructurew: 260,
+      aHoperation: 381,
+      aTph: 60,
     },
   },
 ];
 const RBPlanos = () => {
   //logica de cambio de imagenes
-  const [activeVersion, setActiveVersion] = useState("withPanels");
+  const [panelOption, setPanelOption] = useState<"withPanels" | "withoutPanels">("withPanels");
   //tabs states
   const [activeTab, setActiveTab] = useState(2);
 
@@ -89,6 +109,13 @@ const RBPlanos = () => {
   const activeData = toggleConfig.find(
     (item) => item.id === activeTab.toString()
   );
+
+  // Helper: elige la dimensión correcta según si tiene paneles o no
+  type DimKey = keyof NonNullable<typeof activeData>["dimensions"];
+  const dim = (withKey: DimKey, withoutKey: DimKey): number =>
+    panelOption === "withPanels"
+      ? activeData?.dimensions[withKey] ?? 0
+      : activeData?.dimensions[withoutKey] ?? 0;
   //ESTADOS DE LOS DROPWDOWNS
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     C1_1: false,
@@ -227,9 +254,9 @@ const RBPlanos = () => {
 
               <div className="relative">
                 <select
-                  value={activeVersion}
+                  value={panelOption}
                   onChange={(e) =>
-                    setActiveVersion(e.target.value as "withPanels" | "withoutPanels")
+                    setPanelOption(e.target.value as "withPanels" | "withoutPanels")
                   }
                   className="w-full px-5 py-3 pr-12 rounded-full bg-white text-gray-900 text-sm font-medium appearance-none focus:outline-none focus:ring-2 focus:ring-white/50">
                   {exteriorOptions.map((option) => (
@@ -264,9 +291,9 @@ const RBPlanos = () => {
               {exteriorOptions.map((option) => (
                 <button
                   key={option.id}
-                  onClick={() => setActiveVersion(option.id)}
+                  onClick={() => setPanelOption(option.id as "withPanels" | "withoutPanels")}
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300
-                      ${activeVersion === option.id
+                      ${panelOption === option.id
                       ? "text-black bg-white border-white"
                       : "text-white bg-transparent border-white"
                     }`}
@@ -448,7 +475,7 @@ const RBPlanos = () => {
                           High-strength, reinforced structure for long-term
                           heavy-duty operation
                         </li>
-                        {activeVersion === "withPanels" ? (
+                        {panelOption === "withPanels" ? (
                           <li>Aesthetic side panels for professional image</li>
                         ) : null}
                         <li>Bolted components with anti-corrosion coating</li>
@@ -796,10 +823,10 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
+                          ? `${dim("aWidth", "width")?.toFixed(1) ?? ""
                           } cm`
                           : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
+                            (dim("aWidth", "width")) * cmToFeet
                           ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -859,10 +886,10 @@ const RBPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
+                          ? `${dim("aHeight", "height")?.toFixed(1) ?? ""
                           } cm`
                           : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
+                            (dim("aHeight", "height")) * cmToFeet
                           ).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -915,10 +942,10 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
+                          ? `${dim("aLength", "length")?.toFixed(1) ?? ""
                           } cm`
                           : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
+                            (dim("aLength", "length")) * cmToFeet
                           ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -945,7 +972,7 @@ const RBPlanos = () => {
                       </div>
                     </div>
                     <div className="h-[250px] min-w-[500px] flex justify-center items-center">
-                      {activeVersion === "withPanels" ? (
+                      {panelOption === "withPanels" ? (
                         <img
                           src={tolva1L2.src}
                           alt="Dinámica con paneles"
@@ -1007,8 +1034,8 @@ const RBPlanos = () => {
                         <h1>Length:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${singleUnit?.length?.toFixed(1) ?? ""} cm`
-                            : `${((singleUnit?.length ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aSingleLength", "singleLength")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aSingleLength", "singleLength")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1017,8 +1044,8 @@ const RBPlanos = () => {
                         <h1>Width:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${singleUnit?.width?.toFixed(1) ?? ""} cm`
-                            : `${((singleUnit?.width ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aWidth", "width")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aWidth", "width")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1027,8 +1054,8 @@ const RBPlanos = () => {
                         <h1>Height:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${singleUnit?.height?.toFixed(1) ?? ""} cm`
-                            : `${((singleUnit?.height ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aSingleHeight", "singleHeight")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aSingleHeight", "singleHeight")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1084,8 +1111,8 @@ const RBPlanos = () => {
                         <h1>Total length (including hitch):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${structure?.length?.toFixed(1) ?? ""} cm`
-                            : `${((structure?.length ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aTlenght", "tLenght")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aTlenght", "tLenght")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1098,8 +1125,8 @@ const RBPlanos = () => {
                         <h1>Fifth-wheel hitch height:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${structure?.wheel?.toFixed(1) ?? ""} cm`
-                            : `${((structure?.wheel ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aTwheel", "tWheel")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aTwheel", "tWheel")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1108,8 +1135,8 @@ const RBPlanos = () => {
                         <h1>Total width:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${structure?.width?.toFixed(1) ?? ""} cm`
-                            : `${((structure?.width ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aTstructurew", "tStructurew")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aTstructurew", "tStructurew")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1118,8 +1145,8 @@ const RBPlanos = () => {
                         <h1>Height with bins in operation:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${structure?.height?.toFixed(1) ?? ""} cm`
-                            : `${((structure?.height ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aHoperation", "hOperation")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aHoperation", "hOperation")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1305,7 +1332,7 @@ const RBPlanos = () => {
                           High-strength, reinforced structure for long-term
                           heavy-duty operation
                         </li>
-                        {activeVersion === "withPanels" ? (
+                        {panelOption === "withPanels" ? (
                           <li>Aesthetic side panels for professional image</li>
                         ) : null}
                         <li>Bolted components with anti-corrosion coating</li>
@@ -1656,10 +1683,10 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
+                          ? `${dim("aWidth", "width")?.toFixed(1) ?? ""
                           } cm`
                           : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
+                            (dim("aWidth", "width")) * cmToFeet
                           ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -1719,10 +1746,10 @@ const RBPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
+                          ? `${dim("aHeight", "height")?.toFixed(1) ?? ""
                           } cm`
                           : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
+                            (dim("aHeight", "height")) * cmToFeet
                           ).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -1775,10 +1802,10 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
+                          ? `${dim("aLength", "length")?.toFixed(1) ?? ""
                           } cm`
                           : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
+                            (dim("aLength", "length")) * cmToFeet
                           ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -1805,7 +1832,7 @@ const RBPlanos = () => {
                       </div>
                     </div>
                     <div className="h-[250px] min-w-[600px] flex justify-center items-center">
-                      {activeVersion === "withPanels" ? (
+                      {panelOption === "withPanels" ? (
                         <img
                           src={tolva2L2.src}
                           alt="Dinámica con paneles"
@@ -1868,8 +1895,8 @@ const RBPlanos = () => {
                         <h1>Length:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${singleUnit?.length?.toFixed(1) ?? ""} cm`
-                            : `${((singleUnit?.length ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aSingleLength", "singleLength")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aSingleLength", "singleLength")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1878,8 +1905,8 @@ const RBPlanos = () => {
                         <h1>Width:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${singleUnit?.width?.toFixed(1) ?? ""} cm`
-                            : `${((singleUnit?.width ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aWidth", "width")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aWidth", "width")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1888,8 +1915,8 @@ const RBPlanos = () => {
                         <h1>Height:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${singleUnit?.height?.toFixed(1) ?? ""} cm`
-                            : `${((singleUnit?.height ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aSingleHeight", "singleHeight")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aSingleHeight", "singleHeight")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1946,8 +1973,8 @@ const RBPlanos = () => {
                         <h1>Total length (including hitch):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${structure?.length?.toFixed(1) ?? ""} cm`
-                            : `${((structure?.length ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aTlenght", "tLenght")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aTlenght", "tLenght")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1960,8 +1987,8 @@ const RBPlanos = () => {
                         <h1>Fifth-wheel hitch height:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${structure?.wheel?.toFixed(1) ?? ""} cm`
-                            : `${((structure?.wheel ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aTwheel", "tWheel")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aTwheel", "tWheel")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1970,8 +1997,8 @@ const RBPlanos = () => {
                         <h1>Total width:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${structure?.width?.toFixed(1) ?? ""} cm`
-                            : `${((structure?.width ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aTstructurew", "tStructurew")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aTstructurew", "tStructurew")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
@@ -1980,8 +2007,8 @@ const RBPlanos = () => {
                         <h1>Height with bins in operation:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${structure?.height?.toFixed(1) ?? ""} cm`
-                            : `${((structure?.height ?? 0) * cmToFeet).toFixed(
+                            ? `${dim("aHoperation", "hOperation")?.toFixed(1) ?? ""} cm`
+                            : `${((dim("aHoperation", "hOperation")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
