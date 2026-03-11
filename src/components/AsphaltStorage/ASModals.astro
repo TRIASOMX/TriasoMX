@@ -5,10 +5,11 @@ import img2 from "../../assets/images/AsphaltPlant/tanqueV.webp";
 import tanque360 from "../../assets/images/AsphaltStorage/Tqe60.webp";
 import AcordeonItemCol from "../unitComponents/AcordeonItemCol";
 import ASPump from "../../assets/images/AsphaltStorage/ASPump.webp";
-import ASHoses from "../../assets/images/AsphaltStorage/ASHoses.webp"
+import ASHoses from "../../assets/images/AsphaltStorage/ASHoses.webp";
 import fiberGlass from "../../assets/images/AsphaltPlant/Aislamiento.webp";
 import ASAgitators from "../../assets/images/AsphaltPlant/agitators1.webp";
 import ASGallerySlider from "../../components/AsphaltStorage/ASGallerySlider.tsx";
+import heatExchange from "../../assets/images/AsphaltStorage/heatExchange.webp";
 import { Image } from "astro:assets";
 
 const images = [
@@ -47,8 +48,8 @@ const images = [
     description:
       "Our asphalt storage tanks feature three-inch fiberglass insulation, designed for superior performance in minimizing heat loss and maintaining consistent temperatures. This durable, energy-efficient insulation ensures your asphalt remains at the optimal temperature, ready for use. Additionally, the exterior is reinforced with a stainless steel sheet lining, providing enhanced durability and protection against harsh external conditions.",
   },
-    {
-    src: "https://placehold.co/600x400/png",
+  {
+    src: heatExchange.src,
     title: "Heat exchange coils",
     description:
       "When the injection pump is external to the tank and already installed on the drum mixer—such as when the drum is supplied by another manufacturer—many systems require a thermal oil line to keep the pump at operating temperature. For this reason, we install a set of heat transfer coils that utilize the tank’s thermal energy to heat the pump, eliminating the need for additional heating circuits.",
@@ -59,6 +60,13 @@ const images = [
 <div class="w-full flex flex-col gap-10">
   <ASGallerySlider client:load images={images} />
   
+  <div class="max-w-7xl px-8 mx-auto">
+    <Image
+      src={tanque360}
+      alt="Render of an 30,000 gallon Asphalt Storage Tank"
+    />
+  </div>
+
   <div class="w-full px-8 md:px-52">
     <h1 class="text-redBg text-2xl md:text-3xl font-bold text-center">
       Set the Standard in Asphalt Heating and Storage
