@@ -38,168 +38,90 @@ const toggleConfig = [
   {
     id: "1",
     dimensions: {
-      //Without aesthethic panels
-      lengthSingle: 365.75,
       width: 268.22,
-      heightSingle: 201.17,
-
-
-      length: 722.37,
-      wheel: 134.11,
-      tWidth: 260,
       height: 381.0,
-
-      //With aesthethic panels
-      aLengthSingle: 365.75,
-      aLidth: 268.22,
-      aheightSingle: 201.17,
-
-
-      aLength: 722.37,
-      aWheel: 134.11,
-      aTWidth: 260,
-      aHeight: 381.0,
+      length: 722.37,
+      axleConfig: "One Axle",
+      wheel: 134.11,
     },
   },
   {
     id: "2",
     dimensions: {
-      //Without aesthethic panels
-      lengthSingle: 365.75,
-      width: 268.22,
-      heightSingle: 201.17,
-
-
-      length: 1088.14,
-      wheel: 134.11,
-      tWidth: 260,
-      height: 381.0,
-
-      //With aesthethic panels
-      aLengthSingle: 365.75,
-      aLidth: 268.22,
-      aheightSingle: 201.17,
-
-
-      aLength: 957.90,
-      aWheel: 134.11,
-      aTWidth: 260,
-      aHeight: 381.0,
+      width: 299.09,
+      height: 705.37,
+      length: 2007.7,
+      drumLenght: 898.95,
+      drumHeight: 264.31,
+      transportationHeight: 424.57,
+      wheel: 140.0,
+      humidity3: 110,
+      humidity5: 150,
     },
   },
   {
     id: "3",
     dimensions: {
-      //Without aesthethic panels
-      lengthSingle: 365.75,
-      width: 268.22,
-      heightSingle: 201.17,
-
-
-      length: 1333.30,
-      wheel: 134.11,
-      tWidth: 260,
-      height: 381.0,
-
-      //With aesthethic panels
-      aLengthSingle: 365.75,
-      aLidth: 268.22,
-      aheightSingle: 201.17,
-
-
-      aLength: 1333.30,
-      aWheel: 134.11,
-      aTWidth: 260,
-      aHeight: 381.0,
+      width: 309.4,
+      height: 705.37,
+      length: 2127.37,
+      drumLenght: 1109.42,
+      drumHeight: 264.31,
+      transportationHeight: 424.57,
+      wheel: 140.0,
+      humidity3: 140,
+      humidity5: 180,
     },
   },
   {
     id: "4",
     dimensions: {
-      //Without aesthethic panels
-      lengthSingle: 365.75,
-      width: 268.22,
-      heightSingle: 201.17,
-
-
-      length: 1697.0,
-      wheel: 134.11,
-      tWidth: 260,
-      height: 381.0,
-
-      //With aesthethic panels
-      aLengthSingle: 365.75,
-      aLidth: 268.22,
-      aheightSingle: 201.17,
-
-
-      aLength: 1697.0,
-      aWheel: 134.11,
-      aTWidth: 260.0,
-      aHeight: 381.0,
+      width: 310.0,
+      height: 509.68,
+      length: 2037.62,
+      drumLenght: 1280.48,
+      drumHeight: 264.31,
+      transportationHeight: 424.57,
+      wheel: 140.0,
+      humidity3: 200,
+      humidity5: 270,
     },
   },
   {
     id: "5",
     dimensions: {
-      //Without aesthethic panels
-      lengthSingle: 365.75,
-      width: 268.22,
-      heightSingle: 201.17,
-
-
-      length: 2060.45 ,
-      wheel: 134.11,
-      tWidth: 260,
-      height: 381.0,
-
-      //With aesthethic panels
-      aLengthSingle: 365.75,
-      aLidth: 268.22,
-      aheightSingle: 201.17,
-
-
-      aLength: 2060.45,
-      aWheel: 134.11,
-      aTWidth: 260,
-      aHeight: 381.0,
+      width: 310.0,
+      height: 509.68,
+      length: 2037.62,
+      drumLenght: 1280.48,
+      drumHeight: 264.31,
+      transportationHeight: 424.57,
+      wheel: 140.0,
+      humidity3: 300,
+      humidity5: 400,
     },
   },
   {
     id: "6",
     dimensions: {
-      //Without aesthethic panels
-      lengthSingle: 365.75,
-      width: 268.22,
-      heightSingle: 201.17,
-
-
-      length: 2423.80,
-      wheel: 134.11,
-      tWidth: 260,
-      height: 381.0,
-
-      //With aesthethic panels
-      aLengthSingle: 365.75,
-      aLidth: 268.22,
-      aheightSingle: 201.17,
-
-
-      aLength: 2423.80,
-      aWheel: 134.11,
-      aTWidth: 260,
-      aHeight: 381.0,
+      width: 310.0,
+      height: 509.68,
+      length: 2044.96,
+      drumLenght: 1280.48,
+      drumHeight: 264.31,
+      transportationHeight: 424.57,
+      wheel: 140.0,
+      humidity3: 400,
+      humidity5: 540,
     },
   },
 ];
 const BinPlanosSection = () => {
   //logica de cambio de imagenes
-  const [panelOption, setPanelOption] = useState<"withPanels" | "withoutPanels">("withPanels");
+  const [activeVersion, setActiveVersion] = useState("withPanels");
   //tabs states
   const [activeTab, setActiveTab] = useState(3);
 
-  // valor de cm a pies
-  const cmToFeet = 0.0328084;
   //animation
   const boxRef = useRef<HTMLDivElement>(null);
   const nextSectionRef = useRef<HTMLDivElement>(null);
@@ -210,14 +132,6 @@ const BinPlanosSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
   const clipTargetRef = useRef<HTMLDivElement>(null);
-
-  const activeData = toggleConfig.find((item) => item.id === String(activeTab));
-
-  type DimKey = keyof NonNullable<typeof activeData>["dimensions"];
-  const dim = (withKey: DimKey, withoutKey: DimKey): number =>
-    panelOption === "withPanels"
-      ? activeData?.dimensions[withKey] ?? 0
-      : activeData?.dimensions[withoutKey] ?? 0;
 
   //SWITCH LOGIC
   const [unit, setUnit] = useState<"metric" | "imperial">("metric");
@@ -257,7 +171,7 @@ const BinPlanosSection = () => {
   // Efecto para actualizar al cargar (opcional)
   useEffect(() => {
     updateElements(unit);
-  }, []);
+  }, [unit, activeTab, activeVersion]);
 
   const exteriorOptions = [
     {
@@ -270,15 +184,6 @@ const BinPlanosSection = () => {
     },
   ];
 
-  const tabToVersion: Record<number, string> = {
-    1: "1",
-    2: "2",
-    3: "3",
-    4: "4",
-    5: "5",
-    6: "6"
-  };
-
   const modelOptions = [
     { id: 1, label: "1 Bin" },
     { id: 2, label: "2 Bins" },
@@ -287,11 +192,6 @@ const BinPlanosSection = () => {
     { id: 5, label: "5 Bins" },
     { id: 6, label: "6 Bins" },
   ];
-
-  const handleTabChange = (tabId: number) => {
-    setActiveTab(tabId);
-  };
-
 
   useClipPathScrollTrigger({
     enabled: activeTab === 3,
@@ -396,9 +296,9 @@ const BinPlanosSection = () => {
 
               <div className="relative">
                 <select
-                  value={panelOption}
+                  value={activeVersion}
                   onChange={(e) =>
-                    setPanelOption(e.target.value as "withPanels" | "withoutPanels")
+                    setActiveVersion(e.target.value as "withPanels" | "withoutPanels")
                   }
                   className="w-full px-5 py-3 pr-12 rounded-full bg-white text-gray-900 text-sm font-medium appearance-none focus:outline-none focus:ring-2 focus:ring-white/50">
                   {exteriorOptions.map((option) => (
@@ -433,9 +333,9 @@ const BinPlanosSection = () => {
               {exteriorOptions.map((option) => (
                 <button
                   key={option.id}
-                  onClick={() => setPanelOption(option.id as "withPanels" | "withoutPanels")}
+                  onClick={() => setActiveVersion(option.id)}
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300
-                      ${panelOption === option.id
+                      ${activeVersion === option.id
                       ? "text-black bg-white border-white"
                       : "text-white bg-transparent border-white"
                     }`}
@@ -454,7 +354,7 @@ const BinPlanosSection = () => {
               <div className="relative">
                 <select
                   value={activeTab}
-                  onChange={(e) => handleTabChange(Number(e.target.value))}
+                  onChange={(e) => setActiveTab(Number(e.target.value))}
                   className="w-full px-5 py-3 pr-12 rounded-full bg-white text-gray-900 text-sm font-medium
                  appearance-none focus:outline-none focus:ring-2 focus:ring-white/50"
                 >
@@ -491,7 +391,7 @@ const BinPlanosSection = () => {
               {modelOptions.map((option) => (
                 <button
                   key={option.id}
-                  onClick={() => handleTabChange(option.id)}
+                  onClick={() => setActiveTab(option.id)}
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300 w-[150px]
                     ${activeTab === option.id
                       ? "text-gray-900 bg-white border-white"
@@ -619,7 +519,7 @@ const BinPlanosSection = () => {
                           High-strength, reinforced structure for long-term
                           heavy-duty operation
                         </li>
-                        {panelOption === "withPanels" ? (
+                        {activeVersion === "withPanels" ? (
                           <li>Aesthetic side panels for professional image</li>
                         ) : null}
                         <li>Bolted components with anti-corrosion coating</li>
@@ -966,15 +866,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="8.8 ft"
                         data-metric="268.22 cm"
+                        data-imperial="8.8 ft"
                       >
-                        {unit === "metric"
-                          ? `${dim("aLidth", "width").toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (dim("aLidth", "width")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                        268.22 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1033,15 +928,10 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        data-imperial="12.75 ft"
                         data-metric="381 cm"
+                        data-imperial="12.75 ft"
                       >
-                        {unit === "metric"
-                          ? `${dim("aHeight", "height").toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (dim("aHeight", "height")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                        381 cm
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1093,15 +983,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="23.7 ft"
                         data-metric="722.37 cm"
+                        data-imperial="23.7 ft"
                       >
-                        {unit === "metric"
-                          ? `${dim("aLength", "length").toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (dim("aLength", "length")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                        722.37 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1127,7 +1012,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="h-[300px] min-w-[644px] flex justify-center items-center">
-                      {panelOption === "withPanels" ? (
+                      {activeVersion === "withPanels" ? (
                         <img
                           src={tolva1L2.src}
                           alt="Dinámica con paneles"
@@ -1185,40 +1070,22 @@ const BinPlanosSection = () => {
                         : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
-
-
-
                       <div className="flex justify-between">
                         <h1>Length:</h1>
-                        <p data-imperial="12.0 ft" data-metric="365.75 cm ">
-                          {unit === "metric"
-                            ? `${dim("aLengthSingle", "lengthSingle").toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (dim("aLengthSingle", "lengthSingle")) * cmToFeet
-                            ).toFixed(1)} ft`}
+                        <p data-metric="365.75 cm" data-imperial="12.0 ft">
+                          365.75 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Width:</h1>
-                        <p data-imperial="8.8 ft" data-metric="268.22 cm">
-                          {unit === "metric"
-                            ? `${dim("aLidth", "width").toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (dim("aLidth", "width")) * cmToFeet
-                            ).toFixed(1)} ft`}
+                        <p data-metric="268.22 cm" data-imperial="8.8 ft">
+                          268.22 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height:</h1>
-                        <p data-imperial="6.6 ft " data-metric="201.17 cm">
-                          {unit === "metric"
-                            ? `${dim("aheightSingle", "heightSingle").toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (dim("aheightSingle", "heightSingle")) * cmToFeet
-                            ).toFixed(1)} ft`}
+                        <p data-metric="201.17 cm" data-imperial="6.6 ft">
+                          201.17 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1270,13 +1137,8 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>Total length (including hitch):</h1>
-                        <p data-imperial="23.27 ft" data-metric="1088.14 cm">
-                          {unit === "metric"
-                            ? `${dim("aLength", "length").toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (dim("aLength", "length")) * cmToFeet
-                            ).toFixed(1)} ft`}
+                        <p data-metric="1088.14 cm" data-imperial="23.27 ft">
+                          1088.14 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1285,35 +1147,20 @@ const BinPlanosSection = () => {
                       </div>
                       <div className="flex justify-between">
                         <h1>Fifth-wheel hitch height:</h1>
-                        <p data-imperial="4.4 ft" data-metric="134.11 cm">
-                          {unit === "metric"
-                            ? `${dim("aWheel", "wheel").toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (dim("aWheel", "wheel")) * cmToFeet
-                            ).toFixed(1)} ft`}
+                        <p data-metric="134.11 cm" data-imperial="4.4 ft">
+                          134.11 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Total width:</h1>
-                        <p data-imperial="8.5 ft " data-metric="260.00 cm">
-                          {unit === "metric"
-                            ? `${dim("aTWidth", "tWidth").toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (dim("aTWidth", "tWidth")) * cmToFeet
-                            ).toFixed(1)} ft`}
+                        <p data-metric="260.00 cm" data-imperial="8.5 ft">
+                          260.00 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height with bins in operation:</h1>
-                        <p data-imperial="381.00 cm" data-metric="12.5 ft">
-                          {unit === "metric"
-                            ? `${dim("aHeight", "height").toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (dim("aHeight", "height")) * cmToFeet
-                            ).toFixed(1)} ft`}
+                        <p data-metric="381.00 cm" data-imperial="12.5 ft">
+                          381.00 cm
                         </p>
                       </div>
                     </div>
@@ -1493,7 +1340,7 @@ const BinPlanosSection = () => {
                           High-strength, reinforced structure for long-term
                           heavy-duty operation
                         </li>
-                        {panelOption === "withPanels" ? (
+                        {activeVersion === "withPanels" ? (
                           <li>Aesthetic side panels for professional image</li>
                         ) : null}
                         <li>Bolted components with anti-corrosion coating</li>
@@ -1840,10 +1687,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="268.22 cm"
-                        data-metric="8.8 ft"
+                        data-metric="268.22 cm"
+                        data-imperial="8.8 ft"
                       >
-                        8.8 ft
+                        268.22 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1869,7 +1716,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="min-w-[272px] h-[300px] flex items-center justify-center">
-                      {panelOption === "withPanels" ? (
+                      {activeVersion === "withPanels" ? (
                         <img
                           src={tolva1F.src}
                           alt="Dinámica con paneles"
@@ -1910,10 +1757,10 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        data-imperial="381 cm"
-                        data-metric="12.75 ft"
+                        data-metric="381 cm"
+                        data-imperial="12.75 ft"
                       >
-                        12.75 ft
+                        381 cm
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1965,10 +1812,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="722.37 cm"
-                        data-metric="23.7 ft"
+                        data-metric="722.37 cm"
+                        data-imperial="23.7 ft"
                       >
-                        23.7 ft
+                        722.37 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1994,7 +1841,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="h-[300px] min-w-[810px] flex justify-center items-center">
-                      {panelOption === "withPanels" ? (
+                      {activeVersion === "withPanels" ? (
                         <img
                           src={tolva2L2.src}
                           alt="Dinámica con paneles"
@@ -2054,20 +1901,20 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>Length:</h1>
-                        <p data-imperial="365.75 cm" data-metric="12.0 ft">
-                          12.0 ft
+                        <p data-metric="365.75 cm" data-imperial="12.0 ft">
+                          365.75 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Width:</h1>
-                        <p data-imperial="268.22 cm" data-metric="8.8 ft">
-                          8.8 ft
+                        <p data-metric="268.22 cm" data-imperial="8.8 ft">
+                          268.22 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height:</h1>
-                        <p data-imperial="201.17 cm" data-metric="6.6 ft">
-                          6.6 ft
+                        <p data-metric="201.17 cm" data-imperial="6.6 ft">
+                          201.17 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2119,8 +1966,8 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>Total length (including hitch):</h1>
-                        <p data-imperial="1088.14 cm" data-metric="23.27 ft">
-                          23.27 ft
+                        <p data-metric="1088.14 cm" data-imperial="23.27 ft">
+                          1088.14 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2129,20 +1976,20 @@ const BinPlanosSection = () => {
                       </div>
                       <div className="flex justify-between">
                         <h1>Fifth-wheel hitch height:</h1>
-                        <p data-imperial="134.11 cm" data-metric="4.4 ft">
-                          4.4 ft
+                        <p data-metric="134.11 cm" data-imperial="4.4 ft">
+                          134.11 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Total width:</h1>
-                        <p data-imperial="260.00 cm" data-metric="8.5 ft">
-                          8.5 ft
+                        <p data-metric="260.00 cm" data-imperial="8.5 ft">
+                          260.00 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height with bins in operation:</h1>
-                        <p data-imperial="381.00 cm" data-metric="12.5 ft">
-                          12.5 ft
+                        <p data-metric="381.00 cm" data-imperial="12.5 ft">
+                          381.00 cm
                         </p>
                       </div>
                     </div>
@@ -2328,7 +2175,7 @@ const BinPlanosSection = () => {
                           High-strength, reinforced structure for long-term
                           heavy-duty operation
                         </li>
-                        {panelOption === "withPanels" ? (
+                        {activeVersion === "withPanels" ? (
                           <li>Aesthetic side panels for professional image</li>
                         ) : null}
                         <li>Bolted components with anti-corrosion coating</li>
@@ -2678,10 +2525,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="268.22 cm"
-                        data-metric="8.8 ft"
+                        data-metric="268.22 cm"
+                        data-imperial="8.8 ft"
                       >
-                        8.8 ft
+                        268.22 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2740,10 +2587,10 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        data-imperial="381 cm"
-                        data-metric="12.75 ft"
+                        data-metric="381 cm"
+                        data-imperial="12.75 ft"
                       >
-                        12.75 ft
+                        381 cm
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -2795,10 +2642,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="722.37 cm"
-                        data-metric="23.7 ft"
+                        data-metric="722.37 cm"
+                        data-imperial="23.7 ft"
                       >
-                        23.7 ft
+                        722.37 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2824,7 +2671,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="h-[250px] min-w-[900px] flex justify-center items-center">
-                      {panelOption === "withPanels" ? (
+                      {activeVersion === "withPanels" ? (
                         <img
                           src={tolva3L2.src}
                           alt="Dinámica con paneles"
@@ -2885,20 +2732,20 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>Length:</h1>
-                        <p data-imperial="365.75 cm" data-metric="12.0 ft">
-                          12.0 ft
+                        <p data-metric="365.75 cm" data-imperial="12.0 ft">
+                          365.75 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Width:</h1>
-                        <p data-imperial="268.22 cm" data-metric="8.8 ft">
-                          8.8 ft
+                        <p data-metric="268.22 cm" data-imperial="8.8 ft">
+                          268.22 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height:</h1>
-                        <p data-imperial="201.17 cm" data-metric="6.6 ft">
-                          6.6 ft
+                        <p data-metric="201.17 cm" data-imperial="6.6 ft">
+                          201.17 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2951,8 +2798,8 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>Total length (including hitch):</h1>
-                        <p data-imperial="1088.14 cm" data-metric="23.27 ft">
-                          23.27 ft
+                        <p data-metric="1088.14 cm" data-imperial="23.27 ft">
+                          1088.14 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2961,20 +2808,20 @@ const BinPlanosSection = () => {
                       </div>
                       <div className="flex justify-between">
                         <h1>Fifth-wheel hitch height:</h1>
-                        <p data-imperial="134.11 cm" data-metric="4.4 ft">
-                          4.4 ft
+                        <p data-metric="134.11 cm" data-imperial="4.4 ft">
+                          134.11 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Total width:</h1>
-                        <p data-imperial="260.00 cm" data-metric="8.5 ft">
-                          8.5 ft
+                        <p data-metric="260.00 cm" data-imperial="8.5 ft">
+                          260.00 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height with bins in operation:</h1>
-                        <p data-imperial="381.00 cm" data-metric="12.5 ft">
-                          12.5 ft
+                        <p data-metric="381.00 cm" data-imperial="12.5 ft">
+                          381.00 cm
                         </p>
                       </div>
                     </div>
@@ -3155,7 +3002,7 @@ const BinPlanosSection = () => {
                           High-strength, reinforced structure for long-term
                           heavy-duty operation
                         </li>
-                        {panelOption === "withPanels" ? (
+                        {activeVersion === "withPanels" ? (
                           <li>Aesthetic side panels for professional image</li>
                         ) : null}
                         <li>Bolted components with anti-corrosion coating</li>
@@ -3502,10 +3349,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="268.22 cm"
-                        data-metric="8.8 ft"
+                        data-metric="268.22 cm"
+                        data-imperial="8.8 ft"
                       >
-                        8.8 ft
+                        268.22 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -3531,7 +3378,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="min-w-[150px] h-[200px] flex items-center justify-center">
-                      {panelOption === "withPanels" ? (
+                      {activeVersion === "withPanels" ? (
                         <img
                           src={tolva1F.src}
                           alt="Dinámica con paneles"
@@ -3572,10 +3419,10 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        data-imperial="381 cm"
-                        data-metric="12.75 ft"
+                        data-metric="381 cm"
+                        data-imperial="12.75 ft"
                       >
-                        12.75 ft
+                        381 cm
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -3627,10 +3474,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="722.37 cm"
-                        data-metric="23.7 ft"
+                        data-metric="722.37 cm"
+                        data-imperial="23.7 ft"
                       >
-                        23.7 ft
+                        722.37 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -3656,7 +3503,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="h-[200px] min-w-[800px] flex justify-center items-center">
-                      {panelOption === "withPanels" ? (
+                      {activeVersion === "withPanels" ? (
                         <img
                           src={tolva4L2.src}
                           alt="Dinámica con paneles"
@@ -3716,20 +3563,20 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>Length:</h1>
-                        <p data-imperial="365.75 cm" data-metric="12.0 ft">
-                          12.0 ft
+                        <p data-metric="365.75 cm" data-imperial="12.0 ft">
+                          365.75 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Width:</h1>
-                        <p data-imperial="268.22 cm" data-metric="8.8 ft">
-                          8.8 ft
+                        <p data-metric="268.22 cm" data-imperial="8.8 ft">
+                          268.22 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height:</h1>
-                        <p data-imperial="201.17 cm" data-metric="6.6 ft">
-                          6.6 ft
+                        <p data-metric="201.17 cm" data-imperial="6.6 ft">
+                          201.17 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3781,8 +3628,8 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>Total length (including hitch):</h1>
-                        <p data-imperial="1088.14 cm" data-metric="23.27 ft">
-                          23.27 ft
+                        <p data-metric="1088.14 cm" data-imperial="23.27 ft">
+                          1088.14 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3791,20 +3638,20 @@ const BinPlanosSection = () => {
                       </div>
                       <div className="flex justify-between">
                         <h1>Fifth-wheel hitch height:</h1>
-                        <p data-imperial="134.11 cm" data-metric="4.4 ft">
-                          4.4 ft
+                        <p data-metric="134.11 cm" data-imperial="4.4 ft">
+                          134.11 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Total width:</h1>
-                        <p data-imperial="260.00 cm" data-metric="8.5 ft">
-                          8.5 ft
+                        <p data-metric="260.00 cm" data-imperial="8.5 ft">
+                          260.00 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height with bins in operation:</h1>
-                        <p data-imperial="381.00 cm" data-metric="12.5 ft">
-                          12.5 ft
+                        <p data-metric="381.00 cm" data-imperial="12.5 ft">
+                          381.00 cm
                         </p>
                       </div>
                     </div>
@@ -3984,7 +3831,7 @@ const BinPlanosSection = () => {
                           High-strength, reinforced structure for long-term
                           heavy-duty operation
                         </li>
-                        {panelOption === "withPanels" ? (
+                        {activeVersion === "withPanels" ? (
                           <li>Aesthetic side panels for professional image</li>
                         ) : null}
                         <li>Bolted components with anti-corrosion coating</li>
@@ -4331,10 +4178,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="268.22 cm"
-                        data-metric="8.8 ft"
+                        data-metric="268.22 cm"
+                        data-imperial="8.8 ft"
                       >
-                        8.8 ft
+                        268.22 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -4393,10 +4240,10 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        data-imperial="381 cm"
-                        data-metric="12.75 ft"
+                        data-metric="381 cm"
+                        data-imperial="12.75 ft"
                       >
-                        12.75 ft
+                        381 cm
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -4448,10 +4295,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="722.37 cm"
-                        data-metric="23.7 ft"
+                        data-metric="722.37 cm"
+                        data-imperial="23.7 ft"
                       >
-                        23.7 ft
+                        722.37 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -4477,7 +4324,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="h-[175px] min-w-[900px] flex justify-center items-center">
-                      {panelOption === "withPanels" ? (
+                      {activeVersion === "withPanels" ? (
                         <img
                           src={tolva5L2.src}
                           alt="Dinámica con paneles"
@@ -4537,20 +4384,20 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>Length:</h1>
-                        <p data-imperial="365.75 cm" data-metric="12.0 ft">
-                          12.0 ft
+                        <p data-metric="365.75 cm" data-imperial="12.0 ft">
+                          365.75 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Width:</h1>
-                        <p data-imperial="268.22 cm" data-metric="8.8 ft">
-                          8.8 ft
+                        <p data-metric="268.22 cm" data-imperial="8.8 ft">
+                          268.22 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height:</h1>
-                        <p data-imperial="201.17 cm" data-metric="6.6 ft">
-                          6.6 ft
+                        <p data-metric="201.17 cm" data-imperial="6.6 ft">
+                          201.17 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -4602,8 +4449,8 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>Total length (including hitch):</h1>
-                        <p data-imperial="1088.14 cm" data-metric="23.27 ft">
-                          23.27 ft
+                        <p data-metric="1088.14 cm" data-imperial="23.27 ft">
+                          1088.14 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -4612,20 +4459,20 @@ const BinPlanosSection = () => {
                       </div>
                       <div className="flex justify-between">
                         <h1>Fifth-wheel hitch height:</h1>
-                        <p data-imperial="134.11 cm" data-metric="4.4 ft">
-                          4.4 ft
+                        <p data-metric="134.11 cm" data-imperial="4.4 ft">
+                          134.11 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Total width:</h1>
-                        <p data-imperial="260.00 cm" data-metric="8.5 ft">
-                          8.5 ft
+                        <p data-metric="260.00 cm" data-imperial="8.5 ft">
+                          260.00 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height with bins in operation:</h1>
-                        <p data-imperial="381.00 cm" data-metric="12.5 ft">
-                          12.5 ft
+                        <p data-metric="381.00 cm" data-imperial="12.5 ft">
+                          381.00 cm
                         </p>
                       </div>
                     </div>
@@ -4805,7 +4652,7 @@ const BinPlanosSection = () => {
                           High-strength, reinforced structure for long-term
                           heavy-duty operation
                         </li>
-                        {panelOption === "withPanels" ? (
+                        {activeVersion === "withPanels" ? (
                           <li>Aesthetic side panels for professional image</li>
                         ) : null}
                         <li>Bolted components with anti-corrosion coating</li>
@@ -5152,10 +4999,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="268.22 cm"
-                        data-metric="8.8 ft"
+                        data-metric="268.22 cm"
+                        data-imperial="8.8 ft"
                       >
-                        8.8 ft
+                        268.22 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -5214,10 +5061,10 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        data-imperial="381 cm"
-                        data-metric="12.75 ft"
+                        data-metric="381 cm"
+                        data-imperial="12.75 ft"
                       >
-                        12.75 ft
+                        381 cm
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -5269,10 +5116,10 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        data-imperial="722.37 cm"
-                        data-metric="23.7 ft"
+                        data-metric="722.37 cm"
+                        data-imperial="23.7 ft"
                       >
-                        23.7 ft
+                        722.37 cm
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -5298,7 +5145,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="h-[155px] min-w-[900px] flex justify-center items-center">
-                      {panelOption === "withPanels" ? (
+                      {activeVersion === "withPanels" ? (
                         <img
                           src={tolva6L2.src}
                           alt="Dinámica con paneles"
@@ -5358,20 +5205,20 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>Length:</h1>
-                        <p data-imperial="365.75 cm" data-metric="12.0 ft">
-                          12.0 ft
+                        <p data-metric="365.75 cm" data-imperial="12.0 ft">
+                          365.75 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Width:</h1>
-                        <p data-imperial="268.22 cm" data-metric="8.8 ft">
-                          8.8 ft
+                        <p data-metric="268.22 cm" data-imperial="8.8 ft">
+                          268.22 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height:</h1>
-                        <p data-imperial="201.17 cm" data-metric="6.6 ft">
-                          6.6 ft
+                        <p data-metric="201.17 cm" data-imperial="6.6 ft">
+                          201.17 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -5423,8 +5270,8 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>Total length (including hitch):</h1>
-                        <p data-imperial="1088.14 cm" data-metric="23.27 ft">
-                          23.27 ft
+                        <p data-metric="1088.14 cm" data-imperial="23.27 ft">
+                          1088.14 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -5433,20 +5280,20 @@ const BinPlanosSection = () => {
                       </div>
                       <div className="flex justify-between">
                         <h1>Fifth-wheel hitch height:</h1>
-                        <p data-imperial="134.11 cm" data-metric="4.4 ft">
-                          4.4 ft
+                        <p data-metric="134.11 cm" data-imperial="4.4 ft">
+                          134.11 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Total width:</h1>
-                        <p data-imperial="260.00 cm" data-metric="8.5 ft">
-                          8.5 ft
+                        <p data-metric="260.00 cm" data-imperial="8.5 ft">
+                          260.00 cm
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Height with bins in operation:</h1>
-                        <p data-imperial="381.00 cm" data-metric="12.5 ft">
-                          12.5 ft
+                        <p data-metric="381.00 cm" data-imperial="12.5 ft">
+                          381.00 cm
                         </p>
                       </div>
                     </div>
