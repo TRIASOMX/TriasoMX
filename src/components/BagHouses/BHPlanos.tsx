@@ -12,9 +12,9 @@ const toggleConfig = [
     {
         id: "12",
         dimensions: {
-            width: 162,
-            height: 236,
-            length: 310,
+            width: 277,
+            height: 420,
+            length: 914,
             tanklenght: 704,
             tangheight: 274.1,
             capacity: 45000,
@@ -27,9 +27,9 @@ const toggleConfig = [
     {
         id: "16",
         dimensions: {
-            width: 344.45,
-            height: 424.34,
-            length: 1498.75,
+            width: 277,
+            height: 420,
+            length: 1000,
             tanklenght: 921,
             tangheight: 274.1,
             capacity: 60000,
@@ -42,9 +42,9 @@ const toggleConfig = [
     {
         id: "20",
         dimensions: {
-            width: 358.85,
-            height: 424.34,
-            length: 1726.26,
+            width: 277,
+            height: 420,
+            length: 1090,
             tanklenght: 1149,
             tangheight: 274.1,
             capacity: 45000,
@@ -57,9 +57,9 @@ const toggleConfig = [
     {
         id: "24",
         dimensions: {
-            width: 371.47,
-            height: 424.34,
-            length: 2000.38,
+            width: 277,
+            height: 420,
+            length: 1262,
             tanklenght: 1423.56,
             tangheight: 274.1,
             capacity: 100000,
@@ -72,9 +72,9 @@ const toggleConfig = [
     {
         id: "30",
         dimensions: {
-            width: 384.09,
-            height: 424.34,
-            length: 2274.51,
+            width: 277,
+            height: 460,
+            length: 1310,
             tanklenght: 1697.51,
             tangheight: 274.1,
             capacity: 120000,
@@ -87,9 +87,9 @@ const toggleConfig = [
     {
         id: "31",
         dimensions: {
-            width: 384.09,
-            height: 424.34,
-            length: 2274.51,
+            width: 277,
+            height: 460,
+            length: 1570,
             tanklenght: 1697.51,
             tangheight: 274.1,
             capacity: 120000,
@@ -102,9 +102,9 @@ const toggleConfig = [
     {
         id: "32",
         dimensions: {
-            width: 384.09,
-            height: 424.34,
-            length: 2274.51,
+            width: 277,
+            height: 460,
+            length: 1800,
             tanklenght: 1697.51,
             tangheight: 274.1,
             capacity: 120000,
