@@ -1,6 +1,6 @@
 export const menuItems = [
   {
-    title: "PRODUCTS",
+    title: "PRODUCTOS",
     url: "/",
     children: [
       {
@@ -120,7 +120,7 @@ export const menuItems = [
     ]
   },
   {
-    title: "SERVICE",
+    title: "SERVICIO",
     url: "/",
     children: [
       {
@@ -142,7 +142,7 @@ export const menuItems = [
     ]
   },
   {
-    title: "ABOUT",
+    title: "ACERCA DE",
     url: "/",
     children: [
       {
@@ -204,7 +204,7 @@ export const menuItems = [
     ]
   },
   {
-    title: "AUTOMATION",
+    title: "AUTOMATIZACIÓN",
     url: "/",
     children: [
       {
@@ -218,7 +218,7 @@ export const menuItems = [
   //   url : "/",
   // },
   {
-    title: "CONTACT",
+    title: "CONTACTO",
     url: "/Contact",
   }
 ]

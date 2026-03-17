@@ -12,57 +12,84 @@ import TotalAirSection from "./LandinPage/TotalAirSection.astro";
 import ItemsSlider from "./LandinPage/ItemsSlider";
 import TriasoOSSection from "./LandinPage/TriasoOSSection.astro";
 import BannerSection from "./ContactPage/BannerSection.astro";
+import StackedInfoCards from "./unitComponents/StackedInfoCards.astro";
 
 const images1 = [
   {
     src: "/Gallery/5.svg",
-    title: "Economic long-lasting life",
+    title: "Vida útil prolongada y económica",
     texto:
-      "Cost-effective, long-lasting durability, crafted with premium materials and strict quality control.",
+      "Rentable, de gran durabilidad, fabricado con materiales de primera calidad y sometido a un estricto control de calidad.",
   },
   {
     src: "/Gallery/6.svg",
-    title: "Low maintenance",
-    texto: "Minimal upkeep required, ensuring long-term reliability.",
+    title: "Requiere poco mantenimiento",
+    texto:
+      "Requiere un mantenimiento mínimo, lo que garantiza su fiabilidad a largo plazo.",
   },
   {
     src: "/Gallery/7.svg",
-    title: "Construction regulations",
+    title: "Normativa de construcción",
     texto:
-      "Compliant with all relevant U.S. construction standards and regulations.",
+      "Cumple con todas las normas y reglamentos de construcción pertinentes de los Estados Unidos Mexicanos.",
   },
   {
     src: "/Gallery/8.svg",
-    title: "Cost-Effective",
+    title: "Rentable",
     texto:
-      "Reduce downtime, relocation costs, and maintenance with efficient design and reliable performance.",
+      "Reduzca el tiempo de inactividad, los costos de reubicación y el mantenimiento gracias a un diseño eficiente y un rendimiento confiable.",
   },
   {
     src: "/Gallery/9.svg",
-    title: "High productivity",
+    title: "Alta productividad",
     texto:
-      "Utilization of the maximum capacity of its components and balance between them to avoid bottlenecks and achieve high efficiency.",
+      "Aprovechamiento de la capacidad máxima de sus componentes y equilibrio entre ellos para evitar cuellos de botella y lograr una alta eficiencia.",
   },
   {
     src: "/Gallery/10.svg",
-    title: "Highly portable",
+    title: "Muy fácil de transportar",
     texto:
-      "Easy to transport and relocate, saving time and costs, ideal for both multiple job sites and stationary operations",
+      "Fácil de transportar y reubicar, lo que permite ahorrar tiempo y costes; ideal tanto para obras múltiples como para operaciones fijas",
   },
   {
     src: "/Gallery/11.svg",
-    title: "Improved Company Image",
+    title: "Mejora de la imagen de la empresa",
     texto:
-      "Industrial aesthetics enhance the visual appeal of your operations.",
+      "La estética industrial realza el atractivo visual de sus instalaciones.",
   },
   {
     src: "/Gallery/12.svg",
-    title: "Customizable",
+    title: "Personalizable",
     texto:
-      "We tailor features to align with your specific project requirements and operational goals.",
+      "Adaptamos las funciones para que se ajusten a los requisitos específicos de su proyecto y a sus objetivos operativos.",
   },
+];
 
-  // agrega hasta 16 o más imágenes
+const cards = [
+  {
+    title: "Atención técnica inmediata de fábrica",
+    text: "",
+    bg: "#14427c",
+    textColor: "#ffffff",
+  },
+  {
+    title: "Técnicos de fabrica para asistencia inmediata.",
+    text: "",
+    bg: "#595959",
+    textColor: "#ffffff",
+  },
+  {
+    title: "Refacciones de entrega inmediata",
+    text: "",
+    bg: "#ca1c1c",
+    textColor: "#ffffff",
+  },
+  {
+    title: "Soporte postventa de fábrica continuo, cercano e inmediato.",
+    text: "",
+    bg: "#00840d",
+    textColor: "#ffffff",
+  },
 ];
 ---
 
@@ -72,7 +99,18 @@ const images1 = [
   <InfoSection />
   <ItemsSlider client:idle images={images1} />
   <TriasoOSSection />
-  <BannerSection />
+
+  <div class="w-full bg-[#ca1c1c] my-10">
+    <div class="flex justify-center items-center py-10">
+        <h1 class="font-bold text-white text-lg lg:text-2xl md:text-2xl">¡Apostemos por México!</h1>
+    </div>
+  </div>
+
+  <StackedInfoCards
+    cards={cards}
+    mainTitle="Con nosotros, al ser de México usted tiene muchas ventajas, entre otras: "
+    mainDescription="Cuidando así lo que más importa, menor tiempo de inactividad de su equipo."
+  />
 
   <!-- <AsphaltSection />
 
