@@ -1,6 +1,8 @@
 ---
 import asphaltPlant from "../../assets/images/asphaltPlant.webp";
 import rockCrusher from "../../assets/images/rockCrush.webp";
+import landing1 from "../../assets/images/lading1.webp";
+import landing2 from "../../assets/images/landing2.webp";
 import Image from "astro/components/Image.astro";
 import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 import LearnBtn from "../unitComponents/LearnBtn.astro";
@@ -9,7 +11,7 @@ import HeroSlider from "../unitComponents/HeroSlider.tsx";
 const Cards = [
     {
         title: "About Us",
-        href: "/",
+        href: "/AboutUs",
         image: "/Gallery/oilsetup.webp",
     },
     {
@@ -19,7 +21,7 @@ const Cards = [
     },
     {
         title: "100% Manufacturers",
-        href: "/",
+        href: "/Manufacture",
         image: "/manufacture.webp",
     },
     {
@@ -29,12 +31,12 @@ const Cards = [
     },
     {
         title: "We Care About the Details",
-        href: "/CustomDesign",
+        href: "/Advantages",
         image: "/consola1.webp",
     },
     {
         title: "Communication is key",
-        href: "/CustomDesign",
+        href: "/Delivery",
         image: "/coms.webp",
     },
 ];
@@ -42,26 +44,42 @@ const Cards = [
 
 <div class="w-full flex flex-col items-center justify-center text-xl mt-10">
     <div class="relative w-full bg-black overflow-hidden mt-5">
+        <img
+            src="/Gallery/customdes.webp"
+            alt="Custom design equipment"
+            class="absolute inset-0 w-full h-full object-cover"
+            fetchpriority="high"
+            decoding="async"
+        />
+
         <video
             class="absolute inset-0 w-full h-full object-cover"
             playsinline
             autoplay
             muted
             loop
-            poster="/Gallery/customdes.webp"
-            preload="metadata"
+            preload="none"
+            aria-hidden="true"
         >
             <source src="/Videos/Webm/HeroVideo.webm" type="video/webm" />
         </video>
 
-        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent from-50% to-black to-85%"></div>
 
         <div
             class="relative z-10 max-w-7xl mx-auto h-full flex flex-col justify-evenly px-8 lg:px-0 pb-10 gap-10"
         >
-            <div class="flex flex-col items-end text-right max-w-xl ml-auto mt-5">
-                <h1 class="uppercase text-white text-3xl md:text-5xl font-bold">
+            <div class="flex flex-col items-end text-right ml-auto mt-12">
+                <h1
+                    class="uppercase text-white text-3xl lg:text-5xl font-bold hidden lg:flex md:flex"
+                >
                     Manufactured to last
+                </h1>
+
+                <h1
+                    class="uppercase text-white text-3xl lg:text-5xl font-bold flex lg:hidden md:hidden"
+                >
+                    Manufactured <br /> to last
                 </h1>
 
                 <div class="space-y-4 mt-4">
@@ -76,18 +94,20 @@ const Cards = [
                 </div>
             </div>
             <div class="hidden lg:flex md:flex">
-                <HeroSlider slides={Cards} client:only />
+                <HeroSlider slides={Cards} client:idle />
             </div>
         </div>
     </div>
 
-    <div class="relative flex lg:hidden md:hidden w-full overflow-hidden max-w-7xl mx-auto px-8 py-10 ">
-        <HeroSlider slides={Cards} client:only />
+    <div
+        class="relative flex lg:hidden md:hidden w-full overflow-hidden max-w-7xl mx-auto px-8 py-10"
+    >
+        <HeroSlider slides={Cards} client:idle />
     </div>
 </div>
 
 <div
-    class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-7 py-10 items-center justify-center"
+    class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-7 py-24 items-center justify-center"
 >
     <!-- Primer item -->
 
@@ -102,7 +122,9 @@ const Cards = [
             class="h-[200px] md:h-[300px] w-full flex justify-center transition-transform duration-300 ease-out hover:scale-[1.03]"
         >
             <Image
-                src={asphaltPlant}
+                src={landing1}
+                width={800}
+                height={600}
                 class="h-full object-contain w-full p-2"
                 alt="Asphalt Plant"
                 widths={[400, 800, 1200]}
@@ -115,16 +137,18 @@ const Cards = [
     <!-- Segundo item -->
     <div class="flex flex-col items-center">
         <a
-            href="https://www.triasous.com/rock-crushers.html"
+            href="/#"
             class="font-bold text-lg md:text-xl text-center text-grisT my-2 hover:text-blueMain"
             >ROCK CRUSHERS</a
         >
         <a
-            href="https://www.triasous.com/rock-crushers.html"
+            href="/#"
             class="h-[200px] md:h-[300px] w-full flex justify-center transition-transform duration-300 ease-out hover:scale-[1.03]"
         >
             <Image
-                src={rockCrusher}
+                src={landing2}
+                width={800}
+                height={600}
                 class="h-full object-contain w-full p-2"
                 alt="Asphalt Plant"
                 widths={[400, 800, 1200]}
@@ -135,48 +159,47 @@ const Cards = [
     </div>
 </div>
 <!-- Banner section -->
-<div class="flex flex-col md:grid md:grid-cols-4 md:h-full w-full">
-    <div
-        class="bg-blueMain col-span-2 md:col-span-1 w-full h-auto md:h-full flex flex-col justify-center items-center gap-4 p-4"
-    >
-        <!-- Botón 1 -->
-        <Whatsbtn />
+<div class="flex flex-col lg:flex-row bg-gradient-to-b from-blueMain from-50% to-blueSecondary to-50% lg:bg-gradient-to-r lg:from-blueMain lg:from-50% lg:to-blueSecondary lg:to-50%">
+    <div class="flex flex-col max-w-7xl mx-auto py-14 lg:flex-row">
+        <div class="w-full flex flex-col justify-center items-center gap-4 lg:mr-56">
+            <!-- Botón 1 -->
+            <Whatsbtn />
 
-        <!-- Botón 2 (añade el segundo botón) -->
-        <a
-            href="/Contact"
-            aria-label="Button to request a quote"
-            class="bg-blueSecondary border-white border border- text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-center gap-2 shadow-md hover:bg-[#0044A4]/80"
-        >
-            Request a quote
-            <svg
-                width="24px"
-                height="24px"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                color="#FFFFFF"
+            <a
+                href="/Contact"
+                aria-label="Button to request a quote"
+                class="bg-blueSecondary border-white border border- text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-center gap-2 shadow-md hover:bg-[#0044A4]/80"
             >
-                <!-- Icono del segundo botón (opcional) -->
-                <path
-                    d="M5 12H19M19 12L12 5M19 12L12 19"
-                    stroke="#FFFFFF"
+                Request a quote
+                <svg
+                    width="24px"
+                    height="24px"
+                    viewBox="0 0 24 24"
                     stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"></path>
-            </svg>
-        </a>
-    </div>
-    <div
-        class="bg-blueSecondary col-span-2 md:col-span-3 w-full h-full px-8 py-8 flex flex-col text-white justify-center items-start md:items-end"
-    >
-        <h1 class="font-bold text-base md:text-2xl mb-2">
-            High productivity and quality at competitive prices
-        </h1>
-        <p class="text-sm md:text-lg font-bold text-grisSubP">
-            Contractors that knows us prefer Triaso over other brands for our
-            high quality, realibility, and pricing.
-        </p>
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    color="#FFFFFF"
+                >
+                    <!-- Icono del segundo botón (opcional) -->
+                    <path
+                        d="M5 12H19M19 12L12 5M19 12L12 19"
+                        stroke="#FFFFFF"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+            </a>
+        </div>
+        <div
+            class="w-full h-full  flex flex-col text-white justify-center items-center lg:items-end lg:justify-evenly"
+        >
+            <h1 class="font-bold w-full text-sm lg:text-xl  lg:text-end">
+                High productivity and quality at competitive prices
+            </h1>
+            <p class="text-sm lg:text-base text-center font-bold text-grisSubP lg:text-end">
+                Contractors that knows us prefer Triaso over other brands for
+                our high quality, realibility, and pricing.
+            </p>
+        </div>
     </div>
 </div>

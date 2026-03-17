@@ -354,7 +354,7 @@ const CMPlanos = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      <div className="h-[80vh] relative flex items-center justify-center bg-bgMain w-full">
+      <div className="h-[150vh] lg:h-[90vh] relative flex items-center justify-center bg-bgMain w-full">
         <div
           className="absolute bottom-0 w-full h-4/6 overflow-hidden"
           style={{
@@ -674,6 +674,7 @@ const CMPlanos = () => {
                           FEEDING & DOSIGN SYSTEM
                         </h1>
                         <button
+                        aria-label="See more about the feeding and dosign system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -731,6 +732,7 @@ const CMPlanos = () => {
                           DURABILITY & SAFETY
                         </h1>
                         <button
+                          aria-label="See more about durability and safety"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -793,6 +795,7 @@ const CMPlanos = () => {
                           PUGMILL MIXING SYSTEM
                         </h1>
                         <button
+                          aria-label="See more about the Pugmill Mixing System"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -848,6 +851,7 @@ const CMPlanos = () => {
                           CONTROL & OPERATION
                         </h1>
                         <button
+                          aria-label="See more about control and operation of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -912,6 +916,7 @@ const CMPlanos = () => {
                           COMPONENTS & ELECTRICAL
                         </h1>
                         <button
+                          aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -966,6 +971,7 @@ const CMPlanos = () => {
                           PORTABILITY
                         </h1>
                         <button
+                        aria-label="See more about the portability of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1065,6 +1071,7 @@ const CMPlanos = () => {
                         EMULSION AND ADDITIVES INJECTION
                       </h1>
                       <button
+                        aria-label="See more about Emulsion and Additives Injection"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -1112,6 +1119,7 @@ const CMPlanos = () => {
                         COMPLIANCE WITH INDUSTRY STANDARDS
                       </h1>
                       <button
+                        aria-label="See more about the compliance with industry standards"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -1353,6 +1361,7 @@ const CMPlanos = () => {
                         TANK DIMENSIONS
                       </h1>
                       <button
+                        aria-label="See more about the Tank Dimensions"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -1429,6 +1438,7 @@ const CMPlanos = () => {
                         CHASSIS & STRUCTURE
                       </h1>
                       <button
+                        aria-label="See more about the Chassis and structure"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -1530,6 +1540,7 @@ const CMPlanos = () => {
                         FEEDING & DISCHARGE SYSTEM
                       </h1>
                       <button
+                        aria-label="See more about the feeding and discharge system"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -1611,6 +1622,7 @@ const CMPlanos = () => {
                           FEEDING & DOSIGN SYSTEM
                         </h1>
                         <button
+                          aria-label="See more about the feeding and dosign system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1668,6 +1680,7 @@ const CMPlanos = () => {
                           DURABILITY & SAFETY
                         </h1>
                         <button
+                          aria-label="See more about the durability and safety of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1730,6 +1743,7 @@ const CMPlanos = () => {
                           PUGMILL MIXING SYSTEM
                         </h1>
                         <button
+                          aria-label="See more about the Pugmill Mixing System"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1787,6 +1801,7 @@ const CMPlanos = () => {
                           CONTROL & OPERATION
                         </h1>
                         <button
+                          aria-label="See more about the Control and Operation of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1851,6 +1866,7 @@ const CMPlanos = () => {
                           COMPONENTS & ELECTRICAL
                         </h1>
                         <button
+                          aria-label="See more about the components and electrical composition of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1905,6 +1921,7 @@ const CMPlanos = () => {
                           PORTABILITY
                         </h1>
                         <button
+                          aria-label="See more about the portability of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2004,6 +2021,7 @@ const CMPlanos = () => {
                         EMULSION AND ADDITIVES INJECTION
                       </h1>
                       <button
+                        aria-label="See more about the Emulsion and Additives injection"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2051,6 +2069,7 @@ const CMPlanos = () => {
                         COMPLIANCE WITH INDUSTRY STANDARDS
                       </h1>
                       <button
+                        aria-label="See more about the compliance with industry standards"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2292,6 +2311,7 @@ const CMPlanos = () => {
                         DIMENSIONS
                       </h1>
                       <button
+                        aria-label="See more about the dimensions of the system"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2368,6 +2388,7 @@ const CMPlanos = () => {
                         CHASSIS & STRUCTURE
                       </h1>
                       <button
+                        aria-label="See more about the chassis and structure of the system"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2469,6 +2490,7 @@ const CMPlanos = () => {
                         FEEDING & DISCHARGE SYSTEM
                       </h1>
                       <button
+                        aria-label="See more about the feeding and discharge of the system"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({

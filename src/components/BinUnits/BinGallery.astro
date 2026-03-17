@@ -3,7 +3,7 @@ import GallerySlider from "../unitComponents/GallerySlider";
 import { Image } from "astro:assets";
 import Tred from "../../assets/images/AsphaltStorage/redT.webp";
 import Separator from "../unitComponents/Separator.astro";
-import sideP from "../../assets/images/DrumMixers/sideP.webp";
+import sideP from "../../assets/images/SidePanels/TolvasFE.webp";
 import LearnBtn from "../unitComponents/LearnBtn.astro";
 import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
 import BUFeeders from "../../assets/images/BinUnits/BUFeeders.webp";
@@ -16,31 +16,7 @@ import img5 from "../../assets/images/BinUnits/2.webp";
 import img6 from "../../assets/images/BinUnits/3.webp";
 import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 
-import g1 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC60P288TrabA.webp";
-import g2 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC60P288TrabB.webp";
-import g3 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC60P288TranspA.webp";
-import g4 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC60P288TranspB.webp";
-import g5 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC110P286Trab.webp";
-import g6 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC110P286TrabB.webp";
-import g7 from "../../assets/images/BinUnits/GallerySlider/Big/TmbC110P286TranspA.webp";
-import g8 from "../../assets/images/BinUnits/GallerySlider/Big/TmbCE110P268TrabA.webp";
-import g9 from "../../assets/images/BinUnits/GallerySlider/Big/TmbCE110P268TrabB.webp";
-import g10 from "../../assets/images/BinUnits/GallerySlider/Big/TmbCE110P268TrabRapA.webp";
-import g11 from "../../assets/images/BinUnits/GallerySlider/Big/TmbCE110P268TranspA.webp";
-import g12 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TrabA.webp";
-import g13 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TrabB.webp";
-import g14 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TrabC.webp";
-import g15 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TrabD.webp";
-import g16 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TranspA.webp";
-import g17 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TranspB.webp";
-import g18 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TranspC.webp";
-import g19 from "../../assets/images/BinUnits/GallerySlider/Big/TqePCU60N70TranspD.webp";
-import g20 from "../../assets/images/BinUnits/GallerySlider/Big/consola.webp";
-import g21 from "../../assets/images/BinUnits/GallerySlider/Big/tanqueplusA.webp";
-import g22 from "../../assets/images/BinUnits/GallerySlider/Big/tanqueplusB.webp";
-import g23 from "../../assets/images/BinUnits/GallerySlider/Big/tanqueplusC.webp";
-import g24 from "../../assets/images/BinUnits/GallerySlider/Big/tanqueplusD.webp";
-import g29 from "../../assets/images/BinUnits/GallerySlider/Big/Cuadruple bin unit.webp"
+import g29 from "../../assets/images/BinUnits/GallerySlider/Big/Cuadruple bin unit.webp";
 import g25 from "../../assets/images/BinUnits/GallerySlider/Big/TlvP317P268A.webp";
 import g26 from "../../assets/images/BinUnits/GallerySlider/Big/TlvP317P268B.webp";
 import g27 from "../../assets/images/BinUnits/GallerySlider/Big/TlvP317P268C.webp";
@@ -49,7 +25,7 @@ import g28 from "../../assets/images/BinUnits/GallerySlider/Big/TlvP317P268D.web
 const binSlides2 = [
   {
     image: g29.src,
-    caption: "Cuadruple bin unit"
+    caption: "Cuadruple bin unit",
   },
 
   {
@@ -96,10 +72,8 @@ const binSlides2 = [
         Our team is available around the clock, ready to assist you at any time,
         even on weekends and holidays.
       </p>
-      <div
-        class="flex justify-center items-center lg:justify-start lg:items-start md:justify-start md:items-start"
-      >
-        <div class="w-full lg:w-1/2 flex items-center mx-auto">
+      <div class="flex justify-center items-center lg:justify-start lg:items-start md:justify-start md:items-start">
+        <div class="flex items-center justify-center mx-auto w-full">
           <Whatsbtn />
         </div>
       </div>
@@ -108,7 +82,7 @@ const binSlides2 = [
   <div
     class="w-full grid grid-cols-1 md:grid-cols-2 overflow-visible max-w-7xl px-8 mx-auto items-end"
   >
-    <div class="w-full pr-20">
+    <div class="w-full hidden lg:flex md:flex pr-20">
       <Image
         src={img1}
         alt="Manufacture of Belt Feeders with Rubberized Pulleys"
@@ -116,11 +90,19 @@ const binSlides2 = [
       />
     </div>
     <div class="w-full flex flex-col gap-10">
-      <div>
+      <div class="hidden lg:flex md:flex">
         <Image
           src={BUFeeders}
           alt="Belt Feeders with Rubberized Pulleys"
           class="rounded-2xl"
+        />
+      </div>
+
+      <div class="w-full flex lg:hidden md:hidden">
+        <Image
+          src={img1}
+          alt="Manufacture of Belt Feeders with Rubberized Pulleys"
+          class="rounded-lg"
         />
       </div>
       <div class="w-full flex flex-col justify-center">
@@ -135,6 +117,14 @@ const binSlides2 = [
           reliable performance, even under heavy loads or challenging
           conditions.
         </p>
+      </div>
+
+      <div class="flex lg:hidden md:hidden">
+        <Image
+          src={BUFeeders}
+          alt="Belt Feeders with Rubberized Pulleys"
+          class="rounded-2xl"
+        />
       </div>
     </div>
   </div>
@@ -254,124 +244,147 @@ const binSlides2 = [
     </div>
   </div>
 
+<div class="relative bg-[url(/fondoAsp.webp)] flex flex-col lg:hidden md:hidden bg-cover bg-center w-full pb-10">
+  <div class="absolute inset-0 bg-black/50"></div>
+  
   <div
-    class="relative bg-[url(/fondoAsp.webp)] flex lg:hidden md:hidden bg-cover bg-center w-full"
+    id="auto-slider"
+    class="relative w-full max-w-7xl px-6 mx-auto pt-10 pb-4 gap-4 flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
   >
-    <div class="absolute inset-0 bg-black/50"></div>
-    <div
-      id="auto-slider"
-      class="relative w-full max-w-7xl px-8 lg:px-0 md:px-0 mx-auto py-10 gap-10 flex overflow-x-auto snap-x snap-mandatory"
-    >
-      <!-- 1 -->
-      <div class="relative w-full snap-center shrink-0">
-        <div class="absolute inset-0 bg-white/15 rounded-2xl"></div>
-        <div
-          class="relative z-10 flex flex-col w-full md:flex-row lg:flex-row p-6"
-        >
-          <div class="text-white font-bold flex flex-col justify-center">
-            <h1 class="text-2xl md:text-3xl">Highly portable equipment</h1>
-            <br />
-            <p class="text-base md:text-lg lg:pr-8 md:pr-8">
-              We understand the importance of getting your equipment up and
-              running as quickly as possible. Our Triaso equipment is designed
-              for fast installation and startup.
-            </p>
-          </div>
-
-          <div class="w-full flex justify-center py-5">
-            <Image
-              src={binHigh}
-              alt="Truck eqquipped with a bin system unit"
-              class="w-full rounded-2xl"
-            />
-          </div>
+    <div class="relative w-[85%] snap-center shrink-0">
+      <div class="absolute inset-0 bg-white/15 rounded-2xl"></div>
+      <div class="relative z-10 flex flex-col w-full md:flex-row lg:flex-row p-6">
+        <div class="text-white font-bold flex flex-col justify-center">
+          <h1 class="text-2xl md:text-3xl">Highly portable equipment</h1>
+          <br />
+          <p class="text-base md:text-lg lg:pr-8 md:pr-8 font-normal">
+            We understand the importance of getting your equipment up and
+            running as quickly as possible. Our Triaso equipment is designed
+            for fast installation and startup.
+          </p>
+        </div>
+        <div class="w-full flex justify-center py-5">
+          <Image
+            src={binHigh}
+            alt="Truck equipped with a bin system unit"
+            class="w-full rounded-2xl"
+          />
         </div>
       </div>
+    </div>
 
-      <!-- 2 -->
-      <div class="relative w-full snap-center shrink-0">
-        <div class="absolute inset-0 bg-white/15 rounded-2xl"></div>
-        <div
-          class="relative z-10 flex flex-col justify-around items-center w-full h-full p-6"
-        >
-          <div class="text-white font-bold flex flex-col justify-center">
-            <h1 class="text-2xl md:text-3xl">Any time anywhere</h1>
-            <br />
-            <p class="text-base md:text-lg lg:pr-8 md:pr-8">
-              We understand the importance of keeping your equipment running
-              non-stop.
-            </p>
-          </div>
-
-          <div class="w-full flex justify-center py-5">
-            <Image
-              src={img2}
-              alt="Truck eqquipped with a bin system unit"
-              class="w-full rounded-2xl"
-            />
-          </div>
+    <div class="relative w-[85%] snap-center shrink-0">
+      <div class="absolute inset-0 bg-white/15 rounded-2xl"></div>
+      <div class="relative z-10 flex flex-col justify-around items-center w-full h-full p-6">
+        <div class="text-white font-bold flex flex-col justify-center">
+          <h1 class="text-2xl md:text-3xl">Any time anywhere</h1>
+          <br />
+          <p class="text-base md:text-lg lg:pr-8 md:pr-8 font-normal">
+            We understand the importance of keeping your equipment running
+            non-stop.
+          </p>
+        </div>
+        <div class="w-full flex justify-center py-5">
+          <Image
+            src={img2}
+            alt="Truck equipped with a bin system unit"
+            class="w-full rounded-2xl"
+          />
         </div>
       </div>
+    </div>
 
-      <!-- 3 -->
-      <div class="relative w-full snap-center shrink-0">
-        <div class="absolute inset-0 bg-white/15 rounded-2xl"></div>
-        <div
-          class="relative z-10 flex flex-col justify-around items-center w-full h-full p-6"
-        >
-          <div class="text-white font-bold flex flex-col justify-center">
-            <h1 class="text-2xl md:text-3xl">Easy Storage</h1>
-            <br />
-            <p class="text-base md:text-lg lg:pr-8 md:pr-8">
-              Designed for easy storage, our equipment can be quickly and
-              conveniently stored anywhere.
-            </p>
-          </div>
-
-          <div class="w-full flex justify-center py-5">
-            <Image
-              src={img3}
-              alt="Truck eqquipped with a bin system unit"
-              class="w-full rounded-2xl"
-            />
-          </div>
+    <div class="relative w-[85%] snap-center shrink-0">
+      <div class="absolute inset-0 bg-white/15 rounded-2xl"></div>
+      <div class="relative z-10 flex flex-col justify-around items-center w-full h-full p-6">
+        <div class="text-white font-bold flex flex-col justify-center">
+          <h1 class="text-2xl md:text-3xl">Easy Storage</h1>
+          <br />
+          <p class="text-base md:text-lg lg:pr-8 md:pr-8 font-normal">
+            Designed for easy storage, our equipment can be quickly and
+            conveniently stored anywhere.
+          </p>
+        </div>
+        <div class="w-full flex justify-center py-5">
+          <Image
+            src={img3}
+            alt="Truck equipped with a bin system unit"
+            class="w-full rounded-2xl"
+          />
         </div>
       </div>
     </div>
   </div>
+
+  <div id="slider-dots" class="relative z-10 flex justify-center items-center gap-2 mt-2">
+    <div class="w-3 h-2.5 rounded-full bg-white transition-all"></div>
+    <div class="w-2.5 h-2.5 rounded-full bg-white/40 transition-all"></div>
+    <div class="w-2.5 h-2.5 rounded-full bg-white/40 transition-all"></div>
+  </div>
+</div>
   <div class="w-full px-4">
     <GallerySlider client:only slides={binSlides2} visibleThumbs={6} />
   </div>
 </div>
 
 <script>
-  
   const slider = document.getElementById("auto-slider");
+  const dotsContainer = document.getElementById("slider-dots");
 
-  if (slider) {
-    const slides = slider.children.length;
+  if (slider && dotsContainer) {
+    const slidesCount = slider.children.length;
+    const dots = Array.from(dotsContainer.children);
     let index = 0;
-    let resumeTimout;
+    let resumeTimeout;
     let interval = setInterval(moveSlider, 3000);
 
-    function moveSlider() {
-      index = (index + 1) % slides;
-
-      slider.scrollTo({
-        left: slider.clientWidth * index,
-        behavior: "smooth",
+    // 1. Función para actualizar visualmente los puntos
+    function updateDots(activeIndex) {
+      dots.forEach((dot, i) => {
+        if (i === activeIndex) {
+          // Clases para el punto activo (más blanco y un poco más ancho)
+          dot.className = "w-3 h-2.5 rounded-full bg-white transition-all";
+        } else {
+          // Clases para los puntos inactivos (transparentes)
+          dot.className = "w-2.5 h-2.5 rounded-full bg-white/40 transition-all";
+        }
       });
     }
-   
+
+    function moveSlider() {
+      index = (index + 1) % slidesCount;
+      const slideWidth = slider.children[0].offsetWidth;
+      const gap = parseFloat(getComputedStyle(slider).gap) || 0;
+
+      slider.scrollTo({
+        left: (slideWidth + gap) * index,
+        behavior: "smooth",
+      });
+    
+      updateDots(index);
+    }
+
+    slider.addEventListener("scroll", () => {
+      const slideWidth = slider.children[0].offsetWidth;
+      const gap = parseFloat(getComputedStyle(slider).gap) || 0;
+      const currentIndex = Math.round(slider.scrollLeft / (slideWidth + gap));
+
+      if (currentIndex !== index) {
+        index = currentIndex;
+        updateDots(index);
+      }
+    }, { passive: true });
+
     function pauseAutoplay() {
       clearInterval(interval);
-      clearTimeout(resumeTimout);
+      clearTimeout(resumeTimeout);
 
-      resumeTimout = setTimeout(() => {
+      resumeTimeout = setTimeout(() => {
         interval = setInterval(moveSlider, 4000);
-      }, 2000); 
+      }, 2000);
     }
 
     slider.addEventListener("touchstart", pauseAutoplay, { passive: true });
+    updateDots(index);
   }
 </script>

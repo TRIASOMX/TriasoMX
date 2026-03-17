@@ -219,11 +219,11 @@ export default function AnalisisInversion() {
           {isClient ? (
             <button
               onClick={handleDownloadPdf}
-              className="mt-4 md:mt-0 bg-[#14427c] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg"
-              style={{ position: 'relative', zIndex: 9999 }}
+              className="mt-4 mb-4 md:mt-0 bg-[#14427c] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg"
+          
               type="button"
             >
-              Descargar PDF
+              Download PDF
             </button>
           ) : (
             <button className="mt-4 md:mt-0 bg-gray-400 text-white font-bold py-2 px-4 rounded cursor-not-allowed">

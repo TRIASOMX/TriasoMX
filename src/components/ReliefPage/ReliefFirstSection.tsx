@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import img1 from "../../assets/images/Relief/MainPhoto.webp";
 import img2 from "../../assets/images/Relief/TriasoOS1.webp";
+import ScrollIndicator from "./ScrollIndicator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +28,7 @@ export default function ReliefFirstSection() {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top top",
-            end: "+=150%",
+            end: "+=50%",
             scrub: 1,
             pin: true,
           },
@@ -128,10 +129,38 @@ export default function ReliefFirstSection() {
           <img src={img1.src} alt="Control System Dashboard" className="w-full lg:w-4/5 md:w-4/5 " />
         </div>
 
-        <p className="font-semibold text-base text-[#393939] text-start">
+        <p className="font-medium text-sm lg:text-lg md:text-lg text-[#393939] text-start">
           Offering a practical and efficient way to manage industrial equipment operations. With advanced monitoring and automation, it simplifies the control of key processes like temperature, material dosing, and production rates. Built to adapt to different setups, it ensures reliable performance while prioritizing safety and ease of use.
         </p>
+
+        <div className="flex flex-col items-center gap-2 py-4">
+          <span
+            className="text-xs font-semibold tracking-widest uppercase"
+            style={{ color: "#14427c", letterSpacing: "0.1em" }}
+          >
+            Scroll
+          </span>
+
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="#14427c"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+
       </div>
+
+
       <section
         ref={sectionRef}
         className="relative w-full h-auto lg:h-screen flex items-center justify-center overflow-visible lg:overflow-hidden -mt-24 py-24 lg:py-0"
@@ -150,7 +179,7 @@ export default function ReliefFirstSection() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 color="#14427c"
-                
+
               >
                 <path
                   d="M8 18L11 21L16 16"
@@ -184,6 +213,8 @@ export default function ReliefFirstSection() {
               alt="Triaso App Interface"
               className="w-full h-full z-20 object-cover"
               style={{ filter: "drop-shadow(0px 10px 30px rgba(0,0,0,0.6))" }}
+              fetchPriority="high"
+
             />
             <div className="pt-10 feature-item">
               <div className="flex flex-col justify-center items-center">

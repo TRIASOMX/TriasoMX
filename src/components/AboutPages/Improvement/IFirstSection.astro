@@ -16,7 +16,7 @@ import { Image } from "astro:assets";
 
 <section class="w-full">
   <div class="w-full flex justify-center">
-    <Image src={Planos} alt="Technical prints" />
+    <Image src={Planos} alt="Technical prints" fetchpriority="high" />
   </div>
   <div class="w-full max-w-7xl px-8 mx-auto font-bold my-10">
     <h1 class="text-3xl md:text-4xl text-grisT">
@@ -25,24 +25,24 @@ import { Image } from "astro:assets";
   </div>
   <div class="max-w-7xl px-8 mx-auto">
     <div class="w-full font-bold">
-      <p class="text-base md:text-lg text-grisT">
+      <p class="text-sm lg:text-lg md:text-lg text-grisT">
         All our systems are engineered to meet the highest international
         standards and are carefully tailored to comply with the specific
         regulations of the country or state where the equipment will be
         installed.
       </p><br />
-      <p class="text-base md:text-lg text-grisT">
+      <p class="text-sm lg:text-lg md:text-lg text-grisT">
         Our top-tier engineering and design team is composed of specialized,
         experienced engineers who utilize advanced tools and simulation software
         to develop new industrial systems and optimize existing ones.
       </p>
     </div>
     <div class="w-full font-bold my-16">
-      <h2 class="text-xl md:text-2xl text-redBg text-center">
+      <h2 class="text-2xl lg:text-3xl md:text-3xl text-redBg text-center">
         A reliable and productive equipment starts with a perfect and <br
         />detailed design
       </h2><br />
-      <h3 class="text-lg md:text-xl text-black text-center">
+      <h3 class="text-base lg:text-xl md:text-xl text-black text-center">
         Our design approach directly addresses common issues and inefficiencies
         found in other brands.
       </h3>
@@ -53,13 +53,13 @@ import { Image } from "astro:assets";
     <Image src={logo} alt="ANSYS Logo" />
   </div>
   <div class="w-full max-w-7xl mx-auto px-8 font-bold">
-    <p class="text-base md:text-lg text-grisT text-center">
+    <p class="text-sm lg:text-lg md:text-lg text-grisT text-center">
       Using finite element analysis software (Ansys®), we conduct precise tests
       to evaluate the behavior of new designs, improvements to current designs,
       and custom orders through computer simulations. This rigorous testing
       ensures the quality and reliability of our products.
     </p><br />
-    <ul class="list-disc ml-6 text-base md:text-lg text-grisT">
+    <ul class="list-disc ml-6 text-sm lg:text-lg md:text-lg text-grisT">
       <li>
         Behavior of the flow of aggregates and air at any point in the process.
       </li>
@@ -78,34 +78,59 @@ import { Image } from "astro:assets";
     <div
       class="max-w-7xl grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 gap-10 px-8 font-bold text-black text-base md:text-lg my-16"
     >
-      <Card>
-        <h3 class="text-center">Dust flow in a baghouse</h3>
-        <div class="w-full">
-          <Image src={IAD1} alt="Dust flow in a baghouse" class="min-w-full min-h-[250px]" />
+      <Card
+        className="p-4 rounded-2xl w-full bg-white flex flex-col items-center justify-center"
+      >
+        <div>
+          <h3 class="text-center">Dust flow in a baghouse</h3>
+        </div>
+
+        <div class="w-full my-auto">
+          <Image
+            src={IAD1}
+            alt="Dust flow in a baghouse"
+            class="w-full h-full"
+          />
+        </div>
+      </Card>
+      <Card
+        className="p-4 rounded-2xl w-full bg-white flex flex-col items-center justify-center"
+      >
+        <h3 class="text-center">Stress analysis of a chassis</h3>
+        <div class="w-full flex my-auto">
+          <Image
+            src={IAD2}
+            alt="Dust flow in a baghouse"
+            class="w-full h-full"
+          />
+        </div>
+      </Card>
+      <Card
+        className="p-4 rounded-2xl w-full bg-white flex flex-col items-center justify-center"
+      >
+        <h3 class="text-center">Vibration analysis of screens</h3>
+        <div class="w-full flex my-auto">
+          <Image
+            src={IAD3}
+            alt="Dust flow in a baghouse"
+            class="w-full h-full"
+          />
         </div>
       </Card>
       <Card>
-        <h3 class="text-center">Dust flow in a baghouse</h3>
-        <div class="w-full">
-          <Image src={IAD2} alt="Dust flow in a baghouse" class="min-w-full min-h-[250px]" />
-        </div>
-      </Card>
-      <Card>
-        <h3 class="text-center">Dust flow in a baghouse</h3>
-        <div class="w-full">
-          <Image src={IAD3} alt="Dust flow in a baghouse" class="min-w-full min-h-[250px]" />
-        </div>
-      </Card>
-      <Card>
-        <h3 class="text-center">Dust flow in a baghouse</h3>
-        <div class="w-full">
-          <Image src={IAD4} alt="Dust flow in a baghouse" class="min-w-full max-h-[250px]" />
+        <h3 class="text-center">Airflow analysis inside the cyclone</h3>
+        <div class="w-full aspect-square">
+          <Image
+            src={IAD4}
+            alt="Dust flow in a baghouse"
+            class="w-full h-full"
+          />
         </div>
       </Card>
     </div>
   </div>
   <div class="w-full max-w-7xl mx-auto px-8 font-bold flex flex-col gap-10">
-    <p class="text-base md:text-lg text-grisT text-center">
+    <p class="text-sm lg:text-lg md:text-lg text-grisT text-center">
       ...and After the design and manufacturing process, we continue to monitor
       equipment performance through the maintenance services we provide. This
       ongoing feedback allows us to continuously improve future production,
@@ -113,7 +138,7 @@ import { Image } from "astro:assets";
       market.
     </p>
     <h1 class="text-2xl md:text-3xl text-grisT text-center">Custom Design</h1>
-    <p class="text-base md:text-lg text-grisT text-center">
+    <p class="text-sm lg:text-lg md:text-lg text-grisT text-center">
       In addition to our standardized designs, we specialize in customized
       solutions tailored to the specific needs of each client. Whether adapting
       to unique environmental conditions or meeting precise performance
@@ -123,7 +148,7 @@ import { Image } from "astro:assets";
   </div>
   <div class="w-full flex flex-col justify-center items-center">
     <div
-      class="max-w-7xl grid grid-cols-1 lg:grid-cols-4 gap-10 px-8 font-bold text-black text-base md:text-lg my-10"
+      class="max-w-7xl grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 gap-10 px-8 font-bold text-black text-base md:text-lg my-10"
     >
       <Card>
         <div>
@@ -148,6 +173,6 @@ import { Image } from "astro:assets";
     </div>
   </div>
   <div class="flex justify-center pb-10">
-    <LearnBtn />
+    <LearnBtn href="/CustomDesign" />
   </div>
 </section>

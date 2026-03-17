@@ -30,7 +30,7 @@ const BOdometer = () => {
             setValue(60);
             setValue3(500);
 
-            setValue1(10);
+            setValue1(14);
             setValue4(20);
 
             setValue2(18);
@@ -63,7 +63,7 @@ const BOdometer = () => {
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-grisP">Range of dosification</p>
+            <p className="text-[#4F4F4F]">Range of dosification</p>
           </div>
 
           <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
@@ -73,7 +73,7 @@ const BOdometer = () => {
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">tons</p>
             </div>
-            <p className="text-grisP">Bin unit capacity</p>
+            <p className="text-[#4F4F4F]">Bin unit capacity</p>
           </div>
 
           <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
@@ -81,7 +81,7 @@ const BOdometer = () => {
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <p className="text-5xl font-normal ml-3">"</p>
             </div>
-            <p className="text-grisP text-start w-full">
+            <p className="text-[#4F4F4F] text-start w-full">
               Dosing belt
             </p>
           </div>
@@ -89,7 +89,7 @@ const BOdometer = () => {
 
         <div className="flex flex-col items-center justify-center mx-auto gap-6 pt-10">
           <div className="w-4/6">
-            <img src={single.src} alt="Bin Unit Odometer" className=" object-cover" />
+            <img src={single.src} alt="Bin Unit Odometer" className=" object-cover rounded-xl" />
           </div>
           <a
             href="#planosBinUnits"

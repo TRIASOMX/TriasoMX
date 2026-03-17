@@ -125,7 +125,7 @@ export default function RelifSecondSection() {
                     style={{ maxHeight: "0px" }}
                 >
                     <div className="w-full bg-gradient-to-b from-[#05256d] to-[#5a85e8] py-12">
-                        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-[34rem]">
+                        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:gap-[34rem] ">
                             <ul className="text-white list-disc space-y-2 pl-6">
                                 <li>Cumulative production.</li>
                                 <li>Fuel consumption per ton produced.</li>

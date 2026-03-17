@@ -2,52 +2,48 @@
 import Separator from "../unitComponents/Separator.astro";
 import img1 from "../../assets/images/AsphaltPlant/drum3.webp";
 import { Image } from "astro:assets";
+import poster1 from "../../../public/Videos/Webm/Posters/6.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
 <div class="w-full flex flex-col items-start justify-center mt-20">
   <div class="w-full max-w-7xl px-8 mx-auto">
-    <h1 class="text-2xl md:text-4xl font-bold">Triaso® <br> Aggregate Bin Units</h1>
+    <h1 class="text-2xl md:text-4xl font-bold">
+      Triaso® <br /> Aggregate Bin Units
+    </h1>
     <Separator />
   </div>
-  <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 mb-10">
-    <div
-      class="pl-8 pr-8 lg:pr-0 lg:pl-56 text-base md:text-lg font-bold text-grisT"
-    >
-      <div class="lg:w-4/5 lg:ml-[120px]">
-        <p class="text-justify">
-          Triaso® Bin Units are essential components in asphalt production,
-          ensuring accurate storage and a steady flow of aggregates into the
-          mixing system. Engineered specifically for asphalt plants, they
-          provide reliable feeding of pre-dosed materials, helping maintain mix
-          consistency and production efficiency according the specified mix
-          design. Built from high-strength materials and available in adaptable
-          configurations, these bins deliver durability, minimal maintenance,
-          and optimal performance for continuous operation across all types of
-          projects.
-        </p>
-      </div>
+
+  <div class="w-full flex flex-col lg:flex-row gap-5 mb-10 py-10 items-center">
+    <div class="lg:w-4/6">
+      <p class="text-justify text-sm lg:text-lg md:text-lg font-bold text-grisT px-8 xl:pl-80 lg:pl-10">
+        Triaso® Bin Units are essential components in asphalt production,
+        ensuring accurate storage and a steady flow of aggregates into the
+        mixing system. Engineered specifically for asphalt plants, they provide
+        reliable feeding of pre-dosed materials, helping maintain mix
+        consistency and production efficiency according the specified mix
+        design. Built from high-strength materials and available in adaptable
+        configurations, these bins deliver durability, minimal maintenance, and
+        optimal performance for continuous operation across all types of
+        projects.
+      </p>
     </div>
-    <div
-      class="bg-blueMain lg:rounded-l-2xl p-4 font-bold flex flex-col justify-around gap-4"
-    >
+
+    <div class="bg-blueMain lg:rounded-l-2xl p-4 font-bold flex flex-col justify-around gap-4">
       <h1 class="text-white md:text-4xl text-2xl">From 10 or 20 tons</h1>
       <div>
         <Image src={img1} alt="Lines resembling the shape of a Bin Unit" />
       </div>
     </div>
   </div>
+
   <div class="w-full flex justify-center max-w-7xl px-8 mx-auto">
-    <video
-      class="lg:w-4/5 md:4/5"
-      playsinline
-      controls
-      poster="/Gallery/customdes.webp"
-      preload="metadata"
-      width="1280"
-      height="720"
-    >
-      <source src="/Videos/Webm/tolvasVideo.webp" type="video/webm" />
-      <source src="/Videos/Mp4/tolvasVideo.mp4" type="video/mp4" />
-    </video>
+    <SmartVideo
+      client:visible
+      src="/Videos/Webm/tolvasVideo.webm"
+      poster={poster1.src}
+      isLoop={false}
+      autoplayOnMobile={false}
+    />
   </div>
 </div>

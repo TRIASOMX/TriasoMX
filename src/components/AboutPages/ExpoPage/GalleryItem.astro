@@ -1,0 +1,31 @@
+---
+export interface Props {
+  cover: string;
+  title: string;
+  date: string;
+  images: string[];
+}
+
+const { cover, title, date, images } = Astro.props;
+---
+
+<div
+  class="gallery-item group relative cursor-pointer overflow-hidden w-full h-[100px] md:h-[198px]"
+  data-images={JSON.stringify(images)}
+  data-title={title}
+>
+  <img
+    src={cover}
+    alt={title}
+    fetchpriority="high"
+    class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+  />
+
+  <div
+    class="absolute inset-0 bg-black/60 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300
+           flex flex-col justify-end p-4 text-white"
+  >
+    <h1 class="text-lg font-semibold leading-tight">{title}</h1>
+    <span class="text-sm opacity-80">{date}</span>
+  </div>
+</div>

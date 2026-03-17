@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 import single from "../../assets/images/IntegralAsphalt/single.webp";
+import singleLow from "../../assets/images/IntegralAsphalt/singleLow.webp"
 
 const OdometerSection = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -47,9 +48,7 @@ const OdometerSection = () => {
 
   return (
     <div ref={sectionRef} className="w-full max-w-7xl mx-auto px-8 py-10 lg:py-0 lg:mt-56 lg:mb-56 md:mt-56 md:mb-56">
-      <div className="flex justify-center items-center">
-        <h1 className="font-bold text-lg lg:text-4xl md:text-4xl">Everything in a single unit</h1>
-      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
         <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
           <div className="flex flex-col items-center justify-center">
@@ -57,7 +56,7 @@ const OdometerSection = () => {
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-grisP">Range of hot-mix production</p>
+            <p className="text-[#4F4F4F]">Range of hot-mix production</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -65,7 +64,7 @@ const OdometerSection = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">kW</p>
             </div>
-            <p className="text-grisP">Three-phase electric generator</p>
+            <p className="text-[#4F4F4F]">Three-phase electric generator</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -77,7 +76,7 @@ const OdometerSection = () => {
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">million BTU/hr</p>
             </div>
-            <p className="text-grisP text-center lg:text-start w-full">
+            <p className="text-[#4F4F4F] text-center lg:text-start w-full">
               Modulating burner capacity
             </p>
           </div>
@@ -85,7 +84,7 @@ const OdometerSection = () => {
 
         <div className="flex flex-col items-center justify-center gap-6">
           <div>
-            <img src={single.src} alt="Back of a Integral asphalt plant of 10 Tph" />
+            <img src={singleLow.src} alt="Back of a Integral asphalt plant of 10 Tph" />
           </div>
           <a
   href="#planosIntegral"

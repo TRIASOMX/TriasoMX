@@ -17,13 +17,13 @@ const SliderAsphalt = ({ images, interval = 3000 }: ImageSliderProps) => {
   }, [images.length, interval]);
 
   return (
-    <div className="relative w-full h-full lg:w-[900px] lg:h-[500px] flex items-end justify-end overflow-hidden">
+    <div className="relative w-full h-full lg:w-[900px] flex items-end justify-end overflow-hidden">
       {images.map((img, index) => (
         <img
           key={index}
           src={img}
           alt={`slide-${index}`}
-          className={`absolute inset-0 w-full h-full object-fill transition-opacity duration-700 ${
+          className={`absolute inset-0 w-full h-full transition-opacity duration-700 rounded-2xl ${
             index === current ? "opacity-100" : "opacity-0"
           }`}
         />

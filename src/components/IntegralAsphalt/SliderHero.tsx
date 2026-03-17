@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Hero1 from "../../assets/images/IntegralAsphalt/Hero1.webp";
 import Hero2 from "../../assets/images/IntegralAsphalt/Hero2.webp";
 import Hero3 from "../../assets/images/IntegralAsphalt/Hero3.webp";
@@ -6,8 +6,9 @@ import Hero4 from "../../assets/images/IntegralAsphalt/Hero4.webp";
 
 const SliderHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const Sliders = [
+const Sliders = [
     {
       titulo: "Ideal for pothole repair programs",
       texto:
@@ -34,13 +35,41 @@ const SliderHero = () => {
     },
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const startTimer = () => {
+    intervalRef.current = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % Sliders.length);
     }, 5000);
+  };
 
-    return () => clearInterval(interval);
-  }, [Sliders.length]);
+  const resetTimer = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    startTimer();
+  };
+
+  useEffect(() => {
+    startTimer();
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % Sliders.length);
+    resetTimer();
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + Sliders.length) % Sliders.length);
+    resetTimer();
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    resetTimer();
+  };
 
   return (
     <div className="relative w-full overflow-hidden mt-[66px]">
@@ -54,13 +83,21 @@ const SliderHero = () => {
               src={slide.img.src}
               alt={`slide-${index}`}
               className="w-full object-cover h-[300px] md:h-[600px]"
+              fetchPriority="high"
             />
-            <div className="absolute top-10 left-10 text-white p-6 max-w-sm md:max-w-md rounded-md ">
-              <div className="absolute inset-0 bg-blueMain opacity-70 rounded-md "></div>
-              <h2 className="relative text-base md:text-2xl font-bold mb-2">
+
+            <div className="absolute top-10 left-10 text-white p-6 max-w-sm md:max-w-md rounded-md">
+              <div className="absolute inset-0 bg-blueMain opacity-70 rounded-md lg:w-[850px]"></div>
+
+              <h2 className="relative text-lg lg:text-4xl font-bold mb-2 lg:translate-x-1/2 lg:text-center">
                 {slide.titulo}
               </h2>
-              <p className=" relative text-xs md:text-base">{slide.texto}</p>
+
+              <div className="lg:w-[800px] lg:translate-x-1/5">
+                <p className="relative w-full text-sm md:text-lg lg:text-lg lg:text-center">
+                  {slide.texto}
+                </p>
+              </div>
             </div>
           </div>
         ))}
@@ -70,16 +107,15 @@ const SliderHero = () => {
       <button
         aria-label="Previous slide"
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-80 p-2 rounded-full"
-        onClick={() =>
-          setCurrentSlide((currentSlide - 1 + Sliders.length) % Sliders.length)
-        }
+        onClick={prevSlide}
       >
         ‹
       </button>
+
       <button
         aria-label="Next slide"
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-80 p-2 rounded-full"
-        onClick={() => setCurrentSlide((currentSlide + 1) % Sliders.length)}
+        onClick={nextSlide}
       >
         ›
       </button>
@@ -89,9 +125,12 @@ const SliderHero = () => {
         {Sliders.map((_, index) => (
           <div
             key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer ${currentSlide === index ? "bg-blueMain" : "bg-white opacity-50"
-              }`}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full cursor-pointer ${
+              currentSlide === index
+                ? "bg-blueMain"
+                : "bg-white opacity-50"
+            }`}
           />
         ))}
       </div>

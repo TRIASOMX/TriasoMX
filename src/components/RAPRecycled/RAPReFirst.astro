@@ -11,12 +11,12 @@ import { Image } from "astro:assets";
 
 <section class="w-full mt-28">
     <div class="max-w-7xl mx-auto px-8 mb-10">
-        <h1 class="text-3xl md:text-4xl font-bold text-grisT text-end">
+        <h1 class="text-xl  lg:text-4xl md:text-4xl font-bold text-grisT text-start  lg:text-end">
             RAP (RECYCLED ASPHALT PAVEMENT)
         </h1>
     </div>
     <div class="max-w-7xl mx-auto px-8 space-y-10">
-        <p class="text-sm font-medium">
+        <p class="text-sm lg:text-base md:text-base font-medium">
             RAP (Reclaimed Asphalt Pavement) is the asphalt pavement recovered
             through milling. It is fully suitable for recycling by incorporating
             it into new asphalt mixes, taking advantage of both its aggregates
@@ -26,7 +26,7 @@ import { Image } from "astro:assets";
             energy, and—most importantly—achieving substantial economic gains
             through reduced life-cycle costs..
         </p>
-        <p class="text-sm font-medium">
+        <p class="text-sm lg:text-base md:text-base font-medium">
             RAP ha been utilized in hot-mixes since 1915, enabling significant
             cost savings in the asphalt mix where it is utilized. An asphalt mix
             with RAP incorporated has a much lower production cost compared to
@@ -34,7 +34,7 @@ import { Image } from "astro:assets";
             present in the RAP. This is why RAP usage has been growing rapidly
             in recent years on a global scale.
         </p>
-        <p class="text-sm font-medium">
+        <p class="text-sm lg:text-base md:text-base font-medium">
             We offer everything you need to work with RAP, from modifications to
             your existing asphalt plant to a new plant specialized in
             cost-effective RAP production.
@@ -50,16 +50,16 @@ import { Image } from "astro:assets";
         <div
             class="bg-[#393939] w-full flex flex-col justify-center items-center p-12 text-white space-y-10"
         >
-            <h1 class="font-bold text-4xl">
+            <h1 class="font-bold text-2xl lg:text-4xl md:text-4xl">
                 Incorporation into the Drum for Internal Heating
             </h1>
-            <p>
+            <p class="text-sm lg:text-base md:text-base">
                 Our incorporation system can recycle <span
-                    class="font-bold text-2xl"
+                    class="font-bold text-lg lg:text-2xl md:text-2xl"
                     >up to 50%
                 </span>of reclamined asphalt pavement
             </p>
-            <p>
+            <p class="text-sm lg:text-base md:text-base">
                 The RAP must be introduced at a point in the drum where it does
                 not come into direct contact with the burner flame, so the
                 asphalt it contains does not burn and become unusable.
@@ -70,25 +70,28 @@ import { Image } from "astro:assets";
                 class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl px-8 mx-auto"
             >
                 <div class="w-full text-white flex flex-col justify-center">
-                    <h1 class="text-xl md:text-2xl font-bold">RAP BIN</h1><br />
-                    <p class="text-base md:text-lg font-thin">
+                    <h1 class="text-xl md:text-2xl font-bold pt-5">RAP BIN</h1><br />
+                    <p class="text-sm lg:text-lg md:text-lg font-thin">
                         At TRIASO, we introduce the RAP through a collar located
                         at an intermediate point in the drum. From this point
                         on, the RAP never touches the burner flame and is heated
                         by three simultaneous mechanisms:
                     </p>
-                    <li>
-                        direct contact with the preheated virgin aggregate from
-                        earlier in the drum,
-                    </li>
-                    <li>
-                        exposure to the hot gases flowing through the drum, and
-                    </li>
-                    <li>
-                        direct contact with heated internal plates, known as
-                        comales, which absorb radiant heat from the burner
-                        flame.
-                    </li>
+                    <ul class="list-disc pl-5 pt-5">
+                        <li>
+                            direct contact with the preheated virgin aggregate
+                            from earlier in the drum,
+                        </li>
+                        <li>
+                            exposure to the hot gases flowing through the drum,
+                            and
+                        </li>
+                        <li>
+                            direct contact with heated internal plates, known as
+                            comales, which absorb radiant heat from the burner
+                            flame.
+                        </li>
+                    </ul>
                 </div>
                 <div class="w-full flex justify-center py-5">
                     <Image
@@ -99,12 +102,16 @@ import { Image } from "astro:assets";
                 </div>
 
                 <div class="w-full flex justify-center py-5">
-                    <Image src={rap} alt="RAP Collar" class="w-1/2 lg:w-1/2 md:w-3/4" />
+                    <Image
+                        src={rap}
+                        alt="RAP Collar"
+                        class="w-1/2 lg:w-1/2 md:w-3/4"
+                    />
                 </div>
                 <div class="w-full text-white flex flex-col justify-center">
                     <h1 class="text-xl md:text-2xl font-bold">RAP COLLAR</h1><br
                     />
-                    <p class="text-base md:text-lg font-thin">
+                    <p class="text-sm lg:text-lg md:text-lg font-thin">
                         The drum collar is engineered to provide the controlled
                         and efficient entry of Recycled Asphalt Pavement (RAP)
                         into the mixing zone. Fed directly from the RAP bin via
@@ -129,14 +136,14 @@ import { Image } from "astro:assets";
                     <h2 class="font-bold text-[#fffaea]">
                         DRUM MIX MODIFICATION FOR RAP
                     </h2>
-                    <p class="text-base md:text-lg font-thin text-white">
+                    <p class="text-sm lg:text-lg md:text-lg font-thin text-white">
                         RAP is introduced through a collar located at an
                         intermediate point of the drum, before the mixing zone.
                         From this point on, the material never comes into direct
                         contact with the burner flame. Unlike other zones in the
                         drum mixer, this section has no veiling flights.
                     </p>
-                    <p class="text-base md:text-lg font-thin text-white">
+                    <p class="text-sm lg:text-lg md:text-lg  font-thin text-white">
                         The dedicated entry flights are used to gently introduce
                         RAP into the hot aggregate stream. The design allows
                         uniform drying, optimizing heat transfer and controlled
@@ -144,26 +151,33 @@ import { Image } from "astro:assets";
                         virgin aggregates, while minimizing blue smoke and
                         preventing material buildup.
                     </p>
-                    <div class="text-base md:text-lg font-thin text-white">
+                    <div class="text-sm lg:text-lg md:text-lg  font-thin text-white">
                         <p>
                             As the RAP moves through the drum, it is heated by
                             three simultaneous mechanisms:
                         </p>
-                        <li>
-                            Direct contact with the preheated virgin aggregate
-                        </li>
-                        <li>Exposure to the hot gases inside the drum</li>
-                        <li>
-                            Conduction from internal flights heated by the
-                            burner’s radiant energy.
-                        </li>
+                        <ul class="list-disc pl-5">
+                            <li>
+                                Direct contact with the preheated virgin
+                                aggregate
+                            </li>
+                            <li>Exposure to the hot gases inside the drum</li>
+                            <li>
+                                Conduction from internal flights heated by the
+                                burner’s radiant energy.
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div
                     class="w-full text-white flex flex-col justify-between py-5"
                 >
-                    <Image src={rapFlight} alt="RAP ENTRY FLIGHTS" class="w-full rounded-lg" />
-                    <p class="font-thin text-white">
+                    <Image
+                        src={rapFlight}
+                        alt="RAP ENTRY FLIGHTS"
+                        class="w-full rounded-lg"
+                    />
+                    <p class="font-thin text-sm lg:text-base md:text-base  text-white">
                         This controlled triple-heating system allows a higher
                         percentage of RAP to be processed consistently, up to
                         50% incorporation while maintaining uniform temperature,
@@ -176,7 +190,7 @@ import { Image } from "astro:assets";
                 class="bg-gradient-to-b from-[#14427c] via-[#14427c] to-[#f4f5f6]"
             >
                 <div class="max-w-7xl mx-auto px-8 space-y-5">
-                    <p class="font-bold text-white">
+                    <p class="font-bold text-sm lg:text-lg md:text-lg  text-white">
                         Note: Some other asphalt plant brands also have a collar
                         located at an intermediate point in the drum, but
                         positioned farther downstream—starting where internal
@@ -185,7 +199,7 @@ import { Image } from "astro:assets";
                         achieve slightly higher RAP incorporation than direct
                         pugmill methods.
                     </p>
-                    <p class="font-bold text-white">
+                    <p class="font-bold text-sm lg:text-lg md:text-lg  text-white">
                         A dedicated drum can be used exclusively for heating
                         RAP, while a separate drum heats the virgin aggregate.
                         The two materials are then blended in a pugmill. <br />
@@ -195,7 +209,7 @@ import { Image } from "astro:assets";
                             significantly higher equipment costs.
                         </span>
                     </p>
-                    <p class="font-bold text-black text-center">
+                    <p class="font-bold text-sm lg:text-lg md:text-lg  text-black text-center">
                         Our drum mixer can efficiently produce both WMA and HMA
                         while achieving consistent, high-quality performance.
                     </p>
@@ -203,6 +217,6 @@ import { Image } from "astro:assets";
             </div>
         </div>
     </section>
-    <RBDropdown2/>
-    <AnalisisInversion client:only/>
+    <RBDropdown2 />
+    <AnalisisInversion client:only />
 </section>

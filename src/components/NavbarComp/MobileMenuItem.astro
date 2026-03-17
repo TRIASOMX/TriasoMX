@@ -17,7 +17,7 @@ const submenuId = `submenu-${item.title.toLowerCase().replace(/\s+/g, '-')}`;
 <li class="font-normal">
   <div class="flex justify-between items-center">
     <a
-      href={!hasChildren ? item.url : '/'}
+      href={!hasChildren ? item.url : item.url}
       class="block py-2 px-4 text-grisT hover:bg-grisSubP rounded-md transition-colors w-full text-lg font-bold"
       onclick={isFirstLevel && hasChildren ? `event.preventDefault(); openSubmenu('${submenuId}', 'main-menu')` : ''}
     >

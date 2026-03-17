@@ -4,56 +4,70 @@ import mxIcon from "../../assets/iconos/mxIcon.webp";
 import usaIcon from "../../assets/iconos/usaIcon.webp";
 import { Image } from "astro:assets";
 
-// Configuración de los sitios web por idioma
 const SITES = {
-  es: { 
-    label: 'ES', 
+  es: {
+    label: "ES",
     flag: mxIcon,
-    url: '/'  // Reemplaza con tu URL en español
+    url: "/",
   },
-  en: { 
-    label: 'EN', 
+  en: {
+    label: "EN",
     flag: usaIcon,
-    url: '/'  // Reemplaza con tu URL en inglés
-  } 
+    url: "/",
+  },
 };
 
-// Determinar el idioma actual basado en la URL
-const currentLang = typeof window !== 'undefined' ? 
-  (window.location.href.includes('/en') ? 'en' : 'es') : 'es';
+const currentLang =
+  typeof window !== "undefined"
+    ? new URL(window.location.href).pathname.startsWith("/en")
+      ? "en"
+      : "es"
+    : "es";
 ---
 
-<div class="hidden md:block relative inline-block text-left" id="lang-switcher">
+
+<div class="lang-switcher relative inline-block text-left">
+  <!-- BOTÓN -->
   <button
-    id="toggle-button"
     type="button"
-    class="inline-flex items-center gap-2 px-4 py-2 text-sm font-bold hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+    class="inline-flex items-center gap-2 px-4 py-2 text-sm font-bold hover:text-red-500 transition-colors"
     aria-haspopup="true"
-    aria-expanded="false"
-    aria-controls="dropdown-menu"
   >
-    <span>
-      <Image src={idiomaIcon} alt="Idioma" class="w-4 h-4" />
-    </span>
+    <Image src={idiomaIcon} alt="Idioma" class="w-4 h-4" />
     <span>{SITES[currentLang].label}</span>
-    <svg class="ml-1 h-4 w-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    <svg
+      class="ml-1 h-4 w-4 transition-transform"
+      width="16"
+      height="16"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      />
     </svg>
   </button>
 
+  <!-- DROPDOWN -->
   <div
-    id="dropdown-menu"
-    class="invisible opacity-0 transition-all duration-200 absolute right-0 
-    z-10 mt-2 w-40 origin-top-right bg-white shadow-md rounded-md"
+    data-dropdown
+    class="invisible opacity-0 absolute right-0 z-10 mt-2 w-40
+           origin-top-right rounded-md bg-white shadow-md
+           transition-all duration-200"
   >
-    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="toggle-button">
+    <div class="py-1">
       {Object.entries(SITES).map(([code, { label, flag, url }]) => (
         <a
           href={url}
-          class={`flex items-center gap-2 w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
-            code === currentLang ? 'text-blue-600 font-semibold' : 'text-gray-700'
+          class={`flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100 ${
+            code === currentLang
+              ? "text-blue-600 font-semibold"
+              : "text-gray-700"
           }`}
-          role="menuitem"
         >
           <Image src={flag} alt="" class="w-4 h-4" />
           {label}
@@ -63,24 +77,26 @@ const currentLang = typeof window !== 'undefined' ?
   </div>
 </div>
 
-<script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('toggle-button');
-    const dropdown = document.getElementById('dropdown-menu');
 
-    // Toggle dropdown
-    toggleButton?.addEventListener('click', (e) => {
+<script is:inline>
+  document.querySelectorAll(".lang-switcher").forEach((switcher) => {
+    const button = switcher.querySelector("button");
+    const dropdown = switcher.querySelector("[data-dropdown]");
+
+    button?.addEventListener("click", (e) => {
       e.stopPropagation();
-      const isOpen = dropdown?.classList.contains('opacity-100');
-      dropdown?.classList.toggle('invisible', isOpen);
-      dropdown?.classList.toggle('opacity-0', isOpen);
-      dropdown?.classList.toggle('opacity-100', !isOpen);
+
+      const isOpen = dropdown.classList.contains("opacity-100");
+
+      dropdown.classList.toggle("invisible", isOpen);
+      dropdown.classList.toggle("opacity-0", isOpen);
+      dropdown.classList.toggle("opacity-100", !isOpen);
     });
 
-    // Close dropdown when clicking outside
-    document.addEventListener('click', () => {
-      dropdown?.classList.add('invisible', 'opacity-0');
-      dropdown?.classList.remove('opacity-100');
+    document.addEventListener("click", () => {
+      dropdown.classList.add("invisible", "opacity-0");
+      dropdown.classList.remove("opacity-100");
     });
   });
 </script>
+

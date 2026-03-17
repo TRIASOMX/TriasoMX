@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import img2 from "../../assets/images/ColdMix/pugmill2.webp";
 import img3 from "../../assets/images/ColdMix/pugmill3.webp";
+import poster1 from "../../../public/Videos/Webm/Posters/9.webp"
 import GallerySlider from "../unitComponents/GallerySlider";
 import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
 import AcordeonItem from "../unitComponents/AcordeonItem";
@@ -9,7 +10,6 @@ import binUnit1 from "../../assets/images/BinUnits/binUnit1.webp";
 import Tred from "../../assets/images/AsphaltStorage/redT.webp";
 import CMHigh from "../../assets/images/ColdMix/CMHigh.webp";
 import PlaMFDscC1 from "../../assets/images/ColdMix/PlaMFDscC1.webp";
-
 import g1 from "../../assets/images/ColdMix/GallerySlider/CMG1.webp";
 import g2 from "../../assets/images/ColdMix/GallerySlider/CMG2.webp";
 import g3 from "../../assets/images/ColdMix/GallerySlider/CMG3.webp";
@@ -18,6 +18,7 @@ import g5 from "../../assets/images/ColdMix/GallerySlider/CMG5.webp";
 import g6 from "../../assets/images/ColdMix/GallerySlider/CMG6.webp";
 import g7 from "../../assets/images/ColdMix/GallerySlider/CMG7.webp";
 import g8 from "../../assets/images/ColdMix/GallerySlider/CMG8.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
 
 const binSlides = [
   {
@@ -78,19 +79,18 @@ const binSlides = [
       <p class="text-sm md:text-lg">
         Our cold mix asphalt plants offer a wide range of optional features as
         flow detectors for precise monitoring, and vibrators to ensure smooth
-        material flow. Customizable with bin dividers, level indicators to
-        prevent high- and low-level conditions, extensions, and grizzlies, they
-        adapt to diverse material handling requirements, delivering efficiency
-        and reliability in any project.
+        material flow. Customizable, they adapt to diverse material handling
+        requirements, delivering efficiency and reliability in any project.
       </p>
     </div>
-    <div slot="right" class="flex flex-col justify-center gap-3">
-      <h1 class="text-xl md:text-2xl">
-        24/7 customer service
-      </h1>
-      <ul class="text-sm lg:text-lg md:text-lg">
-        <p>Our team is available around the clock, ready to assist you at any time, even on weekends and holidays.</p>
-      </ul>
+    <div slot="right" class="flex flex-col justify-center lg:pl-3 md:pl-5">
+      <h1 class="text-xl md:text-2xl">24/7 customer service</h1>
+      <div class="text-sm lg:text-lg md:text-lg">
+        <p>
+          Our team is available around the clock, ready to assist you at any
+          time, even on weekends and holidays.
+        </p>
+      </div>
     </div>
   </TwoColumnSection>
   <div
@@ -145,17 +145,13 @@ const binSlides = [
     </div>
   </div>
   <div class="w-full md:w-3/4 max-w-7xl mx-auto px-8 py-10">
-    <video
-      playsinline
-      controls
-      poster="/Gallery/customdes.webp"
-      preload="metadata"
-      width="1280"
-      height="720"
-    >
-      <source src="/Videos/Webm/PGMC.webp" type="video/webm" />
-      <source src="/Videos/Mp4/PGMC.mp4" type="video/mp4" />
-    </video>
+    <SmartVideo
+      client:visible
+      src="/Videos/Webm/PGMC.webm"
+      poster={img2.src}
+      isLoop={false}
+      autoplayOnMobile={false}
+    />
   </div>
   <div
     class="w-full flex flex-col justify-center items-center gap-10 max-w-7xl mx-auto px-8 py-10"
@@ -163,13 +159,13 @@ const binSlides = [
     <h1 class="text-blueMain text-xl md:text-2xl">
       Discover the Magic Behind our Pugmill
     </h1>
-    <p class="text-sm lg:text-lg md:text-lg text-grisP">
+    <p class="text-sm lg:text-lg md:text-lg text-[#454545]">
       The pugmill is a crucial component in cold mix plants, designed to
       effectively blend a variety of materials, including aggregates and asphalt
       emulsion into a uniform mix. Its heavy-duty construction ensures smooth
       operation and reliable performance over time.
     </p>
-    <p class="text-sm lg:text-lg md:text-lg text-grisP">
+    <p class="text-sm lg:text-lg md:text-lg text-[#454545]">
       The pugmill’s mixing process allows precise homogenization of the
       aggregates, making it ideal for a wide range of applications that require
       high-quality cold mix. With simple maintenance and an easy-to-operate
@@ -218,7 +214,7 @@ const binSlides = [
         class={"w-3/4 h-auto object-contain"}
       />
     </div>
-    <p class="text-grisT text-sm lg:text-lg md:text-lg">
+    <p class="text-[#454545] text-sm lg:text-lg md:text-lg">
       The pugmill features twin synchronized shafts driven by a gear system for
       balanced and efficient mixing. Its cast-iron mixer paddles are fully
       interchangeable and built for durability. During operation, a protective

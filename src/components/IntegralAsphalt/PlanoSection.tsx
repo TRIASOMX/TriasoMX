@@ -140,7 +140,7 @@ const PlanoSection = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      <div className="h-[65vh] relative flex items-center justify-center w-full">
+      <div className="h-[100vh] lg:h-[80vh] md:h-[80vh] relative flex items-center justify-center w-full">
         <div
           className="absolute bottom-0 w-full h-4/6 overflow-hidden"
           style={{
@@ -1794,6 +1794,7 @@ const PlanoSection = () => {
                         CHASSIS & STRUCTURE
                       </h1>
                       <button
+                        aria-label="See more about the chassis and structure of the system"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2206,6 +2207,7 @@ const PlanoSection = () => {
                           DURABILITY & SAFETY
                         </h1>
                         <button
+                          aria-label="See more about the Durability and Safety"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2269,6 +2271,7 @@ const PlanoSection = () => {
                           CONTROL & OPERATION
                         </h1>
                         <button
+                          aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2340,6 +2343,7 @@ const PlanoSection = () => {
                           COMPONENTS & ELECTRICAL
                         </h1>
                         <button
+                          aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2430,6 +2434,7 @@ const PlanoSection = () => {
                           PORTABILITY
                         </h1>
                         <button
+                          aria-label="See more about the portability"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -2492,6 +2497,7 @@ const PlanoSection = () => {
                         BURNER SYSTEM
                       </h1>
                       <button
+                        aria-label="See more about the burner system"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2540,6 +2546,7 @@ const PlanoSection = () => {
                         COMPLIANCE WITH INDUSTRY STANDARDS
                       </h1>
                       <button
+                        aria-label="See more about the compliance with industry standards"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2773,6 +2780,7 @@ const PlanoSection = () => {
                         CHASSIS & STRUCTURE
                       </h1>
                       <button
+                        aria-label="See more about the chassis and structure of the system"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2913,6 +2921,7 @@ const PlanoSection = () => {
                         DRUM MIXER
                       </h1>
                       <button
+                        aria-label="See more about the Drum Mixer Specifications"
                         className="block"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -3019,6 +3028,7 @@ const PlanoSection = () => {
                         ASPHALT TANK
                       </h1>
                       <button
+                        aria-label="See more about the Asphalt Tank specifications"
                         className="block"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -3114,6 +3124,7 @@ const PlanoSection = () => {
                         BIN UNITS
                       </h1>
                       <button
+                        aria-label="See more about the Bin Units specifications"
                         className="block"
                         onClick={() =>
                           setOpenSections((prev) => ({

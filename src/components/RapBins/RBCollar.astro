@@ -14,6 +14,8 @@ import heroIMG from "../../assets/images/RapBins/heroBG.webp";
 import img4 from "../../assets/images/RapBins/RapProv6.webp";
 import img4Low from "../../assets/images/RapBins/Low/RapProv6Low.webp";
 import { Image } from "astro:assets";
+import poster1 from "../../assets/images/RapBins/Gallery/RBG1.webp"
+import SmartVideo from "../unitComponents/SmartVideo";
 ---
 
 <section class="w-full font-bold">
@@ -48,12 +50,12 @@ import { Image } from "astro:assets";
       class="w-full grid grid-cols-1 md:grid-cols-3 bg-grisT max-w-7xl px-8 mx-auto justify-center items-center pt-6"
     >
       <div
-        class="w-full col-span-2 text-white flex lg:hidden md:hidden flex-col justify-center items-center py-5 lg:items-end md:items-end"
+        class="w-full col-span-2 text-white flex lg:hidden md:w-4/6 md:mx-auto  flex-col justify-center items-center py-5 lg:items-end "
       >
         <Image
           src={rapFlight}
           alt="RAP Entry flights"
-          class="rounded-lg"
+          class="rounded-lg "
         />
       </div>
 
@@ -96,18 +98,18 @@ import { Image } from "astro:assets";
 
   <div class="w-full flex flex-col items-center justify-center font-bold mt-10">
     <div class="max-w-7xl px-8 lg:mb-20 mx-auto">
-      <h1 class="text-redBg text-xl md:text-3xl text-center">
+      <h1 class="text-redBg text-xl lg:text-3xl text-center">
         With Triaso, Become the Exclusive Provider of Hot Mix for all Paving
         Projects in Your Region
       </h1>
     </div>
-    <div class="max-w-7xl px-8 mx-auto flex justify-center">
+    <!-- <div class="max-w-7xl px-8 mx-auto flex justify-center">
       <Image
         src={RAProv5}
         alt="Counterflow Asphalt Plant with workers next to it"
-        class="hero-img w-full rounded-lg"
+        class="hero-img w-4/6 rounded-lg"
       />
-    </div>
+    </div> -->
     <div
       class="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center gap-6"
     >
@@ -127,7 +129,7 @@ import { Image } from "astro:assets";
         <Image
           src={img2}
           alt="Large-capacity RAP bin"
-          class="side-img rounded-2xl will-change-transform"
+          class="side-img rounded-2xl w-[85%] will-change-transform"
         />
       </div>
     </div>
@@ -142,17 +144,17 @@ import { Image } from "astro:assets";
       />
     </div>
 
-    <div class="relative flex flex-col lg:hidden">
+    <div class="relative flex flex-row items-center px-8 pb-5 gap-2 lg:hidden">
       <Image
         src={img2}
         alt="Large-capacity RAP bin"
-        class="rounded-2xl w-[40%] translate-x-[200px] translate-y-0"
+        class="rounded-2xl w-1/2 object-contain"
       />
 
       <Image
         src={img4Low}
         alt="Belt Feeders with Rubberized Pulley"
-        class="absolute top-0 left-0 w-[53%] rounded-lg -translate-x-1 translate-y-2 shadow-lg"
+        class="rounded-2xl w-1/2 object-contain"
       />
     </div>
   </div>
@@ -175,7 +177,7 @@ import { Image } from "astro:assets";
       </p>
     </div>
     <div slot="right" class="flex flex-col justify-center gap-3">
-      <h1 class="text-xl md:text-2xl">AVAILABLE IN 14 OR 21-TONS</h1>
+      <h1 class="text-xl md:text-2xl">AVAILABLE IN 14 OR 20-TONS</h1>
       <p class="text-sm md:text-lg">
         With configurations of one, two, or three RAP bin units
       </p>
@@ -245,17 +247,13 @@ import { Image } from "astro:assets";
     </div>
   </div>
   <div class="w-full flex justify-center max-w-7xl px-4 mx-auto">
-    <video
-      playsinline
-      controls
-      poster="/Gallery/customdes.webp"
-      preload="metadata"
-      width="1280"
-      height="720"
-    >
-      <source src="/Videos/Webm/ProvVideo1.webp" type="video/webm" />
-      <source src="/Videos/Mp4/ProvVideo1.mp4" type="video/mp4" />
-    </video>
+    <SmartVideo
+      client:visible
+      src="/Videos/Webm/ProvVideo1.webm"
+      poster={poster1.src}
+      isLoop={false}
+      autoplayOnMobile={false}
+    />
   </div>
 </section>
 

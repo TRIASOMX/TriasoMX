@@ -29,7 +29,7 @@ const CMOdom = () => {
             setValue(100);
             setValue5(500)
              setValue4(14);
-            setValue1(21);
+            setValue1(20);
             setValue2(30);
            
             setValue3(24);
@@ -60,7 +60,7 @@ const CMOdom = () => {
               <Odometer value={value5} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-grisP">Production size range</p>
+            <p className="text-[#4F4F4F]">Production size range</p>
           </div>
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
@@ -70,7 +70,7 @@ const CMOdom = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">tons</p>
             </div>
-            <p className="text-grisP">Bin unit capacity</p>
+            <p className="text-[#4F4F4F]">Bin unit capacity</p>
           </div>
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
@@ -78,7 +78,7 @@ const CMOdom = () => {
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <p className="text-7xl font-bold ml-3">''</p>
             </div>
-            <p className="text-grisP text-start w-full">
+            <p className="text-[#4F4F4F] text-start w-full">
               Collecting Conveyor
             </p>
           </div>

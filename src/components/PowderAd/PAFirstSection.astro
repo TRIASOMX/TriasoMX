@@ -1,5 +1,7 @@
 ---
 import Separator from "../unitComponents/Separator.astro";
+import SmartVideo from "../unitComponents/SmartVideo";
+import poster1 from "../../assets/images/PowderA/Gallery/PAF1.webp"
 ---
 
 <section
@@ -26,22 +28,14 @@ import Separator from "../unitComponents/Separator.astro";
       applications requiring precise dosing and handling of powder additives.
     </p>
     
-  <div class="max-w-7xl px-8 mx-auto pt-10">
-    <video
-      playsinline
-      controls
-      poster="/Gallery/customdes.webp"
-      preload="metadata"
-      width="1280"
-      height="720"
-    >
-      <source src="/Videos/Webm/TolvaAdIng.webp" type="video/webm" />
-      <source src="/Videos/Mp4/TolvaAdIng.mp4" type="video/mp4" />
-    </video>
-    
-    <h1 class="text-center text-xl lg:text-3xl md:text-3xl text-blueMain pt-10">
-      Consistent Heat, Consistent Mix
-    </h1>
+  <div class="max-w-7xl mx-auto pt-5 ">
+    <SmartVideo
+      client:visible
+      src="/Videos/Webm/TolvaAdIng.webm"
+      poster={poster1.src}
+      isLoop={false}
+      autoplayOnMobile={false}
+    />
   </div>
 
 

@@ -18,7 +18,7 @@ import Image from 'astro/components/Image.astro';
     </div>
     
     <div class="w-full flex justify-center">
-        <button class="text-blueMain px-4 py-2 rounded-2xl text-6xl" onclick="toggleDropdown()" id="dropdown-button">
+        <button class="text-blueMain px-4 py-2 rounded-2xl text-6xl" onclick="toggleDropdown()" id="dropdown-button" aria-label="See more information about the Oil heaters">
             <svg width="84px" height="84px" stroke-width="2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff" id="dropdown-arrow">
                 <path d="M6 9L12 15L18 9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
@@ -26,7 +26,7 @@ import Image from 'astro/components/Image.astro';
     </div>
     </div>
      
-    <div class="w-full transition-all duration-300 overflow-hidden px-8 md:px-52 bg-grisT text-white" id="extradiv" style="max-height: 0">
+    <div class="w-full transition-all duration-300 overflow-hidden px-8 bg-grisT text-white" id="extradiv" style="max-height: 0">
         <div class="text-white w-full list-inside md:mb-0 md:opacity-100">
             <div class="w-full max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 py-10">
                 <div class="flex flex-col justify-start items-center w-full gap-10">

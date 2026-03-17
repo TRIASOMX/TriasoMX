@@ -119,6 +119,15 @@ const ASPlanos = () => {
     C4_2: false,
     C4_3: false,
   });
+
+  const tabToVersion: Record<number, string> = {
+  1: "12",
+  2: "16",
+  3: "20",
+  4: "24",
+  5: "30",
+};
+
   const modelOptions = [
     { id: 1, label: "12,000 Gallons" },
     { id: 2, label: "16,000 Gallons" },
@@ -126,6 +135,12 @@ const ASPlanos = () => {
     { id: 4, label: "24,000 Gallons" },
     { id: 5, label: "30,000 Gallons" },
   ];
+
+  const handleTabChange = (tabId: number) => {
+  setActiveTab(tabId);
+  setActiveVersion(tabToVersion[tabId]);
+};
+
   useClipPathScrollTrigger({
     enabled: activeTab === 1,
 
@@ -143,7 +158,7 @@ const ASPlanos = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      <div className="h-[80vh] relative flex items-center justify-center bg-bgMain w-full">
+      <div className="h-[100vh] lg:h-[80vh] relative flex items-center justify-center bg-bgMain w-full">
         <div
           className="absolute bottom-0 w-full h-4/6 overflow-hidden"
           style={{
@@ -230,7 +245,7 @@ const ASPlanos = () => {
               <div className="relative">
                 <select
                   value={activeTab}
-                  onChange={(e) => setActiveTab(Number(e.target.value))}
+                  onChange={(e) => handleTabChange(Number(e.target.value))}
                   className="w-full px-5 py-3 pr-12 rounded-full bg-white text-gray-900 text-sm font-medium
                  appearance-none focus:outline-none focus:ring-2 focus:ring-white/50"
                 >
@@ -267,7 +282,7 @@ const ASPlanos = () => {
               {modelOptions.map((option) => (
                 <button
                   key={option.id}
-                  onClick={() => setActiveTab(option.id)}
+                  onClick={() => handleTabChange(option.id)}
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300 w-[150px]
                     ${activeTab === option.id
                       ? "text-gray-900 bg-white border-white"
@@ -303,6 +318,7 @@ const ASPlanos = () => {
                           HEATING SYSTEM
                         </h1>
                         <button
+                          aria-label="See more about the heating system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -362,6 +378,7 @@ const ASPlanos = () => {
                           CONTROL & OPERATION
                         </h1>
                         <button
+                          aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -426,6 +443,7 @@ const ASPlanos = () => {
                           PORTABILITY
                         </h1>
                         <button
+                          aria-label="See more about the portability"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -497,6 +515,7 @@ const ASPlanos = () => {
                           COMPLIANCE WITH INDUSTRY STANDARDS
                         </h1>
                         <button
+                          aria-label="See more about the compliance with industry standards"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -544,6 +563,7 @@ const ASPlanos = () => {
                           COMPONENTS & ELECTRICAL
                         </h1>
                         <button
+                          aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -598,6 +618,7 @@ const ASPlanos = () => {
                           DURABILITY & SAFETY
                         </h1>
                         <button
+                          aria-label="See more abour the durability and safety of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -663,6 +684,7 @@ const ASPlanos = () => {
                         OPERATING TEMPERATURE
                       </h1>
                       <button
+                        aria-label="See more about the operating temperature"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -912,6 +934,7 @@ const ASPlanos = () => {
                         TANK DIMENSIONS
                       </h1>
                       <button
+                        aria-label="See more about the tank dimensions"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -996,6 +1019,7 @@ const ASPlanos = () => {
                         CHASSIS & STRUCTURE
                       </h1>
                       <button
+                        aria-label="See more about the chassis and structure"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({

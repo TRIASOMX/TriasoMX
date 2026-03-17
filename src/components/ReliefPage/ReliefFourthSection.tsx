@@ -120,7 +120,7 @@ export default function ReliefFourthSection() {
                         <img src={img1.src} alt="Triaso OS" className="w-full lg:w-4/5 md:w-4/5" />
                     </div>
 
-                    <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center gap-4 md:gap-10'>
+                    <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center gap-4 py-24 md:gap-10'>
                         <div className='w-full md:w-[40%] space-y-4 md:space-y-10'>
                             <p className='font-bold text-[#14427c] text-3xl'> Automatic unit conversion</p>
                             <p className='font-bold text-[#393939] text-xl md:text-2xl'>The interface is simple and flexible. It allows you to view the information in different systems and formats.</p>
@@ -175,13 +175,13 @@ export default function ReliefFourthSection() {
                     >
                         <div className='text-[#d9d9d9] space-y-2 px-4 text-base md:text-lg'>
                             <h2>The operator only needs to define the mix recipe:</h2>
-                            <ul className='list-disc'>
+                            <ul className='list-disc pl-5'>
                                 <li>Target mix temperature</li>
                                 <li>Production rate (TPH)</li>
                                 <li>Mix design parameters:</li>
                             </ul>
 
-                            <ul className='list-disc pl-4'>
+                            <ul className='list-disc pl-8'>
                                 <li>RAP percentage</li>
                                 <li>Virgin aggregates fractions
                                 </li>
@@ -217,11 +217,12 @@ export default function ReliefFourthSection() {
                         <div className='flex flex-col gap-3 order-1 md:order-2'>
                             <h2 className='font-bold text-3xl text-white text-end'>Mix Design Storage</h2>
                             <h2 className='font-bold text-2xl text-white text-end'>Mix design storage for more than 10,000 recipes.</h2>
-                            <p className='font-bold text-base md:text-lg text-[#d9d9d9] text-end'>We do not rely on primitive mix design application methods.
+                            <div className='space-y-3 w-full'>
+                                <p className='font-bold text-sm md:text-base text-[#d9d9d9] text-end w-full'>We do not rely on primitive mix design application methods.</p>
+                                <p className='font-bold text-sm md:text-base text-[#d9d9d9] text-end'>Instead, we focus on modern, fast, and straightforward execution for asphalt pavement mix production.</p>
+                                <p className='font-bold text-sm md:text-base text-[#d9d9d9] text-end'>Mix designs are easy to execute and manage for each of your customers.</p>
+                            </div>
 
-                                Instead, we focus on modern, fast, and straightforward execution for asphalt pavement mix production.
-
-                                Mix designs are easy to execute and manage for each of your customers</p>
                         </div>
 
                     </div>
@@ -262,7 +263,7 @@ export default function ReliefFourthSection() {
                                         }`}
                                 >
                                     <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff" stroke-width="1.5"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM16.0303 13.0303L12.5303 16.5303C12.2374 16.8232 11.7626 16.8232 11.4697 16.5303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L11.25 14.1893V8C11.25 7.58579 11.5858 7.25 12 7.25C12.4142 7.25 12.75 7.58579 12.75 8V14.1893L14.9697 11.9697C15.2626 11.6768 15.7374 11.6768 16.0303 11.9697C16.3232 12.2626 16.3232 12.7374 16.0303 13.0303Z" fill="#ffffff"></path></svg>
-                                    
+
                                 </span>
                             </button>
                         </div>
@@ -277,7 +278,7 @@ export default function ReliefFourthSection() {
                     >
                         <div className='pl-0 lg:pl-12 md:pl-12 space-y-5 px-8 text-lg pb-5'>
                             <p className='text-white'>Unlike systems that restrict manual intervention, our asphalt plants are designed to provide full manual control in addition to advanced automation.</p>
-                            <p className='font-bold text-white'>Keep your asphalt mix production running, <span className='underline text-white'>even if it needs an electronic replacement. </span></p>
+                            <p className='font-bold text-white'>Keep your asphalt mix production running, <span className=' text-white'>even if it needs an electronic replacement. </span></p>
                             <ul className='list-disc pl-5'>
                                 <li className='text-white'>Designed to maintain production continuity under changing operating conditions.</li>
                             </ul>
@@ -287,10 +288,12 @@ export default function ReliefFourthSection() {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto flex flex-col justify-center items-center space-y-5 pt-5 pb-5">
-                <div className="flex justify-center items-center px-4">
+            <div className="max-w-7xl mx-auto flex flex-col justify-center items-center space-y-5 py-14">
+                <div className="flex flex-col justify-center items-center px-4">
                     <h1 className=" font-bold text-2xl md:text-4xl text-center">
                         Plant operation depends on fewer operators,
+                    </h1>
+                    <h1 className="font-bold text-2xl md:text-4xl text-center">
                         without compromising control or production quality.
                     </h1>
                 </div>
@@ -331,7 +334,7 @@ export default function ReliefFourthSection() {
                 <div className="max-w-7xl mx-auto flex justify-start px-8 ">
                     <div className="space-y-4 md:space-y-10">
                         <h1 className="uppercase font-bold text-black text-4xl md:text-5xl">Ask Anything</h1>
-                        <p ><span className="text-[#393939] font-semibold underline text-3xl md:text-4xl">about your asphalt plant operation and  </span><span className="font-bold text-black text-4xl md:text-5xl">receive <span className="font-bold text-black text-4xl md:text-5xl underline">immediate</span></span></p>
+                        <p ><span className="text-[#393939] font-semibold  text-3xl md:text-4xl">about your asphalt plant operation and  </span><span className="font-bold text-black text-4xl md:text-5xl">receive <span className="font-bold text-black text-4xl md:text-5xl">immediate</span></span></p>
                         <p className="text-[#393939] font-semibold text-3xl md:text-4xl">practical assistance.</p>
                     </div>
                 </div>

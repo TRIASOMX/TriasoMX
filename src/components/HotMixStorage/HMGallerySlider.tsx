@@ -45,7 +45,7 @@ export default function HMGallerySlider({ images }: Props) {
     return (
         <div className="w-full mx-auto py-10 bg-[#727272] relative">
             {/* Contenedor deslizable */}
-            <div className="relative overflow-hidden max-w-7xl mx-auto gap-5 h-[300px]">
+            <div className="relative overflow-hidden max-w-7xl mx-auto gap-5 h-[320px]">
                 <div
                     ref={containerRef}
                     className={`flex transition-transform duration-500 ease-in-out ${isMobile
@@ -74,9 +74,9 @@ export default function HMGallerySlider({ images }: Props) {
                                 alt={img.title}
                                 className="w-full h-64 object-cover rounded shadow hover:scale-105 transition bg-white"
                             />
-                            <div className="flex flex-row justify-between items-center">
-                                <div className="mt-4 text-start font-bold text-white mb-4">
-                                    {img.title}
+                            <div className="flex flex-row justify-between items-start mt-2">
+                                <div className=" text-start font-bold text-white mb-4">
+                                    {img.title} 
                                 </div>
                                 <svg fill="#14437d" width="32" height="32" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

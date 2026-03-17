@@ -5,14 +5,16 @@ import Tred from "../../assets/images/AsphaltStorage/redT.webp";
 import FPH1 from "../../assets/images/FuelPreHeaters/FPH1.webp";
 import FPH2 from "../../assets/images/FuelPreHeaters/FPH2.webp";
 import FPH2Low from "../../assets/images/FuelPreHeaters/Low/FPH2Low.webp";
-import FPH3 from "../../assets/images/FuelPreHeaters/FPH3.webp";
+import FPH3 from "../../assets/images/FuelPreHeaters/FPH4.webp";
 import fIcon from "../../assets/images/FuelPreHeaters/FlamaIcon.svg";
 import img1 from "../../assets/images/Burners/10.webp";
-import bgBanner from "../../assets/images/IntegralAsphalt/Hero1.webp"
+import bgBanner from "../../assets/images/IntegralAsphalt/Hero1.webp";
 import FPHPlanos from "./FPHPlanos";
 import FPHGallery from "./FPHGallery.astro";
 import { Image } from "astro:assets";
 import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro";
+import SmartVideo from "../unitComponents/SmartVideo";
+import poster1 from "../../../public/Videos/Webm/Posters/8.webp"
 ---
 
 <section class="w-full font-bold mt-20 flex flex-col">
@@ -20,19 +22,14 @@ import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro
     class="w-full max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-10 pb-10"
   >
     <div class="w-full flex flex-col gap-10">
-      <div class="w-full">
-        <video
-          class="w-full rounded-lg"
-          playsinline
-          controls
-          poster="/Gallery/customdes.webp"
-          preload="metadata"
-          width="1280"
-          height="720"
-        >
-          <source src="/Videos/Webm/bprov1.webp" type="video/webm" />
-          <source src="/Videos/Mp4/bprov1.mp4" type="video/mp4" />
-        </video>
+      <div class="w-full rounded-lg">
+        <SmartVideo 
+        client:visible
+        src="/Videos/Webm/bprov1.webm"
+        poster={poster1.src}
+        isLoop={true}
+        autoplayOnMobile={false}
+        />
       </div>
       <div class="w-full">
         <h1 class="text-center font-bold text-2xl md:text-3xl">
@@ -92,10 +89,10 @@ import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro
       </h1>
     </div>
     <div
-      class="w-full bg-[#272526] grid grid-cols-1 px-8 md:px-52 gap-10 pt-20 pb-20"
+      class="w-full bg-[#272526] grid grid-cols-1  gap-10 pt-20 pb-20"
     >
       <div
-        class="max-w-7xl grid grid-cols-1 md:grid-cols-2 justify-center mx-auto gap-6"
+        class="max-w-7xl grid grid-cols-1 md:grid-cols-2 justify-center mx-auto px-8 gap-6"
       >
         <div class="w-full text-white">
           <h2 class="text-xl md:text-2xl font-bold">
@@ -126,10 +123,10 @@ import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro
 
     <div class="w-full bg-[#272526] flex flex-col gap-10 relative">
       <div
-        class="w-full bg-bgBeige grid grid-cols-1 px-8 md:px-52 py-10 -skew-y-2"
+        class="w-full bg-bgBeige grid grid-cols-1  py-10 -skew-y-2"
       >
         <div
-          class="skew-y-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-7xl mx-auto pt-5"
+          class="skew-y-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-7xl mx-auto px-8 pt-5"
         >
           <h2 class="text-xl md:text-2xl font-bold">
             Inline Electric Heating for Maximum Efficiency
@@ -163,7 +160,7 @@ import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro
         </div>
       </div>
       <div
-        class="absolute bottom-[180px] right-0 lg:bottom-0 lg:right-44 w-[30%] lg:w-1/4 flex justify-center"
+        class="absolute flex justify-center bottom-[180px] right-0 w-[30%] lg:w-1/4 lg:bottom-0 lg:right-44 md:w-1/2"
       >
         <Image src={FPH1} alt="Fuel pre-heater system " />
       </div>
@@ -267,14 +264,14 @@ import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro
       <!-- <Image src="" alt="" /> -->
     </div>
     <div class="w-full max-w-7xl mx-auto px-8 relative flex flex-col gap-6">
-      <div class="absolute top-0 left-[-100px] lg:top-0 lg:left-[-30px] w-1/4 -z-10 pointer-events-none">
+      <div
+        class="absolute top-0 left-[-100px] lg:top-0 lg:left-[-30px] w-1/4 -z-10 pointer-events-none"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
-        
           zoomAndPan="magnify"
           viewBox="0 0 900 899.99999"
-          
           preserveAspectRatio="xMidYMid meet"
           version="1.0"
           ><defs
@@ -363,7 +360,7 @@ import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro
   </div>
   <div
     class="w-full bg-center bg-cover bg-no-repeat my-10"
-     style={{ backgroundImage: `url(${bgBanner.src})` }}
+    style={{ backgroundImage: `url(${bgBanner.src})` }}
   >
     <div class="w-full bg-black/70 py-10 md:py-20 bg-cover h-full">
       <div class="max-w-7xl mx-auto items-center px-8">
@@ -388,8 +385,8 @@ import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro
       </div>
     </div>
   </div>
-  <FPHGallery/>
+  <FPHGallery />
   <FPHPlanos client:only />
   <!-- <CardSection /> -->
-   <CardSectionResponsive/>
+  <CardSectionResponsive />
 </section>

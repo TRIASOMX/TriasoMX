@@ -91,7 +91,7 @@ const PAPlanos = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      <div className="h-[65vh] relative flex items-center justify-center bg-bgMain w-full">
+      <div className="h-[80vh] relative flex items-center justify-center bg-bgMain w-full">
         <div
           className="absolute bottom-0 w-full h-4/6 overflow-hidden"
           style={{
@@ -208,6 +208,7 @@ const PAPlanos = () => {
                           FEEDING & DOSING SYSTEM
                         </h1>
                         <button
+                          aria-label="See more about the feeding and dosing system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -263,6 +264,7 @@ const PAPlanos = () => {
                           COMPONENTS & ELECTRICAL
                         </h1>
                         <button
+                          aria-label="See more about the coponents and electrical composition"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -324,6 +326,7 @@ const PAPlanos = () => {
                           PORTABILITY
                         </h1>
                         <button
+                          aria-label="See more about the portability"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -405,6 +408,7 @@ const PAPlanos = () => {
                           CONTROL & OPERATION
                         </h1>
                         <button
+                          aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -480,6 +484,7 @@ const PAPlanos = () => {
                           DURABILITY & SAFETY
                         </h1>
                         <button
+                          aria-label="See more about the durability and safety"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -537,6 +542,7 @@ const PAPlanos = () => {
                           COMPLIANCE WITH INDUSTRY STANDARDS
                         </h1>
                         <button
+                          aria-label="See more about the compliance with industry standards"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -902,6 +908,7 @@ const PAPlanos = () => {
                             BIN DIMENSIONS
                           </h1>
                           <button
+                            aria-label="See more about the bin dimensions"
                             className="block md:hidden"
                             onClick={() =>
                               setOpenSections((prev) => ({

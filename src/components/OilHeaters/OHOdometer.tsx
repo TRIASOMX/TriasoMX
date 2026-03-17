@@ -64,7 +64,7 @@ const OHOdometer = () => {
               <Odometer value={value6} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">million Btu/Hr</p>
             </div>
-            <p className="text-grisP">Heating capacity</p>
+            <p className="text-[#4F4F4F]">Heating capacity</p>
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
@@ -72,7 +72,7 @@ const OHOdometer = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">inches</p>
             </div>
-            <p className="text-grisP">High eficiency diamter coil system</p>
+            <p className="text-[#4F4F4F]">High eficiency diamter coil system</p>
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
@@ -83,7 +83,7 @@ const OHOdometer = () => {
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">gallons</p>
             </div>
-            <p className="text-grisP text-start w-full">
+            <p className="text-[#4F4F4F] text-start w-full">
               Thermal oil expansion tank
             </p>
           </div>
