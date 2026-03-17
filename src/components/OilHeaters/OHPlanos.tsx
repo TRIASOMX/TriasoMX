@@ -11,17 +11,17 @@ const toggleConfig = [
     {
         id: "2",
         dimensions: {
-            width: 162,
-            height: 236,
-            length: 310,
+            width: 176,
+            height: 243,
+            length: 355,
         },
     },
     {
         id: "3",
         dimensions: {
-            width: 309.4,
-            height: 705.37,
-            length: 2127.37,
+            width: 176,
+            height: 243,
+            length: 355,
         },
     }
 ];
