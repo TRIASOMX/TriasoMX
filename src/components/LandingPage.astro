@@ -13,6 +13,7 @@ import ItemsSlider from "./LandinPage/ItemsSlider";
 import TriasoOSSection from "./LandinPage/TriasoOSSection.astro";
 import BannerSection from "./ContactPage/BannerSection.astro";
 import StackedInfoCards from "./unitComponents/StackedInfoCards.astro";
+import ImageAnimationLanding from "./LandinPage/ImageAnimationLanding.astro";
 
 const images1 = [
   {
@@ -99,10 +100,13 @@ const cards = [
   <InfoSection />
   <ItemsSlider client:idle images={images1} />
   <TriasoOSSection />
+  <ImageAnimationLanding />
 
   <div class="w-full bg-[#ca1c1c] my-10">
     <div class="flex justify-center items-center py-10">
-        <h1 class="font-bold text-white text-lg lg:text-2xl md:text-2xl">¡Apostemos por México!</h1>
+      <h1 class="font-bold text-white text-lg lg:text-2xl md:text-2xl">
+        ¡Apostemos por México!
+      </h1>
     </div>
   </div>
 

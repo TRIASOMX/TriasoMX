@@ -35,8 +35,8 @@ import { Image } from "astro:assets";
 
         <div
             class="relative w-full
-         bg-[url(/fabricaBG.webp)] bg-cover bg-center bg-no-repeat
-         h-[850px] md:h-[800px] lg:h-[900px]
+         bg-[url(/HeroS.webp)] bg-cover bg-bottom bg-no-repeat
+        h-[400px]
          flex flex-col justify-start pt-5 items-center"
         >
             <div
@@ -94,33 +94,39 @@ import { Image } from "astro:assets";
                     </div>
                 </div>
             </details>
+        </div>
+    </div>
 
-            <div
-                class="w-full md:pr-52 py-10 grid grid-cols-1 md:grid-cols-2 gap-10 relative"
-            >
-                <div class="w-full flex flex-col gap-6 col-span-2">
-                    <div class="w-3/4 md:pl-52 bg-redBg p-10 rounded-r-2xl">
-                        <h2 class="text-xl md:text-3xl font-bold text-white">
-                            100% manufactured in neighboring México
-                        </h2>
-                    </div>
-                </div>
+    <div
+        class="flex flex-col px-8 lg:flex-row md:flex-row justify-around relative max-w-7xl mx-auto gap-5 mt-5 lg:mt-0 lg:top-[-40px] md:top-[-40px]"
+    >
+        <div class="w-full lg:max-w-7xl flex">
+            <div class="bg-blueMain p-10 rounded-2xl">
+                <h2 class="text-xl md:text-3xl font-bold text-white">
+                    Configuraciones versátiles
+                </h2>
+                <p class="text-base md:text-lg font-thin text-[#d9d9d9]">
+                    Los equipos Triaso® están diseñado para adaptarse
+                    perfectamente a sus necesidades operativas. Solo indíquenos
+                    sus requerimientos y personalizaremos el equipo para
+                    ofrecerle una cotización a su medida.
+                </p>
             </div>
+        </div>
 
-            <div
-                class="w-full lg:max-w-7xl flex justify-start items-start relative"
-            >
-                <div class="bg-blueMain p-10 rounded-2xl lg:w-1/2">
-                    <h2 class="text-xl md:text-3xl font-bold text-white">
-                        Versatile Configurations
-                    </h2>
-                    <p class="text-base md:text-lg font-thin text-[#d9d9d9]">
-                        Triaso® equipment is designed to adapt seamlessly to
-                        your operational needs. Simply tell us your
-                        requirements, and we’ll customize the equipment to
-                        provide you with a tailored quote..
-                    </p>
-                </div>
+        <div class="w-full lg:max-w-7xl flex">
+            <div class="bg-[#ca1c1c] p-10 rounded-2xl">
+                <h2 class="text-xl md:text-3xl font-bold text-white">
+                    Diseñado para durar
+                </h2>
+                <p class="text-base md:text-lg font-thin text-[#d9d9d9]">
+                    Sabemos la importancia de que su equipo no pare de trabajar
+                    <br />
+                    <span
+                        >La operación de muchos equipos dependen de la
+                        confiabilidad de su equipo.
+                    </span>
+                </p>
             </div>
         </div>
     </div>
