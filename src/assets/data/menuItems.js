@@ -4,23 +4,23 @@ export const menuItems = [
     url: "/",
     children: [
       {
-        title: "ASPHALT PLANTS",
+        title: "PLANTAS DE ASFALTO",
         url: "/AsphaltPlant",
         children: [
           {
-            title: "DRUM MIXERS",
+            title: "MEZCLADORAS DE TAMBOR",
             url: "/DrumMixers",
           },
           {
-            title: "BAG HOUSES",
+            title: "CASAS DE BOLSAS ACOPLABLES",
             url: "/BagHouses",
           },
           {
-            title: "ASPHALT STORAGE TANKS",
+            title: "TANQUES DE ASFALTO",
             url: "/AsphaltStorage",
           },
           {
-            title: " BINS",
+            title: "BINS",
             url: "/BinUnits",
             children: [
               {
@@ -32,25 +32,25 @@ export const menuItems = [
                 url: "/RapBins",
               },
               {
-                title: "POWDER ADDITIVE BINS",
+                title: "ALIMENTADORES DE ADITIVOS EN POLVO",
                 url: "/PowderAd",
               }
             ]
           },
           {
-            title: "HEATING SYSTEMS",
+            title: "SISTEMAS DE CALENTAMIENTO",
             url: "/Burners",
             children: [
               {
-                title: "BURNERS",
+                title: "QUEMADORES",
                 url: "/Burners",
               },
               {
-                title: "FUEL PREHEATERS",
+                title: "PRECALENTADORES DE COMBUSTIBLE",
                 url: "/FuelPreHeaters",
               },
               {
-                title: "OIL HEATERS",
+                title: "CALDERAS",
                 url: "/OilHeaters",
               }
             ]
@@ -60,7 +60,7 @@ export const menuItems = [
             url: "/HotMix"
           },
           {
-            title: "COLD-MIX PLANTS",
+            title: "MEZCLADORAS EN FRÍO",
             url: "/ColdMix",
           },
           {
@@ -70,7 +70,7 @@ export const menuItems = [
         ]
       },
       {
-        title: "ROCK CRUSHERS",
+        title: "TRITURADORAS",
         url: "/#",
         children: [
           {
