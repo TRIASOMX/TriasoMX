@@ -1,0 +1,86 @@
+---
+// Importa tus componentes si decides modularizar
+---
+
+<div class="table-container max-w-7xl mx-auto px-4 py-12 font-sans text-gray-900">
+  <div class="bg-black text-white px-6 py-3 font-bold text-lg rounded-t-lg grid grid-cols-3 gap-4 items-center">
+    <div>Otros fabricantes mexicanos</div>
+    <div class="text-center">Desamaq</div>
+    <div class="text-center">Plus</div>
+  </div>
+
+  <div class="table-section border border-gray-200 border-t-0 rounded-b-lg">
+    <div class="table-section-content p-6">
+      <div class="grid grid-cols-3 gap-4 border-b border-gray-200 py-4 items-center">
+        <div>
+          <span class="text-xs text-gray-500">Fabricante</span>
+          <span class="font-bold block">Otros</span>
+        </div>
+        <div class="text-center font-bold">Triaso</div>
+        <div class="text-center font-bold">Triaso</div>
+      </div>
+      <div class="grid grid-cols-3 gap-4 border-b border-gray-200 py-4 items-center">
+        <div>
+          <span class="text-xs text-gray-500 flex items-center gap-1">Calidad de la manufactura <span class="w-3 h-3 border border-gray-400 inline-block"></span></span>
+          <span class="font-bold block">Deficientes</span>
+        </div>
+        <div class="text-center font-bold">Alta</div>
+        <div class="text-center font-bold">Alta</div>
+      </div>
+      <div class="grid grid-cols-3 gap-4 border-b border-gray-200 py-4 items-center last:border-b-0">
+        <div>
+          <span class="text-xs text-gray-500">Tipo de sistema eléctrico</span>
+          <span class="font-bold block">Comercial</span>
+        </div>
+        <div class="text-center font-bold">Industrial reforzado</div>
+        <div class="text-center font-bold">Industrial reforzado</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-section mt-1">
+    <button class="w-full text-left bg-gray-200 text-gray-900 px-6 py-3 font-bold text-lg grid grid-cols-3 gap-4 items-center rounded-lg section-toggle group">
+      <div class="col-span-3 flex justify-between items-center">
+        <span>Tambor mezclador</span>
+        <span class="w-5 h-5 flex items-center justify-center toggle-icon transition-transform duration-300 transform group-active:rotate-180">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </span>
+      </div>
+    </button>
+    <div class="table-section-content border border-gray-200 border-t-0 p-6 hidden">
+      <div class="grid grid-cols-3 gap-4 border-b border-gray-200 py-4 items-center">
+        <div>
+          <span class="text-xs text-gray-500">Disminución de producción por factores externos adversos</span>
+          <span class="font-bold block">Paros continuos en producción</span>
+        </div>
+        <div class="text-center font-bold">Disminución de producción</div>
+        <div class="text-center font-bold">Producción muy estable</div>
+      </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  // Lógica de TypeScript para el plegado/desplegado
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.table-section');
+    sections.forEach(section => {
+      const toggleButton = section.querySelector('.section-toggle');
+      const content = section.querySelector('.table-section-content');
+      const iconSvg = section.querySelector('.toggle-icon svg');
+
+      if (toggleButton && content && iconSvg) {
+        toggleButton.addEventListener('click', () => {
+          content.classList.toggle('hidden');
+          if (content.classList.contains('hidden')) {
+            iconSvg.classList.remove('rotate-180');
+            iconSvg.classList.add('rotate-0');
+          } else {
+            iconSvg.classList.remove('rotate-0');
+            iconSvg.classList.add('rotate-180');
+          }
+        });
+      }
+    });
+  });
+</script>
