@@ -129,10 +129,6 @@ export default function SlidersCarrusel({ images }: SlidersCarruselProps) {
                     {img.title}
                   </h1>
 
-                  <div className="text-justify text-[#4F4F4F] text-sm lg:text-base md:text-base font-semibold flex-grow">
-                    <div dangerouslySetInnerHTML={{ __html: img.texto }} />
-                  </div>
-
                   <div className="mt-4 pt-4 border-t border-gray-100 text-xs text-[#4F4F4F] font-semibold uppercase tracking-wide text-right">
                     See more
                   </div>

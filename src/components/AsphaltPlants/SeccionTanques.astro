@@ -1,0 +1,267 @@
+---
+import { Image } from "astro:assets";
+import SlidersCarrusel from "../IntegralAsphalt/SlidersCarrusel";
+import ASOdom from "../../assets/images/AsphaltStorage/ASOdo.webp";
+import Whatsbtn from "../unitComponents/Whatsbtn.astro";
+
+const images2 = [
+    {
+        src: "/Gallery/counterflow.webp",
+        title: "Counterflow drum mixer",
+        texto: `<span style="color:black">The counterflow drum mixer</span>, located at the center of the chassis, is engineered for efficient heat transfer and minimal fines loss, ensuring consistent asphalt mix quality. Its robust construction and advanced sealing minimize air infiltration and reduce maintenance. Designed specifically for the 10 Tph plant, it delivers reliable performance in a compact, cost-effective system.`,
+    },
+    {
+        src: "/Gallery/Caja2.webp",
+        title: "External pugmill mixer",
+        texto: `<span style="color:black">The external pugmill mixer</span>, mounted directly below the drum outlet, ensures superior final mixing of the asphalt. This added stage guarantees a more homogeneous and consistent mix by thoroughly blending materials before discharge. Driven by a 5 hp motor with a robust gearbox, it features interchangeable wear-resistant paddles for long service life and easy maintenance.`,
+    },
+    {
+        src: "/Gallery/aggregatesbin.webp",
+        title: "Aggregates bin",
+        texto: `<span style="color:black">The aggregates bin</span> is designed to store pre-dosed material ready for asphalt production. Its trapezoidal discharge and smooth belt operation ensure steady, controlled flow to the drying system. Equipped with a lagged head pulley for improved belt grip, it supports consistent feeding for reliable mix quality throughout the process.`,
+    },
+    {
+        src: "/Gallery/tank.webp",
+        title: "Asphalt tank",
+        texto: `<span style="color:black">The asphalt tank </span>is designed for efficient storage and heating, ensuring a steady asphalt supply at the ideal production temperature. With a 140,000 Btu/hr burner and integrated agitator, it enables fast heating and quick start-up. A 2" pump with a 2 hp motor ensures smooth flow, optimizing plant performance.`,
+    },
+    {
+        src: "/Gallery/electricgen.webp",
+        title: "Electric Generator",
+        texto: `<span style="color:black">The electric generator </span>provides consistent, reliable power for the entire asphalt plant. With 20 kW continuous and 22 kW emergency capacity, it supports all electrical components seamlessly. Powered by a 35 hp Cummins diesel engine and a 110-liter fuel tank, it offers extended runtime with low maintenance.`,
+    },
+    {
+        src: "/Gallery/controlgabinet.webp",
+        title: "Control Cabinet",
+        texto: `<span style="color:black">The control cabinet </span>centralizes the operation of the entire plant, offering intuitive management of all key components—from aggregate feeding to asphalt injection. Built with industrial-grade components, it ensures reliable performance in demanding environments. Its user-friendly interface allows precise control of temperature, material flow, and mixer timing, streamlining production and reducing operator error.`,
+    },
+    {
+        src: "/Gallery/fueltank.webp",
+        title: "Fuel Tank",
+        texto: `<span style="color:black">The fuel tank</span>, positioned behind the asphalt tank, has a 750-liter capacity and supplies diesel to the burner system. Its placement ensures easy access for refueling while maintaining a compact layout within the plant. Built for durability and continuous operation, it supports extended production runs without interruption.`,
+    },
+
+    {
+        src: "/Gallery/burner.webp",
+        title: "Burner",
+        texto: `<span style="color:black">The burner </span>optimizes heat generation for the drying and mixing process in the asphalt plant, ensuring efficient and stable combustion. Built with high-strength materials and industrial-grade components, it maintains reliable performance even under demanding conditions. Its precise control system automatically adjusts the air-fuel ratio to maximize thermal efficiency, reduce fuel consumption, and minimize emissions.`,
+    },
+
+    // agrega hasta 16 o más imágenes
+];
+---
+
+<div
+    class="w-full flex flex-col items-center justify-start text-black bg-[url(/HeroIntegral.webp)] bg-no-repeat bg-center bg-cover min-h-[550px] md:min-h-[700px]"
+>
+    <div class="w-full max-w-7xl mx-auto px-8 my-4 md:my-14">
+        <h1
+            class="text-2xl md:text-3xl text-start mb-1 md:mb-5 w-full font-bold"
+        >
+            Plantas de asfalto de <br />
+            contraflujo integrales de 10 Tph
+        </h1>
+        <h2
+            class="text-lg md:text-xl text-start w-full font-semibold text-[#393939]"
+        >
+            Ideal para trabajos municipales y mantenimiento de carreteras
+        </h2>
+        <p
+            class="mt-1 md:mt-5 text-[#313131] text-base md:text-lg font-semibold"
+        >
+            Tecnología de gran escala en un formato compacto
+        </p>
+    </div>
+</div>
+
+<div class="pt-10">
+    <h2 class="text-center font-bold text-black text-xl md:text-4xl">
+        Todo en una sola unidad.
+    </h2>
+</div>
+<div class="w-full lg:max-w-[2000px] mx-auto">
+    <SlidersCarrusel client:load images={images2} />
+</div>
+
+<div class="flex flex-col justify-center items-center w-full">
+    <h2 class="text-center font-bold text-[#14427c] text-xl md:text-3xl">
+        Venda a un precio más bajo, atraiga a más clientes y obténga mayores
+        ganancias.
+    </h2><br />
+    <a
+        href="/IntegralAphaltPlant"
+        aria-label="Go to page Integral Asphalt Plants"
+        class="text-white text-center mb-5 mt-5 text-xs md:text-sm font-normal border-2 border-[#14427c] rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-[#14427c] hover:bg-transparent hover:text-[#14427c]"
+    >
+        Conozca más de neustras plantas de asfalto de 10 Tph
+    </a>
+</div>
+
+<div
+    class="flex flex-col max-w-7xl mx-auto px-8 justify-center items-center bg-white rounded-2xl"
+>
+    <div class="pt-10">
+        <h1 class="text-3xl text-black font-bold">Tanques de asfalto</h1>
+    </div>
+
+    <div class="flex flex-row">
+        <div
+            class="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20 pb-5"
+        >
+            <div class="flex flex-col items-center justify-center">
+                <div
+                    class="flex text-5xl font-normal justify-center lg:justify-start items-baseline w-full"
+                >
+                    35
+                    <h1>-</h1>
+                    120
+                    <p class="text-sm font-normal ml-3">mil litros</p>
+                </div>
+                <p
+                    class="text-black font-thin text-center md:text-start lg:text-start w-full"
+                >
+                    Capacidad de almacenamiento
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+                <div
+                    class="flex text-5xl font-normal justify-center lg:justify-start items-baseline w-full"
+                >
+                    220
+                    <p class="text-sm font-normal ml-3">°C</p>
+                </div>
+                <p
+                    class="text-black font-thin text-center lg:text-start w-full"
+                >
+                    Máxima temperatura
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+                <div
+                    class="flex text-5xl font-normal justify-center lg:justify-start items-baseline w-full gap-2"
+                >
+                    1
+                    <p>&</p>
+                    2.4
+                    <p class="text-sm font-normal">millones</p>
+                </div>
+                <p
+                    class="text-black font-thin text-center lg:text-start w-full"
+                >
+                    de capacidad Btu/hr
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center">
+            <div>
+                <Image src={ASOdom} alt="Asphalt Storage Tank" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div
+    class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen md:static md:w-full md:ml-0 md:mr-0 bg-[url(/BgAST.webp)] bg-cover bg-no-repeat bg-center p-10 mt-10"
+>
+    <div class="max-w-7xl mx-auto px-8">
+        <h2 class="font-bold text-white text-xl md:text-2xl">
+            Tanques de almacenamiento de asfalto totalmente personalizables
+        </h2><br />
+        <div class="w-full flex flex-row justify-between">
+            <div class="w-full text-sm md:text-base">
+                <h3 class="font-bold text-white">Sistemas de calentamiento</h3>
+                <ul class="list-disc ml-6 font-thin text-white">
+                    <li>Fuego directo</li>
+                    <li class="list-none">
+                        <ul class="list-disc ml-10">
+                            <li>Calentamiento con gas LP (propano)</li>
+                            <li>Calentamiento con diésel</li>
+                        </ul>
+                    </li>
+                    <li>Calderas</li>
+                </ul>
+            </div>
+            <div class="w-full text-sm md:text-base">
+                <h3 class="font-bold text-white">Exterior</h3>
+                <ul class="list-disc ml-6 font-thin text-white">
+                    <li>Barandales conforme a normas OSHA</li>
+                    <li>Flancos estéticos</li>
+                    <li>Sobre patas o sobre llantas</li>
+                </ul>
+            </div>
+            <div class="w-full text-sm md:text-base">
+                <h3 class="font-bold text-white">
+                    Incorporadores y agitadores
+                </h3>
+                <ul class="list-disc ml-6 font-thin text-white">
+                    <li>Incorporadores de hule</li>
+                    <li>Incorporadores para todo tipo de polímeros</li>
+                    <li>Agitadores para cualquier aplicación</li>
+                </ul>
+            </div>
+            <div class="w-full text-sm md:text-base">
+                <h3 class="font-bold text-white">Sistema general</h3>
+                <ul class="list-disc ml-6 font-thin text-white">
+                    <li>Condensadores de vapor</li>
+                    <li>Válvulas manuales</li>
+                    <li>Con bomba sumergible</li>
+                    <li>Sistema de control computarizado</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Banner section -->
+<div
+    class="flex flex-col lg:flex-row bg-gradient-to-b from-blueMain from-50% to-blueSecondary to-50% lg:bg-gradient-to-r lg:from-blueMain lg:from-50% lg:to-blueSecondary lg:to-50%"
+>
+    <div class="flex flex-col max-w-7xl mx-auto py-14 lg:flex-row">
+        <div
+            class="w-full flex flex-col justify-center items-center gap-4 lg:mr-56"
+        >
+            <!-- Botón 1 -->
+            <Whatsbtn />
+
+            <a
+                href="/Contact"
+                aria-label="Button to request a quote"
+                class="bg-blueSecondary border-white border border- text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-center gap-2 shadow-md hover:bg-[#0044A4]/80"
+            >
+                Solicitar una cotización
+                <svg
+                    width="24px"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    color="#FFFFFF"
+                >
+                    <!-- Icono del segundo botón (opcional) -->
+                    <path
+                        d="M5 12H19M19 12L12 5M19 12L12 19"
+                        stroke="#FFFFFF"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+            </a>
+        </div>
+        <div
+            class="w-full h-full flex flex-col text-white justify-center items-center lg:items-end lg:justify-evenly"
+        >
+            <h1 class="font-bold w-full text-sm lg:text-xl lg:text-end">
+                Alta productividad y calidad a precios competitivos
+            </h1>
+            <p
+                class="text-sm lg:text-base text-center font-bold text-grisSubP lg:text-end"
+            >
+                Los contratistas que nos conocen prefieren Triaso sobre otras marcas por nuestra alta calidad, confiabilidad y precios.
+            </p>
+        </div>
+    </div>
+</div>
