@@ -1,0 +1,182 @@
+---
+import siloSealed from "../../assets/images/HotMix/siloSealed.webp";
+import siloUse from "../../assets/images/HotMix/siloUse.webp";
+import siloCone from "../../assets/images/HotMix/siloCone.webp";
+import single from "../../assets/images/HotMix/HMProv1.webp";
+import siloIcon from "../../assets/images/HotMix/icon5.webp";
+import noCrane from "../../assets/images/HotMix/icon4.webp";
+import { Image } from "astro:assets";
+import SmartVideo from "../unitComponents/SmartVideo";
+---
+
+<div class="max-w-7xl mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 space-x-0">
+        <div class="p-4 flex flex-col">
+            <div id="HotMix" class="scroll-mt-20">
+                <h1
+                    class="lg:text-4xl text-2xl w-full text-start text-[#393939] font-bold"
+                >
+                    SILOS DE MEZCLA ASFÁLTICA
+                </h1>
+            </div>
+
+            <div class="w-full mx-auto mt-10">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+                >
+                    <div
+                        class="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20 w-full"
+                    >
+                        <div
+                            class="flex flex-col justify-center items-center lg:items-start rounded-lg space-y-10"
+                        >
+                            <div class="flex flex-col">
+                                <div
+                                    class="flex text-5xl font-normal justify-center lg:justify-start items-center lg:items-baseline w-full"
+                                >
+                                    <p class="text-black">50-200</p>
+                                    <p
+                                        class="text-sm font-normal ml-3 text-black"
+                                    >
+                                        Tons
+                                    </p>
+                                </div>
+                                <p
+                                    class="text-black font-thin text-center lg:text-start w-full text-base"
+                                >
+                                    Rango de capacidad de almacenamiento de
+                                    mezcla asfáltica
+                                </p>
+                            </div>
+
+                            <div
+                                class="flex flex-col text-5xl font-normal justify-center lg:justify-start items-center lg:items-baseline w-full"
+                            >
+                                <div class="flex flex-row items-baseline">
+                                    <p class="text-black">10</p>
+                                    <p
+                                        class="text-sm font-normal ml-3 text-black"
+                                    >
+                                        mins
+                                    </p>
+                                </div>
+                                <p
+                                    class="text-black font-thin text-center lg:text-start w-full text-base"
+                                >
+                                    Tiempo de instalación
+                                </p>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <div
+                                    class="flex text-5xl font-normal justify-center lg:justify-start items-center lg:items-baseline w-full"
+                                >
+                                    <p class="text-black">72</p>
+                                    <p
+                                        class="text-sm font-normal ml-3 text-black"
+                                    >
+                                        horas
+                                    </p>
+                                </div>
+                                <p
+                                    class="text-black font-thin text-center lg:text-start w-full text-base"
+                                >
+                                    Conservación termica
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center md:items-end justify-center w-full"
+                    >
+                        <div class="w-full">
+                            <Image
+                                src={single}
+                                alt="Machine detail"
+                                class="w-full h-auto object-contain"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-6 w-full">
+            <div
+                class="grid grid-cols-2 lg:grid-cols-3 flex-col lg:flex-row md:flex-row justify-between bg-[#fffaeb] p-5 rounded-lg gap-4 w-full"
+            >
+                <div
+                    class="flex flex-col justify-center items-center text-center space-y-6 lg:space-y-2"
+                >
+                    <p class="text-[12px] lg:text-base md:text-base">
+                        Sellado de arriba a abajo
+                    </p>
+                    <Image
+                        src={siloSealed}
+                        alt="Silo sealed"
+                        class="lg:w-[80%] md:w-[80%]"
+                    />
+                </div>
+
+                <div
+                    class="flex flex-col justify-center items-center text-center"
+                >
+                    <p class="mt-2 text-[12px] lg:text-base md:text-base">
+                        Distribución uniforme sin segregación
+                    </p>
+                    <Image
+                        src={siloUse}
+                        alt="Usage of the Silo"
+                        class="lg:w-[80%] md:w-[80%]"
+                    />
+                </div>
+
+                <div
+                    class="flex flex-col justify-start items-center text-center col-span-2 lg:col-span-1"
+                >
+                    <p class="mt-2 text-[12px] lg:text-base md:text-base">
+                        Cono del silo
+                    </p>
+                    <br />
+                    <Image
+                        src={siloCone}
+                        alt="Silo Cone"
+                        class="w-1/2 lg:w-[80%] md:w-[40%]"
+                    />
+                </div>
+            </div>
+
+            <div class="px-5 bg-[#393939] lg:px-0 md:px-0">
+                <div class="flex flex-col gap-8 lg:pl-12">
+                    <div class="flex items-center gap-6">
+                        <div class="shrink-0">
+                            <Image
+                                src={noCrane}
+                                alt="No cranes"
+                                class="w-20 h-20 object-contain"
+                            />
+                        </div>
+                        <h1 class="text-lg lg:text-2xl md:text-2xl font-bold text-white">
+                            No se requieren grúas para la instalación
+                        </h1>
+                    </div>
+                    <div class="flex items-center justify-between gap-6">
+                        <h1
+                            class="text-lg lg:text-2xl md:text-2xl font-bold leading-tight text-white"
+                        >
+                            El silo más versátil y móvil del mercado
+                        </h1>
+                        <div class="shrink-0">
+                            <Image
+                                src={siloIcon}
+                                alt="Silo icon"
+                                class="w-20 h-20 object-contain"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
