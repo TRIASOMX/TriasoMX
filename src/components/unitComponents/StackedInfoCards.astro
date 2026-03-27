@@ -16,7 +16,6 @@ const {
 } = Astro.props;
 ---
 
-<!-- Cambio 1: agregar overflow-hidden al wrapper y min-h al section -->
 <section
   class="stack-section bg-neutral-100 flex flex-row justify-center items-center"
 >
@@ -34,7 +33,6 @@ const {
       </p>
     </div>
 
-    <!-- Cambio 2: overflow-hidden para cortar las cards que están abajo -->
     <div class="cards-wrapper relative h-[600px] overflow-hidden">
       {
         cards.map((card, i) => (
@@ -54,33 +52,28 @@ const {
 <script>
   import gsap from "gsap";
   import ScrollTrigger from "gsap/ScrollTrigger";
-
   gsap.registerPlugin(ScrollTrigger);
-
-  // ✅ FIX 1: Esperar al DOM antes de cualquier cosa
   document.addEventListener("DOMContentLoaded", () => {
     const section = document.querySelector(".stack-section");
-    const wrapper = section.querySelector(".cards-wrapper"); // ✅ FIX 2: usar el wrapper, no window
+    const wrapper = section.querySelector(".cards-wrapper"); 
     const cards = gsap.utils.toArray(".stack-card");
 
-    // ✅ FIX 3: Ocultar tarjetas abajo del wrapper (no de window.innerHeight)
     gsap.set(cards, {
-      y: (i) => (i === 0 ? 0 : wrapper.offsetHeight + 10), // +20 para que no asomen
+      y: (i) => (i === 0 ? 0 : wrapper.offsetHeight + 10), 
       zIndex: (i) => i,
       transformOrigin: "top center",
     });
 
-    // ✅ FIX 4: IntersectionObserver — solo inicializar cuando esté completamente visible
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             initAnimation(section, cards, wrapper);
-            observer.disconnect(); // Solo inicializar una vez
+            observer.disconnect(); 
           }
         });
       },
-      { threshold: 0.1 }, // 10% visible es suficiente para preparar la animación
+      { threshold: 0.1 }, 
     );
 
     observer.observe(section);
@@ -89,13 +82,13 @@ const {
   function initAnimation(section, cards, wrapper) {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: section, // ✅ FIX 5: trigger apunta a la sección exacta
+        trigger: section, 
         start: "top top",
         end: `+=${cards.length * 400}`,
         scrub: 0.8,
         pin: true,
-        pinSpacing: true, // ✅ FIX 6: evita que el pin colapse el espacio
-        anticipatePin: 1, // ✅ FIX 7: previene el "salto" al entrar en pin
+        pinSpacing: true, 
+        anticipatePin: 1,
       },
     });
 

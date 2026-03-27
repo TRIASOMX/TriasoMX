@@ -11,7 +11,10 @@ import bin2 from "../../assets/images/AsphaltPlant/bin2.webp";
 import Tred from "../../assets/images/AsphaltStorage/redT.webp";
 ---
 
-<div class="flex flex-col max-w-7xl mx-auto px-8 bg-white rounded-2xl pt-10">
+<div
+    id="Bolsas"
+    class="flex flex-col max-w-7xl mx-auto px-8 bg-white rounded-2xl pt-10"
+>
     <div class="pt-10 flex flex-col justify-start">
         <h1 class="text-3xl text-black font-bold">CASA DE BOLSAS</h1>
         <div class="flex flex-row">
@@ -78,30 +81,35 @@ import Tred from "../../assets/images/AsphaltStorage/redT.webp";
     />
 </div>
 
-<div class="justify-end grid grid-cols-12">
-    <div class="hidden lg:block col-span-4"></div>
+<div id="Tolvas" class="">
     <div
-        class="col-span-12 lg:col-span-7 grid grid-cols-1 md:grid-cols-3 bg-blueMain lg:rounded-t-2xl px-4 pb-4 pt-2 md:p-8"
+        class="relative w-full flex flex-col h-[50vh] items-end justify-end pt-10 bg-[url(/ProvBU1.webp)] bg-cover bg-center"
     >
-        <div id="BinUnits" class="scroll-mt-20 col-span-1">
-            <h1 class="lg:text-4xl text-3xl text-redBg font-bold">
-                <span class="text-white font-bold">UNIDAD DE TOLVAS</span>
-                <br />
-                TRIASO®
-            </h1>
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="hidden lg:block col-span-4"></div>
+        <div
+            class="lg:w-1/4 md:w-1/2 flex flex-col bg-blueMain rounded-t-2xl lg:rounded-t-2xl px-4 pt-2 lg:mr-20 relative"
+        >
+            <div id="BinUnits" class="scroll-mt-20 col-span-1">
+                <h1 class="lg:text-4xl text-3xl text-redBg font-bold">
+                    <span class="text-white font-bold">UNIDAD DE TOLVAS</span>
+                    <br />
+                    TRIASO®
+                </h1>
+            </div>
+            <div class="col-span-2">
+                <p class="lg:text-lg text-sm text-grisSubP">
+                    Las unidades de tolvas Triaso® garantizan un almacenamiento
+                    preciso y un flujo constante de agregados hacia el sistema
+                    de mezcla. Construidas con materiales de alta resistencia y
+                    diseñadas para la producción de asfalto, ofrecen
+                    alimentación constante, durabilidad y bajo mantenimiento
+                    para operación continua en cualquier proyecto.
+                </p>
+            </div>
         </div>
-        <div class="col-span-2">
-            <p class="lg:text-lg text-sm text-grisSubP">
-                Las unidades de tolvas Triaso® garantizan un almacenamiento
-                preciso y un flujo constante de agregados hacia el sistema de
-                mezcla. Construidas con materiales de alta resistencia y
-                diseñadas para la producción de asfalto, ofrecen alimentación
-                constante, durabilidad y bajo mantenimiento para operación
-                continua en cualquier proyecto.
-            </p>
-        </div>
+        <div class="col-span-1 hidden lg:block"></div>
     </div>
-    <div class="col-span-1 hidden lg:block"></div>
 </div>
 <div
     class="bg-blueMain text-white gap-4 flex flex-col md:flex md:flex-row w-full justify-between items-center px-4 pt-4 md:p-8"
@@ -117,8 +125,6 @@ import Tred from "../../assets/images/AsphaltStorage/redT.webp";
 >
     <BinSelector client:only />
 </div>
-
-
 
 <div class="max-w-[2400px] flex flex-col items-center justify-center">
     <div class="flex flex-col md:grid md:grid-cols-2 justify-center my-5">
@@ -185,7 +191,7 @@ import Tred from "../../assets/images/AsphaltStorage/redT.webp";
 </TwoColumnSection>
 
 <div
-    class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl px-8 mx-auto py-10 items-center justify-center"
+    class="w-full grid ggrid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-6 max-w-7xl px-8 mx-auto py-10 items-center justify-center"
 >
     <div>
         <h2 class="font-bold text-grisT text-lg md:text-xl">
@@ -199,7 +205,7 @@ import Tred from "../../assets/images/AsphaltStorage/redT.webp";
             de aditivos, mejorando la eficiencia general de producción con un
             mantenimiento mínimo.
         </p><br />
-        <div class="flex justify-center items-center">
+        <div class="justify-center items-center hidden lg:flex md:flex">
             <LearnBtnBlue
                 href="/PowderAd"
                 label="Go to page Powder Additives"
@@ -209,24 +215,44 @@ import Tred from "../../assets/images/AsphaltStorage/redT.webp";
     <div>
         <Image src={bin2} alt="Powder Additives Feeder" />
     </div>
+</div>
 
-    <div>
-        <Image src={bin2} alt="Powder Additives Feeder" />
+<div
+    class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2"
+>
+    <div></div>
+    <div class="font-bold text-grisT text-lg md:text-xl">
+        <p class="font-bold">Tolva de RAP</p>
     </div>
-    <div>
-        <h2 class="font-bold text-grisT text-lg md:text-xl">Tolva de RAP</h2><br
-        />
-        <p class="font-semibold text-grisP text-sm lg:text-lg md:text-lg">
-            Las tolvas RAP Triaso® están diseñadas para manejar y transportar de
-            manera eficiente la carpeta asfáltica reciclada (RAP) en plantas de
-            asfalto. Fabricadas para ofrecer durabilidad, garantizan un flujo de
-            material constante y confiable, permitiendo una integración fluida
-            en el proceso de producción de la planta. Gracias a su estructura
-            robusta, los alimentadores RAP Triaso® pueden soportar la naturaleza
-            pesada y abrasiva del RAP, reduciendo tiempos de inactividad y
-            asegurando una alta eficiencia operativa.
-        </p><br />
-        <div class="flex justify-center items-center">
+</div>
+<div class="bg-[#393939] w-full">
+    <div
+        class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center max-w-7xl mx-auto px-8"
+    >
+        <div class="py-2">
+            <Image src={bin2} alt="Powder Additives Feeder" />
+            <div class="justify-center items-center hidden lg:flex md:flex">
+                <LearnBtnBlue
+                    href="/PowderAd"
+                    label="Go to page Powder Additives"
+                />
+            </div>
+        </div>
+        <div>
+            <p class="font-semibold text-white text-sm lg:text-lg md:text-lg">
+                Las tolvas RAP Triaso® están diseñadas para manejar y
+                transportar de manera eficiente la carpeta asfáltica reciclada
+                (RAP) en plantas de asfalto. Fabricadas para ofrecer
+                durabilidad, garantizan un flujo de material constante y
+                confiable, permitiendo una integración fluida en el proceso de
+                producción de la planta. Gracias a su estructura robusta, los
+                alimentadores RAP Triaso® pueden soportar la naturaleza pesada y
+                abrasiva del RAP, reduciendo tiempos de inactividad y asegurando
+                una alta eficiencia operativa.
+            </p><br />
+        </div>
+
+        <div class="justify-center items-center flex lg:hidden md:hidden">
             <LearnBtnBlue
                 href="/PowderAd"
                 label="Go to page Powder Additives"

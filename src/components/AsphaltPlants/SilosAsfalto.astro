@@ -7,9 +7,10 @@ import siloIcon from "../../assets/images/HotMix/icon5.webp";
 import noCrane from "../../assets/images/HotMix/icon4.webp";
 import { Image } from "astro:assets";
 import SmartVideo from "../unitComponents/SmartVideo";
+import LearnBtn from "../unitComponents/LearnBtn.astro";
 ---
 
-<div class="max-w-7xl mx-auto px-8">
+<div id="Mezcla" class="max-w-7xl mx-auto px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 space-x-0">
         <div class="p-4 flex flex-col">
             <div id="HotMix" class="scroll-mt-20">
@@ -109,7 +110,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
                 <div
                     class="flex flex-col justify-center items-center text-center space-y-6 lg:space-y-2"
                 >
-                    <p class="text-[12px] lg:text-base md:text-base">
+                    <p class="text-[12px] font-bold lg:text-base md:text-base">
                         Sellado de arriba a abajo
                     </p>
                     <Image
@@ -120,7 +121,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
                 </div>
 
                 <div
-                    class="flex flex-col justify-center items-center text-center"
+                    class="flex flex-col justify-center font-bold items-center text-center"
                 >
                     <p class="mt-2 text-[12px] lg:text-base md:text-base">
                         Distribución uniforme sin segregación
@@ -135,7 +136,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
                 <div
                     class="flex flex-col justify-start items-center text-center col-span-2 lg:col-span-1"
                 >
-                    <p class="mt-2 text-[12px] lg:text-base md:text-base">
+                    <p class="mt-2 text-[12px] font-bold lg:text-base md:text-base">
                         Cono del silo
                     </p>
                     <br />
@@ -148,8 +149,8 @@ import SmartVideo from "../unitComponents/SmartVideo";
             </div>
 
             <div class="px-5 bg-[#393939] lg:px-0 md:px-0">
-                <div class="flex flex-col gap-8 lg:pl-12">
-                    <div class="flex items-center gap-6">
+                <div class="flex flex-col gap-3 px-8">
+                    <div class="flex items-center justify-evenly gap-6">
                         <div class="shrink-0">
                             <Image
                                 src={noCrane}
@@ -157,14 +158,13 @@ import SmartVideo from "../unitComponents/SmartVideo";
                                 class="w-20 h-20 object-contain"
                             />
                         </div>
-                        <h1 class="text-lg lg:text-2xl md:text-2xl font-bold text-white">
+                        <h1 class="text-lg lg:text-xl md:text-xl font-bold text-white">
                             No se requieren grúas para la instalación
                         </h1>
                     </div>
-                    <div class="flex items-center justify-between gap-6">
+                    <div class="flex items-center justify-evenly gap-6">
                         <h1
-                            class="text-lg lg:text-2xl md:text-2xl font-bold leading-tight text-white3
-                            0"
+                            class="text-lg lg:text-xl md:text-xl font-bold leading-tight text-white"
                         >
                             El silo más versátil y móvil del mercado
                         </h1>
@@ -175,6 +175,10 @@ import SmartVideo from "../unitComponents/SmartVideo";
                                 class="w-20 h-20 object-contain"
                             />
                         </div>
+                    </div>
+
+                    <div class="flex justify-center items-center pb-5">
+                        <LearnBtn/>
                     </div>
                 </div>
             </div>
