@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import hero1 from "../../assets/images/ColdMix/HeroColdMix.webp";
+Image
+const {img, title, description} = Astro.props;
+---
+
+<div class="w-full mx-auto bg-black mt-10 lg:mt-0">
+    <Image src={img} alt="" class="w-full"  height={800}  />
+
+</div>
+<div class="w-full bg-gradient-to-b from-black to-[#262425]">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col justify-center items-center pt-5 pb-14 space-y-5">
+            <h1 class="font-thin text-white text-lg md:text-2xl lg:text-2xl">
+                {title}
+            </h1>
+            
+            <p class="text-white text-sm lg:text-lg md:text-lg">
+                {description}
+            </p>
+        </div>
+    </div>
+</div>
