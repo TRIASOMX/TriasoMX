@@ -1,0 +1,113 @@
+---
+import SmartVideo from "../unitComponents/SmartVideo";
+import poster1 from "../../assets/images/Burners/Gallery/B1.webp";
+import QuemadorSlider from "./QuemadorSlider";
+
+const slides = [
+  {
+    title: "Precalentador de combustible",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget neque hendrerit, volutpat nulla sed, pulvinar ligula. Quisque eleifend blandit nisl vitae vestibulum.",
+    image: "https://placehold.co/600x400/png", 
+    bgColor: "#1a1a2e",
+   
+  },
+  {
+    title: "Sistema ionizador de plasma para optimizar la combustión.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget neque hendrerit, volutpat nulla sed, pulvinar ligula. Quisque eleifend blandit nisl vitae vestibulum.", 
+    image: "https://placehold.co/600x400/png", 
+    bgColor: "#0d2b4e",
+    
+  },
+  {
+    title: "Placeholder",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget neque hendrerit, volutpat nulla sed, pulvinar ligula. Quisque eleifend blandit nisl vitae vestibulum.",
+    image: "https://placehold.co/600x400/png",
+    bgColor: "#1f1a0e",
+    
+  },
+  {
+    title: "Placeholder",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget neque hendrerit, volutpat nulla sed, pulvinar ligula. Quisque eleifend blandit nisl vitae vestibulum.",
+    image: "https://placehold.co/600x400/png",
+    bgColor: "#0f1f0f",
+    
+  },
+
+];
+---
+
+<section>
+    <!-- Sección arriba -->
+    <div class="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row justify-center lg:justify-between">
+        <div class="">
+            <div>
+                <h1 class="uppercase text-4xl font-bold text-[#393939]">
+                    Quemadores de
+                </h1>
+                <h1 class="uppercase text-4xl font-bold text-[#393939]">
+                    aire total
+                </h1>
+                <div class="border-b-2 border-[#ca1c1c] h-0.5 w-full my-5">
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <p>Desde 6 a 125 millones de Btu/Hr,</p>
+                <p>con precalentador, filtro y más</p>
+            </div>
+        </div>
+        <div class="flex items-center justify-center lg:justify-end">
+            <SmartVideo
+                client:visible
+                src="/Videos/Webm/burnerVideo.webm"
+                width="50%"
+                poster={poster1.src}
+                isLoop={true}
+                autoplayOnMobile={false}
+            />
+        </div>
+    </div>
+    <!-- Sección 2 -->
+    <div class="flex flex-col max-w-7xl mx-auto px-8">
+        <div
+            class="bg-white lg:w-[600px] rounded-tr-2xl flex justify-center items-center"
+        >
+            <div class="mx-auto py-10">
+                <p class="font-bold">Aire 100% regulado</p>
+            </div>
+        </div>
+        <div
+            class="bg-[#393939] rounded-br-2xl lg:w-[600px] flex justify-center items-center"
+        >
+            <div class="mx-auto py-10">
+                <p class="font-bold text-white">Bajas emisiones de NOx</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Sección sliders -->
+
+<section class="pt-10">
+    <div class="max-w-7xl mx-auto px-8 space-y-2">
+        <h1 class="text-[#ca1c1c] font-bold text-4xl">Flama, mezcla y calidad consistente</h1>
+        <p>Menor consumo de combustible que cualquier otra planta de asfalto</p>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-8 py-5">
+        <QuemadorSlider slides={slides} client:visible />
+    </div>
+</section>
+
+<!-- Sección 3 -->
+<section>
+    <div class="max-w-7xl mx-auto px-8 flex flex-col items-center justify-center py-10">
+        <h1 class="text-black font-bold text-4xl text-center lg:text-left">Sólo el dueño de otra planta de asfalto Triaso,</h1>
+        <h1 class="text-black font-bold text-4xl text-center lg:text-left">igual de moderna, le puede hacer competencia.</h1>
+    </div>
+</section>
+
