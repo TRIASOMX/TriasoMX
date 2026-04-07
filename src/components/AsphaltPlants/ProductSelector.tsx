@@ -62,7 +62,7 @@ interface ProductModel {
     image: any;
     description: string;
     specs: { label: string; value: string }[];
-    tags: string[];
+    tags: any[];
 }
 
 interface TableSection {
@@ -107,7 +107,11 @@ const data: Record<PlantType, PlantData> = {
                     { label: "Capacidad", value: "10 ton" },
                     { label: "Garantía", value: "12 meses" },
                 ],
-                tags: ["El mejor precio en el mercado de plantas de asfalto de contraflujo", "Economía de operación", "Desempeño libre de problemas"],
+                tags: [  
+                <> <span className="font-bold"> El mejor precio</span> <br /> <span className="text-xs text-[#5d5d5d]">en el mercado de plantas de asfalto de contraflujo</span> </>,
+                    <> <span className="font-bold">Economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de operación</span>  </>,
+                    <> <span className="text-xs text-[#5d5d5d]">Desempeño</span> <br /> <span className="font-bold">libre de problemas </span> </>
+                    ],
             },
             {
                 name: "Plus",
@@ -117,7 +121,11 @@ const data: Record<PlantType, PlantData> = {
                     { label: "Capacidad", value: "10 ton" },
                     { label: "Garantía", value: "18 meses" },
                 ],
-                tags: ["Gran economía de compra", "Gran economía de operación", "Alto desempeño"],
+                tags: [  
+                    <> <span className="font-bold"> Gran economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de compra</span> </>,
+                        <> <span className="font-bold">Gran economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de operación</span>  </>,
+                        <> <span className="font-bold">Alto</span> <br /> <span className="text-xs text-[#5d5d5d]">desempeño</span> </>
+                        ],
             },
             {
                 name: "Pro+",
@@ -128,7 +136,11 @@ const data: Record<PlantType, PlantData> = {
                     { label: "Capacidad", value: "20 ton" },
                     { label: "Garantía", value: "24 meses" },
                 ],
-                tags: ["Economía de compra", "Máxima economía de operación", "El mejor desempeño"],
+                tags: [  
+                    <> <span className="font-bold"> Economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de compra</span> </>,
+                        <> <span className="font-bold">Máxima economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de operación</span>  </>,
+                        <> <span className="font-bold">El mejor</span> <br /> <span className="text-xs text-[#5d5d5d]">desempeño</span> </>
+                        ]
             },
         ],
         tableData: [
@@ -541,7 +553,7 @@ export default function ProductSelector() {
 
                                 <p
                                     style={{
-                                        fontSize: "0.875rem",
+                                        fontSize: "0.750rem",
                                         color: "#5d5d5d",
                                         marginBottom: "1rem",
                                         lineHeight: 1.6,
@@ -559,9 +571,10 @@ export default function ProductSelector() {
                                             padding: "0.25rem 0",
                                             fontSize: "0.875rem",
                                         }}
-                                    >
-                                        <span>{s.label}</span>
+                                    >   
                                         <span style={{ fontWeight: 600 }}>{s.value}</span>
+                                        <span className="text-xs text-[#5d5d5d]">{s.label}</span>
+                                        
                                     </div>
                                 ))}
 
