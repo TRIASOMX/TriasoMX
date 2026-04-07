@@ -136,7 +136,7 @@ const panels = [
 
 <section class="">
   <div
-    class="bg-black h-[50vh] flex items-center bg-[url(/drumBanner.webp)] bg-cover bg-center bg-no-repeat relative"
+    class="bg-black lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(/drumBanner.webp)] bg-cover bg-center bg-no-repeat relative"
   >
     <div class="absolute inset-0 bg-[#000000]/70"></div>
     <div class="max-w-7xl mx-auto px-8 space-y-5 relative">
@@ -147,7 +147,7 @@ const panels = [
       </div>
 
       <div
-        class="w-full flex flex-col justify-center lg:justify-around md:justify-around items-center lg:flex-row relative"
+        class="w-full flex flex-col justify-center pb-5 lg:justify-around md:justify-around items-center lg:flex-row relative"
       >
         <div class="">
           <p class="text-white">
@@ -275,6 +275,7 @@ const panels = [
   <SmartVideo
     client:visible
     src="/Videos/Webm/landingVideo.webm"
+    aspectRatio="16/9"
     poster={poster.src}
     autoplayOnMobile={false}
     isLoop={false}
@@ -343,17 +344,17 @@ const panels = [
       />
     </div>
 
-    <div class="relative flex flex-col lg:hidden">
+    <div class="relative grid grid-cols-2 max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden">
       <Image
         src={obracivil2Low}
         alt="Drum mixer"
-        class="rounded-2xl w-[40%] translate-x-[230px] translate-y-14"
+        class="rounded-2xl w-4/5"
       />
 
       <Image
         src={DMProv1}
         alt="Usage of a Drum mixer"
-        class="absolute top-0 left-0 w-2/3 rounded-lg -translate-x-1 translate-y-2 shadow-lg"
+        class="  rounded-lg "
       />
     </div>
   </div>

@@ -1,24 +1,73 @@
 ---
-import { Image } from "astro:assets";
-import hero1 from "../../assets/images/ColdMix/HeroColdMix.webp";
-Image
-const {img, title, description} = Astro.props;
+interface Props {
+  title: string;
+  subtitle?: string;
+  image: string;
+  imageAlt?: string;
+  accentColor?: string;
+  altImage? : string;
+  descAltImage: string;
+}
+
+const {
+  title,
+  image,
+  imageAlt = "",
+  altImage = "",
+  descAltImage = "",
+} = Astro.props;
 ---
 
-<div class="w-full mx-auto bg-black mt-10 lg:mt-0">
-    <Image src={img} alt="" class="w-full"  height={800}  />
+<section
+  class="relative w-full overflow-hidden bg-[#0d0d0d]"
+  style="height: clamp(320px, 80vw, 800px);"
+>
+  <!-- Imagen de fondo -->
+  <div class="absolute inset-0">
+    <img
+      src={image}
+      alt={imageAlt}
+      class="block h-full w-full object-cover object-center"
+    />
 
-</div>
-<div class="w-full bg-gradient-to-b from-black to-[#262425]">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="flex flex-col justify-center items-center pt-5 pb-14 space-y-5">
-            <h1 class="font-thin text-white text-lg md:text-2xl lg:text-2xl">
-                {title}
-            </h1>
-            
-            <p class="text-white text-sm lg:text-lg md:text-lg">
-                {description}
-            </p>
-        </div>
+    <!-- Fade inferior -->
+    <div
+      class="pointer-events-none absolute bottom-0 left-0 right-0 h-[55%]"
+      style="background: linear-gradient(to bottom, transparent 0%, rgba(10,10,10,0.55) 50%, rgba(10,10,10,0.95) 80%, #0a0a0a 100%);"
+    ></div>
+
+    <!-- Fade lateral derecho -->
+    <div
+      class="pointer-events-none absolute bottom-0 right-0 top-0 w-1/4"
+      style="background: linear-gradient(to right, transparent 0%, rgba(10,10,10,0.4) 100%);"
+    ></div>
+
+    <!-- Overlay diagonal -->
+    <div
+      class="pointer-events-none absolute inset-0"
+      style="background: linear-gradient(135deg, rgba(10,10,10,0.45) 0%, transparent 60%, rgba(10,10,10,0.2) 100%);"
+    ></div>
+  </div>
+
+  <!-- Contenido -->
+  <div
+    class="absolute inset-0 flex items-end mt-10"
+    style="padding: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 5rem);"
+  >
+    <div class="max-w-7xl mx-auto px-8 flex flex-col items-center justify-center">
+      <h1
+        class="m-0 font-bold uppercase text-white text-4xl text-center "
+        
+      >
+        {title}
+      </h1>
+
+      <img
+      src={altImage}
+      alt={descAltImage}
+      class="block w-1/2"
+    />
+
     </div>
-</div>
+  </div>
+</section>

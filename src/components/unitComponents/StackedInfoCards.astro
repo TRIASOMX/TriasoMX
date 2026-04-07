@@ -33,11 +33,11 @@ const {
       </p>
     </div>
 
-    <div class="cards-wrapper relative h-[600px] overflow-hidden">
+    <div class="cards-wrapper relative h-[700px] lg:h-[600px] md:h-[600px] overflow-hidden">
       {
         cards.map((card, i) => (
           <div
-            class="stack-card absolute w-full max-w-lg top-[30%] right-0 rounded-xl p-10 shadow-xl"
+            class="stack-card absolute w-full max-w-lg top-[10%] lg:top-[30%] md:top-[60%] right-0 rounded-xl p-10 shadow-xl"
             style={`background:${card.bg}; color:${card.textColor}`}
           >
             <h3 class="text-2xl font-semibold mb-4">{card.title}</h3>

@@ -21,160 +21,187 @@ import { Image } from "astro:assets";
             class="flex transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
         >
             <div class="w-full shrink-0 space-y-4">
-                <div
-                    class="grid grid-cols-1 sm:grid-cols-3 gap-3"
-                    id="cardRow0"
-                >
-                    <!-- Card 1-A -->
+                <div class="card-row-wrapper relative">
                     <div
-                        class="relative rounded-lg overflow-hidden group cursor-pointer"
-                        data-card="0-0"
+                        class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3"
+                        id="cardRow0"
                     >
-                        <!-- Imagen placeholder -->
+                        <!-- Card 1-A -->
                         <div
-                            class="w-full h-44 bg-gradient-to-br from-gray-700 via-gray-600 to-gray-800 flex items-center justify-center"
+                            class="relative rounded-lg overflow-hidden group cursor-pointer"
+                            data-card="0-0"
                         >
-                            <img src="https://placehold.co/600x400" alt="" />
-                        </div>
-                        <!-- Overlay -->
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                        >
-                            <span
-                                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                            >
-                                Roles de carga
-                            </span>
-                            <button
-                                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                                aria-expanded="false"
-                            >
-                                <svg
-                                    class="chevron w-3 h-3 transition-transform duration-300"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M2 4l4 4 4-4"
-                                        stroke="currentColor"
-                                        stroke-width="1.8"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                                mostrar más
-                            </button>
                             <div
-                                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                class="w-full h-44  bg-black/10  flex items-center justify-center"
                             >
-                                <p
-                                    class="text-white/75 text-xs leading-relaxed mt-2"
+                                <img
+                                    src="https://placehold.co/600x400"
+                                    alt=""
+                                />
+                            </div>
+
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
                                 >
-                                    Roles de carga extra reforzados fabricados
-                                    en acero forjado, maquinado con precisión y
-                                    equipados con rodamientos industriales para
-                                    una rotación del tambor suave y estable.
-                                </p>
+                                    Roles de carga
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Roles de carga extra reforzados
+                                        fabricados en acero forjado, maquinado
+                                        con precisión y equipados con
+                                        rodamientos industriales para una
+                                        rotación del tambor suave y estable.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 1-B -->
+                        <div
+                            class="relative rounded-lg overflow-hidden group cursor-pointer"
+                            data-card="0-1"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10   flex items-center justify-center"
+                            >
+                                <img
+                                    src="https://placehold.co/600x400"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Variadores de<br />velocidad de giro
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Nuestra más reciente innovación para
+                                        alto porcentajes de incorporación de RAP
+                                        es el uso de variadores de velocidad de
+                                        rotación en los sistemas de giro del
+                                        tambor
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 1-C -->
+                        <div
+                            class="relative rounded-lg overflow-hidden group cursor-pointer"
+                            data-card="0-2"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10  flex items-center justify-center"
+                            >
+                                <img
+                                    src="https://placehold.co/600x400"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Aros
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Forjados en acero aleado de alta
+                                        resistencia y maquinados con precisión
+                                        para garantizar un soporte confiable y
+                                        una operación silenciosa y uniforme.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Card 1-B -->
+                    <!-- MÓVIL INDICADORES -->
                     <div
-                        class="relative rounded-lg overflow-hidden group cursor-pointer"
-                        data-card="0-1"
+                        class="card-dots flex justify-center gap-1.5 mt-2 sm:hidden"
+                        data-row="0"
                     >
-                        <div
-                            class="w-full h-44 bg-gradient-to-br from-slate-600 via-slate-500 to-slate-700 flex items-center justify-center"
-                        >
-                            <img src="https://placehold.co/600x400" alt="" />
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                        >
-                            <span
-                                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                            >
-                                Variadores de<br />velocidad de giro
-                            </span>
-                            <button
-                                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                                aria-expanded="false"
-                            >
-                                <svg
-                                    class="chevron w-3 h-3 transition-transform duration-300"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M2 4l4 4 4-4"
-                                        stroke="currentColor"
-                                        stroke-width="1.8"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                                mostrar más
-                            </button>
-                            <div
-                                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                            >
-                                <p
-                                    class="text-white/75 text-xs leading-relaxed mt-2"
-                                >
-                                    Nuestra más reciente innovación para alto
-                                    porcentajes de incorporación de RAP es el
-                                    uso de variadores de velocidad de rotación
-                                    en los sistemas de giro del tambor
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 1-C -->
-                    <div
-                        class="relative rounded-lg overflow-hidden group cursor-pointer"
-                        data-card="0-2"
-                    >
-                        <div
-                            class="w-full h-44 bg-gradient-to-br from-zinc-700 via-zinc-600 to-zinc-800 flex items-center justify-center"
-                        >
-                            <img src="https://placehold.co/600x400" alt="" />
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                        >
-                            <span
-                                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                            >
-                                Aros
-                            </span>
-                            <button
-                                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                                aria-expanded="false"
-                            >
-                                <svg
-                                    class="chevron w-3 h-3 transition-transform duration-300"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M2 4l4 4 4-4"
-                                        stroke="currentColor"
-                                        stroke-width="1.8"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                                mostrar más
-                            </button>
-                            <div
-                                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                            >
-                                <p
-                                    class="text-white/75 text-xs leading-relaxed mt-2"
-                                >
-                                    Forjados en acero aleado de alta resistencia
-                                    y maquinados con precisión para garantizar
-                                    un soporte confiable y una operación
-                                    silenciosa y uniforme.
-                                </p>
-                            </div>
-                        </div>
+                        <span class="card-dot w-2 h-2 rounded-full bg-gray-800"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
                     </div>
                 </div>
 
@@ -222,157 +249,183 @@ import { Image } from "astro:assets";
             </div><!-- /SLIDE 1 -->
 
             <div class="w-full shrink-0 space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <!-- Card 2-A -->
-                    <div
-                        class="relative rounded-lg overflow-hidden cursor-pointer"
-                        data-card="1-0"
-                    >
+                <div class="card-row-wrapper relative">
+                    <div class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <!-- Card 2-A -->
                         <div
-                            class="w-full h-44 bg-gradient-to-br from-amber-900 via-amber-800 to-stone-800 flex items-center justify-center"
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="1-0"
                         >
-                            <img src="https://placehold.co/600x400" alt="" />
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                        >
-                            <span
-                                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                            >
-                                Aislamiento para eficiencia energética
-                            </span>
-                            <button
-                                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                                aria-expanded="false"
-                            >
-                                <svg
-                                    class="chevron w-3 h-3 transition-transform duration-300"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M2 4l4 4 4-4"
-                                        stroke="currentColor"
-                                        stroke-width="1.8"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                                mostrar más
-                            </button>
                             <div
-                                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
                             >
-                                <p
-                                    class="text-white/75 text-xs leading-relaxed mt-2"
+                                <img
+                                    src="https://placehold.co/600x400"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
                                 >
-                                    Aislamiento de lana mineral minimizando la
-                                    pérdida de calor, reduciendo el consumo de
-                                    combustible y asegura que la mezcla
-                                    asfáltica se mantenga a la temperatura
-                                    óptima.
-                                </p>
+                                    Aislamiento para eficiencia energética
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Aislamiento de lana mineral minimizando
+                                        la pérdida de calor, reduciendo el
+                                        consumo de combustible y asegura que la
+                                        mezcla asfáltica se mantenga a la
+                                        temperatura óptima.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2-B -->
+                        <div
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="1-1"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src="https://placehold.co/600x400"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Platos axiales
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Para mantener una alineación precisa y
+                                        estabilidad durante la rotación, el
+                                        sistema incorpora platos axiales
+                                        individuales en cada aro.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2-C -->
+                        <div
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="1-2"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src="https://placehold.co/600x400"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Escudo frontal extra-reforzado
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Escudo frontal con refuerzo adicional y
+                                        sellado con acero extra reforzado y hule
+                                        EPDM para evitar la entrada de aire frío
+                                        no deseado, manteniendo temperaturas
+                                        internas óptimas y una alta eficiencia
+                                        de combustión.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Card 2-B -->
+                   
                     <div
-                        class="relative rounded-lg overflow-hidden cursor-pointer"
-                        data-card="1-1"
+                        class="card-dots flex justify-center gap-1.5 mt-2 sm:hidden"
+                        data-row="1"
                     >
-                        <div
-                            class="w-full h-44 bg-gradient-to-br from-teal-800 via-teal-700 to-cyan-900 flex items-center justify-center"
-                        >
-                            <img src="https://placehold.co/600x400" alt="" />
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                        >
-                            <span
-                                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                            >
-                                Platos axiales
-                            </span>
-                            <button
-                                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                                aria-expanded="false"
-                            >
-                                <svg
-                                    class="chevron w-3 h-3 transition-transform duration-300"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M2 4l4 4 4-4"
-                                        stroke="currentColor"
-                                        stroke-width="1.8"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                                mostrar más
-                            </button>
-                            <div
-                                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                            >
-                                <p
-                                    class="text-white/75 text-xs leading-relaxed mt-2"
-                                >
-                                    Para mantener una alineación precisa y
-                                    estabilidad durante la rotación, el sistema
-                                    incorpora platos axiales individuales en
-                                    cada aro.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2-C -->
-                    <div
-                        class="relative rounded-lg overflow-hidden cursor-pointer"
-                        data-card="1-2"
-                    >
-                        <div
-                            class="w-full h-44 bg-gradient-to-br from-rose-900 via-rose-800 to-pink-900 flex items-center justify-center"
-                        >
-                            <img src="https://placehold.co/600x400" alt="" />
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                        >
-                            <span
-                                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                            >
-                                Escudo frontal extra-reforzado
-                            </span>
-                            <button
-                                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                                aria-expanded="false"
-                            >
-                                <svg
-                                    class="chevron w-3 h-3 transition-transform duration-300"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M2 4l4 4 4-4"
-                                        stroke="currentColor"
-                                        stroke-width="1.8"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                                mostrar más
-                            </button>
-                            <div
-                                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                            >
-                                <p
-                                    class="text-white/75 text-xs leading-relaxed mt-2"
-                                >
-                                    Escudo frontal con refuerzo adicional y
-                                    sellado con acero extra reforzado y hule
-                                    EPDM para evitar la entrada de aire frío no
-                                    deseado, manteniendo temperaturas internas
-                                    óptimas y una alta eficiencia de combustión.
-                                </p>
-                            </div>
-                        </div>
+                        <span class="card-dot w-2 h-2 rounded-full bg-gray-800"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
                     </div>
                 </div>
 
@@ -416,155 +469,182 @@ import { Image } from "astro:assets";
                         <img src="https://placehold.co/600x400" alt="" />
                     </div>
                 </div>
-            </div><!-- /SLIDE 2 -->
+            </div>
 
             <div class="w-full shrink-0 space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <!-- Card 3-A -->
-                    <div
-                        class="relative rounded-lg overflow-hidden cursor-pointer"
-                        data-card="2-0"
-                    >
+                <div class="card-row-wrapper relative">
+                    <div class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <!-- Card 3-A -->
                         <div
-                            class="w-full h-44 bg-gradient-to-br from-indigo-900 via-indigo-800 to-violet-900 flex items-center justify-center"
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="2-0"
                         >
-                            <img src="https://placehold.co/600x400" alt="" />
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                        >
-                            <span
-                                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                            >
-                                Chasis con alta distancia al suelo
-                            </span>
-                            <button
-                                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                                aria-expanded="false"
-                            >
-                                <svg
-                                    class="chevron w-3 h-3 transition-transform duration-300"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M2 4l4 4 4-4"
-                                        stroke="currentColor"
-                                        stroke-width="1.8"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                                mostrar más
-                            </button>
                             <div
-                                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
                             >
-                                <p
-                                    class="text-white/75 text-xs leading-relaxed mt-2"
+                                <img
+                                    src="https://placehold.co/600x400"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
                                 >
-                                    Permite el transporte seguro del equipo en
-                                    terrenos, calles y carreteras con baches y
-                                    desniveles muy comunes en México, evitando
-                                    daños a los componentes inferiores.
-                                </p>
+                                    Chasis con alta distancia al suelo
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Permite el transporte seguro del equipo
+                                        en terrenos, calles y carreteras con
+                                        baches y desniveles muy comunes en
+                                        México, evitando daños a los componentes
+                                        inferiores.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3-B -->
+                        <div
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="2-1"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src="https://placehold.co/600x400"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Flancos estéticos
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Los paneles estéticos están diseñados no
+                                        solo para ofrecer una mejor apariencia
+                                        visual, sino también para reforzar la
+                                        imagen profesional de tu equipo y de tu
+                                        empresa.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3-C -->
+                        <div
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="2-2"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src="https://placehold.co/600x400"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Sistema de ajuste centralizado
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        placeholder
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Card 3-B -->
+                   
                     <div
-                        class="relative rounded-lg overflow-hidden cursor-pointer"
-                        data-card="2-1"
+                        class="card-dots flex justify-center gap-1.5 mt-2 sm:hidden"
+                        data-row="2"
                     >
-                        <div
-                            class="w-full h-44 bg-gradient-to-br from-emerald-900 via-emerald-800 to-green-900 flex items-center justify-center"
-                        >
-                            <img src="https://placehold.co/600x400" alt="" />
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                        >
-                            <span
-                                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                            >
-                                Flancos estéticos
-                            </span>
-                            <button
-                                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                                aria-expanded="false"
-                            >
-                                <svg
-                                    class="chevron w-3 h-3 transition-transform duration-300"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M2 4l4 4 4-4"
-                                        stroke="currentColor"
-                                        stroke-width="1.8"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                                mostrar más
-                            </button>
-                            <div
-                                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                            >
-                                <p
-                                    class="text-white/75 text-xs leading-relaxed mt-2"
-                                >
-                                    Los paneles estéticos están diseñados no
-                                    solo para ofrecer una mejor apariencia
-                                    visual, sino también para reforzar la imagen
-                                    profesional de tu equipo y de tu empresa.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3-C -->
-                    <div
-                        class="relative rounded-lg overflow-hidden cursor-pointer"
-                        data-card="2-2"
-                    >
-                        <div
-                            class="w-full h-44 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 flex items-center justify-center"
-                        >
-                            <img src="https://placehold.co/600x400" alt="" />
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                        >
-                            <span
-                                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                            >
-                                Sistema de ajuste centralizado
-                            </span>
-                            <button
-                                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                                aria-expanded="false"
-                            >
-                                <svg
-                                    class="chevron w-3 h-3 transition-transform duration-300"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M2 4l4 4 4-4"
-                                        stroke="currentColor"
-                                        stroke-width="1.8"
-                                        stroke-linecap="round"></path>
-                                </svg>
-                                mostrar más
-                            </button>
-                            <div
-                                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                            >
-                                <p
-                                    class="text-white/75 text-xs leading-relaxed mt-2"
-                                >
-                                    placeholder
-                                </p>
-                            </div>
-                        </div>
+                        <span class="card-dot w-2 h-2 rounded-full bg-gray-800"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
                     </div>
                 </div>
 
@@ -607,9 +687,9 @@ import { Image } from "astro:assets";
                         <img src="https://placehold.co/600x400" alt="" />
                     </div>
                 </div>
-            </div><!-- /SLIDE 3 -->
-        </div><!-- /sliderTrack -->
-    </div><!-- /sliderViewport -->
+            </div>
+        </div>
+    </div>
 
     <div
         class="flex justify-center gap-2 mt-5"
@@ -648,9 +728,12 @@ import { Image } from "astro:assets";
                     Elevador retráctil para transporte y operación segura y
                     eficiente
                 </h2>
-                <div class="z-20 flex items-center justify-center group-open:px-8 lg:px-0 md:px-0">
+                <div
+                    class="z-20 flex items-center justify-center group-open:px-8 lg:px-0 md:px-0"
+                >
                     <SmartVideo
                         client:visible
+                        aspectRatio="4/3"
                         desktopWidth="70%"
                         desktopHeight="70%"
                         src="/Videos/Webm/PlaC140ET.webm"
@@ -661,7 +744,7 @@ import { Image } from "astro:assets";
                 </div>
                 <div class="flex justify-end py-10">
                     <svg
-                        class="transition-transform duration-300  group-open:rotate-180"
+                        class="transition-transform duration-300 group-open:rotate-180"
                         width="64px"
                         height="64px"
                         viewBox="0 0 24 24"
@@ -931,7 +1014,8 @@ import { Image } from "astro:assets";
                                     Arranque suave variable
                                 </h1>
                                 <h2 class="font-medium">
-                                    necesario para arrancar aún bolas de mezcla endurecidas.
+                                    necesario para arrancar aún bolas de mezcla
+                                    endurecidas.
                                 </h2>
                             </div>
                         </div>
@@ -941,14 +1025,18 @@ import { Image } from "astro:assets";
                     class="p-4 flex flex-col max-w-7xl px-8 mx-auto items-center justify-center bg-white rounded-2xl relative"
                 >
                     <div class="w-full relative mt-10 pb-40 md:pb-60">
-                        <div class="w-full flex flex-col items-center justify-center z-20 relative">
+                        <div
+                            class="w-full flex flex-col items-center justify-center z-20 relative"
+                        >
                             <h2
                                 class="text-center text-2xl md:text-3xl text-blueMain font-bold"
                             >
-                                Monitoreo remoto en tiempo real de la descarga de mezcla asfáltica caliente en los camiones.
+                                Monitoreo remoto en tiempo real de la descarga
+                                de mezcla asfáltica caliente en los camiones.
                             </h2>
                             <h2>
-                                permitiendo una operación del sistema de forma manual o automática.
+                                permitiendo una operación del sistema de forma
+                                manual o automática.
                             </h2>
                         </div>
 
@@ -970,16 +1058,25 @@ import { Image } from "astro:assets";
 
 <style>
     @media (max-width: 639px) {
-        #sliderTrack .grid {
-            display: flex;
+        .card-row-wrapper {
+            overflow: hidden;
+        }
+
+        .card-row {
+            display: flex !important;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
             gap: 0.75rem;
-            padding-bottom: 0.25rem;
+            padding-bottom: 0.5rem;
+            scrollbar-width: none;
         }
-        #sliderTrack .grid > * {
-            flex: 0 0 80%;
+        .card-row::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card-row > * {
+            flex: 0 0 85%;
             scroll-snap-align: start;
         }
     }
@@ -1050,21 +1147,72 @@ import { Image } from "astro:assets";
         });
 
     let touchStartX = 0;
+    let touchStartY = 0;
+    let swipeBlockedByCardRow = false;
+
     viewport.addEventListener(
         "touchstart",
         (e) => {
             touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            const target = e.target as Element;
+            swipeBlockedByCardRow =
+                window.innerWidth < 640 &&
+                target.closest(".card-row-wrapper") !== null;
         },
         { passive: true },
     );
+
     viewport.addEventListener("touchend", (e) => {
-        const delta = touchStartX - e.changedTouches[0].clientX;
-        if (Math.abs(delta) > 50) {
-            goTo(delta > 0 ? current + 1 : current - 1);
+        if (swipeBlockedByCardRow) return;
+
+        const deltaX = touchStartX - e.changedTouches[0].clientX;
+        const deltaY = Math.abs(touchStartY - e.changedTouches[0].clientY);
+        if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > deltaY) {
+            goTo(deltaX > 0 ? current + 1 : current - 1);
             resetAuto();
         }
     });
 
+    function initCardRowDots() {
+        document
+            .querySelectorAll<HTMLElement>(".card-row")
+            .forEach((row, rowIndex) => {
+                const dotsContainer = document.querySelector<HTMLElement>(
+                    `.card-dots[data-row="${rowIndex}"]`,
+                );
+                if (!dotsContainer) return;
+
+                const dotEls = Array.from(
+                    dotsContainer.querySelectorAll<HTMLElement>(".card-dot"),
+                );
+
+                row.addEventListener(
+                    "scroll",
+                    () => {
+                        if (window.innerWidth >= 640) return;
+                        const cardWidth =
+                            (row.firstElementChild as HTMLElement)
+                                ?.offsetWidth ?? 1;
+                        const activeIndex = Math.round(
+                            row.scrollLeft / cardWidth,
+                        );
+                        dotEls.forEach((dot, i) => {
+                            if (i === activeIndex) {
+                                dot.className =
+                                    "card-dot w-2 h-2 rounded-full bg-gray-800 transition-all duration-300";
+                            } else {
+                                dot.className =
+                                    "card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300 transition-all duration-300";
+                            }
+                        });
+                    },
+                    { passive: true },
+                );
+            });
+    }
+
+    initCardRowDots();
     goTo(0);
     startAuto();
 </script>

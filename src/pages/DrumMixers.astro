@@ -17,6 +17,7 @@ import HotspotSection from "../components/DrumMixers/HotspotSection.astro";
 import SliderTambores from "../components/DrumMixers/SliderTambores.astro";
 import QuemadorSeccion from "../components/DrumMixers/QuemadorSeccion.astro";
 import BolsasSeccion from "../components/DrumMixers/BolsasSeccion.astro";
+import hero2 from "../assets/images/DrumMixers/Gallery/DM1.webp"
 
 const cards = [
     {
@@ -46,11 +47,67 @@ const cards = [
 ];
 ---
 
-<Layout title="Drum Mixers Page">
+<Layout title="Tambor de contraflujo">
     <div class="mt-10">
-        <HeroComponent img={hero1} />
+
+        <HeroComponent
+            title="Tambor de Contraflujo PRO+"
+            image={hero1.src}
+            imageAlt="Tambor de Contraflujo PRO+"
+            altImage={hero2.src}
+            descAltImage="Tambor de Contraflujo PRO+"
+        />
+    </div>
+    <div class="bg-[#1e1e1e]">
+        <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+            <div class="flex flex-row justify-center items-center gap-10">
+                <a class="font-thin text-white text-xl lg:text-2xl" href=""
+                    >Desamaq</a
+                >
+                <a class="font-thin text-white text-xl lg:text-2xl" href=""
+                    >Plus</a
+                >
+                <a
+                    class="underline font-bold text-white text-xl lg:text-2xl"
+                    href="">Pro +</a
+                >
+            </div>
+
+            <div class="flex justify-center items-center text-center">
+                <h1 class="font-semibold text-white text-lg lg:text-xl">
+                    Para contratistas experimentados que buscan la mejor planta
+                    de asfalto, con una producción y nivel de exigencias
+                    técnicas incomparables, capaz de adaptarse a cualquier
+                    proyecto, incluso con diferentes tipos de mezcla. Ideal para
+                    una operación ecológica evitando multas costosas por
+                    contaminación, con el consumo de combustible por tonelada
+                    más bajo en el mercado y mayor porcentaje de incorporación
+                    de RAP, hasta un 50%.
+                </h1>
+            </div>
+
+            <div
+                class="flex flex-col lg:flex-row md:flex-row justify-center items-center gap-5"
+            >
+                <div
+                    class="bg-black rounded-2xl w-36 text-center transition-all duration-300 hover:bg-white"
+                >
+                    <p class="py-3 font-semibold text-white hover:text-black">
+                        Cotizar
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl w-36 text-center transition-all duration-300 hover:bg-black"
+                >
+                    <p class="py-3 font-semibold text-black hover:text-white">
+                        Comparar
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
     <OdometerDrum client:only />
+
     <div>
         <DropdownComponent
             title="El modelo más avanzado para una operación automática, la más económica y sin comparación ni competencia, preferencia en su región para trabajos de pavimentación."
@@ -72,7 +129,9 @@ const cards = [
 
     <div class="bg-[#1e1e1e] flex flex-col justify-center items-center px-8">
         <div class="flex flex-col justify-center items-center pb-10">
-            <h1 class="text-white font-bold text-3xl text-center lg:text-start md:text-start">
+            <h1
+                class="text-white font-bold text-3xl text-center lg:text-start md:text-start"
+            >
                 Para evitar desperdicios, robos y mala operación de su planta de
                 asfalto
             </h1>
@@ -82,27 +141,30 @@ const cards = [
         </div>
     </div>
 
-    <StackedInfoCards
+    <div class="mt-5">
+        <StackedInfoCards
         cards={cards}
         mainTitle="Su mejor negocio comienza con nosotros"
         mainDescription="Los contratistas que nos conocen prefieren Triaso sobre otras marcas por nuestra alta calidad, confiabilidad y precios."
     />
+    </div>
+   
 
     <HotspotSection />
-
 
     <div class="max-w-7xl mx-auto px-8">
         <SliderTambores />
     </div>
 
-    <QuemadorSeccion/>
+    <QuemadorSeccion />
 
     <BolsasSeccion />
 
+    <DrumMixPlanos client:only /> 
+
     <!-- <OneSection /> -->
     <!-- <StationarySection />
-    <IntegratedBaghouses />
-    <DrumMixPlanos client:only /> -->
+    <IntegratedBaghouses /> -->
     <!-- <CardSection /> -->
     <!-- <CardSectionResponsive /> -->
 </Layout>
