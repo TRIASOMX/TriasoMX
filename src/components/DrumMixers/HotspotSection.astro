@@ -10,25 +10,17 @@ import item5 from "../../assets/images/DrumMixers/a6.webp";
 import item6 from "../../assets/images/DrumMixers/a1.webp";
 import { Image } from "astro:assets";
 import SmartVideo from "../unitComponents/SmartVideo";
-
-import img3 from "../../assets/images/AsphaltPlant/render.webp";
 import DMProv1 from "../../assets/images/DrumMixers/DMProv1.webp";
-import render5 from "../../assets/images/DrumMixers/Low/render5Low.webp";
 import obracivil from "../../assets/images/DrumMixers/obracivil.webp";
 import obracivil2 from "../../assets/images/DrumMixers/obracivil2.webp";
 import obracivil2Low from "../../assets/images/DrumMixers/Low/obracivil2Low.webp";
+import CasetaSeccion from "../DrumMixers/CasetaSeccion.astro";
 
-import Tred from "../../assets/images/AsphaltStorage/redT.webp";
-import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
-import img6 from "../../assets/images/DrumMixers/2.webp";
-import AcordeonItemCol from "../unitComponents/AcordeonItemCol";
-import OSection from "../unitComponents/OSection.astro";
-import flag from "../../assets/images/Burners/flag.svg";
-import thrustrollers from "../../assets/images/DrumMixers/thrustrollers.webp";
-import poster1 from "../../../public/Videos/Webm/Posters/drummixers2.webp";
-import CasetaSeccion from "../DrumMixers/CasetaSeccion.astro"
+const pathname = Astro.url.pathname;
 
-const panels = [
+let panels;
+
+const drumMixersPanels = [
   {
     title: "Producción y operación",
     items: [
@@ -52,11 +44,17 @@ const panels = [
         label:
           "Ahorro por menor desperdicio de mezcla fuera de especificación.",
       },
-      { label: "Ahorro en costos de calibración y ajustes frecuentes." },
       {
-        label: "Ahorro en multas por la SEMARNAT por emisiones contaminantes.",
+        label: "Ahorro en costos de calibración y ajustes frecuentes.",
       },
-      { label: "Ahorro en multas por operación ruidosa en zona urbanas." },
+      {
+        label:
+          "Ahorro en multas por la SEMARNAT por emisiones contaminantes.",
+      },
+      {
+        label:
+        "Ahorro en multas por operación ruidosa en zona urbanas."
+      }
     ],
   },
   {
@@ -103,6 +101,177 @@ const panels = [
     ],
   },
 ];
+
+const desamaqPanels = [
+  {
+    title: "Producción y operación",
+    items: [
+      {
+        label:
+          "Ahorro en operadores innecesarios, gracias a una operación más automatizada y controlada.",
+      },
+      {
+        label:
+          "Ahorro en la eliminación de la fosa de lodos y su costosa operación.",
+      },
+      {
+        label:
+          "Ahorro en agregados vírgenes por el alto porcentaje de incorporación del RAP.",
+      },
+      {
+        label:
+          "Ahorro en jornadas laborales al evitar paros costosos y prolongados del equipo.",
+      },
+      {
+        label:
+          "Ahorro por menor desperdicio de mezcla fuera de especificación.",
+      },
+      {
+        label: "Ahorro en multas por la SEMARNAT por emisiones contaminantes.",
+      },
+      {
+        label:
+          "Ahorro en transporte de tolvas, tambor y casa de bolsas en una sola carga. (solo tolvas montadas)",
+      },
+    ],
+  },
+  {
+    title: "Mantenimiento y vida útil del equipo",
+    items: [
+      {
+        label:
+          "Gracias a componentes extra-reforzados diseñados para una larga vida útil.",
+      },
+      { label: "Por ser equipos fabricados en México y no de importación." },
+      { label: "Ahorro en refacciones recurrentes." },
+      { label: "Ahorro por mayor vida útil de filtros y mangas." },
+      { label: "Ahorro por menor desgaste en el tambor y los álabes." },
+    ],
+  },
+  {
+    title: "Energéticos y de consumo",
+    items: [
+      {
+        label: "Ahorro de combustible por la eficiencia de:",
+        subItems: [
+          { subLabel: "Nuestro quemador con sistema de precalentamiento" },
+          { subLabel: "Nuestro sistema de combustión asistido por plasma" },
+          { subLabel: "El diseño de nuestros álabes" },
+          {
+            subLabel:
+              "Un tambor completamente sellado, sin entradas de aire frío",
+          },
+          {
+            subLabel:
+              "La capacidad de producir mezclas tibias cuando el diseño lo requiera",
+          },
+        ],
+      },
+      { label: "Ahorro en consumo eléctrico" },
+      {
+        label:
+          "La eficiencia del sistema de secado, ventilación y filtración reduce la carga eléctrica total por tonelada producida, especialmente en ventiladores y sistemas auxiliares",
+      },
+      {
+        label:
+          "Ahorro por menor sobrecalentamiento del agregado, al no requerir temperaturas excesivas para compensar pérdidas térmicas, reduciendo consumo energético y degradación del material.",
+      },
+    ],
+  },
+];
+
+const contraPlusPanels = [
+  {
+    title: "Producción y operación",
+    items: [
+      {
+        label:
+          "Ahorro en operadores innecesarios, gracias a una operación más automatizada y controlada.",
+      },
+      {
+        label:
+          "Ahorro en la eliminación de la fosa de lodos y su costosa operación.",
+      },
+      {
+        label:
+          "Ahorro en agregados vírgenes por el alto porcentaje de incorporación del RAP.",
+      },
+      {
+        label:
+          "Ahorro en jornadas laborales al evitar paros costosos y prolongados del equipo.",
+      },
+      {
+        label:
+          "Ahorro por menor desperdicio de mezcla fuera de especificación.",
+      },
+      {
+        label: "Ahorro en costos de calibración y ajustes frecuentes.",
+      },
+      {
+        label:
+          "Ahorro en multas por la SEMARNAT por emisiones contaminantes.",
+      },
+      {
+        label:
+        "Ahorro en transporte de tolvas, tambor y casa de bolsas en una sola carga. (solo tolvas montadas)"
+      }
+    ],
+  },
+  {
+    title: "Mantenimiento y vida útil del equipo",
+    items: [
+      {
+        label:
+          "Gracias a componentes extra-reforzados diseñados para una larga vida útil.",
+      },
+      { label: "Por ser equipos fabricados en México y no de importación." },
+      { label: "Ahorro en refacciones recurrentes." },
+      { label: "Ahorro por mayor vida útil de filtros y mangas." },
+      { label: "Ahorro por menor desgaste en el tambor y los álabes." },
+    ],
+  },
+  {
+    title: "Energéticos y de consumo",
+    items: [
+      {
+        label: "Ahorro de combustible por la eficiencia de:",
+        subItems: [
+          { subLabel: "Nuestro quemador con sistema de precalentamiento" },
+          { subLabel: "Nuestro sistema de combustión asistido por plasma" },
+          { subLabel: "El diseño de nuestros álabes" },
+          {
+            subLabel:
+              "Un tambor completamente sellado, sin entradas de aire frío",
+          },
+          {
+            subLabel:
+              "La capacidad de producir mezclas tibias cuando el diseño lo requiera",
+          },
+        ],
+      },
+      { label: "Ahorro en consumo eléctrico" },
+      {
+        label:
+          "La eficiencia del sistema de secado, ventilación y filtración reduce la carga eléctrica total por tonelada producida, especialmente en ventiladores y sistemas auxiliares",
+      },
+      {
+        label:
+          "Ahorro por menor sobrecalentamiento del agregado, al no requerir temperaturas excesivas para compensar pérdidas térmicas, reduciendo consumo energético y degradación del material.",
+      },
+    ],
+  },
+];
+
+
+if (pathname === "/DrumMixers") {
+  panels = drumMixersPanels;
+} else if (pathname === "/TamborMezcla/Contraflujo/ContraDesamaq") {
+  panels = desamaqPanels;
+} else if (pathname === "/TamborMezcla/Contraflujo/ContraPlus") {
+  panels = contraPlusPanels;
+}
+
+
 ---
 
 <!-- Sección hotspot -->
@@ -160,7 +329,9 @@ const panels = [
             planta de asfalto, ayudándolo a elegir la opción más adecuada.
           </p>
         </div>
-        <div class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28">
+        <div
+          class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
+        >
           <!-- Botón 1 -->
           <Whatsbtn />
 
@@ -316,7 +487,7 @@ const panels = [
           para un rendimiento sin comparación
         </h2>
         <p class="text-grisT text-sm lg:text-base md:text-base text-justify">
-          Fabricados con materiales de alta resistencia y componentes de larga
+          o Fabricados con materiales de alta resistencia y componentes de larga
           vida útil, estos tambores garantizan eficiencia energética superior y
           una mezcla asfáltica de calidad consistente. Ideales para operaciones
           exigentes, donde la confiabilidad de la planta es clave, sabiendo que
@@ -344,26 +515,19 @@ const panels = [
       />
     </div>
 
-    <div class="relative grid grid-cols-2 max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden">
-      <Image
-        src={obracivil2Low}
-        alt="Drum mixer"
-        class="rounded-2xl w-4/5"
-      />
+    <div
+      class="relative grid grid-cols-2 max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
+    >
+      <Image src={obracivil2Low} alt="Drum mixer" class="rounded-2xl w-4/5" />
 
-      <Image
-        src={DMProv1}
-        alt="Usage of a Drum mixer"
-        class="  rounded-lg "
-      />
+      <Image src={DMProv1} alt="Usage of a Drum mixer" class="rounded-lg" />
     </div>
   </div>
 </section>
 
 <section>
-  <CasetaSeccion/>
+  <CasetaSeccion />
 </section>
-
 
 <script>
   import { initScrollAnimations } from "../../components/DrumMixers/scrollAnimations";

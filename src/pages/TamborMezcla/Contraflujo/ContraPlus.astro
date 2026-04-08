@@ -1,23 +1,17 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import IntroSection from "../components/DrumMixers/IntroSection.astro";
-import OdometerDrum from "../components/DrumMixers/OdometerDrum";
-import OneSection from "../components/DrumMixers/OneSection.astro";
-import StationarySection from "../components/DrumMixers/StationarySection.astro";
-import IntegratedBaghouses from "../components/DrumMixers/IntegratedBaghouses.astro";
-import DrumMixPlanos from "../components/DrumMixers/DrumMixPlanos";
-import CardSection from "../components/IntegralAsphalt/CardSection.astro";
-import CardSectionResponsive from "../components/unitComponents/CardSectionResponsive.astro";
-import HeroComponent from "../components/unitComponents/HeroComponent.astro";
-import hero1 from "../../public/fabricaBG.webp";
-import DropdownComponent from "../components/unitComponents/DropdownComponent.astro";
-import OsDrumSection from "../components/DrumMixers/OsDrumSection.astro";
-import StackedInfoCards from "../components/unitComponents/StackedInfoCards.astro";
-import HotspotSection from "../components/DrumMixers/HotspotSection.astro";
-import SliderTambores from "../components/DrumMixers/SliderTambores.astro";
-import QuemadorSeccion from "../components/DrumMixers/QuemadorSeccion.astro";
-import BolsasSeccion from "../components/DrumMixers/BolsasSeccion.astro";
-import hero2 from "../assets/images/DrumMixers/Gallery/DM1.webp"
+import Layout from "../../../layouts/Layout.astro";
+import OdometerDrum from "../../../components/DrumMixers/OdometerDrum";
+import DrumMixPlanos from "../../../components/DrumMixers/DrumMixPlanos";
+import HeroComponent from "../../../components/unitComponents/HeroComponent.astro";
+import hero1 from "../../../../public/fabricaBG.webp";
+import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
+import OsDrumSection from "../../../components/DrumMixers/OsDrumSection.astro";
+import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
+import HotspotSection from "../../../components/DrumMixers/HotspotSection.astro";
+import SliderTambores from "../../../components/DrumMixers/SliderTambores.astro";
+import QuemadorSeccion from "../../../components/DrumMixers/QuemadorSeccion.astro";
+import BolsasSeccion from "../../../components/DrumMixers/BolsasSeccion.astro";
+import hero2 from "../../../assets/images/DrumMixers/Gallery/DM1.webp";
 
 const cards = [
     {
@@ -49,40 +43,41 @@ const cards = [
 
 <Layout title="Tambor de contraflujo">
     <div class="mt-10">
-
         <HeroComponent
-            title="Tambor de Contraflujo PRO+"
+            title="Tambor de Contraflujo Plus"
             image={hero1.src}
-            imageAlt="Tambor de Contraflujo PRO+"
+            imageAlt="Tambor de Contraflujo Plus"
             altImage={hero2.src}
-            descAltImage="Tambor de Contraflujo PRO+"
+            descAltImage="Tambor de Contraflujo Plus"
         />
     </div>
     <div class="bg-[#1e1e1e]">
         <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
             <div class="flex flex-row justify-center items-center gap-10">
-                <a class="font-thin text-white text-xl lg:text-2xl" href="/TamborMezcla/Contraflujo/ContraDesamaq"
-                    >Desamaq</a
-                >
-                <a class="font-thin text-white text-xl lg:text-2xl" href="/TamborMezcla/Contraflujo/ContraPlus"
-                    >Plus</a
+                <a
+                    class="font-thin text-white text-xl lg:text-2xl"
+                    href="/TamborMezcla/Contraflujo/ContraDesamaq">Desamaq</a
                 >
                 <a
                     class="underline font-bold text-white text-xl lg:text-2xl"
+                    href="/TamborMezcla/Contraflujo/ContraPlus">Plus</a
+                >
+                <a
+                    class="font-thin text-white text-xl lg:text-2xl"
                     href="/DrumMixers">Pro +</a
                 >
             </div>
 
             <div class="flex justify-center items-center text-center">
                 <h1 class="font-semibold text-white text-lg lg:text-xl">
-                    Para contratistas experimentados que buscan la mejor planta
-                    de asfalto, con una producción y nivel de exigencias
-                    técnicas incomparables, capaz de adaptarse a cualquier
-                    proyecto, incluso con diferentes tipos de mezcla. Ideal para
-                    una operación ecológica evitando multas costosas por
-                    contaminación, con el consumo de combustible por tonelada
-                    más bajo en el mercado y mayor porcentaje de incorporación
-                    de RAP, hasta un 50%.
+                    Para contratistas experimentados que buscan una producción
+                    exigencias técnica superiores, siendo capaces de adaptarse a
+                    cualquier proyecto, incluso con diferentes tipos de mezcla.
+                    Ideal para una operación ecológica evitando multas y paros
+                    costosos por contaminación, con bajo consumo de combustible
+                    ofreciendo una excelente relación costo-beneficio en su
+                    categoría, con alto porcentaje de incorporación de RAP de
+                    hasta 40%.
                 </h1>
             </div>
 
@@ -113,15 +108,14 @@ const cards = [
             title="El modelo más avanzado para una operación automática, la más económica y sin comparación ni competencia, preferencia en su región para trabajos de pavimentación."
         >
             <p>
-                Triaso® ofrece la solución más avanzada para la producción
-                continua de mezcla asfáltica, con tambores mezcladores de alto
-                desempeño que integran secado, mezclado, captura de finos en la
-                casa de bolsas y su reincorporación en un solo chasis diseñado
-                para trabajo pesado. Su diseño está orientado a máxima
-                eficiencia térmica, una operación continua, eficiente y con
-                mayor control del proceso, garantizando eficiencia operativa,
-                tranquilidad de su cliente, durabilidad del pavimento en
-                cualquier proyecto y producción constante sin paros.
+                Triaso® ofrece la solución ideal para la producción continua
+                de mezcla asfáltica, integrando secado, mezclado, incorporación
+                de RAP, captura de finos en la casa de bolsas y su
+                reincorporación en un solo chasis diseñado para trabajo pesado,
+                con opción de tolvas montadas. Su diseño está orientado a una
+                operación continua, eficiente y con mayor control del proceso,
+                garantizando eficiencia operativa, tranquilidad de su cliente y
+                durabilidad del pavimento en cualquier proyecto.
             </p>
         </DropdownComponent>
     </div>
@@ -143,12 +137,11 @@ const cards = [
 
     <div class="mt-5">
         <StackedInfoCards
-        cards={cards}
-        mainTitle="Su mejor negocio comienza con nosotros"
-        mainDescription="Los contratistas que nos conocen prefieren Triaso sobre otras marcas por nuestra alta calidad, confiabilidad y precios."
-    />
+            cards={cards}
+            mainTitle="Su mejor negocio comienza con nosotros"
+            mainDescription="Los contratistas que nos conocen prefieren Triaso sobre otras marcas por nuestra alta calidad, confiabilidad y precios."
+        />
     </div>
-   
 
     <HotspotSection />
 
@@ -160,11 +153,5 @@ const cards = [
 
     <BolsasSeccion />
 
-    <DrumMixPlanos client:only /> 
-
-    <!-- <OneSection /> -->
-    <!-- <StationarySection />
-    <IntegratedBaghouses /> -->
-    <!-- <CardSection /> -->
-    <!-- <CardSectionResponsive /> -->
+    <DrumMixPlanos client:only />
 </Layout>
