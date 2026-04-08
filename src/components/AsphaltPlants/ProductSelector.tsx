@@ -80,6 +80,12 @@ interface PlantData {
     tableData: TableSection[];
 }
 
+interface SymbolItem {
+    title: string;
+    description: string;
+    image: string;
+}
+
 const data: Record<PlantType, PlantData> = {
     contraflujo: {
         title: "Contraflujo",
@@ -107,11 +113,11 @@ const data: Record<PlantType, PlantData> = {
                     { label: "Capacidad", value: "10 ton" },
                     { label: "Garantía", value: "12 meses" },
                 ],
-                tags: [  
-                <> <span className="font-bold"> El mejor precio</span> <br /> <span className="text-xs text-[#5d5d5d]">en el mercado de plantas de asfalto de contraflujo</span> </>,
+                tags: [
+                    <> <span className="font-bold"> El mejor precio</span> <br /> <span className="text-xs text-[#5d5d5d]">en el mercado de plantas de asfalto de contraflujo</span> </>,
                     <> <span className="font-bold">Economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de operación</span>  </>,
                     <> <span className="text-xs text-[#5d5d5d]">Desempeño</span> <br /> <span className="font-bold">libre de problemas </span> </>
-                    ],
+                ],
             },
             {
                 name: "Plus",
@@ -121,11 +127,11 @@ const data: Record<PlantType, PlantData> = {
                     { label: "Capacidad", value: "10 ton" },
                     { label: "Garantía", value: "18 meses" },
                 ],
-                tags: [  
+                tags: [
                     <> <span className="font-bold"> Gran economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de compra</span> </>,
-                        <> <span className="font-bold">Gran economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de operación</span>  </>,
-                        <> <span className="font-bold">Alto</span> <br /> <span className="text-xs text-[#5d5d5d]">desempeño</span> </>
-                        ],
+                    <> <span className="font-bold">Gran economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de operación</span>  </>,
+                    <> <span className="font-bold">Alto</span> <br /> <span className="text-xs text-[#5d5d5d]">desempeño</span> </>
+                ],
             },
             {
                 name: "Pro+",
@@ -136,11 +142,11 @@ const data: Record<PlantType, PlantData> = {
                     { label: "Capacidad", value: "20 ton" },
                     { label: "Garantía", value: "24 meses" },
                 ],
-                tags: [  
+                tags: [
                     <> <span className="font-bold"> Economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de compra</span> </>,
-                        <> <span className="font-bold">Máxima economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de operación</span>  </>,
-                        <> <span className="font-bold">El mejor</span> <br /> <span className="text-xs text-[#5d5d5d]">desempeño</span> </>
-                        ]
+                    <> <span className="font-bold">Máxima economía</span> <br /> <span className="text-xs text-[#5d5d5d]">de operación</span>  </>,
+                    <> <span className="font-bold">El mejor</span> <br /> <span className="text-xs text-[#5d5d5d]">desempeño</span> </>
+                ]
             },
         ],
         tableData: [
@@ -221,29 +227,6 @@ const data: Record<PlantType, PlantData> = {
                     { label: "Costos y tiempos de mantenimiento", values: ["Bajos", "Bajos", "Bajos"] },
                 ],
             },
-            {
-                section: "Simbología",
-                rows: [
-                    { label: "(1) Las estructuras robustas son muy necesarias en México por las malas condiciones de las carreteras y de los caminos rurales o brechas de acceso a los sitios.", values: [""] },
-                    { label: "(2) Los quemadores de 'Aire Total' ahorran combustible al tener una combustión más eficiente. Favor de ver la comparativa anexa.", values: [""] },
-                    { label: "(3) Calienta el combustible para menos viscosidad y quemarlo al 100%. Ahorra mucho combustible y no contamina la mezcla con residuos.", values: [""] },
-                    { label: "(4) La velocidad variable es necesaria para incorporar hasta 50% de RAP, incrementar la producción con agregados secos, dar más tiempo de secado a agregados húmedos, mejorar aún más la homogeneidad de la mezcla producida, disminuir el consumo de combustible, optimizar la producción con agregados difíciles, etc.", values: [""]},
-                    { label: "(5) El inicio de producción es más rápido cuando el elevador tiene bolas de mezcla endurecida del día anterior.", values:[""]},
-                    { label: "Mide el exceso de oxigeno que sale por la chimenea para carburar automáticamente el quemador. Se ahorra combustible, se evita la emisión contaminante de Nox, y seelimina la necesidad de recarburar el quemador en cambios de ubicación de la planta de asfalto.", values: [""]},
-                    { label: "(7) El combustible se atomiza a nivel molecular: Se logra un gran ahorro de combustible, y menos contaminantes a purificar en la casa de bolsas", values:[""]},
-                    { label: "(8) Silenciador en el quemador y álabes aerodinámicos en el extractor: Se reduce mucho el ruido molesto a los habitantes vecinos.", values:[""]},
-                    { label: "(9) Mejora la estética del tambor mezclador y de su empresa. Y constituye un refuerzo adicional a la estructura, convirtiéndola en extra reforzada", values:[""]},
-                    { label: "(10) Las casas de bolsas más grandes tiene una menor velocidad de aire dentro de su cuerpo, con lo que logran un mejor filtrado. Esto porque la velocidad del aire es mayor dentro de una casa de bolsas chica, y el polvo se precipita sin control cuando alcanza una densidad crítica.  Esto causa un flitrado deficiente y un reintegro irregular de finos a la mezcla asfáltica, perjudicando su calidad.", values: [""]},
-                    { label: "(11) La apertura automática del damper se ajusta en función de la presión interna de la casa de bolsas, manteniéndola en un rango estable de diferencia de presión.", values:[""]},
-                    { label: "(12) Los pulsos varían automáticamente en función de la presión interna de la casa de bolsas, mantenniendo un rango estable de diferencia de presión y excelente filtrado. Otras marcas mantienen los pulsos fijos por tiempo, sin tomar en cuenta la presión interna de la casa de bolsas, con lo que el filtrado es deficiente.", values:[""]},
-                    { label: "(13) Enfocados en los principales contaminantes regulados por SEMARNAT, para no dejarse sorprender por lecturas amañadas para obligar el paro de la planta: Monóxido de carbono (CO), óxidos de nitrógeno (Nox), dióxido de azufre (SO2), material particulado o polvo (PM) y oxígeno para verificación de combustión (O2)", values:[""]},
-                    { label: "(14) Triaso puede modificar y adecuar el sistema a requerimiento del cliente.", values:[""]},
-                    { label: "(15) Muy importante si falla algún componente de control, para que la planta no se quede parada varios días esperando las refacciones.", values:[""]},
-                    { label: "(16) Directa: La empresa vendedora garantiza, resuelve y reemplaza directamente todos los componentes de la planta y los suministrados por terceros.  Indirecta: La empresa vendedora no garantiza ni reemplaza ningún componente. Hay que resolver la garantía con el fabricante de la planta o de los componentes.", values:[""]}
-                ],
-            },            
-
-
         ],
     },
     "flujo-paralelo": {
@@ -373,21 +356,136 @@ const data: Record<PlantType, PlantData> = {
                     { label: "(1) Las estructuras robustas son muy necesarias en México por las malas condiciones de las carreteras y de los caminos rurales o brechas de acceso a los sitios.", values: [""] },
                     { label: "(2) Los quemadores de 'Aire Total' ahorran combustible al tener una combustión más eficiente. Favor de ver la comparativa anexa.", values: [""] },
                     { label: "(3) Calienta el combustible para menos viscosidad y quemarlo al 100%. Ahorra mucho combustible y no contamina la mezcla con residuos.", values: [""] },
-                    { label: "(4) El inicio de producción es más rápido cuando el elevador tiene bolas de mezcla endurecida del día anterior.", values: [""]},
-                    { label: "(5) Mide el exceso de oxigeno que sale por la chimenea para carburar automáticamente el quemador. Se ahorra combustible, se evita la emisión contaminante de Nox, y seelimina la necesidad de recarburar el quemador en cambios de ubicación de la planta de asfalto.", values:[""]},
-                    { label: "(6) El combustible se atomiza a nivel molecular: Se logra un gran ahorro de combustible, y menos contaminantes a purificar en la casa de bolsas", values:[""]},
-                    { label: "(7) Silenciador en el quemador y álabes aerodinámicos en el extractor: Se reduce mucho el ruido molesto a los habitantes vecinos.", values:[""]},
-                    { label: "(8) Mejora la estética del tambor mezclador y de su empresa. Y constituye un refuerzo adicional a la estructura, convirtiéndola en extra reforzada", values:[""]},
-                    { label: "(9) Triaso puede modificar y adecuar el sistema a requerimiento del cliente.", values: [""]},
-                    { label: "(10) Muy importante si falla algún componente de control, para que la planta no se quede parada varios días esperando las refacciones.  El modelo Desamaq no tiene componentes de control.", values:[""]},
-                    { label: "(11) Directa: La empresa vendedora garantiza, resuelve y reemplaza directamente todos los componentes de la planta y los suministrados por terceros. Indirecta: La empresa vendedora no garantiza ni reemplaza ningún componente. Hay que resolver la garantía con el fabricante de la planta o de los componentes.", values:[""]},
+                    { label: "(4) El inicio de producción es más rápido cuando el elevador tiene bolas de mezcla endurecida del día anterior.", values: [""] },
+                    { label: "(5) Mide el exceso de oxigeno que sale por la chimenea para carburar automáticamente el quemador. Se ahorra combustible, se evita la emisión contaminante de Nox, y seelimina la necesidad de recarburar el quemador en cambios de ubicación de la planta de asfalto.", values: [""] },
+                    { label: "(6) El combustible se atomiza a nivel molecular: Se logra un gran ahorro de combustible, y menos contaminantes a purificar en la casa de bolsas", values: [""] },
+                    { label: "(7) Silenciador en el quemador y álabes aerodinámicos en el extractor: Se reduce mucho el ruido molesto a los habitantes vecinos.", values: [""] },
+                    { label: "(8) Mejora la estética del tambor mezclador y de su empresa. Y constituye un refuerzo adicional a la estructura, convirtiéndola en extra reforzada", values: [""] },
+                    { label: "(9) Triaso puede modificar y adecuar el sistema a requerimiento del cliente.", values: [""] },
+                    { label: "(10) Muy importante si falla algún componente de control, para que la planta no se quede parada varios días esperando las refacciones.  El modelo Desamaq no tiene componentes de control.", values: [""] },
+                    { label: "(11) Directa: La empresa vendedora garantiza, resuelve y reemplaza directamente todos los componentes de la planta y los suministrados por terceros. Indirecta: La empresa vendedora no garantiza ni reemplaza ningún componente. Hay que resolver la garantía con el fabricante de la planta o de los componentes.", values: [""] },
                 ],
-            },            
+            },
 
 
         ],
     },
 };
+
+export const symbols: Record<number, SymbolItem> = {
+    1: {
+        title: "Estructuras robustas",
+        description:
+            "Las estructuras robustas son muy necesarias en México por las malas condiciones de las carreteras y de los caminos rurales o brechas de acceso a los sitios.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    2: {
+        title: "Quemador de Aire Total",
+        description:
+            "Los quemadores de 'Aire Total' ahorran combustible al tener una combustión más eficiente. Favor de ver la comparativa anexa.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    3: {
+        title: "Calentador de combustible",
+        description:
+            "Calienta el combustible para menos viscosidad y quemarlo al 100%. Ahorra mucho combustible y no contamina la mezcla con residuos.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    4: {
+        title: "Velocidad variable",
+        description:
+            "La velocidad variable es necesaria para incorporar hasta 50% de RAP, incrementar la producción con agregados secos, dar más tiempo de secado a agregados húmedos, mejorar la homogeneidad de la mezcla, disminuir el consumo de combustible y optimizar la producción.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    5: {
+        title: "Inicio rápido de producción",
+        description:
+            "El inicio de producción es más rápido cuando el elevador tiene bolas de mezcla endurecida del día anterior.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    6: {
+        title: "Sensor de oxígeno",
+        description:
+            "Mide el exceso de oxígeno que sale por la chimenea para carburar automáticamente el quemador. Se ahorra combustible y se evita la emisión contaminante.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    7: {
+        title: "Atomización molecular",
+        description:
+            "El combustible se atomiza a nivel molecular logrando un gran ahorro de combustible y menos contaminantes.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    8: {
+        title: "Reducción de ruido",
+        description:
+            "Silenciador en el quemador y álabes aerodinámicos en el extractor para reducir el ruido.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    9: {
+        title: "Refuerzo estructural",
+        description:
+            "Mejora la estética del tambor mezclador y refuerza adicionalmente la estructura.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    10: {
+        title: "Casa de bolsas grande",
+        description:
+            "Las casas de bolsas más grandes logran mejor filtrado debido a menor velocidad del aire.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    11: {
+        title: "Damper automático",
+        description:
+            "La apertura automática del damper se ajusta en función de la presión interna.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    12: {
+        title: "Pulsos automáticos",
+        description:
+            "Los pulsos varían automáticamente según la presión interna.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    13: {
+        title: "Monitoreo de emisiones",
+        description:
+            "Control de contaminantes regulados por SEMARNAT.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    14: {
+        title: "Sistema personalizable",
+        description:
+            "Triaso puede modificar el sistema según requerimientos del cliente.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    15: {
+        title: "Sistema de respaldo",
+        description:
+            "Evita que la planta se detenga si falla algún componente.",
+        image: "https://placehold.co/600x400/png",
+    },
+
+    16: {
+        title: "Garantía directa",
+        description:
+            "La empresa vendedora garantiza y reemplaza directamente los componentes.",
+        image: "https://placehold.co/600x400/png",
+    },
+};
+
 
 const modelColumns = ["Desamaq", "Plus", "Pro+"];
 
@@ -407,8 +505,45 @@ export default function ProductSelector() {
     const [active, setActive] = useState<PlantType>("contraflujo");
     const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
     const [tableOpen, setTableOpen] = useState(false);
+    const [symbolModal, setSymbolModal] = useState<SymbolItem | null>(null);
 
     const plant = data[active];
+
+    const getSymbol = (number: string) => {
+        return symbols[Number(number)] || null;
+    };
+
+    const renderLabel = (label: string) => {
+        const match = label.match(/\((\d+)\)/);
+
+        if (!match) return label;
+
+        const number = match[1];
+        const cleanText = label.replace(/\(\d+\)/, "");
+
+        return (
+            <>
+                {cleanText}
+                <button
+                    onClick={() => {
+                        const symbol = getSymbol(number);
+                        setSymbolModal(symbol);
+                    }}
+                    style={{
+                        marginLeft: "4px",
+                        fontSize: "0.75rem",
+                        verticalAlign: "super",
+                        color: "#2563eb",
+                        cursor: "pointer",
+                        background: "none",
+                        border: "none"
+                    }}
+                >
+                    ({number})
+                </button>
+            </>
+        );
+    };
 
     const toggleSection = (section: string) => {
         setExpandedSections((prev) => ({ ...prev, [section]: !prev[section] }));
@@ -571,10 +706,10 @@ export default function ProductSelector() {
                                             padding: "0.25rem 0",
                                             fontSize: "0.875rem",
                                         }}
-                                    >   
+                                    >
                                         <span style={{ fontWeight: 600 }}>{s.value}</span>
                                         <span className="text-xs text-[#5d5d5d]">{s.label}</span>
-                                        
+
                                     </div>
                                 ))}
 
@@ -731,7 +866,7 @@ export default function ProductSelector() {
                                                     backgroundColor: colors.cardBg,
                                                 }}
                                             >
-                                                {row.label}
+                                                {renderLabel(row.label)}
                                             </div>
                                             {row.values.map((val, i) => (
                                                 <div
@@ -757,6 +892,82 @@ export default function ProductSelector() {
                 )}
             </div>
 
+                {/* modal */}
+            {symbolModal && (
+                <div
+                    onClick={() => setSymbolModal(null)}
+                    style={{
+                        position: "fixed",
+                        inset: 0,
+                        backgroundColor: "rgba(0,0,0,0.5)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 9999,
+                        padding: "1rem" // Añadido para que no pegue en bordes en móviles
+                    }}
+                >
+                    <div
+                        onClick={(e) => e.stopPropagation()}
+                        style={{
+                            backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%), url(${symbolModal.image})`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                            backgroundRepeat: "no-repeat",
+
+                            padding: "2rem",
+                            borderRadius: "1rem",
+                            maxWidth: "700px",
+                            width: "100%",
+                            minHeight: "400px", 
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "flex-end",
+
+                
+                            color: "white"
+                        }}
+                    >
+                       
+                        <h3
+                            style={{
+                                fontSize: "1.25rem",
+                                fontWeight: 600,
+                                marginBottom: "0.5rem"
+                            }}
+                        >
+                            {symbolModal.title}
+                        </h3>
+
+                        <p
+                            style={{
+                                fontSize: "0.875rem",
+                                lineHeight: 1.6,
+                                color: "rgba(255, 255, 255, 0.9)" 
+                            }}
+                        >
+                            {symbolModal.description}
+                        </p>
+
+                        <button
+                            onClick={() => setSymbolModal(null)}
+                            style={{
+                                marginTop: "1.5rem",
+                                background: "white", 
+                                color: "black",
+                                padding: "0.5rem 1rem",
+                                borderRadius: "0.5rem",
+                                border: "none",
+                                alignSelf: "flex-start", 
+                                fontWeight: "bold",
+                                cursor: "pointer"
+                            }}
+                        >
+                            Cerrar
+                        </button>
+                    </div>
+                </div>
+            )}
 
             {/* descripción final */}
             <div className="flex flex-col justify-center items-center py-10">
