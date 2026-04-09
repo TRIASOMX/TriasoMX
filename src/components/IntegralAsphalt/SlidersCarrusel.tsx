@@ -130,7 +130,7 @@ export default function SlidersCarrusel({ images }: SlidersCarruselProps) {
                   </h1>
 
                   <div className="mt-4 pt-4 border-t border-gray-100 text-xs text-[#4F4F4F] font-semibold uppercase tracking-wide text-right">
-                    See more
+                    Ver más
                   </div>
                 </div>
               </div>
