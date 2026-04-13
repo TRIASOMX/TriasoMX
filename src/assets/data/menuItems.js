@@ -10,6 +10,42 @@ export const menuItems = [
           {
             title: "MEZCLADORAS DE TAMBOR",
             url: "/DrumMixers",
+            children: [
+              {
+                title: "CONTRAFLUJO",
+                children:[
+                  {
+                    title:"Desamaq",
+                    url: "/TamborMezcla/Contraflujo/ContraDesamaq"
+                  },
+                  {
+                    title:"Plus",
+                    url:"/TamborMezcla/Contraflujo/ContraPlus"
+                  },
+                  {
+                    title:"Pro+",
+                    url:"/DrumMixers"
+                  }
+                ]
+              },
+                            {
+                title: "FLUJO PARALELO",
+                children:[
+                  {
+                    title:"Desamaq",
+                    url: "/TamborMezcla/Paralelo/ParaleloDesamaq"
+                  },
+                  {
+                    title:"Plus",
+                    url:"/TamborMezcla/Paralelo/ParaleloPlus"
+                  },
+                  {
+                    title:"Pro+",
+                    url:"/TamborMezcla/Paralelo/ParaleloPro"
+                  }
+                ]
+              }
+            ]
           },
           {
             title: "CASAS DE BOLSAS ACOPLABLES",
@@ -18,6 +54,7 @@ export const menuItems = [
           {
             title: "TANQUES DE ASFALTO",
             url: "/AsphaltStorage",
+            
           },
           {
             title: "BINS",

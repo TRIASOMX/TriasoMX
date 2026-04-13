@@ -1,0 +1,155 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import OdometerFlujo from "../../../components/DrumMixers/OdometerFlujo";
+import DrumMixPlanos from "../../../components/DrumMixers/DrumMixPlanos";
+import HeroComponent from "../../../components/unitComponents/HeroComponent.astro";
+import hero1 from "../../../../public/fabricaBG.webp";
+import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
+import OsDrumSection from "../../../components/DrumMixers/OsDrumSection.astro";
+import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
+import HotspotSection from "../../../components/DrumMixers/HotspotSection.astro";
+import SliderParalelo from "../../../components/DrumMixers/SliderParalelo.astro";
+import QuemadorSeccion from "../../../components/DrumMixers/QuemadorSeccion.astro";
+import LavadoraSeccion from "../../../components/DrumMixers/LavadoraSeccion.astro";
+import hero2 from "../../../assets/images/DrumMixers/Gallery/DM1.webp";
+
+const cards = [
+    {
+        title: "La planta de asfalto de contraflujo más equipada, más robusta, más moderna de Latinoamérica.",
+        text: "",
+        bg: "#d13c3c",
+        textColor: "#ffffff",
+    },
+    {
+        title: "Con una configuración ideal para trabajo pesado y condiciones cariables la planta de asfalto está completamente equipada.",
+        text: "",
+        bg: "#14427c",
+        textColor: "#ffffff",
+    },
+    {
+        title: "Operación total manual o automática para un control eficiente y sencillo del equipo, con menor necesidad de intervención del operador.",
+        text: "",
+        bg: "#00840d",
+        textColor: "#ffffff",
+    },
+    {
+        title: "Equipos auxiliares y componentes sobredimensionados y de gran volumen, permitiendo operaciones a gran escala, con total estabilidad, continuas, intensivas y prolongadas, sin paros, con mínima intervención del operador",
+        text: "",
+        bg: "#6b97c6",
+        textColor: "#ffffff",
+    },
+];
+---
+
+<Layout title="Tambor de Paralelo Desamaq">
+    <div class="mt-10">
+        <HeroComponent
+            title="Tambor de Paralelo Desamaq"
+            image="https://placehold.co/1920x1080/png"
+            imageAlt="Tambor de Contraflujo Desamaq"
+            altImage="https://placehold.co/600x400/png"
+            descAltImage="placeholder"
+        />
+    </div>
+    <div class="bg-[#1e1e1e]">
+        <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+            <div class="flex flex-row justify-center items-center gap-10">
+                <a
+                    class="font-bold underline text-white text-xl lg:text-2xl"
+                    href="/TamborMezcla/Paralelo/ParaleloDesamaq">Desamaq</a
+                >
+                <a
+                    class="font-thin text-white text-xl lg:text-2xl"
+                    href="/TamborMezcla/Paralelo/ParaleloPlus">Plus</a
+                >
+                <a
+                    class="font-thin text-white text-xl lg:text-2xl"
+                    href="/TamborMezcla/Paralelo/ParaleloPro">Pro +</a
+                >
+            </div>
+
+            <div class="flex justify-center items-center text-center">
+                <h1 class="font-semibold text-white text-lg lg:text-xl">
+                    La mejor planta de asfalto de flujo paralelo de su
+                    categoría, ideal para contratistas que están iniciando con
+                    proyectos pequeños y buscan no depender de otros productores
+                    de mezcla. Con bajo consumo de combustible por tonelada
+                    ofreciendo una excelente relación costo-beneficio en su
+                    categoría.
+                </h1>
+            </div>
+
+            <div
+                class="flex flex-col lg:flex-row md:flex-row justify-center items-center gap-5"
+            >
+                <div
+                    class="bg-black rounded-2xl w-36 text-center transition-all duration-300 hover:bg-white"
+                >
+                    <p class="py-3 font-semibold text-white hover:text-black">
+                        Cotizar
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl w-36 text-center transition-all duration-300 hover:bg-black"
+                >
+                    <p class="py-3 font-semibold text-black hover:text-white">
+                        Comparar
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <OdometerFlujo client:only />
+
+    <div>
+        <DropdownComponent
+            title="El modelo más avanzado para una operación automática, la más económica y sin comparación ni competencia, preferencia en su región para trabajos de pavimentación."
+        >
+            <p>
+                o Triaso® ofrece la solución ideal para la producción continua
+                de mezcla asfáltica, integrando secado, mezclado, control de
+                emisiones con lavadura en un solo chasis diseñado para trabajo
+                pesado, con opción de tolvas montadas. Su diseño está orientado
+                a una operación continua, eficiente y con mayor control del
+                proceso.
+            </p>
+        </DropdownComponent>
+    </div>
+    <OsDrumSection />
+
+    <div class="bg-[#1e1e1e] flex flex-col justify-center items-center px-8">
+        <div class="flex flex-col justify-center items-center pb-10">
+            <h1
+                class="text-white font-bold text-3xl text-center lg:text-start md:text-start"
+            >
+                Para evitar desperdicios, robos y mala operación de su planta de
+                asfalto
+            </h1>
+            <p class="text-white text-center lg:text-start md:text-start">
+                Paro total con un solo botón desde su celular
+            </p>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <StackedInfoCards
+            cards={cards}
+            mainTitle="Su mejor negocio comienza con nosotros"
+            mainDescription="Los contratistas que nos conocen prefieren Triaso sobre otras marcas por nuestra alta calidad, confiabilidad y precios."
+        />
+    </div>
+
+    <HotspotSection />
+
+    <div class="max-w-7xl mx-auto px-8">
+        <SliderParalelo />
+    </div>
+
+    <QuemadorSeccion />
+
+
+
+    <LavadoraSeccion />
+
+    <DrumMixPlanos client:only />
+</Layout>
