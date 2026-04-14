@@ -26,8 +26,8 @@ const ASOdometer = () => {
           setValue6(0);
 
           setTimeout(() => {
-            setValue(12);
-            setValue1(30);
+            setValue(45);
+            setValue1(120);
             setValue2(220);
             setValue4(1);
             setValue5(2);
@@ -57,10 +57,10 @@ const ASOdometer = () => {
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value1} format="(,ddd)" duration={2000} />
-              <p className="text-sm font-normal ml-3">thousand gallons</p>
+              <p className="text-sm font-normal ml-3">mil litros</p>
             </div>
             <p className="text-[#4F4F4F] text-center lg:text-start font-normal w-full">
-              Asphalt storage capacity
+              Capacidad de almacenamiento de asfalto
             </p>
           </div>
 
@@ -70,7 +70,7 @@ const ASOdometer = () => {
               <p className="text-sm font-normal ml-3">°C</p>
             </div>
             <p className="text-[#4F4F4F] text-center lg:text-start font-normal w-full">
-              Maximum achievable temperature
+              Temperatura máxima alcanzable
             </p>
           </div>
 
@@ -81,10 +81,10 @@ const ASOdometer = () => {
               <Odometer value={value5} format="(,ddd)" duration={2000} />
               <p>.</p>
               <Odometer value={value6} format="(,ddd)" duration={2000} />
-              <p className="text-sm font-normal ml-3">million</p>
+              <p className="text-sm font-normal ml-3">millones</p>
             </div>
             <p className="text-[#4F4F4F] text-center lg:text-start font-normal w-full">
-              Btu/hr capacity
+              de btu/hr de capacidad
             </p>
           </div>
         </div>
@@ -93,7 +93,7 @@ const ASOdometer = () => {
           <div className="pb-[50px] pt-[50px]">
             <img src={ASOdom.src} alt="Back of an Asphalt Storage Tank" />
           </div>
-          <a
+          {/* <a
   href="#planosAsphaltStorage"
   className="
     group relative inline-flex items-center justify-center
@@ -117,7 +117,7 @@ const ASOdometer = () => {
   <span className="relative z-10">
     All Technical Details
   </span>
-</a>
+</a> */}
         </div>
       </div>
     </div>

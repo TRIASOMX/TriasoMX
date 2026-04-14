@@ -6,19 +6,22 @@ import GallerySlider from "../unitComponents/GallerySlider";
 import ModalButton from "../unitComponents/ModalButton.astro";
 import hotoil from "../../assets/images/AsphaltStorage/hotoil.webp";
 import DirectFire from "../../assets/images/AsphaltStorage/DirectFire.webp";
-import VaporCondensers from "../../assets/images/AsphaltStorage/VaporCondensers.webp"
+import VaporCondensers from "../../assets/images/AsphaltStorage/VaporCondensers.webp";
 
-import t1 from "../../assets/images/AsphaltStorage/SliderStorage/P-3a.webp"
-import t2 from "../../assets/images/AsphaltStorage/SliderStorage/P-3b.webp"
-import t3 from "../../assets/images/AsphaltStorage/SliderStorage/P-3c.webp"
-import t4 from "../../assets/images/AsphaltStorage/SliderStorage/P-3d.webp"
-import t5 from "../../assets/images/AsphaltStorage/SliderStorage/P-3e.webp"
-import t6 from "../../assets/images/AsphaltStorage/SliderStorage/P-3f.webp"
+import Whatsbtn from "../unitComponents/Whatsbtn.astro";
+import Tred from "../../assets/images/AsphaltStorage/redT.webp";
+import t1 from "../../assets/images/AsphaltStorage/SliderStorage/P-3a.webp";
+import t2 from "../../assets/images/AsphaltStorage/SliderStorage/P-3b.webp";
+import t3 from "../../assets/images/AsphaltStorage/SliderStorage/P-3c.webp";
+import t4 from "../../assets/images/AsphaltStorage/SliderStorage/P-3d.webp";
+import t5 from "../../assets/images/AsphaltStorage/SliderStorage/P-3e.webp";
+import t6 from "../../assets/images/AsphaltStorage/SliderStorage/P-3f.webp";
 
-import g1 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT1.webp"
-import g2 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT2.webp"
-import g3 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT3.webp"
-import g4 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT4.webp"
+import g1 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT1.webp";
+import g2 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT2.webp";
+import g3 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT3.webp";
+import g4 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT4.webp";
+import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
 
 const tanksSlides = [
   {
@@ -77,20 +80,22 @@ const tanksSlides2 = [
   data-tabs
 >
   <div class="flex flex-col items-center justify-center w-full gap-4 mt-8">
-    <div class="flex items-center justify-around w-full gap-4">
+    <div
+      class="flex items-center justify-around w-full gap-4 bg-[#1e1e1e] lg:h-[10vh] rounded-t-2xl"
+    >
       <button
         class="text-xl md:text-4xl tab-button py-2 md:px-4 font-bold focus:outline-none"
         data-tab="tab1"
         aria-selected="true"
       >
-        Oil Heating
+        <p class="text-white">Caldera</p>
       </button>
       <button
         class="tab-button py-2 md:px-4 font-bold text-xl md:text-4xl focus:outline-none"
         data-tab="tab2"
         aria-selected="false"
       >
-        Direct Fire Heating
+        <p class="text-white">Calentamiento directo</p>
       </button>
     </div>
     <div class="py-4 flex justify-center items-center">
@@ -99,196 +104,393 @@ const tanksSlides2 = [
         class="w-full flex flex-col items-center justify-center gap-5 mt-4 tab-content text-base md:text-lg text-grisT font-bold"
         data-tab-content="tab1"
       >
+        <div>
+          <img src={t1.src} alt="t1" />
+        </div>
         <div class="w-full">
           <p class="text-justify text-sm lg:text-lg md:text-lg">
-            Designed for precise temperature control, the oil heater ensures
-            uniform heat distribution through an efficient thermal oil
-            circulation system. Its heavy-duty construction allows continuous
-            operation, making it suitable for demanding that require consistent
-            performance and energy efficiency.
+            Diseñado para un control preciso de temperatura, la caldera asegura
+            una distribución uniforme del calor mediante un eficiente sistema de
+            circulación de aceite térmico. Su construcción robusta permite
+            operación continua, haciéndolo adecuado para trabajos exigentes que
+            requieren desempeño constante y eficiencia energética.
           </p>
         </div>
-        <GallerySlider client:only slides={tanksSlides} visibleThumbs={6} />
-        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <div class="bg-[#1e1e1e] p-10 rounded-b-2xl">
           <div
-            class="w-full bg-[#727272] flex flex-col gap-6 p-8 rounded-xl shadow-lg max-h-[55vh]"
+            class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3"
+            id="cardRow0"
           >
-            <div class="w-full flex justify-center">
-              <Image src={oil1} alt="Oil Heater" class="w-4/5 h-4/5 rounded-lg" />
-            </div>
-            <div class="w-full flex justify-between items-center my-auto">
-              <h1 class="text-white text-xl font-semibold">Oil Heater</h1>
-              <ModalButton>
-                <h3 slot="title" class="text-xl md:text-2xl font-semibold">
-                  Oil Heater
-                </h3>
-                <Image slot="image" src={oil1} alt="Oil Heater" />
-                <div slot="content">
-                  <ul class="list-disc pl-5">
-                    <li>Heating capacities: 1,000,000 and 2,400,000 Btu/hr</li>
-                    <li>
-                      High-efficiency 2" diameter coil system inside the asphalt
-                      tank
-                    </li>
-                    <li>
-                      Connections for asphalt tankers with coil heating systems
-                    </li>
-                    <li>Thermally insulated with ceramic fiber</li>
-                    <li>Stainless steel exterior cladding</li>
-                    <li>Equipped with a diesel burner</li>
-                    <li>Automatic on/off control based on temperature</li>
-                    <li>Two operating modes: automatic and manual</li>
-                    <li>
-                      Digital thermometers with programmable setpoint for burner
-                      activation and shutdown
-                    </li>
-                    <li>Siemens PLC-based control system</li>
-                    <li>100-liter (26.4-gallon) thermal oil expansion tank</li>
-                    <li>100% duty cycle for continuous operation</li>
-                    <li>
-                      Integrated safety systems with automatic shutdown in case
-                      of fault
-                    </li>
-                  </ul>
+            <!-- Card 1-A -->
+            <div
+              class="relative rounded-lg overflow-hidden group cursor-pointer"
+              data-card="0-0"
+            >
+              <div
+                class="w-full h-44 bg-black/10 flex items-center justify-center"
+              >
+                <img src="https://placehold.co/600x400" alt="" />
+              </div>
+
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+              >
+                <span
+                  class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                >
+                  Caldera
+                </span>
+                <button
+                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                  aria-expanded="false"
+                >
+                  <svg
+                    class="chevron w-3 h-3 transition-transform duration-300"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                  >
+                    <path
+                      d="M2 4l4 4 4-4"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"></path>
+                  </svg>
+                  mostrar más
+                </button>
+                <div
+                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                >
+                  <p class="text-white/75 text-xs leading-relaxed mt-2">
+                    Placeholder
+                  </p>
                 </div>
-              </ModalButton>
+              </div>
+            </div>
+
+            <!-- Card 1-B -->
+            <div
+              class="relative rounded-lg overflow-hidden group cursor-pointer"
+              data-card="0-1"
+            >
+              <div
+                class="w-full h-44 bg-black/10 flex items-center justify-center"
+              >
+                <img src="https://placehold.co/600x400" alt="" />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+              >
+                <span
+                  class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                >
+                  Serpentines de caldera
+                </span>
+                <button
+                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                  aria-expanded="false"
+                >
+                  <svg
+                    class="chevron w-3 h-3 transition-transform duration-300"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                  >
+                    <path
+                      d="M2 4l4 4 4-4"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"></path>
+                  </svg>
+                  mostrar más
+                </button>
+                <div
+                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                >
+                  <p class="text-white/75 text-xs leading-relaxed mt-2">
+                    Placeholder
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 1-C -->
+            <div
+              class="relative rounded-lg overflow-hidden group cursor-pointer"
+              data-card="0-2"
+            >
+              <div
+                class="w-full h-44 bg-black/10 flex items-center justify-center"
+              >
+                <img src="https://placehold.co/600x400" alt="" />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+              >
+                <span
+                  class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                >
+                  Quemador para calentamiento
+                </span>
+                <button
+                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                  aria-expanded="false"
+                >
+                  <svg
+                    class="chevron w-3 h-3 transition-transform duration-300"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                  >
+                    <path
+                      d="M2 4l4 4 4-4"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"></path>
+                  </svg>
+                  mostrar más
+                </button>
+                <div
+                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                >
+                  <p class="text-white/75 text-xs leading-relaxed mt-2">
+                    Placeholder
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div
-            class="w-full bg-[#727272]  flex flex-col gap-6 p-8 rounded-xl shadow-lg max-h-[55vh]"
-          >
-            <div class="w-full flex justify-center">
-              <Image src={hotoil} alt="Hot Oil Coils" class="w-full h-4/5 rounded-lg" />
-            </div>
-            <div class="flex justify-between items-center my-auto">
-              <h1 class="text-white text-xl font-semibold">Hot Oil Coils</h1>
-              <ModalButton>
-                <h3 slot="title" class="text-xl md:text-2xl font-semibold">
-                  Hot Oil Coils
-                </h3>
-                <Image slot="image" src={hotoil} alt="Hot Oil Coils" />
-                <div slot="content">
-                  Our asphalt storage tanks are equipped with heating coils that
-                  circulate thermal oil to ensure uniform and efficient asphalt
-                  heating. <br />
-                  This system prevents solidification and maintains the asphalt at
-                  the required temperature for operation. <br />
-                  It delivers reliable performance, reduces energy consumption, and
-                  allows precise temperature control. <br />
-                  The design minimizes wear, extending the tank’s service life while
-                  maintaining optimal asphalt consistency and readiness for use.
-                </div>
-              </ModalButton>
-            </div>
-          </div>
-        </div>
-        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-x-[20%] gap-y-6">
-          <Card>
-            <h1>Precision Temperature Control:</h1>
-            <p class="font-thin">
-              Maintains precise temperature control within a ±1°C tolerance,
-              ensuring optimal conditions for material processing.
-            </p>
-          </Card>
-          <Card>
-            <h1>Customizable Heating Capacity:</h1>
-            <p class="font-thin">
-              Tailored to meet specific project needs, from small-scale
-              operations to large industrial requirements.Tailored to meet
-              specific project needs — from small-scale operations to large
-              industrial requirements.
-            </p>
-          </Card>
-          <Card>
-            <h1>High-Efficiency Burners:</h1>
-            <p class="font-thin">
-              Equipped with low-NOx burners that minimize emissions while
-              maximizing fuel efficiency.
-            </p>
-          </Card>
-          <Card>
-            <h1>Thermal Oil Circulation System:</h1>
-            <p class="font-thin">
-              Ensures uniform heat distribution across throughout the system,
-              preventing hot spots and material degradation.
-            </p>
-          </Card>
         </div>
       </div>
     </div>
     <!-- Second Section -->
     <div
-      class="w-full flex flex-col items-center justify-center gap-10  tab-content text-base md:text-lg text-grisT font-bold"
+      class="w-full flex flex-col items-center justify-center gap-10 tab-content text-base md:text-lg text-grisT font-bold"
       data-tab-content="tab2"
     >
-      <p class="text-justify text-sm lg:text-lg md:text-lg">
-        Triaso® direct fire heating is designed to heat up the asphalt. A burner
-        is mounted directly beneath the tank, transferring heat through a steel
-        plate into the asphalt. This method provides fast, efficient heating
-        with minimal energy loss.
-      </p>
-      <GallerySlider client:only slides={tanksSlides2} visibleThumbs={4} />
-      <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div>
+        <img src={g2.src} alt="t1" />
+      </div>
+      <div class="w-full">
+        <p class="text-justify text-sm lg:text-lg md:text-lg">
+          El calentamiento por fuego directo Triaso® está diseñado para elevar
+          la temperatura del asfalto. Un quemador ecológico de bajas emisiones
+          NOx se monta directamente en la parte inferior del tanque,
+          transfiriendo calor a través de tubo de acero hacia el asfalto. Este
+          método proporciona un calentamiento rápido y eficiente, con un mínimo
+          de pérdida de energía.
+        </p>
+      </div>
+
+      <div class="bg-[#1e1e1e] p-10 rounded-b-2xl">
         <div
-          class="w-full bg-[#727272] flex flex-col gap-6 p-8 rounded-xl shadow-lg max-h-[55vh]"
+          class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3"
+          id="cardRow0"
         >
-          <div class="w-full flex justify-center">
-            <Image src={DirectFire} alt="Direct Fire Heating Burner" class=" lg:w-full lg:h-96 object-fill rounded-lg" />
-          </div>
-          <div class="w-full flex justify-between items-center">
-            <h1 class="text-white text-xl w-1/2 md:text-2xl">
-              Direct Fire Heating Burner
-            </h1>
-            <ModalButton>
-              <h3 slot="title" class="text-xl md:text-2xl">
-                Direct Fire Heating Burner
-              </h3>
-              
-                <Image
-                slot="image"
-                src={DirectFire}
-                alt="Direct Fire Heating Burner"
-                class="w-full"
-              />
-           
-              
-              <div slot="content">
-                The direct-fire heating system works with a diesel or a gas
-                burner that radiates heat to a main tube inside the asphalt
-                tank. This tube has two secondary pipes that help distribute the
-                heat more evenly, and the exhaust gases exit through the vapor
-                condensers.
+          <!-- Card 1-A -->
+          <div
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+            data-card="0-0"
+          >
+            <div
+              class="w-full h-44 bg-black/10 flex items-center justify-center"
+            >
+              <img src="https://placehold.co/600x400" alt="" />
+            </div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+            >
+              <span
+                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+              >
+                Línea de transferencia de calor
+              </span>
+              <button
+                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                aria-expanded="false"
+              >
+                <svg
+                  class="chevron w-3 h-3 transition-transform duration-300"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                >
+                  <path
+                    d="M2 4l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"></path>
+                </svg>
+                mostrar más
+              </button>
+              <div
+                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+              >
+                <p class="text-white/75 text-xs leading-relaxed mt-2">
+                  Placeholder
+                </p>
               </div>
-            </ModalButton>
+            </div>
           </div>
-        </div>
-        <div
-          class="w-full bg-[#727272] flex flex-col gap-6 p-8 rounded-xl shadow-lg max-h-[55vh]"
-        >
-          <div class="w-full flex justify-center">
-            <Image src={VaporCondensers} alt="Vapor condensers" class="lg:w-full lg:h-[400px] object-fill rounded-lg" />
-          </div>
-          <div class="w-full flex justify-between items-center">
-            <h1 class="text-white text-xl w-1/2 md:text-2xl">
-              Vapor condensers
-            </h1>
-            <ModalButton>
-              <h3 slot="title" class="text-xl md:text-2xl">Vapor condensers</h3>
-              <Image slot="image" src={VaporCondensers} alt="Vapor condensers" class="w-full object-fill" />
-              <div slot="content">
-                Triaso® vapor condensers are designed to capture and condense
-                asphalt fumes during storage and heating, preventing emissions
-                from escaping into the environment. Installed on the tank’s vent
-                line, they cool down hot vapors into liquid form, reducing odor,
-                improving safety, and ensuring compliance with environmental
-                regulations.
+
+          <!-- Card 1-B -->
+          <div
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+            data-card="0-1"
+          >
+            <div
+              class="w-full h-44 bg-black/10 flex items-center justify-center"
+            >
+              <img src="https://placehold.co/600x400" alt="" />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+            >
+              <span
+                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+              >
+                Condensadores de vapor
+              </span>
+              <button
+                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                aria-expanded="false"
+              >
+                <svg
+                  class="chevron w-3 h-3 transition-transform duration-300"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                >
+                  <path
+                    d="M2 4l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"></path>
+                </svg>
+                mostrar más
+              </button>
+              <div
+                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+              >
+                <p class="text-white/75 text-xs leading-relaxed mt-2">
+                  Placeholder
+                </p>
               </div>
-            </ModalButton>
+            </div>
+          </div>
+
+          <!-- Card 1-C -->
+          <div
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+            data-card="0-2"
+          >
+            <div
+              class="w-full h-44 bg-black/10 flex items-center justify-center"
+            >
+              <img src="https://placehold.co/600x400" alt="" />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+            >
+              <span
+                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+              >
+                Quemador para calentamiento por fuego directo
+              </span>
+              <button
+                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                aria-expanded="false"
+              >
+                <svg
+                  class="chevron w-3 h-3 transition-transform duration-300"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                >
+                  <path
+                    d="M2 4l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"></path>
+                </svg>
+                mostrar más
+              </button>
+              <div
+                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+              >
+                <p class="text-white/75 text-xs leading-relaxed mt-2">
+                  Placeholder
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</section>
+
+<section>
+  <div class="flex flex-col justify-center items-center space-y-5 py-5">
+    <div class="flex flex-col justify-center items-center">
+      <h1 class="font-bold text-2xl">
+        Triaso le da versatilidad y control total sobre su tanque de asfalto,
+      </h1>
+      <h1 class="font-bold text-2xl">
+        capacidades, diseño, temperatura, operación y confiabilidad.
+      </h1>
+    </div>
+
+    <div class="flex flex-col justify-center items-center">
+      <p class="font-thin text-lg">
+        Un estándar tan alto que solo un equipo Triaso comparable puede estar al
+        mismo nivel.
+      </p>
+    </div>
+  </div>
+  <!-- <OSection /> -->
+  <TwoColumnSection
+    leftBg="bg-redBg"
+    rightBg="bg-blueMain"
+    imageSrc={Tred.src}
+    imageAlt="Red T icon"
+    imageWidth="150px"
+  >
+    <div slot="left" class="flex flex-col justify-center gap-3">
+      <h1 class="text-xl md:text-2xl">Nos adaptamos a su proyecto</h1>
+      <p class="text-sm md:text-base lg:text-lg">
+        Pueden personalizarse y adaptarse a diferentes requerimientos de manejo
+        de materiales, ofreciendo eficiencia y confiabilidad en cualquier
+        proyecto.
+      </p>
+      <Whatsbtn/>
+    </div>
+
+    <div slot="right" class="flex flex-col justify-center gap-3">
+      <h1 class="text-xl md:text-2xl">Servicio al cliente 24/7</h1>
+      <p class="text-sm md:text-base lg:text-lg">
+        Nuestro equipo está disponible en todo momento, listo para asistirte
+        cuando lo necesites, incluso fines de semana y días festivos.
+      </p>
+      <Whatsbtn/>
+    </div>
+  </TwoColumnSection>
+</section>
+
+<section>
+    <div
+        class="relative bg-gradient-to-b from-[#f1eeb8] to-white text-center py-20 px-6
+              rounded-b-[60%]"
+    >
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Agende una reunión</h2>
+
+        <p class="text-sm md:text-base mb-8 max-w-2xl mx-auto">
+            Cuéntenos más sobre su proyecto para identificar la solución
+            industrial que mejor se ajuste a sus necesidades.
+        </p>
+
+        <button
+            class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
+        >
+            Ver horarios disponibles
+        </button>
+    </div>
 </section>
 
 <style is:global>
@@ -369,4 +571,28 @@ const tanksSlides2 = [
       modalOverlay.classList.add("hidden");
     }
   });
+</script>
+
+<script>
+  document
+    .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
+    .forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const expandible = btn.nextElementSibling as HTMLElement;
+        const chevron = btn.querySelector(".chevron") as HTMLElement;
+        const isOpen =
+          expandible.style.maxHeight && expandible.style.maxHeight !== "0px";
+
+        if (isOpen) {
+          expandible.style.maxHeight = "0px";
+          chevron.style.transform = "rotate(0deg)";
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          expandible.style.maxHeight = expandible.scrollHeight + "px";
+          chevron.style.transform = "rotate(180deg)";
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
 </script>

@@ -1,0 +1,319 @@
+---
+import img1 from "../../assets/images/AsphaltStorage/sedenaBG.jpg"
+import img2 from "../../assets/images/AsphaltStorage/Low/versatil.webp"
+
+const slides = [
+  {
+    id: 1,
+    title: "Almacenamiento de calidad",
+    description:
+      "Diseñamos tanques con la misión de ofrecer versatilidad y confiabilidad en el almacenamiento de asfalto, desde pavimentación de carreteras hasta impermeabilización y otros usos de gran escala.",
+    image: img2.src,
+  },
+  {
+    id: 2,
+    title: "Sistema de calentamiento",
+    description:
+      "Equipados con sistemas de calentamiento eficientes y control preciso de temperatura, mantienen la consistencia requerida del asfalto tanto para ligantes estándar como modificados.",
+    image: "https://placehold.co/600x400/png",
+  },
+  {
+    id: 3,
+    title: "Tanques de almacenamiento de asfalto SEDENA",
+    description:
+      "En 2024, la Secretaría de la Defensa Nacional (SEDENA) adquirió 18 tanques de almacenamiento Triaso, para apoyar los trabajos nacionales de pavimentación e infraestructura.",
+    image: img1.src,
+  },
+  {
+    id: 4,
+    title: "Versatilidad total",
+    description:
+      "Para requerimientos especiales, ya sea que necesite una solución estándar o un diseño a la medida.",
+    image: "https://placehold.co/600x400/png",
+  },
+  {
+    id: 5,
+    title: "Sistemas portátiles y reubicables",
+    description:
+      "Diseñados para facilitar el transporte y una instalación rápida, nuestros sistemas ofrecen operación consistente y confiable en cualquier sitio de trabajo — ideales para proyectos temporales o que se reubican con frecuencia.",
+    image: "https://placehold.co/600x400/png",
+  },
+  {
+    id: 6,
+    title: "Fabricación resistente",
+    description:
+      "Nuestros tanques de almacenamiento de asfalto están fabricados con materiales resistentes al desgaste, diseñados para soportar condiciones abrasivas y de trabajo pesado. Esta construcción robusta garantiza un desempeño confiable incluso en los entornos más exigentes. Al reducir significativamente el desgaste, el diseño disminuye las necesidades de mantenimiento y extiende la vida útil del sistema, ofreciendo una solución confiable a largo plazo.",
+    image: "https://placehold.co/600x400/png",
+  },
+];
+
+const duplicatedSlides = [...slides, ...slides];
+---
+
+<section class="py-10">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-center text-[#14427c] font-bold text-2xl md:text-3xl mb-10">
+      Eficiencia térmica que reduce el consumo de combustible.
+    </h2>
+
+    <div class="relative">
+      <div class="overflow-hidden" id="slider-wrapper">
+        <div
+          class="flex gap-6 transition-transform duration-500 ease-in-out"
+          id="slider-track"
+        >
+          {
+            duplicatedSlides.map((slide, index) => (
+              <div
+                class="
+                  slide-item
+                  flex-shrink-0
+                  w-full
+                  sm:w-[calc(50%-12px)]
+                  lg:w-[calc(40%-16px)]
+                  relative
+                  rounded-xl
+                  overflow-hidden
+                  min-h-[280px]
+                  md:min-h-[320px]
+                "
+                data-index={index}
+              >
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  class="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
+                  <h3 class="font-bold text-xl mb-2">{slide.title}</h3>
+                  <p class="text-sm text-gray-200 leading-relaxed">
+                    {slide.description}
+                  </p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <button
+        id="prev-btn"
+        class="absolute left-0 top-1/2 -translate-y-1/2 lg:-translate-x-12 md:-translate-x-4 z-10 bg-white border border-gray-200 rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gray-50 transition-colors hidden md:flex"
+        aria-label="Anterior"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5 text-gray-700"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+
+      <button
+        id="next-btn"
+        class="absolute right-0 top-1/2 -translate-y-1/2 lg:translate-x-12 md:translate-x-4 z-10 bg-white border border-gray-200 rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gray-50 transition-colors hidden md:flex"
+        aria-label="Siguiente"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5 text-gray-700"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex justify-center gap-2 mt-6" id="dots-container">
+      {
+        slides.map((_, i) => (
+          <button
+            class="dot w-3 h-3 rounded-full transition-colors duration-300"
+            data-dot={i}
+            aria-label={`Ir al slide ${i + 1}`}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const track = document.getElementById("slider-track") as HTMLElement;
+    const wrapper = document.getElementById("slider-wrapper") as HTMLElement;
+    const prevBtn = document.getElementById("prev-btn") as HTMLButtonElement;
+    const nextBtn = document.getElementById("next-btn") as HTMLButtonElement;
+    const dotsContainer = document.getElementById(
+      "dots-container"
+    ) as HTMLElement;
+    const dots = dotsContainer.querySelectorAll<HTMLButtonElement>(".dot");
+
+    const TOTAL_SLIDES = 6;
+    let currentIndex = 0;
+    let slidesVisible = getSlidesVisible();
+    let isTransitioning = false;
+    let autoplayTimer: ReturnType<typeof setInterval>;
+
+    function getSlidesVisible(): number {
+      const w = window.innerWidth;
+      if (w >= 1024) return 3;
+      if (w >= 640) return 2;
+      return 1;
+    }
+
+    function getSlideWidth(): number {
+      const gap = 24;
+      const slideItems = track.querySelectorAll<HTMLElement>(".slide-item");
+      if (!slideItems.length) return 0;
+      return slideItems[0].offsetWidth + gap;
+    }
+
+    function updateTrack(animate = true) {
+      const offset = currentIndex * getSlideWidth();
+      if (!animate) {
+        track.style.transition = "none";
+      } else {
+        track.style.transition = "transform 500ms ease-in-out";
+      }
+      track.style.transform = `translateX(-${offset}px)`;
+    }
+
+    function updateDots() {
+      const realIndex = currentIndex % TOTAL_SLIDES;
+      dots.forEach((dot, i) => {
+        if (i === realIndex) {
+          dot.classList.add("bg-red-600");
+          dot.classList.remove("bg-gray-300");
+        } else {
+          dot.classList.remove("bg-red-600");
+          dot.classList.add("bg-gray-300");
+        }
+      });
+    }
+
+    function goToNext() {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex++;
+      updateTrack(true);
+
+      if (currentIndex >= TOTAL_SLIDES) {
+        setTimeout(() => {
+          currentIndex = currentIndex % TOTAL_SLIDES;
+          updateTrack(false);
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              isTransitioning = false;
+            });
+          });
+        }, 510);
+      } else {
+        setTimeout(() => {
+          isTransitioning = false;
+        }, 510);
+      }
+      updateDots();
+    }
+
+    function goToPrev() {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = TOTAL_SLIDES - 1;
+        updateTrack(false);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            track.style.transition = "transform 500ms ease-in-out";
+            currentIndex--;
+            if (currentIndex < 0) currentIndex = TOTAL_SLIDES - 1;
+            updateTrack(true);
+            setTimeout(() => {
+              isTransitioning = false;
+            }, 510);
+          });
+        });
+      } else {
+        updateTrack(true);
+        setTimeout(() => {
+          isTransitioning = false;
+        }, 510);
+      }
+      updateDots();
+    }
+
+    function goToSlide(index: number) {
+      if (isTransitioning) return;
+      currentIndex = index;
+      updateTrack(true);
+      updateDots();
+    }
+
+    function startAutoplay() {
+      autoplayTimer = setInterval(goToNext, 4000);
+    }
+
+    function stopAutoplay() {
+      clearInterval(autoplayTimer);
+    }
+
+    function onResize() {
+      slidesVisible = getSlidesVisible();
+      updateTrack(false);
+    }
+
+    nextBtn?.addEventListener("click", () => {
+      stopAutoplay();
+      goToNext();
+      startAutoplay();
+    });
+
+    prevBtn?.addEventListener("click", () => {
+      stopAutoplay();
+      goToPrev();
+      startAutoplay();
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        stopAutoplay();
+        goToSlide(i);
+        startAutoplay();
+      });
+    });
+
+    let touchStartX = 0;
+    wrapper?.addEventListener("touchstart", (e) => {
+      touchStartX = e.touches[0].clientX;
+      stopAutoplay();
+    });
+    wrapper?.addEventListener("touchend", (e) => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? goToNext() : goToPrev();
+      }
+      startAutoplay();
+    });
+
+    window.addEventListener("resize", onResize);
+
+    updateDots();
+    startAutoplay();
+  })();
+</script>

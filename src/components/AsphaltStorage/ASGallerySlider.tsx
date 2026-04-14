@@ -51,7 +51,7 @@ export default function GallerySlider({ images }: Props) {
         });
     };
 
-    const offset = -(currentIndex * (40 / totalPages));
+    const offset = -(currentIndex * (67.50 / totalPages));
 
     return (
         <div className="w-full mx-auto py-5 bg-blueMain relative">
@@ -107,7 +107,7 @@ export default function GallerySlider({ images }: Props) {
                                     onClick={() => setModalIndex(i)}
                                     className="mt-3 w-full py-2 text-sm font-semibold text-blueMain bg-white rounded-full hover:bg-gray-100 transition"
                                 >
-                                    See more
+                                    Ver más
                                 </button>
                             </div>
 
