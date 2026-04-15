@@ -6,16 +6,31 @@ import { Image } from "astro:assets";
 
 <div class="w-full bg-white">
     <section
-        class="max-w-7xl  mx-auto py-10 grid grid-cols-1 items-center lg:grid-cols-5 gap-10 md:gap-0 bg-white"
+        class="max-w-7xl mx-auto py-10 grid grid-cols-1 items-center lg:grid-cols-5 gap-10 md:gap-0 bg-white"
     >
         <div class="col-span-1 lg:col-span-3 w-full px-8">
-            <h1 class="text-2xl md:text-4xl text-grisT font-bold">
-                Triaso Control System
-            </h1><br />
-            <br />
+            <div class="py-5">
+                <h1
+                    class="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-[#f8ad00] via-[#dc363a] to-[#3992ff] bg-clip-text text-transparent"
+                >
+                    Sistema de operación Triaso − Relief
+                </h1>
+            </div>
+            <div class="py-5">
+                <p class="font-bold text-[#393939]">
+                    Ofrecemos una forma práctica y eficiente de gestionar las
+                    operaciones de nuestros equipos. Con monitoreo y
+                    automatización avanzados,<span class="text-black">
+                        simplificamos la operación de su planta de asfalto y del
+                        personal.</span
+                    > Control total de todos los procesos de la producción y rastreo
+                    de cada dato de la operación.
+                </p>
+            </div>
+
             <div class="grid grid-cols-4 lg:grid-cols-4 md:grid-cols-2">
                 <div
-                    class=" lg:w-[100px] flex flex-col justify-center items-center"
+                    class="lg:w-[100px] flex flex-col justify-center items-center"
                 >
                     <svg
                         viewBox="0 0 24 24"
@@ -41,11 +56,11 @@ import { Image } from "astro:assets";
                     <p
                         class="text-sm md:text-base font-bold text-black text-center"
                     >
-                        Cloud historical reports
+                        Reportes históricos en la nube
                     </p>
                 </div>
                 <div
-                    class=" lg:w-[100px] flex flex-col justify-center items-center"
+                    class="lg:w-[100px] flex flex-col justify-center items-center"
                 >
                     <svg
                         class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
@@ -119,11 +134,11 @@ import { Image } from "astro:assets";
                     <p
                         class="text-sm md:text-base font-bold text-black text-center"
                     >
-                        Artificial Intelligence
+                        Inteligencia artificial que protege a su equipo
                     </p>
                 </div>
                 <div
-                    class=" lg:w-[100px] flex flex-col justify-center items-center"
+                    class="lg:w-[100px] flex flex-col justify-center items-center"
                 >
                     <svg
                         class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
@@ -160,11 +175,11 @@ import { Image } from "astro:assets";
                     <p
                         class="text-sm md:text-base font-bold text-black text-center"
                     >
-                        Fewer operators full control
+                        Menos operadores, control total
                     </p>
                 </div>
                 <div
-                    class=" lg:w-[100px] flex flex-col justify-center items-center"
+                    class="lg:w-[100px] flex flex-col justify-center items-center"
                 >
                     <svg
                         class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
@@ -188,7 +203,7 @@ import { Image } from "astro:assets";
                     <p
                         class="text-sm md:text-base font-bold text-black text-center"
                     >
-                        Remote cloud monitoring
+                        Monitoreo remoto en la nube
                     </p>
                 </div>
             </div>
@@ -199,7 +214,11 @@ import { Image } from "astro:assets";
         <div
             class="col-span-1 lg:col-span-2 w-full flex justify-end items-end lg:justify-center lg:items-center"
         >
-            <Image src={OSHand} alt="Triaso Relief system on a mobile device" class="w-3/4 lg:w-full" />
+            <Image
+                src={OSHand}
+                alt="Triaso Relief system on a mobile device"
+                class="w-3/4 lg:w-full"
+            />
         </div>
     </section>
 </div>

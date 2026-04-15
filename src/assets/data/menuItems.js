@@ -57,11 +57,11 @@ export const menuItems = [
             
           },
           {
-            title: "BINS",
+            title: "TOLVAS",
             url: "/BinUnits",
             children: [
               {
-                title: "BIN UNITS",
+                title: "UNIDADES DE TOLVAS DE AGREGADOS",
                 url: "/BinUnits",
               },
               {

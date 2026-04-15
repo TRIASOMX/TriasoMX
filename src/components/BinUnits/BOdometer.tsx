@@ -63,7 +63,7 @@ const BOdometer = () => {
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-[#4F4F4F]">Range of dosification</p>
+            <p className="text-[#4F4F4F]">Rango de dosificación</p>
           </div>
 
           <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
@@ -73,7 +73,7 @@ const BOdometer = () => {
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">tons</p>
             </div>
-            <p className="text-[#4F4F4F]">Bin unit capacity</p>
+            <p className="text-[#4F4F4F]">Capacidad de unidad de tolvas</p>
           </div>
 
           <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
@@ -82,7 +82,7 @@ const BOdometer = () => {
               <p className="text-5xl font-normal ml-3">"</p>
             </div>
             <p className="text-[#4F4F4F] text-start w-full">
-              Dosing belt
+              Banda dosificadora
             </p>
           </div>
         </div>
@@ -113,7 +113,7 @@ const BOdometer = () => {
     "
             />
             <span className="relative z-10">
-              All Technical Details
+            Todos sus características técnicas
             </span>
           </a>
         </div>
