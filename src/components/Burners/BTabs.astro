@@ -1,0 +1,368 @@
+---
+import img1Low from "../../assets/images/Burners/Low/8Low.webp";
+import img2 from "../../assets/images/Burners/7.webp";
+import img6 from "../../assets/images/Burners/12.webp";
+
+import img3 from "../../assets/images/Burners/9.webp"
+import img4 from "../../assets/images/Burners/11.webp"
+import img5 from "../../assets/images/Burners/Low/8Low.webp"
+import { Image } from "astro:assets";
+---
+
+<section class="max-w-7xl mx-auto px-6 py-8 bg-gray-100 rounded-lg relative">
+    <h2 class="text-lg font-bold text-gray-900 mb-2">
+        ¿Cuáles son las diferencias entre quemadores de "aire parcial" y "aire
+        total"?
+    </h2>
+    <p class="text-base font-bold text-[#393939] mb-6 leading-relaxed">
+        Ventajas clave que hacen a los quemadores de aire total más eficientes y
+        más amigables con el medio ambiente que los de aire parcial
+    </p>
+
+    <!-- Tab buttons -->
+    <div class="flex" role="tablist" aria-label="Comparación de quemadores">
+        <button
+            class="tab-btn w-10 h-10 text-sm font-bold border border-gray-300 bg-red-700 text-white rounded-tl cursor-pointer transition-colors"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-a"
+            id="tab-a"
+            data-tab="a"
+        >
+            A
+        </button>
+        <button
+            class="tab-btn w-10 h-10 text-sm font-bold border border-gray-300 bg-white text-gray-500 rounded-none cursor-pointer transition-colors hover:bg-gray-100"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-b"
+            id="tab-b"
+            data-tab="b"
+        >
+            B
+        </button>
+    </div>
+
+    <!-- Panel A -->
+    <div
+        class="tab-panel bg-white border border-gray-300 rounded-tr rounded-b-lg p-8"
+        role="tabpanel"
+        id="panel-a"
+        aria-labelledby="tab-a"
+    >
+        <div
+            class="w-full grid grid-cols-1 md:grid-cols-2 justify-center items-start mt-20 gap-20"
+        >
+            <div class="w-full flex flex-col gap-6">
+                <div class="text-center w-full flex flex-col items-center">
+                    <h2 class="text-xl md:text-2xl font-bold">
+                        Quemadores de aire parcial
+                    </h2><br />
+                    <div class="h-[2px] w-3/4 bg-blueMain"></div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-6 text-sm lg:text-base md:text-base"
+                >
+                    <p>
+                        Estos quemadores suministran únicamente entre el 30% y
+                        el 45% del aire necesario para la combustión (aire
+                        primario) a través del soplador.
+                    </p>
+                    <p>
+                        El aire restante (aire secundario) es aspirado por el
+                        sistema de succión del extractor, entrando libremente a
+                        través de aberturas en el frente del tambor.
+                    </p>
+                    <p>
+                        Como este aire secundario no está precalentado ni
+                        regulado, se requiere calentar un mayor volumen de aire,
+                        lo que incrementa el consumo de combustible.
+                    </p>
+                    <Image
+                        src={img2}
+                        alt="Partial air burner process inside the system"
+                    />
+                    <div
+                        class="w-full max-w-sm mx-auto bg-white rounded-xl shadow-sm p-6"
+                    >
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-red-600 font-semibold text-lg">
+                                Quemador de aire parcial
+                            </h2>
+                            <span class="text-red-600 text-xl font-bold">›</span
+                            >
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-4 h-4 rounded-full bg-[#001746]"
+                                ></span>
+                                <p
+                                    class="text-gray-700 text-sm lg:text-base md:text-base"
+                                >
+                                    Aire primario
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-4 h-4 rounded-full bg-[#55F0FF]"
+                                ></span>
+                                <p
+                                    class="text-gray-700 text-sm lg:text-base md:text-base"
+                                >
+                                    Aire secundario
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-4 h-4 rounded-full bg-[#B30000]"
+                                ></span>
+                                <p
+                                    class="text-gray-700 text-sm lg:text-base md:text-base"
+                                >
+                                    Combustible
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex flex-col gap-6">
+                <div class="text-center w-full flex flex-col items-center">
+                    <h2 class="text-xl md:text-2xl font-bold">
+                        Quemadores de aire total
+                    </h2><br />
+                    <div class="h-[2px] w-3/4 bg-redBg"></div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-6 text-sm lg:text-base md:text-base"
+                >
+                    <p>
+                        Estos quemadores suministran el 100% del aire necesario
+                        para la combustión a través de su propio soplador, de
+                        manera controlada.
+                    </p>
+                    <p>
+                        Como resultado, no se requieren entradas adicionales de
+                        aire en el tambor, y el volumen de aire se calcula con
+                        precisión según las necesidades de combustión.
+                    </p>
+                    <p>
+                        Al estar todo el aire regulado por el quemador, se
+                        asegura un proceso de combustión eficiente que aprovecha
+                        el 100% del combustible.
+                    </p>
+                    <p>
+                        Los quemadores de aire total normalmente solo son
+                        ofrecidos por marcas de alto nivel debido a su
+                        tecnología avanzada y alto costo. Sin embargo, desde
+                        2014, en Triaso incluimos quemadores de aire total en
+                        todos nuestros tambores mezcladores como equipo
+                        estándar, sin costo adicional.
+                    </p>
+
+                    <Image
+                        src={img6}
+                        alt="Total air burner process inside the system"
+                    />
+                    <div
+                        class="w-full max-w-sm mx-auto bg-white rounded-xl shadow-sm p-6"
+                    >
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-red-600 font-semibold text-lg">
+                                Quemador de aire total
+                            </h2>
+                            <span class="text-red-600 text-xl font-bold">›</span
+                            >
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-4 h-4 rounded-full bg-[#081156]"
+                                ></span>
+                                <p
+                                    class="text-gray-700 text-sm lg:text-base md:text-base"
+                                >
+                                    Aire total
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-4 h-4 rounded-full bg-[#cf2019]"
+                                ></span>
+                                <p
+                                    class="text-gray-700 text-sm lg:text-base md:text-base"
+                                >
+                                    Combustible
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel B -->
+    <div
+        class="tab-panel hidden bg-white border border-gray-300 rounded-tr rounded-b-lg p-8"
+        role="tabpanel"
+        id="panel-b"
+        aria-labelledby="tab-b"
+    >
+        <div
+            class="w-full grid grid-cols-1 md:grid-cols-2 justify-center items-start mt-20 gap-20"
+        >
+            <div class="w-full flex flex-col gap-6">
+                <div class="text-center w-full flex flex-col items-center">
+                    <h2 class="text-xl md:text-2xl font-bold">
+                        Quemadores de potencia fija
+                    </h2><br />
+                    <div class="h-[2px] w-3/4 bg-blueMain"></div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-6 text-sm lg:text-base md:text-base "
+                >
+                    <p>
+                        Reducir la potencia del quemador se vuelve necesario
+                        cuando la producción de la planta de asfalto debe
+                        disminuir, ya sea por retrasos en los camiones,
+                        pavimentación lenta u otras causas.
+                    </p>
+                    <p>
+                        Estos equipos vienen calibrados de fábrica para operar
+                        eficientemente solo entre el 90% y el 100% de su
+                        capacidad nominal. Por debajo del 90%, se vuelven
+                        ineficientes.
+                    </p>
+                    <p>
+                        La razón: al reducir la potencia del quemador, también
+                        disminuye la presión del combustible, lo que provoca una
+                        mala atomización. Esto genera microgotas que no se
+                        queman correctamente.
+                    </p>
+                    <Image
+                        src={img3}
+                        alt="Partial air burner process inside the system"
+                    />
+                    <div class="w-full">
+                        <div class="flex flex-col">
+                            <div>
+                                <h1 class="font-bold text-black">
+                                    La ineficiencia de los quemadores de
+                                    potencia fija provoca varios problemas
+                                    importantes:
+                                </h1>
+                            </div>
+                            <div>
+                                <ul class="list-disc pl-5">
+                                    <li>
+                                        Las microgotas no quemadas generan un
+                                        desperdicio significativo de
+                                        combustible.
+                                    </li>
+                                    <li>
+                                        La mezcla asfáltica se contamina con
+                                        combustible sin quemar.
+                                    </li>
+                                    <li>
+                                        Esta contaminación provoca un deterioro
+                                        prematuro del pavimento, reduciendo su
+                                        vida útil.
+                                    </li>
+                                    <li>
+                                        Además, la atmósfera se contamina con
+                                        gases provenientes de una combustión
+                                        incompleta.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex flex-col gap-6">
+                <div class="text-center w-full flex flex-col items-center">
+                    <h2 class="text-xl md:text-2xl font-bold">
+                        Quemadores de potencia variable
+                    </h2><br />
+                    <div class="h-[2px] w-3/4 bg-redBg"></div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-6 text-sm lg:text-base md:text-base"
+                >
+                    <p>
+                        El problema de ineficiencia de bajos niveles de
+                        producción cuando la producción de la planta de asfalto
+                        debe disminuir, se soluciona mediante el uso de
+                        quemadores de potencia variable.
+                    </p>
+
+                    <ul class="list-disc pl-5">
+                        <li>
+                            En estos quemadores, el combustible se atomiza a
+                            presión constante, independientemente de la
+                            variación de potencia.
+                        </li>
+                        <li>
+                            Al reducir la potencia para disminuir la producción,
+                            la presión del combustible no baja, por lo que la
+                            atomización se mantiene eficiente y no se generan
+                            microgotas sin quemar.
+                        </li>
+                        <li>
+                            Desde 2014, en Triaso incluimos quemadores de
+                            potencia variable como equipo estándar en todos sus
+                            modelos de tambor, sin costo adicional.
+                        </li>
+                        <li>
+                            Estos quemadores Triaso mantienen alta eficiencia en
+                            un amplio rango, desde el 100% hasta el 30% de su
+                            capacidad.
+                        </li>
+                        <li>
+                            Algunos quemadores variables de otras marcas solo
+                            son eficientes entre el 100% y el 90%, no en
+                            capacidades más bajas.
+                        </li>
+                    </ul>
+
+                    <Image
+                        src={img4}
+                        alt="Total air burner process inside the system"
+                    />
+                    <Image
+                        src={img5}
+                        alt="Total air burner process inside the system"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script is:inline>
+    const tabs = document.querySelectorAll(".tab-btn");
+    const panels = document.querySelectorAll(".tab-panel");
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            const target = tab.dataset.tab;
+
+            tabs.forEach((t) => {
+                t.classList.remove("bg-red-700", "text-white");
+                t.classList.add("bg-white", "text-gray-500");
+                t.setAttribute("aria-selected", "false");
+            });
+
+            panels.forEach((p) => p.classList.add("hidden"));
+
+            tab.classList.add("bg-red-700", "text-white");
+            tab.classList.remove("bg-white", "text-gray-500");
+            tab.setAttribute("aria-selected", "true");
+
+            document
+                .getElementById(`panel-${target}`)
+                ?.classList.remove("hidden");
+        });
+    });
+</script>

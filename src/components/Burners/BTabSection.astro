@@ -14,9 +14,11 @@ import QmdorSil from "../../assets/images/Burners/QmdorSil.webp";
 import { Image } from "astro:assets";
 import imgtab1 from "../../assets/images/Burners/14.webp";
 import imgtab1Low from "../../assets/images/Burners/Low/14Low.webp";
-import poster1 from "../../assets/images/Burners/Gallery/B1.webp"
+import poster1 from "../../assets/images/Burners/Gallery/B1.webp";
 import SmartVideo from "../unitComponents/SmartVideo";
-import poster2 from "../../assets/images/Burners/preHeat.webp"
+import poster2 from "../../assets/images/Burners/preHeat.webp";
+import PlaCQuemadorLow from "../../assets/images/Burners/Low/PlaC QuemadorLow.webp";
+import flag from "../../assets/images/Burners/flag.svg";
 ---
 
 <section class="w-full flex 2 mt-6 md:mt-20 flex-col gap-4 bg-gray-100">
@@ -32,9 +34,9 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
         role="tab"
         aria-selected="true"
       >
-        Combustion Performance and
+        Desempeño y eficiencia de
         <span class="hidden md:block"></span>
-        Efficiency
+        combustión
       </button>
 
       <button
@@ -43,9 +45,9 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
         role="tab"
         aria-selected="false"
       >
-        Asphalt Quality and Equipment
+        Calidad de la mezcla asfáltica y
         <span class="hidden md:block"></span>
-        Protection
+        protección del equipo
       </button>
 
       <button
@@ -54,9 +56,9 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
         role="tab"
         aria-selected="false"
       >
-        Customization to adapt to specific
+        Personalización para adaptarse a
         <span class="hidden md:block"></span>
-        customer needs
+        necesidades específicas del cliente
       </button>
     </div>
 
@@ -66,63 +68,7 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
         class="w-full flex flex-col items-center justify-center gap-4 mt-4 tab-content-1 text-base md:text-lg text-grisT"
         data-tab-content="tab1"
       >
-        <div class="w-full max-w-7xl px-8 mx-auto">
-          <div
-            class="w-full bg-white rounded-2xl p-8 grid grid-cols-1 md:grid-cols-2 gap-10"
-          >
-            <div>
-              <h2 class="text-lg md:text-xl font-bold text-black">
-                No Extra Air, No Extra Fuel
-              </h2><br />
-              <p class="text-sm lg:text-lg md:text-lg">
-                By controlling all combustion air internally, Triaso® burners
-                eliminate the need for secondary air from the drum or chimney.
-                This reduces heat loss, saves fuel, and improves overall plant
-                efficiency—every drop of fuel is put to work.
-              </p>
-            </div>
-            <div>
-              <Image
-                src={imgtab1Low}
-                alt="Combustion process inside the system"
-                class="rounded-lg"
-              />
-            </div>
-          </div>
-        </div>
-        <TwoColumnSection
-          leftBg="bg-redBg"
-          rightBg="bg-blueMain"
-          imageSrc={Tred.src}
-          imageAlt="Red T icon"
-          imageWidth="150px"
-        >
-          <div slot="left" class="flex flex-col h-full gap-3">
-            <h1 class="text-xl md:text-2xl text-white">
-              Stable Operation in Any Condition
-            </h1>
-            <p class="text-sm lg:text-lg md:text-lg">
-              Unlike traditional systems, Triaso® burners maintain consistent
-              combustion regardless of altitude, weather, or time of day. From
-              startup to shutdown, efficiency remains high and steady.
-            </p>
-          </div>
-          <div slot="right" class="flex flex-col justify-center gap-3">
-            <h1 class="text-xl md:text-2xl">
-              Total Air Technology –<span class="font-normal">
-                Clean <br /> Combustion with Any Fuel</span
-              >
-            </h1>
-            <p class="text-sm lg:text-lg md:text-lg">
-              The integrated preheater liquefies any fuel, ensuring perfect
-              atomization and clean combustion—no smoke, no residue, no wasted
-              fuel. It allows the use of any fuel type while maintaining optimal
-              performance at all times.
-            </p>
-          </div>
-        </TwoColumnSection>
-
-        <!-- ----- -->
+        <!-- Primera sección de la primera tab -->
         <div
           class="w-full flex flex-col items-center justify-center font-bold mt-10 md:mt-20"
         >
@@ -143,13 +89,14 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
           >
             <div class="w-full mt-10 md:mt-20 lg:mt-0">
               <h2 class="text-lg md:text-xl font-bold text-black">
-                Total Air Technology: Guaranteed Complete Combustion
+                Tecnología Total Air: combustión completa garantizada
               </h2><br />
               <p class="text-sm lg:text-lg md:text-lg">
-                Triaso® burners supply 100% of the air needed for combustion
-                through their own blower, without relying on the drum’s exhaust.
-                This ensures efficient fuel burning, avoids cold air entry, and
-                delivers a clean, uncontaminated asphalt mix.
+                Los quemadores Triaso® suministran el 100% del aire necesario
+                para la combustión a través de su propio soplador, sin depender
+                del escape del tambor. Esto asegura una quema eficiente del
+                combustible, evita la entrada de aire frío y produce una mezcla
+                asfáltica limpia, sin contaminación.
               </p>
             </div>
             <div class="w-full hidden lg:flex md:w-auto">
@@ -167,7 +114,98 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
           </div>
         </div>
 
-        <!-- -------- -->
+        <!-- Banner -->
+        <TwoColumnSection
+          leftBg="bg-redBg"
+          rightBg="bg-blueMain"
+          imageSrc={Tred.src}
+          imageAlt="Red T icon"
+          imageWidth="150px"
+        >
+          <div slot="left" class="flex flex-col h-full gap-3">
+            <h1 class="text-xl md:text-2xl text-white">
+              Operación estable en cualquier condición
+            </h1>
+            <p class="text-sm lg:text-lg md:text-lg">
+              A diferencia de los sistemas tradicionales, los quemadores Triaso®
+              mantienen una combustión constante independientemente de la
+              altitud, las condiciones meteorológicas o la hora del día. Desde
+              el arranque hasta el apagado, la eficiencia se mantiene alta y
+              constante.
+            </p>
+          </div>
+          <div slot="right" class="flex flex-col justify-center gap-3">
+            <h1 class="text-xl md:text-2xl">
+              Tecnología Total Air -<span class="font-normal">
+                combustión limpia con cualquier combustible</span
+              >
+            </h1>
+            <p class="text-sm lg:text-lg md:text-lg">
+              El precalentador licúa cualquier combustible, asegurando una
+              atomización perfecta y una combustión limpia: sin humo, sin
+              residuos y sin desperdicio de combustible. Permite el uso de
+              cualquier tipo de combustible manteniendo un desempeño óptimo en
+              todo momento.
+            </p>
+          </div>
+        </TwoColumnSection>
+
+        <!-- Dropdown -->
+        <div
+          class="w-full bg-white text-grisSubP text-base md:text-lg my-20 max-w-7xl mx-auto px-8 rounded-2xl"
+        >
+          <details class="mx-auto px-8 group">
+            <summary
+              class="relative flex justify-between items-center cursor-pointer list-none"
+            >
+              <h1 class="text-black font-bold text-2xl md:text-3xl">
+                Sin aire extra, sin combustible extra
+              </h1>
+              <svg
+                class="transition-transform duration-300 group-open:rotate-180 ml-auto"
+                width="64"
+                height="64"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                    fill="black"></path>
+                </g></svg
+              >
+            </summary>
+
+            <div
+              class="w-full flex flex-col justify-center items-center max-w-7xl mx-auto pt-5 gap-5"
+            >
+              <div>
+                <Image
+                  src={imgtab1Low}
+                  alt="Combustion process inside the system"
+                  class="rounded-lg"
+                />
+              </div>
+              <div class="pb-5">
+                <div>
+                  <p class="text-sm lg:text-lg md:text-lg text-black">
+                    Al controlar internamente todo el aire de combustión, los
+                    quemadores Triaso® eliminan la necesidad de aire secundario
+                    proveniente fuera del tambor o la chimenea. Esto reduce la
+                    pérdida de calor, ahorra combustible y mejora la eficiencia
+                    general de la planta; cada gota de combustible se aprovecha
+                    al máximo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <!-- Sección con bg de lado -->
         <div class="w-full space-y-3">
           <div class="w-1/5 h-[2px] bg-redBg"></div>
           <div class="w-1/6 h-[2px] bg-blueMain"></div>
@@ -178,24 +216,25 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
           >
             <div class="">
               <h2 class="text-lg md:text-xl font-bold text-black text-center">
-                No Smoke. No Residue. No Early Failure.
+                Sin humo. Sin residuos. Sin fallas prematuras.
               </h2><br />
               <p class="text-sm lg:text-lg md:text-lg font-thin">
-                Poorly designed burners leave unburned particles, smoke, and
-                heat inefficiencies that damage both your mix and your
-                equipment. Triaso® eliminates these issues with advanced
-                combustion control.
+                Los quemadores mal diseñados dejan partículas sin quemar, humo y
+                pérdidas de calor que afectan tanto la mezcla como el equipo.
+                Triaso® elimina estos problemas con un control de combustión
+                avanzado.
               </p>
             </div>
             <div>
               <h2 class="text-lg md:text-xl font-bold text-black text-center">
-                Burn Low-Cost Fuel Without Waste
+                Queme combustible de bajo costo sin desperdicio
               </h2><br />
               <p class="text-sm lg:text-lg md:text-lg font-thin">
-                Even with heavy or low-grade fuels, Triaso® burners ensure
-                proper atomization and complete combustion. The built-in
-                preheater lowers fuel viscosity, preventing unburned droplets,
-                reducing pollution and operating costs.
+                Incluso con combustibles pesados o de baja calidad, los
+                quemadores Triaso® aseguran una correcta atomización y una
+                combustión completa. El precalentador integrado reduce la
+                viscosidad del combustible, evitando gotas sin quemar,
+                disminuyendo la contaminación y los costos de operación.
               </p>
             </div>
           </div>
@@ -222,7 +261,7 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
                     <h2
                       class="text-2xl lg:text-4xl md:text-4xl text-redBg font-bold"
                     >
-                      Flame
+                      Flama
                     </h2>
                   </div>
                   <div class="w-full">
@@ -230,7 +269,7 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
                     <h2
                       class="text-2xl lg:text-4xl md:text-4xl text-blueMain font-bold"
                     >
-                      Mix
+                      Mezcla
                     </h2>
                   </div>
                   <div class="w-full">
@@ -238,35 +277,37 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
                     <h2
                       class="text-2xl lg:text-4xl md:text-4xl text-grisT font-bold"
                     >
-                      Quality
+                      Calidad
                     </h2>
                   </div>
                 </div>
                 <div>
                   <p class="text-sm lg:text-lg md:text-lg">
-                    Fluctuating burner performance leads to inconsistent
-                    heating, which directly affects the asphalt mix. Triaso®
-                    burners maintain a stable, even flame that ensures every
-                    batch is mixed at the correct temperature—protecting both
-                    the pavement's durability and the plant’s components from
-                    thermal stress.
+                    Las fluctuaciones en el desempeño del quemador generan un
+                    calentamiento inconsistente, lo que afecta directamente la
+                    mezcla asfáltica. Los quemadores Triaso® mantienen una flama
+                    estable y uniforme que asegura que cada lote se mezcle a la
+                    temperatura correcta, protegiendo tanto la durabilidad del
+                    pavimento como los componentes de la planta del estrés
+                    térmico.
                   </p>
                 </div>
                 <div class="w-full text-black pt-10">
                   <h2 class="text-xl md:text-2xl text-black font-bold">
-                    Protect
+                    Proteja
                   </h2>
                   <p class="text-sm lg:text-lg md:text-lg font-thin">
-                    your Filters
+                    sus filtros
                   </p>
                   <h2 class="text-xl md:text-2xl text-black font-bold">
-                    Avoid Fire Risks
+                    prevenga riesgos de quemado
                   </h2>
                   <p class="text-sm lg:text-lg md:text-lg font-thin">
-                    Unburned fuel can clog the baghouse, increase maintenance,
-                    and even create fire hazards. With Triaso® burners, complete
-                    combustion prevents residue buildup, keeping your filters
-                    clean and your operation safe.
+                    El combustible no quemado puede obstruir los filtros de
+                    bolsas, aumentar el mantenimiento e incluso generar riesgos
+                    de incendio. Con los quemadores Triaso®, la combustión
+                    completa evita la acumulación de residuos, manteniendo los
+                    filtros limpios y la operación segura.
                   </p>
                 </div>
               </div>
@@ -281,14 +322,15 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
 
             <div class="relative z-10">
               <h1 class="text-white text-2xl md:text-4xl font-bold text-center">
-                Cleaner Mix, Longer-Lasting Pavement
+                Mezcla más limpia, pavimento más duradero
               </h1>
               <br />
               <p class="text-grisSubP text-sm lg:text-lg md:text-lg font-bold">
-                Incomplete combustion contaminates the mix with unburned fuel,
-                which reduces pavement life. Triaso® burners prevent this,
-                delivering a clean burn that protects your asphalt quality and
-                investment.
+                La combustión incompleta contamina la mezcla asfáltica con
+                combustible sin quemar, reduciendo la vida del pavimento.
+                Nuestros quemadores Triaso® evitan este problema, al asegurar
+                una combustión limpia protegiendo su inversión, su planta de
+                asfalto y la mezcla que entregará.
               </p>
             </div>
           </div>
@@ -301,15 +343,16 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
               <h2
                 class="text-[#393939] text-xl md:text-3xl font-bold text-start"
               >
-                Burner muffler for
+                Silenciador para quemador para
               </h2>
               <h1 class="text-2xl md:text-5xl font-bold text-start">
-                silent operation
+                operación silenciosa
               </h1><br />
               <p class="w-full text-sm lg:text-xl md:text-xl">
-                Silent operation for strict low-noise, reducing burner noise,
-                allowing the asphalt plant to operate in urban areas or
-                locations with strict noise regulations.
+                Operación silenciosa para cumplir con normas estrictas de bajo
+                ruido, reduciendo el ruido del quemador y permitiendo operar la
+                planta de asfalto en zonas urbanas o ubicaciones con
+                regulaciones acústicas exigentes.
               </p>
             </div>
           </div>
@@ -332,7 +375,6 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
           <div class="w-full max-w-7xl mx-auto">
             <div class="w-full bg-white rounded-2xl p-8">
               <div class="w-full md:w-3/4 justify-center m-auto">
-
                 <SmartVideo
                   client:visible
                   src="/Videos/Webm/AnPreHeat.webm"
@@ -343,13 +385,14 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
               </div>
               <div class="lg:px-20 text-center">
                 <h2 class="text-lg md:text-xl font-bold text-black">
-                  Preheater Included – No Extra Cost
+                  Precalentador incluido – sin costo adicional
                 </h2>
                 <p class="text-sm lg:text-lg md:text-lg">
-                  Since 2014, all Triaso® drums come standard with a built-in
-                  preheater. This increases combustion efficiency by reducing
-                  fuel viscosity and improving atomization—without adding to
-                  your budget.
+                  Desde 2014, todos los tambores Triaso® incluyen un
+                  precalentador integrado de serie. Esto incrementa la
+                  eficiencia de combustión al reducir la viscosidad del
+                  combustible y mejorar la atomización, sin aumentar su
+                  presupuesto.
                 </p>
               </div>
             </div>
@@ -358,8 +401,8 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
 
         <div>
           <h1 class="text-bgBeige text-2xl md:text-4xl font-bold text-center">
-            For equipment that lasts, choose components <br /> built to withstand
-            heavy-duty use
+            Para equipos duraderos, elija componentes <br /> diseñados para adaptarse
+            a sus necesidades
           </h1>
         </div>
       </div>
@@ -377,65 +420,268 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
               class="w-full flex gap-3 justify-between lg:justify-center items-center"
             >
               <h2 class="text-xl md:text-2xl lg:text-end">
-                Efficient and <br />Environmentall <br />and Responsible
+                Eficiente y <br />responsable con el <br />medio ambiente
               </h2>
               <Image src={world} alt="World icon" class="w-[120px]" />
             </div>
             <div class="lg:w-1/2 flex justify-center items-center">
               <p class="text-start text-sm lg:text-lg md:text-lg font-thin">
-                With complete fuel burn and reduced NOx emissions, Triaso®
-                burners meet strict environmental standards. You get lower fuel
-                consumption and cleaner operation without compromising
-                performance.
+                Con una combustión completa del combustible y menores emisiones
+                de NOx, los quemadores Triaso® cumplen con normas ambientales
+                estrictas. Se reduce el consumo de combustible y se logra una
+                operación más limpia sin afectar el desempeño.
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="w-full bg-grisT">
-        <div class="w-full max-w-7xl px-8 mx-auto text-white py-20 space-y-10">
-          <div class="text-xl md:text-2xl flex items-center gap-2">
-            <Image src={ficha} alt="Chip icon" class="w-[60px]" />
-            <h2>Inline Electric Heating for Maximum Efficiency</h2>
-          </div>
-          <p class="text-sm lg:text-lg md:text-lg font-thin">
-            The fuel preheater uses an inline electric resistance system capable
-            of raising the fuel temperature by 104 °F, even at flow rates of up
-            to 840 liters per hour. This rapid, controlled heating instantly
-            reduces fuel viscosity instantly, ensuring perfect atomization and
-            clean combustion—without delays or external heat sources.
-            <br /><br />
-            Compact, reliable solution for efficient burner performance from the first
-            second of operation.
-          </p>
-        </div>
+
+      <!-- slider -->
+      <div class="bg-[#393939] p-10">
         <div
-          class="w-full max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-2"
+          class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-7xl mx-auto px-8"
+          id="cardRow0"
         >
-          <div class="flex justify-center lg:justify-normal">
-            <Image
-              src={preH2Low}
-              alt="Preheater installed in the system"
-              class="w-3/4 rounded-2xl"
-            />
-          </div>
-          <div class="w-full text-white pb-5">
+          <!-- Card 1-A -->
+          <div
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+            data-card="0-0"
+          >
             <div
-              class="text-xl md:text-2xl lg:text-end flex justify-between lg:justify-center items-center gap-3"
+              class="w-full h-96 bg-black/10 flex items-center justify-center"
             >
-              <h2>Standard in Every Plant, Not a Costly Upgrade</h2>
-              <Image src={batch} alt="Badge icon" class="w-[60px]" />
+              <img src="https://placehold.co/600x400" alt="" />
             </div>
-            <p class="text-sm lg:text-lg md:text-lg font-thin">
-              Other brands offer total-air burners and preheaters as expensive
-              add-ons. At Triaso®, they come included as standard equipment in
-              every plant configuration—because clean combustion shouldn’t be
-              optional.
-            </p>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+            >
+              <span
+                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+              >
+                Calentamiento eléctrico en línea para máxima eficiencia
+              </span>
+              <button
+                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                aria-expanded="false"
+              >
+                <svg
+                  class="chevron w-3 h-3 transition-transform duration-300"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                >
+                  <path
+                    d="M2 4l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"></path>
+                </svg>
+                mostrar más
+              </button>
+              <div
+                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+              >
+                <p class="text-white/75 text-xs leading-relaxed mt-2">
+                  El precalentador de combustible utiliza un sistema de
+                  resistencias eléctricas en línea capaz de elevar la
+                  temperatura del combustible en 40°C, con cualquier caudal.
+                  Este calentamiento rápido y controlado reduce de inmediato la
+                  viscosidad del combustible, asegurando una atomización óptima
+                  y una combustión limpia, sin retrasos ni fuentes externas de
+                  calor.
+                </p>
+                <p class="text-white/75 text-xs leading-relaxed mt-2">
+                  Solución compacta y confiable para un desempeño eficiente del
+                  quemador desde el primer segundo de operación.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 1-B -->
+          <div
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+            data-card="0-1"
+          >
+            <div
+              class="w-full h-96 bg-black/10 flex items-center justify-center"
+            >
+              <img src="https://placehold.co/600x400" alt="" />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+            >
+              <span
+                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+              >
+                Filtro de combsutible
+              </span>
+              <button
+                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                aria-expanded="false"
+              >
+                <svg
+                  class="chevron w-3 h-3 transition-transform duration-300"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                >
+                  <path
+                    d="M2 4l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"></path>
+                </svg>
+                mostrar más
+              </button>
+              <div
+                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+              >
+                <p class="text-white/75 text-xs leading-relaxed mt-2">
+                  Todos los sistemas de precalentamiento Triaso incluyen un
+                  filtro calibre malla 100 para captar toda la fibra celulosa
+                  presente en combustibles alternos o impurezas adicionales que
+                  puedan dañar el sistema.
+                </p>
+                <p class="text-white/75 text-xs leading-relaxed mt-2">
+                  Los combustibles alternos contienen mucha fibra de celulosa o
+                  impurezas adicionales, al no ser filtrada anteriormente tapan
+                  el sistema de atomización del quemador.
+                </p>
+
+                <ul class="list-disc">
+                  <li class="pl-5 text-white/75 text-xs leading-relaxed mt-2">
+                    Al llegar al quemador tapan la boquilla de atomización y más
+                    sistemas del quemador, lo que causará muchos problemas
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 1-C -->
+          <div
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+            data-card="0-2"
+          >
+            <div
+              class="w-full h-96 bg-black/10 flex items-center justify-center"
+            >
+              <img src="https://placehold.co/600x400" alt="" />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+            >
+              <span
+                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+              >
+                Estándar en cada planta, no como un extra costoso
+              </span>
+              <button
+                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                aria-expanded="false"
+              >
+                <svg
+                  class="chevron w-3 h-3 transition-transform duration-300"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                >
+                  <path
+                    d="M2 4l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"></path>
+                </svg>
+                mostrar más
+              </button>
+              <div
+                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+              >
+                <p class="text-white/75 text-xs leading-relaxed mt-2">
+                  Otras marcas ofrecen quemadores de aire total y
+                  precalentadores como accesorios costosos. En Triaso®, vienen
+                  incluidos como parte del equipo estándar en cada configuración
+                  de planta, porque la combustión limpia no debería ser
+                  opcional.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="w-full font-bold text-black mt-20 flex flex-col gap-10">
+  <div
+    class="w-full bg-[url(/newBanner.webp)] bg-no-repeat bg-center bg-cover px-8 py-10 lg:py-20 md:py-20"
+  >
+    <div class="max-w-7xl mx-auto flex flex-col gap-2">
+      <div class="w-full flex justify-center">
+        <Image src={flag} alt="Flag icon" class="w-[150px] md:w-[200px]" />
+      </div>
+      <p class="text-white font-bold text-sm md:text-xl lg:text-xl">
+        Nuestra más reciente innovación en quemadores incorpora un sensor de
+        oxígeno que regula automáticamente el exceso de oxígeno a no más del 3%,
+        eliminando la necesidad de ajustes manuales de carburación del
+        combustible al reubicar el equipo. Gracias a nuestro sistema de
+        auto-carburación, los niveles de NOx se mantienen aún más bajos.
+      </p>
+    </div>
+  </div>
+  <div class="space-y-3">
+    <div class="w-1/5 h-[2px] bg-redBg"></div>
+    <div class="w-1/6 h-[2px] bg-blueMain"></div>
+  </div>
+  <div class="w-full max-w-7xl px-8 mx-auto">
+    <h2 class="text-2xl md:text-3xl">
+      Elija el combustible, nosotros nos encargamos del desempeño
+    </h2><br />
+    <p class="text-sm md:text-xl">
+      Entendemos la importancia de la versatilidad de combustible para una
+      operación eficiente. Nuestros quemadores están diseñados para trabajar con
+      múltiples tipos de combustible, dándole la flexibilidad de elegir la
+      opción que mejor se adapte a su proceso.
+    </p>
+  </div>
+  <div
+    class="w-full grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10 max-w-7xl px-8 mx-auto justify-center items-center"
+  >
+    <div class="flex justify-center w-full">
+      <div
+        class="w-3/4 bg-white rounded-2xl p-4 flex flex-col gap-4 justify-center"
+      >
+        <h2 class="text-center text-xl md:text-2xl">Gas Natural</h2>
+        <div class="w-full h-[2px] bg-redBg"></div>
+      </div>
+    </div>
+    <div class="flex justify-center w-full">
+      <div class="w-3/4 bg-white rounded-2xl p-4 flex flex-col gap-4">
+        <h2 class="text-center text-xl md:text-2xl">
+          Gas licuado de petróleo (LP)
+        </h2>
+        <div class="w-full h-[2px] bg-redBg"></div>
+      </div>
+    </div>
+    <div class="flex justify-center w-full">
+      <div class="w-3/4 bg-white rounded-2xl p-4 flex flex-col gap-4">
+        <h2 class="text-center text-xl md:text-2xl">Combustibles alternativos</h2>
+        <div class="w-full h-[2px] bg-blueMain"></div>
+      </div>
+    </div>
+    <div class="flex justify-center w-full">
+      <div class="w-3/4 bg-white rounded-2xl p-4 flex flex-col gap-4">
+        <h2 class="text-center text-xl md:text-2xl">Diésel</h2>
+        <div class="w-full h-[2px] bg-blueMain"></div>
+      </div>
+    </div>
+  </div>
+  <div class="flex mx-auto max-w-7xl justify-end">
+    <Image
+      src={PlaCQuemadorLow}
+      alt="Aggregate Drying Plant"
+      class="w-4/5 md:w-1/2"
+    />
   </div>
 </section>
 
@@ -502,4 +748,28 @@ import poster2 from "../../assets/images/Burners/preHeat.webp"
       initScrollAnimations();
     });
   }
+</script>
+
+<script>
+  document
+    .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
+    .forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const expandible = btn.nextElementSibling as HTMLElement;
+        const chevron = btn.querySelector(".chevron") as HTMLElement;
+        const isOpen =
+          expandible.style.maxHeight && expandible.style.maxHeight !== "0px";
+
+        if (isOpen) {
+          expandible.style.maxHeight = "0px";
+          chevron.style.transform = "rotate(0deg)";
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          expandible.style.maxHeight = expandible.scrollHeight + "px";
+          chevron.style.transform = "rotate(180deg)";
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
 </script>
