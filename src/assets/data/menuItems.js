@@ -65,7 +65,7 @@ export const menuItems = [
                 url: "/BinUnits",
               },
               {
-                title: "RAP BINS",
+                title: "UNIDAD DE TOLVAS DE RAP",
                 url: "/RapBins",
               },
               {

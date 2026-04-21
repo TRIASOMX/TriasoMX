@@ -9,6 +9,7 @@ const RPOdometer = () => {
   const [value, setValue] = useState(0);
   const [value1, setValue1] = useState(0);
   const [value2, setValue2] = useState(0);
+  const [value3, setValue3] = useState(0);
   const [value4, setValue4] = useState(0);
 
   useEffect(() => {
@@ -19,11 +20,13 @@ const RPOdometer = () => {
           setValue(0);
           setValue1(0);
           setValue2(0);
+          setValue3(0);
           setValue4(0);
 
           setTimeout(() => {
             setValue(14);
             setValue1(20);
+            setValue3(10);
             setValue2(18);
             setValue4(120);
           }, 300); // Pequeño retraso para asegurar reinicio
@@ -43,17 +46,17 @@ const RPOdometer = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full max-w-7xl px-8 mx-auto lg:mt-56 lg:mb-56 md:mt-56 md:mb-56">
+    <div ref={sectionRef} className="w-full max-w-7xl px-8 mx-auto lg:mt-36 lg:mb-36 md:mt-36 md:mb-36">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
         <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
           <div className="flex flex-col items-center lg:items-start justify-center">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-start items-baseline w-[6.7ch] lg:w-full md:w-full">
-              <Odometer value={value} format="(,ddd)" duration={2000} />
+              <Odometer value={value3} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-[#4F4F4F]">RAP feeding capacity</p>
+            <p className="text-[#4F4F4F]">capacidad de alimentar RAP</p>
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
@@ -61,17 +64,17 @@ const RPOdometer = () => {
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value1} format="(,ddd)" duration={2000} />
-              <p className="text-sm font-normal ml-3">M Tons</p>
+              <p className="text-sm font-normal ml-3">Tons</p>
             </div>
-            <p className="text-start text-[#4F4F4F]">RAP capacity</p>
+            <p className="text-start text-[#4F4F4F]">capacidad de RAP</p>
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-start items-baseline w-full">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
-              <p className="text-sm font-normal ml-3">inches</p>
+              <p className="text-sm font-normal ml-3">pulgadas</p>
             </div>
-            <p className="text-[#4F4F4F] text-center lg:text-start w-full">Dosing belt</p>
+            <p className="text-[#4F4F4F] text-center lg:text-start w-full">banda dosificadora</p>
           </div>
         </div>
 
@@ -79,7 +82,7 @@ const RPOdometer = () => {
           <div className="w-4/6 pt-10 lg:pt-0 md:pt-0">
             <img src={img1.src} alt="Back of the RAP (Reclaimed Asphalt Pavement) Bin Unit"  />
           </div>
-          <a
+          {/* <a
             href="#planosRapBins"
             className="group relative inline-flex items-center justify-center px-4 py-2 rounded-xl border border-black text-black font-medium overflow-hidden transition-all duration-300 ease-out hover:text-white hover:-translate-y-0.5 hover:shadow-lg
   "
@@ -95,7 +98,7 @@ const RPOdometer = () => {
             <span className="relative z-10">
               All Technical Details
             </span>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

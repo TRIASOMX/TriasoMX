@@ -379,11 +379,11 @@ const BinPlanosSection = () => {
       >
         <header id="planosBinUnits" className="mt-10 text-white" ref={otroElemento}>
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
-            Specifications
+            Especificaciones
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              MEASURE:
+              UNIDAD DE MEDIDA:
             </h1>
             <div
               onClick={toggleUnit}
@@ -405,7 +405,7 @@ const BinPlanosSection = () => {
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRIC
+                  METRICO
                 </span>
               </div>
             </div>
@@ -474,7 +474,7 @@ const BinPlanosSection = () => {
             {/* móvil */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
               <label className="text-white block text-center">
-                MODELS:
+                MODELOS:
               </label>
               <div className="relative">
                 <select
@@ -544,8 +544,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          FEEDING & DOSIGN SYSTEM
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Sistema de alimentación y dosificacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -583,26 +583,24 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>18" variable-speed dosing belt</li>
-                        <li>Rubber-coated head pulley for reliable grip</li>
+                        <li>Banda dosificadora de 18" con velocidad variable</li>
+                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibrators in fine aggregate bin to ensure consistent
-                          feed
+                          Vibradores en la tolva de finos para asegurar una alimentación constante
                         </li>
-                        <li>Fine material flow sensor with low-level alarm</li>
+                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
                         <li>
-                          24" feeding conveyor wide conveyor belt for smoother
-                          low-speed transport
+                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
                         </li>
                         <li>
-                          Rubber-coated head pulleys and CEMA-standard rollers
+                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          DURABILITY & SAFETY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Resistencia y seguridad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -641,24 +639,22 @@ const BinPlanosSection = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Estructura extra reforzada para trabajo pesado a largo plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Aesthetic side panels for professional image</li>
+                          <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Belt cleaners for longer belt lifespan</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Built-in skirtboards to contain material</li>
+                        <li>Limpiadores de banda para prolongar la vida útil de la banda.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
                       </ul>
                     </div>
                   </div>
@@ -672,8 +668,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          CONTROL & OPERATION
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Control y operacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -711,35 +707,30 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                        Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable to existing asphalt plant control
-                          infrastructure
+                        Adaptable a la infraestructura de control existente de la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Seamless integration to central control systems
+                            Integración sin complicaciones con los sistemas de control central
                             </li>
                           </ul>
                         </li>
@@ -747,7 +738,7 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           PORTABILITY
                         </h1>
                         <button
@@ -1299,7 +1290,7 @@ const BinPlanosSection = () => {
                       <div className="flex justify-between">
                         <h1>Fifth-wheel hitch height:</h1>
                         <p>
-                         {unit === "metric"
+                          {unit === "metric"
                             ? `${dim("awheel", "wheel")?.toFixed(1) ?? ""} cm`
                             : `${((dim("awheel", "wheel")) * cmToFeet).toFixed(
                               1
@@ -1850,7 +1841,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -1920,7 +1911,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -1975,7 +1966,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -2702,7 +2693,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -2764,7 +2755,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -2819,7 +2810,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -3540,7 +3531,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -3610,7 +3601,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -3665,7 +3656,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -4383,7 +4374,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -4445,7 +4436,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -4500,7 +4491,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -5218,7 +5209,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -5280,7 +5271,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -5335,7 +5326,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
