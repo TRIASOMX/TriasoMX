@@ -4,7 +4,7 @@ export default function FormSection() {
   return (
     <div className="max-w-7xl px-8 mx-auto" style={{ marginTop: "100px" }}>
       <div className="w-full flex justify-center my-10">
-        <h1 className="font-bold text-5xl text-[#14427c]">Contact Us</h1>
+        <h1 className="font-bold text-5xl text-[#14427c]">Contactanos</h1>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center w-full">
         <div className="w-full h-full flex justify-center items-center">
@@ -116,7 +116,7 @@ export default function FormSection() {
                   </g>
                 </svg>
                 <p className="text-[#004aad] font-semibold">
-                  sales@triasous.com
+                  triaso.informes@gmail.com
                 </p>
               </div>
               <div className="flex flex-row items-center gap-5">
@@ -144,7 +144,7 @@ export default function FormSection() {
                     ></path>{" "}
                   </g>
                 </svg>
-                <p className="text-[#004aad] font-semibold">(248)-613-4885</p>
+                <p className="text-[#004aad] font-semibold">+52 (618) 170 3580</p>
               </div>
             </div>
 
@@ -152,7 +152,7 @@ export default function FormSection() {
               <div className="flex flex-col space-y-5 ">
                 <div>
                   <p className="font-semibold italic">
-                    Looking for Mexico’s site?
+                    Buscas el sitio de Estados Unidos?
                   </p>
                 </div>
                 <div className="flex flex-row items-center gap-5">
