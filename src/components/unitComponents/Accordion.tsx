@@ -49,7 +49,7 @@ type AccordionProps = {
 
 const Accordion: React.FC<AccordionProps> = ({ items }) => {
   return (
-    <div className="w-[90vw] mx-auto border rounded-lg shadow flex flex-col justify-start items-start">
+    <div className="w-[50vw] mx-auto border rounded-lg shadow flex flex-col justify-start items-start">
       {items.map((item, index) => (
         <AccordionItem key={index} {...item} />
       ))}

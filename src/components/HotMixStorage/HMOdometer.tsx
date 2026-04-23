@@ -23,7 +23,7 @@ const HMOdometer = () => {
 
           setTimeout(() => {
             setValue(50);
-            setValue1(200);
+            setValue1(135);
             setValue2(10);
             setValue4(72);
           }, 300); // Pequeño retraso para asegurar reinicio
@@ -53,23 +53,23 @@ const HMOdometer = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tons</p>
             </div>
-            <p className="text-[#4F4F4F]">Range of hot-mix storage capacity</p>
+            <p className="text-[#4F4F4F]">capacidad de almacenamiento de mezcla asfáltica</p>
           </div>
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
-              <p className="text-sm font-normal ml-3">mins</p>
+              <p className="text-sm font-normal ml-3">minutos</p>
             </div>
-            <p className="text-[#4F4F4F]">Set-up time</p>
+            <p className="text-[#4F4F4F]">Tiempo de instalación</p>
           </div>
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value4} format="(,ddd)" duration={2000} />
-              <p className="text-sm font-normal ml-3">hours</p>
+              <p className="text-sm font-normal ml-3">horas</p>
             </div>
-            <p className="text-[#4F4F4F] text-start w-full">Preservation quality</p>
+            <p className="text-[#4F4F4F] text-start w-full">Tiempo de preservación</p>
           </div>
         </div>
 
