@@ -4,50 +4,43 @@ import img1 from "../../assets/images/OilHeaters/21.webp";
 import img2 from "../../assets/images/OilHeaters/23.webp";
 import img3 from "../../assets/images/OilHeaters/24.webp";
 import img4 from "../../assets/images/OilHeaters/22.webp";
+import HeroComponent from "../unitComponents/HeroComponent.astro";
+import OHOdometer from "./OHOdometer";
 import { Image } from "astro:assets";
 ---
+
+<section>
+    <HeroComponent
+        title="Calderas de aceite térmico"
+        image="https://placehold.co/1920x1080/png"
+        imageAlt="alt"
+        altImage={oil.src}
+        descAltImage="Caldera"
+    />
+    <div class="bg-[#1e1e1e]">
+        <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+            <div class="flex justify-center items-center text-center">
+                <h1 class="font-semibold text-white text-lg lg:text-xl">
+                    Diseñados para una regulación precisa de la temperatura,
+                    nuestras de aceite térmico garantizan una distribución
+                    uniforme del calor en el tanque de asfalto —o en cualquier
+                    sistema que requiera calentamiento constante. Gracias a su
+                    diseño de circulación de aceite térmico, ofrecen un
+                    desempeño óptimo, evitando puntos calientes y manteniendo la
+                    estabilidad de temperatura en todo el proceso, siendo
+                    capaces de conectarse a más sistemas de calentamiento de la
+                    planta de asfalto.
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section
     class="w-full mt-20 md:mt-32 font-bold text-grisT flex flex-col gap-10"
 >
-    <div class="flex max-w-7xl w-full px-8 mx-auto">
-        <h1 class="text-3xl md:text-4xl border-b-2 border-b-blueMain w-fit">
-            OIL HEATERS
-        </h1>
-    </div>
-    <div class="w-full text-base md:text-lg max-w-7xl mx-auto px-8">
-        <p>
-            Engineered for precise temperature regulation, our oil heater
-            guarantees uniform heat distribution across the system thanks to its
-            advanced thermal oil circulation technology. This ensures optimal
-            heating performance, preventing hot spots and maintaining
-            temperature consistency throughout the process.
-        </p><br />
-        <p>
-            Built with heavy-duty materials and designed for continuous,
-            long-term operation, it’s ideal for demanding industrial
-            applications such as asphalt plants and other heat-intensive
-            systems. In addition to its proven durability, the heater provides
-            outstanding energy efficiency, helping to reduce operating costs
-            while maintaining peak performance even under the toughest
-            conditions.
-        </p>
-    </div>
-    <div class="w-full max-w-7xl mx-auto px-8 flex justify-center">
-        <Image src={oil} alt="Oil heater system" class="" />
-    </div>
-    <div class="w-full max-w-7xl mx-auto px-8 text-center">
-        <h2 class="text-blueMain text-xl md:text-3xl">
-            Intelligent Control Systems that Simplify Your Operation
-        </h2><br />
-        <p class="text-base md:text-lg text-grisT">
-            Beyond storage, our oil heaters are equipped with user-friendly
-            features like automated monitoring systems, real-time data tracking,
-            and efficient unloading mechanisms. These technologies help
-            streamline operations, reduce maintenance, and enhance productivity
-            across the board.
-        </p>
-    </div>
+    <OHOdometer client:only />
+
     <div
         class="w-full grid grid-cols-2 md:grid-cols-4 gap-8 px-4 sm:px-8 max-w-7xl mx-auto"
     >
@@ -64,17 +57,17 @@ import { Image } from "astro:assets";
             <p
                 class="text-sm md:text-base text-grisT font-light leading-relaxed"
             >
-                Triaso oil-heaters allow
+                Las calderas de aceite térmico Triaso permiten una
             </p>
 
             <h3 class="text-grisT text-lg md:text-xl font-semibold">
-                quick setup
+                instalación rápida
             </h3>
 
             <p
                 class="text-sm md:text-base text-grisT font-light leading-relaxed"
             >
-                without heavy machinery, ideal for relocatable operations
+                sin maquinaria pesada, ideales para operaciones reubicables
             </p>
         </div>
 
@@ -90,14 +83,14 @@ import { Image } from "astro:assets";
             <p
                 class="text-sm md:text-base text-grisT font-light leading-relaxed"
             >
-                Preservation of
+                Preservación de la
             </p>
-            <h3 class="text-grisT text-lg md:text-xl font-semibold">quality</h3>
+            <h3 class="text-grisT text-lg md:text-xl font-semibold">calidad</h3>
 
             <p
                 class="text-sm md:text-base text-grisT font-light leading-relaxed"
             >
-                and integrity of the asphalt.
+                e integridad del asfalto
             </p>
         </div>
 
@@ -113,11 +106,11 @@ import { Image } from "astro:assets";
             <p
                 class="text-sm md:text-base text-grisT font-light leading-relaxed"
             >
-                Streamlines operations with oil
+                Optimiza el flujo de aceite mediante
             </p>
 
             <h3 class="text-grisT text-lg md:text-xl font-semibold">
-                flow control
+                control preciso
             </h3>
         </div>
 
@@ -130,20 +123,22 @@ import { Image } from "astro:assets";
                 alt="Badge icon"
                 class="w-[160px] md:w-[180px] object-contain"
             />
+            <h3 class="text-grisT text-sm md:text-base lg:text-base font-normal">
+                Retención térmica de
+            </h3>
 
             <h3 class="text-grisT text-lg md:text-xl font-semibold">
-                Long-duration retention
+                larga duración,
             </h3>
 
             <p
                 class="text-sm md:text-base text-grisT font-light leading-relaxed"
             >
-                Thermal retention ensures asphalt remains liquid and
-                high-quality for
+                manteniéndolo líquido y de alta calidad por 
             </p>
 
             <h3 class="text-grisT text-lg md:text-xl font-semibold">
-                extended periods
+                periodos prolongados
             </h3>
         </div>
     </div>
