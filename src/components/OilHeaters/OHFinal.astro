@@ -1,73 +1,249 @@
 ---
 import MiniGallery from "../unitComponents/MiniGallery";
 import heroIMG from "../../assets/images/AsphaltStorage/bannerStorage.webp";
-import img1 from "../../../public/Gallery/oil-heater.webp"
-import img2 from "../../../public/Gallery/oilsetup.webp"
+import img1 from "../../../public/Gallery/oil-heater.webp";
+import img2 from "../../../public/Gallery/oilsetup.webp";
 import img4 from "../../assets/images/AsphaltStorage/SliderGalleryStorage/ATS4.webp";
 import OHProv2 from "../../assets/images/OilHeaters/OHProv2.webp";
 import ItemsSlider from "../LandinPage/ItemsSlider";
+import OSHand from "../../assets/images/OSHand.webp";
 import { Image } from "astro:assets";
 
-const gallerySlides = [
-    { img: img4 },
-    { img: img1 },
-    { img: img2 }
-];
+const gallerySlides = [{ img: img4 }, { img: img1 }, { img: img2 }];
 const images1 = [
-    {
-        src: "/Gallery/sliderHotMix/1.webp",
-        title: "Preservation of Quality",
-        texto: "Preservation of quality and integrity of the asphalt.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/2.webp",
-        title: "Efficient Logistics",
-        texto: "Streamlines delivery with automated weighing, ticket printing, and precise material flow control.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/3.webp",
-        title: "Versatile Storage Options",
-        texto: "Long-duration thermal retention, ensuring it remains liquid and high-quality for extended periods.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/4.webp",
-        title: "Mobility",
-        texto: "Triaso asphalt tanks allow quick setup without heavy machinery, ideal for relocatable operations.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/5.webp",
-        title: "Durability",
-        texto: "Built with reinforcerd material, thermally insulated cylinders, and corrosion-resistant finishes.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/6.webp",
-        title: "Seamless Integration",
-        texto: "Compatible with asphalt plant systems through protocols like Ethernet Industrial, Modbus, and CANopen.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/7.webp",
-        title: "Enhanced Safety",
-        texto: "Equipped with guards, alarms, and visual indicators to protect personnel and equipment.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/8.webp",
-        title: "Cost-Effective",
-        texto: "Reduces downtime, transportation costs, and maintenance with efficient design and reliable performance.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/9.webp",
-        title: "Improved Company Image",
-        texto: "Industrial aesthetics elevate the visual appeal of your operation.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/10.webp",
-        title: "Customizable",
-        texto: "Adaptable features to meet specific project requirements and operational goals.",
-    },
-
-    // agrega hasta 16 o más imágenes
+  {
+    src: "/Gallery/5.svg",
+    title: "Vida útil prolongada y económica",
+    texto:
+      "Rentable, de gran durabilidad, fabricado con materiales de primera calidad y sometido a un estricto control de calidad.",
+  },
+  {
+    src: "/Gallery/6.svg",
+    title: "Requiere poco mantenimiento",
+    texto:
+      "Requiere un mantenimiento mínimo, lo que garantiza su fiabilidad a largo plazo.",
+  },
+  {
+    src: "/Gallery/7.svg",
+    title: "Normativa de construcción",
+    texto:
+      "Cumple con todas las normas y reglamentos de construcción pertinentes de los Estados Unidos Mexicanos.",
+  },
+  {
+    src: "/Gallery/8.svg",
+    title: "Rentable",
+    texto:
+      "Reduzca el tiempo de inactividad, los costos de reubicación y el mantenimiento gracias a un diseño eficiente y un rendimiento confiable.",
+  },
+  {
+    src: "/Gallery/9.svg",
+    title: "Alta productividad",
+    texto:
+      "Aprovechamiento de la capacidad máxima de sus componentes y equilibrio entre ellos para evitar cuellos de botella y lograr una alta eficiencia.",
+  },
+  {
+    src: "/Gallery/10.svg",
+    title: "Muy fácil de transportar",
+    texto:
+      "Fácil de transportar y reubicar, lo que permite ahorrar tiempo y costes; ideal tanto para obras múltiples como para operaciones fijas",
+  },
+  {
+    src: "/Gallery/11.svg",
+    title: "Mejora de la imagen de la empresa",
+    texto:
+      "La estética industrial realza el atractivo visual de sus instalaciones.",
+  },
+  {
+    src: "/Gallery/12.svg",
+    title: "Personalizable",
+    texto:
+      "Adaptamos las funciones para que se ajusten a los requisitos específicos de su proyecto y a sus objetivos operativos.",
+  },
 ];
 ---
+
+<section>
+    <div class="bg-[#393939]">
+        <div class="max-w-7xl mx-auto py-10">
+            <div
+                class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3"
+                id="cardRow0"
+            >
+                <!-- Card 1-A -->
+                <div
+                    class="relative rounded-lg overflow-hidden group cursor-pointer"
+                    data-card="0-0"
+                >
+                    <div
+                        class="w-full h-80 bg-black/10 flex items-center justify-center"
+                    >
+                        <img src="https://placehold.co/600x400" alt="" />
+                    </div>
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                    >
+                        <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                        >
+                            Tanque de expansión
+                        </span>
+                        <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="chevron w-3 h-3 transition-transform duration-300"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                            >
+                                <path
+                                    d="M2 4l4 4 4-4"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                        </button>
+                        <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                        >
+                            <p
+                                class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                                La caldera de aceite térmico garantiza una
+                                distribución uniforme del calor mediante un
+                                sistema avanzado de circulación de aceite
+                                térmico. Cuenta con un tanque de expansión
+                                integrado que absorbe los cambios de volumen del
+                                aceite debido a la temperatura, estabilizando la
+                                presión y protegiendo el sistema para una
+                                operación más prolongada y con mínimo
+                                mantenimiento.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 1-B -->
+                <div
+                    class="relative rounded-lg overflow-hidden group cursor-pointer"
+                    data-card="0-1"
+                >
+                    <div
+                        class="w-full h-80 bg-black/10 flex items-center justify-center"
+                    >
+                        <img src="https://placehold.co/600x400" alt="" />
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                    >
+                        <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                        >
+                            Bomba de recirculación de alto desempeño:
+                        </span>
+                        <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="chevron w-3 h-3 transition-transform duration-300"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                            >
+                                <path
+                                    d="M2 4l4 4 4-4"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                        </button>
+                        <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                        >
+                            <p
+                                class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                                Equipado con una bomba de recirculación de alto
+                                desempeño que mantiene un flujo constante de
+                                aceite térmico, garantizando una transferencia
+                                de calor eficiente. Disponible con motor de 10
+                                HP o 15 HP, según la capacidad del sistema, está
+                                diseñada para operación continua con mínimo
+                                mantenimiento y alta eficiencia energética.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 1-C -->
+                <div
+                    class="relative rounded-lg overflow-hidden group cursor-pointer"
+                    data-card="0-2"
+                >
+                    <div
+                        class="w-full h-80 bg-black/10 flex items-center justify-center"
+                    >
+                        <img src="https://placehold.co/600x400" alt="" />
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                    >
+                        <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                        >
+                            Serpentines de aceite térmico
+                        </span>
+                        <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="chevron w-3 h-3 transition-transform duration-300"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                            >
+                                <path
+                                    d="M2 4l4 4 4-4"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                        </button>
+                        <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                        >
+                            <p
+                                class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                                Dentro del calentador de aceite térmico, el
+                                serpentín —o intercambiador de calor— conduce el
+                                aceite térmico a través de una espiral compacta
+                                de tubería de acero.
+                            </p>
+                            <p
+                                class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                                El serpentín se calienta de forma indirecta por
+                                el quemador, transfiriendo energía al aceite sin
+                                permitir que los gases de combustión se mezclen
+                                con él. Una vez que el aceite alcanza la
+                                temperatura deseada, circula por el sistema para
+                                calentar la aplicación requerida —como un tanque
+                                de asfalto u otro equipo industrial—
+                                proporcionando un desempeño térmico constante y
+                                eficiente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="w-full flex flex-col justify-center ga-4 md:gap-10">
     <div>
@@ -77,25 +253,83 @@ const images1 = [
             class="bg-cover w-full"
         />
         <div class="w-full my-10">
-            <div class="w-full max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10">
+            <div
+                class="w-full max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10"
+            >
                 <div>
                     <h2 class="text-blueMain text-xl md:text-2xl font-bold">
-                        Different Applications
+                        Diferentes aplicaciones
                     </h2>
                     <p class="text-grisT text-base md:text-lg font-bold">
-                        Our oil heaters are designed and manufactured in-house
-                        for our asphalt storage tanks, but they are also
-                        suitable for a wide range of other applications.
+                        Los calentadores de aceite Triaso están diseñados y
+                        fabricados internamente para nuestros propios proyectos,
+                        pero también son adecuados para una amplia variedad de
+                        aplicaciones.
                     </p>
                 </div>
                 <div>
                     <Image src={OHProv2} alt="Side oil heater" />
                 </div>
             </div>
+
+            <div class="bg-[#f4f5f6] overflow-visible">
+                <div class="max-w-7xl mx-auto lg:px-0">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12"
+                    >
+                        <!-- Texto -->
+                        <div class="text-white max-w-xl px-8">
+                            <h1
+                                class="text-2xl md:text-3xl font-semibold text-black"
+                            >
+                                Sistemas de control inteligente que simplifican su operación
+                            </h1>
+                            <p
+                                class="text-black font-normal leading-relaxed"
+                            >
+                                Con controles automáticos de temperaturas para
+                                monitorear el consumo por tonelada de mezcla
+                                producida, evitando desperdicios, pérdidas, robo
+                                de asfalto durante la recepción del autotanque y
+                                durante la operación.
+                            </p>
+                            <div class="pt-5 flex items-center justify-center">
+                                <a
+                                    href="/Relief"
+                                    aria-label="View page drum Mixers"
+                                    class="text-white text-center mb-5 mt-5 text-xs md:text-sm font-normal border-2 border-[#14427c] rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-[#14427c] hover:bg-white hover:text-black hover:border-white"
+                                >
+                                    Saber más
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Imagen -->
+                        <div class="flex justify-end relative">
+                            <Image
+                                src={OSHand}
+                                alt="Triaso OS"
+                                class="w-[280px] md:w-[360px] lg:w-[420px]"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#14427c] py-20">
+                <div class="flex justify-center items-center">
+                    <p class="text-white font-bold text-xl">Opción de calentador de aceite disponible en lugar del sistema de calentamiento por combustión directa en los tanques de almacenamiento de asfalto.</p>
+                </div>
+            </div>
+
+              <div class="max-w-7xl mx-auto px-8">
+                <ItemsSlider images={images1} client:only />
+            </div>
+
             <div class="w-full bg-bgBeige py-10">
                 <div class="w-full max-w-7xl mx-auto px-8">
                     <h2 class="text-black text-2xl md:text-3xl font-bold">
-                        Gallery
+                        Galería
                     </h2>
                 </div>
                 <MiniGallery
@@ -105,9 +339,7 @@ const images1 = [
                     client:only
                 />
             </div>
-            <div class="max-w-7xl mx-auto px-8">
-                <ItemsSlider images={images1} client:only />
-            </div>
+          
         </div>
     </div>
 </section>

@@ -229,7 +229,7 @@ const OHPlanos = () => {
                                         <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Design & Operation
+                                                    Sistema de calentamiento
                                                 </h1>
                                                 <button
                                                     className="block md:hidden"
@@ -267,7 +267,7 @@ const OHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Industrial design with an aesthetic finish that enhances your company’s image.</li>
+                                                <li>Capacidades de 2,400,000 Btu/hr</li>
                                                 <li>High-quality automotive paint, electrostatically applied and oven-cured.</li>
                                                 <li>Excellent corrosion resistance, strong adhesion, and long-lasting color.</li>
                                                 <li>Galvanized bolts for extended life, easy removal, and clean appearance.</li>

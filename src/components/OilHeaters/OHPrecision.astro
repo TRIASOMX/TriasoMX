@@ -58,62 +58,63 @@ import { Image } from "astro:assets";
 <!--  -->
 <section>
     <div
-        class="w-full flex flex-col items-center justify-center font-bold mt-10"
+        class="w-full flex flex-col font-bold mt-10"
     >
-        <div class="max-w-7xl px-8 mb-20 mx-auto">
-            <h1 class="text-redBg text-xl md:text-3xl text-center">
-                Your best business begins with us
-            </h1>
-        </div>
-        <div class="max-w-7xl px-8 mx-auto flex justify-center">
+        <div class="max-w-7xl px-8 mx-auto flex justify-start">
             <Image
-                src="https://placehold.co/1920x720/png"
+                src="https://placehold.co/1270x500/png"
                 alt="Baghouse"
                 class="hero-img md:w-4/5 lg:w-4/6 rounded-lg"
-                width={1920}
-                height={720}
+                width={1270}
+                height={500}
                 fetchpriority="high"
                 loading="lazy"
             />
         </div>
-        <div
-            class="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center gap-6"
+        <div class="bg-[#393939] my-20">
+            <div
+            class=" max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6"
         >
-            <div class="w-full mt-10">
-                <h2 class="text-black text-lg md:text-xl">
-                    Continuous cleaning system
+            <div class="w-full mt-10 ">
+                <div class="flex flex-col w-[70%]">
+                            <h2 class="text-white text-lg md:text-xl">
+                    Eficiencia para calentamiento de equipos secundarios con
+                    linea de aceite térmico
                 </h2>
                 <p
-                    class="text-grisT text-sm lg:text-lg md:text-lg text-justify"
+                    class="text-[#d9d9d9] text-sm lg:text-lg md:text-lg text-justify"
                 >
-                    A continuous cleaning system that keeps the filter bags in
-                    operation at all times. Bursts of compressed air are
-                    released through a super sonic nozzle, creating a pressure
-                    wave that rapidly expands each bag and dislodges the dust
-                    cake from its surface. The released particles fall into the
-                    hopper below, ensuring uninterrupted filtration and optimal
-                    bag performance.
+                    El uso más eficiente de una caldera de aceite térmico es el
+                    calentamiento de aceite para la recirculación hacía más
+                    sistemas que requieren calentamientos por linea de aceite
+                    térmico, así como otros tanque de afalto, silos, bombas de
+                    inyección o descarga.
                 </p>
+                </div>
+        
             </div>
 
-            <div class="w-full hidden lg:flex md:w-auto">
+            <div class="w-full hidden relative lg:flex md:w-auto">
                 <Image
-                    src="https://placehold.co/600x400/png"
-                    width={600}
-                    height={400}
+                    src="https://placehold.co/400x600/png"
+                    width={400}
+                    height={600}
                     alt="Baghouse cleaning system"
-                    class="side-img rounded-2xl will-change-transform w-4/5"
+                    class="side-img rounded-2xl will-change-transform"
                 />
             </div>
         </div>
+
+        </div>
+        
 
         <div
             class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"
         >
             <Image
-                src="https://placehold.co/600x400/png"
-                width={600}
-                height={400}
+                src="https://placehold.co/800x600/png"
+                width={800}
+                height={600}
                 alt="Baghouse"
                 class="fade-img rounded-lg lg:w-3/5 will-change-transform"
             />
@@ -139,13 +140,37 @@ import { Image } from "astro:assets";
     </div>
 </section>
 
+<script>
+    import { initScrollAnimations } from "./OilAnimations";
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("DOMContentLoaded", () => {
+            initScrollAnimations();
+        });
+    }
+</script>
+
 
 <script>
-  import { initScrollAnimations } from "../../components/lib/scrollAnimations";
+  document
+    .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
+    .forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const expandible = btn.nextElementSibling as HTMLElement;
+        const chevron = btn.querySelector(".chevron") as HTMLElement;
+        const isOpen =
+          expandible.style.maxHeight && expandible.style.maxHeight !== "0px";
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("DOMContentLoaded", () => {
-      initScrollAnimations();
+        if (isOpen) {
+          expandible.style.maxHeight = "0px";
+          chevron.style.transform = "rotate(0deg)";
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          expandible.style.maxHeight = expandible.scrollHeight + "px";
+          chevron.style.transform = "rotate(180deg)";
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
     });
-  }
 </script>
