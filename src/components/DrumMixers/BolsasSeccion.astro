@@ -7,20 +7,23 @@ import GridBolsas from "./GridBolsas";
 import CardEmergente from "./CardEmergente.astro";
 import Tred from "../../assets/images/AsphaltStorage/redT.webp";
 import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
+import slider1 from "../../assets/images/BagHouses/14.webp"
+import slider2 from "../../assets/images/BagHouses/BHProv7.webp"
+import SecondWhatsBtn from "../unitComponents/SecondWhatsBtn.astro";
 
 const gridItems = [
     {
         title: "Sistema de extracción de gases silencioso",
         description:
             "Extractor de gases con operación silenciosa, gracias al diseño de sus álabes aerodinámicos, que permiten su uso en zonas urbanas o en áreas con normas estrictas de control de ruido.",
-        image: "https://placehold.co/600x400/png",
+        image: slider1.src,
         imageFit: "cover", // usa "cover" si la foto es de ambiente
     },
     {
         title: "Secuencia de disparos automáticos en casa de bolsas",
         description:
             "El nuevo sistema de disparos dentro de la casa de bolsas provienen de unas boquillas ultra sónicas que usan aire secundario para una repartición más equilibrada y con mayor fuerza repartida dentro de las bolsas. Los disparos se regulan de la misma forma que la apertura del damper, mediante el sistema de operación Triaso Relief™. El sistema ajusta la secuencia de disparos, en función de la presión interna de la casa de bolsas, manteniendo un rango estable de diferencia de presión dentro de la casa de bolsas.",
-        image: "https://placehold.co/600x400/png",
+        image: slider2.src,
         imageFit: "cover",
     },
     {
@@ -195,11 +198,12 @@ const gridItems = [
     </div>
 </section>
 
+
 <section>
     <div
-        class="bg-black lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(/triasoLogo.webp)] bg-center bg-no-repeat relative"
+        class="bg-[#2b2b2b] lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(/triasoLogo.webp)] bg-center bg-no-repeat relative"
     >
-        <div class="absolute inset-0 bg-[#2b2b2b]"></div>
+        <div class="absolute inset-0 bg-[#000000]/50"></div>
 
         <div
             class="flex flex-col justify-center items-center relative max-w-7xl mx-auto px-8 space-y-5 py-10 lg:py-0 md:py-0"

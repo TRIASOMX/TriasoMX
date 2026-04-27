@@ -1,6 +1,7 @@
 ---
 import DropdownItem from "../unitComponents/DropdownItem.astro";
-import Whatsbtn from "../unitComponents/Whatsbtn.astro";
+import Whatsbtn from "../unitComponents/Whatsbtn.astro"
+import SecondWhatsBtn from "../unitComponents/SecondWhatsBtn.astro";
 import poster from "../../../public/Videos/Webm/Posters/landing1.webp";
 import item1 from "../../assets/images/DrumMixers/a3.webp";
 import item2 from "../../assets/images/DrumMixers/a5.webp";
@@ -572,14 +573,17 @@ if (pathname === "/DrumMixers") {
           class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
         >
           <!-- Botón 1 -->
-          <Whatsbtn />
+          <SecondWhatsBtn />
 
           <a
             href="/Contact"
             aria-label="Button to request a quote"
-            class="bg-blueSecondary border-white border border- text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-center gap-2 shadow-md hover:bg-[#0044A4]/80"
+            class=" border-white border text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-between gap-2 shadow-md"
           >
-            Solicitar una cotización
+          <div class="px-5 py-2">
+            <p>Solicitar una cotización</p>
+          </div>
+          <div class="px-5 py-2">
             <svg
               width="24px"
               height="24px"
@@ -597,6 +601,8 @@ if (pathname === "/DrumMixers") {
                 stroke-linecap="round"
                 stroke-linejoin="round"></path>
             </svg>
+          </div>
+            
           </a>
         </div>
       </div>
@@ -695,7 +701,7 @@ if (pathname === "/DrumMixers") {
 <!-- Animación -->
 <section>
   <div
-    class="w-full flex flex-col items-center justify-center font-bold mt-5 lg:mt-0"
+    class="w-full flex flex-col font-bold mt-5 lg:mt-0"
   >
     <div class="max-w-7xl px-8 mb-10 lg:mb-28 mx-auto lg:pt-0">
       <h1 class="text-redBg text-xl lg:text-5xl md:text-5xl text-center">
@@ -706,7 +712,7 @@ if (pathname === "/DrumMixers") {
       <Image
         src={obracivil}
         alt="Drum mixer on a construction zone"
-        class="hero-img lg:w-4/5 rounded-lg"
+        class="hero-img lg:w-[80%] rounded-lg"
       />
     </div>
     <div class="flex max-w-7xl px-8 mx-auto lg:hidden md:flex justify-center">
@@ -717,16 +723,17 @@ if (pathname === "/DrumMixers") {
       />
     </div>
 
-    <div
+    <div class="bg-[#1e1e1e]">
+      <div
       class="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center gap-6"
     >
       <div class="w-full mt-10">
-        <h2 class="text-black text-lg md:text-xl">
+        <h2 class="text-white text-lg md:text-xl">
           Diseñada para producciones exigentes y de gran volumen Fabricación
           para un rendimiento sin comparación
         </h2>
-        <p class="text-grisT text-sm lg:text-base md:text-base text-justify">
-          o Fabricados con materiales de alta resistencia y componentes de larga
+        <p class="text-[#f3f3f5] text-sm lg:text-base md:text-base text-justify">
+          Fabricados con materiales de alta resistencia y componentes de larga
           vida útil, estos tambores garantizan eficiencia energética superior y
           una mezcla asfáltica de calidad consistente. Ideales para operaciones
           exigentes, donde la confiabilidad de la planta es clave, sabiendo que
@@ -743,6 +750,8 @@ if (pathname === "/DrumMixers") {
         />
       </div>
     </div>
+    </div>
+    
 
     <div
       class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"

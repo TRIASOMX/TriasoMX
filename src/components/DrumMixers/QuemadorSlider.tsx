@@ -26,55 +26,57 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
   const CARD_CLASS =
     "flex-none snap-start w-[calc(100%-1rem)] md:w-[58%] lg:w-[38%] shrink-0";
 
-    const syncDot = useCallback(() => {
-        const track = trackRef.current;
-        if (!track) return;
-      
-        const cards = track.querySelectorAll<HTMLElement>("[data-card]");
-        const trackRect = track.getBoundingClientRect();
-      
-        let closestIndex = 0;
-        let closestDistance = Infinity;
-      
-        cards.forEach((card, i) => {
-          const rect = card.getBoundingClientRect();
-          const distance = Math.abs(rect.left - trackRect.left);
-      
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closestIndex = i;
-          }
-        });
-      
-        setActiveIndex(closestIndex);
-      }, []);
+  // --- NUEVA FUNCIÓN: Lógica condicional para centrar ---
+  const getAlignmentClass = (count: number) => {
+    if (count === 1) return "justify-center"; // Centra 1 elemento en todas las pantallas
+    if (count === 2) return "lg:justify-center"; // Centra 2 elementos solo en pantallas LG (donde no desbordan)
+    return ""; // 3 o más elementos usan el justify-start por defecto para hacer scroll normal
+  };
 
-  const scrollToIndex = useCallback(
-    (index: number) => {
-      const track = trackRef.current;
-      if (!track) return;
-      const card = track.querySelector<HTMLElement>("[data-card]");
-      if (!card) return;
-      const cardW = card.offsetWidth + 16;
-      track.scrollTo({ left: index * cardW, behavior: "smooth" });
-      setActiveIndex(index);
-    },
-    []
-  );
+  const syncDot = useCallback(() => {
+    const track = trackRef.current;
+    if (!track) return;
+  
+    const cards = track.querySelectorAll<HTMLElement>("[data-card]");
+    const trackRect = track.getBoundingClientRect();
+  
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+  
+    cards.forEach((card, i) => {
+      const rect = card.getBoundingClientRect();
+      const distance = Math.abs(rect.left - trackRect.left);
+  
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = i;
+      }
+    });
+  
+    setActiveIndex(closestIndex);
+  }, []);
+
+  const scrollToIndex = useCallback((index: number) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const card = track.querySelector<HTMLElement>("[data-card]");
+    if (!card) return;
+    const cardW = card.offsetWidth + 16;
+    track.scrollTo({ left: index * cardW, behavior: "smooth" });
+    setActiveIndex(index);
+  }, []);
 
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
-  
+
     const cards = track.querySelectorAll("[data-card]");
-  
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = Array.from(cards).indexOf(
-              entry.target as Element
-            );
+            const index = Array.from(cards).indexOf(entry.target as Element);
             setActiveIndex(index);
           }
         });
@@ -84,9 +86,9 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
         threshold: 0.6,
       }
     );
-  
+
     cards.forEach((card) => observer.observe(card));
-  
+
     return () => observer.disconnect();
   }, []);
 
@@ -96,6 +98,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
     setIsDragging(true);
     dragStart.current = { x: e.pageX, scrollLeft: track.scrollLeft };
   };
+  
   const onMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
@@ -104,6 +107,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
     track.scrollLeft =
       dragStart.current.scrollLeft - (e.pageX - dragStart.current.x) * 1.1;
   };
+  
   const stopDrag = () => setIsDragging(false);
 
   return (
@@ -116,6 +120,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
         onMouseLeave={stopDrag}
         className={[
           "flex gap-4",
+          getAlignmentClass(slides.length), // <--- APLICAMOS LA FUNCIÓN AQUÍ
           "overflow-x-auto scroll-smooth",
           "snap-x snap-mandatory",
           "pb-2",
@@ -130,11 +135,10 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
             <div
               key={i}
               data-card
-              className={`${CARD_CLASS} relative rounded-2xl overflow-hidden`}
+              className={`${CARD_CLASS} relative rounded-2xl overflow-hidden transition-transform duration-300`}
               style={{ background: slide.bgColor }}
             >
               <div className="relative w-full" style={{ aspectRatio: "4 / 5" }}>
-
                 <img
                   src={slide.image}
                   alt={slide.title}
@@ -188,9 +192,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
                 </div>
 
                 <button
-                  onClick={() =>
-                    setExpandedIndex(isExpanded ? null : i)
-                  }
+                  onClick={() => setExpandedIndex(isExpanded ? null : i)}
                   className="absolute bottom-0 left-0 right-0 z-30 flex items-center gap-2 px-5 py-3.5 text-white/90 text-sm font-medium transition-all duration-200 hover:text-white active:opacity-80"
                   style={{
                     background: "rgba(0,0,0,0.22)",
@@ -200,9 +202,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
                   <span
                     className="text-[10px] leading-none transition-transform duration-300"
                     style={{
-                      transform: isExpanded
-                        ? "rotate(180deg)"
-                        : "rotate(0deg)",
+                      transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
                     }}
                   >
                     ▲
