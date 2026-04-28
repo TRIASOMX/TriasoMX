@@ -1,0 +1,42 @@
+---
+import CardSectionResponsive from "../../components/unitComponents/CardSectionResponsive.astro";
+import LearnBtn from "../unitComponents/LearnBtn.astro";
+import SliderUltimaSeccion from "../DrumMixers/Contraflujo/Desamaq/SliderUltimaSeccion.astro"
+---
+
+<section class="py-5">
+    <div>
+        <div class="w-full px-4 mb-16 flex justify-center">
+            <div
+                class="max-w-7xl bg-[url(/Gallery/drum-mixer.webp)] bg-cover bg-center md:h-[550px] rounded-2xl"
+            >
+                <div
+                    class="w-full h-full bg-black/70 text-white text-sm md:text-lg text-center flex flex-col justify-center items-start px-8 pt-5 lg:pt-0 rounded-2xl space-y-5"
+                >
+                    <h1 class="font-bold text-white text-4xl">
+                        La planta de asfalto más versátil y móvil del mercado
+                    </h1>
+                    <p class="text-start">
+                        “Las plantas de asfalto Triaso han demostrado ser confiables, eficientes y diseñadas para una larga vida útil. Su desempeño y bajo costo de operación han
+                        mejorado significativamente nuestra productividad. Recomendamos ampliamente a Triaso a cualquier empresa de la industria.”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="space-y-5">
+            <h1 class="font-bold uppercase text-2xl">Ecosistema triaso</h1>
+            <p>Integre equipos adicionales conforme aumentan sus necesidades operativas.</p>
+        </div>
+        <div>
+            <SliderUltimaSeccion/>
+        </div>
+    </div>
+
+    <div>
+        <CardSectionResponsive />
+    </div>
+</section>

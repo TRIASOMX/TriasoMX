@@ -1,5 +1,6 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
+import OdometerDesamaq from "../../../components/DrumMixers/Contraflujo/Desamaq/OdometerDesamaq";
 import OdometerDrum from "../../../components/DrumMixers/OdometerDrum";
 import DrumMixPlanos from "../../../components/DrumMixers/DrumMixPlanos";
 import HeroComponent from "../../../components/unitComponents/HeroComponent.astro";
@@ -7,33 +8,35 @@ import hero1 from "../../../../public/fabricaBG.webp";
 import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
 import OsDrumSection from "../../../components/DrumMixers/OsDrumSection.astro";
 import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
-import HotspotSection from "../../../components/DrumMixers/HotspotSection.astro";
 import SliderTambores from "../../../components/DrumMixers/SliderTambores.astro";
 import QuemadorSeccion from "../../../components/DrumMixers/QuemadorSeccion.astro";
-import BolsasSeccion from "../../../components/DrumMixers/BolsasSeccion.astro";
+import BolsasSeccion from "../../../components/DrumMixers/Contraflujo/Desamaq/BolsasSeccion.astro";
 import hero2 from "../../../assets/images/DrumMixers/Gallery/DM1.webp";
+import HotspotSectionContra from "../../../components/DrumMixers/Contraflujo/Desamaq/HotspotSection.astro";
+import UltimaSeccion from "../../../components/DrumMixers/UltimaSeccion.astro";
+
 
 const cards = [
     {
-        title: "La planta de asfalto de contraflujo más equipada, más robusta, más moderna de Latinoamérica.",
+        title: "La planta de asfalto de contraflujo más productiva al menor precio de Latinoamérica",
         text: "",
-        bg: "#d13c3c",
-        textColor: "#ffffff",
+        bg: "#e7e6da",
+        textColor: "#000000",
     },
     {
-        title: "Con una configuración ideal para trabajo pesado y condiciones cariables la planta de asfalto está completamente equipada.",
+        title: "Solución práctica y eficiente para quienes buscan una operación confiable con una inversión completamente económica.",
         text: "",
         bg: "#14427c",
         textColor: "#ffffff",
     },
     {
-        title: "Operación total manual o automática para un control eficiente y sencillo del equipo, con menor necesidad de intervención del operador.",
+        title: "Operación total manual para un control eficiente y sencillo del equipo.",
         text: "",
         bg: "#00840d",
         textColor: "#ffffff",
     },
     {
-        title: "Equipos auxiliares y componentes sobredimensionados y de gran volumen, permitiendo operaciones a gran escala, con total estabilidad, continuas, intensivas y prolongadas, sin paros, con mínima intervención del operador",
+        title: "Operación estable y continua sin paros, a gran escala, con una configuración ideal para trabajo pesado y condiciones variables.",
         text: "",
         bg: "#6b97c6",
         textColor: "#ffffff",
@@ -45,21 +48,23 @@ const cards = [
     <div class="mt-10">
         <HeroComponent
             title="Tambor de Contraflujo Desamaq"
+            accentColor="#14427c"
             image={hero1.src}
             imageAlt="Tambor de Contraflujo Desamaq"
             altImage={hero2.src}
             descAltImage="Tambor de Contraflujo Desamaq"
         />
     </div>
-    <div class="bg-[#1e1e1e]">
+    <div class="bg-[#14427c]">
         <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
             <div class="flex flex-row justify-center items-center gap-10">
                 <a
                     class="underline font-bold text-white text-xl lg:text-2xl"
                     href="/TamborMezcla/Contraflujo/ContraDesamaq">Desamaq</a
                 >
-                <a class="font-thin text-white text-xl lg:text-2xl" href="/TamborMezcla/Contraflujo/ContraPlus"
-                    >Plus</a
+                <a
+                    class="font-thin text-white text-xl lg:text-2xl"
+                    href="/TamborMezcla/Contraflujo/ContraPlus">Plus</a
                 >
                 <a
                     class="font-thin text-white text-xl lg:text-2xl"
@@ -98,13 +103,15 @@ const cards = [
             </div>
         </div>
     </div>
-    <OdometerDrum client:only />
+
+    <OdometerDesamaq client:only />
 
     <div>
         <DropdownComponent
-            title="El equipo ideal para una inversión más económica, el modelo para una operación manual, es el equipo más económico del mercado, sin comprometer rendimiento."
+            title="El modelo para una operación manual, es el equipo más económico del mercado, sin comprometer rendimiento."
         >
-            <p>
+        <div class="space-y-5">
+                        <p>
                 Triaso® ofrece una solución práctica y confiable para la
                 producción continua de mezcla asfáltica, con tambores
                 mezcladores que integran secado, mezclado, captura de finos en
@@ -114,9 +121,21 @@ const cards = [
                 eficiencia operativa, tranquilidad de su cliente y durabilidad
                 del pavimento en cualquier proyecto.
             </p>
+
+            <p>
+                Fabricados con materiales resistentes y componentes de
+                mantenimiento sencillo, estos tambores priorizan la eficiencia
+                energética y una mezcla asfáltica uniforme. Son ideales para
+                operaciones móviles y proyectos que requieren confiabilidad
+                operativa sin complejidad innecesaria.
+            </p>
+        </div>
+
         </DropdownComponent>
     </div>
-    <OsDrumSection />
+
+
+    <!-- <OsDrumSection />
 
     <div class="bg-[#1e1e1e] flex flex-col justify-center items-center px-8">
         <div class="flex flex-col justify-center items-center pb-10">
@@ -130,7 +149,7 @@ const cards = [
                 Paro total con un solo botón desde su celular
             </p>
         </div>
-    </div>
+    </div> -->
 
     <div class="mt-5">
         <StackedInfoCards
@@ -140,7 +159,7 @@ const cards = [
         />
     </div>
 
-    <HotspotSection />
+    <HotspotSectionContra />
 
     <div class="max-w-7xl mx-auto px-8">
         <SliderTambores />
@@ -151,4 +170,6 @@ const cards = [
     <BolsasSeccion />
 
     <DrumMixPlanos client:only />
+
+    <UltimaSeccion/>    
 </Layout>
