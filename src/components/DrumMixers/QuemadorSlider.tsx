@@ -186,7 +186,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
                     opacity: isExpanded ? 1 : 0,
                   }}
                 >
-                  <p className="text-white/85 text-sm leading-relaxed">
+                  <p className="text-black/80 text-sm leading-relaxed">
                     {slide.description}
                   </p>
                 </div>
