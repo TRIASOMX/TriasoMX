@@ -7,12 +7,13 @@ import hero1 from "../../../../public/fabricaBG.webp";
 import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
 import OsDrumSection from "../../../components/DrumMixers/OsDrumSection.astro";
 import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
-import HotspotSection from "../../../components/DrumMixers/HotspotSection.astro";
+import HotspotSection from "../../../components/DrumMixers/Paralelo/Pro+/HotspotSection.astro";
 import SliderTambores from "../../../components/DrumMixers/SliderTambores.astro";
-import QuemadorSeccion from "../../../components/DrumMixers/QuemadorSeccion.astro";
+import QuemadorSeccion from "../../../components/DrumMixers/Paralelo/Pro+/QuemadorSeccion.astro";
 import LavadoraSeccion from "../../../components/DrumMixers/LavadoraSeccion.astro";
 import hero2 from "../../../assets/images/DrumMixers/Gallery/DM1.webp";
 import SliderParalelo from "../../../components/DrumMixers/SliderParalelo.astro";
+import UltimaSeccion from "../../../components/DrumMixers/UltimaSeccion.astro";
 
 const cards = [
     {
@@ -106,10 +107,10 @@ const cards = [
 
     <div>
         <DropdownComponent
-            title="El modelo más avanzado para una operación automática, la más económica y sin comparación ni competencia, preferencia en su región para trabajos de pavimentación."
+            title="El modelo más avanzado para una operación automática, la más económica y sin comparación ni competencia, preferencia en su región para trabajos de pavimentación. "
         >
             <p>
-                o Triaso® ofrece la solución ideal para la producción continua
+                Triaso® ofrece la solución ideal para la producción continua
                 de mezcla asfáltica, integrando secado, mezclado, control de
                 emisiones con lavadura en un solo chasis diseñado para trabajo
                 pesado, con opción de tolvas montadas. Su diseño está orientado
@@ -153,4 +154,6 @@ const cards = [
     <LavadoraSeccion />
 
     <DrumMixPlanos client:only />
+
+    <UltimaSeccion/>
 </Layout>

@@ -7,22 +7,23 @@ import hero1 from "../../../../public/fabricaBG.webp";
 import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
 import OsDrumSection from "../../../components/DrumMixers/OsDrumSection.astro";
 import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
-import HotspotSection from "../../../components/DrumMixers/HotspotSection.astro";
+import HotspotSection from "../../../components/DrumMixers/Paralelo/Plus/HotspotSection.astro";
 import SliderTambores from "../../../components/DrumMixers/SliderTambores.astro";
-import QuemadorSeccion from "../../../components/DrumMixers/QuemadorSeccion.astro";
+import QuemadorSeccion from "../../../components/DrumMixers/Paralelo/Plus/QuemadorSeccion.astro";
 import LavadoraSeccion from "../../../components/DrumMixers/LavadoraSeccion.astro";
 import hero2 from "../../../assets/images/DrumMixers/Gallery/DM1.webp";
 import SliderParalelo from "../../../components/DrumMixers/SliderParalelo.astro";
+import UltimaSeccion from "../../../components/DrumMixers/UltimaSeccion.astro";
 
 const cards = [
     {
-        title: "La planta de asfalto de contraflujo más equipada, más robusta, más moderna de Latinoamérica.",
+        title: "La planta de asfalto de flujoparalelo más robusta, más moderna de Latinoamérica.",
         text: "",
         bg: "#d13c3c",
         textColor: "#ffffff",
     },
     {
-        title: "Con una configuración ideal para trabajo pesado y condiciones cariables la planta de asfalto está completamente equipada.",
+        title: "Solución práctica y eficiente para quienes buscan una operación confiable con una inversión más accesible",
         text: "",
         bg: "#14427c",
         textColor: "#ffffff",
@@ -34,7 +35,7 @@ const cards = [
         textColor: "#ffffff",
     },
     {
-        title: "Equipos auxiliares y componentes sobredimensionados y de gran volumen, permitiendo operaciones a gran escala, con total estabilidad, continuas, intensivas y prolongadas, sin paros, con mínima intervención del operador",
+        title: "Operación estable, continua, intensiva y prolongada sin paros, a escala, con una configuración ideal para trabajo pesado y condiciones variables, la planta está completamente equipada.",
         text: "",
         bg: "#6b97c6",
         textColor: "#ffffff",
@@ -46,31 +47,32 @@ const cards = [
     <div class="mt-10">
         <HeroComponent
             title="Tambor de Flujo paralelo Plus"
+            accentColor="#f4f5f6"
             image="https://placehold.co/1920x1080/png"
             imageAlt="Tambor de Contraflujo Desamaq"
             altImage="https://placehold.co/600x400/png"
             descAltImage="placeholder"
         />
     </div>
-    <div class="bg-[#1e1e1e]">
+    <div class="bg-[#f4f5f6]">
         <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
             <div class="flex flex-row justify-center items-center gap-10">
                 <a
-                    class="font-thin text-white text-xl lg:text-2xl"
+                    class="font-thin text-black text-xl lg:text-2xl"
                     href="/TamborMezcla/Paralelo/ParaleloDesamaq">Desamaq</a
                 >
                 <a
-                    class="font-bold underline text-white text-xl lg:text-2xl"
+                    class="font-bold underline text-black text-xl lg:text-2xl"
                     href="/TamborMezcla/Paralelo/ParaleloPlus">Plus</a
                 >
                 <a
-                    class="font-thin text-white text-xl lg:text-2xl"
+                    class="font-thin text-black text-xl lg:text-2xl"
                     href="/TamborMezcla/Paralelo/ParaleloPro">Pro +</a
                 >
             </div>
 
             <div class="flex justify-center items-center text-center">
-                <h1 class="font-semibold text-white text-lg lg:text-xl">
+                <h1 class="font-semibold text-black text-lg lg:text-xl">
                     Para contratistas experimentados que buscan una producción
                     con exigencias técnicas superiores, siendo capaces de
                     adaptarse a cualquier proyecto, incluso con diferentes
@@ -104,16 +106,25 @@ const cards = [
 
     <div>
         <DropdownComponent
-            title="El modelo más avanzado para una operación automática, la más económica y sin comparación ni competencia, preferencia en su región para trabajos de pavimentación."
+            title="El modelo ideal si busca automatización, rendimiento, calidad y economía de compra, compitiendo con plantas de asfalto en su región."
         >
-            <p>
-                o Triaso® ofrece la solución ideal para la producción continua
-                de mezcla asfáltica, integrando secado, mezclado, control de
-                emisiones con lavadura en un solo chasis diseñado para trabajo
-                pesado, con opción de tolvas montadas. Su diseño está orientado
-                a una operación continua, eficiente y con mayor control del
-                proceso.
-            </p>
+            <div class="space-y-5">
+                <p>
+                    Triaso® ofrece la solución ideal para la producción continua
+                    de mezcla asfáltica, integrando secado, mezclado, control de
+                    emisiones con lavadura en un solo chasis diseñado para
+                    trabajo pesado, con opción de tolvas montadas. Su diseño
+                    está orientado a una operación continua, eficiente y con
+                    mayor control del proceso.
+                </p>
+                <p>
+                    Fabricados con materiales reforzados y componentes de mayor
+                    durabilidad, estos tambores aseguran eficiencia energética,
+                    menor desgaste y una mezcla asfáltica de alta calidad. Son
+                    ideales para operaciones móviles o semi-fijas que buscan
+                    mayor productividad y estabilidad en jornadas prolongadas.
+                </p>
+            </div>
         </DropdownComponent>
     </div>
     <OsDrumSection />
@@ -143,7 +154,7 @@ const cards = [
     <HotspotSection />
 
     <div class="max-w-7xl mx-auto px-8">
-        <SliderParalelo/>
+        <SliderParalelo />
     </div>
 
     <QuemadorSeccion />
@@ -151,4 +162,6 @@ const cards = [
     <LavadoraSeccion />
 
     <DrumMixPlanos client:only />
+
+    <UltimaSeccion/>
 </Layout>
