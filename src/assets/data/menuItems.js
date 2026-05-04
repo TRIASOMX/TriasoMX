@@ -13,35 +13,35 @@ export const menuItems = [
             children: [
               {
                 title: "CONTRAFLUJO",
-                children:[
+                children: [
                   {
-                    title:"Desamaq",
+                    title: "Desamaq",
                     url: "/TamborMezcla/Contraflujo/ContraDesamaq"
                   },
                   {
-                    title:"Plus",
-                    url:"/TamborMezcla/Contraflujo/ContraPlus"
+                    title: "Plus",
+                    url: "/TamborMezcla/Contraflujo/ContraPlus"
                   },
                   {
-                    title:"Pro+",
-                    url:"/DrumMixers"
+                    title: "Pro+",
+                    url: "/DrumMixers"
                   }
                 ]
               },
-                            {
+              {
                 title: "FLUJO PARALELO",
-                children:[
+                children: [
                   {
-                    title:"Desamaq",
+                    title: "Desamaq",
                     url: "/TamborMezcla/Paralelo/ParaleloDesamaq"
                   },
                   {
-                    title:"Plus",
-                    url:"/TamborMezcla/Paralelo/ParaleloPlus"
+                    title: "Plus",
+                    url: "/TamborMezcla/Paralelo/ParaleloPlus"
                   },
                   {
-                    title:"Pro+",
-                    url:"/TamborMezcla/Paralelo/ParaleloPro"
+                    title: "Pro+",
+                    url: "/TamborMezcla/Paralelo/ParaleloPro"
                   }
                 ]
               }
@@ -54,7 +54,7 @@ export const menuItems = [
           {
             title: "TANQUES DE ASFALTO",
             url: "/AsphaltStorage",
-            
+
           },
           {
             title: "TOLVAS",
@@ -103,7 +103,21 @@ export const menuItems = [
           {
             title: "10 TPH INTEGRAL ASPHALT PLANTS",
             url: "/IntegralAphaltPlant",
-          }
+          },
+          {
+            title: "CASETAS",
+            url: "/CasetaMontable",
+            children: [
+              {
+                title: "CASETAS MONTABLES",
+                url: "/CasetaMontable",
+              },
+              {
+                title: "CASETAS REMOLCABLES",
+                url: "/",
+              },
+            ]
+          },
         ]
       },
       {
@@ -183,12 +197,12 @@ export const menuItems = [
     url: "/",
     children: [
       {
-        title : "ABOUT US",
-        url : "/AboutUs",
+        title: "ABOUT US",
+        url: "/AboutUs",
       },
       {
-        title : "NEWS ROOM",
-        url : "/Newsroom",
+        title: "NEWS ROOM",
+        url: "/Newsroom",
       },
       {
         title: "ADVANTAGES",
