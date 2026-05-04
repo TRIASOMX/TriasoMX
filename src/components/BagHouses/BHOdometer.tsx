@@ -63,9 +63,9 @@ const BHOdometer = () => {
                 <Odometer value={value5} format="(,ddd)" duration={2000} />
               </span>
 
-              <p className="text-sm font-normal ml-3">thousand ACFM</p>
+              <p className="text-sm font-normal ml-3">mil ACFM</p>
             </div>
-            <p className="text-[#4F4F4F]">Capacity of baghouses</p>
+            <p className="text-[#4F4F4F]">Capacidad de casa de bolsas</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -75,7 +75,7 @@ const BHOdometer = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">%</p>
             </div>
-            <p className="text-[#4F4F4F]">Filtration capturing fine particles</p>
+            <p className="text-[#4F4F4F]">Filtración de captura de particulas finas</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -86,7 +86,7 @@ const BHOdometer = () => {
               <p className="text-sm font-normal ml-3">tph</p>
             </div>
             <p className="text-[#4F4F4F] text-start w-full">
-              Baghouses for asphalt plants ranges
+              Gama de bolsas para plantas de asfalto
             </p>
           </div>
         </div>
@@ -95,31 +95,15 @@ const BHOdometer = () => {
           <div className="lg:w-3/5">
             <img src={bagHouseMain.src} alt="Baghouse Odometer" className="rounded-lg" />
           </div>
-          <a
-            href="#planosBagHouses"
-            className="
-    group relative inline-flex items-center justify-center
-    px-4 py-2 rounded-xl
-    border border-black
-    text-black font-medium
-    overflow-hidden
+        </div>
+      </div>
 
-    transition-all duration-300 ease-out
-    hover:text-white hover:-translate-y-0.5 hover:shadow-lg
-  "
-          >
-            <span
-              className="
-      absolute inset-0 bg-black
-      translate-y-full
-      transition-transform duration-300 ease-out
-      group-hover:translate-y-0
-    "
-            />
-            <span className="relative z-10">
-              All Technical Details
-            </span>
-          </a>
+      <div className="flex flex-col justify-center items-center py-10">
+        <div>
+          <h1 className="text-4xl font-bold">Cumplimiento total de las normas ecológicas</h1>
+        </div>
+        <div>
+          <p className="font-thin text-[#393939] text-3xl">de México, Latinoamérica y Estados Unidos</p>
         </div>
       </div>
     </div>
