@@ -52,11 +52,10 @@ const OdometerMontable = () => {
         <div ref={sectionRef} className="max-w-7xl px-8 mx-auto lg:mt-56 lg:mb-56 md:mt-56 md:mb-56">
             <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
                 <div className="flex flex-col items-start justify-center mx-auto py-10 lg:py-0 lg:mx-0 gap-10 md:gap-20">
-                    <div className="flex flex-col items-center lg:items-start justify-center">
+                    <div className="flex flex-col items-center lg:items-start justify-center mx-auto lg:mx-0 md:mx-0">
                         <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
                             <span className="w-[1.5ch] flex flex-row">
                                 <Odometer value={value} format="(,ddd)" duration={2000} />
-
                             </span>
 
                             <p className="text-sm font-normal">orejas</p>
@@ -74,12 +73,12 @@ const OdometerMontable = () => {
                         <p className="text-[#4F4F4F]">Capacidad de aire acondicionado</p>
                     </div>
 
-                    <div className="flex flex-col items-center justify-center">
+                    <div className="flex flex-col items-center justify-center mx-auto lg:mx-0 md:mx-0">
                         <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6.7ch] lg:w-[6.4ch] md:w-[6.4ch]">
                             <Odometer value={value4} format="(,ddd)" duration={2000} />
                             <p className="text-sm font-normal ml-3">"</p>
                         </div>
-                        <p className="text-[#4F4F4F] text-start w-full">
+                        <p className="text-[#4F4F4F] text-center lg:text-start w-full">
                             Aislamiento
                         </p>
                     </div>

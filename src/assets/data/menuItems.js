@@ -101,20 +101,19 @@ export const menuItems = [
             url: "/ColdMix",
           },
           {
-            title: "10 TPH INTEGRAL ASPHALT PLANTS",
+            title: "PLANTAS DE ASFALTO DE 10 TPH INTEGRALES",
             url: "/IntegralAphaltPlant",
           },
           {
             title: "CASETAS",
-            url: "/CasetaMontable",
             children: [
               {
                 title: "CASETAS MONTABLES",
-                url: "/CasetaMontable",
+                url: "/Casetas/CasetaMontable",
               },
               {
                 title: "CASETAS REMOLCABLES",
-                url: "/",
+                url: "/Casetas/CasetasRemolcables",
               },
             ]
           },
