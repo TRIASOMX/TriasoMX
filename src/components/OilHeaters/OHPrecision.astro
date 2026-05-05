@@ -2,90 +2,175 @@
 import Card from "../unitComponents/Card.astro";
 import OHCustom from "./OHCustom.astro";
 import hotoil from "../../assets/images/AsphaltStorage/hotoil.webp";
-import img1 from "../../assets/images/OilHeaters/6.webp"
+import img1 from "../../assets/images/OilHeaters/6.webp";
 import { Image } from "astro:assets";
 ---
 
 <section class="w-full mt-10 md:mt-20 flex flex-col gap-5 md:gap-10 font-bold">
-    <div class="w-full max-w-7xl mx-auto px-8 pb-10 lg:pb-0 md:pb-0 text-center">
-        <h2 class="text-redBg text-2xl md:text-3xl">Keep Asphalt Flowing, Keep Profits Growing</h2>
-    </div>
-    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 max-w-7xl mx-auto px-4 text-grisT font-bold">
-        <Card>
-            <h2 class="text-lg md:text-xl">Precision Temperature Control:</h2>
-            <p class="text-base md:text-lg font-thin">
-                Maintains exact process temperatures within a ±1°C tolerance, ensuring ideal conditions for material production.
-            </p>
-        </Card>
-        <Card>
-            <h2 class="text-lg md:text-xl">Customizable Heating Capacity: </h2>
-            <p class="text-base md:text-lg font-thin">
-                Available in multiple configurations to meet your project’s specific requirements — from compact operations to large-scale industrial systems.
-            </p>
-        </Card>
-        <Card>
-            <h2 class="text-lg md:text-xl">High-Efficiency Burners:</h2>
-            <p class="text-base md:text-lg font-thin">
-                Equipped with low-NOx technology that minimizes emissions while maximizing fuel efficiency.
-            </p>
-        </Card>
-        <Card>
-            <h2 class="text-lg md:text-xl">Thermal Oil Circulation System: 
-            </h2>
-            <p class="text-base md:text-lg font-thin">
-                Delivers uniform heat distribution across the entire system, preventing hot spots and material degradation.
-            </p>
-        </Card>
-    </div>
-    <div class="text-center w-full py-5 px-4">
-        <h2 class="text-blueMain text-2xl md:text-3xl">
-            Stand out from the competition by offering the highest-quality mix.
+    <div
+        class="w-full max-w-7xl mx-auto px-8 pb-10 lg:pb-0 md:pb-0 text-center"
+    >
+        <h2 class="text-redBg text-2xl md:text-3xl">
+            Mantenga el asfalto fluyendo, mantenga sus ganancias creciendo
         </h2>
     </div>
-    <div>
-        <!-- <img src="" alt=""> -->
+    <div
+        class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 max-w-7xl mx-auto px-4 text-grisT font-bold"
+    >
+        <Card>
+            <h2 class="text-lg md:text-xl">Control preciso de temperatura:</h2>
+            <p class="text-base md:text-lg font-thin">
+                Mantiene temperaturas exactas del proceso dentro de una
+                tolerancia de ±1 °C, asegurando condiciones ideales para la
+                producción de materiales.
+            </p>
+        </Card>
+        <Card>
+            <h2 class="text-lg md:text-xl">
+                Capacidad de calentamiento personalizable:
+            </h2>
+            <p class="text-base md:text-lg font-thin">
+                Disponible en múltiples configuraciones para adaptarse a los
+                requerimientos específicos de su proyecto — desde operaciones
+                compactas hasta sistemas industriales de gran escala.
+            </p>
+        </Card>
+        <Card>
+            <h2 class="text-lg md:text-xl">Quemadores de alta eficiencia:</h2>
+            <p class="text-base md:text-lg font-thin">
+                Equipados con tecnología de bajo NOx que minimiza las emisiones
+                mientras maximiza la eficiencia del combustible.
+            </p>
+        </Card>
+        <Card>
+            <h2 class="text-lg md:text-xl">
+                Sistema de circulación de aceite térmico:
+            </h2>
+            <p class="text-base md:text-lg font-thin">
+                Garantiza una distribución uniforme del calor en todo el
+                sistema, evitando puntos calientes y la degradación del
+                material.
+            </p>
+        </Card>
     </div>
-    <div class="w-full bg-grisT">
-        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 bg-grisT max-w-7xl mx-auto px-8 pt-10">
-            <div class="w-full text-white">
-                <h2 class="text-xl md:text-2xl font-bold text-center">Expansion Tank</h2><br>
-                <p class="text-base md:text-lg font-thin">
-                    Our oil heater ensures uniform heat distribution through advanced thermal oil circulation.
-                     It features a built-in expansion tank that absorbs oil volume changes due to temperature,
-                      stabilizing pressure and protecting the system for longer, maintenance-free operation.
-                </p>
-                <div class="lg:pt-5 md:pt-5">
-                    <Image src="https://placehold.co/600x400/png" width={600} height={400} alt="" class="rounded-lg">
-                </div>
-            </div>
-            <div class="w-full text-white">
-                <h2 class="text-xl md:text-2xl font-bold text-center">High-Performance Recirculation Pump: </h2><br>
-                <p class="text-base md:text-lg font-thin">
-                    Equipped with a high-performance recirculation pump designed that maintains a constant flow of thermal
-                     oil, ensuring efficient heat transfer. Available with a 10 HP or 15 HP motor depending on system capacity,
-                      it is built for continuous operation with minimal maintenance and excellent energy efficiency.
-                </p>
-                <div class="lg:pt-5 md:pt-5">
-                    <Image src={img1} alt="Recirculation Pump system" class="rounded-lg">
-                </div>
-            </div>
-        </div>
-        <div class="w-full bg-bgBeige px-8  py-10 -skew-y-2 overflow-hidden my-10">
-            <div class="w-full max-w-7xl mx-auto skew-y-2 pt-5 lg:pt-8">
-                <h2 class="text-grisT text-xl md:text-2xl font-bold">Oil Coils</h2>
-                <p class="text-grisT text-base md:text-lg font-thin">
-                    Inside the thermal oil heater, the coil — or heat exchanger — channels the 
-                    thermal oil through a tightly wound spiral of steel tubing.The coil is heated 
-                    indirectly by the burner, transferring energy to the oil without allowing combustion gases to mix with it. Once 
-                    the oil reaches the target temperature,
-                    it circulates through the system to heat the desired application — such as an asphalt tank or other industrial equipment — delivering 
-                    consistent and efficient thermal performance.
-                </p>
-                <div class="w-full flex justify-center mt-6">
-                    <Image src={hotoil} alt="Oil coils" class="w-full h-[200px] md:h-[350px] object-cover object-center rounded-2xl">
-                </div>
-            </div>
-        </div>
-       <OHCustom></OHCustom> 
-    </div> 
 </section>
+
+<!--  -->
+<section>
+    <div
+        class="w-full flex flex-col font-bold mt-10"
+    >
+        <div class="max-w-7xl px-8 mx-auto flex justify-start">
+            <Image
+                src="https://placehold.co/1270x500/png"
+                alt="Baghouse"
+                class="hero-img md:w-4/5 lg:w-4/6 rounded-lg"
+                width={1270}
+                height={500}
+                fetchpriority="high"
+                loading="lazy"
+            />
+        </div>
+        <div class="bg-[#393939] my-20">
+            <div
+            class=" max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6"
+        >
+            <div class="w-full mt-10 ">
+                <div class="flex flex-col w-[70%]">
+                            <h2 class="text-white text-lg md:text-xl">
+                    Eficiencia para calentamiento de equipos secundarios con
+                    linea de aceite térmico
+                </h2>
+                <p
+                    class="text-[#d9d9d9] text-sm lg:text-lg md:text-lg text-justify"
+                >
+                    El uso más eficiente de una caldera de aceite térmico es el
+                    calentamiento de aceite para la recirculación hacía más
+                    sistemas que requieren calentamientos por linea de aceite
+                    térmico, así como otros tanque de afalto, silos, bombas de
+                    inyección o descarga.
+                </p>
+                </div>
+        
+            </div>
+
+            <div class="w-full hidden relative lg:flex md:w-auto">
+                <Image
+                    src="https://placehold.co/400x600/png"
+                    width={400}
+                    height={600}
+                    alt="Baghouse cleaning system"
+                    class="side-img rounded-2xl will-change-transform"
+                />
+            </div>
+        </div>
+
+        </div>
+        
+
+        <div
+            class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"
+        >
+            <Image
+                src="https://placehold.co/800x600/png"
+                width={800}
+                height={600}
+                alt="Baghouse"
+                class="fade-img rounded-lg lg:w-3/5 will-change-transform"
+            />
+        </div>
+
+        <div class="relative flex flex-row px-8 gap-2 lg:hidden">
+            <Image
+                src="https://placehold.co/600x400/png"
+                width={600}
+                height={400}
+                alt="Baghouse cleaning system"
+                class="rounded-2xl w-1/2 object-contain"
+            />
+
+            <Image
+                src="https://placehold.co/600x400/png"
+                width={600}
+                height={400}
+                alt="Baghouse"
+                class="rounded-lg w-1/2 object-contain"
+            />
+        </div>
+    </div>
+</section>
+
+<script>
+    import { initScrollAnimations } from "./OilAnimations";
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("DOMContentLoaded", () => {
+            initScrollAnimations();
+        });
+    }
+</script>
+
+
+<script>
+  document
+    .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
+    .forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const expandible = btn.nextElementSibling as HTMLElement;
+        const chevron = btn.querySelector(".chevron") as HTMLElement;
+        const isOpen =
+          expandible.style.maxHeight && expandible.style.maxHeight !== "0px";
+
+        if (isOpen) {
+          expandible.style.maxHeight = "0px";
+          chevron.style.transform = "rotate(0deg)";
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          expandible.style.maxHeight = expandible.scrollHeight + "px";
+          chevron.style.transform = "rotate(180deg)";
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+</script>

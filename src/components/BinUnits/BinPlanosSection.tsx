@@ -379,11 +379,11 @@ const BinPlanosSection = () => {
       >
         <header id="planosBinUnits" className="mt-10 text-white" ref={otroElemento}>
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
-            Specifications
+            Especificaciones
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              MEASURE:
+              UNIDAD DE MEDIDA:
             </h1>
             <div
               onClick={toggleUnit}
@@ -405,7 +405,7 @@ const BinPlanosSection = () => {
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRIC
+                  METRICO
                 </span>
               </div>
             </div>
@@ -474,7 +474,7 @@ const BinPlanosSection = () => {
             {/* móvil */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
               <label className="text-white block text-center">
-                MODELS:
+                MODELOS:
               </label>
               <div className="relative">
                 <select
@@ -544,8 +544,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          FEEDING & DOSIGN SYSTEM
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Sistema de alimentación y dosificacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -583,26 +583,24 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>18" variable-speed dosing belt</li>
-                        <li>Rubber-coated head pulley for reliable grip</li>
+                        <li>Banda dosificadora de 18" con velocidad variable</li>
+                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibrators in fine aggregate bin to ensure consistent
-                          feed
+                          Vibradores en la tolva de finos para asegurar una alimentación constante
                         </li>
-                        <li>Fine material flow sensor with low-level alarm</li>
+                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
                         <li>
-                          24" feeding conveyor wide conveyor belt for smoother
-                          low-speed transport
+                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
                         </li>
                         <li>
-                          Rubber-coated head pulleys and CEMA-standard rollers
+                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          DURABILITY & SAFETY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Resistencia y seguridad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -641,24 +639,22 @@ const BinPlanosSection = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Estructura extra reforzada para trabajo pesado a largo plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Aesthetic side panels for professional image</li>
+                          <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Belt cleaners for longer belt lifespan</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Built-in skirtboards to contain material</li>
+                        <li>Limpiadores de banda para prolongar la vida útil de la banda.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
                       </ul>
                     </div>
                   </div>
@@ -672,8 +668,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          CONTROL & OPERATION
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Control y operacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -711,35 +707,30 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                        Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable to existing asphalt plant control
-                          infrastructure
+                        Adaptable a la infraestructura de control existente de la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Seamless integration to central control systems
+                            Integración sin complicaciones con los sistemas de control central
                             </li>
                           </ul>
                         </li>
@@ -747,8 +738,8 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          PORTABILITY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Portabilidad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -786,31 +777,25 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Designed for relocation</li>
+                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Built-in fifth wheel means no lowboy is required.
+                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Also transportable on lowboy or flatbed trailer if
-                              preferred.
+                              También puede transportarse en cama baja o plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Mounted on standard transport chassis with one axle
-                          and 16” highway-rated wheels.
+                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
                         </li>
                         <li>
-                          Pull-type hitch with safety coupling and brake system.
+                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
                         </li>
-                        <li>Setup requires no crane or hoisting equipment.</li>
-                        <li>Bolt-on support legs for fast on-site assembly.</li>
-                        <li>
-                          DOT-compliant lighting and reflective markings for
-                          transport visibility.
-                        </li>
+                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
                       </ul>
                     </div>
                   </div>
@@ -818,8 +803,8 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        COMPONENTS & ELECTRICAL
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                       Componentes y sistema eléctrico
                       </h1>
                       <button
                         className="block md:hidden"
@@ -858,21 +843,20 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Industrial-grade motors, components, and Siemens wiring.
+                        Motores, componentes y cableado Siemens de grado industrial.
                       </li>
-                      <li>Simplified wiring system for easy maintenance.</li>
-                      <li>Weather-protected electrical connections.</li>
-                      <li>Pulley-and-bushing drive system.</li>
+                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        External fuel lines, sensors, and signal cabling
-                        pre-installed.
+                        Líneas de combustible externas, sensores y cableado de señales preinstalados.
                       </li>
                     </ul>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        OPERATING CONFIGURATION
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Configuración de operación
                       </h1>
                       <button
                         className="block md:hidden"
@@ -911,15 +895,15 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Maximum feeding capacity:</h1>
-                        <p>Up to 60 TPH</p>
+                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Hasta 60 Tph</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        OPERATING CONFIGURATION
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Cumplimiento con estándares de la industria
                       </h1>
                       <button
                         className="block md:hidden"
@@ -957,10 +941,9 @@ const BinPlanosSection = () => {
                         : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>EPA</li>
-                      <li>OSHA</li>
-                      <li>DOT</li>
-                      <li>UL wiring</li>
+                      <li>SEMARNAT</li>
+                      <li>SCT </li>
+                      <li>NOM-001-SEDE</li>
                     </ul>
                   </div>
                 </div>
@@ -1166,8 +1149,8 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        SINGLE UNIT DIMENSIONS
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Dimensiones de unidad
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1206,7 +1189,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Length:</h1>
+                        <h1>Longitud:</h1>
                         <p >
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength")?.toFixed(1) ?? ""} cm`
@@ -1216,7 +1199,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Width:</h1>
+                        <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth")?.toFixed(1) ?? ""} cm`
@@ -1226,7 +1209,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height:</h1>
+                        <h1>Altura:</h1>
                         <p >
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight")?.toFixed(1) ?? ""} cm`
@@ -1236,15 +1219,15 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacity:</h1>
+                        <h1>Capacidad:</h1>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        CHASSIS & STRUCTURE
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Chasis y estructura
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1283,7 +1266,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Total length (including hitch):</h1>
+                        <h1>Longitud total (incluyendo el enganche):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength")?.toFixed(1) ?? ""} cm`
@@ -1293,13 +1276,13 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Axle configuration: </h1>
-                        <p>One Axle</p>
+                        <h1>Configuración del eje:</h1>
+                        <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Fifth-wheel hitch height:</h1>
+                        <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
-                         {unit === "metric"
+                          {unit === "metric"
                             ? `${dim("awheel", "wheel")?.toFixed(1) ?? ""} cm`
                             : `${((dim("awheel", "wheel")) * cmToFeet).toFixed(
                               1
@@ -1307,7 +1290,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total width:</h1>
+                        <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth")?.toFixed(1) ?? ""} cm`
@@ -1317,7 +1300,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height with bins in operation:</h1>
+                        <h1>Altura con tolvas en operación:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins")?.toFixed(1) ?? ""} cm`
@@ -1330,8 +1313,8 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        BIN OPTIONS
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Opciones de tolvas
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1371,23 +1354,23 @@ const BinPlanosSection = () => {
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>
-                        <li>Bin level indicators</li>
-                        <li>Adjustable depth control gates</li>
-                        <li>Cable trays</li>
-                        <li>Bulkheads (available in full height)</li>
-                        <li>Self-relieving feeder throats</li>
-                        <li>Bin dividers</li>
-                        <li>Walkways</li>
+                        <li>Indicadores de nivel de tolva</li>
+                        <li>Compuertas de control de profundidad</li>
+                        <li>Charolas porta–cables</li>
+                        <li>Tabiques internos</li>
+                        <li>Aliomentadores</li>
+                        <li>Divisores de tolvas</li>
+                        <li>Pasillos</li>
                       </ul>
                       <ul className="ml-6 list-disc">
-                        <li>Bin covers</li>
-                        <li>Built-in retaining walls</li>
-                        <li>Air cannons</li>
-                        <li>Moisture probes</li>
-                        <li>Wire mesh guarding</li>
-                        <li>Bin vibrators</li>
-                        <li>Bin extensions</li>
-                        <li>Built-in scalping screens</li>
+                        <li>Cubiertas para tolvas</li>
+                        <li>Muros de contención integrados</li>
+                        <li>Cañones de aire</li>
+                        <li>Sondas de humedad</li>
+                        <li>Protecciones con malla metálica</li>
+                        <li>Vibradores para tolvas</li>
+                        <li>Extensiones de tolvas</li>
+                        <li>Cribas integradas para separación</li>
                       </ul>
                     </div>
                   </div>
@@ -1403,8 +1386,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          FEEDING & DOSIGN SYSTEM
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Sistema de alimentación y dosificacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1442,26 +1425,24 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>18" variable-speed dosing belt</li>
-                        <li>Rubber-coated head pulley for reliable grip</li>
+                        <li>Banda dosificadora de 18" con velocidad variable</li>
+                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibrators in fine aggregate bin to ensure consistent
-                          feed
+                          Vibradores en la tolva de finos para asegurar una alimentación constante
                         </li>
-                        <li>Fine material flow sensor with low-level alarm</li>
+                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
                         <li>
-                          24" feeding conveyor wide conveyor belt for smoother
-                          low-speed transport
+                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
                         </li>
                         <li>
-                          Rubber-coated head pulleys and CEMA-standard rollers
+                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          DURABILITY & SAFETY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Resistencia y seguridad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1500,24 +1481,22 @@ const BinPlanosSection = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                         Estructura extra reforzada para trabajo pesado a largo plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Aesthetic side panels for professional image</li>
+                          <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Belt cleaners for longer belt lifespan</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Built-in skirtboards to contain material</li>
+                        <li>Limpiadores de banda para prolongar la vida útil de la banda.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
                       </ul>
                     </div>
                   </div>
@@ -1531,8 +1510,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          CONTROL & OPERATION
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Control y operacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1570,35 +1549,30 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable to existing asphalt plant control
-                          infrastructure
+                          Adaptable a la infraestructura de control existente de la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Seamless integration to central control systems
+                              Integración sin complicaciones con los sistemas de control central
                             </li>
                           </ul>
                         </li>
@@ -1606,8 +1580,8 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          PORTABILITY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Portabilidad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1645,31 +1619,25 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Designed for relocation</li>
+                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Built-in fifth wheel means no lowboy is required.
+                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Also transportable on lowboy or flatbed trailer if
-                              preferred.
+                              También puede transportarse en cama baja o plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Mounted on standard transport chassis with one axle
-                          and 16” highway-rated wheels.
+                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
                         </li>
                         <li>
-                          Pull-type hitch with safety coupling and brake system.
+                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
                         </li>
-                        <li>Setup requires no crane or hoisting equipment.</li>
-                        <li>Bolt-on support legs for fast on-site assembly.</li>
-                        <li>
-                          DOT-compliant lighting and reflective markings for
-                          transport visibility.
-                        </li>
+                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
                       </ul>
                     </div>
                   </div>
@@ -1677,8 +1645,8 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        COMPONENTS & ELECTRICAL
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                       Componentes y sistema eléctrico
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1717,21 +1685,20 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Industrial-grade motors, components, and Siemens wiring.
+                        Motores, componentes y cableado Siemens de grado industrial.
                       </li>
-                      <li>Simplified wiring system for easy maintenance.</li>
-                      <li>Weather-protected electrical connections.</li>
-                      <li>Pulley-and-bushing drive system.</li>
+                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        External fuel lines, sensors, and signal cabling
-                        pre-installed.
+                       Líneas de combustible externas, sensores y cableado de señales preinstalados.
                       </li>
                     </ul>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        OPERATING CONFIGURATION
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Configuración de operación
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1770,15 +1737,15 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Maximum feeding capacity:</h1>
-                        <p>Up to 120 TPH</p>
+                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Hasta 120 TPH</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        OPERATING CONFIGURATION
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Cumplimiento con estándares de la industria
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1816,10 +1783,9 @@ const BinPlanosSection = () => {
                         : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>EPA</li>
-                      <li>OSHA</li>
-                      <li>DOT</li>
-                      <li>UL wiring</li>
+                      <li>SEMARNAT</li>
+                      <li>SCT</li>
+                      <li>NOM-001-SEDE</li>
                     </ul>
                   </div>
                 </div>
@@ -1850,7 +1816,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -1920,7 +1886,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -1975,7 +1941,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -2023,8 +1989,8 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        SINGLE UNIT DIMENSIONS
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Dimensiones de unidad
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2063,7 +2029,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Length:</h1>
+                        <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength").toFixed(1)} cm`
@@ -2071,7 +2037,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Width:</h1>
+                        <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth").toFixed(1)} cm`
@@ -2079,7 +2045,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height:</h1>
+                        <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight").toFixed(1)} cm`
@@ -2087,15 +2053,15 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacity:</h1>
+                        <h1>Capacidad:</h1>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        CHASSIS & STRUCTURE
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Chasis y estructura
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2134,7 +2100,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Total length (including hitch):</h1>
+                        <h1>Longitud total (incluyendo el enganche):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
@@ -2142,11 +2108,11 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Axle configuration: </h1>
-                        <p>One Axle</p>
+                        <h1>Configuración del eje: </h1>
+                        <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Fifth-wheel hitch height:</h1>
+                        <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} cm`
@@ -2154,7 +2120,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total width:</h1>
+                        <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth").toFixed(1)} cm`
@@ -2162,7 +2128,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height with bins in operation:</h1>
+                        <h1>Altura con tolvas en operación:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
@@ -2173,8 +2139,8 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        BIN OPTIONS
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Opciones de tolvas
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2214,23 +2180,23 @@ const BinPlanosSection = () => {
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>
-                        <li>Bin level indicators</li>
-                        <li>Adjustable depth control gates</li>
-                        <li>Cable trays</li>
-                        <li>Bulkheads (available in full height)</li>
-                        <li>Self-relieving feeder throats</li>
-                        <li>Bin dividers</li>
-                        <li>Walkways</li>
+                        <li>Indicadores de nivel de tolva</li>
+                        <li>Compuertas de control de profundidad</li>
+                        <li>Charolas porta–cables</li>
+                        <li>Tabiques internos</li>
+                        <li>Aliomentadores</li>
+                        <li>Divisores de tolvas</li>
+                        <li>Pasillos</li>
                       </ul>
                       <ul className="ml-6 list-disc">
-                        <li>Bin covers</li>
-                        <li>Built-in retaining walls</li>
-                        <li>Air cannons</li>
-                        <li>Moisture probes</li>
-                        <li>Wire mesh guarding</li>
-                        <li>Bin vibrators</li>
-                        <li>Bin extensions</li>
-                        <li>Built-in scalping screens</li>
+                        <li>Cubiertas para tolvas</li>
+                        <li>Muros de contención integrados</li>
+                        <li>Cañones de aire</li>
+                        <li>Sondas de humedad</li>
+                        <li>Protecciones con malla metálica</li>
+                        <li>Vibradores para tolvas</li>
+                        <li>Extensiones de tolvas</li>
+                        <li>Cribas integradas para separación</li>
                       </ul>
                     </div>
                   </div>
@@ -2250,8 +2216,8 @@ const BinPlanosSection = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          FEEDING & DOSIGN SYSTEM
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Sistema de alimentación y dosificacióN
                         </h1>
                         <button
                           aria-label="See more about the feeding and dosign system"
@@ -2290,26 +2256,24 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>18" variable-speed dosing belt</li>
-                        <li>Rubber-coated head pulley for reliable grip</li>
+                        <li>Banda dosificadora de 18" con velocidad variable</li>
+                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibrators in fine aggregate bin to ensure consistent
-                          feed
+                          Vibradores en la tolva de finos para asegurar una alimentación constante
                         </li>
-                        <li>Fine material flow sensor with low-level alarm</li>
+                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
                         <li>
-                          24" feeding conveyor wide conveyor belt for smoother
-                          low-speed transport
+                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
                         </li>
                         <li>
-                          Rubber-coated head pulleys and CEMA-standard rollers
+                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          DURABILITY & SAFETY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 upppercase">
+                          Resistencia y seguridad
                         </h1>
                         <button
                           aria-label="See more about the durability and safety of the system"
@@ -2349,24 +2313,22 @@ const BinPlanosSection = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Estructura extra reforzada para trabajo pesado a largo plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Aesthetic side panels for professional image</li>
+                          <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                             Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Belt cleaners for longer belt lifespan</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Built-in skirtboards to contain material</li>
+                        <li>Limpiadores de banda para prolongar la vida útil de la banda.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
                       </ul>
                     </div>
                   </div>
@@ -2378,8 +2340,8 @@ const BinPlanosSection = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          CONTROL & OPERATION
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Control y operacióN
                         </h1>
                         <button
                           aria-label="See more about the control and the operation of the system"
@@ -2418,35 +2380,30 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable to existing asphalt plant control
-                          infrastructure
+                          Adaptable a la infraestructura de control existente de la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Seamless integration to central control systems
+                              Integración sin complicaciones con los sistemas de control central
                             </li>
                           </ul>
                         </li>
@@ -2454,8 +2411,8 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          PORTABILITY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Portabilidad
                         </h1>
                         <button
                           aria-label="See more about the portability"
@@ -2494,31 +2451,25 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Designed for relocation</li>
+                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Built-in fifth wheel means no lowboy is required.
+                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Also transportable on lowboy or flatbed trailer if
-                              preferred.
+                             También puede transportarse en cama baja o plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Mounted on standard transport chassis with one axle
-                          and 16” highway-rated wheels.
+                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
                         </li>
                         <li>
-                          Pull-type hitch with safety coupling and brake system.
+                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
                         </li>
-                        <li>Setup requires no crane or hoisting equipment.</li>
-                        <li>Bolt-on support legs for fast on-site assembly.</li>
-                        <li>
-                          DOT-compliant lighting and reflective markings for
-                          transport visibility.
-                        </li>
+                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
                       </ul>
                     </div>
                   </div>
@@ -2526,8 +2477,8 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        COMPONENTS & ELECTRICAL
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                       Componentes y sistema eléctrico
                       </h1>
                       <button
                         aria-label="See more abou the components and electrical composition"
@@ -2567,21 +2518,20 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Industrial-grade motors, components, and Siemens wiring.
+                        Motores, componentes y cableado Siemens de grado industrial.
                       </li>
-                      <li>Simplified wiring system for easy maintenance.</li>
-                      <li>Weather-protected electrical connections.</li>
-                      <li>Pulley-and-bushing drive system.</li>
+                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        External fuel lines, sensors, and signal cabling
-                        pre-installed.
+                       Líneas de combustible externas, sensores y cableado de señales preinstalados.
                       </li>
                     </ul>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        OPERATING CONFIGURATION
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Configuración de operación
                       </h1>
                       <button
                         aria-label="See more about the oprating configuration"
@@ -2621,15 +2571,15 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Maximum feeding capacity:</h1>
-                        <p>Up to 180 TPH</p>
+                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Hasta 180 TPH</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Compliance with Industry Standards
+                        Cumplimiento con estándares de la industria
                       </h1>
                       <button
                         aria-label="See more about the compliance with industry standards"
@@ -2668,10 +2618,10 @@ const BinPlanosSection = () => {
                         : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>EPA</li>
-                      <li>OSHA</li>
-                      <li>DOT</li>
-                      <li>UL wiring</li>
+                      <li>SEMARNAT</li>
+                      <li>SCT </li>
+                      <li>NOM-001-SEDE</li>
+                 
                     </ul>
                   </div>
                 </div>
@@ -2702,7 +2652,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -2764,7 +2714,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -2819,7 +2769,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -2867,8 +2817,8 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        SINGLE UNIT DIMENSIONS
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Dimensiones de unidad
                       </h1>
                       <button
                         aria-label="See more about the single unit dimensions"
@@ -2908,7 +2858,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Length:</h1>
+                        <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength").toFixed(1)} cm`
@@ -2916,7 +2866,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Width:</h1>
+                        <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth").toFixed(1)} cm`
@@ -2924,7 +2874,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height:</h1>
+                        <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight").toFixed(1)} cm`
@@ -2932,15 +2882,15 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacity:</h1>
+                        <h1>Capacidad:</h1>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        CHASSIS & STRUCTURE
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Chasis y estructura
                       </h1>
                       <button
                         aria-label="See more about the Chassis and structure of the system"
@@ -2980,7 +2930,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Total length (including hitch):</h1>
+                        <h1>Longitud total (incluyendo el enganche):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
@@ -2988,11 +2938,11 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Axle configuration: </h1>
-                        <p>One Axle</p>
+                        <h1>Configuración del eje:</h1>
+                        <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Fifth-wheel hitch height:</h1>
+                        <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} cm`
@@ -3000,7 +2950,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total width:</h1>
+                        <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth").toFixed(1)} cm`
@@ -3008,7 +2958,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height with bins in operation:</h1>
+                        <h1>Altura con tolvas en operación:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
@@ -3019,8 +2969,8 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        BIN OPTIONS
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Opciones de tolvas
                       </h1>
                       <button
                         aria-label="See more about the Bin Options"
@@ -3061,23 +3011,23 @@ const BinPlanosSection = () => {
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>
-                        <li>Bin level indicators</li>
-                        <li>Adjustable depth control gates</li>
-                        <li>Cable trays</li>
-                        <li>Bulkheads (available in full height)</li>
-                        <li>Self-relieving feeder throats</li>
-                        <li>Bin dividers</li>
-                        <li>Walkways</li>
+                        <li>Indicadores de nivel de tolva</li>
+                        <li>Compuertas de control de profundidad</li>
+                        <li>Charolas porta–cables</li>
+                        <li>Tabiques internos</li>
+                        <li>Aliomentadores</li>
+                        <li>Divisores de tolvas</li>
+                        <li>Pasillos</li>
                       </ul>
                       <ul className="ml-6 list-disc">
-                        <li>Bin covers</li>
-                        <li>Built-in retaining walls</li>
-                        <li>Air cannons</li>
-                        <li>Moisture probes</li>
-                        <li>Wire mesh guarding</li>
-                        <li>Bin vibrators</li>
-                        <li>Bin extensions</li>
-                        <li>Built-in scalping screens</li>
+                        <li>Cubiertas para tolvas</li>
+                        <li>Muros de contención integrados</li>
+                        <li>Cañones de aire</li>
+                        <li>Sondas de humedad</li>
+                        <li>Protecciones con malla metálica</li>
+                        <li>Vibradores para tolvas</li>
+                        <li>Extensiones de tolvas</li>
+                        <li>Cribas integradas para separación</li>
                       </ul>
                     </div>
                   </div>
@@ -3093,8 +3043,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          FEEDING & DOSIGN SYSTEM
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Sistema de alimentación y dosificacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -3132,26 +3082,24 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>18" variable-speed dosing belt</li>
-                        <li>Rubber-coated head pulley for reliable grip</li>
+                        <li>Banda dosificadora de 18" con velocidad variable</li>
+                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibrators in fine aggregate bin to ensure consistent
-                          feed
+                          Vibradores en la tolva de finos para asegurar una alimentación constante
                         </li>
-                        <li>Fine material flow sensor with low-level alarm</li>
+                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
                         <li>
-                          24" feeding conveyor wide conveyor belt for smoother
-                          low-speed transport
+                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
                         </li>
                         <li>
-                          Rubber-coated head pulleys and CEMA-standard rollers
+                         Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          DURABILITY & SAFETY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Resistencia y seguridad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -3190,24 +3138,22 @@ const BinPlanosSection = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Estructura extra reforzada para trabajo pesado a largo plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Aesthetic side panels for professional image</li>
+                          <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Belt cleaners for longer belt lifespan</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Built-in skirtboards to contain material</li>
+                        <li>Limpiadores de banda para prolongar su vida útil.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>Tablas de contención integradas para mantener el material dentro de la banda.</li>
                       </ul>
                     </div>
                   </div>
@@ -3221,8 +3167,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          CONTROL & OPERATION
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Control y operacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -3260,35 +3206,30 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable to existing asphalt plant control
-                          infrastructure
+                          Adaptable a la infraestructura de control existente de la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Seamless integration to central control systems
+                              Integración sin complicaciones con los sistemas de control central
                             </li>
                           </ul>
                         </li>
@@ -3296,8 +3237,8 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          PORTABILITY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Portabilidad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -3335,31 +3276,25 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Designed for relocation</li>
+                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Built-in fifth wheel means no lowboy is required.
+                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Also transportable on lowboy or flatbed trailer if
-                              preferred.
+                              También puede transportarse en cama baja o plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Mounted on standard transport chassis with one axle
-                          and 16” highway-rated wheels.
+                         Montado sobre chasis de transporte con un eje y llantas de uso carretera.
                         </li>
                         <li>
-                          Pull-type hitch with safety coupling and brake system.
+                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
                         </li>
-                        <li>Setup requires no crane or hoisting equipment.</li>
-                        <li>Bolt-on support legs for fast on-site assembly.</li>
-                        <li>
-                          DOT-compliant lighting and reflective markings for
-                          transport visibility.
-                        </li>
+                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
                       </ul>
                     </div>
                   </div>
@@ -3367,8 +3302,8 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        COMPONENTS & ELECTRICAL
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Componentes y sistema eléctrico
                       </h1>
                       <button
                         className="block md:hidden"
@@ -3407,21 +3342,20 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Industrial-grade motors, components, and Siemens wiring.
+                        Motores, componentes y cableado Siemens de grado industrial.
                       </li>
-                      <li>Simplified wiring system for easy maintenance.</li>
-                      <li>Weather-protected electrical connections.</li>
-                      <li>Pulley-and-bushing drive system.</li>
+                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        External fuel lines, sensors, and signal cabling
-                        pre-installed.
+                        Líneas de combustible externas, sensores y cableado de señales preinstalados.
                       </li>
                     </ul>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        OPERATING CONFIGURATION
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Configuración de operación
                       </h1>
                       <button
                         className="block md:hidden"
@@ -3460,15 +3394,15 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Maximum feeding capacity:</h1>
-                        <p>Up to 240 TPH</p>
+                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Hasta 240 TPH</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        OPERATING CONFIGURATION
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Cumplimiento con estándares de la industria
                       </h1>
                       <button
                         className="block md:hidden"
@@ -3506,10 +3440,9 @@ const BinPlanosSection = () => {
                         : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>EPA</li>
-                      <li>OSHA</li>
-                      <li>DOT</li>
-                      <li>UL wiring</li>
+                      <li>SEMARNAT</li>
+                      <li>SCT</li>
+                      <li>NOM-001-SEDE</li>
                     </ul>
                   </div>
                 </div>
@@ -3540,7 +3473,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -3610,7 +3543,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -3665,7 +3598,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -3713,8 +3646,8 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        SINGLE UNIT DIMENSIONS
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Dimensiones de unidad
                       </h1>
                       <button
                         className="block md:hidden"
@@ -3753,7 +3686,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Length:</h1>
+                        <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength").toFixed(1)} cm`
@@ -3761,7 +3694,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Width:</h1>
+                        <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth").toFixed(1)} cm`
@@ -3769,7 +3702,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height:</h1>
+                        <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight").toFixed(1)} cm`
@@ -3777,15 +3710,15 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacity:</h1>
+                        <h1>Capacidad:</h1>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        CHASSIS & STRUCTURE
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Chasis y estructura
                       </h1>
                       <button
                         className="block md:hidden"
@@ -3824,7 +3757,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Total length (including hitch):</h1>
+                        <h1>Longitud total (incluyendo el enganche):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
@@ -3832,11 +3765,11 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Axle configuration: </h1>
-                        <p>One Axle</p>
+                        <h1>Configuración del eje:</h1>
+                        <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Fifth-wheel hitch height:</h1>
+                        <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} cm`
@@ -3844,7 +3777,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total width:</h1>
+                        <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth").toFixed(1)} cm`
@@ -3852,7 +3785,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height with bins in operation:</h1>
+                        <h1>Altura con tolvas en operación:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
@@ -3863,8 +3796,8 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        BIN OPTIONS
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Opciones de tolvas
                       </h1>
                       <button
                         className="block md:hidden"
@@ -3904,23 +3837,23 @@ const BinPlanosSection = () => {
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>
-                        <li>Bin level indicators</li>
-                        <li>Adjustable depth control gates</li>
-                        <li>Cable trays</li>
-                        <li>Bulkheads (available in full height)</li>
-                        <li>Self-relieving feeder throats</li>
-                        <li>Bin dividers</li>
-                        <li>Walkways</li>
+                        <li>Indicadores de nivel de tolva</li>
+                        <li>Compuertas de control de profundidad</li>
+                        <li>Charolas porta–cables</li>
+                        <li>Tabiques internos</li>
+                        <li>Aliomentadores</li>
+                        <li>Divisores de tolvas</li>
+                        <li>Pasillos</li>
                       </ul>
                       <ul className="ml-6 list-disc">
-                        <li>Bin covers</li>
-                        <li>Built-in retaining walls</li>
-                        <li>Air cannons</li>
-                        <li>Moisture probes</li>
-                        <li>Wire mesh guarding</li>
-                        <li>Bin vibrators</li>
-                        <li>Bin extensions</li>
-                        <li>Built-in scalping screens</li>
+                        <li>Cubiertas para tolvas</li>
+                        <li>Muros de contención integrados</li>
+                        <li>Cañones de aire</li>
+                        <li>Sondas de humedad</li>
+                        <li>Protecciones con malla metálica</li>
+                        <li>Vibradores para tolvas</li>
+                        <li>Extensiones de tolvas</li>
+                        <li>Cribas integradas para separación</li>
                       </ul>
                     </div>
                   </div>
@@ -3936,8 +3869,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          FEEDING & DOSIGN SYSTEM
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Sistema de alimentación y dosificacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -3975,26 +3908,24 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>18" variable-speed dosing belt</li>
-                        <li>Rubber-coated head pulley for reliable grip</li>
+                        <li>Banda dosificadora de 18" con velocidad variable</li>
+                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibrators in fine aggregate bin to ensure consistent
-                          feed
+                          Vibradores en la tolva de finos para asegurar una alimentación constante
                         </li>
-                        <li>Fine material flow sensor with low-level alarm</li>
+                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
                         <li>
-                          24" feeding conveyor wide conveyor belt for smoother
-                          low-speed transport
+                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
                         </li>
                         <li>
-                          Rubber-coated head pulleys and CEMA-standard rollers
+                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          DURABILITY & SAFETY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Resistencia y seguridad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -4033,24 +3964,22 @@ const BinPlanosSection = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Estructura extra reforzada para trabajo pesado a largo plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Aesthetic side panels for professional image</li>
+                          <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Belt cleaners for longer belt lifespan</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Built-in skirtboards to contain material</li>
+                        <li>Limpiadores de banda para prolongar su vida útil.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>Tablas de contención integradas para mantener el material dentro de la banda.</li>
                       </ul>
                     </div>
                   </div>
@@ -4064,8 +3993,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          CONTROL & OPERATION
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Control y operacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -4103,35 +4032,30 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable to existing asphalt plant control
-                          infrastructure
+                          Adaptable a la infraestructura de control existente de la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Seamless integration to central control systems
+                              Integración sin complicaciones con los sistemas de control central
                             </li>
                           </ul>
                         </li>
@@ -4139,8 +4063,8 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          PORTABILITY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Portabilidad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -4178,31 +4102,25 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Designed for relocation</li>
+                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Built-in fifth wheel means no lowboy is required.
+                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Also transportable on lowboy or flatbed trailer if
-                              preferred.
+                              También puede transportarse en cama baja o plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Mounted on standard transport chassis with one axle
-                          and 16” highway-rated wheels.
+                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
                         </li>
                         <li>
-                          Pull-type hitch with safety coupling and brake system.
+                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
                         </li>
-                        <li>Setup requires no crane or hoisting equipment.</li>
-                        <li>Bolt-on support legs for fast on-site assembly.</li>
-                        <li>
-                          DOT-compliant lighting and reflective markings for
-                          transport visibility.
-                        </li>
+                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
                       </ul>
                     </div>
                   </div>
@@ -4210,8 +4128,8 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        COMPONENTS & ELECTRICAL
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Componentes y sistema eléctrico
                       </h1>
                       <button
                         className="block md:hidden"
@@ -4250,21 +4168,20 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Industrial-grade motors, components, and Siemens wiring.
+                        Motores, componentes y cableado Siemens de grado industrial.
                       </li>
-                      <li>Simplified wiring system for easy maintenance.</li>
-                      <li>Weather-protected electrical connections.</li>
-                      <li>Pulley-and-bushing drive system.</li>
+                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        External fuel lines, sensors, and signal cabling
-                        pre-installed.
+                        Líneas de combustible externas, sensores y cableado de señales preinstalados.
                       </li>
                     </ul>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        OPERATING CONFIGURATION
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Configuración de operación
                       </h1>
                       <button
                         className="block md:hidden"
@@ -4303,15 +4220,15 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Maximum feeding capacity:</h1>
-                        <p>Up to 300 TPH</p>
+                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Hasta 300 TPH</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        OPERATING CONFIGURATION
+                       Cumplimiento con estándares de la industria
                       </h1>
                       <button
                         className="block md:hidden"
@@ -4349,10 +4266,9 @@ const BinPlanosSection = () => {
                         : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>EPA</li>
-                      <li>OSHA</li>
-                      <li>DOT</li>
-                      <li>UL wiring</li>
+                      <li>SEMARNAT</li>
+                      <li>SCT </li>
+                      <li>NOM-001-SEDE</li>
                     </ul>
                   </div>
                 </div>
@@ -4383,7 +4299,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -4445,7 +4361,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -4500,7 +4416,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -4548,8 +4464,8 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        SINGLE UNIT DIMENSIONS
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Dimensiones de unidad
                       </h1>
                       <button
                         className="block md:hidden"
@@ -4588,7 +4504,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Length:</h1>
+                        <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength").toFixed(1)} cm`
@@ -4596,7 +4512,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Width:</h1>
+                        <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth").toFixed(1)} cm`
@@ -4604,7 +4520,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height:</h1>
+                        <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight").toFixed(1)} cm`
@@ -4612,15 +4528,15 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacity:</h1>
+                        <h1>Capacidad:</h1>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        CHASSIS & STRUCTURE
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Chasis y estructura
                       </h1>
                       <button
                         className="block md:hidden"
@@ -4659,7 +4575,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Total length (including hitch):</h1>
+                        <h1>Longitud total (incluyendo el enganche):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
@@ -4667,11 +4583,11 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Axle configuration: </h1>
-                        <p>One Axle</p>
+                        <h1>Configuración del eje:</h1>
+                        <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Fifth-wheel hitch height:</h1>
+                        <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} cm`
@@ -4679,7 +4595,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total width:</h1>
+                        <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth").toFixed(1)} cm`
@@ -4687,7 +4603,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height with bins in operation:</h1>
+                        <h1>Altura con tolvas en operación:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
@@ -4698,8 +4614,8 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        BIN OPTIONS
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Opciones de tolvas
                       </h1>
                       <button
                         className="block md:hidden"
@@ -4739,23 +4655,23 @@ const BinPlanosSection = () => {
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>
-                        <li>Bin level indicators</li>
-                        <li>Adjustable depth control gates</li>
-                        <li>Cable trays</li>
-                        <li>Bulkheads (available in full height)</li>
-                        <li>Self-relieving feeder throats</li>
-                        <li>Bin dividers</li>
-                        <li>Walkways</li>
+                        <li>Indicadores de nivel de tolva</li>
+                        <li>Compuertas de control de profundidad</li>
+                        <li>Charolas porta–cables</li>
+                        <li>Tabiques internos</li>
+                        <li>Aliomentadores</li>
+                        <li>Divisores de tolvas</li>
+                        <li>Pasillos</li>
                       </ul>
                       <ul className="ml-6 list-disc">
-                        <li>Bin covers</li>
-                        <li>Built-in retaining walls</li>
-                        <li>Air cannons</li>
-                        <li>Moisture probes</li>
-                        <li>Wire mesh guarding</li>
-                        <li>Bin vibrators</li>
-                        <li>Bin extensions</li>
-                        <li>Built-in scalping screens</li>
+                        <li>Cubiertas para tolvas</li>
+                        <li>Muros de contención integrados</li>
+                        <li>Cañones de aire</li>
+                        <li>Sondas de humedad</li>
+                        <li>Protecciones con malla metálica</li>
+                        <li>Vibradores para tolvas</li>
+                        <li>Extensiones de tolvas</li>
+                        <li>Cribas integradas para separación</li>
                       </ul>
                     </div>
                   </div>
@@ -4771,8 +4687,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          FEEDING & DOSIGN SYSTEM
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                         Sistema de alimentación y dosificacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -4810,26 +4726,24 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>18" variable-speed dosing belt</li>
-                        <li>Rubber-coated head pulley for reliable grip</li>
+                        <li>Banda dosificadora de 18" con velocidad variable</li>
+                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibrators in fine aggregate bin to ensure consistent
-                          feed
+                          Vibradores en la tolva de finos para asegurar una alimentación constante
                         </li>
-                        <li>Fine material flow sensor with low-level alarm</li>
+                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
                         <li>
-                          24" feeding conveyor wide conveyor belt for smoother
-                          low-speed transport
+                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
                         </li>
                         <li>
-                          Rubber-coated head pulleys and CEMA-standard rollers
+                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          DURABILITY & SAFETY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Resistencia y seguridad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -4868,24 +4782,22 @@ const BinPlanosSection = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Estructura extra reforzada para trabajo pesado a largo plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Aesthetic side panels for professional image</li>
+                          <li>Flancos estéticos para una imagen profesional.</li>
                         ) : null}
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Belt cleaners for longer belt lifespan</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Built-in skirtboards to contain material</li>
+                        <li>Limpiadores de banda para prolongar su vida útil.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>Tablas de contención integradas para mantener el material dentro de la banda.</li>
                       </ul>
                     </div>
                   </div>
@@ -4899,8 +4811,8 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          CONTROL & OPERATION
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                         Control y operacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -4938,35 +4850,30 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable to existing asphalt plant control
-                          infrastructure
+                         Adaptable a la infraestructura de control existente de la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Seamless integration to central control systems
+                              Integración sin complicaciones con los sistemas de control central
                             </li>
                           </ul>
                         </li>
@@ -4974,8 +4881,8 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          PORTABILITY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Portabilidad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -5013,31 +4920,25 @@ const BinPlanosSection = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Designed for relocation</li>
+                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Built-in fifth wheel means no lowboy is required.
+                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Also transportable on lowboy or flatbed trailer if
-                              preferred.
+                              También puede transportarse en cama baja o plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Mounted on standard transport chassis with one axle
-                          and 16” highway-rated wheels.
+                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
                         </li>
                         <li>
-                          Pull-type hitch with safety coupling and brake system.
+                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
                         </li>
-                        <li>Setup requires no crane or hoisting equipment.</li>
-                        <li>Bolt-on support legs for fast on-site assembly.</li>
-                        <li>
-                          DOT-compliant lighting and reflective markings for
-                          transport visibility.
-                        </li>
+                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
                       </ul>
                     </div>
                   </div>
@@ -5045,8 +4946,8 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        COMPONENTS & ELECTRICAL
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Componentes y sistema eléctrico
                       </h1>
                       <button
                         className="block md:hidden"
@@ -5085,21 +4986,20 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Industrial-grade motors, components, and Siemens wiring.
+                        Motores, componentes y cableado Siemens de grado industrial.
                       </li>
-                      <li>Simplified wiring system for easy maintenance.</li>
-                      <li>Weather-protected electrical connections.</li>
-                      <li>Pulley-and-bushing drive system.</li>
+                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        External fuel lines, sensors, and signal cabling
-                        pre-installed.
+                        Líneas de combustible externas, sensores y cableado de señales preinstalados.
                       </li>
                     </ul>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        OPERATING CONFIGURATION
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Configuración de operación
                       </h1>
                       <button
                         className="block md:hidden"
@@ -5138,15 +5038,15 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Maximum feeding capacity:</h1>
-                        <p>Up to 360 TPH</p>
+                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Hasta 360 TPH</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        OPERATING CONFIGURATION
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Cumplimiento con estándares de la industria
                       </h1>
                       <button
                         className="block md:hidden"
@@ -5184,10 +5084,9 @@ const BinPlanosSection = () => {
                         : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>EPA</li>
-                      <li>OSHA</li>
-                      <li>DOT</li>
-                      <li>UL wiring</li>
+                      <li>SEMARNAT</li>
+                      <li>SCT</li>
+                      <li>NOM-001-SEDE</li>
                     </ul>
                   </div>
                 </div>
@@ -5218,7 +5117,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -5280,7 +5179,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p
                         className="text-white text-lg"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -5335,7 +5234,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p
                         className="text-white lg:text-lg text-base w-full text-center mx-4"
-                        >
+                      >
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -5383,8 +5282,8 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        SINGLE UNIT DIMENSIONS
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Dimensiones de unidad
                       </h1>
                       <button
                         className="block md:hidden"
@@ -5423,7 +5322,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Length:</h1>
+                        <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength").toFixed(1)} cm`
@@ -5431,7 +5330,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Width:</h1>
+                        <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth").toFixed(1)} cm`
@@ -5439,7 +5338,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height:</h1>
+                        <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight").toFixed(1)} cm`
@@ -5447,15 +5346,15 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacity:</h1>
+                        <h1>Capacidad:</h1>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        CHASSIS & STRUCTURE
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        Chasis y estructura
                       </h1>
                       <button
                         className="block md:hidden"
@@ -5494,7 +5393,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Total length (including hitch):</h1>
+                        <h1>Longitud total (incluyendo el enganche):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
@@ -5502,11 +5401,11 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Axle configuration: </h1>
-                        <p>One Axle</p>
+                        <h1>Configuración del eje: </h1>
+                        <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Fifth-wheel hitch height:</h1>
+                        <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} cm`
@@ -5514,7 +5413,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total width:</h1>
+                        <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth").toFixed(1)} cm`
@@ -5522,7 +5421,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height with bins in operation:</h1>
+                        <h1>Altura con tolvas en operación:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
@@ -5534,7 +5433,7 @@ const BinPlanosSection = () => {
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        BIN OPTIONS
+                        Opciones de tolvas
                       </h1>
                       <button
                         className="block md:hidden"
@@ -5574,23 +5473,23 @@ const BinPlanosSection = () => {
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>
-                        <li>Bin level indicators</li>
-                        <li>Adjustable depth control gates</li>
-                        <li>Cable trays</li>
-                        <li>Bulkheads (available in full height)</li>
-                        <li>Self-relieving feeder throats</li>
-                        <li>Bin dividers</li>
-                        <li>Walkways</li>
+                        <li>Indicadores de nivel de tolva</li>
+                        <li>Compuertas de control de profundidad</li>
+                        <li>Charolas porta–cables</li>
+                        <li>Tabiques internos</li>
+                        <li>Aliomentadores</li>
+                        <li>Divisores de tolvas</li>
+                        <li>Pasillos</li>
                       </ul>
                       <ul className="ml-6 list-disc">
-                        <li>Bin covers</li>
-                        <li>Built-in retaining walls</li>
-                        <li>Air cannons</li>
-                        <li>Moisture probes</li>
-                        <li>Wire mesh guarding</li>
-                        <li>Bin vibrators</li>
-                        <li>Bin extensions</li>
-                        <li>Built-in scalping screens</li>
+                        <li>Cubiertas para tolvas</li>
+                        <li>Muros de contención integrados</li>
+                        <li>Cañones de aire</li>
+                        <li>Sondas de humedad</li>
+                        <li>Protecciones con malla metálica</li>
+                        <li>Vibradores para tolvas</li>
+                        <li>Extensiones de tolvas</li>
+                        <li>Cribas integradas para separación</li>
                       </ul>
                     </div>
                   </div>

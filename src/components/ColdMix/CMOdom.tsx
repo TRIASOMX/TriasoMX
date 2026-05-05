@@ -26,9 +26,9 @@ const CMOdom = () => {
           setValue4(0);
 
           setTimeout(() => {
-            setValue(100);
+            setValue(25);
             setValue5(500)
-             setValue4(14);
+             setValue4(10);
             setValue1(20);
             setValue2(30);
            
@@ -60,7 +60,7 @@ const CMOdom = () => {
               <Odometer value={value5} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-[#4F4F4F]">Production size range</p>
+            <p className="text-[#4F4F4F]">Rango de capacidades de producción</p>
           </div>
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
@@ -70,7 +70,7 @@ const CMOdom = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">tons</p>
             </div>
-            <p className="text-[#4F4F4F]">Bin unit capacity</p>
+            <p className="text-[#4F4F4F]">Capacidad de unidad de tolvas</p>
           </div>
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
@@ -79,7 +79,7 @@ const CMOdom = () => {
               <p className="text-7xl font-bold ml-3">''</p>
             </div>
             <p className="text-[#4F4F4F] text-start w-full">
-              Collecting Conveyor
+            Banda colectora
             </p>
           </div>
         </div>
@@ -110,7 +110,7 @@ const CMOdom = () => {
     "
   />
   <span className="relative z-10">
-    All Technical Details
+    Todos los detalles técnicos 
   </span>
 </a>
         </div>

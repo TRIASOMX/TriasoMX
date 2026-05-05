@@ -1,27 +1,41 @@
 ---
 import Separator from "../unitComponents/Separator.astro";
+import HeroComponent from "../unitComponents/HeroComponent.astro";
+import heroImage from "../../assets/images/BagHouses/BHProv7.webp"
+import BHG3 from "../../assets/images/BagHouses/heroImage2.webp"
 ---
 
-<section
-    class="max-w-7xl px-8 mx-auto flex flex-col justify-center items-center font-bold mt-20 md:mt-32"
->
-    <div class="w-full flex flex-col justify-start">
-        <h1 class="text-2xl md:text-3xl">Triaso® Baghouses</h1>
-        <Separator />
-    </div>
-    <div class="w-full">
-        <p class="text-grisT text-sm lg:text-lg md:text-lg">
-            Triaso® baghouses are designed for efficient dust collection and
-            air quality control in industrial applications. Engineered for
-            maximum filtration efficiency, they capture fine particulates ensure
-            compliance with environmental regulations while enhancing workplace
-            safety. Designed for asphalt plants and aggregate processing, these
-            self-contained and integrated systems offer durable,
-            high-performance air filtration. With advanced cleaning mechanisms
-            and high air-to-cloth ratios, Triaso® baghouses improve mix
-            performance by enabling the controlled reincorporation of fine
-            particles into the mix and support sustainable operation by reducing
-            airborne dust and emissions.
-        </p>
+<section class="">
+    <HeroComponent
+        title="Casa de bolsas"
+        image={heroImage.src}
+        altImage={BHG3.src}
+        imageAlt="Casa de bolsas"
+        descAltImage="Casa de bolsas"
+    />
+
+    <div class="bg-[#1e1e1e]">
+        <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+            <div class="flex flex-col space-y-5 justify-center items-center text-center">
+                <h1 class="font-semibold text-white text-lg lg:text-xl">
+                    Las casas de bolsas Triaso® están diseñadas para una captura
+                    total de finos y control total de humos contaminantes.
+                    Mediante tecnología ‘pulse-jet’, estos sistemas integrados y
+                    compactos están diseñados para lograr la máxima eficiencia
+                    de filtración, capturando partículas finas, asegurando el
+                    cumplimiento de las normativas ambientales y mejorando la
+                    seguridad en el área de trabajo, con una eficiencia de
+                    filtración de hasta 99.99%.
+                </h1>
+
+                <h1 class="font-semibold text-white text-lg lg:text-xl">
+                    Pensadas para plantas de asfalto y procesamiento de
+                    agregados, mejorando la calidad de la mezcla al permitir la
+                    reincorporación controlada de finos, y ayudan a una
+                    operación más sustentable al reducir el polvo y las
+                    emisiones.
+                </h1>
+            </div>
+        </div>
     </div>
 </section>

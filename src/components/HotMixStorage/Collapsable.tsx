@@ -4,45 +4,65 @@ import Accordion from "../unitComponents/Accordion";
 const Collapsable = () => {
   const faqItems = [
     {
-      title: "PLC and HMI Integration",
+      title: "Integración de PLC y HMI",
       content:
-        "When operating without a control consol, the silo runs through a Programmable Logic Controller (PLC) and Proface HMI for seamless control and monitoring. The system allows for easy interface management and ensures precise handling of all silo functions.",
+        "Cuando funciona sin consola de control, el silo se maneja a través de un controlador lógico programable (PLC) y una interfaz hombre-máquina (HMI) de Proface, lo que permite un control y una supervisión fluidos. El sistema facilita la gestión de la interfaz y garantiza un manejo preciso de todas las funciones del silo.",
     },
     {
-      title: "Real-Time Display",
+      title: "Visualización en tiempo real",
       content:
-        "All silo functions — including mix temperature and weighing data — are clearly displayed on the HMI for full operational transparency. This information is also sent to a real-time cloud database, allowing remote monitoring through an app — anywhere, anytime.",
+        "Todas las funciones del silo —incluidos los datos de temperatura de la mezcla y de pesaje— se muestran claramente en la interfaz HMI para garantizar una transparencia operativa total. Esta información también se envía a una base de datos en la nube en tiempo real, lo que permite la supervisión remota a través de una aplicación, en cualquier momento y desde cualquier lugar.",
     },
     {
-      title: "Enhanced Loading and Unloading Efficiency:",
+      title: "Mayor eficiencia en la carga y descarga:",
       content:
-        "Equipped with load cells for accurate measurement of both stored and delivered hot mix. The system integrates with the PLC for real-time data logging and precise weight control.",
+        "Equipado con células de carga para medir con precisión tanto la mezcla caliente almacenada como la suministrada. El sistema se integra con el PLC para el registro de datos en tiempo real y un control preciso del peso.",
     },
     {
-      title: "Load History",
+      title: "Historial de descargas",
       content:
-        "Tracks an unlimited number of trucks, storing all relevant data for future reference and analysis. Data is available any time for generating reports and performance comparisons.",
+        "Realiza un seguimiento de un número ilimitado de camiones y almacena todos los datos relevantes para su futura consulta y análisis. Los datos están disponibles en cualquier momento para generar informes y comparativas de rendimiento.",
     },
     {
-      title: "Automated Data Storage System",
+      title: "Sistema automatizado de almacenamiento de datos",
       content:
-        "The system automatically storage data for delivered hot mix, detailing delivery time, weight, mix temperature, and truck identification via barcode or keyboard capture.",
+        "El sistema almacena automáticamente los datos de la mezcla en caliente entregada, indicando la hora de entrega, el peso, la temperatura de la mezcla y la identificación del camión mediante un código de barras o la introducción de datos por teclado.",
     },
     {
-      title: "Browning Gear Reducers and Steel Pulleys",
+      title: "Reductores y poleas de acero Browning Gear",
       content:
-        "Power transmissions are equipped with oversized heavy-duty Browning gear reducers and hub-mounted steel pulleys for smooth and efficient power transfer.",
+        "Los sistemas de transmisión están equipados con reductores Browning de gran tamaño y alta resistencia, así como con poleas de acero montadas en el cubo, lo que garantiza una transmisión de potencia suave y eficiente.",
     },
     {
-      title: "Siemens Motors and Electrical Components",
+      title: "Motores y componentes eléctricos de Siemens",
       content:
         "Reliable Siemens motors and electrical parts ensure durability and consistent performance.",
     },
     {
-      title: "Sonic sensor of hot mix level inside the silo:",
+      title: "Sensor sónico para medir el nivel de la mezcla caliente dentro del silo:",
       content:
-        "Precisely monitors hot mix levels in real time, optimizing storage and preventing overflows.",
+        "Controla con precisión los niveles de la mezcla caliente en tiempo real, lo que permite optimizar el almacenamiento y evitar desbordamientos.",
     },
+    {
+      title: "Alarma visual y audible para nivel máximo de mezcla",
+      content:
+      "Alarmas visuales y audibles que alertan al operador y al personal cuando el silo está lleno."
+    },
+    {
+      title:"Sensor sónico para indicar el nivel de mezcla dentro del silo",
+      content:
+      "Visualización en tiempo real del nivel de mezcla asfáltica en la consola del operador y dispositivos moviles.",
+    },
+    {
+      title:"Configuración versátil",
+      content:
+      "Funciona sin problemas en una cabina de control dedicada o bajo un techo de protección."
+    },
+    {
+      title:"Ajustes rápidos",
+      content:
+      "Permite realizar ajustes rápidos en los parámetros de control u operación para adaptarse a los requerimientos del proyecto."
+    }
   ];
   return (
     <div className="w-full flex flex-col gap-2 justify-center">

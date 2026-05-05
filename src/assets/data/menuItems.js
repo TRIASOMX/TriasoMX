@@ -1,56 +1,93 @@
 export const menuItems = [
   {
-    title: "PRODUCTS",
+    title: "PRODUCTOS",
     url: "/",
     children: [
       {
-        title: "ASPHALT PLANTS",
+        title: "PLANTAS DE ASFALTO",
         url: "/AsphaltPlant",
         children: [
           {
-            title: "DRUM MIXERS",
+            title: "MEZCLADORAS DE TAMBOR",
             url: "/DrumMixers",
+            children: [
+              {
+                title: "CONTRAFLUJO",
+                children: [
+                  {
+                    title: "Desamaq",
+                    url: "/TamborMezcla/Contraflujo/ContraDesamaq"
+                  },
+                  {
+                    title: "Plus",
+                    url: "/TamborMezcla/Contraflujo/ContraPlus"
+                  },
+                  {
+                    title: "Pro+",
+                    url: "/DrumMixers"
+                  }
+                ]
+              },
+              {
+                title: "FLUJO PARALELO",
+                children: [
+                  {
+                    title: "Desamaq",
+                    url: "/TamborMezcla/Paralelo/ParaleloDesamaq"
+                  },
+                  {
+                    title: "Plus",
+                    url: "/TamborMezcla/Paralelo/ParaleloPlus"
+                  },
+                  {
+                    title: "Pro+",
+                    url: "/TamborMezcla/Paralelo/ParaleloPro"
+                  }
+                ]
+              }
+            ]
           },
           {
-            title: "BAG HOUSES",
+            title: "CASAS DE BOLSAS ACOPLABLES",
             url: "/BagHouses",
           },
           {
-            title: "ASPHALT STORAGE TANKS",
+            title: "TANQUES DE ASFALTO",
             url: "/AsphaltStorage",
+
           },
           {
-            title: " BINS",
+            title: "TOLVAS",
             url: "/BinUnits",
             children: [
               {
-                title: "BIN UNITS",
+                title: "UNIDADES DE TOLVAS DE AGREGADOS",
                 url: "/BinUnits",
               },
               {
-                title: "RAP BINS",
+                title: "UNIDAD DE TOLVAS DE RAP",
                 url: "/RapBins",
               },
               {
-                title: "POWDER ADDITIVE BINS",
+                title: "ALIMENTADORES DE ADITIVOS EN POLVO",
                 url: "/PowderAd",
               }
             ]
           },
           {
-            title: "HEATING SYSTEMS",
+            title: "SISTEMAS DE CALENTAMIENTO",
             url: "/Burners",
             children: [
               {
-                title: "BURNERS",
+                title: "QUEMADORES",
                 url: "/Burners",
               },
               {
-                title: "FUEL PREHEATERS",
+                title: "PRECALENTADORES DE COMBUSTIBLE",
                 url: "/FuelPreHeaters",
               },
               {
-                title: "OIL HEATERS",
+                title: "CALDERAS",
                 url: "/OilHeaters",
               }
             ]
@@ -60,17 +97,30 @@ export const menuItems = [
             url: "/HotMix"
           },
           {
-            title: "COLD-MIX PLANTS",
+            title: "MEZCLADORAS EN FRÍO",
             url: "/ColdMix",
           },
           {
-            title: "10 TPH INTEGRAL ASPHALT PLANTS",
+            title: "PLANTAS DE ASFALTO DE 10 TPH INTEGRALES",
             url: "/IntegralAphaltPlant",
-          }
+          },
+          {
+            title: "CASETAS",
+            children: [
+              {
+                title: "CASETAS MONTABLES",
+                url: "/Casetas/CasetaMontable",
+              },
+              {
+                title: "CASETAS REMOLCABLES",
+                url: "/Casetas/CasetasRemolcables",
+              },
+            ]
+          },
         ]
       },
       {
-        title: "ROCK CRUSHERS",
+        title: "TRITURADORAS",
         url: "/#",
         children: [
           {
@@ -120,7 +170,7 @@ export const menuItems = [
     ]
   },
   {
-    title: "SERVICE",
+    title: "SERVICIO",
     url: "/",
     children: [
       {
@@ -142,16 +192,16 @@ export const menuItems = [
     ]
   },
   {
-    title: "ABOUT",
+    title: "ACERCA DE",
     url: "/",
     children: [
       {
-        title : "ABOUT US",
-        url : "/AboutUs",
+        title: "ABOUT US",
+        url: "/AboutUs",
       },
       {
-        title : "NEWS ROOM",
-        url : "/Newsroom",
+        title: "NEWS ROOM",
+        url: "/Newsroom",
       },
       {
         title: "ADVANTAGES",
@@ -204,7 +254,7 @@ export const menuItems = [
     ]
   },
   {
-    title: "AUTOMATION",
+    title: "AUTOMATIZACIÓN",
     url: "/",
     children: [
       {
@@ -218,7 +268,7 @@ export const menuItems = [
   //   url : "/",
   // },
   {
-    title: "CONTACT",
+    title: "CONTACTO",
     url: "/Contact",
   }
 ]

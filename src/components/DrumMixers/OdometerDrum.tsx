@@ -26,12 +26,10 @@ const OdometerDrum = () => {
           setValue6(0);
 
           setTimeout(() => {
-            setValue(25);
-            setValue6(500);
-            setValue1(50);
-            setValue2(7);
-            setValue4(5);
-            setValue3(150);
+            setValue(40);
+            setValue6(600);
+            setValue1(20);
+            setValue2(50);
           }, 300); // Pequeño retraso para asegurar reinicio
         }
       },
@@ -49,7 +47,12 @@ const OdometerDrum = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="max-w-7xl mx-auto px-8 py-10 lg:py-0 lg:mt-56 lg:mb-56 md:mt-56 md:mb-56">
+    <div ref={sectionRef} className="max-w-7xl mx-auto px-8 py-10 lg:py-0 lg:mt-32 lg:mb-32 md:mt-56 md:mb-56">
+
+      <div className="flex justify-center items-center pb-10">
+        <h1 className="text-[#4F4F4F] font-bold text-4xl">El equipo para arrasar con la competencia</h1>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
         <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
           <div className="flex flex-col items-center justify-center lg:items-start">
@@ -59,30 +62,30 @@ const OdometerDrum = () => {
               <Odometer value={value6} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-[#4F4F4F] text-center lg:text-start">Range of hot-mix production</p>
+            <p className="text-[#4F4F4F] text-center lg:text-start">Rango de producción</p>
+            <p className="text-[#4F4F4F] text-center lg:text-start text-xs">En modelos seleccionados</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
               <Odometer value={value1} format="(,ddd)" duration={2000} />
-              <p className="text-sm font-normal ml-3">%</p>
+              <p className="text-sm font-normal ml-3">Tons</p>
             </div>
             <p className="text-[#4F4F4F] text-center lg:text-start">
-              RAP (Recycled Asphalt Pavement) Incorporation
+              Capacidad de cada tolva
             </p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full gap-1 lg:gap-0">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
-              <h1>.</h1>
-              <Odometer value={value4} format="(,ddd)" duration={2000} />
-              <h1>-</h1>
-              <Odometer value={value3} format="(,ddd)" duration={2000} />
-              <p className="text-sm font-normal lg:ml-3">million BTU/hr</p>
+              <h1 className="text-sm font-normal ml-3">%</h1>
             </div>
             <p className="text-[#4F4F4F] text-center lg:text-start w-full">
-              Modulating burner capacity
+              Incorporación de RAP
+            </p>
+            <p className="text-[#4F4F4F] text-center lg:text-start text-xs">
+              Pavimento Asfáltico Recuperado
             </p>
           </div>
         </div>
@@ -92,8 +95,8 @@ const OdometerDrum = () => {
             <img src={odoImg.src} alt="Odometer Drum" className="rounded-2xl" />
           </div>
           <a
-  href="#planosDrumMixers"
-  className="
+            href="#planosDrumMixers"
+            className="
     group relative inline-flex items-center justify-center
     px-4 py-2 rounded-xl
     border border-black
@@ -103,21 +106,28 @@ const OdometerDrum = () => {
     transition-all duration-300 ease-out
     hover:text-white hover:-translate-y-0.5 hover:shadow-lg
   "
->
-  <span
-    className="
+          >
+            <span
+              className="
       absolute inset-0 bg-black
       translate-y-full
       transition-transform duration-300 ease-out
       group-hover:translate-y-0
     "
-  />
-  <span className="relative z-10">
-    All Technical Details
-  </span>
-</a>
+            />
+            <span className="relative z-10">
+              Todos los detalles técnicos
+            </span>
+          </a>
         </div>
       </div>
+
+      <div className="flex flex-col justify-center items-center pt-10">
+        <h1 className="text-[#4F4F4F] font-bold text-4xl">Las mejores plantas de asfalto</h1>
+        <h1 className="text-[#ca1c1c] font-bold text-4xl">son mexicanas</h1>
+      </div>
+
+
     </div>
   );
 };

@@ -9,7 +9,7 @@ interface SliderItem {
 const items: SliderItem[] = [
   {
     id: 1,
-    title: "Cloud Historical Reports",
+    title: "Informes históricos en la nube",
     svg: (
       <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M8 18L11 21L16 16" stroke="#14427c" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -19,7 +19,7 @@ const items: SliderItem[] = [
   },
   {
     id: 2,
-    title: "Security and Reliability",
+    title: "Seguridad y fiabilidad",
     svg: (
       <svg fill="#14427c" width="100" height="100" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" stroke="#14427c" strokeWidth="0.00256">
         <path d="M80.573 123L80.1 98.915C79.513 69.071 91.715 45.5 120 45.5l13.944.014c30.548.588 41.343 23.594 41.93 53.447l.473 24.039h7.646c4.416 0 8.007 3.586 8.007 8.01v84.98c0 4.43-3.585 8.01-8.007 8.01H72.007c-4.416 0-8.007-3.586-8.007-8.01v-84.98c0-4.43 3.585-8.01 8.007-8.01h8.566zm16.39 0h62.657c.033-5.473.104-12.555-.05-20.33l-.078-4.024c-.414-21.015-2.663-34.678-25.194-35.11l-12.405-.358c-28.124-.56-25.578 26.864-25.397 36.052l.08 4.024.387 19.746zM176 143.316c0-2.384-1.547-4.316-3.46-4.316H83.46c-1.911 0-3.46 1.936-3.46 4.316v60.368c0 2.384 1.547 4.316 3.46 4.316h89.08c1.911 0 3.46-1.936 3.46-4.316v-60.368z" fillRule="evenodd" />
@@ -28,7 +28,7 @@ const items: SliderItem[] = [
   },
   {
     id: 3,
-    title: "Automatic unit conversion",
+    title: "Conversión automática de unidades",
     svg: (
       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24">
         <path fill="none" stroke="#14437d" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 12c0-4.243 0-6.364 1.318-7.682C5.636 3 7.758 3 12 3c4.243 0 6.364 0 7.682 1.318C21 5.636 21 7.758 21 12c0 4.243 0 6.364-1.318 7.682C18.364 21 16.242 21 12 21c-4.243 0-6.364 0-7.682-1.318C3 18.364 3 16.242 3 12m4 3.625h3.5m3.25-5.5h3.5m-3.5-2.5h3.5m-10.5 1.25h2m0 0h2m-2 0v-2m0 2v2m5.35 6.25l1.414-1.414m0 0l1.415-1.414m-1.415 1.414L14.1 14.296m1.414 1.415l1.415 1.414" />
@@ -37,7 +37,7 @@ const items: SliderItem[] = [
   },
   {
     id: 4,
-    title: "Artificial intelligence that protects your equipment",
+    title: "Inteligencia artificial que protege tu equipo",
     svg: (
       <svg width="60" height="60" viewBox="0 0 24 24" strokeWidth="2.2" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7 14C5.34315 14 4 15.3431 4 17C4 18.6569 5.34315 20 7 20C7.35064 20 7.68722 19.9398 8 19.8293" stroke="#14427c" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -57,7 +57,7 @@ const items: SliderItem[] = [
   },
   {
     id: 5,
-    title: "Fewer Operators Full Control",
+    title: "Menos operadores, control total",
     svg: (
       <svg fill="#14427c" width="100" height="100" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" stroke="#14427c" strokeWidth="0.00256">
         <path d="M80.573 123L80.1 98.915C79.513 69.071 91.715 45.5 120 45.5l13.944.014c30.548.588 41.343 23.594 41.93 53.447l.473 24.039h7.646c4.416 0 8.007 3.586 8.007 8.01v84.98c0 4.43-3.585 8.01-8.007 8.01H72.007c-4.416 0-8.007-3.586-8.007-8.01v-84.98c0-4.43 3.585-8.01 8.007-8.01h8.566zm16.39 0h62.657c.033-5.473.104-12.555-.05-20.33l-.078-4.024c-.414-21.015-2.663-34.678-25.194-35.11l-12.405-.358c-28.124-.56-25.578 26.864-25.397 36.052l.08 4.024.387 19.746zM176 143.316c0-2.384-1.547-4.316-3.46-4.316H83.46c-1.911 0-3.46 1.936-3.46 4.316v60.368c0 2.384 1.547 4.316 3.46 4.316h89.08c1.911 0 3.46-1.936 3.46-4.316v-60.368z" fillRule="evenodd" />
@@ -66,7 +66,7 @@ const items: SliderItem[] = [
   },
   {
     id: 6,
-    title: "Unique Login for Each Operator on Shift",
+    title: "Un inicio de sesión único para cada operador por turno",
     svg: (
       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 512 512">
         <path fill="#14437d" fillRule="evenodd" d="M213.333 42.667c41.238 0 74.667 33.429 74.667 74.666c0 39.863-31.238 72.43-70.57 74.556l-4.097.111c-41.237 0-74.666-33.429-74.666-74.667c0-39.862 31.238-72.43 70.57-74.556zM64 426.667h204.794A116.6 116.6 0 0 1 256.478 384H106.667v-34.133l.11-4.142c2.057-38.365 32.515-68.392 69.223-68.392h74.667l3.908.114c13.218.773 25.499 5.438 35.767 12.943a117.5 117.5 0 0 1 36.613-24.868c-19.998-19.144-46.814-30.855-76.288-30.855H176l-4.617.096C111.668 237.253 64 287.834 64 349.867zm117.333-309.334c0-17.673 14.327-32 32-32s32 14.327 32 32s-14.327 32-32 32s-32-14.327-32-32m192 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c53.02 0 96-42.981 96-96s-42.98-96-96-96m62.763 62.763l-84.095 84.094l-41.428-41.428l18.856-18.856l22.572 22.572l65.239-65.238z" clipRule="evenodd" />
@@ -75,7 +75,7 @@ const items: SliderItem[] = [
   },
   {
     id: 7,
-    title: "Remote Cloud Monitoring",
+    title: "Monitorización remota en la nube",
     svg: (
       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="#14437d">
         <g fill="none" stroke="#14437d" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">

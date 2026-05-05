@@ -1,0 +1,405 @@
+---
+import { Image } from "astro:assets";
+import ComparisonTable from "../../components/unitComponents/tablaComponente";
+import { casetasData, casetasColumns } from "./Datos/caseta";
+import OSHand from "../../assets/images/OSHand.webp";
+---
+
+<!-- Hero con opciones -->
+<div
+    class="relative w-full bg-[url(/HeroS.webp)] bg-cover bg-bottom bg-no-repeat h-[400px] flex flex-col justify-start pt-5 items-center"
+>
+    <div
+        class="absolute inset-0 bg-gradient-to-b from-[#2e2e2e]/50 to-[#f4f5f6]"
+    >
+    </div>
+</div>
+
+<div class="max-w-7xl mx-auto px-8 flex justify-end items-end relative">
+    <!-- Opciones -->
+    <div
+        class="grid grid-cols-3 justify-center items-end lg:grid-cols-6 md:grid-cols-7 gap-5 md:gap-4 mt-0 text-black"
+    >
+        <a
+            href="#Casetas"
+            aria-label="Drum Mixers link"
+            class="hover:text-blueMain hover:border-b-blueMain text-center text-md py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+        >
+            Casetas de control
+        </a>
+
+        <a
+            href="#Tanques"
+            aria-label="Baghouses link"
+            class="hover:text-blueMain hover:border-b-blueMain text-center text-md py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+            data-tab="tab2"
+        >
+            Tanques de asfalto
+        </a>
+
+        <a
+            href="#Bolsas"
+            aria-label="Asphalt tanks link"
+            class="hover:text-blueMain hover:border-b-blueMain text-center text-md py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+            data-tab="tab3"
+        >
+            Casas de bolsas
+        </a>
+
+        <a
+            href="#Tolvas"
+            aria-label="Bins link"
+            class="text-center hover:text-blueMain hover:border-b-blueMain text-md py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+            data-tab="tab4"
+        >
+            Tolvas
+        </a>
+
+        <a
+            href="#Calefaccion"
+            class="text-center hover:text-blueMain hover:border-b-blueMain text-md py-2 md:py-0 lg:py-0 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+            data-tab="tab5"
+        >
+            Sistemas de calefacción
+        </a>
+
+        <a
+            href="#Mezcla"
+            class="text-center hover:text-blueMain hover:border-b-blueMain text-md py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+            data-tab="tab6"
+        >
+            Silos de mezcla asfáltica
+        </a>
+    </div>
+</div>
+
+<!-- Casetas -->
+<section id="Casetas" class="bg-gray-100 py-12 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 text-center mb-10">
+        <h2 class="text-3xl lg:text-4xl font-bold text-black mb-3">
+            Conozca nuestras casetas<br class="hidden sm:block" /> de control
+        </h2>
+        <p class="text-[#393939] text-base lg:text-lg">
+            Ofrecemos dos opciones de operación y comodidad de operación.
+        </p>
+    </div>
+
+    <div
+        class="relative flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] items-center gap-y-4 md:gap-y-0"
+    >
+        <div
+            class="w-full md:w-auto bg-[#ca1c1c] rounded-2xl md:rounded-r-3xl md:rounded-l-none mx-4 md:mx-0 flex items-center h-auto md:h-44 py-6 md:py-0 px-6 md:pl-10 md:pr-28"
+        >
+            <div class="text-white max-w-xs">
+                <h3 class="font-bold text-2xl mb-2">REMOLCABLE</h3>
+                <p class="text-base">
+                    Transporte sencillo, permitiendo su reubicación rápida de
+                    forma independiente en cualquier momento.
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="relative w-72 sm:w-80 md:w-96 h-52 sm:h-56 md:h-64 flex-shrink-0 z-10 order-first md:order-none mx-auto"
+        >
+            <img
+                src="https://placehold.co/600x400/png"
+                alt="Caseta remolcable"
+                class="absolute top-0 left-[10%] -translate-x-1/2 w-[72%] object-contain rounded-md drop-shadow-xl"
+            />
+
+            <img
+                src="https://placehold.co/600x400/png"
+                alt="Caseta montable"
+                class="absolute bottom-0 right-[-20%] w-[72%] object-contain rounded-md drop-shadow-lg"
+            />
+        </div>
+
+        <div
+            class="w-full md:w-auto bg-[#14427c] rounded-2xl md:rounded-l-3xl md:rounded-r-none mx-4 md:mx-0 flex items-center justify-start md:justify-end h-auto md:h-44 py-6 md:py-0 px-6 md:pr-10 md:pl-28"
+        >
+            <div class="text-white max-w-xs md:text-right">
+                <h3 class="font-bold text-2xl mb-2">MONTABLE</h3>
+                <p class="text-base">
+                    Facilidad de transporte ligero, permitiendo su reubicación
+                    junto con la planta en cualquier momento.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tabla comparativa caseta -->
+
+<div class="max-w-7xl mx-auto px-8">
+    <div class="flex flex-col justify-center items-center">
+        <h1 class="text-3xl lg:text-4xl font-bold text-black">
+            Comparación de casetas
+        </h1>
+        <h2 class="text-[#393939] text-base lg:text-lg">
+            ¿Necesita ayuda para decidirte? Compare ahora sus características.
+        </h2>
+    </div>
+
+    <div class="py-5">
+        <ComparisonTable
+            client:visible
+            modelColumns={casetasColumns}
+            tableData={casetasData}
+        />
+    </div>
+</div>
+
+<!-- Triaso os -->
+
+<div>
+    <section class="bg-[#1e1e1e] mt-20 overflow-visible pb-10">
+        <div class="max-w-7xl mx-auto lg:px-0">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+                <!-- Texto -->
+                <div class="text-white max-w-xl px-8">
+                    <h1
+                        class="text-2xl md:text-3xl font-semibold my-6 bg-gradient-to-r from-[#f8ad00] via-[#dc363a] to-[#3992ff] bg-clip-text text-transparent"
+                    >
+                        Sistema de operación Triaso® − Relief
+                    </h1>
+
+                    <div class="grid grid-cols-4">
+                        <div
+                            class="md:w-[100px] lg:w-[100px] flex flex-col justify-center items-center"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                color="#ffffff"
+                                class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
+                            >
+                                <path
+                                    d="M8 18L11 21L16 16"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M20 17.6073C21.4937 17.0221 23 15.6889 23 13C23 9 19.6667 8 18 8C18 6 18 2 12 2C6 2 6 6 6 8C4.33333 8 1 9 1 13C1 15.6889 2.50628 17.0221 4 17.6073"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+
+                            <p
+                                class="text-sm lg:text-base md:text-base font-bold text-white text-center"
+                            >
+                                Reportes históricos en la nube
+                            </p>
+                        </div>
+                        <div
+                            class="md:w-[100px] lg:w-[100px] flex flex-col justify-center items-center"
+                        >
+                            <svg
+                                class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
+                                viewBox="0 0 24 24"
+                                stroke-width="2.2"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                color="#ffffff"
+                                ><path
+                                    d="M7 14C5.34315 14 4 15.3431 4 17C4 18.6569 5.34315 20 7 20C7.35064 20 7.68722 19.9398 8 19.8293"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M4.26392 15.6046C2.9243 14.9582 2.00004 13.587 2.00004 12C2.00004 10.7883 2.53877 9.70251 3.38978 8.96898"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M3.42053 8.8882C3.1549 8.49109 3 8.01363 3 7.5C3 6.11929 4.11929 5 5.5 5C6.06291 5 6.58237 5.18604 7.00024 5.5"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M7.23769 5.56533C7.08524 5.24215 7 4.88103 7 4.5C7 3.11929 8.11929 2 9.5 2C10.8807 2 12 3.11929 12 4.5V20"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M8 20C8 21.1046 8.89543 22 10 22C11.1046 22 12 21.1046 12 20"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M12 7C12 8.65685 13.3431 10 15 10"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M20.6102 8.96898C21.4612 9.70251 22 10.7883 22 12C22 12.7031 21.8186 13.3638 21.5 13.9379"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M20.5795 8.8882C20.8451 8.49109 21 8.01363 21 7.5C21 6.11929 19.8807 5 18.5 5C17.9371 5 17.4176 5.18604 16.9998 5.5"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M12 4.5C12 3.11929 13.1193 2 14.5 2C15.8807 2 17 3.11929 17 4.5C17 4.88103 16.9148 5.24215 16.7623 5.56533"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M14 22C12.8954 22 12 21.1046 12 20"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M20.5 20.5L22 22"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M16 18.5C16 19.8807 17.1193 21 18.5 21C19.1916 21 19.8175 20.7192 20.2701 20.2654C20.7211 19.8132 21 19.1892 21 18.5C21 17.1193 19.8807 16 18.5 16C17.1193 16 16 17.1193 16 18.5Z"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            <p
+                                class="text-sm md:text-base font-bold text-white text-center"
+                            >
+                                Inteligencia artificial que protege tu equipo
+                            </p>
+                        </div>
+                        <div
+                            class="md:w-[100px] lg:w-[100px] flex flex-col justify-center items-center"
+                        >
+                            <svg
+                                class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
+                                stroke-width="2.2"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                color="#ffffff"
+                                ><path
+                                    d="M10 9H6"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M15.5 11C14.1193 11 13 9.88071 13 8.5C13 7.11929 14.1193 6 15.5 6C16.8807 6 18 7.11929 18 8.5C18 9.88071 16.8807 11 15.5 11Z"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M6 6H9"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M18 18L13.5 15L11 17L6 13"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M3 20.4V3.6C3 3.26863 3.26863 3 3.6 3H20.4C20.7314 3 21 3.26863 21 3.6V20.4C21 20.7314 20.7314 21 20.4 21H3.6C3.26863 21 3 20.7314 3 20.4Z"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"></path></svg
+                            >
+                            <p
+                                class="text-sm md:text-base font-bold text-white text-center"
+                            >
+                                Menos operadores, control total
+                            </p>
+                        </div>
+                        <div
+                            class="md:w-[100px] lg:w-[100px] flex flex-col justify-center items-center"
+                        >
+                            <svg
+                                class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
+                                stroke-width="2.2"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                color="#ffffff"
+                                ><path
+                                    d="M20 20H4V4"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path><path
+                                    d="M4 16.5L12 9L15 12L19.5 7.5"
+                                    stroke="#ffffff"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            <p
+                                class="text-sm md:text-base font-bold text-white text-center"
+                            >
+                                Monitoreo remoto en la nube
+                            </p>
+                        </div>
+                    </div>
+
+                    <h1 class="text-white font-bold text-xl py-4">
+                        Para evitar desperdicios, robos y mala operación de su
+                        planta de asfalto
+                    </h1>
+                    <p class="text-white font-semibold text-base">
+                        Paro total con un solo botón desde su celular
+                    </p>
+                    <div class="pt-5 flex items-center justify-center">
+                        <a
+                            href="/Relief"
+                            aria-label="View page drum Mixers"
+                            class="text-white text-center mb-5 mt-5 text-xs md:text-sm font-normal border-2 border-[#14427c] rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-[#14427c] hover:bg-white hover:text-black hover:border-white"
+                        >
+                            Ver más
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagen -->
+                <div class="flex justify-end relative">
+                    <Image
+                        src={OSHand}
+                        alt="Triaso OS"
+                        class="w-[280px] md:w-[360px] lg:w-[420px] pt-5"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div
+            class="relative bg-[#e6a98a] text-center py-20 px-6 
+                  rounded-b-[60%]"
+        >
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Agende una reunión
+            </h2>
+
+            <p class="text-sm md:text-base mb-8 max-w-2xl mx-auto">
+                Cuéntenos más sobre su proyecto para identificar la solución
+                industrial que mejor se ajuste a sus necesidades.
+            </p>
+
+            <button
+                class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
+            >
+                Ver horarios disponibles
+            </button>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-8 py-10">
+        <div class="flex flex-col items-center justify-center">
+            <h1 class="font-bold text-4xl">Solo el dueño de otra planta de asfalto Triaso,</h1>
+            <h1 class="font-bold text-4xl">igual de moderna, le puede hacer competencia.</h1>
+        </div>
+    </div>
+</div>

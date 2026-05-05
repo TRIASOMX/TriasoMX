@@ -1,19 +1,58 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import FirstSection from '../components/AsphaltStorage/FirstSection.astro';
+import FirstSection from "../components/AsphaltStorage/FirstSection.astro";
 import ASModals from "../components/AsphaltStorage/ASModals.astro";
 import ASHoses from "../components/AsphaltStorage/ASHoses.astro";
 import ASTabs from "../components/AsphaltStorage/ASTabs.astro";
 import ASPlanos from "../components/AsphaltStorage/ASPlanos";
 import CardSection from "../components/IntegralAsphalt/CardSection.astro";
 import CardSectionResponsive from "../components/unitComponents/CardSectionResponsive.astro";
+import HeroComponent from "../components/unitComponents/HeroComponent.astro";
+import hero1 from "../../public/fabricaBG.webp";
+import hero2 from "../assets/images/DrumMixers/Gallery/DM1.webp";
+import bannerAsphalt from "../assets/images/AsphaltStorage/bannerStorage.webp";
+import ASOdometer from "../components/AsphaltStorage/ASOdometer";
+import MainSlider from "../components/AsphaltStorage/MainSlider.astro";
 ---
-<Layout title="Asphalt Storage" description="Information about asphalt storage facilities and regulations.">
-    <FirstSection /> 
+
+<Layout
+    title="Asphalt Storage"
+    description="Information about asphalt storage facilities and regulations."
+>
+    <HeroComponent
+        title="Tanques de almacenamiento de asfalto Triaso®"
+        image={bannerAsphalt.src}
+        imageAlt="Tanques de almacenamiento de asfalto Triaso®"
+    />
+    <div class="bg-[#1e1e1e]">
+        <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+            <div class="flex justify-center items-center text-center">
+                <h1 class="font-semibold text-white text-lg lg:text-xl">
+                    Los tanques de asfalto Triaso® están diseñados para
+                    almacenar y mantener el asfalto en condiciones óptimas,
+                    asegurando una calidad y un desempeño constantes. Fabricados
+                    con materiales de alta resistencia y aislamiento de alta
+                    eficiencia, mantienen el asfalto listo para usarse en
+                    cualquier aplicación. Ideales para la producción de asfalto
+                    modificado con polímeros, estos tanques ofrecen la
+                    durabilidad y funcionalidad necesarias tanto para proyectos
+                    pequeños como para operaciones de gran escala.
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div>
+        <ASOdometer client:only/>
+    </div>
+        <MainSlider/>
+    <div>
+
+    </div>
+    <FirstSection />
     <ASModals />
-    <ASHoses />
-    <ASTabs />
-    <ASPlanos client:only/>
+    <ASHoses /> 
+    <ASTabs /> 
+    <ASPlanos client:only />
     <!-- <CardSection /> -->
-    <CardSectionResponsive/>    
+    <!-- <CardSectionResponsive /> -->
 </Layout>

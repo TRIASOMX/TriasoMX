@@ -1,25 +1,34 @@
 ---
 import { Image } from "astro:assets";
 import RAProv5 from "../../assets/images/RapBins/Gallery/RBG4.webp";
+import HeroComponent from "../unitComponents/HeroComponent.astro";
+import poster2 from "../../assets/images/RapBins/Gallery/RBG1.webp";
 ---
 
-<section
-    class="w-full max-w-7xl px-8 mx-auto flex flex-col justify-center font-bold text-grisT"
->
-    <div class="w-full mt-20 md:mt-32">
-        <h1 class="text-3xl md:text-4xl">
-            RAP (Reclaimed Asphalt Pavement) Bin Units
-        </h1>
-        <br />
-        <p class="text-sm lg:text-lg md:text-lg">
-            Triaso® RAP Bins are designed for accurate storage and controlled
-            delivery of reclaimed asphalt pavement (RAP) within the hot-mix
-            production line. Built for long service life, they integrate
-            seamlessly into the production process, minimizing downtime and
-            maximizing operational efficiency.
-        </p>
+<section>
+    <div>
+        <HeroComponent
+            title="Unidad de tolvas de RAP (Pavimento asfáltico recuperado)"
+            image="https://placehold.co/1920x1080/png"
+            imageAlt="alt"
+            altImage={poster2.src}
+            descAltImage="alt2"
+        />
     </div>
-    <div class="w-full flex justify-center">
-        <Image src={RAProv5} alt="RAP (Reclaimed Asphalt Pavement) Bin Unit" fetchpriority="high" loading="lazy" />
+
+    <div class="bg-[#1e1e1e]">
+        <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+            <div class="flex justify-center items-center text-center">
+                <h1 class="font-semibold text-white text-lg lg:text-xl">
+                    Las unidades de tolvas de RAP Triaso® están diseñadas para
+                    almacenamiento preciso y la dosificación controlada de
+                    pavimento asfáltico recuperado (RAP) en la producción del
+                    tambor mezclador. Son fabricadas para una larga vida útil,
+                    se integran de forma directa al proceso de producción,
+                    minimizando tiempos muertos y maximizando la eficiencia
+                    operativa.
+                </h1>
+            </div>
+        </div>
     </div>
 </section>

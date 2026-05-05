@@ -10,17 +10,56 @@ import img6Low from "../../assets/images/AsphaltStorage/Low/ASafetyLow.webp";
 import ASGallery from "./ASGallery.astro";
 import SeparatorBlue from "../unitComponents/SeparatorBlue.astro";
 import sideP from "../../assets/images/SidePanels/TqesFeChasis_1.webp";
+import ItemsSlider from "../LandinPage/ItemsSlider";
+
+const iconos = [
+    {
+        src: "/Gallery/sliderHotMix/1.webp",
+        title: "Preservación de la calidad",
+        texto: "Preservación de la calidad e integridad del asfalto.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/2.webp",
+        title: "Logística eficiente",
+        texto: "Agiliza la entrega con reportes, historial y control preciso del flujo de asfalto",
+    },
+    {
+        src: "/Gallery/sliderHotMix/3.webp",
+        title: "Opciones de almacenamiento versátiles",
+        texto: "Retención térmica prolongada que mantiene el asfalto líquido y en buen estado por más tiempo.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/4.webp",
+        title: "Movilidad",
+        texto: "Nuestros tanque permiten una instalación rápida sin maquinaria pesada, ideal para operaciones reubicables.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/7.webp",
+        title: "Seguridad mejorada",
+        texto: "Equipados con protecciones, alarmas e indicadores visuales para proteger al personal y al equipo.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/8.webp",
+        title: "Rentabilidad",
+        texto: "Reduce paros, costos de transporte y mantenimiento gracias a su diseño eficiente y desempeño confiable.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/9.webp",
+        title: "Mejora el nombre de la empresa",
+        texto: "La estética industrial eleva la apariencia de tu operación.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/10.webp",
+        title: "Personalizable",
+        texto: "Características adaptables para cumplir con los requisitos específicos del proyecto y los objetivos operativos.",
+    },
+];
 ---
 
 <section class="w-full mt-10 flex flex-col gap-10">
     <div
         class="w-full flex flex-col items-center justify-center font-bold mt-10"
     >
-        <div class="w-full space-y-3 my-6">
-            <div class="h-0.5 bg-redBg w-1/5 self-start"></div>
-            <div class="h-0.5 bg-blueMain w-1/4 pr-6 self-start"></div>
-        </div>
-
         <div class="max-w-7xl px-8 mx-auto flex justify-center">
             <Image
                 src={img6}
@@ -45,32 +84,34 @@ import sideP from "../../assets/images/SidePanels/TqesFeChasis_1.webp";
                 />
             </div>
             <div class="w-full mt-10 space-y-6">
-                <h2 class="font-bold text-xl md:text-2xl text-redBg">
-                    SAFETY AND COMPLIANCE IN DESIGN <br />AND TRANSPORT
+                <h2 class="font-bold text-xl md:text-2xl text-redBg uppercase">
+                    Seguridad y cumplimiento en <br />diseño y transporte
                 </h2>
                 <h1 class="font-bold">
-                    DOT-Compliant Design for Safe Transport
+                    Diseño conforme a DOT para un transporte seguro
                 </h1>
                 <p class="font-normal">
-                    Triaso® asphalt tanks—both vertical and portable horizontal
-                    models—are engineered with DOT-compliant features to meet
-                    transportation safety regulations. Portable tanks include
-                    secure hitches, lighting systems, heavy-duty axles, and
-                    braking components that align with Department of
-                    Transportation (DOT) standards, ensuring safe and legal road
-                    transport.
+                    Los tanques de asfalto Triaso® —en sus versiones verticales
+                    y horizontales portátiles— están diseñados con
+                    características conformes al DOT para cumplir con las
+                    regulaciones de transporte. Los tanques portátiles incluyen
+                    enganches seguros, sistemas de iluminación, ejes de trabajo
+                    pesado y componentes de frenos alineados con los estándares
+                    del Department of Transportation (DOT) de EUA , asegurando
+                    un transporte vial seguro y legal.
                 </p>
 
                 <h1 class="font-bold">
-                    OSHA-Compliant Railings for Vertical and Horizontal Asphalt
-                    Tanks
+                    Barandales conforme a OSHA para tanques de asfalto
+                    verticales y horizontales
                 </h1>
                 <p class="font-normal">
-                    All Triaso® vertical and horizontal asphalt tanks are
-                    equipped with OSHA-compliant railings to ensure operator
-                    safety during access and maintenance. Each tank includes
-                    safety handrails, kick plates, and secure platforms designed
-                    to meet strict safety standards.
+                    Todos los tanques de asfalto Triaso®, tanto verticales como
+                    horizontales, están equipados con barandales conforme a OSHA
+                    para garantizar la seguridad del operador durante el acceso
+                    y el mantenimiento. Cada tanque incluye pasamanos de
+                    seguridad, rodapiés y plataformas seguras diseñadas para
+                    cumplir con normas estrictas de seguridad.
                 </p>
             </div>
         </div>
@@ -99,119 +140,110 @@ import sideP from "../../assets/images/SidePanels/TqesFeChasis_1.webp";
             />
         </div>
     </div>
+</section>
 
-    <div class="mt-10 lg:mt-0 md:mt-0">
-        <ASGallery />
+<section class="bg-grisT">
+    <div class="max-w-7xl px-8 mx-auto pt-10">
+        <h2 class="text-2xl md:text-3xl text-white font-bold">Aplicaciones</h2>
     </div>
-    <div
-        class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl px-8 mx-auto"
-    >
-        <div class="w-full flex flex-col gap-4">
-            <h1 class="font-bold text-xl md:text-2xl px-8"></h1>
-        </div>
-        <div class="w-full flex flex-col gap-10 md:gap-20">
-            <div class="w-full bg-blueMain text-white p-4 rounded-2xl">
-                <div
-                    class="p-4 flex justify-center items-center"
-                    id="slider-container"
-                    data-img1={img1.src}
-                    data-img2={img3.src}
-                >
-                    <Image
-                        id="miImagen"
-                        src={img1}
-                        alt="Asphalt storage tank modified for a specific need"
-                        class="w-full max-w-[300px] md:max-w-[600px] max-h-[250px] object-contain"
-                    />
-                </div>
-                <div class="w-full flex justify-end gap-3">
-                    <button
-                        aria-label="Go to the previous item"
-                        id="btnAnterior"
-                        class="bg-grisSubP rounded-full p-1 hover:bg-[#BDBDBD]"
-                    >
-                        <svg
-                            width="24px"
-                            height="24px"
-                            stroke-width="1.5"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            color="#000000"
-                            ><path
-                                d="M15 6L9 12L15 18"
-                                stroke="#000000"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"></path></svg
-                        >
-                    </button>
-                    <button
-                        aria-label="Go to the next item"
-                        id="btnSiguiente"
-                        class="bg-grisSubP rounded-full p-1 hover:bg-[#BDBDBD]"
-                    >
-                        <svg
-                            width="24px"
-                            height="24px"
-                            stroke-width="1.5"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            color="#000000"
-                            ><path
-                                d="M9 6L15 12L9 18"
-                                stroke="#000000"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"></path></svg
-                        >
-                    </button>
-                </div>
-                <div>
-                    <h1 class="text-2xl md:text-3xl font-bold">
-                        Fully Versatile and <br />Customizable
-                    </h1><br />
-                    <p class="text-[#bfbfbf]">
-                        Our asphalt tanks are designed to meet your specific
-                        needs. We can fully customize them, from color and
-                        capacity to the type of heating system and intended use.
-                        Whether you need a standard solution or a tailor-made
-                        design, we ensure your tank is built to fit your exact
-                        requirements—with the option of stationary vertical
-                        asphalt tanks or mobile asphalt tanks.
-                    </p>
-                </div>
+    <details class="group pt-3">
+        <summary
+            class="grid grid-cols-1 lg:grid-col-2 md:grid-cols-2 font-bold max-w-7xl mx-auto px-8 gap-10 text-white cursor-pointer list-none"
+        >
+            <div class="col-span-2 lg:col-span-1">
+                <h3>Producción de mezcla asfáltica</h3>
+                <ul class="list-disc ml-6 font-thin">
+                    <li class="text-sm lg:text-base">
+                        Almacenamiento y calentamiento de asfalto para la
+                        producción de mezcla asfáltica en caliente.
+                    </li>
+                </ul>
             </div>
-        </div>
-    </div>
-    <div class="max-w-7xl px-8 mx-auto flex-col gap-10 py-12">
+
+            <div class="col-span-2 lg:col-span-1">
+                <h3>Asfalto modificado con polímeros</h3>
+                <ul class="list-disc ml-6 font-thin">
+                    <li class="text-sm lg:text-base">
+                        Mezclado y almacenamiento de asfalto combinado con
+                        polímeros para mejorar su desempeño.
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="col-span-2 mx-auto mt-5 mb-5 text-black text-center text-xs md:text-sm
+             font-normal border-2 border-white rounded-full py-2 px-6
+             transition-all duration-300 ease-out transform hover:scale-110
+             hover:shadow-lg bg-white hover:bg-black hover:text-white hover:border-black
+             group-open:hidden"
+            >
+                Ver más
+            </div>
+        </summary>
+
         <div
-            class="w-full flex flex-col lg:flex-row md:flex-row justify-between font-bold text-2xl md:text-3xl"
+            class="w-full font-bold text-white p-10 rounded-t-2xl grid grid-cols-1 md:grid-cols-2
+           gap-10 max-w-7xl px-8 mx-auto"
         >
             <div>
-                <h1 class="text-grisT">AESTHETIC SIDE PANELS</h1>
-                <SeparatorBlue />
+                <h3>Productos para construcción e impermeabilización</h3>
+                <ul class="list-disc ml-6 font-thin">
+                    <li class="text-sm lg:text-base">
+                        Usados para preparar y almacenar materiales basados en
+                        asfalto para membranas y selladores de techado.
+                    </li>
+                </ul>
             </div>
+
             <div>
-                <h1 class="text-start py-5 lg:py-0 lg:text-end md:text-end text-blueMain">
-                    ENHANCE YOUR COMPANY IMAGE <br />
-                    WITH TRIASO DESIGN
-                </h1>
+                <h3>Producción de emulsiones asfálticas</h3>
+                <ul class="list-disc ml-6 font-thin">
+                    <li class="text-sm lg:text-base">
+                        Mantenimiento de temperatura y estabilidad de emulsiones
+                        para aplicaciones de mezcla en frío.
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Procesamiento de petróleo crudo y gas natural</h3>
+                <ul class="list-disc ml-6 font-thin">
+                    <li class="text-sm lg:text-base">
+                        Manejo de subproductos asfálticos o residuos pesados en
+                        procesos de refinación y separación de gas.
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Asfalto con hule</h3>
+                <ul class="list-disc ml-6 font-thin">
+                    <li class="text-sm lg:text-base">
+                        Incorporación de hule de llanta en asfalto líquido para
+                        mejorar la flexibilidad del pavimento.
+                    </li>
+                </ul>
             </div>
         </div>
-        <div>
-            <Image src={sideP} alt="Aesthetic Side Panel" />
-        </div>
-        <div class="flex justify-center items-center">
-            <a
-                href="/AestheticSide"
-                class="text-white text-center mb-5 mt-5 text-xs md:text-sm font-normal border-2 border-[#14427c] rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-[#14427c] hover:bg-transparent hover:text-[#14427c]"
+
+        <div
+            class="flex justify-center mt-6 group-open:flex hidden"
+            onclick="this.closest('details').removeAttribute('open')"
+        >
+            <div
+                class="mx-auto mt-5 mb-5 text-black text-center text-xs md:text-sm
+             font-normal border-2 border-white rounded-full py-2 px-6
+             transition-all duration-300 ease-out transform hover:scale-110
+             hover:shadow-lg bg-white hover:bg-black hover:text-white hover:border-black"
             >
-                Learn more...
-            </a>
+                Ver menos
+            </div>
         </div>
-    </div>
+    </details>
+</section>
+
+<section>
+    <ItemsSlider client:only images={iconos} />
 </section>
 
 <script>

@@ -1,0 +1,183 @@
+---
+import SmartVideo from "../../../unitComponents/SmartVideo";
+import poster1 from "../../../../assets/images/Burners/Gallery/B1.webp";
+import QuemadorSlider from "../../QuemadorSlider";
+import slide2 from "../../../../assets/images/Burners/preHeat.webp";
+import slide3 from "../../../../assets/images/Burners/Low/PlaC QuemadorLow.webp";
+import img4 from "../../../../assets/images/Burners/preHeat.webp"
+
+const slides = [
+    {
+        title: "Precalentador de combustible",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget neque hendrerit, volutpat nulla sed, pulvinar ligula. Quisque eleifend blandit nisl vitae vestibulum.",
+        image: slide2.src,
+        bgColor: "#fffaea",
+    },
+    {
+        title: "Autocarburación del quemador por sensores en la chimenea",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget neque hendrerit, volutpat nulla sed, pulvinar ligula. Quisque eleifend blandit nisl vitae vestibulum.",
+        image: slide3.src,
+        bgColor: "#b7422a",
+    },
+];
+---
+
+<section>
+    <!-- Sección arriba -->
+    <div
+        class="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row justify-center lg:justify-between"
+    >
+        <div class="">
+            <div>
+                <h1 class="uppercase text-4xl font-bold text-[#393939]">
+                    Quemadores de
+                </h1>
+                <h1 class="uppercase text-4xl font-bold text-[#393939]">
+                    aire total
+                </h1>
+                <div class="border-b-2 border-[#ca1c1c] h-0.5 w-full my-5">
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <p>Desde 6 a 125 millones de Btu/Hr,</p>
+                <p>con precalentador, filtro y más</p>
+            </div>
+        </div>
+        <div class="flex items-center justify-center lg:justify-end">
+            <SmartVideo
+                client:visible
+                src="/Videos/Webm/burnerVideo.webm"
+                width="50%"
+                poster={poster1.src}
+                isLoop={true}
+                autoplayOnMobile={false}
+            />
+        </div>
+    </div>
+    <!-- Sección 2 -->
+    <div class="flex flex-col max-w-7xl mx-auto px-8">
+        <div
+            class="bg-white lg:w-[600px] rounded-tr-2xl flex justify-center items-center"
+        >
+            <div class="mx-auto py-10">
+                <p class="font-bold">Aire 100% regulado</p>
+            </div>
+        </div>
+        <div
+            class="bg-[#393939] rounded-br-2xl lg:w-[600px] flex justify-center items-center"
+        >
+            <div class="mx-auto py-10">
+                <p class="font-bold text-white">Bajas emisiones de NOx</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección sliders -->
+
+<section class="pt-10 space-y-5">
+    <div class="max-w-7xl mx-auto px-8 flex items-center justify-center">
+        <h1 class="font-bold text-4xl text-center">
+            Desde 6 a 125 millones de Btu/Hr, con precalentador y filtro
+        </h1>
+    </div>
+
+    <div
+        class="max-w-7xl mx-auto px-8 gap-5 flex flex-col lg:flex-row md:flex-row justify-evenly items-center"
+    >
+        <div class="flex flex-col justify-center items-center">
+            <p>Consistente</p>
+            <h1 class="text-[#ca1c1c] font-bold text-3xl">Flama</h1>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <p>Consistente</p>
+            <h1 class="text-[#14427c] font-bold text-3xl">Mezcla</h1>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <p>Consistente</p>
+            <h1 class="text-[#393939] font-bold text-3xl">Calidad</h1>
+        </div>
+    </div>
+
+    <section class="py-5">
+        <div
+            class="bg-black lg:h-[55vh] md:h-[50vh] flex items-center bg-[url(/drumBanner.webp)] bg-cover bg-center bg-no-repeat relative"
+        >
+            <div class="absolute inset-0 bg-[#3e3e3e]/80"></div>
+            <div
+                class="max-w-7xl mx-auto px-8 space-y-5 flex flex-col lg:flex-row md:flex-row relative"
+            >
+                <div class="space-y-5">
+                    <div class="pt-5">
+                        <h1 class="text-4xl font-bold text-white uppercase">
+                            Precalentador de combustible
+                        </h1>
+                    </div>
+
+                    <div
+                        class="w-full flex flex-col justify-center pb-5 lg:justify-around md:justify-around items-center relative"
+                    >
+                        <div class="">
+                            <p class="text-white">
+                                Con los precalentadores reducimos la viscosidad
+                                del combustible, garantizando una atomización
+                                adecuada y una combustión limpia, sin demoras ni
+                                fuentes de calor externas.
+                            </p>
+                        </div>
+
+                        <div class="space-y-5">
+                            <h1
+                                class="text-4xl font-bold text-[#fffaea] uppercase"
+                            >
+                                Problemas causados por no precalentar los
+                                combustibles de bajo costo:
+                            </h1>
+
+                            <ul class="list-disc pl-5 text-white">
+                                <li>
+                                    Las microgotas sin quemar provocan una
+                                    pérdida considerable de combustible.
+                                </li>
+                                <li>
+                                    La mezcla asfáltica se contamina con
+                                    combustible sin quemar.
+                                </li>
+                                <li>
+                                    Esta contaminación reduce significativamente
+                                    la vida útil del pavimento asfáltico.
+                                </li>
+                                <li>
+                                    La atmósfera se ve afectada por los gases
+                                    generados por una combustión incompleta.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
+                >
+                    <img src={img4.src} alt="" class="w-4/5" />
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Sección 3 -->
+<section>
+    <div
+        class="max-w-7xl mx-auto px-8 flex flex-col items-center justify-center py-10"
+    >
+        <h1 class="text-black font-bold text-4xl text-center lg:text-left">
+            Sólo el dueño de otra planta de asfalto Triaso,
+        </h1>
+        <h1 class="text-black font-bold text-4xl text-center lg:text-left">
+            igual de moderna, le puede hacer competencia.
+        </h1>
+    </div>
+</section>

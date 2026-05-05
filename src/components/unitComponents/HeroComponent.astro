@@ -1,0 +1,81 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  image: string;
+  imageAlt?: string;
+  accentColor?: string;
+  altImage?: string;
+  descAltImage: string;
+}
+
+const {
+  title,
+  image,
+  imageAlt = "",
+  altImage = "",
+  descAltImage = "",
+  accentColor = "#0a0a0a", // 1. Extraemos el color con un valor por defecto
+} = Astro.props;
+
+// 2. Función helper para convertir Hex a RGB ("#ff0000" -> "255, 0, 0")
+const hexToRgb = (hex: string) => {
+  let c = hex.replace('#', '');
+  if (c.length === 3) c = c.split('').map(x => x + x).join('');
+  const r = parseInt(c.slice(0, 2), 16) || 10;
+  const g = parseInt(c.slice(2, 4), 16) || 10;
+  const b = parseInt(c.slice(4, 6), 16) || 10;
+  return `${r}, ${g}, ${b}`;
+};
+
+// 3. Obtenemos el string rgb para usarlo en el CSS
+const rgbColor = hexToRgb(accentColor);
+---
+
+<section
+  class="relative w-full overflow-hidden bg-[#0d0d0d]"
+  style="height: clamp(320px, 80vw, 800px);"
+>
+  <div class="absolute inset-0">
+    <img
+      src={image}
+      alt={imageAlt}
+      class="block h-full w-full object-cover object-center"
+      fetchpriority="high"
+    />
+
+    <div
+      class="pointer-events-none absolute bottom-0 left-0 right-0 h-[55%]"
+      style={`background: linear-gradient(to bottom, transparent 0%, rgba(${rgbColor},0.55) 50%, rgba(${rgbColor},0.95) 80%, rgb(${rgbColor}) 100%);`}
+    ></div>
+
+    <div
+      class="pointer-events-none absolute bottom-0 right-0 top-0 w-1/4"
+      style={`background: linear-gradient(to right, transparent 0%, rgba(${rgbColor},0.4) 100%);`}
+    ></div>
+
+    <div
+      class="pointer-events-none absolute inset-0"
+      style={`background: linear-gradient(135deg, rgba(${rgbColor},0.45) 0%, transparent 60%, rgba(${rgbColor},0.2) 100%);`}
+    ></div>
+  </div>
+
+  <div
+    class="absolute inset-0 flex items-end mt-10"
+    style="padding: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 5rem);"
+  >
+    <div class="max-w-7xl mx-auto px-8 flex flex-col items-center justify-center">
+      <h1 class="m-0 font-bold uppercase text-white text-xl md:text-3xl lg:text-4xl text-center">
+        {title}
+      </h1>
+
+      {altImage && (
+        <img
+          src={altImage}
+          alt={descAltImage}
+          class="block w-1/2 mt-4"
+        />
+      )}
+    </div>
+  </div>
+</section>

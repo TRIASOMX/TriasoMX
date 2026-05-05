@@ -1,0 +1,255 @@
+---
+import { Image } from "astro:assets";
+import TwoColumnSection from "../../../unitComponents/TwoColumnSection.astro";
+import img1 from "../../assets/images/DrumMixers/baghouse2.webp";
+import baghouse from "../../../../assets/images/DrumMixers/Low/bagHouses1Low.webp";
+import GridBolsas from "../../GridBolsas";
+import CardEmergente from "../../CardEmergente.astro";
+import Tred from "../../../../assets/images/AsphaltStorage/redT.webp";
+import LearnBtnBlue from "../../../unitComponents/LearnBtnBlue.astro";
+import slider1 from "../../../../assets/images/BagHouses/14.webp"
+import slider2 from "../../../../assets/images/BagHouses/BHProv7.webp"
+import SecondWhatsBtn from "../../../unitComponents/SecondWhatsBtn.astro";
+
+const gridItems = [
+    {
+        title: "Sistema de extracción de gases silencioso",
+        description:
+            "Extractor de gases con operación silenciosa, gracias al diseño de sus álabes aerodinámicos, que permiten su uso en zonas urbanas o en áreas con normas estrictas de control de ruido.",
+        image: slider1.src,
+        imageFit: "cover", // usa "cover" si la foto es de ambiente
+    },
+    {
+        title: "Secuencia de disparos automáticos en casa de bolsas",
+        description:
+            "El nuevo sistema de disparos dentro de la casa de bolsas provienen de unas boquillas ultra sónicas que usan aire secundario para una repartición más equilibrada y con mayor fuerza repartida dentro de las bolsas. Los disparos se regulan de la misma forma que la apertura del damper, mediante el sistema de operación Triaso Relief™. El sistema ajusta la secuencia de disparos, en función de la presión interna de la casa de bolsas, manteniendo un rango estable de diferencia de presión dentro de la casa de bolsas.",
+        image: slider2.src,
+        imageFit: "cover",
+    },
+    {
+        title: "Apertura automática del damper",
+        description:
+            "El damper consiste en una serie de placas que al reducir su apertura varían el flujo de los gases de escape provenientes de la casa de bolsas. Para regular la temperatura de la mezcla y economizar combustible. Para regular la temperatura de la mezcla y economizar combustible. La apertura automática del damper se ajusta mediante el sistema de operación Triaso Relief™. Este sistema ajusta la apertura en función de la presión interna de la casa de bolsas, manteniendo un rango estable de diferencia de presión dentro de la casa de bolsas.",
+        image: "https://placehold.co/600x400/png",
+        imageFit: "cover",
+    },
+    {
+        title: "Sensores de gases para monitoreo ambiental",
+        description:
+            "Sensores de gases para monitoreo ambiental continuo, enfocados en los principales contaminantes regulados por SEMARNAT para equipos industriales de combustión: Monóxido de carbono (CO) Material patriculado (PM) Óxidos de nitrógeno (NOx) Dióxido de azufre (SO₂) Oxígeno (O₂) para verificación de combustión y exceso de aire. Para no dejarse sorprender por lecturas amañadas para obligar el paro de la planta.",
+        image: "https://placehold.co/600x400/png",
+        imageFit: "cover",
+    },
+];
+---
+
+<!--Seccoón T -->
+<section>
+    <TwoColumnSection
+        leftBg="bg-redBg"
+        rightBg="bg-blueMain"
+        imageSrc={Tred.src}
+        imageAlt="Red T icon"
+        imageWidth="150px"
+    >
+        <div slot="left" class="flex flex-col justify-center gap-3">
+            <h1 class="font-bold text-white md:text-2xl">
+                Tambores estacionarios
+            </h1>
+            <p class="text-base md:text-lg">
+                Duraderos y fáciles de transportar, los tambores mezcladores
+                están diseñados para una operación a largo plazo, con soportes
+                de acero reforzado que eliminan la necesidad de cimentaciones de
+                concreto.
+            </p>
+        </div>
+        <div slot="right" class="flex flex-col justify-center gap-3">
+            <h1 class="font-bold text-white md:text-2xl">Tambores moviles</h1>
+            <p class="text-base md:text-lg">
+                Ideales para obras en ubicaciones remotas, nuestros tambores
+                ofrecen una instalación rápida, portabilidad y alta capacidad de
+                producción, todo mientras los costos de operación se mantienen
+                bajos al concentrar todo en un mismo chasis.
+            </p>
+        </div>
+    </TwoColumnSection>
+</section>
+<!-- Sección de casas de bolsas integradas -->
+<section>
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="py-10">
+            <h1 class="text-3xl text-black font-bold uppercase">
+                CASA DE BOLSAS IntegraDA
+            </h1>
+            <div class="flex flex-row">
+                <div class="w-40 h-0.5 bg-blueMain"></div>
+                <div class="w-40 h-0.5 bg-gray-300"></div>
+            </div>
+        </div>
+
+        <div>
+            <div
+                class="grid grid-cols-1 max-w-7xl mx-auto md:grid-cols-2 justify-center items-center gap-5 px-8 w-full"
+            >
+                <div class="flex flex-col justify-center rounded-lg space-y-10">
+                    <div class="flex flex-col space-y-2">
+                        <div
+                            class="flex text-5xl font-normal justify-center lg:justify-start items-baseline w-full"
+                        >
+                            <p class="text-black">4 - 90</p>
+                            <p class="text-sm font-normal ml-3 text-black">
+                                mil ACFM
+                            </p>
+                        </div>
+                        <p
+                            class="text-black font-thin text-center lg:text-start w-full text-base"
+                        >
+                            Capacidad de las casas de bolsas
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col space-y-2">
+                        <div
+                            class="flex text-5xl font-normal justify-center lg:justify-start items-baseline w-full"
+                        >
+                            <p class="text-black">99.99</p>
+                            <p class="text-sm font-normal ml-3 text-black">%</p>
+                        </div>
+                        <p
+                            class="text-black font-thin text-center lg:text-start w-full text-base"
+                        >
+                            Eficiencia de filtración en captura de partículas
+                            finas
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <Image src={baghouse} alt="Baghouse" class="w-full" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de slider de casas de bolsas -->
+<section class="py-10">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="py-10">
+            <h1
+                class="bg-gradient-to-r from-[#123480] to-[#4f79d9] bg-clip-text text-transparent font-bold text-3xl text-center lg:text-left"
+            >
+                Componentes de larga vida útil para un <br />
+                desempeño duradero y un mejor retorno <br />
+                de inversión
+            </h1>
+        </div>
+
+        <GridBolsas items={gridItems} client:load />
+
+        <div class="py-10">
+            <CardEmergente
+                title="La planta de asfalto más ecológica en el mercado"
+                image="https://placehold.co/600x400/png"
+            >
+                <!-- CONTENIDO DEL MODAL -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                            NOM-085-SEMARNAT-201
+                        </h3>
+
+                        <p class="text-sm opacity-80">
+                            Norma Oficial Mexicana, que establece los niveles
+                            máximos permisibles de emisión a la atmósfera de
+                            emisiones de los equipos de combustión.
+                        </p>
+
+                        <img
+                            src="https://placehold.co/600x400/png"
+                            class="mt-4 rounded-lg"
+                        />
+
+                        <ul>
+                            <li>ZVM: Zona del Valle de México</li>
+                            <li>ZC: Zonas críticas</li>
+                            <li>RP: Resto del país</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                            NOM-043-SEMARNAT-1993
+                        </h3>
+
+                        <p class="text-sm opacity-80">
+                            Norma Oficial Mexicana, que establece los niveles
+                            máximos permisibles de emisión a la atmósfera de
+                            partículas sólidas provenientes de fuentes fijas.
+                        </p>
+
+                        <img
+                            src="https://placehold.co/600x400/png"
+                            class="mt-4 rounded-lg"
+                        />
+                    </div>
+                </div>
+            </CardEmergente>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div
+        class="bg-[#2b2b2b] lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(/triasoLogo.webp)] bg-center bg-no-repeat relative"
+    >
+        <div class="absolute inset-0 bg-[#000000]/50"></div>
+
+        <div
+            class="flex flex-col justify-center items-center relative max-w-7xl mx-auto px-8 space-y-5 py-10 lg:py-0 md:py-0"
+        >
+            <div class="text-center">
+                <h1 class="text-white text-4xl">
+                    Nos adaptamos a <span class="font-bold"
+                        >sus necesidades y presupuesto</span>
+                </h1>
+                <h1 class="text-white text-4xl">
+                    sin comprometer calidad ni rendimiento
+                </h1>
+            </div>
+
+            <div class="text-center">
+                <p class="text-white text-xl">
+                    Las necesidades que debe satisfacer cada planta de asfalto
+                    son completamente diferentes, por eso,
+                </p>
+                <p class="text-white text-xl">
+                    las diseñamos para adaptarse a los requerimientos de cada
+                    producción única de mezcla asfáltica.
+                </p>
+            </div>
+            <div>
+                <LearnBtnBlue />
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div
+        class="relative bg-gradient-to-b from-[#c2d4ff] to-white text-center py-20 px-6
+              rounded-b-[60%]"
+    >
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Agende una reunión</h2>
+
+        <p class="text-sm md:text-base mb-8 max-w-2xl mx-auto">
+            Cuéntenos más sobre su proyecto para identificar la solución
+            industrial que mejor se ajuste a sus necesidades.
+        </p>
+
+        <button
+            class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
+        >
+            Ver horarios disponibles
+        </button>
+    </div>
+</section>

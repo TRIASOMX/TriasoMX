@@ -21,12 +21,10 @@ const images1 = [
   { src: '/Gallery/quemadores.webp', title: 'Burners manufacture' },
   { src: '/Gallery/drum-mixer.webp', title: 'Drum mixer welding' },
   { src: '/Gallery/elevator-manu.webp', title: 'Elevator hinges manufacturing' },
-  // { src: '/Gallery/customdes.png', title: 'Elevator hinges manufacturing' }
-  // agrega hasta 16 o más imágenes
 ];
 
 ---
-<Layout title="Aphalt Plants">
+<Layout title="Plantas de asfalto">
   <head>
     <!-- Preload para la imagen Hero -->
     <link 
@@ -45,20 +43,9 @@ const images1 = [
 
   <Hero 
     heroImage={Hero1} 
-    title="ASPHALT PLANTS" 
+    title="PLANTAS DE ASFALTO" 
     altText="Modern asphalt production plant with heavy machinery" 
   />
     <MainSection />
-    <DrumMixers />
-    <!-- <Baghouses /> -->
-    <AsphaltTanks />
-    <BinUnits />
-    <!-- <HeatingSystem /> -->
-    <StorageSilos />
-    <!-- <ColdMix />  -->
-    <MexManufactur />
-    <GallerySlider client:load images={images1} />
-    <Spare /> 
-    <!-- <AnalisisInversion client:only/> -->
-    <!-- <HotspotComponent/> -->
+  
 </Layout>

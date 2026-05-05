@@ -2,48 +2,107 @@
 import Separator from "../unitComponents/Separator.astro";
 import img1 from "../../assets/images/AsphaltPlant/drum3.webp";
 import { Image } from "astro:assets";
-import poster1 from "../../../public/Videos/Webm/Posters/6.webp";
+import img2 from "../../assets/images/BinUnits/Tolv.webp"
 import SmartVideo from "../unitComponents/SmartVideo";
+import HeroComponent from "../unitComponents/HeroComponent.astro";
+import BOdometer from "./BOdometer";
+import BinSlider from "./BinSlider.astro"
 ---
 
-<div class="w-full flex flex-col items-start justify-center mt-20">
-  <div class="w-full max-w-7xl px-8 mx-auto">
-    <h1 class="text-2xl md:text-4xl font-bold">
-      Triaso® <br /> Aggregate Bin Units
-    </h1>
-    <Separator />
+<section>
+  <div>
+    <HeroComponent
+      title="Unidades de tolvas independientes para agregados Triaso®"
+      image="https://placehold.co/1920x1080/png"
+      imageAlt="Unidades de tolvas independientes para agregados Triaso®"
+    />
   </div>
 
-  <div class="w-full flex flex-col lg:flex-row gap-5 mb-10 py-10 items-center">
-    <div class="lg:w-4/6">
-      <p class="text-justify text-sm lg:text-lg md:text-lg font-bold text-grisT px-8 xl:pl-80 lg:pl-10">
-        Triaso® Bin Units are essential components in asphalt production,
-        ensuring accurate storage and a steady flow of aggregates into the
-        mixing system. Engineered specifically for asphalt plants, they provide
-        reliable feeding of pre-dosed materials, helping maintain mix
-        consistency and production efficiency according the specified mix
-        design. Built from high-strength materials and available in adaptable
-        configurations, these bins deliver durability, minimal maintenance, and
-        optimal performance for continuous operation across all types of
-        projects.
-      </p>
-    </div>
-
-    <div class="bg-blueMain lg:rounded-l-2xl p-4 font-bold flex flex-col justify-around gap-4">
-      <h1 class="text-white md:text-4xl text-2xl">From 10 or 20 tons</h1>
-      <div>
-        <Image src={img1} alt="Lines resembling the shape of a Bin Unit" />
+  <div class="bg-[#1e1e1e]">
+    <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+      <div class="flex justify-center items-center text-center">
+        <h1 class="font-semibold text-white text-lg lg:text-xl">
+          Los tanques de asfalto Triaso® están diseñados para almacenar y
+          mantener el asfalto en condiciones óptimas, asegurando una calidad y
+          un desempeño constantes. Fabricados con materiales de alta resistencia
+          y aislamiento de alta eficiencia, mantienen el asfalto listo para
+          usarse en cualquier aplicación. Ideales para la producción de asfalto
+          modificado con polímeros, estos tanques ofrecen la durabilidad y
+          funcionalidad necesarias tanto para proyectos pequeños como para
+          operaciones de gran escala.
+        </h1>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="w-full flex justify-center max-w-7xl px-8 mx-auto">
-    <SmartVideo
-      client:visible
-      src="/Videos/Webm/tolvasVideo.webm"
-      poster={poster1.src}
-      isLoop={false}
-      autoplayOnMobile={false}
-    />
+<section>
+  <BOdometer client:only />
+</section>
+
+<section>
+  <div
+    class="w-full bg-blueMain text-white flex flex-col justify-center pt-10 h-full"
+  >
+    <div
+      class="p-10 font-bold flex flex-col lg:flex-row md:flex-row items-center justify-center gap-4 max-w-7xl mx-auto"
+    >
+      <div>
+        <Image src={img1} alt="Lines resembling the shape of a Bin Unit" />
+      </div>
+      <div class="px-8 lg:w-1/2">
+        <h1 class="text-white">
+          Fabricadas con materiales de extra-reforzados y disponibles en
+          configuraciones adaptables, estas tolvas ofrecen larga vida útil,
+          mínimo mantenimiento y un desempeño óptimo para operación continua en
+          cualquier tipo de proyecto.
+        </h1>
+      </div>
+    </div>
+    <div class="w-full bg-bgBeige -skew-y-2">
+      <div
+        class="w-full grid grid-cols-1 md:grid-cols-2 py-20 max-w-7xl mx-auto px-8 skew-y-2 gap-3 md:gap-10"
+      >
+        <div class="w-full text-center text-black">
+          <h1 class="font-bold text-black text-xl md:text-2xl">
+            Fabricación resistente
+          </h1><br />
+          <p class="text-base md:text-lg">
+            Nuestras unidades de tolvas están fabricadas con materiales
+            resistentes al desgaste y extra-reforzados, ideales para manejar
+            cargas abrasivas y de alto peso. Esta construcción robusta asegura
+            un funcionamiento confiable incluso en las condiciones de trabajo
+            más exigentes.
+          </p>
+        </div>
+        <div class="w-full text-center text-black">
+          <h1 class="font-bold text-black text-xl md:text-2xl">
+            Características personalizables
+          </h1><br />
+          <p class="text-base md:text-lg">
+            El sistema de dosificación ofrece una flexibilidad excepcional para
+            adaptarse a las necesidades específicas de cada proyecto. Con
+            opciones de ajuste manual o automático, el sistema garantiza un
+            control preciso del flujo de material.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full relative flex flex-col pt-5">
+      <div class="max-w-7xl mx-auto px-8">
+        <Image
+        src={img2}
+        alt="Semi silo"
+        width={600}
+        height={400}
+      />
+      </div>
+      
+      <div class="">
+        <BinSlider/>
+      </div>
+      
+    </div>
   </div>
-</div>
+</section>

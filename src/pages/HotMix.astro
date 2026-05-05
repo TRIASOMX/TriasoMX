@@ -9,25 +9,57 @@ import HMOdometer from "../components/HotMixStorage/HMOdometer";
 import HotMixGallery from "../components/HotMixStorage/HotMixGallery.astro"
 import ItemsSlider from "../components/LandinPage/ItemsSlider";
 import CardSectionResponsive from "../components/unitComponents/CardSectionResponsive.astro";
-const images1 = [
-  { src: '/Gallery/sliderHotMix/1.webp', title: 'Preservation of Quality',texto:'Perservation of quality  and integrity of the asphlt mix for up to 72 hours.' },
-  { src: '/Gallery/sliderHotMix/2.webp', title: 'Efficient Logistics' ,texto:'Streamlines delivery with automated weighing, ticket printing, and precise material flow control.'},
-  { src: '/Gallery/sliderHotMix/3.webp', title: 'Versatile Storage Options' ,texto:'Long-duration thermal retention, ensuring it remains usable and high-quality for extended periods.'},
-  { src: '/Gallery/sliderHotMix/4.webp', title: 'Mobility' ,texto:'Triaso silos allow quick setup without heavy machinery, ideal for relocatable operations.'},
-  { src: '/Gallery/sliderHotMix/5.webp', title: 'Durability' ,texto:'Built with reinforced materials, thermally insulated cylinders, and corrosion-resistant finishes.'},
-  { src: '/Gallery/sliderHotMix/6.webp', title: 'Seamless Integration',texto:'Compatible with asphalt plant systems through protocols like Ethernet Industrial, Modbus, and CANopen.' },
-  { src: '/Gallery/sliderHotMix/7.webp', title: 'Enhanced Safety' ,texto:'Equipped with guards, alarms, and visual indicators to protect personnel and equipment.'},
-  { src: '/Gallery/sliderHotMix/8.webp', title: 'Cost-Effective' ,texto:'Reduces downtime, transportation costs, and maintenance with efficient design and reliable performance.'},
-  { src: '/Gallery/sliderHotMix/9.webp', title: 'Improved Company Image' ,texto:'Industrial aesthetics elevate the visual appeal of your operation.'},
-  { src: '/Gallery/sliderHotMix/10.webp', title: 'Customizable' ,texto:'Adaptable features to meet specific project requirements and operational goals.'},
+import CardsHotMix from "../components/HotMixStorage/CardsHotMix.astro";
+const iconos = [
+    {
+        src: "/Gallery/sliderHotMix/1.webp",
+        title: "Preservación de la calidad",
+        texto: "Preservación de la calidad e integridad del asfalto.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/2.webp",
+        title: "Logística eficiente",
+        texto: "Agiliza la entrega con reportes, historial y control preciso del flujo de asfalto",
+    },
+    {
+        src: "/Gallery/sliderHotMix/3.webp",
+        title: "Opciones de almacenamiento versátiles",
+        texto: "Retención térmica prolongada que mantiene el asfalto líquido y en buen estado por más tiempo.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/4.webp",
+        title: "Movilidad",
+        texto: "Nuestros tanque permiten una instalación rápida sin maquinaria pesada, ideal para operaciones reubicables.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/7.webp",
+        title: "Seguridad mejorada",
+        texto: "Equipados con protecciones, alarmas e indicadores visuales para proteger al personal y al equipo.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/8.webp",
+        title: "Rentabilidad",
+        texto: "Reduce paros, costos de transporte y mantenimiento gracias a su diseño eficiente y desempeño confiable.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/9.webp",
+        title: "Mejora el nombre de la empresa",
+        texto: "La estética industrial eleva la apariencia de tu operación.",
+    },
+    {
+        src: "/Gallery/sliderHotMix/10.webp",
+        title: "Personalizable",
+        texto: "Características adaptables para cumplir con los requisitos específicos del proyecto y los objetivos operativos.",
+    },
 ];
 ---
 <Layout title="Hot-Mix Storage Silos">
     <MainSection/>
     <HMOdometer client:only/>
     <TabsHot />
-    <ItemsSlider client:load images={images1}/>
-    <Tabs2 />
+    <ItemsSlider client:load images={iconos}/>
+    <CardsHotMix/>
+
     <SlatConveyor />
     <HotMixGallery/>
     <HotMixPlanos client:only/>

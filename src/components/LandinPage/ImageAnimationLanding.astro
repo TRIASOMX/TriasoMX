@@ -1,0 +1,113 @@
+---
+import { Image } from "astro:assets";
+import img6 from "../../../public/Gallery/drum-mixer.webp";
+import img6Low from "../../assets/images/AsphaltStorage/Low/ASafetyLow.webp";
+import img1 from "../../assets/images/AsphaltStorage/ATG1.webp";
+import img3 from "../../assets/images/AsphaltStorage/ATG2.webp";
+import img4 from "../../../public/Gallery/quemadores.webp";
+import ASProv2 from "../../assets/images/Manufacture/17.webp";
+import ASProv2Low from "../../assets/images/Manufacture/17.webp";
+---
+
+<div class="w-full max-w-7xl mx-auto flex flex-col items-center justify-center font-bold mt-20">
+    <div class="max-w-7xl px-8 mx-auto flex justify-start">
+        <Image
+            src={img6}
+            alt="Image of an Asphalt Storage Tank inside the production facility"
+            class="hero-img hidden lg:block lg:w-1/2 lg:ml-5 rounded-lg"
+        />
+        <Image
+            src={img6Low}
+            alt="Image of an Asphalt Storage Tank inside the production facility"
+            class="hero-img rounded-lg lg:hidden md:hidden"
+        />
+    </div>
+
+    <div
+        class="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center gap-6"
+    >
+        <div class="w-full mt-10 space-y-5">
+            <h2 class="font-bold text-xl md:text-2xl text-redBg">
+                Fabricación 100% mexicana
+            </h2>
+            <p class="font-normal">
+                Nuestro esfuerzo es para tener los mejores equipos, <br />
+                <span
+                    >para que las inversiones en equipos para México no se vayan
+                    a otros países.</span
+                >
+            </p>
+
+            <h2 class="font-bold text-xl md:text-2xl text-[#00840d]">
+                Todos nuestros
+            </h2>
+            <p class="font-normal">
+             empleados, <br>
+            <span>proveedores</span> <br>
+            <span>e impuestos son mexicanos.</span>
+            </p>
+        </div>
+
+        <div class="w-full hidden lg:flex md:w-auto">
+            <Image
+                src={ASProv2}
+                alt="Front of the Asphalt Storage Tank"
+                class="side-img rounded-2xl will-change-transform"
+            />
+        </div>
+    </div>
+
+    <div class="max-w-7xl hidden px-8 lg:flex justify-center lg:justify-start">
+        <Image
+            src={img4}
+            alt="Asphalt Tank with a Oil Heater installed"
+            class="fade-img lg:w-3/5 will-change-transform"
+        />
+    </div>
+
+    <div class="relative flex flex-row px-8 gap-2 lg:hidden">
+        <Image
+            src={img4}
+            alt="Asphalt Tank with a Oil Heater installed"
+            class="rounded-2xl w-1/2 object-contain"
+        />
+
+        <Image
+            src={ASProv2Low}
+            alt="Front of the Asphalt Storage Tank"
+            class="rounded-2xl w-1/2 object-contain"
+        />
+    </div>
+</div>
+
+<script>
+    import { initScrollAnimations } from "./LandingAnimation";
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("DOMContentLoaded", () => {
+            initScrollAnimations();
+        });
+    }
+</script>
+
+<script is:inline>
+    const container = document.getElementById("slider-container");
+
+    const imagenes = [container.dataset.img1, container.dataset.img2];
+
+    let index = 0;
+
+    const img = document.getElementById("miImagen");
+    const btnAnterior = document.getElementById("btnAnterior");
+    const btnSiguiente = document.getElementById("btnSiguiente");
+
+    btnAnterior.addEventListener("click", () => {
+        index = (index - 1 + imagenes.length) % imagenes.length;
+        img.src = imagenes[index];
+    });
+
+    btnSiguiente.addEventListener("click", () => {
+        index = (index + 1) % imagenes.length;
+        img.src = imagenes[index];
+    });
+</script>

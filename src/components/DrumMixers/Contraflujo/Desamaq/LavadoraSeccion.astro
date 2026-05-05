@@ -1,0 +1,213 @@
+---
+import { Image } from "astro:assets";
+import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
+import img1 from "../../assets/images/DrumMixers/baghouse2.webp";
+import baghouse from "../../assets/images/DrumMixers/Low/bagHouses1Low.webp";
+import GridBolsas from "./GridBolsas";
+import CardEmergente from "./CardEmergente.astro";
+import Tred from "../../assets/images/AsphaltStorage/redT.webp";
+import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
+
+
+const gridItems = [
+    {
+        title: "Sistema de extracción de gases silencioso",
+        description:
+            "Extractor de gases con operación silenciosa, gracias al diseño de sus álabes aerodinámicos, que permiten su uso en zonas urbanas o en áreas con normas estrictas de control de ruido.",
+        image: "https://placehold.co/600x400/png",
+        imageFit: "cover", // usa "cover" si la foto es de ambiente
+    },
+    {
+        title: "Secuencia de disparos automáticos en casa de bolsas",
+        description:
+            "El nuevo sistema de disparos dentro de la casa de bolsas provienen de unas boquillas ultra sónicas que usan aire secundario para una repartición más equilibrada y con mayor fuerza repartida dentro de las bolsas. Los disparos se regulan de la misma forma que la apertura del damper, mediante el sistema de operación Triaso Relief™. El sistema ajusta la secuencia de disparos, en función de la presión interna de la casa de bolsas, manteniendo un rango estable de diferencia de presión dentro de la casa de bolsas.",
+        image: "https://placehold.co/600x400/png",
+        imageFit: "cover",
+    },
+    {
+        title: "Apertura automática del damper",
+        description:
+            "El damper consiste en una serie de placas que al reducir su apertura varían el flujo de los gases de escape provenientes de la casa de bolsas. Para regular la temperatura de la mezcla y economizar combustible. Para regular la temperatura de la mezcla y economizar combustible. La apertura automática del damper se ajusta mediante el sistema de operación Triaso Relief™. Este sistema ajusta la apertura en función de la presión interna de la casa de bolsas, manteniendo un rango estable de diferencia de presión dentro de la casa de bolsas.",
+        image: "https://placehold.co/600x400/png",
+        imageFit: "cover",
+    },
+    {
+        title: "Sensores de gases para monitoreo ambiental",
+        description:
+            "Sensores de gases para monitoreo ambiental continuo, enfocados en los principales contaminantes regulados por SEMARNAT para equipos industriales de combustión: Monóxido de carbono (CO) Material patriculado (PM) Óxidos de nitrógeno (NOx) Dióxido de azufre (SO₂) Oxígeno (O₂) para verificación de combustión y exceso de aire. Para no dejarse sorprender por lecturas amañadas para obligar el paro de la planta.",
+        image: "https://placehold.co/600x400/png",
+        imageFit: "cover",
+    },
+];
+---
+
+<!--Seccoón T -->
+<section>
+    <TwoColumnSection
+        leftBg="bg-redBg"
+        rightBg="bg-blueMain"
+        imageSrc={Tred.src}
+        imageAlt="Red T icon"
+        imageWidth="150px"
+    >
+        <div slot="left" class="flex flex-col justify-center gap-3">
+            <h1 class="font-bold text-white md:text-2xl">
+                Tambores estacionarios
+            </h1>
+            <p class="text-base md:text-lg">
+                Duraderos y fáciles de transportar, los tambores mezcladores
+                están diseñados para una operación a largo plazo, con soportes
+                de acero reforzado que eliminan la necesidad de cimentaciones de
+                concreto.
+            </p>
+        </div>
+        <div slot="right" class="flex flex-col justify-center gap-3">
+            <h1 class="font-bold text-white md:text-2xl">Tambores moviles</h1>
+            <p class="text-base md:text-lg">
+                Ideales para obras en ubicaciones remotas, nuestros tambores
+                ofrecen una instalación rápida, portabilidad y alta capacidad de
+                producción, todo mientras los costos de operación se mantienen
+                bajos al concentrar todo en un mismo chasis.
+            </p>
+        </div>
+    </TwoColumnSection>
+</section>
+<!-- Sección de casas de bolsas integradas -->
+<section>
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="py-10">
+            <h1 class="text-3xl text-black font-bold uppercase">
+                Lavadora de finos IntegraDA
+            </h1>
+            <div class="flex flex-row">
+                <div class="w-40 h-0.5 bg-blueMain"></div>
+                <div class="w-40 h-0.5 bg-gray-300"></div>
+            </div>
+        </div>
+
+        <div>
+            <div
+                class="grid grid-cols-1 max-w-7xl mx-auto md:grid-cols-2 justify-center items-center gap-5 px-8 w-full"
+            >
+                <div class="flex flex-col items-center justify-center">
+                    <Image src="https://placehold.co/600x400/png" alt="Baghouse" width={600} height={400} />
+                    <div class="flex flex-col justify-center items-center">
+                        <h1 class="font-bold text-4xl">
+                            95 <span class="text-sm">%</span>
+                        </h1>
+                        <p class="text-xs">
+                            Eficiencia de filtración en captura de partículas
+                            finas
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center rounded-lg space-y-10">
+                    <div class="max-w-2xl mx-auto space-y-6 p-4">
+                        <div class="bg-gradient-to-r from-[#8ed958] to-[#c8e265] rounded-2xl p-6 text-black">
+                            <h3 class="text-2xl font-bold text-white mb-2">
+                                Fosa de lodos
+                            </h3>
+                            <p class="text-sm  text-black ">
+                                Sistema de control de emisiones para la
+                                conducción y desecho de partículas en una fosa
+                                de lodos.
+                            </p>
+                        </div>
+
+                        <div class="bg-[#393939] rounded-2xl p-6 text-white">
+                            <h3 class="text-2xl font-bold mb-2">
+                                Control de finos
+                            </h3>
+                            <p class="text-sm text-[#d9d9d9]">
+                                Control de partículas finas durante el secado de
+                                los agregados, manteniendo las emisiones bajo
+                                control directamente en obra.
+                            </p>
+                        </div>
+
+                        <div class="bg-[#14427c] rounded-2xl p-6 text-white">
+                            <h3 class="text-2xl font-bold mb-2">
+                                Sistema de extracción de gases silencioso
+                            </h3>
+                            <p class="text-sm text-[#d9d9d9]">
+                                Extractor de gases con operación silenciosa,
+                                gracias al diseño de sus álabes aerodinámicos,
+                                que permiten su uso en zonas urbanas o en áreas
+                                con normas estrictas de control de ruido.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex flex-col lg:flex-row justify-evenly items-center max-w-7xl mx-auto">
+        <div class="bg-[#393939] rounded-r-2xl ">
+            <h1 class="font-bold text-xl text-white p-5">Sistema opcional: nuestras plantas de asfalto <br> de flujo paralelo están listos para acoplar una <br> casa de bolsas cuando se requiera. </h1>
+        </div>
+        <div>
+            <Image src="https://placehold.co/600x400/png" alt="Placeholder" width={600} height={400}/>
+        </div>
+    </div>
+</section>
+
+
+
+<section>
+    <div
+        class="bg-black lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(/triasoLogo.webp)] bg-center bg-no-repeat relative"
+    >
+        <div class="absolute inset-0 bg-[#2b2b2b]"></div>
+
+        <div
+            class="flex flex-col justify-center items-center relative max-w-7xl mx-auto px-8 space-y-5 py-10 lg:py-0 md:py-0"
+        >
+            <div class="text-center">
+                <h1 class="text-white text-4xl">
+                    Nos adaptamos a <span class="font-bold"
+                        >sus necesidades y presupuesto</span
+                    >
+                </h1>
+                <h1 class="text-white text-4xl">
+                    sin comprometer calidad ni rendimiento
+                </h1>
+            </div>
+
+            <div class="text-center">
+                <p class="text-white text-xl">
+                    Las necesidades que debe satisfacer cada planta de asfalto
+                    son completamente diferentes, por eso,
+                </p>
+                <p class="text-white text-xl">
+                    las diseñamos para adaptarse a los requerimientos de cada
+                    producción única de mezcla asfáltica.
+                </p>
+            </div>
+            <div>
+                <LearnBtnBlue />
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div
+        class="relative bg-gradient-to-r from-[#f961e7] to-[#ffd929] text-center py-20 px-6
+              rounded-b-[60%]"
+    >
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Agende una reunión</h2>
+
+        <p class="text-sm md:text-base mb-8 max-w-2xl mx-auto">
+            Cuéntenos más sobre su proyecto para identificar la solución
+            industrial que mejor se ajuste a sus necesidades.
+        </p>
+
+        <button
+            class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
+        >
+            Ver horarios disponibles
+        </button>
+    </div>
+</section>

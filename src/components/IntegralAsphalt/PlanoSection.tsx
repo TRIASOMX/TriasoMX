@@ -116,10 +116,10 @@ const PlanoSection = () => {
     const newUnit = unit === "metric" ? "imperial" : "metric";
     setUnit(newUnit);
   };
-    const modelOptions = [
-    { id: 1, label: "All mounted on a lightweight chassis with support legs" },
-    { id: 2, label: "Standard chassis for mobility of empty plant" },
-    { id: 3, label: "Reinforced chassis for full-loaded plant mobility" },
+  const modelOptions = [
+    { id: 1, label: "Chasis estándar para movilidad de planta vacía" },
+    { id: 2, label: "Chasis ligero con patas de soporte" },
+    { id: 3, label: "Chasis reforzado para movilidad de planta llena" },
 
   ];
 
@@ -185,11 +185,11 @@ const PlanoSection = () => {
       >
         <header id="planosIntegral" className="mt-10 text-white" ref={otroElemento}>
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
-            Specifications
+            Especificaciones
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              MEASURE:
+              UNIDAD:
             </h1>
             <div
               onClick={toggleUnit}
@@ -211,7 +211,7 @@ const PlanoSection = () => {
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRIC
+                  MÉTRICO
                 </span>
               </div>
             </div>
@@ -223,7 +223,7 @@ const PlanoSection = () => {
             {/* móvil */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
               <label className="text-white block text-center">
-                OPTIONS:
+                OPCIONES:
               </label>
               <div className="relative">
                 <select
@@ -258,7 +258,7 @@ const PlanoSection = () => {
             {/* desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
               <label className="text-white block text-center">
-                OPTIONS:
+                OPCIONES:
               </label>
             </div>
             <div className="hidden md:flex flex-wrap justify-center gap-5  mx-auto px-2">
@@ -293,8 +293,8 @@ const PlanoSection = () => {
                   <div className="flex flex-col w-full h-full items-start justify-between gap-0 order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          DURABILITY & SAFETY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Construcción y Diseño
                         </h1>
                         <button
                           className="block md:hidden"
@@ -328,36 +328,23 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Patas de soporte plegables con altura de trabajo preestablecida
                         </li>
-                        <li>Bolted components with anti-corrosion coating</li>
-                        <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
-                            </li>
-                          </ul>
-                        </li>
+                        <li>Tambor fabricado con acero aleado resistente a altas temperaturas</li>
                         <li>
-                          1.5" fiberglass drum and tank thermal insulation
-                          minimizes heat and surface temperature.
+                          Protección frontal reforzada y sellos de EPDM en los extremos del tambor
                         </li>
-                        <li>Labyrinth seals reduce air and heat loss.</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Exterior stainless steel lining</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          CONTROL & OPERATION
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Control y Operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -391,30 +378,39 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
-                        <li>
-                          Option for operating all digital parameters, with
-                          real-time supervision and historical data reports.
-                        </li>
+                        <li>Gabinete de control electrónico con amperímetro</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Controles digitales de temperatura y dosificación de asfalto
+                        </li>
+
+                        <li>
+                          Variador de velocidad para ajustes en la mezcla
+                        </li>
+
+                        <li>
+                          Opción remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                        </li>
+
+                        <li className="list-none">
+                          <ul className="list-disc ml-10">
+                            <li>
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                            </li>
+                          </ul>
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                       </ul>
                     </div>
@@ -429,8 +425,8 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-between w-full h-full col-span-1 order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          COMPONENTS & ELECTRICAL
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Sistema de Quemador
                         </h1>
                         <button
                           className="block md:hidden"
@@ -464,46 +460,29 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Industrial-grade motors, components, and Siemens
-                          wiring.
+                          Quemador diésel modulante
                         </li>
-                        <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>Two 3 HP motors for drum rotation</li>
-                            <li>Four gearbox reducers</li>
-                            <li>1 HP gear pump motor for asphalt injection</li>
-                            <li>
-                              110 V system in control cabinet with emergency
-                              shutdown
-                            </li>
-                            <li>20 kW three-phase electric generator</li>
-                            <li className="list-none">
-                              <ul className="list-disc ml-10">
-                                <li>35 hp Cummins engine</li>
-                                <li>110 L diesel tank</li>
-                              </ul>
-                            </li>
-                          </ul>
+                        <li>
+                          Diseño de aire total (total-air) de 1.5 a 3.0 millones de BTU/h
+                        </li>
+                        <li>
+                          Motor de 1.5 HP con sensores UV y sistema de filtración de combustible
+                        </li>
+                        <li>
+                          Cumple con normas de seguridad de EE. UU.
                         </li>
 
-                        <li>Simplified wiring system for easy maintenance.</li>
-                        <li>Weather-protected electrical connections.</li>
-                        <li>Pulley-and-bushing drive system.</li>
-                        <li>
-                          External fuel lines, sensors, and signal cabling
-                          pre-installed.
-                        </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                          PORTABILITY
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Componentes y Eléctrico
                         </h1>
                         <button
                           className="block md:hidden"
@@ -537,18 +516,41 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Designed for relocation</li>
+                        <li>Dos motores de 3 HP para rotación del tambor</li>
                         <li>
-                          All mounted on a lightweight chassis with support
-                          legs.
+                          Cuatro reductores de engranajes
                         </li>
                         <li>
-                          Ideal for transport between job sites without
-                          requiring full disassembly.
+                          Motor de bomba de engranaje de 1 HP para inyección de asfalto
+
+                        </li>
+
+                        <li>
+                          Motores, componentes y cableado Siemens de grado industrial.
+                        </li>
+
+                        <li>
+                          Sistema de 110 V en gabinete de control con paro de emergencia
+                        </li>
+
+                        <li>
+                          Generador trifásico de 20 kW
+                        </li>
+
+                        <li className="list-none">
+                          <ul className="list-disc ml-10">
+                            <li>
+                               20 kW en servicio continuo
+                            </li>
+                            <li>22 kW en servicio de emergencia</li>
+                            <li>Voltaje 220/440</li>
+                            <li>Motor Cummins de 35 HP</li>
+                            <li>Tanque diésel de 110 L</li>
+                          </ul>
                         </li>
                       </ul>
                     </div>
@@ -592,8 +594,8 @@ const PlanoSection = () => {
                     </div>
                     <ul
                       className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
@@ -659,8 +661,8 @@ const PlanoSection = () => {
                     </div>
                     <ul
                       className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>EPA</li>
@@ -892,8 +894,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C4_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
@@ -988,8 +990,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         }`}
                     >
                       <div className="flex justify-between">
@@ -1094,8 +1096,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         }`}
                     >
                       <div className="flex justify-between">
@@ -1189,8 +1191,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         }`}
                     >
                       <div className="flex justify-between">
@@ -1280,8 +1282,8 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
@@ -1343,8 +1345,8 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Fully automatic or manual operation</li>
@@ -1416,8 +1418,8 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
@@ -1489,8 +1491,8 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
@@ -1543,8 +1545,8 @@ const PlanoSection = () => {
                     </div>
                     <ul
                       className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>Modulating diesel burner</li>
@@ -1592,8 +1594,8 @@ const PlanoSection = () => {
                     </div>
                     <ul
                       className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>EPA</li>
@@ -1826,8 +1828,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C4_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
@@ -1942,8 +1944,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         }`}
                     >
                       <div className="flex justify-between">
@@ -2048,8 +2050,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         }`}
                     >
                       <div className="flex justify-between">
@@ -2143,8 +2145,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         }`}
                     >
                       <div className="flex justify-between">
@@ -2239,8 +2241,8 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
@@ -2303,8 +2305,8 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Fully automatic or manual operation</li>
@@ -2375,8 +2377,8 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
@@ -2466,8 +2468,8 @@ const PlanoSection = () => {
                       </div>
                       <ul
                         className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
@@ -2529,8 +2531,8 @@ const PlanoSection = () => {
                     </div>
                     <ul
                       className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>Modulating diesel burner</li>
@@ -2578,8 +2580,8 @@ const PlanoSection = () => {
                     </div>
                     <ul
                       className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>EPA</li>
@@ -2812,8 +2814,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C4_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
@@ -2953,8 +2955,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_1
-                          ? "max-h-[650px] opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-[650px] opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         }`}
                     >
                       <div className="flex justify-between">
@@ -3060,8 +3062,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         }`}
                     >
                       <div className="flex justify-between">
@@ -3156,8 +3158,8 @@ const PlanoSection = () => {
                     </div>
                     <div
                       className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
+                        ? "max-h-96 opacity-1 mb-4"
+                        : "max-h-0 opacity-0"
                         }`}
                     >
                       <div className="flex justify-between">
