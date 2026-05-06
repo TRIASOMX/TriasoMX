@@ -5,6 +5,36 @@ import FPHPlanos from "./FPHPlanos";
 import { Image } from "astro:assets";
 import CardSectionResponsive from "../unitComponents/CardSectionResponsive.astro";
 import StackScroll from "./Stackscroll";
+import DropdownComponent from "../unitComponents/DropdownComponent.astro";
+import StackedInfoCards from "../unitComponents/StackedInfoCards.astro";
+import UltimaSeccion from "../DrumMixers/UltimaSeccion.astro";
+
+const cards = [
+  {
+    title: "Las microgotas sin quemar son un gran desperdicio de combustible.",
+    text: "",
+    bg: "#CF3B3B",
+    textColor: "#ffffff",
+  },
+  {
+    title: "La mezcla asfáltica se contamina con combustible sin quemar.",
+    text: "",
+    bg:"#14427C",
+    textColor: "#ffffff"
+  },
+  {
+    title: "Esta contaminación reduce significativamente la vida del pavimento.",
+    text: "",
+    bg: "#00840D",
+    textColor: "#ffffff"
+  },
+  {
+    title: "Los gases residuales contaminan fuertemente y muy visiblemente.",
+    text: "Pago de multas ambientales por operar equipos contaminantes.",
+    bg:"#393939",
+    textColor: "#ffffff"
+  }
+];
 ---
 
 <section class="w-full font-bold mt-20 flex flex-col">
@@ -31,154 +61,152 @@ import StackScroll from "./Stackscroll";
     <div class="w-full bg-[#272526] flex flex-col gap-10 relative py-10">
       <div class="max-w-7xl mx-auto px-8">
         <div
-            class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3"
-            id="cardRow0"
+          class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3"
+          id="cardRow0"
+        >
+          <!-- Card 1-A -->
+          <div
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+            data-card="0-0"
           >
-            <!-- Card 1-A -->
             <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="0-0"
+              class="w-full h-44 bg-black/10 flex items-center justify-center"
             >
-              <div
-                class="w-full h-44 bg-black/10 flex items-center justify-center"
-              >
-                <img src="https://placehold.co/600x400" alt="" />
-              </div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-              >
-                <span
-                  class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                >
-                  Caldera
-                </span>
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p class="text-white/75 text-xs leading-relaxed mt-2">
-                    Placeholder
-                  </p>
-                </div>
-              </div>
+              <img src="https://placehold.co/600x400" alt="" />
             </div>
 
-            <!-- Card 1-B -->
             <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="0-1"
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
             >
-              <div
-                class="w-full h-44 bg-black/10 flex items-center justify-center"
+              <span
+                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
               >
-                <img src="https://placehold.co/600x400" alt="" />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                Caldera
+              </span>
+              <button
+                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                aria-expanded="false"
               >
-                <span
-                  class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                <svg
+                  class="chevron w-3 h-3 transition-transform duration-300"
+                  viewBox="0 0 12 12"
+                  fill="none"
                 >
-                  Serpentines de caldera
-                </span>
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p class="text-white/75 text-xs leading-relaxed mt-2">
-                    Placeholder
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 1-C -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="0-2"
-            >
+                  <path
+                    d="M2 4l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"></path>
+                </svg>
+                mostrar más
+              </button>
               <div
-                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
               >
-                <img src="https://placehold.co/600x400" alt="" />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-              >
-                <span
-                  class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                >
-                  Quemador para calentamiento
-                </span>
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p class="text-white/75 text-xs leading-relaxed mt-2">
-                    Placeholder
-                  </p>
-                </div>
+                <p class="text-white/75 text-xs leading-relaxed mt-2">
+                  Placeholder
+                </p>
               </div>
             </div>
           </div>
+
+          <!-- Card 1-B -->
+          <div
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+            data-card="0-1"
+          >
+            <div
+              class="w-full h-44 bg-black/10 flex items-center justify-center"
+            >
+              <img src="https://placehold.co/600x400" alt="" />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+            >
+              <span
+                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+              >
+                Serpentines de caldera
+              </span>
+              <button
+                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                aria-expanded="false"
+              >
+                <svg
+                  class="chevron w-3 h-3 transition-transform duration-300"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                >
+                  <path
+                    d="M2 4l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"></path>
+                </svg>
+                mostrar más
+              </button>
+              <div
+                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+              >
+                <p class="text-white/75 text-xs leading-relaxed mt-2">
+                  Placeholder
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 1-C -->
+          <div
+            class="relative rounded-lg overflow-hidden group cursor-pointer"
+            data-card="0-2"
+          >
+            <div
+              class="w-full h-44 bg-black/10 flex items-center justify-center"
+            >
+              <img src="https://placehold.co/600x400" alt="" />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+            >
+              <span
+                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+              >
+                Quemador para calentamiento
+              </span>
+              <button
+                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                aria-expanded="false"
+              >
+                <svg
+                  class="chevron w-3 h-3 transition-transform duration-300"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                >
+                  <path
+                    d="M2 4l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"></path>
+                </svg>
+                mostrar más
+              </button>
+              <div
+                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+              >
+                <p class="text-white/75 text-xs leading-relaxed mt-2">
+                  Placeholder
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-          
     </div>
   </div>
 
   <div>
-    <StackScroll client:only/>
+    <StackScroll client:only />
   </div>
-
 
   <div class="w-full flex justify-center">
     <Image
@@ -193,31 +221,31 @@ import StackScroll from "./Stackscroll";
     />
   </div>
 
-  <div
-    class="w-full max-w-7xl mx-auto px-8 pb-10 flex flex-col justify-center items-center lg:justify-end lg:items-end"
-  >
-    <h2
-      class="text-2xl md:text-3xl font-bold text-redBg text-center lg:text-end"
+  <div>
+    <DropdownComponent
+      title="La importancia de usar precalentador de combustible en su planta de asfalto"
     >
-      Standard Equipment, No Added Cost
-    </h2>
-    <p
-      class="text-sm lg:text-lg md:text-lg font-thin lg:w-1/2 text-center lg:text-end"
-    >
-      Unlike other manufacturers that sell it as an upgrade, Triaso® includes
-      the fuel preheater as standard in all burner-equipped plants since 2014.
-      No extra charges—just smarter, more efficient combustion built in.
-    </p>
+      <p>
+        Los quemadores de plantas de asfalto están diseñados específicamente
+        para combustibles de baja viscosidad. El diésel, al tener baja
+        viscosidad, se quema de forma eficiente, pero tiene un costo elevado. En
+        cambio, mientras más económico es el combustible, mayor suele ser su
+        viscosidad, lo que dificulta su correcta combustión.
+      </p>
+    </DropdownComponent>
+  </div>
+
+  <div>
+    <StackedInfoCards
+    cards={cards}
+    mainTitle="Problemas causados por no precalentar los combustibles de bajo costo"
+    mainDescription="Los combustibles de bajo costo que no se precalientan provocan y agravan los siguientes problemas"/>
   </div>
 
   <FPHPlanos client:only />
   <!-- <CardSection /> -->
-  <CardSectionResponsive />
+  <UltimaSeccion />
 </section>
-
-
-
-
 
 <script>
   document
