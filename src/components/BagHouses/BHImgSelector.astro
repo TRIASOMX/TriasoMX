@@ -51,20 +51,21 @@ const tanksSlides = [
 
 <div class="w-full flex flex-col font-bold md:mt-20">
   <div class="w-full flex flex-col font-bold mt-10">
-    <div class="max-w-7xl px-8 mx-auto flex justify-center">
+    <div class="max-w-7xl px-8 mx-auto flex justify-start">
       <Image
         src={img2}
         alt="Baghouse"
-        class="hero-img md:w-4/5 lg:w-4/6 rounded-lg"
+        class="hero-img md:w-4/5 lg:w-[80%] rounded-lg"
         fetchpriority="high"
         loading="lazy"
       />
     </div>
     <div class="bg-[#393939]">
       <div
-        class="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center gap-6"
+        class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-2"
       >
-        <div class="w-full mt-10">
+        <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
+          <div class="w-full">
           <h2 class="text-[#f9f9f9] text-lg md:text-xl">
             Sistema de limpieza continua
           </h2>
@@ -78,12 +79,14 @@ const tanksSlides = [
             de las mangas.
           </p>
         </div>
-
+        </div>
         <div class="w-full hidden lg:flex md:w-auto">
           <Image
             src={img7}
+            width={600}
+            height={400}
             alt="Baghouse cleaning system"
-            class="side-img rounded-2xl will-change-transform w-4/5"
+            class="side-img rounded-2xl will-change-transform"
           />
         </div>
       </div>
@@ -222,14 +225,14 @@ const tanksSlides = [
   <div class="w-full bg-blueMain">
     <BHCustom />
   </div>
-  
+
   <div class="w-full px-4">
     <GallerySlider client:visible slides={tanksSlides} visibleThumbs={4} />
   </div>
 </div>
 
 <script>
-  import { initScrollAnimations } from "../../components/lib/scrollAnimations";
+  import { initScrollAnimations } from "../../components/DrumMixers/Contraflujo/Desamaq/scrollDesamaq";
 
   if (typeof window !== "undefined") {
     window.addEventListener("DOMContentLoaded", () => {

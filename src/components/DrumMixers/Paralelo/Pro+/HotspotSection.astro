@@ -1,6 +1,6 @@
 ---
 import DropdownItem from "../../../unitComponents/DropdownItem.astro";
-import Whatsbtn from "../../../unitComponents/Whatsbtn.astro"
+import Whatsbtn from "../../../unitComponents/Whatsbtn.astro";
 import SecondWhatsBtn from "../../../unitComponents/SecondWhatsBtn.astro";
 import poster from "../../../../../public/Videos/Webm/Posters/landing1.webp";
 import item1 from "../../../../assets/images/DrumMixers/a3.webp";
@@ -34,16 +34,13 @@ const ParaleloPro = [
           "Ahorro por menor desperdicio de mezcla fuera de especificación.",
       },
       {
-        label:
-          "Ahorro en costos de calibración y ajustes frecuentes.",
+        label: "Ahorro en costos de calibración y ajustes frecuentes.",
       },
       {
-        label:
-          "Ahorro en multas por operación ruidosa en zona urbanas.",
+        label: "Ahorro en multas por operación ruidosa en zona urbanas.",
       },
       {
-        label:
-        "Ahorro en combustible gracias a su asistencia de plasma."
+        label: "Ahorro en combustible gracias a su asistencia de plasma.",
       },
     ],
   },
@@ -155,31 +152,30 @@ const ParaleloPro = [
           <a
             href="/Contact"
             aria-label="Button to request a quote"
-            class=" border-white border text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-between gap-2 shadow-md"
+            class="border-white border text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-between gap-2 shadow-md"
           >
-          <div class="px-5 py-2">
-            <p>Solicitar una cotización</p>
-          </div>
-          <div class="px-5 py-2">
-            <svg
-              width="24px"
-              height="24px"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              color="#FFFFFF"
-            >
-              <!-- Icono del segundo botón (opcional) -->
-              <path
-                d="M5 12H19M19 12L12 5M19 12L12 19"
-                stroke="#FFFFFF"
+            <div class="px-5 py-2">
+              <p>Solicitar una cotización</p>
+            </div>
+            <div class="px-5 py-2">
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
                 stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path>
-            </svg>
-          </div>
-            
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                color="#FFFFFF"
+              >
+                <!-- Icono del segundo botón (opcional) -->
+                <path
+                  d="M5 12H19M19 12L12 5M19 12L12 19"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </div>
           </a>
         </div>
       </div>
@@ -276,16 +272,16 @@ const ParaleloPro = [
 </section>
 
 <!-- Animación -->
+
 <section>
-  <div
-    class="w-full flex flex-col font-bold mt-5 lg:mt-0"
-  >
+  <div class="w-full flex flex-col font-bold mt-5 lg:mt-0">
     <div class="max-w-7xl px-8 mb-10 lg:mb-28 mx-auto lg:pt-0">
       <h1 class="text-redBg text-xl lg:text-5xl md:text-5xl text-center">
         La única e inigualable.
       </h1>
     </div>
-    <div class="hidden max-w-7xl px-8 mx-auto lg:flex justify-center">
+
+    <div class="hidden max-w-7xl px-8 mx-auto lg:flex justify-start">
       <Image
         src={obracivil}
         alt="Drum mixer on a construction zone"
@@ -302,41 +298,44 @@ const ParaleloPro = [
 
     <div class="bg-[#1e1e1e]">
       <div
-      class="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center gap-6"
-    >
-      <div class="w-full mt-10">
-        <h2 class="text-white text-lg md:text-xl">
-          Diseñada para producciones exigentes y de gran volumen Fabricación
-          para un rendimiento sin comparación
-        </h2>
-        <p class="text-[#f3f3f5] text-sm lg:text-base md:text-base text-justify">
-          Fabricados con materiales de alta resistencia y componentes de larga
-          vida útil, estos tambores garantizan eficiencia energética superior y
-          una mezcla asfáltica de calidad consistente. Ideales para operaciones
-          exigentes, donde la confiabilidad de la planta es clave, sabiendo que
-          el desempeño de toda la operación depende directamente de la
-          confiabilidad del equipo.
-        </p>
-      </div>
-
-      <div class="w-full hidden lg:flex md:w-auto">
-        <Image
-          src={obracivil2}
-          alt="Drum mixer"
-          class="side-img rounded-2xl will-change-transform"
-        />
+        class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-2"
+      >
+        <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
+          <div class="w-full">
+            <h2 class="text-white text-lg md:text-xl">
+              Diseñada para producciones exigentes y de gran volumen fabricación
+              para un rendimiento sin comparación
+            </h2>
+            <p
+              class="text-[#f3f3f5] text-sm lg:text-base md:text-base text-justify"
+            >
+              Fabricados con materiales de alta resistencia y componentes de
+              larga vida útil, estos tambores garantizan eficiencia energética
+              superior y una mezcla asfáltica de calidad consistente. Ideales
+              para operaciones exigentes, donde la confiabilidad de la planta es
+              clave, sabiendo que el desempeño de toda la operación depende
+              directamente de la confiabilidad del equipo.
+            </p>
+          </div>
+        </div>
+        <div class="w-full hidden lg:flex md:w-auto">
+          <Image
+            src={obracivil2}
+            width={600}
+            height={400}
+            alt="Baghouse cleaning system"
+            class="side-img rounded-2xl will-change-transform"
+          />
+        </div>
       </div>
     </div>
-    </div>
-    
-
     <div
       class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"
     >
       <Image
         src={DMProv1}
         alt="Usage of a Drum mixer"
-        class="fade-img rounded-lg lg:w-3/5 will-change-transform"
+        class="fade-img rounded-lg lg:w-3/5"
       />
     </div>
 
@@ -344,18 +343,33 @@ const ParaleloPro = [
       class="relative grid grid-cols-2 max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
     >
       <Image src={obracivil2Low} alt="Drum mixer" class="rounded-2xl w-4/5" />
-
       <Image src={DMProv1} alt="Usage of a Drum mixer" class="rounded-lg" />
     </div>
   </div>
+
+  <div class="max-w-7xl mx-auto px-8 mt-20">
+    <div class="flex flex-col">
+      <h1 class="text-4xl">
+        Con <span class="italic font-bold">Triaso</span>
+      </h1>
+      <p class="font-bold text-[#14427c] text-3xl">
+        conviértase en el proveedor preferido de mezcla asfáltica
+      </p>
+      <p class="font-bold text-[#14427c] text-3xl">
+        en todos los proyectos de pavimentación de su región.
+      </p>
+    </div>
+  </div>
 </section>
+
+
 
 <section>
   <CasetaSeccion />
 </section>
 
 <script>
-  import { initScrollAnimations } from "../../../../components/DrumMixers/scrollAnimations";
+  import { initScrollAnimations } from "../../Contraflujo/Desamaq/scrollDesamaq";
 
   if (typeof window !== "undefined") {
     window.addEventListener("DOMContentLoaded", () => {
