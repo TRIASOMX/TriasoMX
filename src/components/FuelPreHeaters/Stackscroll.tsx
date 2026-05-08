@@ -88,6 +88,7 @@ const INDICATOR_COLORS = ["#ffffff", "#000000", "#000000", "#000000"];
 const DEPTH_SCALE_STEP = 0.035;
 const DEPTH_Y_STEP = 10;
 const SCRUB = 1.2;
+const MOBILE_BLUR_PX = 10;
 
 const depthStyle = (depth: number) => ({
   scale: 1 - depth * DEPTH_SCALE_STEP,
@@ -158,6 +159,8 @@ const ProductImage = ({ src, alt, sizes }: { src: string; alt: string; sizes: st
     <img src={src} alt={alt} className="w-full h-auto object-contain drop-shadow-2xl" />
   </div>
 );
+
+/* ====== DESKTOP CONTENT (sin cambios visibles) ====== */
 
 function VideoCardContent({ card }: { card: VideoCard }) {
   return (
@@ -256,10 +259,118 @@ function CardContent({ card }: { card: CardData }) {
   return <Renderer card={card} />;
 }
 
+/* ====== MOBILE CONTENT (nuevo) ======
+   - Imagen/video centrado y anclado al fondo de la tarjeta
+   - Texto se desliza desde abajo
+   - Al desplegarse el texto, se aplica blur al fondo (imagen)
+*/
+
+const MOBILE_BG: Record<CardData["type"], string> = {
+  video: "bg-black",
+  product: "bg-[#f2f2f0]",
+  feature: "bg-[#eeecea]",
+  protection: "bg-[#f5f5f3]",
+};
+
+function MobileCardContent({
+  card,
+  mediaRef,
+  textRef,
+}: {
+  card: CardData;
+  mediaRef: (el: HTMLDivElement | null) => void;
+  textRef: (el: HTMLDivElement | null) => void;
+}) {
+  const isVideo = card.type === "video";
+  const textColor = isVideo ? "text-white" : "text-gray-900";
+  const bodyColor = isVideo ? "text-white/80" : "text-gray-900";
+
+  return (
+    <div className={`relative w-full h-full overflow-hidden ${MOBILE_BG[card.type]}`}>
+      {/* Capa media anclada y centrada */}
+      <div
+        ref={mediaRef}
+        className="absolute inset-0 flex items-center justify-center will-change-[filter]"
+        style={{ filter: "blur(0px)" }}
+      >
+        {isVideo ? (
+          <video
+            src={(card as VideoCard).videoSrc}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <img
+            src={(card as ProductCard | FeatureCard | ProtectionCard).imageSrc}
+            alt={card.title}
+            className="max-w-[80%] max-h-[60%] object-contain drop-shadow-2xl"
+          />
+        )}
+      </div>
+
+      {/* Overlay oscurecedor sutil para el video */}
+      {isVideo && <div className="absolute inset-0 bg-black/40 pointer-events-none" />}
+
+      {/* Panel de texto que sube desde abajo */}
+      <div
+        ref={textRef}
+        className="relative inset-x-0 bottom-0 px-5 pt-6 pb-10 will-change-transform"
+        style={{
+          transform: "translateY(100%)",
+          opacity: 0,
+          background: isVideo
+            ? "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0) 100%)"
+            : "",
+        }}
+      >
+        <div className={textColor}>
+          {isVideo ? (
+            <HighlightTitle
+              title={card.title}
+              highlights={(card as VideoCard).highlightWords}
+              className="text-2xl font-black tracking-tight leading-tight"
+            />
+          ) : (
+            <h2 className="text-2xl font-black tracking-tight leading-tight">{card.title}</h2>
+          )}
+
+          {card.type === "feature" ? (
+            <>
+              {card.paragraphs.map((p, i) => (
+                <p key={i} className={`mt-3 text-sm leading-relaxed ${bodyColor}`}>
+                  {p}
+                </p>
+              ))}
+              {card.bullet && (
+                <ul className={`mt-3 list-disc list-inside text-sm ${bodyColor}`}>
+                  <li className="leading-relaxed">{card.bullet}</li>
+                </ul>
+              )}
+              {card.footer && (
+                <p className="mt-4 text-sm font-semibold text-gray-800">{card.footer}</p>
+              )}
+            </>
+          ) : (
+            <p className={`mt-4 text-sm leading-relaxed ${bodyColor}`}>
+              {(card as VideoCard | ProductCard | ProtectionCard).body}
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function StackScroll() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const dotsRef = useRef<(HTMLDivElement | null)[]>([]);
+  // refs específicos del layout móvil
+  const mobileMediaRef = useRef<(HTMLDivElement | null)[]>([]);
+  const mobileTextRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -290,6 +401,7 @@ export default function StackScroll() {
         gsap.set(dot, { height: i === 0 ? 32 : 8, opacity: i === 0 ? 1 : 0.4 })
       );
 
+      // === Stack scroll (igual para mobile y desktop) ===
       for (let i = 0; i < total - 1; i++) {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -308,6 +420,47 @@ export default function StackScroll() {
           tl.to(cards[j], { ...depthStyle(j - (i + 1)), ease: "none" }, 0);
         }
       }
+
+      // === Animaciones SOLO mobile: texto sube + blur en imagen ===
+      const mm = gsap.matchMedia();
+      mm.add("(max-width: 639px)", () => {
+        const medias = mobileMediaRef.current.filter(Boolean) as HTMLDivElement[];
+        const texts = mobileTextRef.current.filter(Boolean) as HTMLDivElement[];
+
+        const triggers: ScrollTrigger[] = [];
+
+        texts.forEach((textEl, i) => {
+          const mediaEl = medias[i];
+          if (!textEl || !mediaEl) return;
+
+          // Estado inicial
+          gsap.set(textEl, { yPercent: 100, opacity: 0 });
+          gsap.set(mediaEl, { filter: "blur(0px)" });
+
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: wrapperRef.current,
+              // Anima durante el primer 60% de la "ventana" de la tarjeta
+              start: `top+=${(i - 0.4) * window.innerHeight} top`,
+              end: `top+=${(i + 0.2) * window.innerHeight} top`,
+              scrub: SCRUB,
+            },
+          });
+
+          tl.to(textEl, { yPercent: 0, opacity: 1, ease: "none" }, 0)
+            .to(
+              mediaEl,
+              { filter: `blur(${MOBILE_BLUR_PX}px)`, ease: "none" },
+              0
+            );
+
+          if (tl.scrollTrigger) triggers.push(tl.scrollTrigger);
+        });
+
+        return () => {
+          triggers.forEach((t) => t.kill());
+        };
+      });
     }, wrapperRef);
 
     return () => ctx.revert();
@@ -327,7 +480,19 @@ export default function StackScroll() {
             className="absolute inset-0 w-full h-full overflow-hidden"
             style={{ willChange: "transform, border-radius" }}
           >
-            <CardContent card={card} />
+            {/* Desktop: layout original */}
+            <div className="hidden sm:block w-full h-full">
+              <CardContent card={card} />
+            </div>
+
+            {/* Mobile: nuevo layout con imagen anclada + texto que sube */}
+            <div className="lg:hidden md:hidden w-full h-full relative">
+              <MobileCardContent
+                card={card}
+                mediaRef={(el) => { mobileMediaRef.current[i] = el; }}
+                textRef={(el) => { mobileTextRef.current[i] = el; }}
+              />
+            </div>
           </div>
         ))}
 
