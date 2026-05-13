@@ -160,8 +160,6 @@ const ProductImage = ({ src, alt, sizes }: { src: string; alt: string; sizes: st
   </div>
 );
 
-/* ====== DESKTOP CONTENT (sin cambios visibles) ====== */
-
 function VideoCardContent({ card }: { card: VideoCard }) {
   return (
     <div className="relative w-full h-full flex items-center overflow-hidden">
@@ -259,11 +257,6 @@ function CardContent({ card }: { card: CardData }) {
   return <Renderer card={card} />;
 }
 
-/* ====== MOBILE CONTENT (nuevo) ======
-   - Imagen/video centrado y anclado al fondo de la tarjeta
-   - Texto se desliza desde abajo
-   - Al desplegarse el texto, se aplica blur al fondo (imagen)
-*/
 
 const MOBILE_BG: Record<CardData["type"], string> = {
   video: "bg-black",
@@ -319,10 +312,10 @@ function MobileCardContent({
         ref={textRef}
         className="relative inset-x-0 bottom-0 px-5 pt-6 pb-10 will-change-transform"
         style={{
-          transform: "translateY(100%)",
+          transform: "translateY(55%)",
           opacity: 0,
           background: isVideo
-            ? "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0) 100%)"
+            ? ""
             : "",
         }}
       >
@@ -401,7 +394,6 @@ export default function StackScroll() {
         gsap.set(dot, { height: i === 0 ? 32 : 8, opacity: i === 0 ? 1 : 0.4 })
       );
 
-      // === Stack scroll (igual para mobile y desktop) ===
       for (let i = 0; i < total - 1; i++) {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -421,7 +413,7 @@ export default function StackScroll() {
         }
       }
 
-      // === Animaciones SOLO mobile: texto sube + blur en imagen ===
+      // ANIMACIÓN MÓVIL
       const mm = gsap.matchMedia();
       mm.add("(max-width: 639px)", () => {
         const medias = mobileMediaRef.current.filter(Boolean) as HTMLDivElement[];
@@ -433,16 +425,14 @@ export default function StackScroll() {
           const mediaEl = medias[i];
           if (!textEl || !mediaEl) return;
 
-          // Estado inicial
           gsap.set(textEl, { yPercent: 100, opacity: 0 });
           gsap.set(mediaEl, { filter: "blur(0px)" });
 
           const tl = gsap.timeline({
             scrollTrigger: {
               trigger: wrapperRef.current,
-              // Anima durante el primer 60% de la "ventana" de la tarjeta
-              start: `top+=${(i - 0.4) * window.innerHeight} top`,
-              end: `top+=${(i + 0.2) * window.innerHeight} top`,
+              start: `top+=${(i - 0.3) * window.innerHeight} top`,
+              end: `top+=${(i + 0.1) * window.innerHeight} top`,
               scrub: SCRUB,
             },
           });
@@ -480,12 +470,9 @@ export default function StackScroll() {
             className="absolute inset-0 w-full h-full overflow-hidden"
             style={{ willChange: "transform, border-radius" }}
           >
-            {/* Desktop: layout original */}
             <div className="hidden sm:block w-full h-full">
               <CardContent card={card} />
             </div>
-
-            {/* Mobile: nuevo layout con imagen anclada + texto que sube */}
             <div className="lg:hidden md:hidden w-full h-full relative">
               <MobileCardContent
                 card={card}

@@ -292,20 +292,6 @@ const desamaqPanels2 = [
             />
           </div>
         </div>
-
-        <div class="max-w-7xl mx-auto px-8 mt-20">
-          <div class="flex flex-col">
-            <h1 class="text-4xl">
-              Con <span class="italic font-bold">Triaso</span>
-            </h1>
-            <p class="font-bold text-[#14427c] text-3xl">
-              conviértase en el proveedor preferido de mezcla asfáltica
-            </p>
-            <p class="font-bold text-[#14427c] text-3xl">
-              en todos los proyectos de pavimentación de su región.
-            </p>
-          </div>
-        </div>
       </section>
     </div>
 
@@ -352,10 +338,10 @@ const desamaqPanels2 = [
                   <p
                     class="text-[#f4f5f6] text-sm lg:text-lg md:text-lg text-justify"
                   >
-                    Fabricados con materiales de alta resistencia y componentes de
-                  larga vida útil, estos tambores garantizan eficiencia
-                  energética superior y una mezcla asfáltica de calidad
-                  consistente.
+                    Fabricados con materiales de alta resistencia y componentes
+                    de larga vida útil, estos tambores garantizan eficiencia
+                    energética superior y una mezcla asfáltica de calidad
+                    consistente.
                   </p>
                 </div>
               </div>
@@ -393,20 +379,6 @@ const desamaqPanels2 = [
               alt="Usage of a Drum mixer"
               class="rounded-lg"
             />
-          </div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-8 mt-20">
-          <div class="flex flex-col">
-            <h1 class="text-4xl">
-              Con <span class="italic font-bold">Triaso</span>
-            </h1>
-            <p class="font-bold text-[#14427c] text-3xl">
-              conviértase en el proveedor preferido de mezcla asfáltica
-            </p>
-            <p class="font-bold text-[#14427c] text-3xl">
-              en todos los proyectos de pavimentación de su región.
-            </p>
           </div>
         </div>
       </section>
@@ -483,7 +455,111 @@ const desamaqPanels2 = [
 </section>
 
 <!-- Otra sección  -->
+<section>
+  <div class="flex justify-center items-center py-10">
+    <h1 class="font-bold text-4xl text-center text-[#393939]">
+      Las mejores plantas de asfalto <br />
+      <span class="text-[#CA1C1C]"> son mexicanas </span>
+    </h1>
+  </div>
+
+  <div class="w-full flex flex-col font-bold mt-5 lg:mt-0">
+    <div class="hidden max-w-7xl px-8 mx-auto lg:flex justify-start">
+      <Image
+        src={obracivil}
+        alt="Drum mixer on a construction zone"
+        class="dhero-img lg:w-[80%] rounded-lg"
+      />
+    </div>
+    <div class="flex max-w-7xl px-8 mx-auto lg:hidden md:flex justify-center">
+      <Image
+        src={obracivil}
+        alt="Drum mixer on a construction zone"
+        class="lg:w-4/5 rounded-lg"
+      />
+    </div>
+
+    <div class="bg-[#14427c]">
+      <div
+        class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-2"
+      >
+        <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
+          <div class="w-full space-y-5">
+            <h2 class="text-[#f9f9f9] text-lg md:text-xl">
+              Diseñada para una inversión económica <br />
+              Fabricación para ofrecer una producción libre de problemas
+            </h2>
+            <p
+              class="text-[#f4f5f6] font-normal text-sm lg:text-lg md:text-lg text-justify"
+            >
+              Sabemos que las necesidades que debe satisfacer cada planta de
+              asfalto son completamente diferentes. Por eso, nuestras plantas
+              están diseñadas para adaptarse a los requerimientos de cada
+              producción única de mezcla asfáltica.
+            </p>
+            <p
+              class="text-[#f4f5f6] font-normal text-sm lg:text-lg md:text-lg text-justify"
+            >
+              Desde la fabricación, hasta materiales extra-reforzados,
+              fabricamos nuestras plantas para una operación continúa que mejora
+              la eficiencia y la seguridad del equipo, evitando paros
+              innecesarios y costos, cada componente tiene un propósito.
+            </p>
+          </div>
+        </div>
+        <div class="w-full hidden lg:flex md:w-auto">
+          <Image
+            src={obracivil2}
+            width={600}
+            height={400}
+            alt="Baghouse cleaning system"
+            class="dside-img rounded-2xl will-change-transform"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"
+    >
+      <Image
+        src={DMProv1}
+        alt="Usage of a Drum mixer"
+        class="dfade-img rounded-lg lg:w-3/5"
+      />
+    </div>
+
+    <div
+      class="relative grid grid-cols-2 max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
+    >
+      <Image src={obracivil2Low} alt="Drum mixer" class="rounded-2xl w-4/5" />
+      <Image src={DMProv1} alt="Usage of a Drum mixer" class="rounded-lg" />
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-8 mt-20">
+    <div class="flex flex-col">
+      <h1 class="text-4xl">
+        Con <span class="italic font-bold">Triaso</span>
+      </h1>
+      <p class="font-bold text-[#14427c] text-3xl">
+        conviértase en el proveedor preferido de mezcla asfáltica
+      </p>
+      <p class="font-bold text-[#14427c] text-3xl">
+        en todos los proyectos de pavimentación de su región.
+      </p>
+    </div>
+  </div>
+</section>
+
 <section class="max-w-7xl mx-auto px-8">
+  <SmartVideo
+    client:visible
+    src="/Videos/Webm/landingVideo.webm"
+    aspectRatio="16/9"
+    poster={poster.src}
+    autoplayOnMobile={false}
+    isLoop={false}
+  />
   <div
     class="bg-white py-8 px-2 md:px-20 rounded-2xl flex flex-col items-center justify-center my-11"
   >
@@ -559,15 +635,6 @@ const desamaqPanels2 = [
       </div>
     </div>
   </div>
-
-  <SmartVideo
-    client:visible
-    src="/Videos/Webm/landingVideo.webm"
-    aspectRatio="16/9"
-    poster={poster.src}
-    autoplayOnMobile={false}
-    isLoop={false}
-  />
 </section>
 
 <section>

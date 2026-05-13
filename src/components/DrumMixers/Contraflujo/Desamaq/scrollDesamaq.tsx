@@ -56,6 +56,55 @@ export function initScrollAnimations(): void {
     );
   });
 
+    gsap.fromTo(
+      ".dhero-img",
+      { scale: 1.0 },
+      {
+        scale: 1.1,
+        scrollTrigger: {
+          trigger: ".hero-img",
+          start: "top 90%",
+          end: "top 20%",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".dside-img",
+      { y: 200,
+        scale:1.2
+       },
+
+      {
+        scale:1.2,
+        y: 0,
+        scrollTrigger: {
+          trigger: ".side-img",
+          start: "top 85%",
+          end: "top 40%",
+          scrub: true,
+        },
+        ease: "none",
+      }
+    );
+
+    gsap.fromTo(
+      ".dfade-img",
+      { y: 60 },
+      {
+        y: -100,
+        scrollTrigger: {
+          trigger: ".fade-img",
+          start: "top 90%",
+          end: "top 40%",
+          scrub: true,
+        
+        },
+        ease: "none",
+      }
+    );
+
   gsap.fromTo(
     ".reveal",
     {
