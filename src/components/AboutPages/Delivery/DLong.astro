@@ -2,17 +2,18 @@
 import Logo from "../../../assets/logos/LogoTriasoMX.svg";
 import img1 from "../../../assets/images/ColdMix/CMHigh.webp"
 import img2 from "../../../assets/images/About/Delivery/Manual.webp";
+import hero2 from "../../../assets/images/About/Delivery/hero2.webp";
 import { Image } from "astro:assets";
 ---
 <section class="w-full bg-grisT flex flex-col gap-10 text-white">
     <div class="w-full relative">
         <div class="w-full max-w-7xl px-8 mx-auto py-10 z-40 relative">
             <h1 class="text-xl md:text-3xl font-bold">
-                Your long-term partner in asphalt solutions
+                Su socio a largo plazo en soluciones para asfalto.
             </h1><br>
             <p class="text-base md:text-lg font-thin">
-                Our factory is located in Durango, Mexico and we have manufacture and installed equipments all over the world.
-                Speak to us to give you a list of satisfied customers, with which you can see our equipments working.
+                Nuestra fábrica está ubicada en Durango y hemos fabricado e instalado equipos en todo el mundo.
+                Contáctenos para proporcionarle una lista de clientes satisfechos con los que podrá ver nuestros equipos en operación.
             </p>
         </div>
         <Image src={Logo} alt="TRIASO Logo" class="w-full absolute top-0 right-0 z-0">
@@ -23,9 +24,7 @@ import { Image } from "astro:assets";
         </div>
         <div >
             <p class="text-base md:text-lg font-thin">
-                We provide the most complete manual in the industry for the installation and maintenance of the equipment.
-                 You will be able to take charge of the subsequent installations and maintenance completely. Even so, we have
-                  technicians available to provide the service of subsequent relocations and maintenance.
+                Proporcionamos el manual más completo de la industria para la instalación y mantenimiento de los equipos. Usted podrá encargarse completamente de las instalaciones y mantenimientos posteriores. Aun así, contamos con técnicos disponibles para brindar el servicio de reubicaciones y mantenimiento posteriores.
             </p>
         </div>
     </div>
@@ -33,21 +32,23 @@ import { Image } from "astro:assets";
         <div class="w-full flex flex-col gap-6">
             <div class="w-3/4 md:pl-52 bg-redBg p-10 rounded-r-2xl">
                 <h2 class="text-xl md:text-3xl font-bold">
-                    100% manufactured in neighboring México
+                    100% fabricado en México
                 </h2>
             </div>
             <div class="w-full md:pl-52 bg-blueMain p-10 rounded-r-2xl">
                 <h2 class="text-xl md:text-3xl font-bold">
-                    Versatile Configurations
+                    Configuraciones versátiles.
                 </h2>
                 <p class="text-base md:text-lg font-thin">
-                    Triaso® equipment is designed to adapt seamlessly to your operational needs. Simply tell us your requirements,
-                     and we’ll customize the equipment to provide you with a tailored quote..
+                    Los equipos Triaso® están diseñados para adaptarse perfectamente a sus necesidades de operación. Simplemente indíquenos sus requerimientos y personalizaremos el equipo para proporcionarle una cotización a la medida.
                 </p>
             </div>
         </div>
         <div class="flex justify-center">
             <Image src={img1} alt="Bin units loaded onto trucks" class="w-4/5  rounded-lg">
         </div>
+    </div>
+     <div class="flex justify-center w-full">
+        <Image src={hero2} alt="Drum mixer loaded onto a truck" class="w-full" />
     </div>
 </section>
