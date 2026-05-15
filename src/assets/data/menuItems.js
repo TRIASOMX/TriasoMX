@@ -178,15 +178,15 @@ export const menuItems = [
         url: "/Spare",
       },
       {
-        title: "CUSTOM DESIGN",
+        title: "DISEÑO PERSONALIZADO",
         url: "/CustomDesign",
       },
       {
-        title: "MAINTENANCE",
+        title: "MANTENIMIENTO",
         url: "/Maintenance",
       },
       {
-        title: "REHABILITATION",
+        title: "REHABILITACIÓN",
         url: "/Rehabilitation",
       }
     ]
@@ -196,7 +196,7 @@ export const menuItems = [
     url: "/",
     children: [
       {
-        title: "ABOUT US",
+        title: "NOSOTROS",
         url: "/AboutUs",
       },
       {
@@ -204,7 +204,7 @@ export const menuItems = [
         url: "/Newsroom",
       },
       {
-        title: "ADVANTAGES",
+        title: "VENTAJAS",
         url: "/Advantages",
       },
       // {
@@ -212,23 +212,23 @@ export const menuItems = [
       //   url : "/",
       // },
       {
-        title: "AESTHETIC SIDE PANELS",
+        title: "PANELES ESTÉTICOS",
         url: "/AestheticSide",
       },
       {
-        title: "IMPROVMENT AND DESIGN",
+        title: "MEJORA Y DISEÑO",
         url: "/Improvement",
       },
       {
-        title: "MANUFACTURE",
+        title: "MANUFACTURA",
         url: "/Manufacture",
       },
       {
-        title: "DELIVERY AND INSTALLATION",
+        title: "ENTREGA E INSTALACIÓN",
         url: "/Delivery",
       },
       {
-        title: "SOME TIPS FOR BUYING AN EQUIPMENT",
+        title: "TIPS PARA COMPRAR UN EQUIPO",
         url: "/TipsAsphalt",
         children: [
           {

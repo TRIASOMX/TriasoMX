@@ -7,6 +7,7 @@ import img1 from "../../../assets/images/Maintenance/userManual.webp";
 import img2 from "../../../assets/images/Maintenance/maintenance1.webp";
 import img3 from "../../../assets/images/Maintenance/tolvas.webp";
 import { Image } from "astro:assets";
+import SecondWhatsBtn from "../../unitComponents/SecondWhatsBtn.astro";
 ---
 
 <section
@@ -14,7 +15,7 @@ import { Image } from "astro:assets";
 >
   <div class="w-full flex justify-center px-8">
     <div class="max-w-7xl w-full">
-      <h1 class="text-3xl md:text-4xl text-end">MAINTENANCE</h1>
+      <h1 class="text-3xl md:text-4xl text-start uppercase">Mantenimiento</h1>
     </div>
   </div>
   <br />
@@ -22,48 +23,53 @@ import { Image } from "astro:assets";
   <div class="w-full flex justify-center px-8">
     <div class="max-w-7xl">
       <p class="text-base md:text-lg">
-        Triaso’s maintenance services are designed to keep your equipment
-        operating at peak performance, minimizing downtime and maximizing
-        efficiency.
-        <br />Our team of expert technicians, operators, and engineers
-        meticulously inspects, services, and optimizes every component of your
-        asphalt plant.
+        Los servicios de mantenimiento de Triaso están diseñados para mantener
+        sus equipos operando al máximo desempeño, minimizando tiempos muertos y
+        maximizando la eficiencia.
+
+        <br />Nuestro equipo de técnicos, operadores e ingenieros expertos
+        inspecciona, da servicio y optimiza cada componente de su planta de
+        asfalto.
       </p>
     </div>
   </div>
   <div
     class="w-full bg-[url(/Gallery/drum-mixer.webp)] bg-cover bg-center h-[350px] md:h-[35vh] mt-16"
   >
-    <div class="w-full h-full flex justify-center bg-white/70 py-10">
+    <div class="w-full h-full flex justify-center bg-white/30 py-10">
       <div
         class="grid grid-cols-1 md:grid-cols-3 px-8 gap-10 justify-center items-center max-w-7xl h-full"
       >
         <div class="w-full col-span-1">
-          <Whatsbtn />
+          <SecondWhatsBtn />
         </div>
         <div class="col-span-1 md:col-span-2 w-full text-end">
-          <h1 class="text-2xl md:text-3xl text-black">24/7 CUSTOMER SERVICE</h1>
-          <h2 class="text-lg md:text-xl">
-            OUR TEAM IS AVAILABLE AROUND THE CLOCK, READY TO ASSIST YOU AT ANY
-            TIME, EVEN ON WEEKENDS AND HOLIDAYS.
+          <h1 class="text-2xl md:text-3xl text-black">
+            SERVICIO AL CLIENTE 24/7
+          </h1>
+          <h2 class="text-lg md:text-xl uppercase text-black">
+            Nuestro equipo está disponible todo el día, listo para asistirle en
+            cualquier momento, incluso fines de semana y días festivos.
           </h2>
         </div>
       </div>
     </div>
   </div>
-  <div class="w-full flex justify-center px-8 bg-blueMain py-6 md:py-16 text-white">
+  <div
+    class="w-full flex justify-center px-8 bg-blueMain py-6 md:py-16 text-white"
+  >
     <div class="max-w-7xl">
       <p class="text-sm md:text-lg">
-        Comprehensive phone support for maintenance and fault diagnosis is
-        available to all equipment owners—both original and
-        subsequent—throughout the product’s entire lifespan. Our experts are
-        ready to guide you through solutions and help ensure your asphalt plant
-        operates at peak efficiency for years to come.
+        Todos los propietarios de equipos, tanto originales como posteriores,
+        cuentan con soporte telefónico integral para mantenimiento y diagnóstico
+        de fallas durante toda la vida útil del producto. Nuestros expertos
+        están listos para guiarle en las soluciones y ayudarle a mantener su
+        planta de asfalto operando con la máxima eficiencia durante muchos años.
       </p><br />
       <p class="text-sm md:text-lg">
-        Additionally, we have a team of skilled technicians ready to provide
-        prompt on-site assistance for future relocations or servicing,
-        guaranteeing uninterrupted equipment performance.
+        Además, contamos con un equipo de técnicos capacitados listo para
+        brindar asistencia rápida en sitio para futuras reubicaciones o
+        servicios, garantizando un funcionamiento continuo del equipo.
       </p>
     </div>
   </div>
@@ -73,13 +79,20 @@ import { Image } from "astro:assets";
     <div
       class="w-full h-full bg-white/70 px-8 py-16 text-black flex justify-center"
     >
-      <div class="max-w-7xl flex flex-col justify-center">
-        <h1 class="text-2xl md:text-3xl">USER MANUAL</h1><br />
-        <p class="text-base md:text-lg">
-          We provide the most complete user manual in the industry for equipment
-          installation and maintenance. This allows you to independently handle
-          future installations and perform full maintenance with confidence.
-        </p><br />
+      <div
+        class="max-w-7xl flex flex-col lg:flex-row justify-center items-center"
+      >
+        <div class="flex flex-col space-y-2 w-1/2">
+          <h1 class="text-2xl md:text-3xl">Manual de usuario</h1>
+          <div class="w-72 h-0.5 bg-[#CA1C1C]"></div>
+          <p class="text-base md:text-lg">
+            Proporcionamos el manual de usuario más completo de la industria
+            para la instalación y mantenimiento de equipos. Esto le permite
+            encargarse de futuras instalaciones y realizar mantenimientos
+            completos de manera independiente y con confianza.
+          </p>
+        </div>
+
         <div class="flex justify-center items-center">
           <Image src={img1} alt="User Manuals" />
         </div>
@@ -88,7 +101,7 @@ import { Image } from "astro:assets";
   </div>
   <div class="w-full px-8 md:px-52 py-16">
     <h1 class="text-2xl md:text-3xl text-blueMain text-center">
-      Technical and Professional Focus
+      Enfoque técnico y profesional.
     </h1>
   </div>
   <div class="max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -98,7 +111,7 @@ import { Image } from "astro:assets";
     <div class="w-full col-span-1">
       <div class="w-full rounded-2xl bg-redBg p-8">
         <h2 class="text-white text-xl md:text-3xl">
-          Available anytime for immediate <br />equipment support
+          Disponible en todo momento para soporte inmediato del equipo.
         </h2>
       </div>
     </div>
@@ -108,29 +121,35 @@ import { Image } from "astro:assets";
   >
     <div class="w-full py-10 flex flex-col gap-3">
       <h2 class="font-bold text-blueMain text-lg md:text-xl">
-        Tailored upgrades
+        Actualizaciones a la medida
       </h2>
       <p class="font-thin text-base md:text-lg">
-        We evaluate your current setup and suggest only the upgrades that will
-        truly improve your plant’s performance, safety, and compliance.
+        Evaluamos su configuración actual y sugerimos únicamente las
+        actualizaciones que realmente mejorarán el desempeño, la seguridad y el
+        cumplimiento de su planta.
       </p>
       <h2 class="font-bold text-grisT text-lg md:text-xl">
-        Compatibility guaranteed
+        Compatibilidad garantizada
       </h2>
       <p class="font-thin text-base md:text-lg">
-        We adapt our solutions to fit your existing systems, regardless of the
-        original brand or age of the equipment.
+        Adaptamos nuestras innovaciones para integrarse con sus sistemas
+        existentes, sin importar la marca original o la antigüedad del equipo.
       </p>
       <h2 class="font-bold text-redBg text-lg md:text-xl">
-        Structural and mechanical reinforcements
+        Refuerzos estructurales y mecánicos
       </h2>
       <p class="font-thin text-base md:text-lg">
-        We rebuild worn-out parts, reinforce critical components, and install
-        updated systems to extend your equipment’s lifespan.
+        Reconstruimos partes desgastadas, reforzamos componentes críticos e
+        instalamos sistemas actualizados para extender la vida útil de sus
+        equipos.
       </p>
     </div>
     <div class="flex justify-center lg:justify-normal">
-      <Image src={img2} alt="TRIASO employee adjusting a gear" class="rounded-lg w-1/2 lg:w-full" />
+      <Image
+        src={img2}
+        alt="TRIASO employee adjusting a gear"
+        class="rounded-lg w-1/2 lg:w-full"
+      />
     </div>
   </div>
   <div class="max-w-7xl flex justify-center items-center pb-5">
@@ -147,21 +166,21 @@ import { Image } from "astro:assets";
         class="max-w-7xl h-full px-8 text-white text-sm md:text-lg relative z-20 justify-center flex flex-col items-center"
       >
         <p class="">
-          With a proactive approach to maintenance, we work to extend the
-          lifespan of your equipment and ensure consistent reliability.
+          Respaldados por nuestro departamento de control de calidad, diseño e
+          ingeniería, nuestros sistemas están diseñados para una operación
+          continua y duradera, brindándole la confianza de enfocarse en sus
+          proyectos sin interrupciones inesperadas.
         </p><br />
         <p class="">
-          Backed by rigorous quality control and advanced engineering
-          techniques, our systems are built for seamless, long-term
-          operation—giving you the confidence to focus on your projects without
-          unexpected interruptions
+          Trabajamos para extender la vida útil de sus equipos y garantizar una
+          confiabilidad constante.
         </p>
       </div>
     </div>
   </div>
   <div class="w-full text-center my-6 md:my-16">
     <h1 class="font-bold text-blueMain text-2xl md:text-3xl">
-      Triaso® Spare Parts
+      Refacciones Triaso®
     </h1>
   </div>
   <div class="w-full px-4 mb-16 flex justify-center">
@@ -172,18 +191,17 @@ import { Image } from "astro:assets";
         class="w-full h-full bg-black/70 text-white text-sm md:text-lg text-center flex flex-col justify-center items-center px-4 md:px-16 pt-5 lg:pt-0 rounded-2xl"
       >
         <p>
-          No other asphalt plant manufacturer in the world produces as many of
-          its own components as Triaso.
+          Ningún otro fabricante de plantas de asfalto en el mundo produce
+          tantos de sus propios componentes como Triaso.
         </p><br />
         <p>
-          This vertical integration allows us to offer unmatched service,
-          warranty coverage, and direct support—both from our factory in Mexico
-          and our distributor in the United States.
+          Esto nos permite ofrecer un servicio, respaldo y soporte directo
+          incomparables, desde nuestra fábrica en México.
         </p><br />
         <p>
-          We ship spare parts worldwide to ensure your production never stops.
-          Every part is backed by guaranteed quality, competitive pricing, and
-          fast delivery times.
+          Enviamos refacciones a todo el mundo para asegurar que su producción
+          nunca se detenga. Cada pieza cuenta con calidad garantizada, precios
+          competitivos y tiempos de entrega rápidos.
         </p>
         <div class="mt-6 md:mt-16 mb-10 lg:mb-0 flex justify-center">
           <LearnBtn href="/Spare" />
