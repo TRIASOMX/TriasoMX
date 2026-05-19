@@ -15,30 +15,30 @@ export default function FeatureCards() {
 
             {/* Contenido */}
             <h3 className="relative text-2xl mb-4 font-bold">
-              Real-time visualization
+              Visualización en tiempo real
             </h3>
 
             <p className="relative text-[#fffaea] font-medium leading-relaxed">
-              Every key variable instantly available, from consumption to temperatures.
+              Todas las variables clave disponibles al instante, desde consumos hasta temperaturas.
             </p>
           </div>
 
           <div className="relative rounded-2xl p-8 text-white overflow-hidden shadow-xl bg-gradient-to-br from-[#2b2be0] via-[#3b3bdc] to-[#1a1a1a]">
             <img src={img2.src} className="absolute right-28 bottom-0 w-40 h-40 pointer-events-none opacity-70" alt="Icono1" />
             <h3 className="text-2xl font-bold mb-4">
-              Automated control
+              Control automatizado
             </h3>
             <p className="text-[#fffaea] font-medium leading-relaxed">
-              Immediate corrective actions to keep operations within safe and efficient ranges.
+              Acciones correctivas inmediatas para mantener la operación dentro de rangos seguros y eficientes.
             </p>
           </div>
           <div className="relative rounded-2xl p-8 text-white overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#14145a] to-[#3b3bdc] shadow-xl">
             <img src={img3.src} className="absolute right-28 bottom-0 w-40 h-40 pointer-events-none opacity-80" alt="Icono1"/>
             <h3 className="text-2xl font-bold mb-4">
-              Remote cloud monitoring
+              Monitoreo remoto en la nube
             </h3>
             <p className="text-[#fffaea] font-medium leading-relaxed">
-              Access from any device, with reports and alerts always available.
+              Acceso desde cualquier dispositivo, con reportes y alertas siempre disponibles.
             </p>
           </div>
         </div>

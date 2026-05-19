@@ -68,14 +68,12 @@ export default function RelifSecondSection() {
                 <div className='flex flex-col md:flex-row lg:flex-row justify-around items-center gap-5'>
                     <img src={img2.src} alt="Triaso OS" className='w-full md:w-1/2 lg:w-1/2' />
                     <p ref={text1Ref} className='text-2xl font-bold'>
-                        For faster decision-making, better-founded, and completely independent of physical location.
+                        Para una toma de decisiones más rápida, mejor fundamentada y completamente independiente de la ubicación física.
                     </p>
                 </div>
                 <div className='flex flex-col md:flex-row lg:flex-row justify-around items-center pt-10'>
                     <p ref={text2Ref} className='text-2xl font-bold w-full lg:w-[35%] md:w-[35%] order-2 md:order-1 lg:order-1'>
-                        With multiple access points through
-                        the operation console,
-                        remote computers, tablets, and phones.
+                        Con múltiples puntos de acceso a través de la consola de operación, computadoras remotas, tablets y teléfonos.
                     </p>
                     <img src={img1.src} alt="Triaso OS" className='w-full md:w-1/2 lg:w-1/2 order-1 md:order-2 lg:order-2' />
                 </div>
@@ -84,7 +82,7 @@ export default function RelifSecondSection() {
             <div>
                 <div className='flex justify-center max-w-7xl mx-auto px-4 pt-10'>
                     <p className='text-white text-base font-medium w-full lg:w-[40%] md:w-[40%]'>
-                        All information is also stored securely in the cloud, providing fast, multi-user access for operators, supervisors, and owners —from remote computers, tablets, and mobile phones.
+                        Toda la información también se almacena de forma segura en la nube, permitiendo un acceso rápido y multiusuario para operadores, supervisores y propietarios, desde computadoras remotas, tablets y teléfonos móviles.
                     </p>
                 </div>
             </div>
@@ -96,13 +94,13 @@ export default function RelifSecondSection() {
             <div className='grid grid-cols-2 gap-4 max-w-7xl justify-around mx-auto px-4'>
                 <div className='w-full'>
                 <h1 className="text-3xl text-center font-bold bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
-                    Historical reports
+                    Reportes históricos
                 </h1>
                 </div>
 
                 <div className='w-full'>
                 <h1 className="text-3xl font-bold text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    Delivered hot-mix reports
+                    Reportes de mezcla asfáltica producida.
                 </h1>
                 </div>
             </div>
@@ -127,23 +125,29 @@ export default function RelifSecondSection() {
                     <div className="w-full bg-gradient-to-b from-[#05256d] to-[#5a85e8] py-12">
                         <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:gap-[34rem] ">
                             <ul className="text-white list-disc space-y-2 pl-6">
-                                <li>Cumulative production.</li>
-                                <li>Fuel consumption per ton produced.</li>
-                                <li>Times when the plant is on and producing.</li>
-                                <li>Averages for production and temperatures.</li>
-                                <li>Minimum and maximum values.</li>
-                                <li>Averages for asphalt and fuel consumption.</li>
-                                <li>Rates of production change to detect theft.</li>
-                                <li>Rates of change in asphalt and fuel levels.</li>
-                                <li>Alarms and events that occurred.</li>
+                                <li>Producción acumulada.</li>
+                                <li>Consumo de combustible por tonelada producida.</li>
+                                <li>Tiempos en que la planta está encendida y cuando la planta está produciendo.</li>
+                                <li>Promedios de producción y temperaturas.</li>
+                                <li>Valores mínimos y máximos de producción y temperaturas.</li>
+                                <li>Promedios de consumo de asfalto y combustible.</li>
+                                <li>Velocidades de cambio en la producción para detectar robos.</li>
+                                <li>Velocidades de cambio en niveles de asfalto y combustible para detectar robos.</li>
+                                <li>Alarmas y eventos ocurridos.</li>
                             </ul>
                             <ul className="text-white list-disc space-y-2 pl-6">
-                                <li>Historical reports for a selected period.</li>
-                                <li>Truck number, driver, and license plate.</li>
-                                <li>Start and end time of each load.</li>
-                                <li>Tons loaded.</li>
-                                <li>Average hot-mix temperature.</li>
-                                <li>Recipe of the delivered hot-mix.</li>
+                                <li>Reportes históricos para un periodo seleccionado.</li>
+                                <li>Mezcla total entregada</li>
+                                <li>Número de camión, operador y placas.</li>
+                                <li>Operador en turno de salida de mezcla.</li>
+                                <li>Hora de inicio y fin de cada carga.</li>
+                                <li>Toneladas cargadas.</li>
+                                <li>Temperatura promedio de la mezcla asfáltica entregada.</li>
+                                <li>Receta de la mezcla asfáltica entregada.</li>
+                                <ul className='list-disc pl-5'>
+                                    <li>Porcentajes, granulometría y humedad</li>
+                                </ul>
+                                
                             </ul>
                         </div>
                     </div>

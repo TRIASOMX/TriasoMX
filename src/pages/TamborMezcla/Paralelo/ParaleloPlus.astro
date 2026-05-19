@@ -14,6 +14,8 @@ import LavadoraSeccion from "../../../components/DrumMixers/LavadoraSeccion.astr
 import hero2 from "../../../assets/images/DrumMixers/Gallery/DM1.webp";
 import SliderParalelo from "../../../components/DrumMixers/SliderParalelo.astro";
 import UltimaSeccion from "../../../components/DrumMixers/UltimaSeccion.astro";
+import HeroImage from "../../../assets/images/DrumMixers/FlujoParalelo/Plus/HeroImage.webp"
+import HeroImage2 from "../../../assets/images/DrumMixers/FlujoParalelo/Plus/PlaCVL.webp"
 
 const cards = [
     {
@@ -48,9 +50,9 @@ const cards = [
         <HeroComponent
             title="Tambor de Flujo paralelo Plus"
             accentColor="#f4f5f6"
-            image="https://placehold.co/1920x1080/png"
+            image={HeroImage.src}
             imageAlt="Tambor de Contraflujo Desamaq"
-            altImage="https://placehold.co/600x400/png"
+            altImage={HeroImage2.src}
             descAltImage="placeholder"
         />
     </div>

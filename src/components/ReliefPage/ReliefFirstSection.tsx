@@ -116,13 +116,19 @@ export default function ReliefFirstSection() {
     <div className="mt-24">
       <div className="max-w-7xl px-8 mx-auto space-y-3 md:space-y-6 flex flex-col justify-center items-center pb-4 text-center relative z-10">
         <h1 className="text-4xl md:text-5xl font-bold text-[#383838]">
-          Asphalt Plant Control & Automation
+          Control, automatización y supervisión de plantas de asfalto
         </h1>
+        <div className="flex flex-row justify-center items-center">
+        <div className="w-40 h-0.5 bg-[#DE3B21]"></div>
+        <div className="w-40 h-0.5 bg-[#D9D9D9]"></div>
+        </div>
+
+
         <h2 className="text-2xl font-semibold text-[#393939]">
-          The Ultimate Automation Control & Supervision System
+          El sistema definitivo de control y supervisión de automatización
         </h2>
         <p className="text-xl font-semibold text-redBg ">
-          A practical and efficient way to achieve total control of your asphalt plant’s operations.
+          Una forma práctica y eficiente de mantener el control total de la operación de tu planta de asfalto
         </p>
 
         <div className="w-full flex justify-center py-2">
@@ -130,7 +136,7 @@ export default function ReliefFirstSection() {
         </div>
 
         <p className="font-medium text-sm lg:text-lg md:text-lg text-[#393939] text-start">
-          Offering a practical and efficient way to manage industrial equipment operations. With advanced monitoring and automation, it simplifies the control of key processes like temperature, material dosing, and production rates. Built to adapt to different setups, it ensures reliable performance while prioritizing safety and ease of use.
+          Ofrece una forma práctica y eficiente de gestionar el funcionamiento de los equipos industriales. Gracias a sus funciones avanzadas de monitoreo y automatización, simplifica el control de procesos clave como la temperatura, la dosificación de materiales y los ritmos de producción. Diseñado para adaptarse a diferentes configuraciones, garantiza un rendimiento confiable al tiempo que prioriza la seguridad y la facilidad de uso.
         </p>
 
         <div className="flex flex-col items-center gap-2 py-4">
@@ -194,15 +200,15 @@ export default function ReliefFirstSection() {
                   strokeLinecap="round"
                   strokeLinejoin="round"></path>
               </svg>
-              <p className="font-bold text-white text-xl">Cloud Historical Reports</p>
+              <p className="font-bold text-white text-xl">Reportes históricos en la nube</p>
             </div>
-            <div className="flex flex-col justify-center items-center w-[234.484px]">
+            <div className="flex flex-col justify-center items-center w-[320px]">
               <svg fill="#14427c" width="100" height="100" viewBox="0 0 256.00 256.00" xmlns="http://www.w3.org/2000/svg" stroke="#14427c" strokeWidth="0.00256"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#CCCCCC" strokeWidth="10.751999999999999"></g><g id="SVGRepo_iconCarrier"> <path d="M80.573 123L80.1 98.915C79.513 69.071 91.715 45.5 120 45.5l13.944.014c30.548.588 41.343 23.594 41.93 53.447l.473 24.039h7.646c4.416 0 8.007 3.586 8.007 8.01v84.98c0 4.43-3.585 8.01-8.007 8.01H72.007c-4.416 0-8.007-3.586-8.007-8.01v-84.98c0-4.43 3.585-8.01 8.007-8.01h8.566zm16.39 0h62.657c.033-5.473.104-12.555-.05-20.33l-.078-4.024c-.414-21.015-2.663-34.678-25.194-35.11l-12.405-.358c-28.124-.56-25.578 26.864-25.397 36.052l.08 4.024.387 19.746zM176 143.316c0-2.384-1.547-4.316-3.46-4.316H83.46c-1.911 0-3.46 1.936-3.46 4.316v60.368c0 2.384 1.547 4.316 3.46 4.316h89.08c1.911 0 3.46-1.936 3.46-4.316v-60.368z" fillRule="evenodd"></path> </g></svg>
-              <p className="font-bold text-white text-xl">Security and Reliability</p>
+              <p className="font-bold text-white text-xl text-center">Seguridad y confiabilidad</p>
             </div>
             <div className="flex flex-col justify-center items-center ">
               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path fill="none" stroke="#14437d" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 12c0-4.243 0-6.364 1.318-7.682C5.636 3 7.758 3 12 3c4.243 0 6.364 0 7.682 1.318C21 5.636 21 7.758 21 12c0 4.243 0 6.364-1.318 7.682C18.364 21 16.242 21 12 21c-4.243 0-6.364 0-7.682-1.318C3 18.364 3 16.242 3 12m4 3.625h3.5m3.25-5.5h3.5m-3.5-2.5h3.5m-10.5 1.25h2m0 0h2m-2 0v-2m0 2v2m5.35 6.25l1.414-1.414m0 0l1.415-1.414m-1.415 1.414L14.1 14.296m1.414 1.415l1.415 1.414" /></svg>
-              <p className="font-bold text-white text-xl">Automatic unit conversion</p>
+              <p className="font-bold text-white text-xl">Conversión automática de unidades</p>
             </div>
           </div>
 
@@ -300,7 +306,7 @@ export default function ReliefFirstSection() {
                     strokeLinecap="round"
                     strokeLinejoin="round"></path>
                 </svg>
-                <p className="font-bold text-white text-xl text-center">Artificial intelligence that protects your equipment</p>
+                <p className="font-bold text-white text-xl text-center">Inteligencia artificial que protege su equipo</p>
               </div>
 
             </div>
@@ -308,17 +314,17 @@ export default function ReliefFirstSection() {
           <div ref={rightFeaturesRef} className="flex flex-col space-y-8 items-center lg:items-start order-3">
             <div className="flex flex-col justify-center items-center">
               <svg fill="#14427c" width="100" height="100" viewBox="0 0 256.00 256.00" xmlns="http://www.w3.org/2000/svg" stroke="#14427c" strokeWidth="0.00256"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#CCCCCC" strokeWidth="10.751999999999999"></g><g id="SVGRepo_iconCarrier"> <path d="M80.573 123L80.1 98.915C79.513 69.071 91.715 45.5 120 45.5l13.944.014c30.548.588 41.343 23.594 41.93 53.447l.473 24.039h7.646c4.416 0 8.007 3.586 8.007 8.01v84.98c0 4.43-3.585 8.01-8.007 8.01H72.007c-4.416 0-8.007-3.586-8.007-8.01v-84.98c0-4.43 3.585-8.01 8.007-8.01h8.566zm16.39 0h62.657c.033-5.473.104-12.555-.05-20.33l-.078-4.024c-.414-21.015-2.663-34.678-25.194-35.11l-12.405-.358c-28.124-.56-25.578 26.864-25.397 36.052l.08 4.024.387 19.746zM176 143.316c0-2.384-1.547-4.316-3.46-4.316H83.46c-1.911 0-3.46 1.936-3.46 4.316v60.368c0 2.384 1.547 4.316 3.46 4.316h89.08c1.911 0 3.46-1.936 3.46-4.316v-60.368z" fillRule="evenodd"></path> </g></svg>
-              <p className="font-bold text-white text-xl">Fewer Operators Full Control</p>
+              <p className="font-bold text-white text-xl">Menos operadores, control total del sistema</p>
             </div>
 
             <div className="flex flex-col justify-center items-center w-[303px]">
               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 512 512"><path fill="#14437d" fillRule="evenodd" d="M213.333 42.667c41.238 0 74.667 33.429 74.667 74.666c0 39.863-31.238 72.43-70.57 74.556l-4.097.111c-41.237 0-74.666-33.429-74.666-74.667c0-39.862 31.238-72.43 70.57-74.556zM64 426.667h204.794A116.6 116.6 0 0 1 256.478 384H106.667v-34.133l.11-4.142c2.057-38.365 32.515-68.392 69.223-68.392h74.667l3.908.114c13.218.773 25.499 5.438 35.767 12.943a117.5 117.5 0 0 1 36.613-24.868c-19.998-19.144-46.814-30.855-76.288-30.855H176l-4.617.096C111.668 237.253 64 287.834 64 349.867zm117.333-309.334c0-17.673 14.327-32 32-32s32 14.327 32 32s-14.327 32-32 32s-32-14.327-32-32m192 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c53.02 0 96-42.981 96-96s-42.98-96-96-96m62.763 62.763l-84.095 84.094l-41.428-41.428l18.856-18.856l22.572 22.572l65.239-65.238z" clipRule="evenodd" /></svg>
-              <p className="font-bold text-white text-xl text-center">Unique Login for Each Operator on Shift</p>
+              <p className="font-bold text-white text-xl text-center">Inicio de sesión único para cada operador en turno</p>
             </div>
 
             <div className="flex flex-col justify-center items-center w-[303px]">
               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="#14437d"><g fill="none" stroke="#14437d" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"><path d="M3.5 4v13.5a3 3 0 0 0 3 3H20" /><path d="m6.5 15l4.5-4.5l3.5 3.5L20 8.5" /></g></svg>
-              <p className="font-bold text-white text-xl">Remote Cloud Monitoring</p>
+              <p className="font-bold text-white text-xl">Monitoreo remoto en la nube</p>
             </div>
           </div>
         </div>
