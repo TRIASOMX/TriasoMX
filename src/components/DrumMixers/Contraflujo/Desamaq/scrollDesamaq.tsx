@@ -17,6 +17,7 @@ export function initScrollAnimations(): void {
           start: "top 90%",
           end: "top 20%",
           scrub: true,
+          preventOverlaps: true
         },
       }
     );
@@ -35,6 +36,7 @@ export function initScrollAnimations(): void {
           start: "top 85%",
           end: "top 40%",
           scrub: true,
+          preventOverlaps: true
         },
         ease: "none",
       }
@@ -50,6 +52,7 @@ export function initScrollAnimations(): void {
           start: "top 90%",
           end: "top 40%",
           scrub: true,
+          preventOverlaps: true
         },
         ease: "none",
       }
@@ -66,6 +69,7 @@ export function initScrollAnimations(): void {
           start: "top 90%",
           end: "top 20%",
           scrub: true,
+          preventOverlaps: true
         },
       }
     );
@@ -84,6 +88,7 @@ export function initScrollAnimations(): void {
           start: "top 85%",
           end: "top 40%",
           scrub: true,
+          preventOverlaps: true
         },
         ease: "none",
       }
@@ -99,6 +104,7 @@ export function initScrollAnimations(): void {
           start: "top 90%",
           end: "top 40%",
           scrub: true,
+          preventOverlaps: true
         
         },
         ease: "none",
@@ -122,7 +128,8 @@ export function initScrollAnimations(): void {
         trigger: ".reveal",
         start: "top 90%",
         toggleActions: "play none none none",
-        scrub:true
+        scrub:true,
+        preventOverlaps: true
       },
     }
   );

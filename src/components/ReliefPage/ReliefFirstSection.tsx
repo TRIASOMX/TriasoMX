@@ -4,6 +4,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import img1 from "../../assets/images/Relief/MainPhoto.webp";
 import img2 from "../../assets/images/Relief/TriasoOS1.webp";
 import ScrollIndicator from "./ScrollIndicator";
+import DeviceShowcase from "./DeviceShowcase";
+import image1 from "../../assets/images/Relief/1.png";
+import image2 from "../../assets/images/Relief/2.png";
+import image3 from "../../assets/images/Relief/3.png";
+import image4 from "../../assets/images/Relief/4.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,55 +119,66 @@ export default function ReliefFirstSection() {
 
   return (
     <div className="mt-24">
-      <div className="max-w-7xl px-8 mx-auto space-y-3 md:space-y-6 flex flex-col justify-center items-center pb-4 text-center relative z-10">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#383838]">
-          Control, automatización y supervisión de plantas de asfalto
-        </h1>
-        <div className="flex flex-row justify-center items-center">
-        <div className="w-40 h-0.5 bg-[#DE3B21]"></div>
-        <div className="w-40 h-0.5 bg-[#D9D9D9]"></div>
+      <div className="flex flex-col justify-center items-center pb-4 text-center relative z-10">
+        <div className="max-w-7xl mx-auto space-y-3 px-8 flex flex-col justify-center items-center pb-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#383838]">
+            Control, automatización y supervisión de plantas de asfalto
+          </h1>
+          <div className="flex flex-row justify-center items-center">
+            <div className="w-40 h-0.5 bg-[#DE3B21]"></div>
+            <div className="w-40 h-0.5 bg-[#D9D9D9]"></div>
+          </div>
+
+
+          <h2 className="text-2xl font-semibold text-[#393939]">
+            El sistema definitivo de control y supervisión de automatización
+          </h2>
+          <p className="text-xl font-semibold text-redBg ">
+            Una forma práctica y eficiente de mantener el control total de la operación de tu planta de asfalto
+          </p>
         </div>
 
 
-        <h2 className="text-2xl font-semibold text-[#393939]">
-          El sistema definitivo de control y supervisión de automatización
-        </h2>
-        <p className="text-xl font-semibold text-redBg ">
-          Una forma práctica y eficiente de mantener el control total de la operación de tu planta de asfalto
-        </p>
-
-        <div className="w-full flex justify-center py-2">
-          <img src={img1.src} alt="Control System Dashboard" className="w-full lg:w-4/5 md:w-4/5 " />
+        <div className="w-full flex justify-center items-center py-2">
+          <DeviceShowcase
+            image1={image1.src}
+            image2={image2.src}
+            image3={image3.src}
+            image4={image4.src}
+          />
         </div>
 
-        <p className="font-medium text-sm lg:text-lg md:text-lg text-[#393939] text-start">
-          Ofrece una forma práctica y eficiente de gestionar el funcionamiento de los equipos industriales. Gracias a sus funciones avanzadas de monitoreo y automatización, simplifica el control de procesos clave como la temperatura, la dosificación de materiales y los ritmos de producción. Diseñado para adaptarse a diferentes configuraciones, garantiza un rendimiento confiable al tiempo que prioriza la seguridad y la facilidad de uso.
-        </p>
+        <div className="max-w-7xl mx-auto px-8 flex flex-col space-y-5">
+          <p className="font-medium text-sm lg:text-lg md:text-lg text-[#393939] text-start">
+            Ofrece una forma práctica y eficiente de gestionar el funcionamiento de los equipos industriales. Gracias a sus funciones avanzadas de monitoreo y automatización, simplifica el control de procesos clave como la temperatura, la dosificación de materiales y los ritmos de producción. Diseñado para adaptarse a diferentes configuraciones, garantiza un rendimiento confiable al tiempo que prioriza la seguridad y la facilidad de uso.
+          </p>
 
-        <div className="flex flex-col items-center gap-2 py-4">
-          <span
-            className="text-xs font-semibold tracking-widest uppercase"
-            style={{ color: "#14427c", letterSpacing: "0.1em" }}
-          >
-            Scroll
-          </span>
+          <div className="flex flex-col items-center gap-2 py-4">
+            <span
+              className="text-xs font-semibold tracking-widest uppercase"
+              style={{ color: "#14427c", letterSpacing: "0.1em" }}
+            >
+              Scroll
+            </span>
 
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6 9L12 15L18 9"
-              stroke="#14427c"
-              strokeWidth="2.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="#14427c"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
         </div>
+
 
       </div>
 
