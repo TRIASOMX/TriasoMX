@@ -120,7 +120,7 @@ export default function ReliefFirstSection() {
   return (
     <div className="mt-24">
       <div className="flex flex-col justify-center items-center pb-4 text-center relative z-10">
-        <div className="max-w-7xl mx-auto space-y-3 px-8 flex flex-col justify-center items-center pb-4 text-center">
+        <div className="max-w-7xl mx-auto space-y-3 px-8 flex flex-col justify-center items-center text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-[#383838]">
             Control, automatización y supervisión de plantas de asfalto
           </h1>
@@ -139,7 +139,7 @@ export default function ReliefFirstSection() {
         </div>
 
 
-        <div className="w-full flex justify-center items-center py-2">
+        <div className="w-full flex justify-center items-center">
           <DeviceShowcase
             image1={image1.src}
             image2={image2.src}
