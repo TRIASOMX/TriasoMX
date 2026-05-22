@@ -3,16 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import OdometerFlujo from "../../../components/DrumMixers/OdometerFlujo";
 import DrumMixPlanos from "../../../components/DrumMixers/DrumMixPlanos";
 import HeroComponent from "../../../components/unitComponents/HeroComponent.astro";
-import hero1 from "../../../../public/fabricaBG.webp";
 import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
-import OsDrumSection from "../../../components/DrumMixers/OsDrumSection.astro";
 import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
 import HotspotSection from "../../../components/DrumMixers/Paralelo/Desamaq/HotspotSection.astro";
 import SliderParalelo from "../../../components/DrumMixers/SliderParalelo.astro";
 import QuemadorSeccion from "../../../components/DrumMixers/Paralelo/Desamaq/QuemadorSeccion.astro";
 import LavadoraSeccion from "../../../components/DrumMixers/LavadoraSeccion.astro";
-import hero2 from "../../../assets/images/DrumMixers/Gallery/DM1.webp";
 import UltimaSeccion from "../../../components/DrumMixers/UltimaSeccion.astro";
+import Hero2 from "../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/FDesamac.webp"
 
 const cards = [
     {
@@ -49,7 +47,7 @@ const cards = [
             accentColor="#14427c"
             image="https://placehold.co/1920x1080/png"
             imageAlt="Tambor de Contraflujo Desamaq"
-            altImage="https://placehold.co/600x400/png"
+            altImage={Hero2.src}
             descAltImage="placeholder"
         />
     </div>

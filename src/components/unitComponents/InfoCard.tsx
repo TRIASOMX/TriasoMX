@@ -17,17 +17,18 @@ const InfoCard: React.FC<InfoCardProps> = ({ sections }) => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="flex lg:w-1/2 md:w-4/5 w-full bg-white rounded-md shadow-md overflow-hidden">
+      <div className="flex lg:w-2/5 md:w-3/5 w-full bg-white rounded-md shadow-md overflow-hidden">
         {/* Sidebar */}
         <div className="flex flex-col items-center bg-redBg text-white p-2 space-y-2">
           {sections.map((section, idx) => (
             <button
               key={section.id}
               onClick={() => setActiveIndex(idx)}
-              className={`w-8 h-12 flex items-center justify-center rounded-md transition-colors ${idx === activeIndex
+              className={`w-8 h-12 flex items-center justify-center rounded-md transition-colors ${
+                idx === activeIndex
                   ? "bg-redBg"
                   : "bg-gray-800 hover:bg-gray-700"
-                }`}
+              }`}
             >
               {section.label}
             </button>
@@ -40,7 +41,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ sections }) => {
             loading="lazy"
             src={sections[activeIndex].image}
             alt={sections[activeIndex].title}
-            className="w-full  object-cover"
+            className="w-full aspect-[16/9] object-cover"
           />
           <div className="p-4">
             <h2 className="text-lg font-semibold">

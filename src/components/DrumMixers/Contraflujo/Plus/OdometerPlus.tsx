@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
-import odoImg from "../../../../assets/images/DrumMixers/Contraflujo/cfDesamaqOdometer.webp";
+import odoImg from "../../../../assets/images/DrumMixers/Contraflujo/cfPlusOdometer.webp";
 import "odometer/themes/odometer-theme-default.css";
 
 const OdometerDesamaq = () => {

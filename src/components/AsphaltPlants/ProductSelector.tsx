@@ -1,7 +1,13 @@
 import { useState } from "react";
-import p1 from "../../assets/images/AsphaltPlant/Productos/1.png"
-import p2 from "../../assets/images/AsphaltPlant/Productos/2.png"
-import p3 from "../../assets/images/AsphaltPlant/Productos/3.png"
+//Contraflujo
+import p1 from "../../assets/images/DrumMixers/Contraflujo/CDesamac.webp"
+import p2 from "../../assets/images/DrumMixers/Contraflujo/Cplus.webp"
+import p3 from "../../assets/images/DrumMixers/Contraflujo/Cpro.webp"
+
+//Flujo paralelo
+import p4 from "../../assets/images/DrumMixers/FlujoParalelo/Desamaq/FDesamac.webp";
+import p5 from "../../assets/images/DrumMixers/FlujoParalelo/Plus/FPlus.webp";
+import p6 from "../../assets/images/DrumMixers/FlujoParalelo/Pro/FPpro.webp";
 
 //Opciones
 import hero1 from "../../assets/images/DrumMixers/Gallery/DM1.webp"
@@ -18,6 +24,7 @@ import maintenanceImg from "../../assets/images/AsphaltPlant/ImgModales/maintena
 import flancosImg from "../../assets/images/AsphaltPlant/ImgModales/FEPlaC_1.webp"
 import quemadorSil from "../../assets/images/AsphaltPlant/ImgModales/Silenciador.webp"
 import produccionImg from "../../assets/images/AsphaltPlant/ImgModales/segre1.webp"
+import plasmaImg from "../../assets/images/AsphaltPlant/ImgModales/PlasmaAsistido.webp"
 
 function cn(...classes: (string | false | null | undefined)[]): string {
     return classes.filter(Boolean).join(" ");
@@ -263,7 +270,7 @@ const data: Record<PlantType, PlantData> = {
         models: [
             {
                 name: "Desamaq",
-                image: p1.src,
+                image: p4.src,
                 description:
                     "Una opción más económica con configuraciones esenciales, sin comprometer la calidad de la mezcla.",
                 specs: [
@@ -279,7 +286,7 @@ const data: Record<PlantType, PlantData> = {
             },
             {
                 name: "Plus",
-                image: p2.src,
+                image: p5.src,
                 description: "Diseñada para un rendimiento superior con equipamiento avanzado.",
                 specs: [
                     { label: "Capacidad", value: "10 ton" },
@@ -293,7 +300,7 @@ const data: Record<PlantType, PlantData> = {
             },
             {
                 name: "Pro+",
-                image: p3.src,
+                image: p6.src,
                 description:
                     "Nuestro modelo más equipado y moderno, para una operación sin comparación.",
                 specs: [
@@ -431,7 +438,7 @@ export const symbols: Record<PlantType, Record<number, SymbolItem>> = {
             title: "Atomización molecular",
             description:
                 "El combustible se atomiza a nivel molecular logrando un gran ahorro de combustible y menos contaminantes.",
-            image: "https://placehold.co/600x400/png",
+            image: plasmaImg.src,
         },
 
         8: {
@@ -502,28 +509,28 @@ export const symbols: Record<PlantType, Record<number, SymbolItem>> = {
             title: "Estructuras robustas",
             description:
                 "Las estructuras robustas son muy necesarias en México por las malas condiciones de las carreteras y de los caminos rurales o brechas de acceso a los sitios.",
-            image: "https://placehold.co/600x400/png",
+            image: drumMixerImg.src,
         },
 
         2: {
             title: "Quemador de Aire Total",
             description:
                 "Los quemadores de 'Aire Total' ahorran combustible al tener una combustión más eficiente. Favor de ver la comparativa anexa.",
-            image: "https://placehold.co/600x400/png",
+            image: burnersImg.src,
         },
 
         3: {
             title: "Calentador de combustible",
             description:
                 "Calienta el combustible para menos viscosidad y quemarlo al 100%. Ahorra mucho combustible y no contamina la mezcla con residuos.",
-            image: "https://placehold.co/600x400/png",
+            image: fuelPreImg.src,
         },
 
         4: {
             title: "Inicio rápido de producción",
             description:
                 "El inicio de producción es más rápido cuando el elevador tiene bolas de mezcla endurecida del día anterior.",
-            image: "https://placehold.co/600x400/png",
+            image: produccionImg.src,
         },
 
         5: {
@@ -537,42 +544,42 @@ export const symbols: Record<PlantType, Record<number, SymbolItem>> = {
             title: "Atomización molecular",
             description:
                 "El combustible se atomiza a nivel molecular logrando un gran ahorro de combustible y menos contaminantes.",
-            image: "https://placehold.co/600x400/png",
+            image: plasmaImg.src,
         },
 
         7: {
             title: "Reducción de ruido",
             description:
                 "Silenciador en el quemador y álabes aerodinámicos en el extractor para reducir el ruido.",
-            image: "https://placehold.co/600x400/png",
+            image: quemadorSil.src,
         },
 
         8: {
             title: "Refuerzo estructural",
             description:
                 "Mejora la estética del tambor mezclador y refuerza adicionalmente la estructura.",
-            image: "https://placehold.co/600x400/png",
+            image: flancosImg.src,
         },
 
         9: {
             title: "Propietario del sistema operativo",
             description:
-                "Las casas de bolsas más grandes logran mejor filtrado debido a menor velocidad del aire.",
-            image: "Triaso puede modificar y adecuar el sistema a requerimiento del cliente.",
+                "Triaso puede modificar y adecuar el sistema a requerimiento del cliente.",
+            image: triasoImg.src,
         },
 
         10: {
             title: "Operación manual, adicional al computarizado",
             description:
                 "Las casas de bolsas más grandes logran mejor filtrado debido a menor velocidad del aire.",
-            image: "https://placehold.co/600x400/png",
+            image: bagHouseImg.src,
         },
         11: {
 
             title: "Tipo de garantía",
             description:
                 "Directa: La empresa vendedora garantiza, resuelve y reemplaza directamente todos los componentes de la planta y los suministrados por terceros. Indirecta: La empresa vendedora no garantiza ni reemplaza ningún componente. Hay que resolver la garantía con el fabricante de la planta o de los componentes.",
-            image: "https://placehold.co/600x400/png"
+            image: maintenanceImg.src,
         }
     },
 
@@ -692,7 +699,7 @@ export default function ProductSelector() {
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-[80%] h-32 object-contain drop-shadow-xl transition-transform duration-300 group-hover:scale-105"
+                                    className=" object-fill drop-shadow-xl transition-transform duration-300 group-hover:scale-105"
                                 />
                             </div>
 
@@ -701,12 +708,11 @@ export default function ProductSelector() {
                             )}
 
                             {/* Contenido */}
-                            <div className="flex flex-col items-center gap-6">
+                            <div className="flex flex-col items-center justify-start gap-6">
                                 <div className="flex-1 text-center">
                                     <h3
                                         className={cn(
-                                            "text-xl font-bold mb-3",
-                                            isActive ? "text-industrial" : "text-foreground"
+                                            "text-xl font-bold mb-3"
                                         )}
                                     >
                                         {item.title}
@@ -715,7 +721,7 @@ export default function ProductSelector() {
                                     <ul className="space-y-1">
                                         {item.features.map((f) => (
                                             <li key={f} className="text-sm text-muted-foreground flex items-start gap-2 justify-center">
-                                                <span className="text-industrial-accent mt-0.5">•</span>
+                                                <span className=" mt-0.5">•</span>
                                                 {f}
                                             </li>
                                         ))}
@@ -765,7 +771,7 @@ export default function ProductSelector() {
                             <img
                                 src={model.image}
                                 alt={model.name}
-                                className="w-full h-28 object-cover overflow-visible"
+                                className="w-full h-20 object-cover overflow-visible"
                                 loading="lazy"
                             />
                         </div>
