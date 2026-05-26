@@ -16,6 +16,14 @@ import obracivil2Low from "../../../../assets/images/DrumMixers/Low/obracivil2Lo
 import CasetaSeccion from "../Plus/CasetaSeccion.astro";
 import DropdownItem from "../../../unitComponents/DropdownItem.astro";
 
+import img1 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/TlvP317P268B.webp";
+import img2 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/ProvBU1.webp";
+import img3 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/DesamaqImg.webp";
+
+import img4 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/FirstImg.webp"
+import img5 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/SecondImg.webp"
+import img6 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/ThirdImg.webp"
+
 const desamaqPanels = [
   {
     title: "Producción y operación",
@@ -222,16 +230,16 @@ const desamaqPanels2 = [
         <div class="w-full flex flex-col font-bold mt-5 lg:mt-0">
           <div class="hidden max-w-7xl px-8 mx-auto lg:flex justify-start">
             <Image
-              src={obracivil}
+              src={img1}
               alt="Drum mixer on a construction zone"
-              class="hero-img lg:w-[80%] rounded-lg"
+              class="hero-img lg:w-[70%] rounded-lg"
             />
           </div>
           <div
             class="flex max-w-7xl px-8 mx-auto lg:hidden md:flex justify-center"
           >
             <Image
-              src={obracivil}
+              src={img1}
               alt="Drum mixer on a construction zone"
               class="lg:w-4/5 rounded-lg"
             />
@@ -259,7 +267,7 @@ const desamaqPanels2 = [
               </div>
               <div class="w-full hidden lg:flex md:w-auto">
                 <Image
-                  src={obracivil2}
+                  src={img2}
                   width={600}
                   height={400}
                   alt="Baghouse cleaning system"
@@ -269,27 +277,12 @@ const desamaqPanels2 = [
             </div>
           </div>
           <div
-            class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"
+            class="relative flex justify-center max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
           >
             <Image
-              src={DMProv1}
-              alt="Usage of a Drum mixer"
-              class="fade-img rounded-lg lg:w-3/5"
-            />
-          </div>
-
-          <div
-            class="relative grid grid-cols-2 max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
-          >
-            <Image
-              src={obracivil2Low}
+              src={img2}
               alt="Drum mixer"
-              class="rounded-2xl w-4/5"
-            />
-            <Image
-              src={DMProv1}
-              alt="Usage of a Drum mixer"
-              class="rounded-lg"
+              class="rounded-2xl"
             />
           </div>
         </div>
@@ -326,7 +319,7 @@ const desamaqPanels2 = [
         <div class="w-full flex flex-col font-bold mt-5 lg:mt-0">
           <div class="hidden max-w-7xl px-8 mx-auto lg:flex justify-start">
             <Image
-              src={obracivil}
+              src={img3}
               alt="Drum mixer on a construction zone"
               class="hero-img lg:w-[80%] rounded-lg"
             />
@@ -335,7 +328,7 @@ const desamaqPanels2 = [
             class="flex max-w-7xl px-8 mx-auto lg:hidden md:flex justify-center"
           >
             <Image
-              src={obracivil}
+              src={img3}
               alt="Drum mixer on a construction zone"
               class="lg:w-4/5 rounded-lg"
             />
@@ -364,7 +357,7 @@ const desamaqPanels2 = [
               </div>
               <div class="w-full hidden lg:flex md:w-auto">
                 <Image
-                  src={obracivil2}
+                  src={img2}
                   width={600}
                   height={400}
                   alt="Baghouse cleaning system"
@@ -373,29 +366,16 @@ const desamaqPanels2 = [
               </div>
             </div>
           </div>
-          <div
-            class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"
-          >
-            <Image
-              src={DMProv1}
-              alt="Usage of a Drum mixer"
-              class="fade-img rounded-lg lg:w-3/5"
-            />
-          </div>
 
           <div
-            class="relative grid grid-cols-2 max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
+            class="relative flex flex-col justify-center max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
           >
             <Image
-              src={obracivil2Low}
+              src={img2}
               alt="Drum mixer"
               class="rounded-2xl w-4/5"
             />
-            <Image
-              src={DMProv1}
-              alt="Usage of a Drum mixer"
-              class="rounded-lg"
-            />
+
           </div>
         </div>
 
@@ -589,14 +569,14 @@ const desamaqPanels2 = [
   <div class="w-full flex flex-col font-bold mt-5 lg:mt-0">
     <div class="hidden max-w-7xl px-8 mx-auto lg:flex justify-start">
       <Image
-        src={obracivil}
+        src={img4}
         alt="Drum mixer on a construction zone"
         class="dhero-img lg:w-[80%] rounded-lg"
       />
     </div>
     <div class="flex max-w-7xl px-8 mx-auto lg:hidden md:flex justify-center">
       <Image
-        src={obracivil}
+        src={img4}
         alt="Drum mixer on a construction zone"
         class="lg:w-4/5 rounded-lg"
       />
@@ -632,7 +612,7 @@ const desamaqPanels2 = [
         </div>
         <div class="w-full hidden lg:flex md:w-auto">
           <Image
-            src={obracivil2}
+            src={img5}
             width={600}
             height={400}
             alt="Baghouse cleaning system"
@@ -642,10 +622,10 @@ const desamaqPanels2 = [
       </div>
     </div>
     <div
-      class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"
+      class="max-w-7xl hidden  mx-auto lg:flex  lg:justify-start lg:items-center"
     >
       <Image
-        src={DMProv1}
+        src={img6}
         alt="Usage of a Drum mixer"
         class="dfade-img rounded-lg lg:w-3/5"
       />
@@ -654,8 +634,8 @@ const desamaqPanels2 = [
     <div
       class="relative grid grid-cols-2 max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
     >
-      <Image src={obracivil2Low} alt="Drum mixer" class="rounded-2xl w-4/5" />
-      <Image src={DMProv1} alt="Usage of a Drum mixer" class="rounded-lg" />
+      <Image src={img5} alt="Drum mixer" class="rounded-2xl w-4/5" />
+      <Image src={img6} alt="Usage of a Drum mixer" class="rounded-lg" />
     </div>
   </div>
 

@@ -1,12 +1,10 @@
 ---
-import Card from "../unitComponents/Card.astro";
-import oil1 from "../../assets/images/AsphaltPlant/oil1.webp";
-import { Image } from "astro:assets";
-import GallerySlider from "../unitComponents/GallerySlider";
-import ModalButton from "../unitComponents/ModalButton.astro";
-import hotoil from "../../assets/images/AsphaltStorage/hotoil.webp";
-import DirectFire from "../../assets/images/AsphaltStorage/DirectFire.webp";
-import VaporCondensers from "../../assets/images/AsphaltStorage/VaporCondensers.webp";
+import img1 from "../../assets/images/AsphaltStorage/SliderGalleryStorage/ATS4.webp";
+import img2 from "../../assets/images/AsphaltStorage/hotoil.webp";
+
+import img4 from "../../assets/images/AsphaltStorage/heatExchange.webp"
+import img5 from "../../assets/images/AsphaltStorage/VaporCondensers.webp";
+import img6 from "../../assets/images/AsphaltStorage/DirectFire.webp";
 
 import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 import Tred from "../../assets/images/AsphaltStorage/redT.webp";
@@ -130,7 +128,7 @@ const tanksSlides2 = [
               <div
                 class="w-full h-44 bg-black/10 flex items-center justify-center"
               >
-                <img src="https://placehold.co/600x400" alt="" />
+                <img src={img1.src} alt="" />
               </div>
 
               <div
@@ -176,7 +174,7 @@ const tanksSlides2 = [
               <div
                 class="w-full h-44 bg-black/10 flex items-center justify-center"
               >
-                <img src="https://placehold.co/600x400" alt="" />
+                <img src={img2.src} alt="" />
               </div>
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
@@ -293,7 +291,7 @@ const tanksSlides2 = [
             <div
               class="w-full h-44 bg-black/10 flex items-center justify-center"
             >
-              <img src="https://placehold.co/600x400" alt="" />
+              <img src={img4.src} alt="" />
             </div>
 
             <div
@@ -339,7 +337,7 @@ const tanksSlides2 = [
             <div
               class="w-full h-44 bg-black/10 flex items-center justify-center"
             >
-              <img src="https://placehold.co/600x400" alt="" />
+              <img src={img5.src} alt="" />
             </div>
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
@@ -384,7 +382,7 @@ const tanksSlides2 = [
             <div
               class="w-full h-44 bg-black/10 flex items-center justify-center"
             >
-              <img src="https://placehold.co/600x400" alt="" />
+              <img src={img6.src} alt="" />
             </div>
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"

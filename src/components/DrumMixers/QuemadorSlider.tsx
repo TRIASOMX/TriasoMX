@@ -143,7 +143,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
                   src={slide.image}
                   alt={slide.title}
                   draggable={false}
-                  className="absolute inset-0 w-full h-full object-contain p-8 z-0 transition-transform duration-500"
+                  className="absolute inset-0 w-full h-full object-contain p-8 z-0 transition-transform duration-500 "
                   style={{
                     transform: isExpanded
                       ? "scale(0.82) translateY(-6%)"
@@ -186,7 +186,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
                     opacity: isExpanded ? 1 : 0,
                   }}
                 >
-                  <p className="text-black/80 text-sm leading-relaxed">
+                  <p className="text-black text-sm leading-relaxed">
                     {slide.description}
                   </p>
                 </div>

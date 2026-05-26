@@ -16,11 +16,13 @@ function GridCard({
   expanded,
   onToggle,
   className = "",
+  forceContainOnLg = false,
 }: {
   item: GridItem;
   expanded: boolean;
   onToggle: () => void;
   className?: string;
+  forceContainOnLg?: boolean;
 }) {
   const fit = item.imageFit ?? "cover";
 
@@ -33,11 +35,11 @@ function GridCard({
         src={item.image}
         alt={item.title}
         draggable={false}
-        className="absolute inset-0 w-full h-full transition-transform duration-500"
+        className="absolute inset-0 w-full h-full transition-transform duration-500 rounded-2xl"
         style={{
-          objectFit: fit,
+          objectFit: forceContainOnLg ? "contain" : fit,
           objectPosition: "center",
-          padding: fit === "contain" ? "2rem" : "0",
+          padding: fit === "contain" || forceContainOnLg ? "0rem" : "0",
           transform: expanded ? "scale(0.9)" : "scale(1)",
         }}
       />
@@ -144,6 +146,7 @@ export default function ProductGrid({ items }: ProductGridProps) {
             expanded={expandedIndex === 3}
             onToggle={() => toggle(3)}
             className="h-full"
+            forceContainOnLg
           />
         </div>
       </div>
@@ -181,6 +184,7 @@ export default function ProductGrid({ items }: ProductGridProps) {
           expanded={expandedIndex === 3}
           onToggle={() => toggle(3)}
           className="col-start-1 col-end-4 row-start-6 row-end-8"
+          forceContainOnLg
         />
       </div>
     </div>

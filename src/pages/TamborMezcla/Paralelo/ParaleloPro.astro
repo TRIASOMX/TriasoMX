@@ -3,7 +3,7 @@ import Layout from "../../../layouts/Layout.astro";
 import OdometerFlujo from "../../../components/DrumMixers/OdometerFlujo";
 import DrumMixPlanos from "../../../components/DrumMixers/DrumMixPlanos";
 import HeroComponent from "../../../components/unitComponents/HeroComponent.astro";
-import hero1 from "../../../../public/fabricaBG.webp";
+import hero1 from "../../../assets/images/DrumMixers/FlujoParalelo/Pro/HeroImage.webp";
 import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
 import OsDrumSection from "../../../components/DrumMixers/OsDrumSection.astro";
 import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
@@ -47,7 +47,7 @@ const cards = [
     <div class="mt-10">
         <HeroComponent
             title="Tambor de Flujo paralelo Pro+"
-            image="https://placehold.co/1920x1080/png"
+            image={hero1.src}
             imageAlt="Tambor de Contraflujo Desamaq"
             altImage={hero2.src}
             descAltImage="placeholder"

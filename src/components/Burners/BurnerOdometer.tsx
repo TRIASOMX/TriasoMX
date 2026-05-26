@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
+import img1 from "../../assets/images/DrumMixers/Contraflujo/Pro+/Plasma.webp"
 
 const BurnerOdometer = () => {
     const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -88,8 +89,8 @@ const BurnerOdometer = () => {
                 </div>
 
                 <div className="flex flex-col items-center justify-center mx-auto gap-6 pt-10">
-                    <div className="w-4/6">
-                        <img src="https://placehold.co/600x400/png" alt="Bin Unit Odometer" className=" object-cover rounded-xl" />
+                    <div className="">
+                        <img src={img1.src} alt="Bin Unit Odometer" className=" rounded-xl" />
                     </div>
                     <a
                         href="#planosBinUnits"

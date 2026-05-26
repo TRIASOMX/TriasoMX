@@ -9,6 +9,9 @@ import Tred from "../../assets/images/AsphaltStorage/redT.webp";
 import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
 import slider1 from "../../assets/images/BagHouses/14.webp"
 import slider2 from "../../assets/images/BagHouses/BHProv7.webp"
+import slider3 from "../../assets/images/DrumMixers/Contraflujo/Pro+/Damper.webp"
+import slider4 from "../../assets/images/DrumMixers/Contraflujo/Pro+/Sensores.webp"
+import ATimage from "../../assets/images/DrumMixers/ATHero.webp"
 import SecondWhatsBtn from "../unitComponents/SecondWhatsBtn.astro";
 
 const gridItems = [
@@ -30,14 +33,14 @@ const gridItems = [
         title: "Apertura automática del damper",
         description:
             "El damper consiste en una serie de placas que al reducir su apertura varían el flujo de los gases de escape provenientes de la casa de bolsas. Para regular la temperatura de la mezcla y economizar combustible. Para regular la temperatura de la mezcla y economizar combustible. La apertura automática del damper se ajusta mediante el sistema de operación Triaso Relief™. Este sistema ajusta la apertura en función de la presión interna de la casa de bolsas, manteniendo un rango estable de diferencia de presión dentro de la casa de bolsas.",
-        image: "https://placehold.co/600x400/png",
+        image: slider3.src,
         imageFit: "cover",
     },
     {
         title: "Sensores de gases para monitoreo ambiental",
         description:
             "Sensores de gases para monitoreo ambiental continuo, enfocados en los principales contaminantes regulados por SEMARNAT para equipos industriales de combustión: Monóxido de carbono (CO) Material patriculado (PM) Óxidos de nitrógeno (NOx) Dióxido de azufre (SO₂) Oxígeno (O₂) para verificación de combustión y exceso de aire. Para no dejarse sorprender por lecturas amañadas para obligar el paro de la planta.",
-        image: "https://placehold.co/600x400/png",
+        image: slider4.src,
         imageFit: "cover",
     },
 ];
@@ -149,7 +152,7 @@ const gridItems = [
         <div class="py-10">
             <CardEmergente
                 title="La planta de asfalto más ecológica en el mercado"
-                image="https://placehold.co/600x400/png"
+                image={ATimage.src}
             >
                 <!-- CONTENIDO DEL MODAL -->
                 <div class="grid md:grid-cols-2 gap-6">

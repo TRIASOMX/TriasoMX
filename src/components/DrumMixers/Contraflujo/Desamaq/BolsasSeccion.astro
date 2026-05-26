@@ -10,6 +10,7 @@ import LearnBtnBlue from "../../../unitComponents/LearnBtnBlue.astro";
 import slider1 from "../../../../assets/images/BagHouses/14.webp"
 import slider2 from "../../../../assets/images/BagHouses/BHProv7.webp"
 import SecondWhatsBtn from "../../../unitComponents/SecondWhatsBtn.astro";
+import ATimage from "../../../../assets/images/DrumMixers/ATHero.webp"
 
 const gridItems = [
     {
@@ -134,22 +135,20 @@ const gridItems = [
 <!-- Sección de slider de casas de bolsas -->
 <section class="py-10">
     <div class="max-w-7xl mx-auto px-8">
-        <div class="py-10">
+        <div class="py-10 flex justify-center items-center">
             <h1
                 class="bg-gradient-to-r from-[#123480] to-[#4f79d9] bg-clip-text text-transparent font-bold text-3xl text-center lg:text-left"
             >
-                Componentes de larga vida útil para un <br />
-                desempeño duradero y un mejor retorno <br />
-                de inversión
+                Cada detalle tiene una razón.
             </h1>
         </div>
 
-        <GridBolsas items={gridItems} client:load />
+        <!-- <GridBolsas items={gridItems} client:load /> -->
 
         <div class="py-10">
             <CardEmergente
                 title="La planta de asfalto más ecológica en el mercado"
-                image="https://placehold.co/600x400/png"
+                image={ATimage.src}
             >
                 <!-- CONTENIDO DEL MODAL -->
                 <div class="grid md:grid-cols-2 gap-6">
@@ -236,7 +235,7 @@ const gridItems = [
 </section>
 <section>
     <div
-        class="relative bg-gradient-to-b from-[#c2d4ff] to-white text-center py-20 px-6
+        class="relative bg-gradient-to-b from-[#FFD958] to-[#FF964E] text-center py-20 px-6
               rounded-b-[60%]"
     >
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Agende una reunión</h2>

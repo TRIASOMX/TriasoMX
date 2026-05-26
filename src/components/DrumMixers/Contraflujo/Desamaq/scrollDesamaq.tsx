@@ -96,9 +96,11 @@ export function initScrollAnimations(): void {
 
     gsap.fromTo(
       ".dfade-img",
-      { y: 60 },
+      { y: 60 ,
+     
+      },
       {
-        y: -100,
+        y: -40,
         scrollTrigger: {
           trigger: ".fade-img",
           start: "top 90%",
