@@ -45,8 +45,17 @@ const Slides= [
     }
 ]
 ---
-<Layout title="Custom Design Page">
-    <CDFirstSection></CDFirstSection>
+<Layout title="Diseño y fabricación">
+    <CDFirstSection/>
+
+    <div class="max-w-7xl mx-auto px-8 flex flex-col justify-center items-center py-10">
+        <h1 class="font-bold text-center">
+            Antes de fabricar una sola pieza, trabajamos directamente con usted y su personal para entender su <br> operación, sus necesidades y su presupuesto. 
+        </h1>
+        <p class="text-[#14427C]">
+            El equipo que recibe es diseñado específicamente para usted.
+        </p>
+    </div>
     <div class="max-w-7xl mx-auto px-8">
         <GallerySlider client:only slides={Slides} visibleThumbs={4}></GallerySlider>
     </div>
