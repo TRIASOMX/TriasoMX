@@ -33,7 +33,7 @@ const SpareGallery = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="w-full mt-6 flex justify-center items-center">
-        <h1 className="font-bold text-xl lg:text-5xl md:text-5xl">GALLERY</h1>
+        <h1 className="font-bold text-xl lg:text-5xl md:text-5xl">GALERÍA</h1>
       </div>
       <div className="w-full px-4 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 py-10 max-w-7xl">
         {ItemGallery.map((element, i) => (

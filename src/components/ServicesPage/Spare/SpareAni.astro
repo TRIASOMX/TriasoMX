@@ -4,72 +4,158 @@ import Aro from "../../../assets/images/Service/Spare/aro.webp";
 import bandas from "../../../assets/images/Service/Spare/bandas.webp";
 import business from "../../../assets/images/Service/Spare/business.webp";
 import mixer from "../../../assets/images/AsphaltPlant/drum4.webp";
+import rodillos from "../../../assets/images/BinUnits/3.webp"
 import rodillo1 from "../../../assets/images/Service/Spare/rodillo1.webp";
 import { Image } from "astro:assets";
+import TwoColumnSection from "../../unitComponents/TwoColumnSection.astro";
+import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
 ---
 
-<section class="w-full flex flex-col justify-center items-center">
-  <div class="max-w-7xl px-8 mx-auto flex justify-center">
-    <Image
-      src={SpareCabin}
-      alt="Spare cabin"
-      class="hero-img lg:w-4/5 rounded-lg"
-    />
-  </div>
-  <div
-    class="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center gap-6"
-  >
-    <div class="w-full mt-10">
-      <h2 class="text-redBg font-bold text-xl md:text-2xl">
-        Any time, anywhere
-      </h2>
-      <p class="text-grisT font-bold text-base md:text-lg">
-        We guarantee the fastest response for spare parts. Our dedicated team is
-        always ready to support equipment users anywhere, at any time. With a
-        specialized spare parts hotline and an efficient logistics system, we
-        ensure deliveries in record time so your equipment keeps running without
-        delays.
-      </p>
+<section>
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="flex flex-col space-y-5 pt-5">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 justify-between items-center mx-auto"
+      >
+        <div class="flex flex-col space-y-3">
+          <h1 class="font-bold text-2xl lg:text-4xl">
+            Conocemos este negocio <br />
+            de principio a fin
+          </h1>
+
+          <div class="w-72 h-0.5 bg-[#CA1C1C]"></div>
+
+          <p>
+            Con más de 30 años de experiencia, entendemos <br />
+            exactamente lo que nuestros clientes necesitan.
+          </p>
+        </div>
+
+        <div>
+          <Image src={SpareCabin} alt="Spare cabin" class="rounded-2xl" />
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 justify-between items-center mx-auto"
+      >
+        <div
+          class="flex flex-col justify-start items-center lg:justify-end lg:items-end space-y-3 order-1 lg:order-2"
+        >
+          <h1 class="font-bold text-2xl lg:text-4xl text-start lg:text-end">
+            Somos mexicanos
+          </h1>
+
+          <div class="w-72 h-0.5 bg-[#00840D]"></div>
+
+          <p class="text-start lg:text-end lg:w-4/5">
+            Con Triaso usted tiene la ventaja que somos mexicanos, a unas horas
+            de distancia, lo que significa refacciones de menor costo y de
+            entrega inmediata, evitando costosos retrasos.
+            <br />
+            <span class="font-bold text-black"
+              >Stock cercano, soporte técnico el mismo día.</span
+            >
+          </p>
+        </div>
+
+        <div class="order-1 mx-auto">
+          <Image
+            src={Aro}
+            alt="Spare cabin"
+            class="rounded-2xl aspect-square object-cover"
+          />
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 justify-between items-center mx-auto"
+      >
+        <div class="flex flex-col space-y-3">
+          <h1 class="font-bold text-2xl lg:text-4xl">
+            En cualquier momento, <br />
+            en cualquier lugar.
+          </h1>
+
+          <div class="w-72 h-0.5 bg-[#CA1C1C]"></div>
+
+          <div class="lg:w-[90%]">
+            <p>
+              Garantizamos la respuesta más rápida en refacciones. Nuestro
+              equipo especializado siempre está listo para apoyar a los usuarios
+              de nuestros equipos en cualquier lugar y en cualquier momento. Con
+              una línea directa especializada en refacciones y un eficiente
+              sistema logístico, aseguramos entregas en tiempo récord para que
+              su equipo siga operando sin retrasos.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <Image src={business} alt="Spare cabin" class="rounded-2xl" />
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="w-full hidden lg:flex md:w-auto">
-      <Image
-        src={Aro}
-        alt="Ring"
-        class="side-img rounded-2xl will-change-transform"
-      />
-    </div>
+<section class="w-full flex flex-col">
+  <div class="pt-5">
+    <TwoColumnSection
+      leftBg="bg-blueMain"
+      rightBg="bg-redBg"
+      imageSrc={Tred.src}
+      imageAlt="Red T icon"
+      imageWidth="150px"
+    >
+      <div slot="left" class="flex flex-col justify-center gap-3">
+        <h1 class="text-xl md:text-2xl">Somos 100% mexicanos</h1>
+        <p class="text-sm lg:text-lg md:text-lg">
+          Con Triaso usted tiene la ventaja que somos mexicanos, a unas horas de
+          distancia, lo que significa refacciones de menor costo y de entrega
+          inmediata, evitando costosos retrasos.
+        </p>
+      </div>
+      <div slot="right" class="flex flex-col justify-center items-center gap-3">
+        <ul class="list-disc space-y-3">
+          <li>Atención técnica inmediata de fábrica.</li>
+          <li>Técnicos de fabrica para asistencia inmediata.</li>
+          <li>Refacciones de entrega inmediata.</li>
+          <li>Soporte postventa de fábrica continuo, cercano e inmediato.</li>
+        </ul>
+      </div>
+    </TwoColumnSection>
   </div>
 
   <div
-    class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"
+    class="w-full bg-[url(/hero2.webp)] bg-cover bg-center h-full md:h-[40vh]"
   >
-    <Image
-      src={bandas}
-      alt="Bin unit bands"
-      class="fade-img rounded-lg lg:w-3/5 will-change-transform"
-    />
+    <div class="h-full bg-[#14427C]/80 py-10">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-white font-bold text-lg lg:text-2xl">
+            En plantas de asfalto el tiempo muerto causa mayores costos que el
+            precio del equipo
+          </h1>
+          <p class="text-white font-normal text-lg lg:text-xl">
+            Tome en cuenta todos los equipos y costos detrás de su operación que
+            se detienen
+          </p>
+          <div class="lg:pl-5">
+            <ul class="list-disc space-y-3 text-white">
+              <li>Camiones</li>
+              <li>Payloaders</li>
+              <li>Jornales de trabajo</li>
+              <li>Personal indirecto</li>
+              <li>Penalizaciones por incumplimiento de obra o entrhas</li>
+              <li>Arranques y paros</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="relative flex flex-row px-8 gap-2 lg:hidden">
-    <Image src={Aro} alt="Ring" class="rounded-2xl w-1/2 object-contain" />
-
-    <Image
-      src={bandas}
-      alt="Bin unit bands"
-      class="rounded-2xl w-1/2 object-contain"
-    />
-  </div>
-
-  <div class="w-full px-8 md:px-52 text-center py-10 gap-3">
-    <h2 class="text-redBg font-bold text-2xl md:text-3xl">
-      We know this business inside out
-    </h2>
-    <h3 class="text-grisT font-normal text-lg md:text-2xl">
-      With over 30 years of experience, we understand exactly what our clients
-      need.
-    </h3>
-  </div>
   <div class="bg-gradient-to-b from-[#f4f5f6] to-[#383838] w-full h-[200px]">
   </div>
 
@@ -77,42 +163,44 @@ import { Image } from "astro:assets";
     class="bg-[#383838] w-full text-center flex flex-col pt-5 gap-2 md:gap-4"
   >
     <h2 class="text-[#fffaea] font-bold text-2xl md:text-3xl">
-      Guaranteed quality
+      Refacciones de terceros de fácil compra con proveedores en México.
     </h2>
-    <h2 class="text-[#fffaea] font-bold text-2xl md:text-3xl">Low prices</h2>
-    <h2 class="text-[#fffaea] font-bold text-2xl md:text-3xl">
-      Short delivery times
+    <h2 class="text-[#fffaea] font-normal text-2xl md:text-3xl">
+      Una broma muy usada por sobre Triaso es que "se pueden comprar en un
+      Oxxo".
     </h2>
   </div>
   <div
     class="bg-[#383838] w-full flex flex-col justify-center items-center px-8 py-10"
   >
     <div
-      class="w-full grid grid-cols-1 md:grid-cols-2 md:gap-10 py-10 max-w-7xl items-center"
+      class="w-full grid grid-cols-1 md:grid-cols-2 md:gap-10 py-10 max-w-7xl items-center space-y-3"
     >
       <div class="w-full">
         <Image
-          src={business}
-          alt="TRIASO employees"
-          class="w-3/4 md:w-full rounded-2xl"
+          src={bandas}
+          alt="TRIASO Bandas"
+          class="w-full rounded-2xl"
         />
       </div>
       <div
-        class="w-full text-base md:text-lg font-bold text-white h-full flex flex-col space-y-5 justify-center items-center"
+        class="w-full text-base md:text-lg font-bold text-white h-full flex flex-col space-y-5 justify-center"
       >
+        <h1 class="font-bold lg:text-start">
+          Refacciones propias fabricadas en México
+        </h1>
         <p>
-          No other asphalt plant manufacturer in the world produces as many of
-          its own components as Triaso.
+          Ningún otro fabricante de plantas de asfalto en el mundo produce
+          tantos de sus propios componentes como Triaso.
         </p>
         <p>
-          This in-house production allows us to offer superior service,
-          industry-leading warranties, and direct support from both our Mexican
-          manufacturing facility and our U.S. distributor.
+          Esta fabricación interna nos permite ofrecer un mejor servicio,
+          garantías incomparables y soporte directo tanto desde nuestra fábrica.
         </p>
         <p>
-          We ship spare parts worldwide to keep your operations running without
-          interruption. Every part is backed by certified quality, competitive
-          pricing, and fast delivery times.
+          Enviamos refacciones a todo el mundo para mantener sus operaciones
+          funcionando sin interrupciones. Cada pieza cuenta con calidad
+          certificada, precios bajos y tiempos de entrega rápidos.
         </p>
       </div>
     </div>
@@ -120,34 +208,31 @@ import { Image } from "astro:assets";
   <div class="w-full flex flex-col justify-center items-center">
     <div class="w-full grid grid-cols-1 md:grid-cols-2 max-w-[2400px]">
       <div class="w-full pl-4 md:pl-8 lg:pl-52 font-bold py-10 space-y-5">
-        <h1 class="text-2xl md:text-3xl text-blueMain">Triaso® Inventory</h1><br
-        />
+        <h1 class="text-2xl md:text-3xl text-blueMain">
+          Inventario Triaso®
+        </h1><br />
         <p class="text-base md:text-lg text-grisT">
-          At Triaso, we prioritize the reliability and performance of your
-          equipment by providing high-quality spare parts. Our well-stocked
-          warehouse in Durango, Mexico ensures fast and efficient response times
-          when you need parts quickly.
+          En Triaso, damos prioridad a la confiabilidad y desempeño de sus
+          equipos ofreciendo refacciones de alta calidad. Nuestro almacén
+          completamente abastecido en Durango, México, nos permite brindar
+          tiempos de respuesta rápidos y eficientes cuando necesita piezas con
+          urgencia.
         </p>
         <p class="text-base md:text-lg text-grisT">
-          With an advanced cataloging system, we can accurately identify and
-          supply the exact components you need. Whether you're looking for
-          standard parts or custom solutions, Triaso is ready to deliver.
+          Con un avanzado sistema de catalogación, podemos identificar y
+          suministrar con precisión los componentes exactos que necesita. Ya sea
+          que busque piezas estándar o soluciones personalizadas, Triaso está
+          listo para entregar.
         </p>
-        <div class="w-full flex lg:flex md:hidden">
-          <Image src={rodillo1} alt="Triaso Roller" />
-        </div>
       </div>
       <div class="w-full flex flex-col">
         <div class="w-full rounded-bl-2xl bg-redBg font-bold">
           <h1 class="text-2xl md:text-3xl text-white py-6 pl-6">
-            100% manufactured in-house
+            100% fabricado internamente
           </h1>
         </div>
-        <div class="w-full flex justify-end">
-          <Image src={mixer} alt="Drum Mixer" class="w-3/5" />
-        </div>
-        <div class="w-full hidden lg:hidden md:flex">
-          <Image src={rodillo1} alt="Triaso Roller" />
+        <div class="w-full flex justify-center">
+          <Image src={rodillos} alt="Drum Mixer" class="w-3/5" />
         </div>
       </div>
     </div>

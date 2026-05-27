@@ -4,9 +4,33 @@ import SpareFirst from "../components/ServicesPage/Spare/SpareFirst.astro";
 import SpareAni from "../components/ServicesPage/Spare/SpareAni.astro";
 import Layout from "../layouts/Layout.astro";
 import SpareGallery from "../components/ServicesPage/Spare/SpareGallery";
+import DiagonalHero from "../components/unitComponents/DiagonalHero.astro";
+
+import img1 from "../assets/images/Service/Spare/Gallery/SpareParts-04.webp";
+import img2 from "../assets/images/Service/Spare/Gallery/SpareParts-07.webp";
+import img3 from "../assets/images/Service/Spare/aro.webp";
+import img4 from "../assets/images/Service/Spare/Gallery/SpareParts-08.webp";
+import img5 from "../assets/images/Service/Spare/Gallery/SpareParts-05.webp"
+
+const panels = [
+  {
+    image: img1.src,
+    alt: "Spare parts",
+  },
+  { image: img2.src, alt: "Spare parts" },
+  { image: img3.src, alt: "Spare parts" },
+  { image: img4.src, alt: "Spare parts" },
+  { image:img5.src, alt:"Spare parts"}
+];
+
+
 ---
 
-<Layout title="Spare Page">
+<Layout title="Refacciones">
+    <div class="flex w-full">
+        <DiagonalHero panels={panels} skew={3} />
+    </div>
+    
     <SpareFirst />
     <CustomerBanner />
     <SpareAni />

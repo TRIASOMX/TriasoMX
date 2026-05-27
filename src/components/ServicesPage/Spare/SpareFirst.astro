@@ -3,34 +3,24 @@ import Boxes from "../../../assets/images/Boxes.webp";
 import { Image } from "astro:assets";
 ---
 
-<section
-  class="w-full flex flex-col justify-center items-center px-8 mt-20"
->
-  <div class="w-full flex flex-col items-end max-w-7xl">
-    <h1 class="text-3xl md:text-5xl font-bold text-grisT">SPARE PARTS</h1>
-    <div class="mt-4 mb-6 flex self-end">
-      <div class="w-28 lg:w-44 h-0.5 bg-[#393939]"></div>
-      <div class="w-28 lg:w-44 h-0.5 bg-[#393939]"></div>
-    </div>
+<section class="w-full flex flex-col justify-center items-center px-8 mt-10 space-y-3">
+  <div class="w-full flex flex-col items-start max-w-7xl space-y-2">
+    <h1 class="text-3xl md:text-5xl font-bold text-grisT">Refacciones</h1>
+    <div class="w-28 lg:w-72 h-0.5 bg-[#393939]"></div>
   </div>
   <div class="w-full flex flex-col gap-10 font-bold max-w-7xl">
     <p class="text-base md:text-lg text-grisT">
-      Triaso spare parts are precisely engineered to deliver optimal
-      performance, extending both component lifespan and overall equipment
-      durability. With unmatched quality and reliability, they help maintain
-      peak efficiency while minimizing downtime. <br />
-      We understand the importance of keeping your equipment running non-stop. The
-      operation of many other machines depends on the reliability of your asphalt
-      plant. <br />
-      Strict quality control ensures the operation of your asphalt plant with low
-      maintenance for many years.
+      Las refacciones Triaso son fabricadas con precisión para ofrecer un
+      desempeño óptimo, prolongando la vida útil de los componentes y del equipo
+      en general. Con una calidad y confiabilidad incomparables, aseguramos
+      mantener la máxima eficiencia mientras minimizan el tiempo de inactividad.
+      <br />
+      Entendemos la importancia de mantener su equipo funcionando sin interrupciones.
+      La operación de muchas otras máquinas depende de la confiabilidad de su planta
+      de asfalto.
+      <br />
+      Estricto control de calidad que garantiza la operación de su planta de asfalto
+      con bajo mantenimiento durante muchos años.
     </p>
-    <div class="w-full flex justify-center">
-      <Image
-        src={Boxes}
-        alt="Boxes with the TRIASO logo"
-        class="w-3/4 rounded-2xl"
-      />
-    </div>
   </div>
 </section>

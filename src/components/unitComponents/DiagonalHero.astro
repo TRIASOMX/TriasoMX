@@ -1,0 +1,91 @@
+---
+interface Panel {
+    image: string;
+    alt: string;
+}
+
+interface Props {
+    panels: Panel[];
+    skew?: number;
+}
+
+const { panels, skew = 6 } = Astro.props;
+---
+
+<section class="diagonal-hero">
+    {
+        panels.map((panel, i) => (
+            <div
+                class="panel"
+                style={`background-image: url('${panel.image}');`}
+                data-index={i}
+                role="img"
+                aria-label={panel.alt}
+            />
+        ))
+    }
+</section>
+
+<style define:vars={{ skew: `${skew}` }}>
+    .diagonal-hero {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .panel {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.4s ease;
+        will-change: transform;
+    }
+
+    .panel:hover {
+        transform: scale(1.03);
+        z-index: 10;
+    }
+</style>
+
+<script>
+    const hero = document.querySelector(".diagonal-hero") as HTMLElement;
+    const panels = Array.from(document.querySelectorAll<HTMLElement>(".panel"));
+    const skew = parseFloat(hero?.style.getPropertyValue("--skew") || "6");
+
+    function applyLayout() {
+        const W = hero.offsetWidth;
+        const H = hero.offsetHeight;
+        const n = panels.length;
+        const sliceW = W / n;
+        const skewPx = (skew / 100) * W;
+        const overlap = skewPx * 0.9;
+
+        panels.forEach((p, i) => {
+            const left = i * sliceW - (overlap * i) / (n - 1 || 1);
+            const width = sliceW + overlap;
+
+            let clip: string;
+
+            if (i === 0) {
+                // Primer panel: rectángulo normal pero con diagonal solo en el lado derecho
+                clip = `polygon(0 0, ${width}px 0, ${width - skewPx}px ${H}px, 0 ${H}px)`;
+            } else if (i === n - 1) {
+                // Último panel: diagonal en el lado izquierdo, derecho recto
+                clip = `polygon(${skewPx}px 0, ${width}px 0, ${width}px ${H}px, 0 ${H}px)`;
+            } else {
+                clip = `polygon(${skewPx}px 0, ${width}px 0, ${width - skewPx}px ${H}px, 0 ${H}px)`;
+            }
+
+            p.style.left = `${left}px`;
+            p.style.width = `${width}px`;
+            p.style.clipPath = clip;
+        });
+    }
+
+    applyLayout();
+    window.addEventListener("resize", applyLayout);
+</script>

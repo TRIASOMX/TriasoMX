@@ -174,7 +174,7 @@ export const menuItems = [
     url: "/",
     children: [
       {
-        title: "SPARE PARTS",
+        title: "REFACCIONES",
         url: "/Spare",
       },
       {
