@@ -1,0 +1,714 @@
+---
+import { Image } from "astro:assets";
+import LearnBtn from "../unitComponents/LearnBtn.astro";
+---
+
+<section>
+    <div class="w-full flex flex-col font-bold mt-5 lg:mt-0">
+        <div class="hidden w-full mx-auto max-w-7xl px-8 lg:flex">
+            <Image
+                src="https://placehold.co/800x400/png"
+                width={800}
+                height={400}
+                alt="Drum mixer on a construction zone"
+                class="hero-img rounded-lg"
+            />
+        </div>
+
+        <div
+            class="flex max-w-7xl px-8 mx-auto lg:hidden md:flex justify-center"
+        >
+            <Image
+                src="https://placehold.co/1920x720/png"
+                width={1920}
+                height={720}
+                alt="Drum mixer on a construction zone"
+                class="lg:w-4/5 rounded-lg"
+            />
+        </div>
+
+        <div class="bg-[#393939]">
+            <div
+                class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-2"
+            >
+                <div class="flex flex-col gap-6 lg:w-[40%]">
+                    <div
+                        class="w-full flex flex-col justify-center items-center space-y-3"
+                    >
+                        <h1 class="text-[#f9f9f9] text-lg md:text-xl">
+                            Ecológia
+                        </h1>
+                        <h1 class="text-[#f9f9f9] text-lg md:text-xl">
+                            Economía
+                        </h1>
+                        <h1 class="text-[#f9f9f9] text-lg md:text-xl">
+                            Sustentabilidad
+                        </h1>
+                    </div>
+
+                    <div>
+                        <p
+                            class="text-[#f4f5f6] text-sm lg:text-lg md:text-lg font-normal text-justify"
+                        >
+                            El incorporador de hule es una opción ecológica para
+                            darle un segundo uso a las llantas, aprovechando su
+                            composición ligante para la producción de mezcla
+                            asfáltica, reduciendo el consumo de asfalto liquido,
+                            economizando la mezcla asfáltica.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full hidden lg:flex md:w-auto">
+                    <Image
+                        src="https://placehold.co/600x400/png"
+                        width={600}
+                        height={400}
+                        alt="Baghouse cleaning system"
+                        class="side-img rounded-2xl will-change-transform"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-8 py-10 space-y-5">
+    <div class="flex justify-center items-center">
+        <img
+            src="https://placehold.co/1920x1080/png"
+            alt="Placehold"
+            class="rounded-2xl"
+        />
+    </div>
+
+    <div
+        class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-6 items-stretch"
+    >
+        <div class="flex flex-col items-center justify-between h-[136px]">
+            <svg
+                fill="#ca1c1c"
+                width="128"
+                height="128"
+                viewBox="0 0 32 32"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                    <title>number10</title>
+                    <path
+                        d="M16 3c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13-5.82-13-13-13zM17.757 22.536h-2.469v-9.305c-0.901 0.841-1.964 1.463-3.188 1.867v-2.234c0.644-0.211 1.344-0.612 2.099-1.202s1.273-1.278 1.555-2.064h2.003v12.938z"
+                    ></path>
+                </g></svg
+            >
+
+            <p class="text-center leading-tight">
+                Carga de <br />
+                CRM en tolva
+            </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-between h-[136px]">
+            <svg
+                fill="#c91c1c"
+                width="128"
+                height="128"
+                viewBox="0 0 32 32"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                    <title>number11</title>
+                    <path
+                        d="M16 3c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13-5.82-13-13-13zM20.342 20.426v2.297h-8.656c0.093-0.867 0.374-1.688 0.843-2.465 0.468-0.776 1.393-1.807 2.774-3.090 1.111-1.037 1.793-1.74 2.045-2.109 0.34-0.51 0.51-1.014 0.51-1.512 0-0.551-0.147-0.975-0.441-1.271s-0.7-0.444-1.219-0.444c-0.512 0-0.92 0.156-1.223 0.467s-0.478 0.827-0.523 1.549l-2.469-0.247c0.146-1.359 0.605-2.335 1.378-2.928s1.739-0.888 2.898-0.888c1.27 0 2.268 0.343 2.994 1.028s1.089 1.538 1.089 2.557c0 0.58-0.104 1.132-0.312 1.656s-0.537 1.074-0.988 1.647c-0.299 0.38-0.839 0.929-1.621 1.644-0.781 0.714-1.276 1.188-1.484 1.422s-0.376 0.463-0.505 0.686h4.91z"
+                    ></path>
+                </g></svg
+            >
+
+            <p class="text-center leading-tight text-[14px]">
+                Sobrecalentamiento de CRM en tanque de reacción
+            </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-between h-[136px]">
+            <svg
+                fill="#c91c1c"
+                width="128"
+                height="128"
+                viewBox="0 0 32 32"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                    <title>number12</title>
+                    <path
+                        d="M16 3c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13-5.82-13-13-13zM18.995 21.357c-0.826 0.797-1.854 1.194-3.086 1.194-1.166 0-2.133-0.335-2.9-1.005-0.769-0.67-1.214-1.545-1.337-2.627l2.391-0.289c0.076 0.607 0.281 1.071 0.616 1.393 0.333 0.321 0.738 0.482 1.213 0.482 0.51 0 0.939-0.194 1.289-0.582 0.348-0.387 0.522-0.909 0.522-1.566 0-0.621-0.167-1.115-0.501-1.479-0.335-0.364-0.742-0.545-1.223-0.545-0.317 0-0.695 0.062-1.136 0.184l0.272-1.997c0.668 0.018 1.178-0.127 1.529-0.434s0.526-0.715 0.526-1.224c0-0.433-0.128-0.777-0.385-1.035-0.258-0.257-0.599-0.386-1.025-0.386-0.421 0-0.779 0.146-1.077 0.438s-0.479 0.72-0.544 1.281l-2.281-0.386c0.158-0.782 0.397-1.407 0.717-1.875s0.765-0.835 1.336-1.103 1.212-0.401 1.921-0.401c1.213 0 2.186 0.387 2.918 1.161 0.604 0.633 0.905 1.348 0.905 2.145 0 1.131-0.619 2.034-1.858 2.708 0.739 0.158 1.33 0.513 1.772 1.063 0.443 0.551 0.664 1.215 0.664 1.994 0.001 1.132-0.412 2.095-1.238 2.891z"
+                    ></path>
+                </g></svg
+            >
+            <p class="text-center leading-tight">
+                Entrada y calentamiento <br />
+                del asfalto
+            </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-between h-[136px]">
+            <svg
+                fill="#ca1c1c"
+                width="128"
+                height="128"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M16 3c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13-5.82-13-13-13zM15.9 22.5v-2.6h-5.4v-2.2l5.7-8.3h2.1v8.3h1.6v2.2h-1.6v2.6h-2.4zM15.9 17.7v-4.5l-3 4.5h3z"
+                ></path>
+            </svg>
+            <p class="text-center leading-tight">
+                Mezclado de <br />
+                alto corte
+            </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-between h-[136px]">
+            <svg
+                fill="#ca1c1c"
+                width="128"
+                height="128"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M16 3c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13-5.82-13-13-13zM11.8 19.4l2.4-0.2c0.1 0.7 0.4 1.2 0.8 1.6 0.4 0.4 0.9 0.5 1.4 0.5 0.6 0 1.1-0.2 1.5-0.7 0.4-0.5 0.6-1.2 0.6-2.1 0-0.8-0.2-1.5-0.6-1.9-0.4-0.4-0.9-0.7-1.6-0.7-0.8 0-1.5 0.4-2.2 1.1l-1.9-0.3 1.2-6.5h6.2v2.2h-4.4l-0.4 2.1c0.6-0.3 1.2-0.5 1.8-0.5 1.2 0 2.2 0.4 3 1.3 0.8 0.9 1.2 2 1.2 3.4 0 1.2-0.3 2.2-1 3.1-0.9 1.2-2.2 1.8-3.8 1.8-1.3 0-2.4-0.4-3.2-1.1-0.8-0.7-1.3-1.7-1.5-3z"
+                ></path>
+            </svg>
+            <p class="text-center leading-tight">
+                Incorporación a <br />
+                tambor mezclador
+            </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-between h-[136px]">
+            <svg
+                fill="#ca1c1c"
+                width="128"
+                height="128"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M16 3c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13-5.82-13-13-13zM20.3 12.7l-2.3 0.3c-0.1-0.5-0.3-0.9-0.6-1.2-0.3-0.3-0.7-0.4-1.1-0.4-0.6 0-1.1 0.3-1.5 0.8-0.4 0.5-0.6 1.7-0.7 3.3 0.6-0.7 1.4-1 2.4-1 1.1 0 2 0.4 2.8 1.2 0.8 0.8 1.2 1.9 1.2 3.2 0 1.4-0.4 2.5-1.2 3.4-0.8 0.9-1.9 1.3-3.2 1.3-1.4 0-2.6-0.5-3.5-1.6-0.9-1.1-1.4-2.9-1.4-5.4 0-2.6 0.5-4.5 1.5-5.7 1-1.2 2.2-1.8 3.8-1.8 1.1 0 2 0.3 2.7 0.9 0.7 0.6 1.2 1.5 1.4 2.7zM14.4 18.4c0 0.8 0.2 1.5 0.6 2 0.4 0.5 0.9 0.7 1.4 0.7 0.5 0 0.9-0.2 1.3-0.6 0.3-0.4 0.5-1 0.5-1.9 0-0.9-0.2-1.6-0.5-2-0.4-0.4-0.8-0.6-1.3-0.6-0.5 0-0.9 0.2-1.3 0.6-0.5 0.4-0.7 1-0.7 1.8z"
+                ></path>
+            </svg>
+            <p class="text-center leading-tight">
+                Colocación <br /> en carretera
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="bg-gradient-to-b from-[#f4f5f6] to-[#383838] w-full h-[200px]">
+    </div>
+
+    <div
+        class="bg-[#383838] w-full text-center flex flex-col pt-5 gap-2 md:gap-4"
+    >
+        <h2 class="text-[#fffaea] font-bold text-2xl md:text-3xl">
+            Sea el único en el mercado en ofrecer una mezcla que no se puede
+            igualar
+        </h2>
+        <h2 class="text-white font-normal text-lg">
+            Con Triaso, conviértase en el proveedor preferido de mezcla
+            asfáltica para todos los proyectos de pavimentación en su región.
+        </h2>
+    </div>
+    <div
+        class="bg-[#383838] w-full flex flex-col justify-center items-center px-8 py-10"
+    >
+        <div class="max-w-7xl mx-auto px-8 overflow-hidden relative">
+            <!-- BOTÓN IZQUIERDA -->
+            <button
+                id="prevBtn"
+                class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/70 text-white w-10 h-10 rounded-full"
+            >
+                ←
+            </button>
+
+            <!-- BOTÓN DERECHA -->
+            <button
+                id="nextBtn"
+                class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/70 text-white w-10 h-10 rounded-full"
+            >
+                →
+            </button>
+
+            <div
+                class="flex gap-4 transition-transform duration-500 ease-in-out"
+                id="sliderTrack"
+            >
+                <!-- Card 1-A -->
+                <div
+                    class="card w-full sm:w-[calc((100%-32px)/3)] flex-shrink-0 relative rounded-lg overflow-hidden"
+                    data-card="0-0"
+                >
+                    <div
+                        class="w-full h-80 bg-black/10 flex items-center justify-center"
+                    >
+                        <img src="https://placehold.co/600x400" alt="" class="object-fill" />
+                    </div>
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                    >
+                        <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                        >
+                            Tolva de hule
+                        </span>
+                        <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="chevron w-3 h-3 transition-transform duration-300"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                            >
+                                <path
+                                    d="M2 4l4 4 4-4"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                        </button>
+                        <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                        >
+                            <p
+                                class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                                Recibe y almacena el caucho molido (CRM) antes
+                                de su dosificación. Incluye rejilla separadora
+                                de sobretamaños para garantizar la granulometría
+                                adecuada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2-B -->
+                <div
+                    class="card w-full sm:w-[calc((100%-32px)/3)] flex-shrink-0 relative rounded-lg overflow-hidden"
+                    data-card="0-1"
+                >
+                    <div
+                        class="w-full h-80 bg-black/10 flex items-center justify-center"
+                    >
+                        <img src="https://placehold.co/600x400" alt="" />
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                    >
+                        <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                        >
+                            Gusano dosificador
+                        </span>
+                        <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="chevron w-3 h-3 transition-transform duration-300"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                            >
+                                <path
+                                    d="M2 4l4 4 4-4"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                        </button>
+                        <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                        >
+                            <p
+                                class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                                Transporta el CRM desde la tolva al mezclador de
+                                forma controlada y sincronizada con la bomba de
+                                asfalto, ambos de velocidad variable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3-C -->
+                <div
+                    class="card w-full sm:w-[calc((100%-32px)/3)] flex-shrink-0 relative rounded-lg overflow-hidden"
+                    data-card="0-2"
+                >
+                    <div
+                        class="w-full h-80 bg-black/10 flex items-center justify-center"
+                    >
+                        <img src="https://placehold.co/600x400" alt="" />
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                    >
+                        <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                        >
+                            Calentador de asfalto
+                        </span>
+                        <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="chevron w-3 h-3 transition-transform duration-300"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                            >
+                                <path
+                                    d="M2 4l4 4 4-4"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                        </button>
+                        <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                        >
+                            <p
+                                class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                                Eleva el asfalto liquido a su temperatura óptima
+                                de incorporación antes de entrar al mezclador.
+                                Control preciso de temperatura programable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4-D -->
+                <div
+                    class="card w-full sm:w-[calc((100%-32px)/3)] flex-shrink-0 relative rounded-lg overflow-hidden"
+                    data-card="0-3"
+                >
+                    <div
+                        class="w-full h-80 bg-black/10 flex items-center justify-center"
+                    >
+                        <img src="https://placehold.co/600x400" alt="" />
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                    >
+                        <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                        >
+                            Mezclador molecular
+                        </span>
+                        <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="chevron w-3 h-3 transition-transform duration-300"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                            >
+                                <path
+                                    d="M2 4l4 4 4-4"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                        </button>
+                        <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                        >
+                            <p
+                                class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                                Corazón del equipo. Integra molecularmente el
+                                CRM con el asfalto mediante fuerzas de corte
+                                intenso para producir una mezcla homogénea y
+                                estable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5-E -->
+                <div
+                    class="card w-full sm:w-[calc((100%-32px)/3)] flex-shrink-0 relative rounded-lg overflow-hidden"
+                    data-card="0-4"
+                >
+                    <div
+                        class="w-full h-80 bg-black/10 flex items-center justify-center"
+                    >
+                        <img src="https://placehold.co/600x400" alt="" />
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                    >
+                        <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                        >
+                            Bomba de asfalto 2"
+                        </span>
+                        <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="chevron w-3 h-3 transition-transform duration-300"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                            >
+                                <path
+                                    d="M2 4l4 4 4-4"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                        </button>
+                        <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                        >
+                            <p
+                                class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                                Bomba de engranes de 2" que impulsa el cemento
+                                asfáltico desde el tanque de entrada al
+                                mezclador con flujo variable y controlado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6-F -->
+                <div
+                    class="card w-full sm:w-[calc((100%-32px)/3)] flex-shrink-0 relative rounded-lg overflow-hidden"
+                    data-card="0-5"
+                >
+                    <div
+                        class="w-full h-80 bg-black/10 flex items-center justify-center"
+                    >
+                        <img src="https://placehold.co/600x400" alt="" />
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                    >
+                        <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                        >
+                            Gusano removedor 15 Hp
+                        </span>
+                        <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="chevron w-3 h-3 transition-transform duration-300"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                            >
+                                <path
+                                    d="M2 4l4 4 4-4"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                        </button>
+                        <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                        >
+                            <p
+                                class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                                Motor de 5-15 Hp que mantiene el asfalto ahulado
+                                en movimiento dentro del tanque de
+                                almacenamiento, evitando asentamientos del CRM.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7-G -->
+                <div
+                    class="card w-full sm:w-[calc((100%-32px)/3)] flex-shrink-0 relative rounded-lg overflow-hidden"
+                    data-card="0-6"
+                >
+                    <div
+                        class="w-full h-80 bg-black/10 flex items-center justify-center"
+                    >
+                        <img src="https://placehold.co/600x400" alt="" />
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                    >
+                        <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                        >
+                            Plataforma y barandales
+                        </span>
+                        <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="chevron w-3 h-3 transition-transform duration-300"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                            >
+                                <path
+                                    d="M2 4l4 4 4-4"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                        </button>
+                        <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                        >
+                            <p
+                                class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                                Plataforma de descarga del hule con barandales
+                                de seguridad conforme a normas para la
+                                protección del personal operativo en altura.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 items-center">
+            <div class="flex flex-col items-center space-y-5">
+                <div>
+                    <h1 class="text-white font-bold text-xl">Sistema de control Triaso − Relief</h1>
+                </div>
+                <div class="flex flex-col justify-center items-center space-y-5">
+                    <h2 class="font-bold text-center text-white">Para evitar desperdicios, robos y mala <br> operación de su tanque de asfalto</h2>
+                    <p class="text-white">Paro total con un solo botón desde su celular</p>
+                    <LearnBtn/>
+                </div>
+            </div>
+            <div>
+                <img src="https://placehold.co/600x400/png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    //Animación
+    import { initScrollAnimations } from "./scrollHule";
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("DOMContentLoaded", () => {
+            initScrollAnimations();
+        });
+    }
+
+    //Cards
+    document
+        .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
+        .forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                const expandible = btn.nextElementSibling as HTMLElement;
+                const chevron = btn.querySelector(".chevron") as HTMLElement;
+                const isOpen =
+                    expandible.style.maxHeight &&
+                    expandible.style.maxHeight !== "0px";
+
+                if (isOpen) {
+                    expandible.style.maxHeight = "0px";
+                    chevron.style.transform = "rotate(0deg)";
+                    btn.setAttribute("aria-expanded", "false");
+                } else {
+                    expandible.style.maxHeight = expandible.scrollHeight + "px";
+                    chevron.style.transform = "rotate(180deg)";
+                    btn.setAttribute("aria-expanded", "true");
+                }
+            });
+        });
+
+    const track = document.getElementById("sliderTrack");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+
+    const originalCards = Array.from(track.children);
+
+    
+    originalCards.forEach((card) => {
+        const clone = card.cloneNode(true);
+        track.appendChild(clone);
+    });
+
+    
+    [...originalCards].reverse().forEach((card) => {
+        const clone = card.cloneNode(true);
+        track.prepend(clone);
+    });
+
+    const cards = track.children;
+
+    let currentIndex = originalCards.length;
+
+    function updateSlider(animate = true) {
+        const cardWidth = cards[0].offsetWidth + 16;
+
+        track.style.transition = animate
+            ? "transform 0.5s ease-in-out"
+            : "none";
+
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    
+    updateSlider(false);
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex++;
+        updateSlider();
+
+        if (currentIndex >= originalCards.length * 2) {
+            setTimeout(() => {
+                currentIndex = originalCards.length;
+                updateSlider(false);
+            }, 500);
+        }
+    });
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex--;
+        updateSlider();
+
+        if (currentIndex <= 0) {
+            setTimeout(() => {
+                currentIndex = originalCards.length;
+                updateSlider(false);
+            }, 500);
+        }
+    });
+</script>
