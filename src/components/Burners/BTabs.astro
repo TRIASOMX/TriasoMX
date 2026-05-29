@@ -2,10 +2,12 @@
 import img1Low from "../../assets/images/Burners/Low/8Low.webp";
 import img2 from "../../assets/images/Burners/7.webp";
 import img6 from "../../assets/images/Burners/Low/14Low.webp";
-
-import img3 from "../../assets/images/Burners/PotenciaFija.webp"
-import img4 from "../../assets/images/Burners/4.webp"
-import img5 from "../../assets/images/Burners/Low/8Low.webp"
+import img3 from "../../assets/images/Burners/PotenciaFija.webp";
+import img4 from "../../assets/images/Burners/4.webp";
+import img5 from "../../assets/images/Burners/Low/8Low.webp";
+import img7 from "../../assets/images/Burners/Ilustracion1.webp";
+import img8 from  "../../assets/images/Burners/Ilustracion4.webp";
+import img9 from "../../assets/images/Burners/Ilustracion3.webp";
 import { Image } from "astro:assets";
 ---
 
@@ -40,6 +42,17 @@ import { Image } from "astro:assets";
             data-tab="b"
         >
             B
+        </button>
+
+        <button
+            class="tab-btn w-10 h-10 text-sm font-bold border border-gray-300 bg-white text-gray-500 rounded-none cursor-pointer transition-colors hover:bg-gray-100"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-c"
+            id="tab-c"
+            data-tab="c"
+        >
+            C
         </button>
     </div>
 
@@ -219,7 +232,7 @@ import { Image } from "astro:assets";
                 </div>
 
                 <div
-                    class="flex flex-col gap-6 text-sm lg:text-base md:text-base "
+                    class="flex flex-col gap-6 text-sm lg:text-base md:text-base"
                 >
                     <p>
                         Reducir la potencia del quemador se vuelve necesario
@@ -337,6 +350,129 @@ import { Image } from "astro:assets";
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Panel C -->
+    <div
+        class="tab-panel hidden bg-white border border-gray-300 rounded-tr rounded-b-lg p-8"
+        role="tabpanel"
+        id="panel-c"
+        aria-labelledby="tab-c"
+    >
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="font-bold text-center">
+                Los precalentadores disminuyen la viscosidad de los
+                combustibles.
+            </h1>
+            <p class="text-center">
+                En México nadie usa diésel ni gas en los quemadores de las
+                plantas de asfalto; se utilizan combustibles alternos porque son
+                mucho más baratos, sin embargo estos combustibles alternos son
+                muy viscosos.
+            </p>
+        </div>
+
+        <div
+            class="w-full grid grid-cols-1 md:grid-cols-2 justify-center items-start mt-20 gap-20"
+        >
+            <div class="w-full flex flex-col gap-6">
+                <div class="text-center w-full flex flex-col items-center">
+                    <h2 class="text-xl md:text-2xl font-bold">
+                        Quemadores sin precalentador
+                    </h2><br />
+                    <div class="h-[2px] w-3/4 bg-blueMain"></div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-6 text-sm lg:text-base md:text-base pl-5"
+                >
+                    <ul class="list-disc">
+                        <li>
+                            La atomización del combustible es ineficiente por su
+                            alta viscosidad.
+                        </li>
+                        <li>
+                            Se forman microgotas mal atomizadas que no se queman
+                            correctamente.
+                        </li>
+                        <li>
+                            Las microgotas sin quemar son un gran desperdicio de
+                            combustible
+                        </li>
+                        <div class="pl-5">
+                            <ul class="list-disc">
+                                <li>
+                                    Estas microgotas contaminan la mezcla y se
+                                    reduce la vida del pavimento.
+                                </li>
+                                <li>
+                                    Estas microgotas arrojan humos
+                                    contaminantes.
+                                </li>
+                                <li>
+                                    Los gases residuales contaminan fuertemente
+                                    y muy visiblemente.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <li>
+                            Provocando un mayor consumo de combustible porque no
+                            se aprovecha completamente, necesitando más
+                            combustible por metro cúbico de mezcla producida.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col gap-6">
+                <div class="text-center w-full flex flex-col items-center">
+                    <h2 class="text-xl md:text-2xl font-bold">
+                        Quemadores con precalentador
+                    </h2><br />
+                    <div class="h-[2px] w-3/4 bg-redBg"></div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-6 text-sm lg:text-base md:text-base"
+                >
+                    <p class="font-bold">
+                        El precalentador permite lograr una atomización completa
+                        de estos combustibles.
+                    </p>
+
+                    <ul class="list-disc pl-5">
+                        <li>
+                            Los precalentadores son un componente esencial en la
+                            operación de una planta de asfalto, es por eso que
+                            los incluimos en todas nuestras plantas sin costo
+                            adicional.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex flex-col justify-center items-center">
+                <div class="flex justify-center items-center col-span">
+                    <Image
+                    src={img7}
+                    alt="Placeholder"
+                    />
+                </div>
+                <div class=" flex flex-col justify-center items-center lg:flex-row lg:gap-5 max-w-xl mx-auto">
+                    <Image
+                    src={img8}
+                    alt="Placeholder"
+                    />
+                    <Image
+                    src={img9}
+                    alt="Placeholder"
+                    />
+                </div>
+
+            </div>
     </div>
 </section>
 

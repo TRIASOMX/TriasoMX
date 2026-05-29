@@ -111,18 +111,36 @@ const cards = [
   </div>
 
   <StackedInfoCards
-      cards={cards}
-      mainTitle="Con nosotros, al ser de México usted tiene muchas ventajas, entre otras: "
-      mainDescription="Cuidando así lo que más importa, menor tiempo de inactividad de su equipo."
-    />
+    cards={cards}
+    mainTitle="Con nosotros, al ser de México usted tiene muchas ventajas, entre otras: "
+    mainDescription="Cuidando así lo que más importa, menor tiempo de inactividad de su equipo."
+  />
 
 
-  <!-- <AsphaltSection />
+  <section class=" py-10">
+    <ItemsSlider images={images1} client:only />
+  </section>
+  
 
-  <SpareSection />
-  <ManufactuSection />
-  <ControlSection />
-  <FuelSection />
-  <DeliverySection />
-  <TotalAirSection /> -->
+  <section
+    class="relative w-full h-[500px] md:h-[600px] bg-[url(/delivery1.webp)] bg-cover bg-bottom"
+  >
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent"
+    >
+    </div>
+
+    <div class="relative z-10 h-full max-w-7xl px-8 mx-auto flex items-center">
+      <div class="text-white">
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+          Somos expertos en lo que hacemos
+        </h1>
+
+        <p class="mt-4 text-2xl font-bold text-[#D9D9D9]">
+          Con la experiencia que tenemos con más de 300 plantas <br />
+          de asfalto fabricadas hasta inicios de este 2026.
+        </p>
+      </div>
+    </div>
+  </section>
 </div>
