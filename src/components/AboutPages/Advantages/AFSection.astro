@@ -7,31 +7,35 @@ import { Image } from "astro:assets";
   <div
     class="w-full max-w-7xl mx-auto px-8 lg:px-52 flex items-center justify-center"
   >
-    <h1 class="text-grisT font-bold text-3xl lg:text-4xl text-center pt-5 lg:pt-0 md:pt-0">
-      ADVANTAGES
+    <h1
+      class="text-grisT font-bold text-3xl lg:text-4xl text-center pt-5 lg:pt-0 md:pt-0 uppercase"
+    >
+      Ventajas
     </h1>
   </div>
   <div class="w-full max-w-7xl px-8 mx-auto">
-    <h2 class="text-blueMain text-center font-bold text-xl lg:text-3xl md:text-3xl">
-      Design and fabrication under the highest quality standards to ensure
-      continuous hot-mix production with minimal breakdowns
+    <h2
+      class="text-blueMain text-center font-bold text-xl lg:text-3xl md:text-3xl"
+    >
+      Diseño y fabricación bajo los más altos estándares de calidad para
+      asegurar producción continua de mezcla asfáltica con mínimas fallas.
     </h2>
   </div>
   <div
-    class="w-full max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 "
+    class="w-full max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-10"
   >
     <div>
       <p class="text-center text-sm lg:text-xl md:text-xl">
-        Extra-reinforced drum chassis designed to maintain perfect alignment of
-        the drum bearing system, minimizing wear on bearings, trunnions, and
-        steel tires.
+        Chasis de tambor extra reforzado diseñado para mantener la alineación
+        perfecta del sistema de soporte del tambor, minimizando el desgaste en
+        rodamientos, rodillos de carga y aros.
       </p>
     </div>
     <div>
       <p class="text-center text-sm lg:text-xl md:text-xl">
-        Design and fabrication refined to the last detail, backed by the
-        experience of over 300 asphalt plants manufactured and continuously
-        improved through the maintenance services we provide.
+        Diseño y fabricación refinados hasta el último detalle, respaldados por
+        la experiencia de más de 300 plantas de asfalto fabricadas y mejoradas
+        continuamente mediante los servicios de mantenimiento que brindamos.
       </p>
     </div>
   </div>
@@ -43,36 +47,200 @@ import { Image } from "astro:assets";
   >
     <div class="absolute inset-0 bg-[#1f3c66]/70"></div>
 
-    <h1 class="relative font-bold text-2xl lg:text-3xl md:text-3xl text-center text-white">
-      Mobility and Installation
+    <h1
+      class="relative font-bold text-2xl lg:text-3xl md:text-3xl text-center text-white"
+    >
+      Movilidad e Instalación
     </h1><br />
     <div
-      class="relative w-full max-w-7xl mx-auto text-white grid grid-cols-1 lg:grid-cols-2 gap-10 py-10 "
+      class="relative w-full max-w-7xl mx-auto text-white grid grid-cols-1 lg:grid-cols-2 gap-10 py-10"
     >
       <div>
         <p class="text-center text-sm lg:text-xl md:text-xl">
-          Compact and mobile size, perfect for short-term jobs with frequent
-          relocations.
+          Tamaño compacto y móvil, ideal para trabajos de corta duración con
+          reubicaciones frecuentes.
         </p>
       </div>
       <div>
         <p class="text-center text-sm lg:text-xl md:text-xl">
-          Simple installation and leveling of the equipment—mixing drum, bins
-          unit, and asphalt tank—thanks to predetermined chassis height and
-          alignment.
+          Instalación y nivelación sencilla de los equipos —tambor mezclador,
+          unidad de tolvas y tanque de asfalto— gracias a la altura y alineación
+          predeterminadas de los chasis.
         </p>
       </div>
     </div>
   </div>
-  <div class="w-full max-w-7xl mx-auto py-5">
-    <h1 class="text-2xl lg:text-3xl md:text-3xl font-bold text-black text-center">
+
+  <div class="relative overflow-hidden">
+    <div
+      id="slider"
+      class="flex transition-transform duration-500 ease-in-out items-center"
+    >
+      <div class="w-full flex-shrink-0 px-8">
+        <div
+          class="max-w-7xl mx-auto px-8 bg-white rounded-2xl py-10 space-y-5"
+        >
+          <div class="flex justify-center items-center">
+            <h1 class="font-bold text-2xl text-center lg:text-start">
+              Sistema de asfalto y combustible
+            </h1>
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center"
+          >
+            <div>
+              <p class="font-bold text-[#14427C] text-center lg:text-start">
+                Bomba de inyección de asfalto sumergida dentro del tanque de
+                asfalto, eliminando la necesidad de purgar y precalentar el
+                sistema de chaqueta; arranque inmediato incluso en los climas
+                más fríos.
+              </p>
+            </div>
+
+            <div class="flex flex-col space-y-5">
+              <div class="font-bold text-[#14427C] text-center lg:text-start">
+                <p>
+                  Sistema de filtrado de combustible diseñado para la quema de
+                  aceites usados, evitando obstrucciones en las líneas de
+                  combustible.
+                </p>
+              </div>
+              <div class="font-bold text-[#14427C] text-center lg:text-start">
+                <p>
+                  Sistema de filtrado de combustible, precalentador y bomba de
+                  combustible montados sobre una base abatible y deslizable,
+                  manteniendo la bomba a baja altura para evitar purgas y
+                  problemas de arranque.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex-shrink-0 px-8">
+        <div
+          class="max-w-7xl mx-auto px-8 bg-white rounded-2xl py-10 space-y-5"
+        >
+          <div class="flex justify-center items-center">
+            <h1 class="font-bold text-2xl text-center lg:text-start">
+              Manejo de materiales
+            </h1>
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center space-y-5 lg:space-y-0"
+          >
+            <div>
+              <p class="font-bold text-[#CA1C1C] text-center">
+                Sistemas de dosificación y alimentación fabricados bajo normas
+                CEMA.
+              </p>
+            </div>
+
+            <div class="flex flex-col space-y-5">
+              <div class="font-bold text-[#CA1C1C] text-center">
+                <p>
+                  Tolvas de alta capacidad que reducen la dependencia del
+                  cargador frontal.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex-shrink-0 px-8">
+        <div
+          class="max-w-7xl mx-auto px-8 bg-white rounded-2xl py-10 space-y-10"
+        >
+          <div class="flex justify-center items-center">
+            <h1 class="font-bold text-2xl text-center lg:text-start">
+              Mantenimiento y Durabilidad
+            </h1>
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center"
+          >
+            <div>
+              <p class="font-bold text-[#14427C] text-center">
+                Bandas transportadoras certificadas bajo normas CEMA y
+                construcción para trabajo pesado que aseguran una larga vida
+                útil.
+              </p>
+            </div>
+
+            <div>
+              <div class="font-bold text-[#14427C] text-center">
+                <p>
+                  Mantenimiento mínimo gracias a componentes de alta calidad
+                  fabricados bajo estrictos estándares.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center items-center">
+            <h1 class="text-center font-bold text-[#393939]">
+              Refacciones disponibles localmente para reducir tiempos muertos.
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex-shrink-0 px-8">
+        <div
+          class="max-w-7xl mx-auto px-8 bg-white rounded-2xl py-10 space-y-10"
+        >
+          <div class="flex justify-center items-center">
+            <h1 class="font-bold text-2xl text-center lg:text-start">
+              Ventajas de desempeño
+            </h1>
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center space-y-5 lg:space-y-0"
+          >
+            <div>
+              <p class="font-bold text-[#CA1C1C] text-center">
+                Mayor capacidad de producción que la mayoría de las marcas con
+                el mismo tamaño de tambor, especialmente en condiciones adversas
+                (alta humedad en agregados, altitud y clima frío).
+              </p>
+            </div>
+
+            <div>
+              <div class="font-bold text-[#CA1C1C] text-center">
+                <p>
+                  La eficiente transferencia de calor maximiza el
+                  aprovechamiento de energía y minimiza el desperdicio de
+                  combustible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center gap-2 py-5">
+      <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
+      <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
+      <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
+      <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
+    </div>
+  </div>
+
+  <!-- <div class="w-full max-w-7xl mx-auto py-5">
+    <h1
+      class="text-2xl lg:text-3xl md:text-3xl font-bold text-black text-center"
+    >
       Material Handling
     </h1><br />
     <div
-      class="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 px-8 py-3 font-bold  text-redBg text-center"
+      class="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 px-8 py-3 font-bold text-redBg text-center"
     >
       <div>
-        <p class="text-xl lg:text-2xl">High capacity bins that reduce payloader dependency.</p>
+        <p class="text-xl lg:text-2xl">
+          High capacity bins that reduce payloader dependency.
+        </p>
       </div>
       <div>
         <p class="text-xl lg:text-2xl">
@@ -84,7 +252,7 @@ import { Image } from "astro:assets";
   <div class="w-full max-w-7xl mx-auto px-8 py-10">
     <h1 class="text-2xl lg:text-3xl md:text-3xl font-bold text-black">
       Asphalt and Fuel Systems
-    </h3>
+    </h1>
     <div
       class="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 py-10 font-bold text-lg lg:text-2xl md:text-2xl text-blueMain text-justify"
     >
@@ -105,5 +273,85 @@ import { Image } from "astro:assets";
         </p>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
+
+<script>
+  const slider = document.getElementById("slider");
+  const indicators = document.querySelectorAll(".indicator");
+  const totalSlides = indicators.length;
+
+  let currentSlide = 0;
+  let startX = 0;
+  let isDragging = false;
+  let dragOffset = 0;
+
+  function goToSlide(index) {
+    currentSlide = Math.max(0, Math.min(index, totalSlides - 1));
+    slider.style.transition = "transform 500ms ease-in-out";
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    indicators.forEach((dot, i) => {
+      dot.classList.toggle("bg-blue-950", i === currentSlide);
+      dot.classList.toggle("bg-gray-800", i !== currentSlide);
+    });
+  }
+
+  function getClientX(e) {
+    return e.touches ? e.touches[0].clientX : e.clientX;
+  }
+
+  function onDragStart(e) {
+    if (e.target.classList.contains("indicator")) return;
+
+    isDragging = true;
+    startX = getClientX(e);
+    dragOffset = 0;
+
+    slider.style.transition = "none"; 
+    slider.style.cursor = "grabbing";
+  }
+
+  function onDragMove(e) {
+    if (!isDragging) return;
+
+    dragOffset = getClientX(e) - startX;
+    const baseTranslate = -(currentSlide * 100);
+    const sliderWidth = slider.parentElement.offsetWidth;
+    const offsetPercent = (dragOffset / sliderWidth) * 100;
+
+    slider.style.transform = `translateX(${baseTranslate + offsetPercent}%)`;
+  }
+
+  function onDragEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+    slider.style.cursor = "grab";
+
+    const threshold = slider.parentElement.offsetWidth * 0.2; 
+
+    if (dragOffset < -threshold) {
+      goToSlide(currentSlide + 1); 
+    } else if (dragOffset > threshold) {
+      goToSlide(currentSlide - 1); 
+    } else {
+      goToSlide(currentSlide); 
+    }
+  }
+
+  slider.addEventListener("mousedown", onDragStart);
+  window.addEventListener("mousemove", onDragMove);
+  window.addEventListener("mouseup", onDragEnd);
+
+  slider.addEventListener("touchstart", onDragStart, { passive: true });
+  window.addEventListener("touchmove", onDragMove, { passive: true });
+  window.addEventListener("touchend", onDragEnd);
+
+  indicators.forEach((dot, index) => {
+    dot.addEventListener("click", () => goToSlide(index));
+  });
+
+  slider.style.cursor = "grab";
+
+  goToSlide(0);
+</script>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 //Contraflujo
 import p1 from "../../assets/images/DrumMixers/Contraflujo/CDesamac.webp"
 import p2 from "../../assets/images/DrumMixers/Contraflujo/Cplus.webp"
@@ -28,6 +28,19 @@ import plasmaImg from "../../assets/images/AsphaltPlant/ImgModales/PlasmaAsistid
 
 function cn(...classes: (string | false | null | undefined)[]): string {
     return classes.filter(Boolean).join(" ");
+}
+
+function useIsMobile(breakpoint = 768) {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const check = () => setIsMobile(window.innerWidth < breakpoint);
+        check();
+        window.addEventListener("resize", check);
+        return () => window.removeEventListener("resize", check);
+    }, [breakpoint]);
+
+    return isMobile;
 }
 
 //ICONO (REEMPLAZAR LUEGO)
@@ -606,6 +619,9 @@ export default function ProductSelector() {
     const [tableOpen, setTableOpen] = useState(false);
     const [symbolModal, setSymbolModal] = useState<SymbolItem | null>(null);
 
+    const isMobile = useIsMobile();
+    const isTableVisible = isMobile ? true : tableOpen;
+
     const plant = data[active];
 
     const getSymbol = (number: string) => {
@@ -844,30 +860,45 @@ export default function ProductSelector() {
                 ))}
             </div>
 
-            {/* tabla */}
-            <div style={{ marginBottom: "2rem" }}>
-                <h2
-                    style={{
-                        fontSize: "clamp(1.5rem, 3vw, 1.875rem)",
-                        fontWeight: 700,
-                        textAlign: "center",
-                        color: "#000000",
-                        marginBottom: "2rem",
-                    }}
-                >
-                    Comparación de tambores de {plant.title.toLowerCase()}
-                </h2>
+{/* tabla */}
+<div style={{ marginBottom: "2rem" }}>
+    <h2
+        style={{
+            fontSize: "clamp(1.5rem, 3vw, 1.875rem)",
+            fontWeight: 700,
+            textAlign: "center",
+            color: "#000000",
+            marginBottom: "2rem",
+        }}
+    >
+        Comparación de tambores de {plant.title.toLowerCase()}
+    </h2>
 
-                {/* parte de arriba tabla */}
+    <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
+        <div style={{ minWidth: "600px" }}>
+            <div
+                style={{
+                    display: "flex",
+                    border: `1px solid ${colors.border}`,
+                    borderRadius: isTableVisible ? "0.5rem 0.5rem 0 0" : "0.5rem",
+                    overflow: "hidden",
+                }}
+            >
                 <div
                     style={{
-                        display: "flex",
-                        border: `1px solid ${colors.border}`,
-                        borderRadius: tableOpen ? "0.5rem 0.5rem 0 0" : "0.5rem",
-                        overflow: "hidden",
+                        flex: 1,
+                        padding: "0.75rem 1rem",
+                        backgroundColor: colors.industrial,
+                        color: colors.industrialForeground,
+                        fontWeight: 600,
+                        fontSize: "0.875rem",
                     }}
                 >
+                    Características
+                </div>
+                {modelColumns.map((col) => (
                     <div
+                        key={col}
                         style={{
                             flex: 1,
                             padding: "0.75rem 1rem",
@@ -875,26 +906,13 @@ export default function ProductSelector() {
                             color: colors.industrialForeground,
                             fontWeight: 600,
                             fontSize: "0.875rem",
+                            textAlign: "center",
                         }}
                     >
-                        Características
+                        {col}
                     </div>
-                    {modelColumns.map((col) => (
-                        <div
-                            key={col}
-                            style={{
-                                flex: 1,
-                                padding: "0.75rem 1rem",
-                                backgroundColor: colors.industrial,
-                                color: colors.industrialForeground,
-                                fontWeight: 600,
-                                fontSize: "0.875rem",
-                                textAlign: "center",
-                            }}
-                        >
-                            {col}
-                        </div>
-                    ))}
+                ))}
+                {!isMobile && (
                     <button
                         onClick={() => setTableOpen(!tableOpen)}
                         style={{
@@ -915,96 +933,124 @@ export default function ProductSelector() {
                             )}
                         />
                     </button>
-                </div>
+                )}
+            </div>
 
-                {/* body */}
-                {tableOpen && (
-                    <div
-                        style={{
-                            border: `1px solid ${colors.border}`,
-                            borderTop: "none",
-                            borderRadius: "0 0 0.5rem 0.5rem",
-                            overflow: "hidden",
-                        }}
-                    >
-                        {plant.tableData.map((section) => (
-                            <div key={section.section}>
-                                {/* separadores */}
-                                <button
-                                    onClick={() => toggleSection(section.section)}
-                                    style={{
-                                        width: "100%",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "space-between",
-                                        padding: "0.75rem 1rem",
-                                        backgroundColor: colors.industrialSurface,
-                                        borderBottom: `1px solid ${colors.border}`,
-                                        cursor: "pointer",
-                                        border: "none",
-                                        borderTop: "none",
-                                    }}
-                                >
-                                    <span
+            {/* body */}
+            {isTableVisible && (
+                <div
+                    style={{
+                        border: `1px solid ${colors.border}`,
+                        borderTop: "none",
+                        borderRadius: "0 0 0.5rem 0.5rem",
+                        overflow: "hidden",
+                    }}
+                >
+                    {plant.tableData.map((section) => (
+                        <div key={section.section}>
+                        {/* separadores */}
+                                            {isMobile ? (
+                                    <div
                                         style={{
-                                            fontWeight: 600,
-                                            fontSize: "0.875rem",
-                                            color: "#000000",
+                                            width: "100%",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "space-between",
+                                            padding: "0.75rem 1rem",
+                                            backgroundColor: colors.industrialSurface,
+                                            borderBottom: `1px solid ${colors.border}`,
                                         }}
                                     >
-                                        {section.section}
-                                    </span>
-                                    <ChevronDown
-                                        className={cn(
-                                            "transition-transform",
-                                            expandedSections[section.section] ? "rotate-180" : ""
-                                        )}
-                                    />
-                                </button>
-
-                                {expandedSections[section.section] &&
-                                    section.rows.map((row) => (
-                                        <div
-                                            key={row.label}
+                                        <span
                                             style={{
-                                                display: "flex",
-                                                borderBottom: `1px solid ${colors.border}`,
+                                                fontWeight: 600,
+                                                fontSize: "0.875rem",
+                                                color: "#000000",
                                             }}
                                         >
+                                            {section.section}
+                                        </span>
+                                    </div>
+                                ) : (
+                                    <button
+                                        onClick={() => toggleSection(section.section)}
+                                        style={{
+                                            width: "100%",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "space-between",
+                                            padding: "0.75rem 1rem",
+                                            backgroundColor: colors.industrialSurface,
+                                            borderBottom: `1px solid ${colors.border}`,
+                                            cursor: "pointer",
+                                            border: "none",
+                                            borderTop: "none",
+                                        }}
+                                    >
+                                        <span
+                                            style={{
+                                                fontWeight: 600,
+                                                fontSize: "0.875rem",
+                                                color: "#000000",
+                                            }}
+                                        >
+                                            {section.section}
+                                        </span>
+                                        <ChevronDown
+                                            className={cn(
+                                                "transition-transform",
+                                                expandedSections[section.section] ? "rotate-180" : ""
+                                            )}
+                                        />
+                                    </button>
+                                )}
+
+                            {(isMobile || expandedSections[section.section]) &&
+                                section.rows.map((row) => (
+                                    <div
+                                        key={row.label}
+                                        style={{
+                                            display: "flex",
+                                            borderBottom: `1px solid ${colors.border}`,
+                                        }}
+                                    >
+                                        <div
+                                            style={{
+                                                flex: 1,
+                                                padding: "0.75rem 1rem",
+                                                fontSize: "0.875rem",
+                                                color: "#000000",
+                                                backgroundColor: colors.cardBg,
+                                            }}
+                                        >
+                                            {renderLabel(row.label)}
+                                        </div>
+                                        {row.values.map((val, i) => (
                                             <div
+                                                key={i}
                                                 style={{
                                                     flex: 1,
                                                     padding: "0.75rem 1rem",
                                                     fontSize: "0.875rem",
-                                                    color: "#000000",
+                                                    color: colors.foreground,
+                                                    textAlign: "center",
                                                     backgroundColor: colors.cardBg,
                                                 }}
                                             >
-                                                {renderLabel(row.label)}
+                                                {val}
                                             </div>
-                                            {row.values.map((val, i) => (
-                                                <div
-                                                    key={i}
-                                                    style={{
-                                                        flex: 1,
-                                                        padding: "0.75rem 1rem",
-                                                        fontSize: "0.875rem",
-                                                        color: colors.foreground,
-                                                        textAlign: "center",
-                                                        backgroundColor: colors.cardBg,
-                                                    }}
-                                                >
-                                                    {val}
-                                                </div>
-                                            ))}
-                                            <div style={{ width: "52px", backgroundColor: colors.cardBg }} />
-                                        </div>
-                                    ))}
-                            </div>
-                        ))}
-                    </div>
-                )}
-            </div>
+                                        ))}
+                                        <div style={{ width: "52px", backgroundColor: colors.cardBg }} />
+                                    </div>
+                                ))}
+                        </div>
+                    ))}
+                </div>
+            )}
+
+        </div>
+    </div>
+</div>
 
             {/* modal */}
             {symbolModal && (
@@ -1018,7 +1064,7 @@ export default function ProductSelector() {
                         alignItems: "center",
                         justifyContent: "center",
                         zIndex: 9999,
-                        padding: "1rem" // Añadido para que no pegue en bordes en móviles
+                        padding: "1rem" 
                     }}
                 >
                     <div
