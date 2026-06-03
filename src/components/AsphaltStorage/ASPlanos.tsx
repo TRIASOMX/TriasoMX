@@ -84,7 +84,7 @@ const ASPlanos = () => {
   //tabs states
   const [activeTab, setActiveTab] = useState(1);
   // valor de cm a pies
-  const cmToFeet = 0.0328084;
+  const cmToFeet = 0.01;
   //animation
   const boxRef = useRef<HTMLDivElement>(null);
   const nextSectionRef = useRef<HTMLDivElement>(null);
@@ -224,12 +224,12 @@ const ASPlanos = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  IMPERIAL
+                  MT
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRIC
+                  CM
                 </span>
               </div>
             </div>

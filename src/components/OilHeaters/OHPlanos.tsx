@@ -38,7 +38,7 @@ const OHPlanos = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const imgRef = useRef<HTMLImageElement>(null);
     const clipTargetRef = useRef<HTMLDivElement>(null);
-    const cmToFeet = 0.0328084;
+    const cmToFeet = 0.01;
     const [unit, setUnit] = useState<"metric" | "imperial">("metric");
     const [openSections, setOpenSections] = useState<Record<string, boolean>>({
         C1_1: false,
@@ -133,11 +133,11 @@ const OHPlanos = () => {
                     id="planosOil"
                     className="mt-10 text-white" ref={otroElemento}>
                     <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
-                        Specifications
+                        Especificaciones
                     </h1>
                     <div className="flex items-center justify-center mt-10">
                         <h1 className="mr-3" id="measure">
-                            MEASURE:
+                            Medida:
                         </h1>
                         <div
                             onClick={toggleUnit}
@@ -151,12 +151,12 @@ const OHPlanos = () => {
                                 <span
                                     className={unit === "imperial" ? "text-black" : "text-white"}
                                 >
-                                    IMPERIAL
+                                    MT
                                 </span>
                                 <span
                                     className={unit === "metric" ? "text-black" : "text-white"}
                                 >
-                                    METRIC
+                                    CM
                                 </span>
                             </div>
                         </div>
@@ -167,7 +167,7 @@ const OHPlanos = () => {
                         {/* móvil */}
                         <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
                             <label className="text-white block text-center">
-                                MODELS:
+                                Modelos:
                             </label>
                             <div className="relative">
                                 <select
@@ -202,7 +202,7 @@ const OHPlanos = () => {
                         {/* desktop */}
                         <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
                             <label className="text-white block text-center">
-                                MODELS:
+                                Modelos:
                             </label>
                         </div>
                         <div className="hidden md:flex flex-wrap justify-center gap-5  mx-auto px-2">
@@ -267,16 +267,16 @@ const OHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Capacidades de 2,400,000 Btu/hr</li>
-                                                <li>High-quality automotive paint, electrostatically applied and oven-cured.</li>
-                                                <li>Excellent corrosion resistance, strong adhesion, and long-lasting color.</li>
-                                                <li>Galvanized bolts for extended life, easy removal, and clean appearance.</li>
+                                                <li>Capacidades de 1,000,000 Btu/hr</li>
+                                                <li>Sistema de serpentín de alta eficiencia de 2” dentro del tanque de asfalto</li>
+                                                <li>Conexiones para autotanques con sistemas de calentamiento por serpentín</li>
+                                                <li>Revestimiento exterior de acero inoxidable</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Construction and Materials
+                                                    Cumplimiento con estándares de la industria
                                                 </h1>
                                                 <button
                                                     className="block md:hidden"
@@ -314,28 +314,22 @@ const OHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Heavy-duty structure built with reinforced materials for continuous industrial use.</li>
+                                                <li>SEMARNAT</li>
                                                 <li>
-                                                    Internal and external welds fully X-ray inspected.
+                                                    SCT
                                                 </li>
                                                 <li>
-                                                    Cylinder made of 1/4” A36 steel plate.
+                                                    NOM-001-SEDE
                                                 </li>
                                                 <li>
-                                                    Outer shell made of stainless steel sheet for corrosion resistance.
-                                                </li>
-                                                <li>
-                                                    Thermally insulated with ceramic fiber to minimize heat loss.
-                                                </li>
-                                                <li>
-                                                    Dual concentric internal coils for greater heat transfer efficiency.
+                                                    DOT
                                                 </li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Control and Operation
+                                                    Control y operacióN
                                                 </h1>
                                                 <button
                                                     className="block md:hidden"
@@ -374,12 +368,19 @@ const OHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li>
-                                                    Two operation modes: automatic and manual.
+                                                    Operación automática o manual, según se requiera en campo.
                                                 </li>
-                                                <li>Siemens PLC control system.</li>
-                                                <li>Digital thermometers with programmable set point.</li>
-                                                <li>Burner operation controlled automatically by temperature.</li>
-                                                <li>100% duty cycle for continuous performance.</li>
+                                                <li>Sistema operativo Triaso Relief 8.0.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc pl-10">
+                                                        <li>Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                                                        </li>
+                                                        <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>Sistema de alarmas y seguridades para condiciones fuera de rango.</li>
+                                                <li>Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -394,7 +395,7 @@ const OHPlanos = () => {
                                         <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Safety and Maintenance
+                                                    Resistencia y seguridad
                                                 </h1>
                                                 <button
                                                     className="block md:hidden"
@@ -433,21 +434,34 @@ const OHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li >
-                                                    Safety systems with automatic shutdown in case of failure.
+                                                    Estructura extra reforzada para trabajo pesado a largo plazo.
                                                 </li>
                                                 <li >
-                                                    Protective elements for both equipment and personnel, with proper warning indicators.
+                                                    Componentes atornillados con recubrimiento anticorrosivo.
+                                                </li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc pl-10">
+                                                        <li>
+                                                            Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                                 <li>
-                                                    Diesel burner with sealed, easy-to-replace fuel filter system.
+                                                    Aislamiento térmico con fibra de lana mineral de tres pulgadas, que reduce la pérdida de calor y la temperatura superficial.
                                                 </li>
-                                                <li>Minimal maintenance required for long-term reliability.</li>
+                                                <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
+                                                <li>
+                                                    Carcasa resistente al polvo que protege el módulo de control.
+                                                </li>
+                                                <li>
+                                                    Forro exterior de lámina de acero inoxidable.
+                                                </li>
                                             </ul>
                                         </div>
                                         <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Electrical and Components and Capacity
+                                                    Componentes y sistema eléctrico
                                                 </h1>
                                                 <button
                                                     className="block md:hidden"
@@ -486,21 +500,26 @@ const OHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block md:mb-0`}
                                             >
                                                 <li>
-                                                    Siemens motors, controls, and electrical components.
+                                                    Motores, componentes y cableado Siemens de grado industrial.
                                                 </li>
-                                                <li>Heavy-duty polarized wiring, grounded for motor protection.</li>
-                                                <li>Recirculation pump for thermal oil.</li>
-                                                <li>Pumps:</li>
-                                                <div className="pl-5">
-                                                    <li>2” pump with 10 HP motor for the 1,000,000 Btu/hr model.</li>
-                                                    <li>3” pump with 15 HP motor for the 2,400,000 Btu/hr model.</li>
-                                                </div>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>
+                                                    Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                                                </li>
+                                                <li>Bombas:</li>
+                                                <li>
+                                                    <ul className="list-disc pl-10">
+                                                        <li>Bomba de 2” con motor de 10 HP para el modelo de 1,000,000 Btu/hr.</li>
+                                                    </ul>
+                                                </li>
                                             </div>
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Performance and Capacity
+                                                    Rendimiento y capacidad
                                                 </h1>
                                                 <button
                                                     className="block md:hidden"
@@ -539,11 +558,11 @@ const OHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li>
-                                                    Thermal oil tank capacity: 300 liters.
+                                                    Capacidad del tanque de aceite térmico: 300 litros.
                                                 </li>
-                                                <li>Efficient heat transfer through dual-coil design.</li>
-                                                <li>Stable performance under continuous operation.</li>
-                                                <li>Built for maximum durability, reliability, and long service life.</li>
+                                                <li>Transferencia de calor eficiente mediante diseño de doble serpentín.</li>
+                                                <li>Desempeño estable en operación continua.</li>
+                                                <li>Diseñado para máxima durabilidad, confiabilidad y larga vida útil.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -579,7 +598,7 @@ const OHPlanos = () => {
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.width ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                             <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                                                 <div className="bg-white h-[1px] w-full relative">
@@ -642,7 +661,7 @@ const OHPlanos = () => {
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.height ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                         </div>
                                         <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -698,7 +717,7 @@ const OHPlanos = () => {
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.length ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                             <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                                                 <div className="bg-white h-[1px] w-full relative">
@@ -735,7 +754,7 @@ const OHPlanos = () => {
                                 <div className="flex flex-col  gap-4 text-white w-full lg:w-[35%] md:w-[35%] mt-10 md:mt-0">
                                     <div className="w-full lg:w-[60%] md:w-[60%] flex justify-between border-b border-b-white">
                                         <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                            Dimensions
+                                            Dimensiones
                                         </h1>
                                         <button
                                             className="block md:hidden"
@@ -772,36 +791,36 @@ const OHPlanos = () => {
                                         : "max-h-0 opacity-1"
                                         } lg:flex lg:flex-col lg:items-start md:flex md:items-center md:max-h-96 md:opacity-100`}>
                                         <div className="flex flex-row justify-between w-full lg:w-[637px] md:w-[640px]">
-                                            <p>Length</p>
+                                            <p>Longitud:</p>
                                             <p className="text-white lg:w-full md:w-full text-center ">
                                                 {unit === "metric"
                                                     ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.length ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                         </div>
                                         <div className="flex flex-row justify-between w-full">
-                                            <p>Width</p>
+                                            <p>Ancho:</p>
                                             <p className="text-white lg:w-full md:w-full text-center ">
                                                 {unit === "metric"
                                                     ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.width ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                         </div>
                                         <div className="flex flex-row justify-between w-full">
-                                            <p>Height</p>
+                                            <p>Largo:</p>
                                             <p className="text-white lg:w-full md:w-full  text-center ">
                                                 {unit === "metric"
                                                     ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.height ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                         </div>
 
@@ -821,7 +840,7 @@ const OHPlanos = () => {
                                         <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Design & Operation
+                                                    Sistema de calentamiento
                                                 </h1>
                                                 <button
                                                     aria-label="See more about the design and operation"
@@ -860,16 +879,16 @@ const OHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Industrial design with an aesthetic finish that enhances your company’s image.</li>
-                                                <li>High-quality automotive paint, electrostatically applied and oven-cured.</li>
-                                                <li>Excellent corrosion resistance, strong adhesion, and long-lasting color.</li>
-                                                <li>Galvanized bolts for extended life, easy removal, and clean appearance.</li>
+                                                <li>Capacidades de 2,400,000 Btu/hr</li>
+                                                <li>Sistema de serpentín de alta eficiencia de 2” dentro del tanque de asfalto</li>
+                                                <li>Conexiones para autotanques con sistemas de calentamiento por serpentín</li>
+                                                <li>Revestimiento exterior de acero inoxidable</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Construction and Materials
+                                                    Cumplimiento con estándares de la industria
                                                 </h1>
                                                 <button
                                                     aria-label="See more about the construction and materials"
@@ -908,29 +927,26 @@ const OHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Heavy-duty structure built with reinforced materials for continuous industrial use.</li>
+                                                <li>SEMARNAT</li>
                                                 <li>
-                                                    Internal and external welds fully X-ray inspected.
+                                                    SCT
                                                 </li>
 
                                                 <li>
-                                                    Cylinder made of 1/4” A36 steel plate.
+                                                    NOM-001-SEDE
                                                 </li>
                                                 <li>
-                                                    Outer shell made of stainless steel sheet for corrosion resistance.
+                                                    DOT
                                                 </li>
-                                                <li>Thermally insulated with ceramic fiber to minimize heat loss.
-                                                </li>
-                                                <li>Dual concentric internal coils for greater heat transfer efficiency.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Control and Operation
+                                                    Control y operacióN
                                                 </h1>
                                                 <button
-                                                aria-label="See more about the control and operation of the system"
+                                                    aria-label="See more about the control and operation of the system"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -967,14 +983,19 @@ const OHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li>
-                                                    Two operation modes: automatic and manual.
+                                                    Operación automática o manual, según se requiera en campo.
                                                 </li>
-                                                <li>Siemens PLC control system.</li>
-                                                <li>Digital thermometers with programmable set point.</li>
-                                                <li>Burner operation controlled automatically by temperature.</li>
-                                                <li>
-                                                    100% duty cycle for continuous performance.
+                                                <li>Sistema operativo Triaso Relief 8.0.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc pl-10">
+                                                        <li>
+                                                            Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                                                        </li>
+                                                        <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.</li>
+                                                    </ul>
                                                 </li>
+                                                <li>Sistema de alarmas y seguridades para condiciones fuera de rango.</li>
+                                                <li>Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -987,7 +1008,7 @@ const OHPlanos = () => {
                                         <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Safety and Maintenance
+                                                    Resistencia y seguridad
                                                 </h1>
                                                 <button
                                                     aria-label="See more about the safety and maintenance of the system"
@@ -1026,16 +1047,25 @@ const OHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Safety systems with automatic shutdown in case of failure.</li>
-                                                <li>Protective elements for both equipment and personnel, with proper warning indicators.</li>
-                                                <li>Diesel burner with sealed, easy-to-replace fuel filter system.</li>
-                                                <li>Minimal maintenance required for long-term reliability.</li>
+                                                <li>Estructura extra reforzada para trabajo pesado a largo plazo.</li>
+                                                <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc pl-10">
+                                                        <li>
+                                                            Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>Aislamiento térmico con fibra de lana mineral de tres pulgadas, que reduce la pérdida de calor y la temperatura superficial.</li>
+                                                <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
+                                                <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                                                <li>Forro exterior de lámina de acero inoxidable.</li>
                                             </ul>
                                         </div>
                                         <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Electrical and Components and Capacity
+                                                    Componentes y sistema eléctrico
                                                 </h1>
                                                 <button
                                                     aria-label="See more about the electrical composition, components and capacity of the system"
@@ -1075,20 +1105,26 @@ const OHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block md:mb-0`}
                                             >
                                                 <ul className="list-disc list-inside">
-                                                    <li>Siemens motors, controls, and electrical components.</li>
-                                                    <li>Heavy-duty polarized wiring, grounded for motor protection.</li>
-                                                    <li>Recirculation pump for thermal oil.</li>
-                                                    <li>Pumps:</li>
+                                                    <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                    <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                    <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                    <li>
+                                                        Sistema de transmisión con poleas y bujes.
 
-                                                    <li className="pl-5">2” pump with 10 HP motor for the 1,000,000 Btu/hr model.</li>
-                                                    <li className="pl-5">3” pump with 15 HP motor for the 2,400,000 Btu/hr model.</li>
+                                                    </li>
+                                                    <li>
+                                                        Líneas de combustible externas, sensores y cableado de señales preinstalados.
+
+                                                    </li>
+                                                    <li>Bombas:</li>
+                                                    <li className="pl-5">Bomba de 3” con motor de 15 HP para el modelo de 2,400,000 Btu/hr.</li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                                             <div className="w-full flex justify-between border-b border-b-white">
                                                 <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                                    Performance and Capacity
+                                                    Rendimiento y capacidad
                                                 </h1>
                                                 <button
                                                     aria-label="See more about the performance and capacity"
@@ -1128,12 +1164,12 @@ const OHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li>
-                                                    Thermal oil tank capacity: 300 liters.
+                                                    Capacidad del tanque de aceite térmico: 300 litros.
                                                 </li>
-                                                <li>Efficient heat transfer through dual-coil design.</li>
-                                                <li>Stable performance under continuous operation.</li>
+                                                <li>Transferencia de calor eficiente mediante diseño de doble serpentín.</li>
+                                                <li>Desempeño estable en operación continua.</li>
                                                 <li>
-                                                    Built for maximum durability, reliability, and long service life.
+                                                    Diseñado para máxima durabilidad, confiabilidad y larga vida útil.
                                                 </li>
                                             </ul>
                                         </div>
@@ -1170,7 +1206,7 @@ const OHPlanos = () => {
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.width ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                             <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                                                 <div className="bg-white h-[1px] w-full relative">
@@ -1233,7 +1269,7 @@ const OHPlanos = () => {
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.height ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                         </div>
                                         <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1289,7 +1325,7 @@ const OHPlanos = () => {
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.length ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                             <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                                                 <div className="bg-white h-[1px] w-full relative">
@@ -1371,7 +1407,7 @@ const OHPlanos = () => {
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.length ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                         </div>
                                         <div className="flex flex-row justify-between w-full">
@@ -1382,7 +1418,7 @@ const OHPlanos = () => {
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.width ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                         </div>
                                         <div className="flex flex-row justify-between w-full">
@@ -1393,7 +1429,7 @@ const OHPlanos = () => {
                                                     } cm`
                                                     : `${(
                                                         (activeData?.dimensions.height ?? 0) * cmToFeet
-                                                    ).toFixed(1)} ft`}
+                                                    ).toFixed(1)} mt`}
                                             </p>
                                         </div>
 
