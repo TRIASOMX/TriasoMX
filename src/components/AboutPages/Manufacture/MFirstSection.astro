@@ -1,27 +1,94 @@
-<section class="w-full max-w-7xl mx-auto mt-28 text-grisT font-bold px-8 ">
-    <div class="w-full flex justify-end">
-        <div class="border-b-2 border-b-grisT inline-block justify-end">
-            <h1 class="text-end text-3xl md:text-4xl">
-                MANUFACTURE
-            </h1>
+---
+import LastSection from "./LastSection";
+import StackedInfoCards from "../../unitComponents/StackedInfoCards.astro";
+import img1 from "../../../assets/images/Manufacture/8.webp";
+import img2 from "../../../assets/images/Manufacture/7.webp";
+import img3 from "../../../assets/images/Manufacture/27.webp";
+import img4 from "../../../assets/images/Manufacture/32.webp";
+import img5 from "../../../assets/images/Manufacture/31.webp";
+import HeroImage from "../../../assets/images/About/Manufacture/HeroImage.webp"
+
+const cards = [
+    {
+        title: "Garantías de 18 a 24 meses.",
+        text: "",
+        bg: "#00840D",
+        textColor: "#ffffff",
+    },
+    {
+        title: "Mayor valor de reventa que cualquier otra marca en el mercado.",
+        text: "",
+        bg: "#CA1C1C",
+        textColor: "#ffffff",
+    },
+    {
+        title: "Más de 320 plantas fabricadas desde 1997.",
+        text: "",
+        bg: "#14427C",
+        textColor: "#ffffff",
+    },
+    {
+        title: "+90 productos para construcción, pavimentación y minería.",
+        text: "",
+        bg: "#FFFAEA",
+        textColor: "#000000",
+    },
+];
+---
+
+<section class=" mt-16 max-w-[1920px] mx-auto">
+    <img src={HeroImage.src} alt="" class="w-full">
+</section>
+
+<section class="w-full max-w-7xl mx-auto mt-10 text-grisT font-bold px-8">
+    <div class="w-full flex justify-start">
+        <div class="border-b-2 border-b-grisT inline-block justify-start">
+            <h1 class="text-end text-3xl md:text-4xl">Fabricación</h1>
         </div>
     </div>
-    <div class="w-full my-16 text-base md:text-lg">
+    <div class="w-full py-10 text-base md:text-lg">
         <p>
-            At Triaso, no other asphalt plant manufacturer in the world produces as many components
-             for its own equipment as we do. Unlike others,<span class="text-black"> we manufacture directly without subcontractors </span>,
-              ensuring that every part meets our strict quality standards.
-
-        </p><br>
+            Como Triaso, ningún otro fabricante de plantas de asfalto en el
+            mundo produce tantos componentes para sus propios equipos como
+            nosotros. A diferencia de otros, fabricamos directamente sin
+            subcontratistas, asegurando que cada pieza cumpla con nuestros
+            estrictos estándares de calidad, teniendo control total del proceso.
+        </p><br />
         <p>
-            This approach allows us to provide<span class="text-black"> the best service, warranty, and direct support </span>, both from our team
-             in Mexico and our USA distributor. Most brands only produce a few components, relying heavily on external
-              suppliers and merely assembling the equipment in their facilities.
+            Este enfoque nos permite ofrecer el mejor servicio, garantía y
+            soporte directo. La mayoría de las marcas solo producen algunos
+            componentes, dependiendo en gran medida de proveedores externos y
+            limitándose a ensamblar los equipos en sus instalaciones.
         </p>
     </div>
-    <div class="w-full">
-        <h2 class="text-center text-2xl md:text-3xl text-redBg">
-            TRIASO MANUFATURES DIRECTLY, WE DON´T HAVE SUBCONTRACTORS
-        </h2>
+</section>
+
+<section>
+    <div class="flex justify-center items-center">
+        <h1 class="font-bold text-[#14427C] text-center text-xl lg:text-2xl">
+            Al fabricar la mayoría de nuestros componentes, obtenemos ventajas
+            significativas
+        </h1>
+    </div>
+    <LastSection client:only />
+</section>
+
+<section class="my-10">
+    <StackedInfoCards
+        cards={cards}
+        mainTitle="Fabricamos nosotros. Sin intermediarios.Sin sorpresas."
+        mainDescription="Eso nos permite controlar cada detalle del proceso, garantizar la calidad de cada pieza y darle soporte real cuando lo necesite."
+    />
+
+    <div class="py-10 flex flex-col justify-center items-center">
+        <h1 class="font-bold text-center">
+            Combinamos materiales de la más alta calidad con mano de obra
+            mexicana experimentada para obtener plantas de asfalto de excelente
+            calidad a precios competitivos.
+        </h1>
+        <h1 class="font-bold text-center">
+            Un estricto control de calidad asegura la operación de su planta sin
+            fallas durante muchos años.
+        </h1>
     </div>
 </section>
