@@ -42,10 +42,10 @@ const toggleConfig = [
       length: 2011.68,
       chasisLenght: 1459.992,
       transporWidth: 365.76,
-      axleConfig: "Doble Axle",
+      axleConfig: "Doble eje",
       wheel: 124.968,
-      support: "Steel legs with base plates for anchor bolting",
-      wheels: '16" highway-rated tires',
+      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
       capacity: "50 tons",
       truckHeight: 368.808,
     },
@@ -58,10 +58,10 @@ const toggleConfig = [
       length: 2011.68,
       chasisLenght: 1459.992,
       transporWidth: 365.76,
-      axleConfig: "Doble Axle",
+      axleConfig: "Doble eje",
       wheel: 124.968,
-      support: "Steel legs with base plates for anchor bolting",
-      wheels: '16" highway-rated tires',
+      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
       capacity: "50 tons",
       truckHeight: 212,
     },
@@ -74,10 +74,10 @@ const toggleConfig = [
       length: 1624.4,
       chasisLenght: 0,
       transporWidth: 0,
-      axleConfig: "Double",
+      axleConfig: "Doble eje",
       wheel: 140,
-      support: "Steel legs with base plates for anchor bolting",
-      wheels: '16" highway-rated tires',
+      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
       capacity: "50 tons",
       truckHeight: 368.8,
     },
@@ -90,10 +90,10 @@ const toggleConfig = [
       length: 1892.3,
       chasisLenght: 0,
       transporWidth: 0,
-      axleConfig: "Double",
+      axleConfig: "Doble eje",
       wheel: 140,
-      support: "Steel legs with base plates for anchor bolting",
-      wheels: '16" highway-rated tires',
+      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
       capacity: "100 tons",
       truckHeight: 368.8,
     },
@@ -106,10 +106,10 @@ const toggleConfig = [
       length: 2047.8,
       chasisLenght: 0,
       transporWidth: 0,
-      axleConfig: "Double",
+      axleConfig: "Doble eje",
       wheel: 140,
-      support: "Steel legs with base plates for anchor bolting",
-      wheels: '16" highway-rated tires',
+      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
       capacity: "150 tons",
       truckHeight: 368.8,
     },
@@ -122,10 +122,10 @@ const toggleConfig = [
       length: 2466.2,
       chasisLenght: 0,
       transporWidth: 0,
-      axleConfig: "Double",
+      axleConfig: "Doble eje",
       wheel: 140,
-      support: "Steel legs with base plates for anchor bolting",
-      wheels: '16" highway-rated tires',
+      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
       capacity: "200 tons",
       truckHeight: 368.8,
     },
@@ -147,7 +147,7 @@ const HotMixPlanos = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
   const clipTargetRef = useRef<HTMLDivElement>(null);
-  const cmToFeet = 0.0328084;
+  const cmToFeet = 0.01;
   //RENDERIZADO CONDICIONAL DE IMAGENES
   type VersionType = "50tons" | "100tons" | "150tons" | "200tons";
   const imageMap: Record<VersionType, string> = {
@@ -212,8 +212,8 @@ const HotMixPlanos = () => {
   ] as const;
 
   const siloOptions = [
-    { id: 1, label: "Self-erecting" },
-    { id: 2, label: "Relocatable Silo" },
+    { id: 1, label: "Auto-eregible" },
+    { id: 2, label: "Semi-estacionario" },
   ];
 
   useClipPathScrollTrigger({
@@ -282,11 +282,11 @@ const HotMixPlanos = () => {
       >
         <header id="planosSilos" className="mt-10 text-white" ref={otroElemento}>
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
-            Specifications
+            Especificaciones
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              MEASURE:
+              Medida:
             </h1>
             <div
               onClick={toggleUnit}
@@ -303,12 +303,12 @@ const HotMixPlanos = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  IMPERIAL
+                  MT
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRIC
+                  CM
                 </span>
               </div>
             </div>
@@ -320,7 +320,7 @@ const HotMixPlanos = () => {
             {/* mobile primer select */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto mb-6">
               <label className="text-white block text-center">
-                PRODUCTION:
+                Capacidad de producción:
               </label>
 
               <div className="relative">
@@ -353,7 +353,7 @@ const HotMixPlanos = () => {
             {/* label de primer select y botones */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
               <label className="text-white block text-center">
-                PRODUCTION CAPACITY:
+                Capacidad de producción:
               </label>
             </div>
 
@@ -379,7 +379,7 @@ const HotMixPlanos = () => {
             {/* mobile segundo select */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto mb-6">
               <label className="text-white block text-center">
-                OPTIONS:
+                Opciones:
               </label>
 
               <div className="relative">
@@ -410,7 +410,7 @@ const HotMixPlanos = () => {
             {/* opciones desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
               <label className="text-white block text-center">
-                OPTIONS:
+                Opciones:
               </label>
             </div>
 
@@ -452,7 +452,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          CONTROL & OPERATION
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -490,33 +490,33 @@ const HotMixPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Sistema operativo Triaso Relief 8.0.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                            </li>
+                            <li>
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          FEEDING & DISCHARGE SYSTEM
+                          Sistema de alimentación y descarga
                         </h1>
                         <button
                           className="block md:hidden"
@@ -554,16 +554,17 @@ const HotMixPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Top inlet with rubber seal and rain cover</li>
-                        <li>1 m³ batch discharge chamber</li>
-                        <li>Pneumatic gates: fast-release and waste bypass</li>
-                        <li>Load cell integration with programmable logic</li>
+                        <li>Tolva de alimentación superior con sello de goma y cubierta contra lluvia.</li>
+                        <li>Cámara de descarga por lote de 1 m³.</li>
+                        <li>Compuertas neumáticas para descarga rápida y desvío de material de desperdicio.</li>
+                        <li>Integración con celdas de carga y control mediante lógica programable.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          COMPONENTS & ELECTRICAL
+                          Componentes y sistema eléctrico
+
                         </h1>
                         <button
                           className="block md:hidden"
@@ -601,13 +602,13 @@ const HotMixPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Industrial-grade motors and components</li>
-                        <li>Simple wiring system for easy maintenance</li>
-                        <li>Weather-protected electrical connections</li>
-                        <li>Siemens motors / industrial-grade wiring</li>
-                        <li>Pulley and bushing transmission system</li>
+                        <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>Sistema de transmisión con poleas y bujes.</li>
+                        <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                         <li>
-                          External fuel lines, sensors, and cabling included
+                          Elevador de mezcla asfáltica, de arrastre integrado con sistema abisagrado.
                         </li>
                       </ul>
                     </div>
@@ -631,7 +632,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          DURABILITY & SAFETY
+                          Resistencia y seguridad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -670,32 +671,39 @@ const HotMixPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Estructura extra reforzada para trabajo pesado a largo plazo
                         </li>
-                        <li>Aesthetic side panels for professional image</li>
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Flancos estéticos para una imagen profesional</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Six inches of fiberglass insulation reduce heat loss
-                          and minimize surface temperature
+                          Cubierta contra lluvia y descarga anti-segregación.
                         </li>
-                        <li>Labyrinth seals reduce air and heat loss.</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Exterior stainless steel lining.</li>
+                        <li>
+                          Barandales de seguridad integrados y plataforma conforme a las normas OSHA.
+                        </li>
+                        <li>Aislamiento térmico con fibra de vidrio, que reduce la pérdida de calor y la temperatura superficial.</li>
+                        <li>
+                          <ul className="list-disc ml-10">
+                            <li>Hasta 72 horas de retención de temperatura.</li>
+                          </ul>
+                        </li>
+
+                        <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>Forro exterior de lámina de acero inoxidable.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          PORTABILITY
+                          Portabilidad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -733,30 +741,27 @@ const HotMixPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Designed for relocation</li>
+                        <li>Diseñada para reubicación.</li>
                         <li>
-                          Built-in fifth wheel means no lowboy is required
+                          La quinta rueda integrada elimina la necesidad de cama baja (lowboy).
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Also transportable on lowboy or flatbed trailer if
-                              preferred.
+                              También puede transportarse en lowboy o plataforma (flatbed) si se prefiere.
                             </li>
                           </ul>
                         </li>
-                        <li>Setup no requires crane or hoisting equipment</li>
-                        <li>Bolt-on support legs for fast on-site assembly</li>
+                        <li>Patas de soporte atornillables para montaje rápido en sitio.</li>
                         <li>
-                          DOT-compliant lighting and reflective markings for
-                          transport visibility
+                          Iluminación y reflejantes conformes a normativa DOT para visibilidad durante el transporte.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          COMPLIANCE WITH INDUSTRY STANDARDS
+                          Cumplimeinto con normas industriales
                         </h1>
                         <button
                           className="block md:hidden"
@@ -794,10 +799,10 @@ const HotMixPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>EPA</li>
-                        <li>OSHA</li>
+                        <li>NOM</li>
                         <li>DOT</li>
-                        <li>UL wiring</li>
+                        <li>SCT</li>
+                        <li>SEMARNAT</li>
                       </ul>
                     </div>
                   </div>
@@ -833,7 +838,7 @@ const HotMixPlanos = () => {
                           } cm`
                           : `${(
                             (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ).toFixed(1)} mt`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -904,7 +909,7 @@ const HotMixPlanos = () => {
                           } cm`
                           : `${(
                             (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ).toFixed(1)} mt`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -960,7 +965,7 @@ const HotMixPlanos = () => {
                           } cm`
                           : `${(
                             (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ).toFixed(1)} mt`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1006,7 +1011,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        SILO DIMENSIONS
+                        Dimensiones del silo
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1045,29 +1050,29 @@ const HotMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Width:</h1>
+                        <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
                             } cm`
                             : `${(
                               (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height:</h1>
+                        <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
                             } cm`
                             : `${(
                               (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Storage Capacity:</h1>
+                        <h1>Capacidad de almacenamiento:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.capacity ?? ""} `
@@ -1079,7 +1084,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1 md:col-span-2 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        CHASSIS & STRUCTURE
+                        Estructura y chasis
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1118,18 +1123,18 @@ const HotMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Total length (including transport skid):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
                             } cm`
                             : `${(
                               (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Chassis length:</h1>
+                        <h1>Longitud del chasis:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.chasisLenght?.toFixed(
@@ -1139,11 +1144,11 @@ const HotMixPlanos = () => {
                             : `${(
                               (activeData?.dimensions.chasisLenght ?? 0) *
                               cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Transportation width:</h1>
+                        <h1>Ancho de transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.transporWidth?.toFixed(
@@ -1153,22 +1158,22 @@ const HotMixPlanos = () => {
                             : `${(
                               (activeData?.dimensions.transporWidth ?? 0) *
                               cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total width:</h1>
+                        <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
                             } cm`
                             : `${(
                               (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Axle configuration: </h1>
+                        <h1>Configuración de ejes: </h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.axleConfig ?? ""} `
@@ -1176,18 +1181,18 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Fifth-wheel hitch height(if pre-mounted):</h1>
+                        <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
                             } cm`
                             : `${(
                               (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Support system: </h1>
+                        <h1>Sistema de soporte:</h1>
                         <p className="text-end md:text-start">
                           {unit === "metric"
                             ? `${activeData?.dimensions.support ?? ""} `
@@ -1195,7 +1200,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Wheels: </h1>
+                        <h1>Ruedas:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.wheels ?? ""} `
@@ -1203,7 +1208,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Truck height dischange:</h1>
+                        <h1>Altura de descarga a camión:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.truckHeight?.toFixed(
@@ -1217,14 +1222,14 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total height (heighest point):</h1>
+                        <h1>Altura total (punto más alto):</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
                             } cm`
                             : `${(
                               (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                     </div>
@@ -1234,7 +1239,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1 md:col-span-3 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        FEEDING SLAT CONVEYOR
+                        Elevador alimentador de cangilones
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1274,38 +1279,38 @@ const HotMixPlanos = () => {
                     >
                       <div className="text-white font-normal col-span-1">
                         <div className="flex justify-between">
-                          <h1>Length:</h1>
+                          <h1>Longitud:</h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.length?.toFixed(1) ?? ""} cm`
                               : `${(
                                 (slatConveyor.length ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                              ).toFixed(1)} mt`}
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Width:</h1>
+                          <h1>Ancho:</h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.width?.toFixed(1) ?? ""} cm`
                               : `${(
                                 (slatConveyor.width ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                              ).toFixed(1)} mt`}
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Height (erected):</h1>
+                          <h1>Altura (en posición de trabajo):</h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.heightErec?.toFixed(1) ?? ""
                               } cm`
                               : `${(
                                 (slatConveyor.heightErec ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                              ).toFixed(1)} mt`}
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Chain pitch:</h1>
+                          <h1>Altura de descarga:</h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.chain?.toFixed(1) ?? ""} cm`
@@ -1314,7 +1319,7 @@ const HotMixPlanos = () => {
                               ).toFixed(1)} ft`}
                           </p>
                         </div>
-                        <div className="flex justify-between">
+                        {/* <div className="flex justify-between">
                           <h1>Height (discharge height):</h1>
                           <p>
                             {unit === "metric"
@@ -1324,9 +1329,9 @@ const HotMixPlanos = () => {
                                 (slatConveyor.heightDischarge ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
                           </p>
-                        </div>
+                        </div> */}
                         <div className="flex justify-between">
-                          <h1>Angle of inclination:</h1>
+                          <h1>Ángulo de inclinación:</h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.angle ?? ""} `
@@ -1337,38 +1342,31 @@ const HotMixPlanos = () => {
                       <div className="flex flex-col text-white col-span-1 md:col-span-2 w-full justify-center">
                         <ul className="ml-2 lg:ml-6 list-disc w-full">
                           <li>
-                            Transported together with the silo on the same
-                            chassis
+                            Se transporta junto con el silo sobre el mismo chasis.
+
                           </li>
                           <li>
-                            Installed and dismantled on-site using a crane
+                            Estructura independiente, no fijada al bastidor del silo.
+
                           </li>
                           <li>
-                            Independent structure, not fixed to the silo frame
+                            Capacidad de hasta 320 TPH.
                           </li>
-                          <li>Capacity up to 320 TPH</li>
+                          <li>Paletas de acero reforzadas para mayor durabilidad y desempeño uniforme.</li>
                           <li>
-                            Reinforced steel paddles for durability and
-                            consistent performance
-                          </li>
-                          <li>
-                            Enclosed design helps retain material temperature
-                            and prevent contamination
+                            Compuerta de salida secundaria para cuando se requiera
+
                           </li>
                           <li>
-                            Driven by industrial motor and reducer for easy
-                            maintenance
+                            Puertas de acceso superiores para facilitar la limpieza e inspección.
+
                           </li>
                           <li>
-                            Top access doors for easy cleaning and inspection
+                            Sistema manual de tensado de cadena para una operación confiable a largo plazo.
+
                           </li>
                           <li>
-                            Manual chain tensioning system for long-term
-                            reliability
-                          </li>
-                          <li>
-                            Designed for fast alignment with the silo inlet
-                            during setup
+                            Alineación rápida con la entrada del silo durante la instalación.
                           </li>
                         </ul>
                       </div>
@@ -1388,7 +1386,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          CONTROL & OPERATION
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1426,33 +1424,32 @@ const HotMixPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Sistema operativo Triaso Relief 8.0.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                            </li>
+                            <li>
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          FEEDING & DISCHARGE SYSTEM
+                          Sistema de alimentación y descarga
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1490,16 +1487,16 @@ const HotMixPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Top inlet with rubber seal and rain cover</li>
-                        <li>1 m³ batch discharge chamber</li>
-                        <li>Pneumatic gates: fast-release and waste bypass</li>
-                        <li>Load cell integration with programmable logic</li>
+                        <li>Tolva de alimentación superior con sello de goma y cubierta contra lluvia.</li>
+                        <li>Cámara de descarga por lote de 1 m³.</li>
+                        <li>Compuertas neumáticas para descarga rápida y desvío de material de desperdicio.</li>
+                        <li>Integración con celdas de carga y control mediante lógica programable.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          COMPONENTS & ELECTRICAL
+                          Componentes y sistema eléctrico
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1537,13 +1534,13 @@ const HotMixPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Industrial-grade motors and components</li>
-                        <li>Simple wiring system for easy maintenance</li>
-                        <li>Weather-protected electrical connections</li>
-                        <li>Siemens motors / industrial-grade wiring</li>
-                        <li>Pulley and bushing transmission system</li>
+                        <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>Sistema de transmisión con poleas y bujes.</li>
+                        <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                         <li>
-                          External fuel lines, sensors, and cabling included
+                          Elevador de mezcla asfáltica, de arrastre integrado con sistema abisagrado.
                         </li>
                       </ul>
                     </div>
@@ -1563,7 +1560,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          DURABILITY & SAFETY
+                          Resistencia y seguridad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1602,32 +1599,41 @@ const HotMixPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Estructura extra reforzada para trabajo pesado a largo plazo.
                         </li>
-                        <li>Aesthetic side panels for professional image</li>
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Flancos estéticos para una imagen profesional</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Six inches of fiberglass insulation reduce heat loss
-                          and minimize surface temperature
+                          Cubierta contra lluvia y descarga anti-segregación.
                         </li>
-                        <li>Labyrinth seals reduce air and heat loss.</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Exterior stainless steel lining.</li>
+                        <li>
+                          Barandales de seguridad integrados y plataforma conforme a las normas OSHA.
+                        </li>
+                        <li>Aislamiento térmico con fibra de vidrio, que reduce la pérdida de calor y la temperatura superficial.
+                        </li>
+                        <li className="list-none">
+                          <ul className="list-disc ml-10">
+                            <li>
+                              Hasta 72 horas de retención de temperatura.
+                            </li>
+                          </ul>
+                        </li>
+                        <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>Forro exterior de lámina de acero inoxidable.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          PORTABILITY
+                          Portabilidad
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1665,30 +1671,25 @@ const HotMixPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Designed for relocation</li>
+                        <li>Diseñada para reubicación.</li>
                         <li>
-                          Built-in fifth wheel means no lowboy is required
+                          La quinta rueda integrada elimina la necesidad de cama baja (lowboy).
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Also transportable on lowboy or flatbed trailer if
-                              preferred.
+                              También puede transportarse en lowboy o plataforma (flatbed) si se prefiere.
                             </li>
                           </ul>
                         </li>
-                        <li>Setup no requires crane or hoisting equipment</li>
-                        <li>Bolt-on support legs for fast on-site assembly</li>
-                        <li>
-                          DOT-compliant lighting and reflective markings for
-                          transport visibility
-                        </li>
+                        <li>Patas de soporte atornillables para montaje rápido en sitio.</li>
+                        <li>Iluminación y reflejantes conformes a normativa DOT para visibilidad durante el transporte.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          COMPLIANCE WITH INDUSTRY STANDARDS
+                          Cumplimeinto con normas industriales
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1726,10 +1727,10 @@ const HotMixPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>EPA</li>
-                        <li>OSHA</li>
+                        <li>NOM</li>
                         <li>DOT</li>
-                        <li>UL wiring</li>
+                        <li>SCT</li>
+                        <li>SEMARNAT</li>
                       </ul>
                     </div>
                   </div>
@@ -1765,7 +1766,7 @@ const HotMixPlanos = () => {
                           } cm`
                           : `${(
                             (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ).toFixed(1)} mt`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1828,7 +1829,7 @@ const HotMixPlanos = () => {
                           } cm`
                           : `${(
                             (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ).toFixed(1)} mt`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1884,7 +1885,7 @@ const HotMixPlanos = () => {
                           } cm`
                           : `${(
                             (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ).toFixed(1)} mt`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1922,7 +1923,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        SILO DIMENSIONS
+                        Dimensiones del silo
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1961,29 +1962,29 @@ const HotMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Width:</h1>
+                        <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
                             } cm`
                             : `${(
                               (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height:</h1>
+                        <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
                             } cm`
                             : `${(
                               (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Storage Capacity:</h1>
+                        <h1>Capacidad de almacenamiento:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.capacity ?? ""} `
@@ -1995,7 +1996,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1 md:col-span-2 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        CHASSIS & STRUCTURE
+                        Estructura y chasis
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2034,7 +2035,7 @@ const HotMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Total length (including transport skid):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
@@ -2044,7 +2045,7 @@ const HotMixPlanos = () => {
                             ).toFixed(1)} ft`}
                         </p>
                       </div>
-                      <div className="flex justify-between">
+                      {/* <div className="flex justify-between">
                         <h1>Chassis length:</h1>
                         <p>
                           {unit === "metric"
@@ -2082,9 +2083,9 @@ const HotMixPlanos = () => {
                               (activeData?.dimensions.width ?? 0) * cmToFeet
                             ).toFixed(1)} ft`}
                         </p>
-                      </div>
+                      </div> */}
                       <div className="flex justify-between">
-                        <h1>Axle configuration: </h1>
+                        <h1>Configuración de ejes: </h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.axleConfig ?? ""} `
@@ -2092,18 +2093,18 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Fifth-wheel hitch height(if pre-mounted):</h1>
+                        <h1>Altura del enganche de quinta rueda (si se entrega preinstalado)::</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
                             } cm`
                             : `${(
                               (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Support system: </h1>
+                        <h1>Sistema de soporte: </h1>
                         <p className="text-end md:text-start">
                           {unit === "metric"
                             ? `${activeData?.dimensions.support ?? ""} `
@@ -2111,7 +2112,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Wheels: </h1>
+                        <h1>Ruedas: </h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.wheels ?? ""} `
@@ -2119,7 +2120,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Truck height dischange:</h1>
+                        <h1>Altura de descarga a camión:</h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.truckHeight?.toFixed(
@@ -2129,7 +2130,7 @@ const HotMixPlanos = () => {
                             : `${(
                               (activeData?.dimensions.truckHeight ?? 0) *
                               cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2140,7 +2141,7 @@ const HotMixPlanos = () => {
                             } cm`
                             : `${(
                               (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                     </div>
@@ -2150,7 +2151,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1 md:col-span-3 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        FEEDING SLAT CONVEYOR
+                        Elevador alimentador de cangilones
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2190,38 +2191,38 @@ const HotMixPlanos = () => {
                     >
                       <div className="text-white font-normal col-span-1">
                         <div className="flex justify-between">
-                          <h1>Length:</h1>
+                          <h1>Longitud:</h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.length?.toFixed(1) ?? ""} cm`
                               : `${(
                                 (slatConveyor.length ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                              ).toFixed(1)} mt`}
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Width:</h1>
+                          <h1>Altura:</h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.width?.toFixed(1) ?? ""} cm`
                               : `${(
                                 (slatConveyor.width ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                              ).toFixed(1)} mt`}
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Height (erected):</h1>
+                          <h1>Altura (en posición de trabajo):</h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.heightErec?.toFixed(1) ?? ""
                               } cm`
                               : `${(
                                 (slatConveyor.heightErec ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                              ).toFixed(1)} mt`}
                           </p>
                         </div>
-                        <div className="flex justify-between">
-                          <h1>Chain pitch:</h1>
+                        {/* <div className="flex justify-between">
+                          <h1>Altura de descarga:</h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.chain?.toFixed(1) ?? ""} cm`
@@ -2229,20 +2230,21 @@ const HotMixPlanos = () => {
                                 (slatConveyor.chain ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
                           </p>
-                        </div>
+                        </div> */}
                         <div className="flex justify-between">
-                          <h1>Height (discharge height):</h1>
+                          <h1>Altura de descarga:
+                          </h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.heightDischarge?.toFixed(1) ?? ""
                               } cm`
                               : `${(
                                 (slatConveyor.heightDischarge ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                              ).toFixed(1)} mt`}
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Angle of inclination:</h1>
+                          <h1>Ángulo de inclinación:</h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.angle ?? ""} `
@@ -2253,38 +2255,37 @@ const HotMixPlanos = () => {
                       <div className="flex flex-col text-white col-span-1 md:col-span-2 w-full justify-center">
                         <ul className="ml-2 lg:ml-6 list-disc w-full">
                           <li>
-                            Transported together with the silo on the same
-                            chassis
+                            Se transporta junto con el silo sobre el mismo chasis.
+
                           </li>
                           <li>
-                            Installed and dismantled on-site using a crane
+                            Estructura independiente, no fijada al bastidor del silo.
+
                           </li>
                           <li>
-                            Independent structure, not fixed to the silo frame
+                            Capacidad de hasta 320 TPH.
+
                           </li>
-                          <li>Capacity up to 320 TPH</li>
-                          <li>
-                            Reinforced steel paddles for durability and
-                            consistent performance
+                          <li>Paletas de acero reforzadas para mayor durabilidad y desempeño uniforme.
                           </li>
                           <li>
-                            Enclosed design helps retain material temperature
-                            and prevent contamination
+                            Compuerta de salida secundaria para cuando se requiera
+
+                          </li>
+                          <li>
+                            Puertas de acceso superiores para facilitar la limpieza e inspección.
+
                           </li>
                           <li>
                             Driven by industrial motor and reducer for easy
                             maintenance
                           </li>
                           <li>
-                            Top access doors for easy cleaning and inspection
+                            Sistema manual de tensado de cadena para una operación confiable a largo plazo.
+
                           </li>
                           <li>
-                            Manual chain tensioning system for long-term
-                            reliability
-                          </li>
-                          <li>
-                            Designed for fast alignment with the silo inlet
-                            during setup
+                            Alineación rápida con la entrada del silo durante la instalación.
                           </li>
                         </ul>
                       </div>
