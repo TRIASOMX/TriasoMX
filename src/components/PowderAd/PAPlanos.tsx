@@ -45,7 +45,7 @@ const PAPlanos = () => {
   const imgRef = useRef<HTMLImageElement>(null);
   const clipTargetRef = useRef<HTMLDivElement>(null);
   // valor de cm a pies
-  const cmToFeet = 0.0328084;
+  const cmToFeet = 0.01;
   //SWITCH LOGIC
   const [unit, setUnit] = useState<"metric" | "imperial">("metric");
   //ESTADOS DE LOS DROPWDOWNS
@@ -74,20 +74,20 @@ const PAPlanos = () => {
     setUnit(newUnit);
   };
 
-   useClipPathScrollTrigger({
-     enabled: activeTab === 3,
- 
-     boxRef,
-     nextSectionRef,
-     clipTargetRef,
-     imgRef,
-     otroElementoRef: otroElemento,
-     optionsRef,
-     columnGrid1Ref: columnGrid1,
-     columnGrid2Ref: columnGrid2,
-     containerRef,
-   });
- 
+  useClipPathScrollTrigger({
+    enabled: activeTab === 3,
+
+    boxRef,
+    nextSectionRef,
+    clipTargetRef,
+    imgRef,
+    otroElementoRef: otroElemento,
+    optionsRef,
+    columnGrid1Ref: columnGrid1,
+    columnGrid2Ref: columnGrid2,
+    containerRef,
+  });
+
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
@@ -135,11 +135,11 @@ const PAPlanos = () => {
       >
         <header id="planosPowder" className="mt-10 text-white" ref={otroElemento}>
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
-            Specifications
+            Especificaciones
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              MEASURE:
+              Medidas:
             </h1>
             <div
               onClick={toggleUnit}
@@ -156,12 +156,12 @@ const PAPlanos = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  IMPERIAL
+                  MT
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRIC
+                  CM
                 </span>
               </div>
             </div>
@@ -205,8 +205,7 @@ const PAPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          FEEDING & DOSING SYSTEM
-                        </h1>
+                          Sistema de alimentación y dosificación                        </h1>
                         <button
                           aria-label="See more about the feeding and dosing system"
                           className="block md:hidden"
@@ -244,24 +243,18 @@ const PAPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Screw feeder manufactured with 1045 steel</li>
+                        <li>Tornillo dosificador fabricado en acero 1045</li>
                         <li>
-                          Variable speed dosing screw, adjustable from 3 to 7
-                          kg/min
+                          Dosificación de velocidad variable, ajustable de 3 a 7 kg/min
                         </li>
-                        <li>Vibrator to ensure consistent feed</li>
-                        <li>Low-level alarm sensor</li>
-                        <li>Direct discharge into the mixing drum</li>
-                        <li>
-                          Vibrators in fine aggregate bin to ensure consistent
-                          feed
-                        </li>
+                        <li>Sensor de alarma por bajo nivel</li>
+                        <li>Descarga directa al tambor mezclador</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          COMPONENTS & ELECTRICAL
+                          Componentes y sistema eléctrico
                         </h1>
                         <button
                           aria-label="See more about the coponents and electrical composition"
@@ -301,29 +294,27 @@ const PAPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Industrial-grade motors, components, and Siemens
-                          wiring.
+                          Motores, componentes y cableado Siemens de grado industrial.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Siemens motors: 3 Hp (dosing) and 1.5 Hp (feeding)
+                              Siemens motors: 3 Hp (dosificación) y 1.5 Hp (alimentación)
                             </li>
                           </ul>
                         </li>
-                        <li>Simplified wiring system for easy maintenance.</li>
-                        <li>Weather-protected electrical connections.</li>
-                        <li>Pulley-and-bushing drive system.</li>
+                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          External fuel lines, sensors, and signal cabling
-                          pre-installed.
+                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          PORTABILITY
+                          Portabilidad
                         </h1>
                         <button
                           aria-label="See more about the portability"
@@ -362,37 +353,29 @@ const PAPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Designed for relocation</li>
-                        <li>Option for:</li>
+                        <li>Diseñado para reubicación.</li>
+                        <li>Opción para:</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Mounted on standard transport chassis with one
-                              axle and 16” highway-rated wheels.
+                              Montado sobre chasis de transporte estándar, con un eje y rines de 16” para carretera.
                             </li>
                             <li className="list-none">
                               <ul className="list-disc ml-6">
                                 <li>
-                                  Bilt-in fifth wheel means no lowboy is
-                                  required.
+                                  Montado sobre chasis de transporte con un eje y llantas de uso carretera.
                                 </li>
                                 <li>
-                                  Pull-type hitch with safety coupling and brake
-                                  system.
+                                  Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
                                 </li>
                                 <li>
-                                  Bolt-on support legs for fast on-site
-                                  assembly.
-                                </li>
-                                <li>
-                                  DOT-compliant lighting and reflective markings
-                                  for transport visibility.
+                                  Patas de soporte atornilladas, para un armado rápido en sitio.
                                 </li>
                               </ul>
                             </li>
                           </ul>
                         </li>
-                        <li>Setup requires no crane or hoisting equipment.</li>
+                        <li>Montado en patas</li>
                       </ul>
                     </div>
                   </div>
@@ -405,7 +388,7 @@ const PAPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          CONTROL & OPERATION
+                          Control y operación
                         </h1>
                         <button
                           aria-label="See more about the control and operation of the system"
@@ -444,35 +427,30 @@ const PAPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
                         </li>
                         <li>
                           <ul>
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable to existing asphalt plant control
-                          infrastructure
+                          Adaptable a la infraestructura de control existente de la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Seamless integration to central control systems
+                              Integración sin complicaciones con los sistemas de control central
                             </li>
                           </ul>
                         </li>
@@ -481,7 +459,7 @@ const PAPlanos = () => {
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          DURABILITY & SAFETY
+                          Resistencia y seguridad
                         </h1>
                         <button
                           aria-label="See more about the durability and safety"
@@ -521,25 +499,23 @@ const PAPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block md:mb-0`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Estructura extra reforzada para trabajo pesado a largo plazo.
                         </li>
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Dust-resistant housing protects control module.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
                       </ul>
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          COMPLIANCE WITH INDUSTRY STANDARDS
+                          Cumplimiento con estándares de la industria
                         </h1>
                         <button
                           aria-label="See more about the compliance with industry standards"
@@ -578,10 +554,9 @@ const PAPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block md:mb-0`}
                       >
-                        <li>EPA</li>
-                        <li>OSHA</li>
-                        <li>DOT</li>
-                        <li>UL wiring</li>
+                        <li>SEMARNAT</li>
+                        <li>SCT</li>
+                        <li>NOM-001-SEDE</li>
                       </ul>
                     </div>
                   </div>
@@ -620,7 +595,7 @@ const PAPlanos = () => {
                               } cm`
                               : `${(
                                 (toggleConfig?.dimensions.width ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                              ).toFixed(1)} mt`}
                           </p>
                         </div>
 
@@ -685,7 +660,7 @@ const PAPlanos = () => {
                               } cm`
                               : `${(
                                 (toggleConfig?.dimensions.width2 ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                              ).toFixed(1)} mt`}
                           </p>
                         </div>
                         <div className="border-dotted border-r border-r-white h-[20px] w-[20px] flex items-center justify-center">
@@ -744,7 +719,7 @@ const PAPlanos = () => {
                             } cm`
                             : `${(
                               (toggleConfig?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                            ).toFixed(1)} mt`}
                         </p>
                       </div>
                       <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -802,7 +777,7 @@ const PAPlanos = () => {
                               } cm`
                               : `${(
                                 (toggleConfig?.dimensions.length ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                              ).toFixed(1)} mt`}
                           </p>
                         </div>
 
@@ -867,7 +842,7 @@ const PAPlanos = () => {
                               } cm`
                               : `${(
                                 (toggleConfig?.dimensions.length2 ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                              ).toFixed(1)} mt`}
                           </p>
                         </div>
                         <div className="border-dotted border-r border-r-white h-[20px] w-[50px] flex items-center justify-center">
@@ -905,7 +880,7 @@ const PAPlanos = () => {
                       <div className="text-white font-normal flex flex-col gap-4">
                         <div className="w-full flex justify-between border-b border-b-white">
                           <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                            BIN DIMENSIONS
+                            Dimensiones de unidad
                           </h1>
                           <button
                             aria-label="See more about the bin dimensions"
@@ -945,7 +920,7 @@ const PAPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                         >
                           <div className="flex justify-between">
-                            <h1>Length:</h1>
+                            <h1>Longitud:</h1>
                             <p>
                               {unit === "metric"
                                 ? `${toggleConfig?.dimensions.dosing.toFixed(
@@ -955,8 +930,8 @@ const PAPlanos = () => {
                                 : `${(
                                   (toggleConfig?.dimensions.dosing ?? 0) *
                                   cmToFeet
-                                ).toFixed(1)} ft`}{" "}
-                              (dosing section)<br></br>
+                                ).toFixed(1)} mt`}{" "}
+                              (sección de dosificación)<br></br>
                               {unit === "metric"
                                 ? `${toggleConfig?.dimensions.feeding.toFixed(
                                   1
@@ -965,12 +940,12 @@ const PAPlanos = () => {
                                 : `${(
                                   (toggleConfig?.dimensions.feeding ?? 0) *
                                   cmToFeet
-                                ).toFixed(1)} ft`}{" "}
-                              (feeding section)
+                                ).toFixed(1)} mt`}{" "}
+                              (sección de alimentación)
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Screw Diameter::</h1>
+                            <h1>Diametro de tornillo: </h1>
                             <p>
                               {unit === "metric"
                                 ? `${toggleConfig?.dimensions.screw.toFixed(1) ??
@@ -979,11 +954,11 @@ const PAPlanos = () => {
                                 : `${(
                                   (toggleConfig?.dimensions.screw ?? 0) *
                                   cmToFeet
-                                ).toFixed(1)} ft`}
+                                ).toFixed(1)} mt`}
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Height:</h1>
+                            <h1>Altura:</h1>
                             <p>
                               {unit === "metric"
                                 ? `${toggleConfig?.dimensions.height2.toFixed(
@@ -993,11 +968,11 @@ const PAPlanos = () => {
                                 : `${(
                                   (toggleConfig?.dimensions.dosing ?? 0) *
                                   cmToFeet
-                                ).toFixed(1)} ft`}
+                                ).toFixed(1)} mt`}
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Bin Capacity:</h1>
+                            <h1>Capacitdad de tolva:</h1>
                             <p>2.6 m³ (level filled)</p>
                           </div>
                         </div>
