@@ -31,7 +31,7 @@ const FPHPlanos = () => {
   const clipTargetRef = useRef<HTMLDivElement>(null);
 
   // valor de cm a pies
-  const cmToFeet = 0.0328084;
+  const cmToFeet = 0.01;
   //SWITCH LOGIC
   const [unit, setUnit] = useState<"metric" | "imperial">("metric");
   //ESTADOS DE LOS DROPWDOWNS
@@ -119,11 +119,11 @@ const FPHPlanos = () => {
       >
         <header className="mt-10 text-white" ref={otroElemento}>
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
-            Specifications
+            Especificaciones
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              MEASURE:
+              Medidas:
             </h1>
             <div
               onClick={toggleUnit}
@@ -140,12 +140,12 @@ const FPHPlanos = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  IMPERIAL
+                  MT
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRIC
+                  CM
                 </span>
               </div>
             </div>
@@ -188,8 +188,8 @@ const FPHPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          DESIGN
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                          Diseño
                         </h1>
                         <button
                           aria-label="See more about the design"
@@ -229,21 +229,21 @@ const FPHPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Specifically designed for use with Triaso burners.
+                         Diseñado específicamente para su uso con quemadores Triaso.
+
                         </li>
                         <li>
-                          Compatible with alternate fuels for efficient
-                          combustion.
+                          Compatible con combustibles alternativos para una combustión eficiente.
                         </li>
                         <li>
-                          Prevents contamination of the mix with fuel residues.
+                          Evita la contaminación de la mezcla asfáltica por residuos de combustible.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          HEATING & SYSTEM
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                          Resistencia y seguridad
                         </h1>
                         <button
                           aria-label="See more about the heating system"
@@ -282,22 +282,29 @@ const FPHPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>In-line electric resistance of 13.5 kW.</li>
+                        <li>Estructura reforzada para trabajo pesado a largo plazo.</li>
                         <li>
-                          Heats fuel up to 40 °C with a flow of 840 liters per
-                          hour.
+                          Componentes atornillados con recubrimiento anticorrosivo.
+                        </li>
+                        <li className="list-none">
+                          <ul className="list-disc pl-10">
+                            <li>Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.</li>
+                          </ul>
                         </li>
                         <li>
-                          Safety feature prevents activation if no fuel is
-                          present in the pipeline.
+                          Aislamiento térmico con fibra de vidrio de tres pulgadas, que reduce la pérdida de calor y la temperatura superficial.
                         </li>
-                        <li>Accurate control of the desired temperature.</li>
+                        <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de control.
+                        </li>
+                        <li>Forro exterior de lámina de acero inoxidable.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          COMPONENTS & ELECTRICAL
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                          Componentes y sistema eléctrico
                         </h1>
                         <button
                           aria-label="See more about the components and electrical composition"
@@ -337,15 +344,13 @@ const FPHPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Industrial-grade motors, components, and Siemens
-                          wiring.
+                          Motores, componentes y cableado Siemens de grado industrial.
                         </li>
-                        <li>Simplified wiring system for easy maintenance.</li>
-                        <li>Weather-protected electrical connections.</li>
-                        <li>Pulley-and-bushing drive system.</li>
+                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          External fuel lines, sensors, and signal cabling
-                          pre-installed.
+                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
                         </li>
                       </ul>
                     </div>
@@ -358,8 +363,8 @@ const FPHPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          FILTRATION SYSTEM
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                          Sistema de filtración
                         </h1>
                         <button
                           aria-label="See more about the filtration system"
@@ -399,16 +404,16 @@ const FPHPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Integrated strainer for internal fuel filtration.
+                          Colador integrado para la filtración interna del combustible.
                         </li>
-                        <li>Removes impurities larger than mesh 100.</li>
-                        <li>Easy to clean, no tools required.</li>
+                        <li>Elimina impurezas mayores a malla 100.</li>
+                        <li>Fácil de limpiar, sin necesidad de herramientas.</li>
                       </ul>
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          CONTROL & OPERATION
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                          Control y Operación
                         </h1>
                         <button
                           aria-label="See more about the control and operation"
@@ -447,38 +452,39 @@ const FPHPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block md:mb-0`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Sistema operativo Triaso Relief 8.0.
                         </li>
                         <li>
                           <ul>
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
                             </li>
+                            <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.</li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                         Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable to existing asphalt plant control
-                          infrastructure
+                          Adaptable a la infraestructura de control existente de la planta de asfalto.
                         </li>
-                        <li>Seamless integration to central control systems</li>
+                        <li className="list-none">
+                          <ul className="list-disc pl-10">
+                            <li>Integración sencilla con sistemas de control centralizados.</li>
+                          </ul>
+                        </li>
+                        
                       </ul>
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          DURABILITY & SAFETY
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                          Sistema de calentamiento
                         </h1>
                         <button
                           aria-label="See more about the durability and safety"
@@ -518,24 +524,14 @@ const FPHPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block md:mb-0`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Resistencia eléctrica en línea de 13.5 kW.
                         </li>
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Calienta el combustible hasta 40 °C con un flujo de 840 litros por hora.</li>
                         <li>
-                          <ul>
-                            <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
-                            </li>
-                          </ul>
+                          Sistema de seguridad que evita su activación si no hay combustible en la tubería.
                         </li>
-                        <li>
-                          Thermal insulation minimizes heat and surface
-                          temperature.
-                        </li>
-                        <li>Labyrinth seals reduce air and heat loss.</li>
-                        <li>Dust-resistant housing protects control module.</li>
+                        <li>Control preciso de la temperatura deseada.</li>
+
                       </ul>
                     </div>
                   </div>
@@ -570,7 +566,7 @@ const FPHPlanos = () => {
                           ? `${toggleConfig[0].width.toFixed(1) ?? ""} cm`
                           : `${(
                             (toggleConfig[0].width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ).toFixed(1)} mt`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -632,7 +628,7 @@ const FPHPlanos = () => {
                           ? `${toggleConfig[0].height?.toFixed(1) ?? ""} cm`
                           : `${(
                             (toggleConfig[0].height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ).toFixed(1)} mt`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -687,7 +683,7 @@ const FPHPlanos = () => {
                           ? `${toggleConfig[0].length?.toFixed(1) ?? ""} cm`
                           : `${(
                             (toggleConfig[0].length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ).toFixed(1)} mt`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -726,8 +722,8 @@ const FPHPlanos = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                       <div className="text-white font-normal flex flex-col gap-4">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                            DIMENSIONS
+                          <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                            Dimensiones
                           </h1>
                           <button
                             aria-label="See more about the dimensions"
@@ -767,36 +763,36 @@ const FPHPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                         >
                           <div className="flex justify-between">
-                            <h1>Length:</h1>
+                            <h1>Longitud:</h1>
                             <p>
                               {unit === "metric"
                                 ? `${toggleConfig[0].length?.toFixed(1) ?? ""
                                 } cm`
                                 : `${(
                                   (toggleConfig[0].length ?? 0) * cmToFeet
-                                ).toFixed(1)} ft`}
+                                ).toFixed(1)} mt`}
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Width:</h1>
+                            <h1>Ancho:</h1>
                             <p>
                               {unit === "metric"
                                 ? `${toggleConfig[0].width?.toFixed(1) ?? ""
                                 } cm`
                                 : `${(
                                   (toggleConfig[0].width ?? 0) * cmToFeet
-                                ).toFixed(1)} ft`}
+                                ).toFixed(1)} mt`}
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Height:</h1>
+                            <h1>Altura:</h1>
                             <p>
                               {unit === "metric"
                                 ? `${toggleConfig[0].height?.toFixed(1) ?? ""
                                 } cm`
                                 : `${(
                                   (toggleConfig[0].height ?? 0) * cmToFeet
-                                ).toFixed(1)} ft`}
+                                ).toFixed(1)} mt`}
                             </p>
                           </div>
                         </div>
