@@ -38,7 +38,7 @@ const OHPlanos = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const imgRef = useRef<HTMLImageElement>(null);
     const clipTargetRef = useRef<HTMLDivElement>(null);
-    const cmToFeet = 0.01;
+    const cmToFeet = 0.0328084;
     const [unit, setUnit] = useState<"metric" | "imperial">("metric");
     const [openSections, setOpenSections] = useState<Record<string, boolean>>({
         C1_1: false,
@@ -137,7 +137,7 @@ const OHPlanos = () => {
                     </h1>
                     <div className="flex items-center justify-center mt-10">
                         <h1 className="mr-3" id="measure">
-                            Medida:
+                            Unidad:
                         </h1>
                         <div
                             onClick={toggleUnit}
@@ -151,12 +151,12 @@ const OHPlanos = () => {
                                 <span
                                     className={unit === "imperial" ? "text-black" : "text-white"}
                                 >
-                                    MT
+                                    Imperial
                                 </span>
                                 <span
                                     className={unit === "metric" ? "text-black" : "text-white"}
                                 >
-                                    CM
+                                    Métrica
                                 </span>
                             </div>
                         </div>
@@ -594,11 +594,10 @@ const OHPlanos = () => {
                                             </div>
                                             <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.width ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+
+
                                             </p>
                                             <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                                                 <div className="bg-white h-[1px] w-full relative">
@@ -657,11 +656,8 @@ const OHPlanos = () => {
                                         <div className="my-3">
                                             <p className="text-white text-lg">
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.height ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                                             </p>
                                         </div>
                                         <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -713,11 +709,8 @@ const OHPlanos = () => {
                                             </div>
                                             <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.length ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                                             </p>
                                             <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                                                 <div className="bg-white h-[1px] w-full relative">
@@ -794,33 +787,25 @@ const OHPlanos = () => {
                                             <p>Longitud:</p>
                                             <p className="text-white lg:w-full md:w-full text-center ">
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.length ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                                             </p>
                                         </div>
                                         <div className="flex flex-row justify-between w-full">
                                             <p>Ancho:</p>
                                             <p className="text-white lg:w-full md:w-full text-center ">
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.width ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                                             </p>
                                         </div>
                                         <div className="flex flex-row justify-between w-full">
                                             <p>Largo:</p>
                                             <p className="text-white lg:w-full md:w-full  text-center ">
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.height ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                                             </p>
                                         </div>
 
@@ -1201,12 +1186,10 @@ const OHPlanos = () => {
                                                 </div>
                                             </div>
                                             <p className="text-white lg:text-lg text-base w-full text-center mx-4">
+
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.width ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}    
                                             </p>
                                             <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                                                 <div className="bg-white h-[1px] w-full relative">
@@ -1265,11 +1248,8 @@ const OHPlanos = () => {
                                         <div className="my-3">
                                             <p className="text-white text-lg">
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.height ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                                             </p>
                                         </div>
                                         <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1321,11 +1301,8 @@ const OHPlanos = () => {
                                             </div>
                                             <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.length ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                                             </p>
                                             <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                                                 <div className="bg-white h-[1px] w-full relative">
@@ -1362,10 +1339,9 @@ const OHPlanos = () => {
                                 <div className="flex flex-col  gap-4 text-white w-full lg:w-[35%] md:w-[35%] mt-10 md:mt-0">
                                     <div className="w-full lg:w-[60%] md:w-[60%] flex justify-between border-b border-b-white">
                                         <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                                            Dimensions
+                                            Dimensiones
                                         </h1>
                                         <button
-                                            aria-label="See more about the dimensions"
                                             className="block md:hidden"
                                             onClick={() =>
                                                 setOpenSections((prev) => ({
@@ -1400,36 +1376,28 @@ const OHPlanos = () => {
                                         : "max-h-0 opacity-1"
                                         } lg:flex lg:flex-col lg:items-start md:flex md:items-center md:max-h-96 md:opacity-100`}>
                                         <div className="flex flex-row justify-between w-full lg:w-[637px] md:w-[640px]">
-                                            <p>Length</p>
+                                            <p>Longitud:</p>
                                             <p className="text-white lg:w-full md:w-full text-center ">
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.length ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                                             </p>
                                         </div>
                                         <div className="flex flex-row justify-between w-full">
-                                            <p>Width</p>
+                                            <p>Ancho:</p>
                                             <p className="text-white lg:w-full md:w-full text-center ">
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.width ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                                             </p>
                                         </div>
                                         <div className="flex flex-row justify-between w-full">
-                                            <p>Height</p>
+                                            <p>Largo:</p>
                                             <p className="text-white lg:w-full md:w-full  text-center ">
                                                 {unit === "metric"
-                                                    ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                                                    } cm`
-                                                    : `${(
-                                                        (activeData?.dimensions.height ?? 0) * cmToFeet
-                                                    ).toFixed(1)} mt`}
+                                                    ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                                                    : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                                             </p>
                                         </div>
 
