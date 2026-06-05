@@ -17,23 +17,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const drumMixer = [
   {
-    length: 300,
-    width: 112.32,
+    length: 3.0,
+    width: 1.12,
   },
 ];
 const asphalTank = [
   {
-    length: 389.2,
-    width: 128,
-    height: 158.5,
+    length: 3.89,
+    width: 1028,
+    height: 1.58,
     capcity: "6,000",
   },
 ];
 const binUnit = [
   {
-    length: 317,
-    width: 190.5,
-    height: 160,
+    length: 3.17,
+    width: 1.90,
+    height: 1.60,
     capcity: "8 ton",
   },
 ];
@@ -41,21 +41,21 @@ const toggleConfig = [
   {
     id: "1",
     dimensions: {
-      width: 292.1,
-      height: 394.47,
-      length: 762.0,
+      width: 2.921,
+      height: 3.94,
+      length: 7.62,
       support: "Stationary legs",
-      chasisWidth: 266.7,
+      chasisWidth: 2.66,
     },
   },
   {
     id: "2",
     dimensions: {
-      width: 311.5,
-      height: 388.75,
-      length: 891.65,
+      width: 3.11,
+      height: 3.88,
+      length: 8.91,
       support: "Pre-set stationary legs",
-      chasisWidth: 304.8,
+      chasisWidth: 3.04,
       wheel: 'Eight 16" tires',
       axleConfig: "Dual 8-lug axles",
     },
@@ -63,14 +63,14 @@ const toggleConfig = [
   {
     id: "3",
     dimensions: {
-      width: 290.5,
-      height: 421,
-      length: 876,
+      width: 2.90,
+      height: 4.21,
+      length: 8.76,
       support: "Pre-set stationary legs",
-      chasisWidth: 254,
+      chasisWidth: 2.54,
       wheel: "11-22.5 tires",
       axleConfig: "Dual 8-lug axles",
-      fifthWheel: 130.45,
+      fifthWheel: 1.30,
     },
   },
 ];
@@ -113,7 +113,7 @@ const PlanoSection = () => {
 
   });
   // valor de cm a pies
-  const cmToFeet = 0.01;
+  const cmToFeet = 3.28084;
   const activeData = toggleConfig.find(
     (item) => item.id === activeTab.toString()
   );
@@ -212,12 +212,12 @@ const PlanoSection = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  MT
+                  IMPERIAL
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  CM
+                  MÉTRICA
                 </span>
               </div>
             </div>
@@ -938,11 +938,11 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1001,11 +1001,11 @@ const PlanoSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1057,11 +1057,11 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1141,11 +1141,11 @@ const PlanoSection = () => {
                         <h1>Largo total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
+                            ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
+                            } mt`
                             : `${(
                               (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1157,35 +1157,35 @@ const PlanoSection = () => {
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.chasisWidth?.toFixed(
-                              1
+                              2
                             ) ?? ""
-                            } cm`
+                            } mt`
                             : `${(
                               (activeData?.dimensions.chasisWidth ?? 0) *
                               cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
+                            ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
+                            } mt`
                             : `${(
                               (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
+                            ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
+                            } mt`
                             : `${(
                               (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1237,30 +1237,30 @@ const PlanoSection = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].length?.toFixed(1) ?? ""} cm`
+                            ? `${drumMixer[0].length?.toFixed(2) ?? ""} mt`
                             : `${(
                               (drumMixer[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                     </div>
@@ -1310,30 +1310,30 @@ const PlanoSection = () => {
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].length?.toFixed(1) ?? ""} cm`
+                            ? `${asphalTank[0].length?.toFixed(2) ?? ""} mt`
                             : `${(
                               (asphalTank[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${asphalTank[0].width?.toFixed(2) ?? ""} mt`
                             : `${(
                               (asphalTank[0].width ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].height?.toFixed(1) ?? ""} cm`
+                            ? `${asphalTank[0].height?.toFixed(2) ?? ""} mt`
                             : `${(
                               (asphalTank[0].height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1391,27 +1391,27 @@ const PlanoSection = () => {
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].length?.toFixed(1) ?? ""} cm`
+                            ? `${binUnit[0].length?.toFixed(2) ?? ""} mt`
                             : `${((binUnit[0].length ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${binUnit[0].width?.toFixed(2) ?? ""} mt`
                             : `${((binUnit[0].width ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].height?.toFixed(1) ?? ""} cm`
+                            ? `${binUnit[0].height?.toFixed(2) ?? ""} mt`
                             : `${((binUnit[0].height ?? 0) * cmToFeet).toFixed(
                               1
                             )} mt`}
@@ -2056,11 +2056,11 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2119,11 +2119,11 @@ const PlanoSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -2175,11 +2175,11 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2260,11 +2260,11 @@ const PlanoSection = () => {
                         <h1>Largo total (incluyendo enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
+                            ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
+                            } mt`
                             : `${(
                               (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2296,35 +2296,35 @@ const PlanoSection = () => {
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.chasisWidth?.toFixed(
-                              1
+                              2
                             ) ?? ""
-                            } cm`
+                            } mt`
                             : `${(
                               (activeData?.dimensions.chasisWidth ?? 0) *
                               cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
+                            ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
+                            } mt`
                             : `${(
                               (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
+                            ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
+                            } mt`
                             : `${(
                               (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -2376,30 +2376,30 @@ const PlanoSection = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].length?.toFixed(1) ?? ""} cm`
+                            ? `${drumMixer[0].length?.toFixed(2) ?? ""} mt`
                             : `${(
                               (drumMixer[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                     </div>
@@ -2449,30 +2449,30 @@ const PlanoSection = () => {
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].length?.toFixed(1) ?? ""} cm`
+                            ? `${asphalTank[0].length?.toFixed(2) ?? ""} mt`
                             : `${(
                               (asphalTank[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${asphalTank[0].width?.toFixed(2) ?? ""} mt`
                             : `${(
                               (asphalTank[0].width ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].height?.toFixed(1) ?? ""} cm`
+                            ? `${asphalTank[0].height?.toFixed(2) ?? ""} mt`
                             : `${(
                               (asphalTank[0].height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2530,30 +2530,30 @@ const PlanoSection = () => {
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].length?.toFixed(1) ?? ""} cm`
+                            ? `${binUnit[0].length?.toFixed(2) ?? ""} mt`
                             : `${((binUnit[0].length ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${binUnit[0].width?.toFixed(2) ?? ""} mt`
                             : `${((binUnit[0].width ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].height?.toFixed(1) ?? ""} cm`
+                            ? `${binUnit[0].height?.toFixed(2) ?? ""} mt`
                             : `${((binUnit[0].height ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3208,11 +3208,11 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -3271,11 +3271,11 @@ const PlanoSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -3327,11 +3327,11 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -3412,11 +3412,11 @@ const PlanoSection = () => {
                         <h1>Largo total (incluyendo quinta rueda)::</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
+                            ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
+                            } mt`
                             : `${(
                               (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3431,13 +3431,13 @@ const PlanoSection = () => {
                         <h1>Altura enganche quinta rueda</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.fifthWheel?.toFixed(1) ??
+                            ? `${activeData?.dimensions.fifthWheel?.toFixed(2) ??
                             ""
-                            } cm`
+                            } mt`
                             : `${(
                               (activeData?.dimensions.fifthWheel ?? 0) *
                               cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3470,13 +3470,13 @@ const PlanoSection = () => {
                             <p>
                               {unit === "metric"
                                 ? `${activeData?.dimensions.chasisWidth?.toFixed(
-                                  1
+                                  2
                                 ) ?? ""
-                                } cm`
+                                } mt`
                                 : `${(
                                   (activeData?.dimensions.chasisWidth ?? 0) *
                                   cmToFeet
-                                ).toFixed(1)} mt`}
+                                ).toFixed(1)} ft`}
                             </p>
                           </div>
                         </p>
@@ -3485,22 +3485,22 @@ const PlanoSection = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
+                            ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
+                            } mt`
                             : `${(
                               (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
+                            ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
+                            } mt`
                             : `${(
                               (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -3553,30 +3553,30 @@ const PlanoSection = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].length?.toFixed(1) ?? ""} cm`
+                            ? `${drumMixer[0].length?.toFixed(2) ?? ""} mt`
                             : `${(
                               (drumMixer[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                     </div>
@@ -3627,30 +3627,30 @@ const PlanoSection = () => {
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].length?.toFixed(1) ?? ""} cm`
+                            ? `${asphalTank[0].length?.toFixed(2) ?? ""} mt`
                             : `${(
                               (asphalTank[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${asphalTank[0].width?.toFixed(2) ?? ""} mt`
                             : `${(
                               (asphalTank[0].width ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].height?.toFixed(1) ?? ""} cm`
+                            ? `${asphalTank[0].height?.toFixed(2) ?? ""} mt`
                             : `${(
                               (asphalTank[0].height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3709,30 +3709,30 @@ const PlanoSection = () => {
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].length?.toFixed(1) ?? ""} cm`
+                            ? `${binUnit[0].length?.toFixed(2) ?? ""} mt`
                             : `${((binUnit[0].length ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].width?.toFixed(1) ?? ""} cm`
+                            ? `${binUnit[0].width?.toFixed(2) ?? ""} mt`
                             : `${((binUnit[0].width ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].height?.toFixed(1) ?? ""} cm`
+                            ? `${binUnit[0].height?.toFixed(2) ?? ""} mt`
                             : `${((binUnit[0].height ?? 0) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
