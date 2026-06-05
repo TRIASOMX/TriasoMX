@@ -84,7 +84,7 @@ const ASPlanos = () => {
   //tabs states
   const [activeTab, setActiveTab] = useState(1);
   // valor de cm a pies
-  const cmToFeet = 0.01;
+  const cmToFeet = 0.0328084;
   //animation
   const boxRef = useRef<HTMLDivElement>(null);
   const nextSectionRef = useRef<HTMLDivElement>(null);
@@ -207,7 +207,7 @@ const ASPlanos = () => {
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              UNIDAD DE MEDIDA:
+              UNIDAD :
             </h1>
             <div
               onClick={toggleUnit}
@@ -224,12 +224,12 @@ const ASPlanos = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  MT
+                  IMPERIAL
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  CM
+                  MÉTRICA
                 </span>
               </div>
             </div>
@@ -752,11 +752,8 @@ const ASPlanos = () => {
                         data-metric="8.8 ft"
                       >
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -819,11 +816,8 @@ const ASPlanos = () => {
                         data-metric="12.75 ft"
                       >
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -879,11 +873,8 @@ const ASPlanos = () => {
                         data-metric="23.7 ft"
                       >
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -964,37 +955,26 @@ const ASPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tanklenght?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.tanklenght ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tangheight?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.tangheight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1049,11 +1029,8 @@ const ASPlanos = () => {
                         <h1>Longitud total (incluyendo el enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1064,33 +1041,26 @@ const ASPlanos = () => {
                         <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
+  
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                     </div>
@@ -1540,11 +1510,8 @@ const ASPlanos = () => {
                         data-metric="8.8 ft"
                       >
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1607,11 +1574,8 @@ const ASPlanos = () => {
                         data-metric="12.75 ft"
                       >
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1667,11 +1631,8 @@ const ASPlanos = () => {
                         data-metric="23.7 ft"
                       >
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1751,37 +1712,26 @@ const ASPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tanklenght?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.tanklenght ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tangheight?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.tangheight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1796,6 +1746,7 @@ const ASPlanos = () => {
                         Chasis y estructura
                       </h1>
                       <button
+                        aria-label="See more about the chassis and structure"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -1835,11 +1786,8 @@ const ASPlanos = () => {
                         <h1>Longitud total (incluyendo el enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1850,33 +1798,26 @@ const ASPlanos = () => {
                         <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
+  
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                     </div>
@@ -2323,11 +2264,8 @@ const ASPlanos = () => {
                         data-metric="8.8 ft"
                       >
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2390,11 +2328,8 @@ const ASPlanos = () => {
                         data-metric="12.75 ft"
                       >
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -2449,12 +2384,9 @@ const ASPlanos = () => {
                         data-imperial="722.37 cm"
                         data-metric="23.7 ft"
                       >
-                        {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                         {unit === "metric"
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2534,37 +2466,26 @@ const ASPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tanklenght?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.tanklenght ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tangheight?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.tangheight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2579,6 +2500,7 @@ const ASPlanos = () => {
                         Chasis y estructura
                       </h1>
                       <button
+                        aria-label="See more about the chassis and structure"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -2618,11 +2540,8 @@ const ASPlanos = () => {
                         <h1>Longitud total (incluyendo el enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2633,33 +2552,26 @@ const ASPlanos = () => {
                         <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
+  
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                     </div>
@@ -3108,11 +3020,8 @@ const ASPlanos = () => {
                         data-metric="8.8 ft"
                       >
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -3175,11 +3084,8 @@ const ASPlanos = () => {
                         data-metric="12.75 ft"
                       >
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -3235,11 +3141,8 @@ const ASPlanos = () => {
                         data-metric="23.7 ft"
                       >
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -3319,37 +3222,26 @@ const ASPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tanklenght?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.tanklenght ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tangheight?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.tangheight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3364,6 +3256,7 @@ const ASPlanos = () => {
                         Chasis y estructura
                       </h1>
                       <button
+                        aria-label="See more about the chassis and structure"
                         className="block md:hidden"
                         onClick={() =>
                           setOpenSections((prev) => ({
@@ -3403,11 +3296,8 @@ const ASPlanos = () => {
                         <h1>Longitud total (incluyendo el enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3418,33 +3308,26 @@ const ASPlanos = () => {
                         <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
+  
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                     </div>
