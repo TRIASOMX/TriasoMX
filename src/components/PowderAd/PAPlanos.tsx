@@ -18,15 +18,15 @@ const cabinSize = [
 const toggleConfig = {
   id: "1",
   dimensions: {
-    width: 378,
-    width2: 192,
-    height: 394,
-    length: 470,
-    length2: 240,
-    dosing: 315,
-    feeding: 350,
-    screw: 106.68,
-    height2: 121.92,
+    width: 3.78,
+    width2: 1.92,
+    height: 3.94,
+    length: 4.70,
+    length2: 2.40,
+    dosing: 3.15,
+    feeding: 3.50,
+    screw: 1.06,
+    height2: 1.21,
   },
 };
 gsap.registerPlugin(ScrollTrigger);
@@ -45,7 +45,7 @@ const PAPlanos = () => {
   const imgRef = useRef<HTMLImageElement>(null);
   const clipTargetRef = useRef<HTMLDivElement>(null);
   // valor de cm a pies
-  const cmToFeet = 0.01;
+  const cmToFeet = 3.28084;
   //SWITCH LOGIC
   const [unit, setUnit] = useState<"metric" | "imperial">("metric");
   //ESTADOS DE LOS DROPWDOWNS
@@ -591,11 +591,11 @@ const PAPlanos = () => {
                         <div className="flex flex-col justify-center items-center">
                           <p className="text-white lg:text-lg text-base w-full text-center mx-4 ">
                             {unit === "metric"
-                              ? `${toggleConfig?.dimensions.width.toFixed(1) ?? ""
-                              } cm`
+                              ? `${toggleConfig?.dimensions.width.toFixed(2) ?? ""
+                              } mt`
                               : `${(
                                 (toggleConfig?.dimensions.width ?? 0) * cmToFeet
-                              ).toFixed(1)} mt`}
+                              ).toFixed(1)} ft`}
                           </p>
                         </div>
 
@@ -656,11 +656,11 @@ const PAPlanos = () => {
                         <div className="flex flex-col justify-center items-center">
                           <p className="text-white lg:text-lg text-base w-full text-center mx-4 ">
                             {unit === "metric"
-                              ? `${toggleConfig?.dimensions.width2.toFixed(1) ?? ""
-                              } cm`
+                              ? `${toggleConfig?.dimensions.width2.toFixed(2) ?? ""
+                              } mt`
                               : `${(
                                 (toggleConfig?.dimensions.width2 ?? 0) * cmToFeet
-                              ).toFixed(1)} mt`}
+                              ).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="border-dotted border-r border-r-white h-[20px] w-[20px] flex items-center justify-center">
@@ -715,11 +715,11 @@ const PAPlanos = () => {
                       <div className="my-3 flex flex-col">
                         <p className="text-white text-lg">
                           {unit === "metric"
-                            ? `${toggleConfig?.dimensions.height.toFixed(1) ?? ""
-                            } cm`
+                            ? `${toggleConfig?.dimensions.height.toFixed(2) ?? ""
+                            } mt`
                             : `${(
                               (toggleConfig?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                            ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -773,11 +773,11 @@ const PAPlanos = () => {
                         <div className="flex flex-col justify-center items-center">
                           <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                             {unit === "metric"
-                              ? `${toggleConfig?.dimensions.length.toFixed(1) ?? ""
-                              } cm`
+                              ? `${toggleConfig?.dimensions.length.toFixed(2) ?? ""
+                              } mt`
                               : `${(
                                 (toggleConfig?.dimensions.length ?? 0) * cmToFeet
-                              ).toFixed(1)} mt`}
+                              ).toFixed(1)} ft`}
                           </p>
                         </div>
 
@@ -838,11 +838,11 @@ const PAPlanos = () => {
                         <div className="flex flex-col justify-center items-center">
                           <p className="text-white lg:text-lg text-base w-full text-center mx-4 ">
                             {unit === "metric"
-                              ? `${toggleConfig?.dimensions.length2.toFixed(1) ?? ""
-                              } cm`
+                              ? `${toggleConfig?.dimensions.length2.toFixed(2) ?? ""
+                              } mt`
                               : `${(
                                 (toggleConfig?.dimensions.length2 ?? 0) * cmToFeet
-                              ).toFixed(1)} mt`}
+                              ).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="border-dotted border-r border-r-white h-[20px] w-[50px] flex items-center justify-center">
@@ -924,23 +924,23 @@ const PAPlanos = () => {
                             <p>
                               {unit === "metric"
                                 ? `${toggleConfig?.dimensions.dosing.toFixed(
-                                  1
+                                  2
                                 ) ?? ""
-                                } cm`
+                                } mt`
                                 : `${(
                                   (toggleConfig?.dimensions.dosing ?? 0) *
                                   cmToFeet
-                                ).toFixed(1)} mt`}{" "}
+                                ).toFixed(1)} ft`}{" "}
                               (sección de dosificación)<br></br>
                               {unit === "metric"
                                 ? `${toggleConfig?.dimensions.feeding.toFixed(
-                                  1
+                                  2
                                 ) ?? ""
-                                } cm`
+                                } mt`
                                 : `${(
                                   (toggleConfig?.dimensions.feeding ?? 0) *
                                   cmToFeet
-                                ).toFixed(1)} mt`}{" "}
+                                ).toFixed(1)} ft`}{" "}
                               (sección de alimentación)
                             </p>
                           </div>
@@ -948,13 +948,13 @@ const PAPlanos = () => {
                             <h1>Diametro de tornillo: </h1>
                             <p>
                               {unit === "metric"
-                                ? `${toggleConfig?.dimensions.screw.toFixed(1) ??
+                                ? `${toggleConfig?.dimensions.screw.toFixed(2) ??
                                 ""
-                                } cm`
+                                } mt`
                                 : `${(
                                   (toggleConfig?.dimensions.screw ?? 0) *
                                   cmToFeet
-                                ).toFixed(1)} mt`}
+                                ).toFixed(1)} ft`}
                             </p>
                           </div>
                           <div className="flex justify-between">
@@ -962,13 +962,13 @@ const PAPlanos = () => {
                             <p>
                               {unit === "metric"
                                 ? `${toggleConfig?.dimensions.height2.toFixed(
-                                  1
+                                  2
                                 ) ?? ""
-                                } cm`
+                                } mt`
                                 : `${(
                                   (toggleConfig?.dimensions.dosing ?? 0) *
                                   cmToFeet
-                                ).toFixed(1)} mt`}
+                                ).toFixed(1)} ft`}
                             </p>
                           </div>
                           <div className="flex justify-between">
