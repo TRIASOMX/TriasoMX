@@ -25,28 +25,28 @@ const toggleConfig = [
     id: "1",
     dimensions: {
       //Without Aesthetic Side Panels
-      singleLength: 365.75,
-      width: 268.22,
-      singleHeight: 201.17,
-      height: 381,
-      length: 722.37,
-      tLenght: 1088.14,
-      tWheel: 134.11,
-      tStructurew: 260,
-      hOperation: 381,
+      singleLength: 3.65,
+      width: 2.68,
+      singleHeight: 2.0,
+      height: 3.81,
+      length: 7.22,
+      tLenght: 10.88,
+      tWheel: 1.34,
+      tStructurew: 2.60,
+      hOperation: 3.81,
       tph: 60,
 
 
       //with Aesthetic Side Panels
-      aSingleLength: 365.75,
-      aWidth: 268.22,
-      aSingleHeight: 201.17,
-      aHeight: 381,
-      aLength: 722.37,
-      aTlenght: 1088.14,
-      aTwheel: 134.11,
-      aTstructurew: 260,
-      aHoperation: 381,
+      aSingleLength: 3.65,
+      aWidth: 2.68,
+      aSingleHeight: 2.01,
+      aHeight: 3.81,
+      aLength: 7.22,
+      aTlenght: 10.88,
+      aTwheel: 1.34,
+      aTstructurew: 2.60,
+      aHoperation: 3.81,
       aTph: 60,
     },
   },
@@ -54,28 +54,28 @@ const toggleConfig = [
     id: "2",
     dimensions: {
       //Without Aesthetic Side Panels
-      singleLength: 365.75,
-      width: 268.22,
-      singleHeight: 201.17,
-      height: 381,
-      length: 1088.14,
-      tLenght: 1088.14,
-      tWheel: 134.11,
-      tStructurew: 260,
-      hOperation: 381,
+      singleLength: 3.65,
+      width: 2.68,
+      singleHeight: 2.01,
+      height: 3.81,
+      length: 10.88,
+      tLenght: 10.88,
+      tWheel: 1.34,
+      tStructurew: 2.60,
+      hOperation: 3.81,
       tph: 60,
 
 
       //with Aesthetic Side Panels
-      aSingleLength: 365.75,
-      aWidth: 268.22,
-      aSingleHeight: 201.17,
-      aHeight: 381,
-      aLength: 957.90,
-      aTlenght: 1088.14,
-      aTwheel: 134.11,
-      aTstructurew: 260,
-      aHoperation: 381,
+      aSingleLength: 3.65,
+      aWidth: 2.68,
+      aSingleHeight: 2.01,
+      aHeight: 3.81,
+      aLength: 9.57,
+      aTlenght: 10.88,
+      aTwheel: 1.34,
+      aTstructurew: 2.60,
+      aHoperation: 3.81,
       aTph: 60,
     },
   },
@@ -97,7 +97,7 @@ const RBPlanos = () => {
   const imgRef = useRef<HTMLImageElement>(null);
   const clipTargetRef = useRef<HTMLDivElement>(null);
   // valor de cm a pies
-  const cmToFeet = 0.01;
+  const cmToFeet = 3.28084;
   //SWITCH LOGIC
   const [unit, setUnit] = useState<"metric" | "imperial">("metric");
 
@@ -213,7 +213,7 @@ const RBPlanos = () => {
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3 text-white" id="measure">
-              Medida:
+              Unidad:
             </h1>
             <div
               onClick={toggleUnit}
@@ -232,12 +232,12 @@ const RBPlanos = () => {
                     unit === "imperial" ? "text-black" : "text-white"
                   }
                 >
-                  MT
+                  Imperial
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  CM
+                  Métrica
                 </span>
               </div>
             </div>
@@ -805,11 +805,11 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("aWidth", "width")?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${dim("aWidth", "width")?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (dim("aWidth", "width")) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -868,11 +868,11 @@ const RBPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${dim("aHeight", "height")?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${dim("aHeight", "height")?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (dim("aHeight", "height")) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -924,11 +924,11 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("aLength", "length")?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${dim("aLength", "length")?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (dim("aLength", "length")) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1015,30 +1015,30 @@ const RBPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aSingleLength", "singleLength")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aSingleLength", "singleLength")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aSingleLength", "singleLength")) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aWidth", "width")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aWidth", "width")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aWidth", "width")) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aSingleHeight", "singleHeight")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aSingleHeight", "singleHeight")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aSingleHeight", "singleHeight")) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1091,7 +1091,7 @@ const RBPlanos = () => {
                         <h1>Longitud total (incluido el enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aTlenght", "tLenght")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aTlenght", "tLenght")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aTlenght", "tLenght")) * cmToFeet).toFixed(
                               1
                             )} ft`}
@@ -1105,7 +1105,7 @@ const RBPlanos = () => {
                         <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aTwheel", "tWheel")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aTwheel", "tWheel")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aTwheel", "tWheel")) * cmToFeet).toFixed(
                               1
                             )} ft`}
@@ -1115,7 +1115,7 @@ const RBPlanos = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aTstructurew", "tStructurew")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aTstructurew", "tStructurew")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aTstructurew", "tStructurew")) * cmToFeet).toFixed(
                               1
                             )} ft`}
@@ -1125,12 +1125,12 @@ const RBPlanos = () => {
                         <h1>Altura con las tolvas en funcionamiento:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aHoperation", "hOperation")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aHoperation", "hOperation")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aHoperation", "hOperation")) * cmToFeet).toFixed(
                               1
                             )} ft`}
                         </p>
-                      </div>
+                      </div>  
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -1648,11 +1648,11 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("aWidth", "width")?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${dim("aWidth", "width")?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (dim("aWidth", "width")) * cmToFeet
-                          ).toFixed(1)} MT`}
+                          ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1711,11 +1711,11 @@ const RBPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${dim("aHeight", "height")?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${dim("aHeight", "height")?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (dim("aHeight", "height")) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1767,8 +1767,8 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("aLength", "length")?.toFixed(1) ?? ""
-                          } cm`
+                          ? `${dim("aLength", "length")?.toFixed(2) ?? ""
+                          } mt`
                           : `${(
                             (dim("aLength", "length")) * cmToFeet
                           ).toFixed(1)} ft`}
@@ -1860,30 +1860,30 @@ const RBPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aSingleLength", "singleLength")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aSingleLength", "singleLength")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aSingleLength", "singleLength")) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aWidth", "width")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aWidth", "width")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aWidth", "width")) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aSingleHeight", "singleHeight")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aSingleHeight", "singleHeight")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aSingleHeight", "singleHeight")) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1938,10 +1938,10 @@ const RBPlanos = () => {
                         <h1>Longitud total (incluido el enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aTlenght", "tLenght")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aTlenght", "tLenght")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aTlenght", "tLenght")) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1952,7 +1952,7 @@ const RBPlanos = () => {
                         <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aTwheel", "tWheel")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aTwheel", "tWheel")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aTwheel", "tWheel")) * cmToFeet).toFixed(
                               1
                             )} ft`}
@@ -1962,20 +1962,20 @@ const RBPlanos = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aTstructurew", "tStructurew")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aTstructurew", "tStructurew")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aTstructurew", "tStructurew")) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura con los contenedores en funcionamiento:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aHoperation", "hOperation")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aHoperation", "hOperation")?.toFixed(2) ?? ""} mt`
                             : `${((dim("aHoperation", "hOperation")) * cmToFeet).toFixed(
                               1
-                            )} mt`}
+                            )} ft`}
                         </p>
                       </div>
                     </div>
