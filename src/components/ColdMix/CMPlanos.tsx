@@ -260,7 +260,7 @@ const CMPlanos = () => {
   //tabs states
   const [activeTab, setActiveTab] = useState(3);
   // valor de cm a pies
-  const cmToFeet = 0.01;
+  const cmToFeet = 0.0328084;
   //combinaciones de las imagenes
   const imageMap = {
     "2-withPanels-groundLevel-legs": A2GLA,
@@ -403,7 +403,7 @@ const CMPlanos = () => {
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              MEDIDA:
+              UNIDAD:
             </h1>
             <div
               onClick={toggleUnit}
@@ -420,12 +420,12 @@ const CMPlanos = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  METROS
+                  IMPERIAL
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  CENTÍMETROS
+                  MÉTRICO
                 </span>
               </div>
             </div>
@@ -1178,12 +1178,11 @@ const CMPlanos = () => {
                         </div>
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
-                        {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                        
+                         {unit === "metric"
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1250,11 +1249,8 @@ const CMPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1306,11 +1302,8 @@ const CMPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1390,34 +1383,27 @@ const CMPlanos = () => {
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                  
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+                         
                         </p>
                       </div>
                     </div>
@@ -1467,12 +1453,9 @@ const CMPlanos = () => {
                       <div className="flex justify-between">
                         <h1>Longitud total (incluido el enganche):</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1486,40 +1469,25 @@ const CMPlanos = () => {
                       <div className="flex justify-between">
                         <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.totalHeight?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.totalHeight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.totalHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura de descarga (desde el suelo):</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.dischargeHeight?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.dischargeHeight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.dischargeHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1569,25 +1537,17 @@ const CMPlanos = () => {
                       <div className="flex justify-between">
                         <h1>Ancho de la cinta de alimentación:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.feeding?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.feeding ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.feeding ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho de la cinta colectora: </h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.collector?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.collector ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} mt`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.collector ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -2113,11 +2073,8 @@ const CMPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2184,11 +2141,9 @@ const CMPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -2240,11 +2195,8 @@ const CMPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2325,33 +2277,25 @@ const CMPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          
                         </p>
                       </div>
                     </div>
@@ -2402,11 +2346,8 @@ const CMPlanos = () => {
                         <h1>Longitud total (incluido el enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2421,39 +2362,25 @@ const CMPlanos = () => {
                         <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
+  
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.totalHeight?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.totalHeight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.totalHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura de descarga:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.dischargeHeight?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.dischargeHeight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.dischargeHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -2504,24 +2431,17 @@ const CMPlanos = () => {
                         <h1>Sistema de alimentación y descarga:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.feeding?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.feeding ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.feeding ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho de la cinta de alimentación:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.collector?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.collector ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.collector ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
