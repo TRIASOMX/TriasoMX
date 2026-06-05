@@ -122,7 +122,7 @@ const BHPlanos = () => {
     //tabs states
     const [activeTab, setActiveTab] = useState(1);
     // valor de cm a pies
-    const cmToFeet = 0.0328084;
+    const cmToFeet = 0.01;
     const m3ToFt = 35.315;
     //animation
     const boxRef = useRef<HTMLDivElement>(null);
@@ -247,11 +247,11 @@ const BHPlanos = () => {
             >
                 <header id="planosBagHouses" className="mt-10 text-white" ref={otroElemento}>
                     <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
-                        Specifications
+                        Especificaciones
                     </h1>
                     <div className="flex items-center justify-center mt-10">
                         <h1 className="mr-3" id="measure">
-                            MEASURE:
+                            Medidas:
                         </h1>
                         <div
                             onClick={toggleUnit}
@@ -268,12 +268,12 @@ const BHPlanos = () => {
                                 <span
                                     className={unit === "imperial" ? "text-black" : "text-white"}
                                 >
-                                    IMPERIAL
+                                    MT
                                 </span>
                                 <span
                                     className={unit === "metric" ? "text-black" : "text-white"}
                                 >
-                                    METRIC
+                                    CM
                                 </span>
                             </div>
                         </div>
@@ -285,7 +285,7 @@ const BHPlanos = () => {
                         {/* móvil */}
                         <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
                             <label className="text-white block text-center">
-                                MODELS:
+                                Modelos:
                             </label>
                             <div className="relative">
                                 <select
@@ -320,7 +320,7 @@ const BHPlanos = () => {
                         {/* desktop */}
                         <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
                             <label className="text-white block text-center">
-                                MODELS:
+                                Modelos:
                             </label>
                         </div>
                         <div className="hidden md:flex flex-wrap justify-center gap-5  mx-auto px-2">
@@ -359,8 +359,8 @@ const BHPlanos = () => {
 
                                         <div className="w-full flex flex-col gap-4 text-white col-span-1">
                                             <div className="w-full flex border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CAPACITY
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Capacidad
                                                 </h1>
                                                 <button
                                                     aria-label="See the capacity of the baghouse"
@@ -408,11 +408,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.acfm ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Filtering Area:</h1>
+                                                    <h1>Área de filtración:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.fArea?.toFixed(
@@ -422,11 +422,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
                                                                 m3ToFt
-                                                            ).toFixed(1)} ft3`}
+                                                            ).toFixed(1)} m3`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Bags:</h1>
+                                                    <h1>Bolsas:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.bags?.toFixed(
@@ -436,7 +436,7 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.bags ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
 
@@ -445,8 +445,8 @@ const BHPlanos = () => {
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    MAINTENANCE & ADVANTAGES
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Mantenimiento y ventajas
                                                 </h1>
                                                 <button
                                                     aria-label="See more abour the Maintenance and Advantages"
@@ -485,17 +485,25 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Easy bag replacement with quick-change frames.</li>
-                                                <li>Access doors and inspection hatches for fast servicing</li>
-                                                <li>Factory-installed bag powder — no startup waiting time.</li>
-                                                <li>99.99% filtration and energy-efficient cleaning from startup</li>
-                                                <li>Self-contained, integrated systems for portable or stationary plants.</li>
+                                                <li>Reemplazo sencillo de bolsas mediante bastidores de cambio rápido.</li>
+                                                <li>Puertas de acceso y registros de inspección para facilitar el mantenimiento.</li>
+                                                <li>Polvo de precubrimiento para bolsas aplicado en fábrica, sin tiempos de espera para la puesta en marcha.</li>
+                                                <li>99.99% de eficiencia de filtración y limpieza energéticamente eficiente desde el arranque.</li>
+                                                <li>Sistemas integrados y autónomos para plantas portátiles o estacionarias.</li>
+                                                <li>Adaptable a la infraestructura de control existente de la planta de asfalto.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc pl-10">
+                                                        <li>Integración sencilla con sistemas de control centralizados.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Resistencia térmica de hasta 204 °C en operación continua y 220 °C en picos de temperatura con bolsas de Nomex.</li>
+                                                <li>Hasta 260 °C en picos de temperatura con bolsas de poliimida P84.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPONENTS & ELECTRICAL
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Componentes y sistema eléctrico
                                                 </h1>
                                                 <button
                                                     aria-label="See more about the components and electrical composition"
@@ -534,11 +542,11 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Industrial-grade motors, components, and Siemens wiring.</li>
-                                                <li>Simplified wiring system for easy maintenance.</li>
-                                                <li>Weather-protected electrical connections.</li>
-                                                <li>Pulley-and-bushing drive system.</li>
-                                                <li>External fuel lines, sensors, and signal cabling pre-installed.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -551,8 +559,8 @@ const BHPlanos = () => {
                                     >
                                         <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CONTROL & OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Operación de limpieza
                                                 </h1>
                                                 <button
                                                     aria-label="See more about the control and the operation of the system"
@@ -591,32 +599,35 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Fully automatic or manual operation</li>
-                                                <li>Digital monitoring of all operating parameters, with real-time supervision and historical data reports.</li>
+                                                <li>Operación manual o automática.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
                                                         <li>
-                                                            Remote monitoring system accessible from computers, tablets, and smartphones.
-
+                                                            Variador de velocidad en el extractor para regular la sobretemperatura
+                                                        </li>
+                                                        <li>
+                                                            Ciclos de limpieza por aire pulsante (pulse jet).
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li>Alarm and interlock system for out-of-range conditions.</li>
-                                                <li>Independent, intuitive controls designed for field reliability.</li>
-                                                <li>Adaptable to existing asphalt plant control infrastructure</li>
+                                                <li>Chimenea con puertos para pruebas ecológicas y monitoreo ambiental.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>
-                                                            Seamless integration to central control systems.
-                                                        </li>
+                                                        <li>Extractor de gases con separación centrífuga que elimina hasta el 70% del polvo antes de la filtración.</li>
                                                     </ul>
                                                 </li>
+                                                <li>Cámara de sedimentación y deflectores internos que garantizan un flujo de aire uniforme y protegen las bolsas filtrantes.</li>
+                                                <li>
+                                                    Ventilador de extracción con aspas curvadas para una operación silenciosa y eficiente.
+                                                </li>
+                                                <li>Boquillas supersónicas impresas en 3D con aleación de carbono para la limpieza por aire pulsante.</li>
+                                                <li>Retorno uniforme de finos al mezclador de tambor.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CLEANING OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Portabilidad
                                                 </h1>
                                                 <button
                                                     aria-label="See more about the cleaning operation"
@@ -656,20 +667,24 @@ const BHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li>
-                                                    Manual or automatic operation.
+                                                    Diseñado para reubicación y movimiento frecuente.
+                                                </li>
+                                                <li>
+                                                    Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                                                 </li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>Exhaust damper with electric actuator for overtemperature protection.</li>
-                                                        <li>Pulse jet cleaning cycles.</li>
+                                                        <li>También puede transportarse en cama baja o plataforma.
+                                                        </li>
+
                                                     </ul>
                                                 </li>
-                                                <li>Chimney with ecological test ports for environmental monitoring.</li>
-                                                <li>Gas extractor with centrifugal separation removes up to 70% of dust before filtration.</li>
-                                                <li>Knockout chamber and internal baffles ensure smooth airflow and bag protection.</li>
-                                                <li>Exhaust fan with curved blades operates quietly and efficiently.</li>
-                                                <li>Supersonic 3D-printed carbon-alloy nozzles for pulse-jet cleaning.</li>
-                                                <li>Uniform fines return into the drum mixer.</li>
+                                                <li>Montado sobre chasis de transporte con un eje y llantas de uso carretera.</li>
+                                                <li>Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.</li>
+                                                <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                                                <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                                                <li>Sistema de luces y señalamientos para transporte conforme a normas de carretera.</li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -678,8 +693,8 @@ const BHPlanos = () => {
                                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                DURABILITY & SAFETY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Componentes y sistema eléctrico
                                             </h1>
                                             <button
                                                 aria-label="See more about the durability and safety of the system"
@@ -724,28 +739,19 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>High-strength, reinforced structure for long-term heavy-duty operation.</li>
-                                                <li>Aesthetic side panels for professional image.</li>
-                                                <li>Bolted components with anti-corrosion coating.</li>
-                                                <li className="list-none">
-                                                    <ul className="list-disc ml-10">
-                                                        <li>Galvanized bolts and electrostatic paint ensure long-lasting durability and excellent adhesion.
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>Thermal insulation with 2" fiberglass to prevent overcooling.</li>
-                                                <li>Labyrinth seals reduce air and heat loss.</li>
-                                                <li>Dust-resistant housing protects control module.</li>
-                                                <li>Heat resistance up to 204 °C continuous / 220 °C peak with Nomex bags.</li>
-                                                <li>Up to 260 °C peak with P84 polyimide bags.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                                         <div>
                                             <div className="flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPLIANCE WITH INDUSTRY STANDARS
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Cumplimiento con estándares de la industria
                                                 </h1>
                                                 <button
                                                     aria-label="See more about the compliance with industry standars"
@@ -790,10 +796,10 @@ const BHPlanos = () => {
                                                         : "max-h-0 opacity-0"
                                                         } md:max-h-full md:opacity-100 md:block`}
                                                 >
-                                                    <li>EPA.</li>
-                                                    <li>OSHA.</li>
-                                                    <li>DOT.</li>
-                                                    <li>UL wiring.</li>
+                                                    <li>SEMARNAT</li>
+                                                    <li>SCT</li>
+                                                    <li>NOM-001-SEDE</li>
+                                                    <li>DOT</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -801,8 +807,8 @@ const BHPlanos = () => {
                                     </div>
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                PORTABILITY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Control y Operación
                                             </h1>
                                             <button
                                                 aria-label="See more about the portability"
@@ -847,14 +853,16 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Designed for relocation</li>
-                                                <li>Built-in fifth wheel means no lowboy is required.</li>
-                                                <li>Also transportable on lowboy or flatbed trailer if preferred.</li>
-                                                <li>Mounted on standard transport chassis with triple axles and 16” highway-rated wheels.</li>
-                                                <li>Pull-type hitch with safety coupling and brake system.</li>
-                                                <li>Setup requires no crane or hoisting equipment.</li>
-                                                <li>Bolt-on support legs for fast on-site assembly.</li>
-                                                <li>DOT-compliant lighting and reflective markings for transport visibility.</li>
+                                                <li>Operación automática o manual, según se requiera en campo.</li>
+                                                <li>Sistema operativo Triaso Relief 8.0.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc ml-10">
+                                                        <li>Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.</li>
+                                                        <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Sistema de alarmas y seguridades para condiciones fuera de rango.</li>
+                                                <li>Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -875,10 +883,11 @@ const BHPlanos = () => {
 
                                         <div className="w-full flex flex-col gap-4 text-white col-span-1">
                                             <div className="w-full flex border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CAPACITY
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Capacidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See the capacity of the baghouse"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -923,11 +932,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.acfm ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Filtering Area:</h1>
+                                                    <h1>Área de filtración:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.fArea?.toFixed(
@@ -937,11 +946,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
                                                                 m3ToFt
-                                                            ).toFixed(1)} ft3`}
+                                                            ).toFixed(1)} m3`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Bags:</h1>
+                                                    <h1>Bolsas:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.bags?.toFixed(
@@ -951,7 +960,7 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.bags ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
 
@@ -960,10 +969,11 @@ const BHPlanos = () => {
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    MAINTENANCE & ADVANTAGES
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Mantenimiento y ventajas
                                                 </h1>
                                                 <button
+                                                    aria-label="See more abour the Maintenance and Advantages"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -999,19 +1009,28 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Easy bag replacement with quick-change frames.</li>
-                                                <li>Access doors and inspection hatches for fast servicing</li>
-                                                <li>Factory-installed bag powder — no startup waiting time.</li>
-                                                <li>99.99% filtration and energy-efficient cleaning from startup</li>
-                                                <li>Self-contained, integrated systems for portable or stationary plants.</li>
+                                                <li>Reemplazo sencillo de bolsas mediante bastidores de cambio rápido.</li>
+                                                <li>Puertas de acceso y registros de inspección para facilitar el mantenimiento.</li>
+                                                <li>Polvo de precubrimiento para bolsas aplicado en fábrica, sin tiempos de espera para la puesta en marcha.</li>
+                                                <li>99.99% de eficiencia de filtración y limpieza energéticamente eficiente desde el arranque.</li>
+                                                <li>Sistemas integrados y autónomos para plantas portátiles o estacionarias.</li>
+                                                <li>Adaptable a la infraestructura de control existente de la planta de asfalto.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc pl-10">
+                                                        <li>Integración sencilla con sistemas de control centralizados.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Resistencia térmica de hasta 204 °C en operación continua y 220 °C en picos de temperatura con bolsas de Nomex.</li>
+                                                <li>Hasta 260 °C en picos de temperatura con bolsas de poliimida P84.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPONENTS & ELECTRICAL
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Componentes y sistema eléctrico
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the components and electrical composition"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1047,11 +1066,11 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Industrial-grade motors, components, and Siemens wiring.</li>
-                                                <li>Simplified wiring system for easy maintenance.</li>
-                                                <li>Weather-protected electrical connections.</li>
-                                                <li>Pulley-and-bushing drive system.</li>
-                                                <li>External fuel lines, sensors, and signal cabling pre-installed.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1066,10 +1085,11 @@ const BHPlanos = () => {
                                     >
                                         <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CONTROL & OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Operación de limpieza
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the control and the operation of the system"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1105,34 +1125,38 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Fully automatic or manual operation</li>
-                                                <li>Digital monitoring of all operating parameters, with real-time supervision and historical data reports.</li>
+                                                <li>Operación manual o automática.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
                                                         <li>
-                                                            Remote monitoring system accessible from computers, tablets, and smartphones.
-
+                                                            Variador de velocidad en el extractor para regular la sobretemperatura
+                                                        </li>
+                                                        <li>
+                                                            Ciclos de limpieza por aire pulsante (pulse jet).
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li>Alarm and interlock system for out-of-range conditions.</li>
-                                                <li>Independent, intuitive controls designed for field reliability.</li>
-                                                <li>Adaptable to existing asphalt plant control infrastructure</li>
+                                                <li>Chimenea con puertos para pruebas ecológicas y monitoreo ambiental.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>
-                                                            Seamless integration to central control systems.
-                                                        </li>
+                                                        <li>Extractor de gases con separación centrífuga que elimina hasta el 70% del polvo antes de la filtración.</li>
                                                     </ul>
                                                 </li>
+                                                <li>Cámara de sedimentación y deflectores internos que garantizan un flujo de aire uniforme y protegen las bolsas filtrantes.</li>
+                                                <li>
+                                                    Ventilador de extracción con aspas curvadas para una operación silenciosa y eficiente.
+                                                </li>
+                                                <li>Boquillas supersónicas impresas en 3D con aleación de carbono para la limpieza por aire pulsante.</li>
+                                                <li>Retorno uniforme de finos al mezclador de tambor.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CLEANING OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Portabilidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the cleaning operation"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1169,20 +1193,24 @@ const BHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li>
-                                                    Manual or automatic operation.
+                                                    Diseñado para reubicación y movimiento frecuente.
+                                                </li>
+                                                <li>
+                                                    Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                                                 </li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>Exhaust damper with electric actuator for overtemperature protection.</li>
-                                                        <li>Pulse jet cleaning cycles.</li>
+                                                        <li>También puede transportarse en cama baja o plataforma.
+                                                        </li>
+
                                                     </ul>
                                                 </li>
-                                                <li>Chimney with ecological test ports for environmental monitoring.</li>
-                                                <li>Gas extractor with centrifugal separation removes up to 70% of dust before filtration.</li>
-                                                <li>Knockout chamber and internal baffles ensure smooth airflow and bag protection.</li>
-                                                <li>Exhaust fan with curved blades operates quietly and efficiently.</li>
-                                                <li>Supersonic 3D-printed carbon-alloy nozzles for pulse-jet cleaning.</li>
-                                                <li>Uniform fines return into the drum mixer.</li>
+                                                <li>Montado sobre chasis de transporte con un eje y llantas de uso carretera.</li>
+                                                <li>Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.</li>
+                                                <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                                                <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                                                <li>Sistema de luces y señalamientos para transporte conforme a normas de carretera.</li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -1191,10 +1219,11 @@ const BHPlanos = () => {
                                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                DURABILITY & SAFETY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Componentes y sistema eléctrico
                                             </h1>
                                             <button
+                                                aria-label="See more about the durability and safety of the system"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -1236,30 +1265,22 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>High-strength, reinforced structure for long-term heavy-duty operation.</li>
-                                                <li>Aesthetic side panels for professional image.</li>
-                                                <li>Bolted components with anti-corrosion coating.</li>
-                                                <li className="list-none">
-                                                    <ul className="list-disc ml-10">
-                                                        <li>Galvanized bolts and electrostatic paint ensure long-lasting durability and excellent adhesion.
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>Thermal insulation with 2" fiberglass to prevent overcooling.</li>
-                                                <li>Labyrinth seals reduce air and heat loss.</li>
-                                                <li>Dust-resistant housing protects control module.</li>
-                                                <li>Heat resistance up to 204 °C continuous / 220 °C peak with Nomex bags.</li>
-                                                <li>Up to 260 °C peak with P84 polyimide bags.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                                         <div>
                                             <div className="flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPLIANCE WITH INDUSTRY STANDARS
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Cumplimiento con estándares de la industria
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the compliance with industry standars"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1301,10 +1322,10 @@ const BHPlanos = () => {
                                                         : "max-h-0 opacity-0"
                                                         } md:max-h-full md:opacity-100 md:block`}
                                                 >
-                                                    <li>EPA.</li>
-                                                    <li>OSHA.</li>
-                                                    <li>DOT.</li>
-                                                    <li>UL wiring.</li>
+                                                    <li>SEMARNAT</li>
+                                                    <li>SCT</li>
+                                                    <li>NOM-001-SEDE</li>
+                                                    <li>DOT</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1312,10 +1333,11 @@ const BHPlanos = () => {
                                     </div>
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                PORTABILITY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Control y Operación
                                             </h1>
                                             <button
+                                                aria-label="See more about the portability"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -1357,14 +1379,16 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Designed for relocation</li>
-                                                <li>Built-in fifth wheel means no lowboy is required.</li>
-                                                <li>Also transportable on lowboy or flatbed trailer if preferred.</li>
-                                                <li>Mounted on standard transport chassis with triple axles and 16” highway-rated wheels.</li>
-                                                <li>Pull-type hitch with safety coupling and brake system.</li>
-                                                <li>Setup requires no crane or hoisting equipment.</li>
-                                                <li>Bolt-on support legs for fast on-site assembly.</li>
-                                                <li>DOT-compliant lighting and reflective markings for transport visibility.</li>
+                                                <li>Operación automática o manual, según se requiera en campo.</li>
+                                                <li>Sistema operativo Triaso Relief 8.0.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc ml-10">
+                                                        <li>Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.</li>
+                                                        <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Sistema de alarmas y seguridades para condiciones fuera de rango.</li>
+                                                <li>Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1385,10 +1409,11 @@ const BHPlanos = () => {
 
                                         <div className="w-full flex flex-col gap-4 text-white col-span-1">
                                             <div className="w-full flex border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CAPACITY
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Capacidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See the capacity of the baghouse"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1433,11 +1458,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.acfm ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Filtering Area:</h1>
+                                                    <h1>Área de filtración:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.fArea?.toFixed(
@@ -1447,11 +1472,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
                                                                 m3ToFt
-                                                            ).toFixed(1)} ft3`}
+                                                            ).toFixed(1)} m3`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Bags:</h1>
+                                                    <h1>Bolsas:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.bags?.toFixed(
@@ -1461,7 +1486,7 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.bags ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
 
@@ -1470,10 +1495,11 @@ const BHPlanos = () => {
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    MAINTENANCE & ADVANTAGES
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Mantenimiento y ventajas
                                                 </h1>
                                                 <button
+                                                    aria-label="See more abour the Maintenance and Advantages"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1509,19 +1535,28 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Easy bag replacement with quick-change frames.</li>
-                                                <li>Access doors and inspection hatches for fast servicing</li>
-                                                <li>Factory-installed bag powder — no startup waiting time.</li>
-                                                <li>99.99% filtration and energy-efficient cleaning from startup</li>
-                                                <li>Self-contained, integrated systems for portable or stationary plants.</li>
+                                                <li>Reemplazo sencillo de bolsas mediante bastidores de cambio rápido.</li>
+                                                <li>Puertas de acceso y registros de inspección para facilitar el mantenimiento.</li>
+                                                <li>Polvo de precubrimiento para bolsas aplicado en fábrica, sin tiempos de espera para la puesta en marcha.</li>
+                                                <li>99.99% de eficiencia de filtración y limpieza energéticamente eficiente desde el arranque.</li>
+                                                <li>Sistemas integrados y autónomos para plantas portátiles o estacionarias.</li>
+                                                <li>Adaptable a la infraestructura de control existente de la planta de asfalto.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc pl-10">
+                                                        <li>Integración sencilla con sistemas de control centralizados.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Resistencia térmica de hasta 204 °C en operación continua y 220 °C en picos de temperatura con bolsas de Nomex.</li>
+                                                <li>Hasta 260 °C en picos de temperatura con bolsas de poliimida P84.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPONENTS & ELECTRICAL
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Componentes y sistema eléctrico
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the components and electrical composition"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1557,11 +1592,11 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Industrial-grade motors, components, and Siemens wiring.</li>
-                                                <li>Simplified wiring system for easy maintenance.</li>
-                                                <li>Weather-protected electrical connections.</li>
-                                                <li>Pulley-and-bushing drive system.</li>
-                                                <li>External fuel lines, sensors, and signal cabling pre-installed.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1576,10 +1611,11 @@ const BHPlanos = () => {
                                     >
                                         <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CONTROL & OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Operación de limpieza
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the control and the operation of the system"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1615,34 +1651,38 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Fully automatic or manual operation</li>
-                                                <li>Digital monitoring of all operating parameters, with real-time supervision and historical data reports.</li>
+                                                <li>Operación manual o automática.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
                                                         <li>
-                                                            Remote monitoring system accessible from computers, tablets, and smartphones.
-
+                                                            Variador de velocidad en el extractor para regular la sobretemperatura
+                                                        </li>
+                                                        <li>
+                                                            Ciclos de limpieza por aire pulsante (pulse jet).
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li>Alarm and interlock system for out-of-range conditions.</li>
-                                                <li>Independent, intuitive controls designed for field reliability.</li>
-                                                <li>Adaptable to existing asphalt plant control infrastructure</li>
+                                                <li>Chimenea con puertos para pruebas ecológicas y monitoreo ambiental.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>
-                                                            Seamless integration to central control systems.
-                                                        </li>
+                                                        <li>Extractor de gases con separación centrífuga que elimina hasta el 70% del polvo antes de la filtración.</li>
                                                     </ul>
                                                 </li>
+                                                <li>Cámara de sedimentación y deflectores internos que garantizan un flujo de aire uniforme y protegen las bolsas filtrantes.</li>
+                                                <li>
+                                                    Ventilador de extracción con aspas curvadas para una operación silenciosa y eficiente.
+                                                </li>
+                                                <li>Boquillas supersónicas impresas en 3D con aleación de carbono para la limpieza por aire pulsante.</li>
+                                                <li>Retorno uniforme de finos al mezclador de tambor.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CLEANING OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Portabilidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the cleaning operation"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1679,20 +1719,24 @@ const BHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li>
-                                                    Manual or automatic operation.
+                                                    Diseñado para reubicación y movimiento frecuente.
+                                                </li>
+                                                <li>
+                                                    Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                                                 </li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>Exhaust damper with electric actuator for overtemperature protection.</li>
-                                                        <li>Pulse jet cleaning cycles.</li>
+                                                        <li>También puede transportarse en cama baja o plataforma.
+                                                        </li>
+
                                                     </ul>
                                                 </li>
-                                                <li>Chimney with ecological test ports for environmental monitoring.</li>
-                                                <li>Gas extractor with centrifugal separation removes up to 70% of dust before filtration.</li>
-                                                <li>Knockout chamber and internal baffles ensure smooth airflow and bag protection.</li>
-                                                <li>Exhaust fan with curved blades operates quietly and efficiently.</li>
-                                                <li>Supersonic 3D-printed carbon-alloy nozzles for pulse-jet cleaning.</li>
-                                                <li>Uniform fines return into the drum mixer.</li>
+                                                <li>Montado sobre chasis de transporte con un eje y llantas de uso carretera.</li>
+                                                <li>Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.</li>
+                                                <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                                                <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                                                <li>Sistema de luces y señalamientos para transporte conforme a normas de carretera.</li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -1701,10 +1745,11 @@ const BHPlanos = () => {
                                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                DURABILITY & SAFETY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Componentes y sistema eléctrico
                                             </h1>
                                             <button
+                                                aria-label="See more about the durability and safety of the system"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -1746,30 +1791,22 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>High-strength, reinforced structure for long-term heavy-duty operation.</li>
-                                                <li>Aesthetic side panels for professional image.</li>
-                                                <li>Bolted components with anti-corrosion coating.</li>
-                                                <li className="list-none">
-                                                    <ul className="list-disc ml-10">
-                                                        <li>Galvanized bolts and electrostatic paint ensure long-lasting durability and excellent adhesion.
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>Thermal insulation with 2" fiberglass to prevent overcooling.</li>
-                                                <li>Labyrinth seals reduce air and heat loss.</li>
-                                                <li>Dust-resistant housing protects control module.</li>
-                                                <li>Heat resistance up to 204 °C continuous / 220 °C peak with Nomex bags.</li>
-                                                <li>Up to 260 °C peak with P84 polyimide bags.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                                         <div>
                                             <div className="flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPLIANCE WITH INDUSTRY STANDARS
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Cumplimiento con estándares de la industria
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the compliance with industry standars"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1811,10 +1848,10 @@ const BHPlanos = () => {
                                                         : "max-h-0 opacity-0"
                                                         } md:max-h-full md:opacity-100 md:block`}
                                                 >
-                                                    <li>EPA.</li>
-                                                    <li>OSHA.</li>
-                                                    <li>DOT.</li>
-                                                    <li>UL wiring.</li>
+                                                    <li>SEMARNAT</li>
+                                                    <li>SCT</li>
+                                                    <li>NOM-001-SEDE</li>
+                                                    <li>DOT</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1822,10 +1859,11 @@ const BHPlanos = () => {
                                     </div>
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                PORTABILITY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Control y Operación
                                             </h1>
                                             <button
+                                                aria-label="See more about the portability"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -1867,14 +1905,16 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Designed for relocation</li>
-                                                <li>Built-in fifth wheel means no lowboy is required.</li>
-                                                <li>Also transportable on lowboy or flatbed trailer if preferred.</li>
-                                                <li>Mounted on standard transport chassis with triple axles and 16” highway-rated wheels.</li>
-                                                <li>Pull-type hitch with safety coupling and brake system.</li>
-                                                <li>Setup requires no crane or hoisting equipment.</li>
-                                                <li>Bolt-on support legs for fast on-site assembly.</li>
-                                                <li>DOT-compliant lighting and reflective markings for transport visibility.</li>
+                                                <li>Operación automática o manual, según se requiera en campo.</li>
+                                                <li>Sistema operativo Triaso Relief 8.0.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc ml-10">
+                                                        <li>Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.</li>
+                                                        <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Sistema de alarmas y seguridades para condiciones fuera de rango.</li>
+                                                <li>Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1895,10 +1935,11 @@ const BHPlanos = () => {
 
                                         <div className="w-full flex flex-col gap-4 text-white col-span-1">
                                             <div className="w-full flex border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CAPACITY
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Capacidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See the capacity of the baghouse"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -1943,11 +1984,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.acfm ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Filtering Area:</h1>
+                                                    <h1>Área de filtración:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.fArea?.toFixed(
@@ -1957,11 +1998,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
                                                                 m3ToFt
-                                                            ).toFixed(1)} ft3`}
+                                                            ).toFixed(1)} m3`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Bags:</h1>
+                                                    <h1>Bolsas:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.bags?.toFixed(
@@ -1971,19 +2012,21 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.bags ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
 
                                             </div>
 
                                         </div>
+
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    MAINTENANCE & ADVANTAGES
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Mantenimiento y ventajas
                                                 </h1>
                                                 <button
+                                                    aria-label="See more abour the Maintenance and Advantages"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2019,19 +2062,28 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Easy bag replacement with quick-change frames.</li>
-                                                <li>Access doors and inspection hatches for fast servicing</li>
-                                                <li>Factory-installed bag powder — no startup waiting time.</li>
-                                                <li>99.99% filtration and energy-efficient cleaning from startup</li>
-                                                <li>Self-contained, integrated systems for portable or stationary plants.</li>
+                                                <li>Reemplazo sencillo de bolsas mediante bastidores de cambio rápido.</li>
+                                                <li>Puertas de acceso y registros de inspección para facilitar el mantenimiento.</li>
+                                                <li>Polvo de precubrimiento para bolsas aplicado en fábrica, sin tiempos de espera para la puesta en marcha.</li>
+                                                <li>99.99% de eficiencia de filtración y limpieza energéticamente eficiente desde el arranque.</li>
+                                                <li>Sistemas integrados y autónomos para plantas portátiles o estacionarias.</li>
+                                                <li>Adaptable a la infraestructura de control existente de la planta de asfalto.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc pl-10">
+                                                        <li>Integración sencilla con sistemas de control centralizados.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Resistencia térmica de hasta 204 °C en operación continua y 220 °C en picos de temperatura con bolsas de Nomex.</li>
+                                                <li>Hasta 260 °C en picos de temperatura con bolsas de poliimida P84.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPONENTS & ELECTRICAL
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Componentes y sistema eléctrico
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the components and electrical composition"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2067,11 +2119,11 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Industrial-grade motors, components, and Siemens wiring.</li>
-                                                <li>Simplified wiring system for easy maintenance.</li>
-                                                <li>Weather-protected electrical connections.</li>
-                                                <li>Pulley-and-bushing drive system.</li>
-                                                <li>External fuel lines, sensors, and signal cabling pre-installed.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -2086,10 +2138,11 @@ const BHPlanos = () => {
                                     >
                                         <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CONTROL & OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Operación de limpieza
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the control and the operation of the system"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2125,34 +2178,38 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Fully automatic or manual operation</li>
-                                                <li>Digital monitoring of all operating parameters, with real-time supervision and historical data reports.</li>
+                                                <li>Operación manual o automática.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
                                                         <li>
-                                                            Remote monitoring system accessible from computers, tablets, and smartphones.
-
+                                                            Variador de velocidad en el extractor para regular la sobretemperatura
+                                                        </li>
+                                                        <li>
+                                                            Ciclos de limpieza por aire pulsante (pulse jet).
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li>Alarm and interlock system for out-of-range conditions.</li>
-                                                <li>Independent, intuitive controls designed for field reliability.</li>
-                                                <li>Adaptable to existing asphalt plant control infrastructure</li>
+                                                <li>Chimenea con puertos para pruebas ecológicas y monitoreo ambiental.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>
-                                                            Seamless integration to central control systems.
-                                                        </li>
+                                                        <li>Extractor de gases con separación centrífuga que elimina hasta el 70% del polvo antes de la filtración.</li>
                                                     </ul>
                                                 </li>
+                                                <li>Cámara de sedimentación y deflectores internos que garantizan un flujo de aire uniforme y protegen las bolsas filtrantes.</li>
+                                                <li>
+                                                    Ventilador de extracción con aspas curvadas para una operación silenciosa y eficiente.
+                                                </li>
+                                                <li>Boquillas supersónicas impresas en 3D con aleación de carbono para la limpieza por aire pulsante.</li>
+                                                <li>Retorno uniforme de finos al mezclador de tambor.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CLEANING OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Portabilidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the cleaning operation"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2189,20 +2246,24 @@ const BHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li>
-                                                    Manual or automatic operation.
+                                                    Diseñado para reubicación y movimiento frecuente.
+                                                </li>
+                                                <li>
+                                                    Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                                                 </li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>Exhaust damper with electric actuator for overtemperature protection.</li>
-                                                        <li>Pulse jet cleaning cycles.</li>
+                                                        <li>También puede transportarse en cama baja o plataforma.
+                                                        </li>
+
                                                     </ul>
                                                 </li>
-                                                <li>Chimney with ecological test ports for environmental monitoring.</li>
-                                                <li>Gas extractor with centrifugal separation removes up to 70% of dust before filtration.</li>
-                                                <li>Knockout chamber and internal baffles ensure smooth airflow and bag protection.</li>
-                                                <li>Exhaust fan with curved blades operates quietly and efficiently.</li>
-                                                <li>Supersonic 3D-printed carbon-alloy nozzles for pulse-jet cleaning.</li>
-                                                <li>Uniform fines return into the drum mixer.</li>
+                                                <li>Montado sobre chasis de transporte con un eje y llantas de uso carretera.</li>
+                                                <li>Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.</li>
+                                                <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                                                <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                                                <li>Sistema de luces y señalamientos para transporte conforme a normas de carretera.</li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -2211,10 +2272,11 @@ const BHPlanos = () => {
                                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                DURABILITY & SAFETY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Componentes y sistema eléctrico
                                             </h1>
                                             <button
+                                                aria-label="See more about the durability and safety of the system"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -2256,30 +2318,22 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>High-strength, reinforced structure for long-term heavy-duty operation.</li>
-                                                <li>Aesthetic side panels for professional image.</li>
-                                                <li>Bolted components with anti-corrosion coating.</li>
-                                                <li className="list-none">
-                                                    <ul className="list-disc ml-10">
-                                                        <li>Galvanized bolts and electrostatic paint ensure long-lasting durability and excellent adhesion.
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>Thermal insulation with 2" fiberglass to prevent overcooling.</li>
-                                                <li>Labyrinth seals reduce air and heat loss.</li>
-                                                <li>Dust-resistant housing protects control module.</li>
-                                                <li>Heat resistance up to 204 °C continuous / 220 °C peak with Nomex bags.</li>
-                                                <li>Up to 260 °C peak with P84 polyimide bags.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                                         <div>
                                             <div className="flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPLIANCE WITH INDUSTRY STANDARS
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Cumplimiento con estándares de la industria
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the compliance with industry standars"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2321,10 +2375,10 @@ const BHPlanos = () => {
                                                         : "max-h-0 opacity-0"
                                                         } md:max-h-full md:opacity-100 md:block`}
                                                 >
-                                                    <li>EPA.</li>
-                                                    <li>OSHA.</li>
-                                                    <li>DOT.</li>
-                                                    <li>UL wiring.</li>
+                                                    <li>SEMARNAT</li>
+                                                    <li>SCT</li>
+                                                    <li>NOM-001-SEDE</li>
+                                                    <li>DOT</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -2332,10 +2386,11 @@ const BHPlanos = () => {
                                     </div>
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                PORTABILITY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Control y Operación
                                             </h1>
                                             <button
+                                                aria-label="See more about the portability"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -2377,14 +2432,16 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Designed for relocation</li>
-                                                <li>Built-in fifth wheel means no lowboy is required.</li>
-                                                <li>Also transportable on lowboy or flatbed trailer if preferred.</li>
-                                                <li>Mounted on standard transport chassis with triple axles and 16” highway-rated wheels.</li>
-                                                <li>Pull-type hitch with safety coupling and brake system.</li>
-                                                <li>Setup requires no crane or hoisting equipment.</li>
-                                                <li>Bolt-on support legs for fast on-site assembly.</li>
-                                                <li>DOT-compliant lighting and reflective markings for transport visibility.</li>
+                                                <li>Operación automática o manual, según se requiera en campo.</li>
+                                                <li>Sistema operativo Triaso Relief 8.0.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc ml-10">
+                                                        <li>Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.</li>
+                                                        <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Sistema de alarmas y seguridades para condiciones fuera de rango.</li>
+                                                <li>Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -2405,10 +2462,11 @@ const BHPlanos = () => {
 
                                         <div className="w-full flex flex-col gap-4 text-white col-span-1">
                                             <div className="w-full flex border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CAPACITY
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Capacidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See the capacity of the baghouse"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2453,11 +2511,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.acfm ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Filtering Area:</h1>
+                                                    <h1>Área de filtración:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.fArea?.toFixed(
@@ -2467,11 +2525,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
                                                                 m3ToFt
-                                                            ).toFixed(1)} ft3`}
+                                                            ).toFixed(1)} m3`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Bags:</h1>
+                                                    <h1>Bolsas:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.bags?.toFixed(
@@ -2481,7 +2539,7 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.bags ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
 
@@ -2490,10 +2548,11 @@ const BHPlanos = () => {
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    MAINTENANCE & ADVANTAGES
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Mantenimiento y ventajas
                                                 </h1>
                                                 <button
+                                                    aria-label="See more abour the Maintenance and Advantages"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2529,19 +2588,28 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Easy bag replacement with quick-change frames.</li>
-                                                <li>Access doors and inspection hatches for fast servicing</li>
-                                                <li>Factory-installed bag powder — no startup waiting time.</li>
-                                                <li>99.99% filtration and energy-efficient cleaning from startup</li>
-                                                <li>Self-contained, integrated systems for portable or stationary plants.</li>
+                                                <li>Reemplazo sencillo de bolsas mediante bastidores de cambio rápido.</li>
+                                                <li>Puertas de acceso y registros de inspección para facilitar el mantenimiento.</li>
+                                                <li>Polvo de precubrimiento para bolsas aplicado en fábrica, sin tiempos de espera para la puesta en marcha.</li>
+                                                <li>99.99% de eficiencia de filtración y limpieza energéticamente eficiente desde el arranque.</li>
+                                                <li>Sistemas integrados y autónomos para plantas portátiles o estacionarias.</li>
+                                                <li>Adaptable a la infraestructura de control existente de la planta de asfalto.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc pl-10">
+                                                        <li>Integración sencilla con sistemas de control centralizados.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Resistencia térmica de hasta 204 °C en operación continua y 220 °C en picos de temperatura con bolsas de Nomex.</li>
+                                                <li>Hasta 260 °C en picos de temperatura con bolsas de poliimida P84.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPONENTS & ELECTRICAL
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Componentes y sistema eléctrico
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the components and electrical composition"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2577,11 +2645,11 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Industrial-grade motors, components, and Siemens wiring.</li>
-                                                <li>Simplified wiring system for easy maintenance.</li>
-                                                <li>Weather-protected electrical connections.</li>
-                                                <li>Pulley-and-bushing drive system.</li>
-                                                <li>External fuel lines, sensors, and signal cabling pre-installed.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -2596,10 +2664,11 @@ const BHPlanos = () => {
                                     >
                                         <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CONTROL & OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Operación de limpieza
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the control and the operation of the system"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2635,34 +2704,38 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Fully automatic or manual operation</li>
-                                                <li>Digital monitoring of all operating parameters, with real-time supervision and historical data reports.</li>
+                                                <li>Operación manual o automática.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
                                                         <li>
-                                                            Remote monitoring system accessible from computers, tablets, and smartphones.
-
+                                                            Variador de velocidad en el extractor para regular la sobretemperatura
+                                                        </li>
+                                                        <li>
+                                                            Ciclos de limpieza por aire pulsante (pulse jet).
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li>Alarm and interlock system for out-of-range conditions.</li>
-                                                <li>Independent, intuitive controls designed for field reliability.</li>
-                                                <li>Adaptable to existing asphalt plant control infrastructure</li>
+                                                <li>Chimenea con puertos para pruebas ecológicas y monitoreo ambiental.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>
-                                                            Seamless integration to central control systems.
-                                                        </li>
+                                                        <li>Extractor de gases con separación centrífuga que elimina hasta el 70% del polvo antes de la filtración.</li>
                                                     </ul>
                                                 </li>
+                                                <li>Cámara de sedimentación y deflectores internos que garantizan un flujo de aire uniforme y protegen las bolsas filtrantes.</li>
+                                                <li>
+                                                    Ventilador de extracción con aspas curvadas para una operación silenciosa y eficiente.
+                                                </li>
+                                                <li>Boquillas supersónicas impresas en 3D con aleación de carbono para la limpieza por aire pulsante.</li>
+                                                <li>Retorno uniforme de finos al mezclador de tambor.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CLEANING OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Portabilidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the cleaning operation"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2699,20 +2772,24 @@ const BHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li>
-                                                    Manual or automatic operation.
+                                                    Diseñado para reubicación y movimiento frecuente.
+                                                </li>
+                                                <li>
+                                                    Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                                                 </li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>Exhaust damper with electric actuator for overtemperature protection.</li>
-                                                        <li>Pulse jet cleaning cycles.</li>
+                                                        <li>También puede transportarse en cama baja o plataforma.
+                                                        </li>
+
                                                     </ul>
                                                 </li>
-                                                <li>Chimney with ecological test ports for environmental monitoring.</li>
-                                                <li>Gas extractor with centrifugal separation removes up to 70% of dust before filtration.</li>
-                                                <li>Knockout chamber and internal baffles ensure smooth airflow and bag protection.</li>
-                                                <li>Exhaust fan with curved blades operates quietly and efficiently.</li>
-                                                <li>Supersonic 3D-printed carbon-alloy nozzles for pulse-jet cleaning.</li>
-                                                <li>Uniform fines return into the drum mixer.</li>
+                                                <li>Montado sobre chasis de transporte con un eje y llantas de uso carretera.</li>
+                                                <li>Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.</li>
+                                                <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                                                <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                                                <li>Sistema de luces y señalamientos para transporte conforme a normas de carretera.</li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -2721,10 +2798,11 @@ const BHPlanos = () => {
                                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                DURABILITY & SAFETY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Componentes y sistema eléctrico
                                             </h1>
                                             <button
+                                                aria-label="See more about the durability and safety of the system"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -2766,30 +2844,22 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>High-strength, reinforced structure for long-term heavy-duty operation.</li>
-                                                <li>Aesthetic side panels for professional image.</li>
-                                                <li>Bolted components with anti-corrosion coating.</li>
-                                                <li className="list-none">
-                                                    <ul className="list-disc ml-10">
-                                                        <li>Galvanized bolts and electrostatic paint ensure long-lasting durability and excellent adhesion.
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>Thermal insulation with 2" fiberglass to prevent overcooling.</li>
-                                                <li>Labyrinth seals reduce air and heat loss.</li>
-                                                <li>Dust-resistant housing protects control module.</li>
-                                                <li>Heat resistance up to 204 °C continuous / 220 °C peak with Nomex bags.</li>
-                                                <li>Up to 260 °C peak with P84 polyimide bags.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                                         <div>
                                             <div className="flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPLIANCE WITH INDUSTRY STANDARS
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Cumplimiento con estándares de la industria
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the compliance with industry standars"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2831,10 +2901,10 @@ const BHPlanos = () => {
                                                         : "max-h-0 opacity-0"
                                                         } md:max-h-full md:opacity-100 md:block`}
                                                 >
-                                                    <li>EPA.</li>
-                                                    <li>OSHA.</li>
-                                                    <li>DOT.</li>
-                                                    <li>UL wiring.</li>
+                                                    <li>SEMARNAT</li>
+                                                    <li>SCT</li>
+                                                    <li>NOM-001-SEDE</li>
+                                                    <li>DOT</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -2842,10 +2912,11 @@ const BHPlanos = () => {
                                     </div>
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                PORTABILITY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Control y Operación
                                             </h1>
                                             <button
+                                                aria-label="See more about the portability"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -2887,14 +2958,16 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Designed for relocation</li>
-                                                <li>Built-in fifth wheel means no lowboy is required.</li>
-                                                <li>Also transportable on lowboy or flatbed trailer if preferred.</li>
-                                                <li>Mounted on standard transport chassis with triple axles and 16” highway-rated wheels.</li>
-                                                <li>Pull-type hitch with safety coupling and brake system.</li>
-                                                <li>Setup requires no crane or hoisting equipment.</li>
-                                                <li>Bolt-on support legs for fast on-site assembly.</li>
-                                                <li>DOT-compliant lighting and reflective markings for transport visibility.</li>
+                                                <li>Operación automática o manual, según se requiera en campo.</li>
+                                                <li>Sistema operativo Triaso Relief 8.0.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc ml-10">
+                                                        <li>Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.</li>
+                                                        <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Sistema de alarmas y seguridades para condiciones fuera de rango.</li>
+                                                <li>Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -2915,10 +2988,11 @@ const BHPlanos = () => {
 
                                         <div className="w-full flex flex-col gap-4 text-white col-span-1">
                                             <div className="w-full flex border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CAPACITY
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Capacidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See the capacity of the baghouse"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -2963,11 +3037,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.acfm ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Filtering Area:</h1>
+                                                    <h1>Área de filtración:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.fArea?.toFixed(
@@ -2977,11 +3051,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
                                                                 m3ToFt
-                                                            ).toFixed(1)} ft3`}
+                                                            ).toFixed(1)} m3`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Bags:</h1>
+                                                    <h1>Bolsas:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.bags?.toFixed(
@@ -2991,7 +3065,7 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.bags ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
 
@@ -3000,10 +3074,11 @@ const BHPlanos = () => {
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    MAINTENANCE & ADVANTAGES
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Mantenimiento y ventajas
                                                 </h1>
                                                 <button
+                                                    aria-label="See more abour the Maintenance and Advantages"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -3039,19 +3114,28 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Easy bag replacement with quick-change frames.</li>
-                                                <li>Access doors and inspection hatches for fast servicing</li>
-                                                <li>Factory-installed bag powder — no startup waiting time.</li>
-                                                <li>99.99% filtration and energy-efficient cleaning from startup</li>
-                                                <li>Self-contained, integrated systems for portable or stationary plants.</li>
+                                                <li>Reemplazo sencillo de bolsas mediante bastidores de cambio rápido.</li>
+                                                <li>Puertas de acceso y registros de inspección para facilitar el mantenimiento.</li>
+                                                <li>Polvo de precubrimiento para bolsas aplicado en fábrica, sin tiempos de espera para la puesta en marcha.</li>
+                                                <li>99.99% de eficiencia de filtración y limpieza energéticamente eficiente desde el arranque.</li>
+                                                <li>Sistemas integrados y autónomos para plantas portátiles o estacionarias.</li>
+                                                <li>Adaptable a la infraestructura de control existente de la planta de asfalto.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc pl-10">
+                                                        <li>Integración sencilla con sistemas de control centralizados.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Resistencia térmica de hasta 204 °C en operación continua y 220 °C en picos de temperatura con bolsas de Nomex.</li>
+                                                <li>Hasta 260 °C en picos de temperatura con bolsas de poliimida P84.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPONENTS & ELECTRICAL
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Componentes y sistema eléctrico
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the components and electrical composition"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -3087,11 +3171,11 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Industrial-grade motors, components, and Siemens wiring.</li>
-                                                <li>Simplified wiring system for easy maintenance.</li>
-                                                <li>Weather-protected electrical connections.</li>
-                                                <li>Pulley-and-bushing drive system.</li>
-                                                <li>External fuel lines, sensors, and signal cabling pre-installed.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -3106,10 +3190,11 @@ const BHPlanos = () => {
                                     >
                                         <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CONTROL & OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Operación de limpieza
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the control and the operation of the system"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -3145,34 +3230,38 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Fully automatic or manual operation</li>
-                                                <li>Digital monitoring of all operating parameters, with real-time supervision and historical data reports.</li>
+                                                <li>Operación manual o automática.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
                                                         <li>
-                                                            Remote monitoring system accessible from computers, tablets, and smartphones.
-
+                                                            Variador de velocidad en el extractor para regular la sobretemperatura
+                                                        </li>
+                                                        <li>
+                                                            Ciclos de limpieza por aire pulsante (pulse jet).
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li>Alarm and interlock system for out-of-range conditions.</li>
-                                                <li>Independent, intuitive controls designed for field reliability.</li>
-                                                <li>Adaptable to existing asphalt plant control infrastructure</li>
+                                                <li>Chimenea con puertos para pruebas ecológicas y monitoreo ambiental.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>
-                                                            Seamless integration to central control systems.
-                                                        </li>
+                                                        <li>Extractor de gases con separación centrífuga que elimina hasta el 70% del polvo antes de la filtración.</li>
                                                     </ul>
                                                 </li>
+                                                <li>Cámara de sedimentación y deflectores internos que garantizan un flujo de aire uniforme y protegen las bolsas filtrantes.</li>
+                                                <li>
+                                                    Ventilador de extracción con aspas curvadas para una operación silenciosa y eficiente.
+                                                </li>
+                                                <li>Boquillas supersónicas impresas en 3D con aleación de carbono para la limpieza por aire pulsante.</li>
+                                                <li>Retorno uniforme de finos al mezclador de tambor.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CLEANING OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Portabilidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the cleaning operation"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -3209,20 +3298,24 @@ const BHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li>
-                                                    Manual or automatic operation.
+                                                    Diseñado para reubicación y movimiento frecuente.
+                                                </li>
+                                                <li>
+                                                    Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                                                 </li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>Exhaust damper with electric actuator for overtemperature protection.</li>
-                                                        <li>Pulse jet cleaning cycles.</li>
+                                                        <li>También puede transportarse en cama baja o plataforma.
+                                                        </li>
+
                                                     </ul>
                                                 </li>
-                                                <li>Chimney with ecological test ports for environmental monitoring.</li>
-                                                <li>Gas extractor with centrifugal separation removes up to 70% of dust before filtration.</li>
-                                                <li>Knockout chamber and internal baffles ensure smooth airflow and bag protection.</li>
-                                                <li>Exhaust fan with curved blades operates quietly and efficiently.</li>
-                                                <li>Supersonic 3D-printed carbon-alloy nozzles for pulse-jet cleaning.</li>
-                                                <li>Uniform fines return into the drum mixer.</li>
+                                                <li>Montado sobre chasis de transporte con un eje y llantas de uso carretera.</li>
+                                                <li>Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.</li>
+                                                <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                                                <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                                                <li>Sistema de luces y señalamientos para transporte conforme a normas de carretera.</li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -3231,10 +3324,11 @@ const BHPlanos = () => {
                                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                DURABILITY & SAFETY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Componentes y sistema eléctrico
                                             </h1>
                                             <button
+                                                aria-label="See more about the durability and safety of the system"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -3276,30 +3370,22 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>High-strength, reinforced structure for long-term heavy-duty operation.</li>
-                                                <li>Aesthetic side panels for professional image.</li>
-                                                <li>Bolted components with anti-corrosion coating.</li>
-                                                <li className="list-none">
-                                                    <ul className="list-disc ml-10">
-                                                        <li>Galvanized bolts and electrostatic paint ensure long-lasting durability and excellent adhesion.
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>Thermal insulation with 2" fiberglass to prevent overcooling.</li>
-                                                <li>Labyrinth seals reduce air and heat loss.</li>
-                                                <li>Dust-resistant housing protects control module.</li>
-                                                <li>Heat resistance up to 204 °C continuous / 220 °C peak with Nomex bags.</li>
-                                                <li>Up to 260 °C peak with P84 polyimide bags.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                                         <div>
                                             <div className="flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPLIANCE WITH INDUSTRY STANDARS
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Cumplimiento con estándares de la industria
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the compliance with industry standars"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -3341,10 +3427,10 @@ const BHPlanos = () => {
                                                         : "max-h-0 opacity-0"
                                                         } md:max-h-full md:opacity-100 md:block`}
                                                 >
-                                                    <li>EPA.</li>
-                                                    <li>OSHA.</li>
-                                                    <li>DOT.</li>
-                                                    <li>UL wiring.</li>
+                                                    <li>SEMARNAT</li>
+                                                    <li>SCT</li>
+                                                    <li>NOM-001-SEDE</li>
+                                                    <li>DOT</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -3352,10 +3438,11 @@ const BHPlanos = () => {
                                     </div>
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                PORTABILITY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Control y Operación
                                             </h1>
                                             <button
+                                                aria-label="See more about the portability"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -3397,14 +3484,16 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Designed for relocation</li>
-                                                <li>Built-in fifth wheel means no lowboy is required.</li>
-                                                <li>Also transportable on lowboy or flatbed trailer if preferred.</li>
-                                                <li>Mounted on standard transport chassis with triple axles and 16” highway-rated wheels.</li>
-                                                <li>Pull-type hitch with safety coupling and brake system.</li>
-                                                <li>Setup requires no crane or hoisting equipment.</li>
-                                                <li>Bolt-on support legs for fast on-site assembly.</li>
-                                                <li>DOT-compliant lighting and reflective markings for transport visibility.</li>
+                                                <li>Operación automática o manual, según se requiera en campo.</li>
+                                                <li>Sistema operativo Triaso Relief 8.0.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc ml-10">
+                                                        <li>Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.</li>
+                                                        <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Sistema de alarmas y seguridades para condiciones fuera de rango.</li>
+                                                <li>Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -3425,10 +3514,11 @@ const BHPlanos = () => {
 
                                         <div className="w-full flex flex-col gap-4 text-white col-span-1">
                                             <div className="w-full flex border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CAPACITY
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Capacidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See the capacity of the baghouse"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -3473,11 +3563,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.acfm ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Filtering Area:</h1>
+                                                    <h1>Área de filtración:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.fArea?.toFixed(
@@ -3487,11 +3577,11 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.fArea ?? 0) *
                                                                 m3ToFt
-                                                            ).toFixed(1)} ft3`}
+                                                            ).toFixed(1)} m3`}
                                                     </p>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <h1>Bags:</h1>
+                                                    <h1>Bolsas:</h1>
                                                     <p>
                                                         {unit === "metric"
                                                             ? `${activeData?.dimensions.bags?.toFixed(
@@ -3501,7 +3591,7 @@ const BHPlanos = () => {
                                                             : `${(
                                                                 (activeData?.dimensions.bags ?? 0) *
                                                                 cmToFeet
-                                                            ).toFixed(1)} ft`}
+                                                            ).toFixed(1)} mt`}
                                                     </p>
                                                 </div>
 
@@ -3510,10 +3600,11 @@ const BHPlanos = () => {
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    MAINTENANCE & ADVANTAGES
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Mantenimiento y ventajas
                                                 </h1>
                                                 <button
+                                                    aria-label="See more abour the Maintenance and Advantages"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -3549,19 +3640,28 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Easy bag replacement with quick-change frames.</li>
-                                                <li>Access doors and inspection hatches for fast servicing</li>
-                                                <li>Factory-installed bag powder — no startup waiting time.</li>
-                                                <li>99.99% filtration and energy-efficient cleaning from startup</li>
-                                                <li>Self-contained, integrated systems for portable or stationary plants.</li>
+                                                <li>Reemplazo sencillo de bolsas mediante bastidores de cambio rápido.</li>
+                                                <li>Puertas de acceso y registros de inspección para facilitar el mantenimiento.</li>
+                                                <li>Polvo de precubrimiento para bolsas aplicado en fábrica, sin tiempos de espera para la puesta en marcha.</li>
+                                                <li>99.99% de eficiencia de filtración y limpieza energéticamente eficiente desde el arranque.</li>
+                                                <li>Sistemas integrados y autónomos para plantas portátiles o estacionarias.</li>
+                                                <li>Adaptable a la infraestructura de control existente de la planta de asfalto.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc pl-10">
+                                                        <li>Integración sencilla con sistemas de control centralizados.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Resistencia térmica de hasta 204 °C en operación continua y 220 °C en picos de temperatura con bolsas de Nomex.</li>
+                                                <li>Hasta 260 °C en picos de temperatura con bolsas de poliimida P84.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-start gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPONENTS & ELECTRICAL
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Componentes y sistema eléctrico
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the components and electrical composition"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -3597,11 +3697,11 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Industrial-grade motors, components, and Siemens wiring.</li>
-                                                <li>Simplified wiring system for easy maintenance.</li>
-                                                <li>Weather-protected electrical connections.</li>
-                                                <li>Pulley-and-bushing drive system.</li>
-                                                <li>External fuel lines, sensors, and signal cabling pre-installed.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -3616,10 +3716,11 @@ const BHPlanos = () => {
                                     >
                                         <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CONTROL & OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Operación de limpieza
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the control and the operation of the system"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -3655,34 +3756,38 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Fully automatic or manual operation</li>
-                                                <li>Digital monitoring of all operating parameters, with real-time supervision and historical data reports.</li>
+                                                <li>Operación manual o automática.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
                                                         <li>
-                                                            Remote monitoring system accessible from computers, tablets, and smartphones.
-
+                                                            Variador de velocidad en el extractor para regular la sobretemperatura
+                                                        </li>
+                                                        <li>
+                                                            Ciclos de limpieza por aire pulsante (pulse jet).
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li>Alarm and interlock system for out-of-range conditions.</li>
-                                                <li>Independent, intuitive controls designed for field reliability.</li>
-                                                <li>Adaptable to existing asphalt plant control infrastructure</li>
+                                                <li>Chimenea con puertos para pruebas ecológicas y monitoreo ambiental.</li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>
-                                                            Seamless integration to central control systems.
-                                                        </li>
+                                                        <li>Extractor de gases con separación centrífuga que elimina hasta el 70% del polvo antes de la filtración.</li>
                                                     </ul>
                                                 </li>
+                                                <li>Cámara de sedimentación y deflectores internos que garantizan un flujo de aire uniforme y protegen las bolsas filtrantes.</li>
+                                                <li>
+                                                    Ventilador de extracción con aspas curvadas para una operación silenciosa y eficiente.
+                                                </li>
+                                                <li>Boquillas supersónicas impresas en 3D con aleación de carbono para la limpieza por aire pulsante.</li>
+                                                <li>Retorno uniforme de finos al mezclador de tambor.</li>
                                             </ul>
                                         </div>
                                         <div className="flex flex-col items-start justify-center gap-4 text-white">
                                             <div className="w-full flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    CLEANING OPERATION
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Portabilidad
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the cleaning operation"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -3719,20 +3824,24 @@ const BHPlanos = () => {
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
                                                 <li>
-                                                    Manual or automatic operation.
+                                                    Diseñado para reubicación y movimiento frecuente.
+                                                </li>
+                                                <li>
+                                                    Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                                                 </li>
                                                 <li className="list-none">
                                                     <ul className="list-disc ml-10">
-                                                        <li>Exhaust damper with electric actuator for overtemperature protection.</li>
-                                                        <li>Pulse jet cleaning cycles.</li>
+                                                        <li>También puede transportarse en cama baja o plataforma.
+                                                        </li>
+
                                                     </ul>
                                                 </li>
-                                                <li>Chimney with ecological test ports for environmental monitoring.</li>
-                                                <li>Gas extractor with centrifugal separation removes up to 70% of dust before filtration.</li>
-                                                <li>Knockout chamber and internal baffles ensure smooth airflow and bag protection.</li>
-                                                <li>Exhaust fan with curved blades operates quietly and efficiently.</li>
-                                                <li>Supersonic 3D-printed carbon-alloy nozzles for pulse-jet cleaning.</li>
-                                                <li>Uniform fines return into the drum mixer.</li>
+                                                <li>Montado sobre chasis de transporte con un eje y llantas de uso carretera.</li>
+                                                <li>Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.</li>
+                                                <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                                                <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                                                <li>Sistema de luces y señalamientos para transporte conforme a normas de carretera.</li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -3741,10 +3850,11 @@ const BHPlanos = () => {
                                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                DURABILITY & SAFETY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Componentes y sistema eléctrico
                                             </h1>
                                             <button
+                                                aria-label="See more about the durability and safety of the system"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -3786,30 +3896,22 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>High-strength, reinforced structure for long-term heavy-duty operation.</li>
-                                                <li>Aesthetic side panels for professional image.</li>
-                                                <li>Bolted components with anti-corrosion coating.</li>
-                                                <li className="list-none">
-                                                    <ul className="list-disc ml-10">
-                                                        <li>Galvanized bolts and electrostatic paint ensure long-lasting durability and excellent adhesion.
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>Thermal insulation with 2" fiberglass to prevent overcooling.</li>
-                                                <li>Labyrinth seals reduce air and heat loss.</li>
-                                                <li>Dust-resistant housing protects control module.</li>
-                                                <li>Heat resistance up to 204 °C continuous / 220 °C peak with Nomex bags.</li>
-                                                <li>Up to 260 °C peak with P84 polyimide bags.</li>
+                                                <li>Motores, componentes y cableado Siemens de grado industrial.</li>
+                                                <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                                                <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                                                <li>Sistema de transmisión con poleas y bujes.</li>
+                                                <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                                         <div>
                                             <div className="flex justify-between border-b border-b-white">
-                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                    COMPLIANCE WITH INDUSTRY STANDARS
+                                                <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                    Cumplimiento con estándares de la industria
                                                 </h1>
                                                 <button
+                                                    aria-label="See more about the compliance with industry standars"
                                                     className="block md:hidden"
                                                     onClick={() =>
                                                         setOpenSections((prev) => ({
@@ -3851,10 +3953,10 @@ const BHPlanos = () => {
                                                         : "max-h-0 opacity-0"
                                                         } md:max-h-full md:opacity-100 md:block`}
                                                 >
-                                                    <li>EPA.</li>
-                                                    <li>OSHA.</li>
-                                                    <li>DOT.</li>
-                                                    <li>UL wiring.</li>
+                                                    <li>SEMARNAT</li>
+                                                    <li>SCT</li>
+                                                    <li>NOM-001-SEDE</li>
+                                                    <li>DOT</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -3862,10 +3964,11 @@ const BHPlanos = () => {
                                     </div>
                                     <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                                         <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
-                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                                                PORTABILITY
+                                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                                                Control y Operación
                                             </h1>
                                             <button
+                                                aria-label="See more about the portability"
                                                 className="block md:hidden"
                                                 onClick={() =>
                                                     setOpenSections((prev) => ({
@@ -3907,14 +4010,16 @@ const BHPlanos = () => {
                                                     : "max-h-0 opacity-0"
                                                     } md:max-h-full md:opacity-100 md:block`}
                                             >
-                                                <li>Designed for relocation</li>
-                                                <li>Built-in fifth wheel means no lowboy is required.</li>
-                                                <li>Also transportable on lowboy or flatbed trailer if preferred.</li>
-                                                <li>Mounted on standard transport chassis with triple axles and 16” highway-rated wheels.</li>
-                                                <li>Pull-type hitch with safety coupling and brake system.</li>
-                                                <li>Setup requires no crane or hoisting equipment.</li>
-                                                <li>Bolt-on support legs for fast on-site assembly.</li>
-                                                <li>DOT-compliant lighting and reflective markings for transport visibility.</li>
+                                                <li>Operación automática o manual, según se requiera en campo.</li>
+                                                <li>Sistema operativo Triaso Relief 8.0.</li>
+                                                <li className="list-none">
+                                                    <ul className="list-disc ml-10">
+                                                        <li>Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.</li>
+                                                        <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Sistema de alarmas y seguridades para condiciones fuera de rango.</li>
+                                                <li>Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -3956,7 +4061,7 @@ const BHPlanos = () => {
                                         } cm`
                                         : `${(
                                             (activeData?.dimensions.width ?? 0) * cmToFeet
-                                        ).toFixed(1)} ft`}
+                                        ).toFixed(1)} mt`}
                                 </p>
                                 <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                                     <div className="bg-white h-[1px] w-full relative">
@@ -4020,7 +4125,7 @@ const BHPlanos = () => {
                                         } cm`
                                         : `${(
                                             (activeData?.dimensions.height ?? 0) * cmToFeet
-                                        ).toFixed(1)} ft`}
+                                        ).toFixed(1)} mt`}
                                 </p>
                             </div>
                             <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -4078,7 +4183,7 @@ const BHPlanos = () => {
                                         } cm`
                                         : `${(
                                             (activeData?.dimensions.length ?? 0) * cmToFeet
-                                        ).toFixed(1)} ft`}
+                                        ).toFixed(1)} mt`}
                                 </p>
                                 <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                                     <div className="bg-white h-[1px] w-full relative">
