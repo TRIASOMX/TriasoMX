@@ -147,7 +147,7 @@ const HotMixPlanos = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
   const clipTargetRef = useRef<HTMLDivElement>(null);
-  const cmToFeet = 0.01;
+  const cmToFeet = 0.0328084;
   //RENDERIZADO CONDICIONAL DE IMAGENES
   type VersionType = "50tons" | "100tons" | "150tons" | "200tons";
   const imageMap: Record<VersionType, string> = {
@@ -286,7 +286,7 @@ const HotMixPlanos = () => {
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              Medida:
+              Unidad:
             </h1>
             <div
               onClick={toggleUnit}
@@ -303,12 +303,12 @@ const HotMixPlanos = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  MT
+                  Imperial
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  CM
+                  Métrico
                 </span>
               </div>
             </div>
@@ -834,11 +834,8 @@ const HotMixPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -905,11 +902,8 @@ const HotMixPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -960,12 +954,9 @@ const HotMixPlanos = () => {
                         </div>
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
-                        {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          {unit === "metric"
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1053,22 +1044,17 @@ const HotMixPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1126,50 +1112,35 @@ const HotMixPlanos = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Longitud del chasis:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.chasisLenght?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.chasisLenght ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.chasisLenght ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.chasisLenght?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho de transporte:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.transporWidth?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.transporWidth ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.transporWidth ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.transporWidth ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1184,11 +1155,8 @@ const HotMixPlanos = () => {
                         <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1211,25 +1179,16 @@ const HotMixPlanos = () => {
                         <h1>Altura de descarga a camión:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.truckHeight?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.truckHeight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.truckHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total (punto más alto):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1282,41 +1241,33 @@ const HotMixPlanos = () => {
                           <h1>Longitud:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${slatConveyor.length?.toFixed(1) ?? ""} cm`
-                              : `${(
-                                (slatConveyor.length ?? 0) * cmToFeet
-                              ).toFixed(1)} mt`}
+                          ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((slatConveyor?.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
                           <h1>Ancho:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${slatConveyor.width?.toFixed(1) ?? ""} cm`
-                              : `${(
-                                (slatConveyor.width ?? 0) * cmToFeet
-                              ).toFixed(1)} mt`}
+                          ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((slatConveyor?.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
                           <h1>Altura (en posición de trabajo):</h1>
                           <p>
                             {unit === "metric"
-                              ? `${slatConveyor.heightErec?.toFixed(1) ?? ""
-                              } cm`
-                              : `${(
-                                (slatConveyor.heightErec ?? 0) * cmToFeet
-                              ).toFixed(1)} mt`}
+                          ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} mt`
+                          : `${((slatConveyor?.heightErec ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                           </p>
                         </div>
                         <div className="flex justify-between">
                           <h1>Altura de descarga:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${slatConveyor.chain?.toFixed(1) ?? ""} cm`
-                              : `${(
-                                (slatConveyor.chain ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                          ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} mt`
+                          : `${((slatConveyor?.chain ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         {/* <div className="flex justify-between">
@@ -1762,11 +1713,9 @@ const HotMixPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1825,11 +1774,8 @@ const HotMixPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1881,11 +1827,8 @@ const HotMixPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1964,23 +1907,17 @@ const HotMixPlanos = () => {
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                        {unit === "metric"
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2038,11 +1975,8 @@ const HotMixPlanos = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       {/* <div className="flex justify-between">
@@ -2096,11 +2030,8 @@ const HotMixPlanos = () => {
                         <h1>Altura del enganche de quinta rueda (si se entrega preinstalado)::</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2122,26 +2053,17 @@ const HotMixPlanos = () => {
                       <div className="flex justify-between">
                         <h1>Altura de descarga a camión:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.truckHeight?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.truckHeight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} mt`}
+                            {unit === "metric"
+                          ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.truckHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Total height (heighest point):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} mt`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -2194,55 +2116,46 @@ const HotMixPlanos = () => {
                           <h1>Longitud:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${slatConveyor.length?.toFixed(1) ?? ""} cm`
-                              : `${(
-                                (slatConveyor.length ?? 0) * cmToFeet
-                              ).toFixed(1)} mt`}
+                          ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((slatConveyor?.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura:</h1>
+                          <h1>Ancho:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${slatConveyor.width?.toFixed(1) ?? ""} cm`
-                              : `${(
-                                (slatConveyor.width ?? 0) * cmToFeet
-                              ).toFixed(1)} mt`}
+                          ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((slatConveyor?.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
                           <h1>Altura (en posición de trabajo):</h1>
                           <p>
                             {unit === "metric"
-                              ? `${slatConveyor.heightErec?.toFixed(1) ?? ""
-                              } cm`
-                              : `${(
-                                (slatConveyor.heightErec ?? 0) * cmToFeet
-                              ).toFixed(1)} mt`}
+                          ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} mt`
+                          : `${((slatConveyor?.heightErec ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                           </p>
                         </div>
-                        {/* <div className="flex justify-between">
+                        <div className="flex justify-between">
                           <h1>Altura de descarga:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${slatConveyor.chain?.toFixed(1) ?? ""} cm`
-                              : `${(
-                                (slatConveyor.chain ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                          ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} mt`
+                          : `${((slatConveyor?.chain ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
-                        </div> */}
-                        <div className="flex justify-between">
-                          <h1>Altura de descarga:
-                          </h1>
+                        </div>
+                        {/* <div className="flex justify-between">
+                          <h1>Height (discharge height):</h1>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.heightDischarge?.toFixed(1) ?? ""
                               } cm`
                               : `${(
                                 (slatConveyor.heightDischarge ?? 0) * cmToFeet
-                              ).toFixed(1)} mt`}
+                              ).toFixed(1)} ft`}
                           </p>
-                        </div>
+                        </div> */}
                         <div className="flex justify-between">
                           <h1>Ángulo de inclinación:</h1>
                           <p>
@@ -2252,6 +2165,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                       </div>
+                      
                       <div className="flex flex-col text-white col-span-1 md:col-span-2 w-full justify-center">
                         <ul className="ml-2 lg:ml-6 list-disc w-full">
                           <li>
