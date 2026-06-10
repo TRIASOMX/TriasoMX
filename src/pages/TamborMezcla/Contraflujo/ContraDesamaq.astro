@@ -1,12 +1,10 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import OdometerDesamaq from "../../../components/DrumMixers/Contraflujo/Desamaq/OdometerDesamaq";
-import OdometerDrum from "../../../components/DrumMixers/OdometerDrum";
 import DrumMixPlanos from "../../../components/DrumMixers/DrumMixPlanos";
 import HeroComponent from "../../../components/unitComponents/HeroComponent.astro";
 import hero1 from "../../../assets/images/DrumMixers/Contraflujo/Desamaq/HeroImage.webp";
 import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
-import OsDrumSection from "../../../components/DrumMixers/OsDrumSection.astro";
 import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
 import SliderTambores from "../../../components/DrumMixers/SliderTambores.astro";
 import QuemadorSeccion from "../../../components/DrumMixers/QuemadorSeccion.astro";
@@ -14,6 +12,8 @@ import BolsasSeccion from "../../../components/DrumMixers/Contraflujo/Desamaq/Bo
 import hero2 from "../../../assets/images/DrumMixers/Contraflujo/CDesamac.webp";
 import HotspotSectionContra from "../../../components/DrumMixers/Contraflujo/Desamaq/HotspotSection.astro";
 import UltimaSeccion from "../../../components/DrumMixers/UltimaSeccion.astro";
+
+import PlanosCf from "../../../components/DrumMixers/Contraflujo/Desamaq/PlanosCf"
 
 
 const cards = [
@@ -169,7 +169,7 @@ const cards = [
 
     <BolsasSeccion />
 
-    <DrumMixPlanos client:only />
+    <PlanosCf client:only />
 
     <UltimaSeccion/>    
 </Layout>
