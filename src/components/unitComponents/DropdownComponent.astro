@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="w-full max-w-7xl mx-auto px-8">
+  <div class="bg-[#1e1e1e] text-white rounded-2xl overflow-hidden">
+    <button
+      class="dropdown-toggle w-full flex items-center justify-between px-6 py-4 text-left"
+    >
+      <span class="text-sm md:text-lg lg:text-lg font-bold">
+        {title}
+      </span>
+
+      <span class="dropdown-icon flex items-center justify-center w-8 h-8 rounded-full bg-neutral-800 transition-transform duration-300">
+        ▼
+      </span>
+    </button>
+
+    <div class="dropdown-content max-h-0 overflow-hidden transition-all duration-300">
+      <div class="px-6 pb-6 text-sm text-neutral-300">
+        <slot />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script is:inline>
+  const toggle = document.currentScript.parentElement.querySelector(".dropdown-toggle");
+  const content = document.currentScript.parentElement.querySelector(".dropdown-content");
+  const icon = document.currentScript.parentElement.querySelector(".dropdown-icon");
+
+  toggle.addEventListener("click", () => {
+    const open = content.style.maxHeight;
+
+    if (open && open !== "0px") {
+      content.style.maxHeight = "0px";
+      icon.style.transform = "rotate(0deg)";
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      icon.style.transform = "rotate(180deg)";
+    }
+  });
+</script>

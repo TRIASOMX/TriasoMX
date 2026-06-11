@@ -17,23 +17,23 @@ const SpareGallery = () => {
   const [currentImg, setCurrentImg] = useState("");
   const [currentAlt, setCurrentAlt] = useState("");
   const ItemGallery = [
-    { title: "Gear Reducers", image: img1, altTitle:"Gear Reducers" },
-    { title: "Electric motors", image: img2, altTitle:"Electric motors" },
-    { title: "Belts", image: img3, altTitle:"Belts" },
-    { title: "Rollers", image: img4, altTitle:"Rollers"},
-    { title: "Parts for elevator chains", image: img5, altTitle:"Parts for elevator chains" },
-    { title: "Pulleys", image: img6, altTitle:"Pulleys" },
-    { title: "Drum tires", image: img7, altTitle:"Drum tires" },
-    { title: "Drum trunnions", image: img8, altTitle:"Drum trunnions" },
-    { title: "Control parts", image: img9, altTitle:"Control parts" },
-    { title: "Electric parts", image: img10, altTitle:"Electric parts" },
-    { title: "Triaso valves", image: img11, altTitle:"Triaso valves" },
-    { title: "Spare parts exportation", image: img12, altTitle:"Spare parts exportation" },
+    { title: "Reductores", image: img1, altTitle:"Reductores" },
+    { title: "Motores eléctricos", image: img2, altTitle:"Motores eléctricos" },
+    { title: "Bandas", image: img3, altTitle:"Bandas" },
+    { title: "Rodillos", image: img4, altTitle:"Rodillos"},
+    { title: "Partes de cadena de elevadores", image: img5, altTitle:"Partes de cadena de elevadores" },
+    { title: "Poleas", image: img6, altTitle:"Poleas" },
+    { title: "Aros de tambores", image: img7, altTitle:"Aros de tambores" },
+    { title: "Roles", image: img8, altTitle:"Roles" },
+    { title: "Partes de control", image: img9, altTitle:"Partes de control" },
+    { title: "Partes eléctricas", image: img10, altTitle:"Partes eléctricas" },
+    { title: "Válvulas Triaso®", image: img11, altTitle:"Válvulas Triaso®" },
+    { title: "Exportación de refacciones", image: img12, altTitle:"Exportación de refacciones" },
   ];
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="w-full mt-6 flex justify-center items-center">
-        <h1 className="font-bold text-xl lg:text-5xl md:text-5xl">GALLERY</h1>
+        <h1 className="font-bold text-xl lg:text-5xl md:text-5xl">GALERÍA</h1>
       </div>
       <div className="w-full px-4 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 py-10 max-w-7xl">
         {ItemGallery.map((element, i) => (

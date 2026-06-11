@@ -1,0 +1,1236 @@
+---
+import img6 from "../../assets/images/DrumMixers/2.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
+import poster1 from "../../../public/Videos/Webm/Posters/drummixers2.webp";
+import render5 from "../../assets/images/DrumMixers/Low/render5Low.webp";
+import sidePanel from "../../assets/images/SidePanels/FEPlaC_1.webp";
+import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
+import { Image } from "astro:assets";
+
+
+import slider1 from "../../assets/images/DrumMixers/trunnions.webp"
+import slider2 from "../../assets/images/DrumMixers/drumT.webp"
+import slider3 from "../../assets/images/DrumMixers/drumtires.webp"
+import bigSlider1 from "../../assets/images/DrumMixers/rap.webp"
+
+import slider4 from "../../assets/images/DrumMixers/Contraflujo/Pro+/Aislamiento.webp"
+import slider5 from "../../assets/images/DrumMixers/thrustrollers.webp"
+import slider6 from "../../assets/images/DrumMixers/Contraflujo/Pro+/Plasma.webp"
+import bigSlider2 from "../../assets/images/RapBins/Low/RAProv3Low.webp"
+
+import slider8 from "../../assets/images/SidePanels/FEPlaC1_1.webp"
+import slider9 from "../../assets/images/DrumMixers/drumT.webp"
+import bigSlider3 from "../../assets/images/DrumMixers/Low/a21Low.webp"
+
+
+---
+
+<section
+    id="tamborMezclador"
+    class="w-full select-none"
+    aria-label="Tambor Mezclador"
+>
+    <h2 class="font-bold text-2xl lg:text-3xl text-black mb-5 uppercase">
+        Tambor Mezclador
+    </h2>
+
+    <div class="overflow-hidden" id="sliderViewport">
+        <div
+            id="sliderTrack"
+            class="flex transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
+        >
+            <div class="w-full shrink-0 space-y-4">
+                <div class="card-row-wrapper relative">
+                    <div
+                        class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3"
+                        id="cardRow0"
+                    >
+                        <!-- Card 1-A -->
+                        <div
+                            class="relative rounded-lg overflow-hidden group cursor-pointer"
+                            data-card="0-0"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src={slider1.src}
+                                    alt=""
+                                />
+                            </div>
+
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Roles de carga
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Roles de carga extra reforzados
+                                        fabricados en acero forjado, maquinado
+                                        con precisión y equipados con
+                                        rodamientos industriales para una
+                                        rotación del tambor suave y estable.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 1-B -->
+                        <div
+                            class="relative rounded-lg overflow-hidden group cursor-pointer"
+                            data-card="0-1"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src={slider2.src}
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Variadores de<br />velocidad de giro
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Nuestra más reciente innovación para
+                                        alto porcentajes de incorporación de RAP
+                                        es el uso de variadores de velocidad de
+                                        rotación en los sistemas de giro del
+                                        tambor
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 1-C -->
+                        <div
+                            class="relative rounded-lg overflow-hidden group cursor-pointer"
+                            data-card="0-2"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src={slider3.src}
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Aros
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Forjados en acero aleado de alta
+                                        resistencia y maquinados con precisión
+                                        para garantizar un soporte confiable y
+                                        una operación silenciosa y uniforme.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MÓVIL INDICADORES -->
+                    <div
+                        class="card-dots flex justify-center gap-1.5 mt-2 sm:hidden"
+                        data-row="0"
+                    >
+                        <span class="card-dot w-2 h-2 rounded-full bg-gray-800"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
+                    </div>
+                </div>
+
+                <!-- Bloque RAP slide 1 -->
+                <div
+                    class="rounded-xl bg-[#727272] p-6 flex flex-col sm:flex-row items-center gap-6"
+                >
+                    <div class="flex-1 min-w-0">
+                        <h3
+                            class="font-extrabold text-white text-2xl md:text-3xl uppercase tracking-wide mb-2"
+                        >
+                            Collar de RAP
+                        </h3>
+                        <p class="text-white/80 text-sm mb-1">
+                            Nuestro sistema de RAP puede incorporar
+                        </p>
+                        <p class="text-white font-bold text-lg mb-3">
+                            hasta 50% <span
+                                class="font-normal text-sm text-white/80"
+                                >de carpeta asfáltica reciclada</span
+                            >
+                        </p>
+                        <p class="text-white/80 text-sm mb-1">
+                            Por cada 10% de RAP,<br />el costo de la mezcla
+                            asfáltica se
+                        </p>
+                        <p class="text-white font-bold text-xl mb-4">
+                            reduce 7%
+                        </p>
+                        <a
+                            href="#"
+                            class="inline-block px-5 py-2 border border-white/60 rounded-full text-white text-sm
+                               hover:bg-white hover:text-gray-700 transition-all duration-200"
+                        >
+                            Saber más
+                        </a>
+                    </div>
+                    <!-- Imagen 3D placeholder collar -->
+                    <div
+                        class="shrink-0 w-40 h-40 flex items-center justify-center"
+                    >
+                        <img src={bigSlider1.src} alt="" />
+                    </div>
+                </div>
+            </div><!-- /SLIDE 1 -->
+
+            <div class="w-full shrink-0 space-y-4">
+                <div class="card-row-wrapper relative">
+                    <div class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <!-- Card 2-A -->
+                        <div
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="1-0"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src={slider4.src}
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Aislamiento para eficiencia energética
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Aislamiento de lana mineral minimizando
+                                        la pérdida de calor, reduciendo el
+                                        consumo de combustible y asegura que la
+                                        mezcla asfáltica se mantenga a la
+                                        temperatura óptima.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2-B -->
+                        <div
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="1-1"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src={slider5.src}
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Platos axiales
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Para mantener una alineación precisa y
+                                        estabilidad durante la rotación, el
+                                        sistema incorpora platos axiales
+                                        individuales en cada aro.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2-C -->
+                        <div
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="1-2"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src={slider6.src}
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Escudo frontal extra-reforzado
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Escudo frontal con refuerzo adicional y
+                                        sellado con acero extra reforzado y hule
+                                        EPDM para evitar la entrada de aire frío
+                                        no deseado, manteniendo temperaturas
+                                        internas óptimas y una alta eficiencia
+                                        de combustión.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card-dots flex justify-center gap-1.5 mt-2 sm:hidden"
+                        data-row="1"
+                    >
+                        <span class="card-dot w-2 h-2 rounded-full bg-gray-800"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
+                    </div>
+                </div>
+
+                <!-- Bloque RAP slide 2 -->
+                <div
+                    class="rounded-xl bg-[#727272] p-6 flex flex-col sm:flex-row items-center gap-6"
+                >
+                    <div class="flex-1 min-w-0">
+                        <h3
+                            class="font-extrabold text-white text-2xl md:text-3xl uppercase tracking-wide mb-2"
+                        >
+                            TOLVAS DE RAP
+                        </h3>
+                        <p class="text-white/80 text-sm mb-1">
+                            Nuestro sistema de RAP puede incorporar
+                        </p>
+                        <p class="text-white font-bold text-lg mb-3">
+                            hasta 50% <span
+                                class="font-normal text-sm text-white/80"
+                                >de carpeta asfáltica reciclada</span
+                            >
+                        </p>
+                        <p class="text-white/80 text-sm mb-1">
+                            Por cada 10% de RAP, <br />
+                            el costo de la mezcla asfáltica se
+                        </p>
+                        <p class="text-white font-bold text-xl mb-4">
+                            reduce 7%
+                        </p>
+                        <a
+                            href="#"
+                            class="inline-block px-5 py-2 border border-white/60 rounded-full text-white text-sm
+                               hover:bg-white hover:text-gray-700 transition-all duration-200"
+                        >
+                            Saber más
+                        </a>
+                    </div>
+                    <div
+                        class="shrink-0 w-[30%] flex items-center justify-center"
+                    >
+                        <img src={bigSlider2.src} alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full shrink-0 space-y-4">
+                <div class="card-row-wrapper relative">
+                    <div class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <!-- Card 3-A -->
+                        <div
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="2-0"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src="https://placehold.co/600x400"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Chasis con alta distancia al suelo
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Permite el transporte seguro del equipo
+                                        en terrenos, calles y carreteras con
+                                        baches y desniveles muy comunes en
+                                        México, evitando daños a los componentes
+                                        inferiores.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3-B -->
+                        <div
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="2-1"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src={slider8.src}
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Flancos estéticos
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        Los paneles estéticos están diseñados no
+                                        solo para ofrecer una mejor apariencia
+                                        visual, sino también para reforzar la
+                                        imagen profesional de tu equipo y de tu
+                                        empresa.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3-C -->
+                        <div
+                            class="relative rounded-lg overflow-hidden cursor-pointer"
+                            data-card="2-2"
+                        >
+                            <div
+                                class="w-full h-44 bg-black/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src={slider9.src}
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                            >
+                                <span
+                                    class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                                >
+                                    Sistema de ajuste centralizado
+                                </span>
+                                <button
+                                    class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        class="chevron w-3 h-3 transition-transform duration-300"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M2 4l4 4 4-4"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                    mostrar más
+                                </button>
+                                <div
+                                    class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                                >
+                                    <p
+                                        class="text-white/75 text-xs leading-relaxed mt-2"
+                                    >
+                                        placeholder
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card-dots flex justify-center gap-1.5 mt-2 sm:hidden"
+                        data-row="2"
+                    >
+                        <span class="card-dot w-2 h-2 rounded-full bg-gray-800"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
+                        <span
+                            class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
+                        ></span>
+                    </div>
+                </div>
+                <div
+                    class="rounded-xl bg-[#727272] p-6 flex flex-col sm:flex-row items-center gap-6"
+                >
+                    <div class="flex-1 min-w-0">
+                        <h3
+                            class="font-extrabold text-white text-2xl md:text-3xl uppercase tracking-wide mb-2"
+                        >
+                            TOLVAS DE RAP
+                        </h3>
+                        <p class="text-white/80 text-sm mb-1">
+                            Nuestro sistema de RAP puede incorporar
+                        </p>
+                        <p class="text-white font-bold text-lg mb-3">
+                            hasta 50% <span
+                                class="font-normal text-sm text-white/80"
+                                >de carpeta asfáltica reciclada</span
+                            >
+                        </p>
+                        <p class="text-white/80 text-sm mb-1">
+                            Por cada 10% de RAP, <br />
+                            el costo de la mezcla asfáltica se
+                        </p>
+                        <p class="text-white font-bold text-xl mb-4">
+                            reduce 7%
+                        </p>
+                        <a
+                            href="#"
+                            class="inline-block px-5 py-2 border border-white/60 rounded-full text-white text-sm
+                               hover:bg-white hover:text-gray-700 transition-all duration-200"
+                        >
+                            Saber más
+                        </a>
+                    </div>
+                    <div
+                        class="shrink-0 w-[30%] flex items-center justify-center"
+                    >
+                        <img src={bigSlider3.src} alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="flex justify-center gap-2 mt-5"
+        id="dotsContainer"
+        role="tablist"
+        aria-label="Navegación de slides"
+    >
+        <button
+            role="tab"
+            aria-selected="true"
+            data-dot="0"
+            class="dot w-3 h-3 rounded-full bg-gray-800 transition-all duration-300"
+            aria-label="Slide 1"></button>
+        <button
+            role="tab"
+            aria-selected="false"
+            data-dot="1"
+            class="dot w-2 h-2 mt-0.5 rounded-full bg-gray-300 transition-all duration-300 hover:bg-gray-500"
+            aria-label="Slide 2"></button>
+        <button
+            role="tab"
+            aria-selected="false"
+            data-dot="2"
+            class="dot w-2 h-2 mt-0.5 rounded-full bg-gray-300 transition-all duration-300 hover:bg-gray-500"
+            aria-label="Slide 3"></button>
+    </div>
+</section>
+
+<section class="pt-10 pb-10">
+    <div
+        class="flex flex-col max-w-7xl px-8 mx-auto items-center justify-center bg-white rounded-2xl relative"
+    >
+        <details class="group max-w-7xl">
+            <summary class="cursor-pointer list-none">
+                <h2 class="text-2xl md:text-3xl my-6 text-center font-bold">
+                    Elevador retráctil para transporte y operación segura y
+                    eficiente
+                </h2>
+                <div
+                    class="z-20 flex items-center justify-center group-open:px-8 lg:px-0 md:px-0"
+                >
+                    <SmartVideo
+                        client:visible
+                        aspectRatio="4/3"
+                        desktopWidth="70%"
+                        desktopHeight="70%"
+                        src="/Videos/Webm/PlaC140ET.webm"
+                        poster={poster1.src}
+                        autoplayOnMobile={false}
+                        isLoop={true}
+                    />
+                </div>
+                <div class="flex justify-end py-10">
+                    <svg
+                        class="transition-transform duration-300 group-open:rotate-180"
+                        width="64px"
+                        height="64px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        color="#0044a4"
+                        stroke-width="1.5"
+                        ><path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM16.0303 13.0303L12.5303 16.5303C12.2374 16.8232 11.7626 16.8232 11.4697 16.5303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L11.25 14.1893V8C11.25 7.58579 11.5858 7.25 12 7.25C12.4142 7.25 12.75 7.58579 12.75 8V14.1893L14.9697 11.9697C15.2626 11.6768 15.7374 11.6768 16.0303 11.9697C16.3232 12.2626 16.3232 12.7374 16.0303 13.0303Z"
+                            fill="#0044a4"></path></svg
+                    >
+                </div>
+            </summary>
+            <div
+                class="w-full max-w-full flex flex-col items-center justify-center mt-20 z-20"
+            >
+                <p
+                    class="text-grisT text-justify text-sm lg:text-lg md:text-lg pb-5 font-semibold px-8 lg:px-0 md:px-0"
+                >
+                    El elevador es completamente retráctil, cumpliendo con los
+                    límites de altura establecidos por la SCT para transporte,
+                    garantizando un traslado seguro y legal por carretera. Una
+                    vez que el tambor se instala en el sitio, el elevador se
+                    extiende a su altura de operación completa, permitiendo una
+                    descarga eficiente del material hacia los camiones con un
+                    tiempo mínimo de preparación. Mejorando la logística sin
+                    comprometer el tiempo de operaciones de instalación.
+                </p>
+
+                <div
+                    class="w-full max-w-[calc(100vw-4rem)] px-8 overflow-hidden lg:hidden"
+                >
+                    <div
+                        class="w-full lg:hidden overflow-x-auto snap-x snap-mandatory flex gap-4 mt-6"
+                    >
+                        <div
+                            class="snap-center shrink-0 w-[80%] max-w-[320px] bg-bgMain rounded-2xl p-4 min-h-[350px] box-border"
+                        >
+                            <h1
+                                class="text-2xl md:text-4xl text-black mb-10 w-full text-start"
+                            >
+                                Elevador integrado con sistema abisagrado
+                            </h1>
+                            <p
+                                class="text-base md:text-lg font-semibold text-grisT"
+                            >
+                                El elevador está abisagrado sobre el mismo
+                                chasis del tambor mezclador, lo que permite una
+                                instalación inmediata y reduce el tiempo de
+                                instalación en obra. Su diseño está pensado para
+                                integrarse directamente con el sistema de
+                                descarga de la mezcla, sin necesidad de ajustes
+                                adicionales.
+                            </p>
+                        </div>
+                        <div
+                            class="snap-center shrink-0 w-[80%] max-w-[320px] bg-bgMain rounded-2xl p-4 min-h-[350px] box-border"
+                        >
+                            <h1
+                                class="text-2xl md:text-4xl text-black mb-10 w-full text-start"
+                            >
+                                Cadena con paso de 4”
+                            </h1>
+                            <p
+                                class="text-grisT text-base md:text-lg font-semibold"
+                            >
+                                Diseñamos la cadena con paso de 4” del elevador
+                                para trabajo pesado. Con una resistencia a la
+                                tensión de 50,000 lb (22,700 kg) y guías
+                                flotantes que evitan atascos, garantizando un
+                                funcionamiento suave y confiable, con alta
+                                durabilidad, eficiencia y un mantenimiento
+                                mínimo.
+                            </p>
+                        </div>
+                        <div
+                            class="snap-center shrink-0 w-[80%] max-w-[320px] bg-bgMain rounded-2xl p-4 min-h-[350px] box-border"
+                        >
+                            <h1
+                                class="text-2xl md:text-4xl text-black mb-10 w-full text-start"
+                            >
+                                Rodamientos auto-alineables
+                            </h1>
+                            <p
+                                class="text-grisT text-base md:text-lg font-semibold"
+                            >
+                                Usamos rodamientos auto-alineables en el
+                                elevador, garantizando un funcionamiento suave
+                                al compensar automáticamente cualquier
+                                desalineación. Esto reduce el desgaste y
+                                prolonga la vida útil, reduciendo paros
+                                inesperadas, mantenimientos y refacciones
+                                costosas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h1
+                    class="hidden lg:flex text-2xl md:text-4xl text-black mb-10 w-full text-start font-bold"
+                >
+                    Elevador integrado con sistema abisagrado
+                </h1>
+                <p
+                    class="hidden lg:flex text-base md:text-lg font-semibold text-grisT"
+                >
+                    El elevador está abisagrado sobre el mismo chasis del tambor
+                    mezclador, lo que permite una instalación inmediata y reduce
+                    el tiempo de instalación en obra. Su diseño está pensado
+                    para integrarse directamente con el sistema de descarga de
+                    la mezcla, sin necesidad de ajustes adicionales.
+                </p>
+                <div
+                    class="w-full hidden lg:grid grid-cols-2 lg:grid-cols-5 md:gap-8 items-center"
+                >
+                    <div class="flex flex-col col-span-2 gap-8">
+                        <Image src={render5} alt="4” pitch chain" />
+                    </div>
+                    <div class="flex flex-col col-span-3 items-center gap-10">
+                        <div
+                            class="bg-white rounded-2xl text-base md:text-lg flex flex-col text-start lg:p-4 md:p-4 justify-center"
+                        >
+                            <h1 class="text-black mb-4 font-bold">
+                                Cadena con paso de 4”
+                            </h1>
+                            <p class="text-grisT font-semibold">
+                                Diseñamos la cadena con paso de 4” del elevador
+                                para trabajo pesado. Con una resistencia a la
+                                tensión de 50,000 lb (22,700 kg) y guías
+                                flotantes que evitan atascos, garantizando un
+                                funcionamiento suave y confiable, con alta
+                                durabilidad, eficiencia y un mantenimiento
+                                mínimo.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white rounded-2xl text-base lg:text-lg flex flex-col text-start lg:p-4 md:p-4 justify-center"
+                        >
+                            <h1 class="text-black mb-4 font-bold">
+                                Rodamientos auto-alineables
+                            </h1>
+                            <p
+                                class="text-grisT text-base lg:text-lg font-semibold"
+                            >
+                                Usamos rodamientos auto-alineables en el
+                                elevador, garantizando un funcionamiento suave
+                                al compensar automáticamente cualquier
+                                desalineación. Esto reduce el desgaste y
+                                prolonga la vida útil, reduciendo paros
+                                inesperadas, mantenimientos y refacciones
+                                costosas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col justify-center items-center gap-4 mt-10 h-full"
+                >
+                    <div class="gap-10 md:gap-20">
+                        <div
+                            class="grid grid-cols-2 space-y-10 gap-5 pt-5 px-8 lg:px-0 md:px-0 lg:pt-0 md:pt-0 lg:gap-0 md:gap-0 text-grisT md:text-lg text-base relative z-20"
+                        >
+                            <div
+                                class="flex flex-col justify-center lg:items-start text-grisT md:text-lg text-base"
+                            >
+                                <h2 class="font-medium">Almacena hasta</h2>
+                                <h1
+                                    class="text-black font-bold text-lg lg:text-3xl md:text-3xl"
+                                >
+                                    0.75 metros cúbicos
+                                </h1>
+                                <h2 class="font-medium">
+                                    de mezcla asfáltica.
+                                </h2>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:justify-end lg:items-end"
+                            >
+                                <h1
+                                    class="text-black font-bold text-lg lg:text-3xl md:text-3xl"
+                                >
+                                    Apertura automática
+                                </h1>
+                                <h2 class="font-medium">
+                                    controlada por variable como
+                                </h2>
+                                <h1
+                                    class="text-black font-bold text-lg lg:text-3xl md:text-3xl"
+                                >
+                                    tiempo o peso.
+                                </h1>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:justify-center lg:items-start text-grisT md:text-lg text-base"
+                            >
+                                <h1
+                                    class="text-black font-bold text-lg lg:text-3xl md:text-3xl"
+                                >
+                                    Control integrado
+                                </h1>
+                                <h2 class="font-medium">
+                                    en la consola centralizando la gestión del
+                                    sistema.
+                                </h2>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:justify-end lg:items-end text-grisT md:text-lg text-base"
+                            >
+                                <h1
+                                    class="text-black font-bold text-lg lg:text-3xl md:text-3xl"
+                                >
+                                    Apertura neumática
+                                </h1>
+                                <h2 class="font-medium">con un</h2>
+                                <h1
+                                    class="text-black font-bold text-lg lg:text-3xl md:text-3xl"
+                                >
+                                    cilindro de doble efecto
+                                </h1>
+                                <h2 class="font-medium">
+                                    garantizando una descarga controlada y
+                                    eficiente
+                                </h2>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:justify-center lg:items-start text-grisT md:text-lg text-base"
+                            >
+                                <h1
+                                    class="text-black font-bold text-lg lg:text-3xl md:text-3xl"
+                                >
+                                    Apertura automática o manual
+                                </h1>
+                                <h2 class="font-medium">
+                                    permitiendo una operación del sistema de
+                                    forma manual o automática.
+                                </h2>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:justify-end lg:items-end text-grisT md:text-lg text-base"
+                            >
+                                <h1
+                                    class="text-black font-bold text-lg lg:text-3xl md:text-3xl"
+                                >
+                                    Compresor de aire de 7.5 <br /> Hp con tanque
+                                    de 293 litros
+                                </h1>
+                                <h2 class="font-medium">
+                                    suministra el aire para el funcionamiento
+                                    neumático
+                                </h2>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:justify-center lg:items-start text-grisT md:text-lg text-base"
+                            >
+                                <h1
+                                    class="text-black font-bold text-lg lg:text-3xl md:text-3xl"
+                                >
+                                    Arranque suave variable
+                                </h1>
+                                <h2 class="font-medium">
+                                    necesario para arrancar aún bolas de mezcla
+                                    endurecidas.
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="p-4 flex flex-col max-w-7xl px-8 mx-auto items-center justify-center bg-white rounded-2xl relative"
+                >
+                    <div class="w-full relative mt-10 pb-40 md:pb-60">
+                        <div
+                            class="w-full flex flex-col items-center justify-center z-20 relative"
+                        >
+                            <h2
+                                class="text-center text-2xl md:text-3xl text-blueMain font-bold"
+                            >
+                                Monitoreo remoto en tiempo real de la descarga
+                                de mezcla asfáltica caliente en los camiones.
+                            </h2>
+                            <h2>
+                                permitiendo una operación del sistema de forma
+                                manual o automática.
+                            </h2>
+                        </div>
+
+                        <div
+                            class="flex items-start justify-start gap-10 absolute bottom-0 left-[-60px] z-10 pointer-events-none"
+                        >
+                            <Image
+                                src={img6}
+                                alt="4” pitch chain"
+                                class="w-[80%] max-w-[750px]"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </div>
+</section>
+
+<style>
+    @media (max-width: 639px) {
+        .card-row-wrapper {
+            overflow: hidden;
+        }
+
+        .card-row {
+            display: flex !important;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            gap: 0.75rem;
+            padding-bottom: 0.5rem;
+            scrollbar-width: none;
+        }
+        .card-row::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card-row > * {
+            flex: 0 0 85%;
+            scroll-snap-align: start;
+        }
+    }
+</style>
+
+<script>
+    const TOTAL_SLIDES = 3;
+    const AUTO_INTERVAL = 10000;
+
+    const track = document.getElementById("sliderTrack") as HTMLElement;
+    const viewport = document.getElementById("sliderViewport") as HTMLElement;
+    const dots = Array.from(
+        document.querySelectorAll<HTMLButtonElement>("[data-dot]"),
+    );
+
+    let current = 0;
+    let timer: ReturnType<typeof setInterval>;
+
+    function goTo(index: number) {
+        current = (index + TOTAL_SLIDES) % TOTAL_SLIDES;
+        track.style.transform = `translateX(-${current * 100}%)`;
+
+        dots.forEach((dot, i) => {
+            const active = i === current;
+            dot.setAttribute("aria-selected", String(active));
+            dot.className = active
+                ? "dot w-3 h-3 rounded-full bg-gray-800 transition-all duration-300"
+                : "dot w-2 h-2 mt-0.5 rounded-full bg-gray-300 transition-all duration-300 hover:bg-gray-500";
+        });
+    }
+
+    function startAuto() {
+        timer = setInterval(() => goTo(current + 1), AUTO_INTERVAL);
+    }
+    function resetAuto() {
+        clearInterval(timer);
+        startAuto();
+    }
+
+    dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+            goTo(Number(dot.dataset.dot));
+            resetAuto();
+        });
+    });
+
+    document
+        .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
+        .forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                const expandible = btn.nextElementSibling as HTMLElement;
+                const chevron = btn.querySelector(".chevron") as HTMLElement;
+                const isOpen =
+                    expandible.style.maxHeight &&
+                    expandible.style.maxHeight !== "0px";
+
+                if (isOpen) {
+                    expandible.style.maxHeight = "0px";
+                    chevron.style.transform = "rotate(0deg)";
+                    btn.setAttribute("aria-expanded", "false");
+                } else {
+                    expandible.style.maxHeight = expandible.scrollHeight + "px";
+                    chevron.style.transform = "rotate(180deg)";
+                    btn.setAttribute("aria-expanded", "true");
+                }
+            });
+        });
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let swipeBlockedByCardRow = false;
+
+    viewport.addEventListener(
+        "touchstart",
+        (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            const target = e.target as Element;
+            swipeBlockedByCardRow =
+                window.innerWidth < 640 &&
+                target.closest(".card-row-wrapper") !== null;
+        },
+        { passive: true },
+    );
+
+    viewport.addEventListener("touchend", (e) => {
+        if (swipeBlockedByCardRow) return;
+
+        const deltaX = touchStartX - e.changedTouches[0].clientX;
+        const deltaY = Math.abs(touchStartY - e.changedTouches[0].clientY);
+        if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > deltaY) {
+            goTo(deltaX > 0 ? current + 1 : current - 1);
+            resetAuto();
+        }
+    });
+
+    function initCardRowDots() {
+        document
+            .querySelectorAll<HTMLElement>(".card-row")
+            .forEach((row, rowIndex) => {
+                const dotsContainer = document.querySelector<HTMLElement>(
+                    `.card-dots[data-row="${rowIndex}"]`,
+                );
+                if (!dotsContainer) return;
+
+                const dotEls = Array.from(
+                    dotsContainer.querySelectorAll<HTMLElement>(".card-dot"),
+                );
+
+                row.addEventListener(
+                    "scroll",
+                    () => {
+                        if (window.innerWidth >= 640) return;
+                        const cardWidth =
+                            (row.firstElementChild as HTMLElement)
+                                ?.offsetWidth ?? 1;
+                        const activeIndex = Math.round(
+                            row.scrollLeft / cardWidth,
+                        );
+                        dotEls.forEach((dot, i) => {
+                            if (i === activeIndex) {
+                                dot.className =
+                                    "card-dot w-2 h-2 rounded-full bg-gray-800 transition-all duration-300";
+                            } else {
+                                dot.className =
+                                    "card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300 transition-all duration-300";
+                            }
+                        });
+                    },
+                    { passive: true },
+                );
+            });
+    }
+
+    initCardRowDots();
+    goTo(0);
+    startAuto();
+</script>

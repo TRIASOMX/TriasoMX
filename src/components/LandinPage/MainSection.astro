@@ -10,32 +10,32 @@ import HeroSlider from "../unitComponents/HeroSlider.tsx";
 
 const Cards = [
     {
-        title: "About Us",
+        title: "Acerca de nostros",
         href: "/AboutUs",
         image: "/Gallery/oilsetup.webp",
     },
     {
-        title: "Spare Parts",
+        title: "Piezas de repuesto",
         href: "/Spare",
         image: "/Boxes.webp",
     },
     {
-        title: "100% Manufacturers",
+        title: "Manufacturación al 100%",
         href: "/Manufacture",
         image: "/manufacture.webp",
     },
     {
-        title: "Maintenance",
+        title: "Mantenimiento",
         href: "/Maintenance",
         image: "/Gallery/drum-mixer.webp",
     },
     {
-        title: "We Care About the Details",
+        title: "Nos importa los detalles",
         href: "/Advantages",
         image: "/consola1.webp",
     },
     {
-        title: "Communication is key",
+        title: "La comunicación es clave",
         href: "/Delivery",
         image: "/coms.webp",
     },
@@ -64,7 +64,7 @@ const Cards = [
             <source src="/Videos/Webm/HeroVideo.webm" type="video/webm" />
         </video>
 
-        <div class="absolute inset-0 bg-gradient-to-r from-transparent from-50% to-black to-85%"></div>
+        <div class="absolute inset-0 bg-black/60"></div>
 
         <div
             class="relative z-10 max-w-7xl mx-auto h-full flex flex-col justify-evenly px-8 lg:px-0 pb-10 gap-10"
@@ -73,23 +73,24 @@ const Cards = [
                 <h1
                     class="uppercase text-white text-3xl lg:text-5xl font-bold hidden lg:flex md:flex"
                 >
-                    Manufactured to last
+                    los equipos más
                 </h1>
 
                 <h1
-                    class="uppercase text-white text-3xl lg:text-5xl font-bold flex lg:hidden md:hidden"
+                    class="uppercase text-white text-3xl lg:text-5xl font-bold flex"
                 >
-                    Manufactured <br /> to last
+                    modernos de 
+                </h1>
+
+                <h1
+                    class="uppercase text-white text-3xl lg:text-5xl font-bold flex"
+                >
+                    latinoamerica
                 </h1>
 
                 <div class="space-y-4 mt-4">
                     <p class="text-white text-base md:text-lg">
-                        We understand the importance of keeping your equipment
-                        running non-stop.
-                    </p>
-                    <p class="text-white text-sm md:text-base">
-                        Many operations depend on the reliability of your
-                        equipment.
+                       Con nosotros usted trabaja directamente con el fabricante —sin intermediarios ni distribuidores.
                     </p>
                 </div>
             </div>
@@ -115,7 +116,7 @@ const Cards = [
         <a
             href="/AsphaltPlant"
             class="font-bold text-lg md:text-xl text-center hover:text-blueMain text-grisT my-2"
-            >ASPHALT PLANT</a
+            >PLANTAS DE ASFALTO</a
         >
         <a
             href="/AsphaltPlant"
@@ -139,7 +140,7 @@ const Cards = [
         <a
             href="/#"
             class="font-bold text-lg md:text-xl text-center text-grisT my-2 hover:text-blueMain"
-            >ROCK CRUSHERS</a
+            >TRITURADORAS</a
         >
         <a
             href="/#"
@@ -159,9 +160,13 @@ const Cards = [
     </div>
 </div>
 <!-- Banner section -->
-<div class="flex flex-col lg:flex-row bg-gradient-to-b from-blueMain from-50% to-blueSecondary to-50% lg:bg-gradient-to-r lg:from-blueMain lg:from-50% lg:to-blueSecondary lg:to-50%">
+<div
+    class="flex flex-col lg:flex-row bg-gradient-to-b from-blueMain from-50% to-blueSecondary to-50% lg:bg-gradient-to-r lg:from-blueMain lg:from-50% lg:to-blueSecondary lg:to-50%"
+>
     <div class="flex flex-col max-w-7xl mx-auto py-14 lg:flex-row">
-        <div class="w-full flex flex-col justify-center items-center gap-4 lg:mr-56">
+        <div
+            class="w-full flex flex-col justify-center items-center gap-4 lg:mr-56"
+        >
             <!-- Botón 1 -->
             <Whatsbtn />
 
@@ -170,7 +175,7 @@ const Cards = [
                 aria-label="Button to request a quote"
                 class="bg-blueSecondary border-white border border- text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-center gap-2 shadow-md hover:bg-[#0044A4]/80"
             >
-                Request a quote
+                Solicitar una cotización
                 <svg
                     width="24px"
                     height="24px"
@@ -191,14 +196,15 @@ const Cards = [
             </a>
         </div>
         <div
-            class="w-full h-full  flex flex-col text-white justify-center items-center lg:items-end lg:justify-evenly"
+            class="w-full h-full flex flex-col text-white justify-center items-center lg:items-end lg:justify-evenly"
         >
-            <h1 class="font-bold w-full text-sm lg:text-xl  lg:text-end">
-                High productivity and quality at competitive prices
+            <h1 class="font-bold w-full text-sm lg:text-xl lg:text-end">
+                Productividad y calidad a precios competitivos
             </h1>
-            <p class="text-sm lg:text-base text-center font-bold text-grisSubP lg:text-end">
-                Contractors that knows us prefer Triaso over other brands for
-                our high quality, realibility, and pricing.
+            <p
+                class="text-sm lg:text-base text-center font-bold text-grisSubP lg:text-end"
+            >
+                Nuestros clientes eligen Triaso sobre otras marcas por nuestra calidad, confiabilidad, precio y servicio.
             </p>
         </div>
     </div>

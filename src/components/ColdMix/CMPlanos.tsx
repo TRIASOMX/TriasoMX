@@ -318,23 +318,23 @@ const CMPlanos = () => {
   });
 
   const binUnitOptions = [
-    { id: 2, label: "2 UNITS" },
-    { id: 3, label: "3 UNITS" },
+    { id: 2, label: "2 UNIDADES" },
+    { id: 3, label: "3 UNIDADES" },
   ];
 
   const dischargeOptions = [
-    { id: "groundLevel", label: "At ground level" },
-    { id: "truckLevel", label: "At Truck level" },
+    { id: "groundLevel", label: "A nivel del suelo" },
+    { id: "truckLevel", label: "A nivel del camión" },
   ];
 
   const mountedOptions = [
-    { id: "legs", label: "Legs" },
-    { id: "wheels", label: "Wheels" },
+    { id: "legs", label: "Patas" },
+    { id: "wheels", label: "Ruedas" },
   ];
 
   const exteriorOptions = [
-    { id: "withPanels", label: "Aesthetic Side Panels" },
-    { id: "withoutPanels", label: "Without Aesthetic Side Panels" },
+    { id: "withPanels", label: "Con flancos estéticos" },
+    { id: "withoutPanels", label: "Sin flancos estéticos" },
   ];
 
 
@@ -399,11 +399,11 @@ const CMPlanos = () => {
       >
         <header id="planosCold" className="mt-10 text-white" ref={otroElemento}>
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
-            Specifications
+            Especificaciones:
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              MEASURE:
+              UNIDAD:
             </h1>
             <div
               onClick={toggleUnit}
@@ -425,7 +425,7 @@ const CMPlanos = () => {
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRIC
+                  MÉTRICO
                 </span>
               </div>
             </div>
@@ -439,7 +439,7 @@ const CMPlanos = () => {
 
               {/* BIN UNITS */}
               <div className="flex justify-between items-center">
-                <label className="text-white">BIN UNITS:</label>
+                <label className="text-white">UNIDAD DE TOLVAS</label>
                 <div className="relative">
                   <select
                     value={activeTab}
@@ -472,7 +472,7 @@ const CMPlanos = () => {
 
               {/* DISCHARGE */}
               <div className="flex justify-between items-center">
-                <label className="text-white">DISCHARGE:</label>
+                <label className="text-white">DESCARGA:</label>
                 <div className="relative">
                   <select
                     value={dischargeVersion}
@@ -505,7 +505,7 @@ const CMPlanos = () => {
 
               {/* MOUNTED ON */}
               <div className="flex justify-between items-center">
-                <label className="text-white">MOUNTED ON:</label>
+                <label className="text-white">MONTADO SOBRE:</label>
                 <div className="relative">
                   <select
                     value={mountedVersion}
@@ -538,7 +538,7 @@ const CMPlanos = () => {
 
               {/* EXTERIOR */}
               <div className="flex justify-between items-center">
-                <label className="text-white">EXTERIOR:</label>
+                <label className="text-white">FLANCOS:</label>
                 <div className="relative">
                   <select
                     value={activeVersion}
@@ -574,7 +574,7 @@ const CMPlanos = () => {
 
               {/* BIN UNITS */}
               <div>
-                <h1 className="text-white text-center mb-10">BIN UNITS</h1>
+                <h1 className="text-white text-center mb-10">UNIDAD DE TOLVAS</h1>
                 <div className="grid grid-cols-2 gap-3 justify-items-center">
                   {binUnitOptions.map((opt) => (
                     <button
@@ -594,7 +594,7 @@ const CMPlanos = () => {
 
               {/* DISCHARGE */}
               <div>
-                <h1 className="text-white text-center mb-10">DISCHARGE</h1>
+                <h1 className="text-white text-center mb-10">DESCARGA</h1>
                 <div className="flex flex-col gap-3 items-center">
                   {dischargeOptions.map((opt) => (
                     <button
@@ -614,7 +614,7 @@ const CMPlanos = () => {
 
               {/* MOUNTED ON */}
               <div>
-                <h1 className="text-white text-center mb-10">MOUNTED ON</h1>
+                <h1 className="text-white text-center mb-10">MONTADO SOBRE</h1>
                 <div className="grid grid-cols-2 gap-3 justify-items-center">
                   {mountedOptions.map((opt) => (
                     <button
@@ -634,7 +634,7 @@ const CMPlanos = () => {
 
               {/* EXTERIOR */}
               <div className="flex flex-col items-center">
-                <h1 className="text-white text-center mb-5">EXTERIOR</h1>
+                <h1 className="text-white text-center mb-5">FLANCOS</h1>
                 <div className="flex flex-col gap-6 w-3/4">
                   {exteriorOptions.map((opt) => (
                     <button
@@ -670,11 +670,10 @@ const CMPlanos = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          FEEDING & DOSIGN SYSTEM
-                        </h1>
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 ">
+                          Sistema de alimentación y dosificacióN                        </h1>
                         <button
-                        aria-label="See more about the feeding and dosign system"
+                          aria-label="See more about the feeding and dosign system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -710,26 +709,24 @@ const CMPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>18" variable-speed dosing belt</li>
-                        <li>Rubber-coated head pulley for reliable grip</li>
+                        <li>Banda dosificadora de 18" con velocidad variable</li>
+                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibrators in fine aggregate bin to ensure consistent
-                          feed
+                          Vibradores en la tolva de finos para asegurar una alimentación constante
                         </li>
-                        <li>Fine material flow sensor with low-level alarm</li>
+                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
                         <li>
-                          24" feeding conveyor wide conveyor belt for smoother
-                          low-speed transport
+                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
                         </li>
                         <li>
-                          Rubber-coated head pulleys and CEMA-standard rollers
+                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          DURABILITY & SAFETY
+                          Resistencia y seguridad
                         </h1>
                         <button
                           aria-label="See more about durability and safety"
@@ -769,30 +766,28 @@ const CMPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Estructura extra reforzada para trabajo pesado a largo plazo.
                         </li>
                         {activeVersion === "withPanels" ? (
-                          <li>Aesthetic side panels for professional image</li>
+                          <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Belt cleaners for longer belt lifespan</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Built-in skirtboards to contain material</li>
+                        <li>Limpiadores de banda para prolongar su vida útil.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          PUGMILL MIXING SYSTEM
+                          Sistema de mezcla del pugmill
                         </h1>
                         <button
                           aria-label="See more about the Pugmill Mixing System"
@@ -831,13 +826,13 @@ const CMPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Twin-shaft horizontal pugmill</li>
-                        <li>High-resistance steel liners</li>
-                        <li>Interchangeable paddles</li>
-                        <li>Adjustable mixing time</li>
-                        <li>Direct discharge gate to stockpile or truck</li>
-                        <li>Driven by 10–125 HP electric motor</li>
-                        <li>Speed reducer transmission</li>
+                        <li>Mezclador horizontal de doble eje</li>
+                        <li>Revestimientos de acero de alta resistencia</li>
+                        <li>Paletas intercambiables</li>
+                        <li>Tiempo de mezclado ajustable</li>
+                        <li>Compuerta de descarga directo a montones o camiones</li>
+                        <li>Motor eléctrico de 10–125 HP</li>
+                        <li>Transmisión con reductor de velocidad</li>
                       </ul>
                     </div>
                   </div>
@@ -848,7 +843,7 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          CONTROL & OPERATION
+                          Control y operacióN
                         </h1>
                         <button
                           aria-label="See more about control and operation of the system"
@@ -887,33 +882,30 @@ const CMPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          COMPONENTS & ELECTRICAL
+                          Componentes y sistema eléctrico
                         </h1>
                         <button
                           aria-label="See more about the components and electrical composition"
@@ -953,25 +945,23 @@ const CMPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Industrial-grade motors, components, and Siemens
-                          wiring.
+                          Motores, componentes y cableado Siemens de grado industrial.
                         </li>
-                        <li>Simplified wiring system for easy maintenance.</li>
-                        <li>Weather-protected electrical connections.</li>
-                        <li>Pulley-and-bushing drive system.</li>
+                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          External fuel lines, sensors, and signal cabling
-                          pre-installed
+                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          PORTABILITY
+                          Portabilidad
                         </h1>
                         <button
-                        aria-label="See more about the portability of the system"
+                          aria-label="See more about the portability of the system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1007,43 +997,44 @@ const CMPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li className="ml-6">Designed for relocation</li>
+                        <li className="ml-6">Diseñado para reubicación y movimiento frecuente.</li>
 
                         {mountedVersion !== "legs" ? (
                           <li>
                             <ul className="list-disc ml-6">
                               <li>
-                                Built-in fifth wheel means no lowboy is
-                                required.
+                                Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+
                               </li>
 
                               <li className="list-none">
                                 <ul className="list-disc ml-10">
                                   <li>
-                                    Also transportable on lowboy or flatbed
-                                    trailer if preferred.
+                                    También puede transportarse en cama baja o plataforma.
+
                                   </li>
                                 </ul>
                               </li>
 
                               <li>
-                                Mounted on standard transport chassis with one
-                                axle and 16” highway-rated wheels.
+                                Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+
                               </li>
 
                               <li>
-                                Pull-type hitch with safety coupling and brake
-                                system.
+                                Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.
+
                               </li>
                               <li>
-                                Setup requires no crane or hoisting equipment.
+                                La instalación no requiere grúa ni equipo de izaje.
+
                               </li>
                               <li>
-                                Bolt-on support legs for fast on-site assembly.
+                                Patas de soporte atornilladas, para un armado rápido en sitio.
+
                               </li>
                               <li>
-                                DOT-compliant lighting and reflective markings
-                                for transport visibility.
+                                Sistema de luces y señalamientos para transporte conforme a normas de carretera.
                               </li>
                             </ul>
                           </li>
@@ -1051,12 +1042,12 @@ const CMPlanos = () => {
                           <li>
                             <ul className="list-disc ml-6">
                               <li>
-                                Mounted on a standard chassis supported by legs
-                              </li>
+                                Montado sobre un chasis estándar sostenido por patas</li>
                               <li>
-                                Bolt-on support legs for fast on-site assembly.
+                                Patas de soporte atornilladas, para un armado rápido en sitio.
+
                               </li>
-                              <li>Quick assembly without foundation</li>
+                              <li>Montaje rápido sin cimientos</li>
                             </ul>
                           </li>
                         )}
@@ -1068,7 +1059,7 @@ const CMPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        EMULSION AND ADDITIVES INJECTION
+                        Inyección de emulsión y aditivos
                       </h1>
                       <button
                         aria-label="See more about Emulsion and Additives Injection"
@@ -1107,16 +1098,16 @@ const CMPlanos = () => {
                         : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Bitumen/emulsion pump with frequency inverter</li>
-                      <li>Flowmeter for precision dosing</li>
-                      <li>Optional water/additive tank with pump</li>
-                      <li>Integrated pipe and filter system</li>
+                      <li>Bomba de asfalto/emulsión con variador de frecuencia</li>
+                      <li>Caudalímetro para dosificación precisa</li>
+                      <li>Tanque opcional de agua/aditivos con bomba</li>
+                      <li>Sistema integrado de tubería y filtración</li>
                     </ul>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-10 lg:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        COMPLIANCE WITH INDUSTRY STANDARDS
+                        Cumplimiento con estándares de la industria
                       </h1>
                       <button
                         aria-label="See more about the compliance with industry standards"
@@ -1155,10 +1146,9 @@ const CMPlanos = () => {
                         : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>EPA</li>
-                      <li>OSHA</li>
-                      <li>DOT</li>
-                      <li>UL wiring</li>
+                      <li>SEMARNAT</li>
+                      <li>SCT</li>
+                      <li>NOM-001-SEDE</li>
                     </ul>
                   </div>
                 </div>
@@ -1188,12 +1178,11 @@ const CMPlanos = () => {
                         </div>
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
-                        {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                        
+                         {unit === "metric"
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1260,11 +1249,8 @@ const CMPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1316,11 +1302,8 @@ const CMPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1358,7 +1341,7 @@ const CMPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        TANK DIMENSIONS
+                        Dimensiones
                       </h1>
                       <button
                         aria-label="See more about the Tank Dimensions"
@@ -1398,36 +1381,29 @@ const CMPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Length:</h1>
+                        <h1>Longitud:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                  
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Width:</h1>
+                        <h1>Ancho:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height:</h1>
+                        <h1>Altura:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+                         
                         </p>
                       </div>
                     </div>
@@ -1435,7 +1411,7 @@ const CMPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        CHASSIS & STRUCTURE
+                        Estructura y chasis
                       </h1>
                       <button
                         aria-label="See more about the Chassis and structure"
@@ -1475,18 +1451,15 @@ const CMPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Total length (including hitch):</h1>
+                        <h1>Longitud total (incluido el enganche):</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Axle configuration: </h1>
+                        <h1>Configuración de los ejes: </h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.config ?? ""} `
@@ -1494,42 +1467,27 @@ const CMPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Fifth-wheel hitch height:</h1>
+                        <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total Height:</h1>
+                        <h1>Altura total:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.totalHeight?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.totalHeight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.totalHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Discharge height (from ground):</h1>
+                        <h1>Altura de descarga (desde el suelo):</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.dischargeHeight?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.dischargeHeight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.dischargeHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1537,7 +1495,7 @@ const CMPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        FEEDING & DISCHARGE SYSTEM
+                        Sistema de alimentación y descarga
                       </h1>
                       <button
                         aria-label="See more about the feeding and discharge system"
@@ -1577,27 +1535,19 @@ const CMPlanos = () => {
                         } md:max-h-full md:opacity-100 `}
                     >
                       <div className="flex justify-between">
-                        <h1>Feeding belt width:</h1>
+                        <h1>Ancho de la cinta de alimentación:</h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.feeding?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.feeding ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.feeding ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Collector belt width: </h1>
+                        <h1>Ancho de la cinta colectora: </h1>
                         <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.collector?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.collector ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                           {unit === "metric"
+                          ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.collector ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1619,8 +1569,7 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          FEEDING & DOSIGN SYSTEM
-                        </h1>
+                          Sistema de alimentación y dosificación</h1>
                         <button
                           aria-label="See more about the feeding and dosign system"
                           className="block md:hidden"
@@ -1658,26 +1607,24 @@ const CMPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>18" variable-speed dosing belt</li>
-                        <li>Rubber-coated head pulley for reliable grip</li>
+                        <li>Banda dosificadora de 18" con velocidad variable</li>
+                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibrators in fine aggregate bin to ensure consistent
-                          feed
+                          Vibradores en la tolva de finos para asegurar una alimentación constante
                         </li>
-                        <li>Fine material flow sensor with low-level alarm</li>
+                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
                         <li>
-                          24" feeding conveyor wide conveyor belt for smoother
-                          low-speed transport
+                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
                         </li>
                         <li>
-                          Rubber-coated head pulleys and CEMA-standard rollers
+                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          DURABILITY & SAFETY
+                          Resistencia y seguridad
                         </h1>
                         <button
                           aria-label="See more about the durability and safety of the system"
@@ -1717,30 +1664,28 @@ const CMPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          High-strength, reinforced structure for long-term
-                          heavy-duty operation
+                          Estructura extra reforzada para trabajo pesado a largo plazo.
                         </li>
                         {activeVersion === "withPanels" ? (
-                          <li>Aesthetic side panels for professional image</li>
+                          <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Bolted components with anti-corrosion coating</li>
+                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Galvanized bolts and electrostatic paint ensure
-                              long-lasting durability and excellent adhesion.
+                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Belt cleaners for longer belt lifespan</li>
-                        <li>Dust-resistant housing protects control module.</li>
-                        <li>Built-in skirtboards to contain material</li>
+                        <li>Limpiadores de banda para prolongar su vida útil.</li>
+                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          PUGMILL MIXING SYSTEM
+                          Sistema de mezcla del pugmill
                         </h1>
                         <button
                           aria-label="See more about the Pugmill Mixing System"
@@ -1779,13 +1724,13 @@ const CMPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Twin-shaft horizontal pugmill</li>
-                        <li>High-resistance steel liners</li>
-                        <li>Interchangeable paddles</li>
-                        <li>Adjustable mixing time</li>
-                        <li>Direct discharge gate to stockpile or truck</li>
-                        <li>Driven by 10–125 HP electric motor</li>
-                        <li>Speed reducer transmission</li>
+                        <li>Mezclador horizontal de doble eje</li>
+                        <li>Revestimientos de acero de alta resistencia</li>
+                        <li>Paletas intercambiables</li>
+                        <li>Tiempo de mezclado ajustable</li>
+                        <li>Compuerta de descarga directo a montones o camiones</li>
+                        <li>Motor eléctrico de 10–125 HP</li>
+                        <li>Transmisión con reductor de velocidad</li>
                       </ul>
                     </div>
                   </div>
@@ -1798,7 +1743,7 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          CONTROL & OPERATION
+                          Control y operación
                         </h1>
                         <button
                           aria-label="See more about the Control and Operation of the system"
@@ -1837,33 +1782,29 @@ const CMPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Fully automatic or manual operation</li>
+                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Digital monitoring of all operating parameters, with
-                          real-time supervision and historical data reports.
+                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Remote monitoring system accessible from
-                              computers, tablets, and smartphones.
+                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Alarm and interlock system for out-of-range
-                          conditions.
+                          Sistema de alarmas y seguridades para condiciones fuera de rango.
                         </li>
                         <li>
-                          Independent, intuitive controls designed for field
-                          reliability.
+                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          COMPONENTS & ELECTRICAL
+                          Componentes y sistema eléctrico
                         </h1>
                         <button
                           aria-label="See more about the components and electrical composition of the system"
@@ -1903,22 +1844,20 @@ const CMPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Industrial-grade motors, components, and Siemens
-                          wiring.
+                          Motores, componentes y cableado Siemens de grado industrial.
                         </li>
-                        <li>Simplified wiring system for easy maintenance.</li>
-                        <li>Weather-protected electrical connections.</li>
-                        <li>Pulley-and-bushing drive system.</li>
+                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
+                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          External fuel lines, sensors, and signal cabling
-                          pre-installed
+                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          PORTABILITY
+                          Portabilidad
                         </h1>
                         <button
                           aria-label="See more about the portability of the system"
@@ -1957,43 +1896,38 @@ const CMPlanos = () => {
                           : "max-h-0 opacity-0"
                           } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li className="ml-6">Designed for relocation</li>
+                        <li className="ml-6">Diseñado para reubicación y movimiento frecuente.</li>
 
                         {mountedVersion !== "legs" ? (
                           <li>
                             <ul className="list-disc ml-6">
                               <li>
-                                Built-in fifth wheel means no lowboy is
-                                required.
+                                Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
                               </li>
 
                               <li className="list-none">
                                 <ul className="list-disc ml-10">
                                   <li>
-                                    Also transportable on lowboy or flatbed
-                                    trailer if preferred.
+                                    También puede transportarse en cama baja o plataforma.
                                   </li>
                                 </ul>
                               </li>
 
                               <li>
-                                Mounted on standard transport chassis with one
-                                axle and 16” highway-rated wheels.
+                                Montado sobre chasis de transporte con un eje y llantas de uso carretera.
                               </li>
 
                               <li>
-                                Pull-type hitch with safety coupling and brake
-                                system.
+                                Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.
                               </li>
                               <li>
-                                Setup requires no crane or hoisting equipment.
+                                La instalación no requiere grúa ni equipo de izaje.
                               </li>
                               <li>
-                                Bolt-on support legs for fast on-site assembly.
+                                Patas de soporte atornilladas, para un armado rápido en sitio.
                               </li>
                               <li>
-                                DOT-compliant lighting and reflective markings
-                                for transport visibility.
+                                Sistema de luces y señalamientos para transporte conforme a normas de carretera.
                               </li>
                             </ul>
                           </li>
@@ -2001,12 +1935,13 @@ const CMPlanos = () => {
                           <li>
                             <ul className="list-disc ml-6">
                               <li>
-                                Mounted on a standard chassis supported by legs
+                                Montado sobre un chasis estándar apoyado en patas
                               </li>
                               <li>
-                                Bolt-on support legs for fast on-site assembly.
+                                Patas de soporte atornilladas, para un armado rápido en sitio.
+
                               </li>
-                              <li>Quick assembly without foundation</li>
+                              <li>Montaje rápido sin necesidad de cimientos</li>
                             </ul>
                           </li>
                         )}
@@ -2018,7 +1953,7 @@ const CMPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        EMULSION AND ADDITIVES INJECTION
+                        Inyección de emulsión y aditivos
                       </h1>
                       <button
                         aria-label="See more about the Emulsion and Additives injection"
@@ -2057,16 +1992,16 @@ const CMPlanos = () => {
                         : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Bitumen/emulsion pump with frequency inverter</li>
-                      <li>Flowmeter for precision dosing</li>
-                      <li>Optional water/additive tank with pump</li>
-                      <li>Integrated pipe and filter system</li>
+                      <li>Bomba de asfalto/emulsión con variador de frecuencia</li>
+                      <li>Caudalímetro para dosificación precisa</li>
+                      <li>Tanque opcional de agua/aditivos con bomba</li>
+                      <li>Sistema integrado de tubería y filtración</li>
                     </ul>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-10 lg:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        COMPLIANCE WITH INDUSTRY STANDARDS
+                        Cumplimiento con estándares de la industria
                       </h1>
                       <button
                         aria-label="See more about the compliance with industry standards"
@@ -2105,10 +2040,9 @@ const CMPlanos = () => {
                         : "max-h-0 opacity-0"
                         } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>EPA</li>
-                      <li>OSHA</li>
-                      <li>DOT</li>
-                      <li>UL wiring</li>
+                      <li>SEMARNAT</li>
+                      <li>SCT</li>
+                      <li>NOM-001-SEDE</li>
                     </ul>
                   </div>
                 </div>
@@ -2139,11 +2073,8 @@ const CMPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2210,11 +2141,9 @@ const CMPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -2266,11 +2195,8 @@ const CMPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2308,7 +2234,7 @@ const CMPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        DIMENSIONS
+                        Dimensiones
                       </h1>
                       <button
                         aria-label="See more about the dimensions of the system"
@@ -2348,36 +2274,28 @@ const CMPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Length:</h1>
+                        <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Width:</h1>
+                        <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Height:</h1>
+                        <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          
                         </p>
                       </div>
                     </div>
@@ -2385,7 +2303,7 @@ const CMPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        CHASSIS & STRUCTURE
+                        Chasis y estructura
                       </h1>
                       <button
                         aria-label="See more about the chassis and structure of the system"
@@ -2425,18 +2343,15 @@ const CMPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Total length (including hitch):</h1>
+                        <h1>Longitud total (incluido el enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Axle configuration: </h1>
+                        <h1>Configuración de los ejes: </h1>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.config ?? ""} `
@@ -2444,42 +2359,28 @@ const CMPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Fifth-wheel hitch height:</h1>
+                        <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.wheel?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.wheel ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
+  
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total height:</h1>
+                        <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.totalHeight?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.totalHeight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.totalHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Discharge height:</h1>
+                        <h1>Altura de descarga:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.dischargeHeight?.toFixed(
-                              1
-                            ) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.dischargeHeight ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.dischargeHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -2527,27 +2428,20 @@ const CMPlanos = () => {
                         } md:max-h-full md:opacity-100 `}
                     >
                       <div className="flex justify-between">
-                        <h1>Feeding belt width:</h1>
+                        <h1>Sistema de alimentación y descarga:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.feeding?.toFixed(1) ?? ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.feeding ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.feeding ?? 0) * cmToFeet).toFixed(1)} ft`}
+
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Collector belt width:</h1>
+                        <h1>Ancho de la cinta de alimentación:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.collector?.toFixed(1) ??
-                            ""
-                            } cm`
-                            : `${(
-                              (activeData?.dimensions.collector ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                          ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} mt`
+                          : `${((activeData?.dimensions.collector ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>

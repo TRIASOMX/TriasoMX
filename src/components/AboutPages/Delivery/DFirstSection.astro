@@ -8,46 +8,58 @@ import { Image } from "astro:assets";
 ---
 
 <div class="w-full flex justify-center items-center mt-10">
-  <Image src={hero1} alt="Truck with an asphalt plant on the road" class="w-full" />
+  <Image
+    src={hero1}
+    alt="Truck with an asphalt plant on the road"
+    class="w-full"
+  />
 </div>
 
 <section class="w-full max-w-7xl px-8 mx-auto mt-10 text-grisT font-bold">
   <div class="w-full flex justify-start">
     <div class="border-b-2 border-b-grisT inline-block justify-end">
-      <h1 class="text-end text-3xl md:text-4xl">DELIVERY AND INSTALLATION</h1>
+      <h1 class="text-end text-3xl md:text-4xl uppercase">
+        Entrega e instalación
+      </h1>
     </div>
   </div>
   <div class="w-full my-16 text-base md:text-lg">
     <p>
-      Efficient delivery and professional installation are essential to getting
-      your equipment up and running without delays. At Triaso, we combine
-      decades of experience with precise logistics to ensure your equipment
-      arrives safely, on time, with no downtime, and with easy installation and
-      operation.
+      La instalación y entrega eficiente son esenciales para poner su equipo en
+      operación sin retrasos, cumpliendo con los tiempos cortos que se exigen.
+      En Triaso, combinamos décadas de experiencia con logística precisa para
+      asegurar que su equipo llegue de forma segura, a tiempo, sin tiempos
+      muertos y con una instalación y operación sencillas.
     </p><br />
     <p>
-      Our specialized team handles every installation with strict technical
-      standards, guaranteeing reliable operation from day one. By minimizing
-      setup time and ensuring every component is correctly installed, we help
-      you achieve maximum productivity and long-term performance with
-      confidence.
+      Nuestro equipo especializado realiza cada instalación bajo estándares
+      técnicos, garantizando una operación confiable desde el primer día. Al
+      minimizar los tiempos de instalación y asegurar que cada componente quede
+      correctamente instalado, le ayudamos a alcanzar la máxima productividad y
+      un desempeño duradero con total confianza.
     </p>
   </div>
   <!-- arriba -->
   <div class="flex justify-center">
-    <Image src={Deliver1} alt="Bin units on a truck" class="hero-img w-4/6 rounded-lg" />
+    <Image
+      src={Deliver1}
+      alt="Bin units on a truck"
+      class="hero-img w-4/6 rounded-lg"
+    />
   </div>
   <div class="flex flex-col md:flex-row items-center gap-6">
     <!-- medio -->
     <div class="w-full mt-10">
-      <h2 class="text-redBg text-xl md:text-2xl">Worldwide installations</h2>
+      <h2 class="text-redBg text-xl md:text-2xl">
+        Instalaciones en todo el mundo
+      </h2>
       <Separator />
       <p class="text-grisT text-base md:text-lg">
-        Our specialized technicians have traveled around the world to install
-        and maintain our equipment. In the delivery of your equipment, we
-        include, without additional charge, a team of specialized technicians
-        who command and take responsibility for the installation, start of
-        production and training of the operators.
+        Nuestros técnicos especializados han viajado por todo el mundo para
+        instalar y mantener nuestros equipos. En la entrega de su equipo,
+        incluimos, sin costo adicional, un equipo de técnicos especializados que
+        se encargan y asumen la responsabilidad de la instalación, la puesta en
+        marcha de la producción y la capacitación de los operadores.
       </p>
     </div>
 
@@ -70,7 +82,9 @@ import { Image } from "astro:assets";
   </div>
 
   <!-- Móvil -->
-  <div class=" flex flex-row items-center justify-center px-8 pb-5 gap-2  lg:hidden">
+  <div
+    class="flex flex-row items-center justify-center px-8 pb-5 gap-2 lg:hidden"
+  >
     <Image
       src={Deliver2}
       alt="Oil heater on a truck"

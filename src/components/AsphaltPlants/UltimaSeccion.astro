@@ -1,0 +1,87 @@
+---
+import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
+import img1 from "../../assets/images/AsphaltPlant/tips.webp";
+import GallerySlider2 from "./GallerySlider2";
+import { Image } from "astro:assets";
+
+const images1 = [
+    { src: "/Gallery/fab-silo.webp", title: "Silo Manufacturing" },
+    { src: "/Gallery/oil-heater.webp", title: "Oil heater thermal insulation" },
+    { src: "/Gallery/serial-parts-bg.webp", title: "Serial parts machining" },
+    { src: "/Gallery/fly-cutting-sm.webp", title: "Flights cutting" },
+    {
+        src: "/Gallery/fab-planta-frio.webp",
+        title: "Cold mixing plant manufacturing",
+    },
+    { src: "/Gallery/quemadores.webp", title: "Burners manufacture" },
+    { src: "/Gallery/drum-mixer.webp", title: "Burners manufacture" },
+    { src: "/Gallery/elevator-manu.webp", title: "Drum mixer welding" },
+    // { src: "/Gallery/oil-heater.jpg", title: "Elevator hinges manufacturing" },
+    // agrega hasta 16 o más imágenes
+];
+---
+
+<div class="w-full flex flex-col items-center justify-center font-bold">
+    <section
+        class="w-full flex flex-col items-center justify-center bg-[url(/Boxes.webp)] bg-cover bg-no-repeat bg-center"
+    >
+        <div class="w-full bg-black/50 py-10">
+            <div
+                class="flex flex-col items-start justify-center w-full mt-10 max-w-7xl mx-auto px-8"
+            >
+                <h1 class="text-xl md:text-4xl text-white font-semibold mb-10">
+                    Repuestos disponibles las 24 horas del día, los 7 días de la
+                    semana
+                </h1>
+                <p class="text-white font-thin text-base md:text-lg">
+                    Sabemos lo importante que es mantener su equipo en
+                    funcionamiento. Por eso, nuestro equipo está siempre
+                    disponible para brindarle asistencia inmediata y
+                    suministrarle las piezas de repuesto que necesite.
+                </p><br />
+                <p class="text-white font-thin text-base md:text-lg">
+                    Nuestro equipo de técnicos e ingenieros especializados está
+                    listo para visitar sus instalaciones, realizar inspecciones
+                    detalladas y determinar sus necesidades exactas. Este
+                    enfoque personalizado garantiza que su planta funcione con
+                    la máxima eficiencia y se mantenga en condiciones óptimas.
+                </p><br />
+                <LearnBtnBlue href="/Spare" />
+            </div>
+        </div>
+    </section>
+    <div class="w-full max-w-7xl mx-auto">
+        <h1
+            class="text-black lg:text-4xl text-2xl mt-20 w-full text-start px-8"
+        >
+            Algunos tips antes de comprar <br />
+            una planta de asfalto
+        </h1>
+        <div class="mt-4 mb-6 flex self-start px-8">
+            <div class="w-20 h-0.5 bg-red-500"></div>
+            <div class="w-20 h-0.5 bg-gray-300"></div>
+        </div>
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 justify-center items-center mb-10 md:mb-20 px-8"
+        >
+            <div class="flex flex-col items-center mb-10">
+                <p class="text-grisPPP md:text-lg text-base">
+                    La compra de una planta de asfalto supone una inversión
+                    importante y constituye la base de un negocio de producción
+                    de mezcla asfáltica. Elige con cuidado.
+                </p>
+                <Image
+                    src={img1}
+                    alt="Asphalt plant"
+                    class="block md:hidden my-10"
+                />
+                <LearnBtnBlue
+                    href="/TipsAsphalt"
+                    label="Go to page Some tips for buying an Asphalt Plant"
+                />
+            </div>
+            <Image src={img1} alt="Asphalt plant" class="hidden md:block" />
+        </div>
+    </div>
+    <GallerySlider2 client:load images={images1} />
+</div>

@@ -1,0 +1,132 @@
+---
+import Mapa from "../../../assets/images/mapa.webp";
+import { Image } from "astro:assets";
+---
+
+<section class="py-5">
+    <div class="max-w-7xl px-8 mx-auto">
+        <div class="flex flex-col">
+            <div class="flex flex-col space-y-1">
+                <h1 class="text-black font-bold text-4xl">Nuestra parte no</h1>
+                <h1 class="text-black font-bold text-4xl">
+                    termina con la entrega
+                </h1>
+                <div class="w-96 h-0.5 bg-[#CA1C1C]"></div>
+            </div>
+            <div class="w-1/3">
+                <p>
+                    Nuestro personal, el que fabricó y diseño su planta, la
+                    instala y capacita a sus operadores. Y cuando arranque
+                    producción, nuestros ingenieros estarán con usted.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section
+    class="relative bg-cover bg-no-repeat bg-center"
+    style={{
+        backgroundImage: "url(/contraflujo.webp)",
+    }}
+>
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div
+        class="relative z-10 max-w-7xl mx-auto px-8 flex flex-col items-center justify-center py-20"
+    >
+        <ul class="list-disc text-white space-y-5">
+            <li>
+                Técnicos que hablan español, viajan el mismo día y conocen las
+                condiciones reales de trabajo en México.
+            </li>
+            <li>
+                Técnicos que estuvieron presentes en la fabricación del equipo y
+                lo conocen perfectamente.
+            </li>
+            <li>
+                Sin dependencia de técnicos de extranjeros, distribuidores
+                intermediarios y demoras por agenda.
+            </li>
+            <li>
+                Trato directo con los ingenieros y técnicos, rápido, humano y
+                orientado a resolver el problema hoy.
+            </li>
+            <li>
+                La marca con más técnicos autorizados, independientes y
+                refacciones en México.
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="py-10">
+    <div
+        class="max-w-7xl mx-auto px-8 flex flex-col justify-center items-center space-y-3"
+    >
+        <div>
+            <h1 class="text-3xl font-bold text-[#CA1C1C]">
+                Te guiamos por completo
+            </h1>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <p class="font-bold text-black">
+                Te asesoramos en la operación, en la mezcla y producción
+            </p>
+            <p class="font-bold text-black">
+                Te recomendamos los laboratorios que necesitas.
+            </p>
+        </div>
+        <div>
+            <h1 class="font-bold text-2xl text-[#14427C]">Es nuestra misión dejar tu equipo trabajando perfectamente</h1>
+        </div>
+    </div>
+
+    <div
+        class="max-w-7xl mx-auto px-8 flex flex-col items-center justify-center min-h-10/12 py-10"
+    >
+        <div class="md:w-1/2">
+            <Image src={Mapa} alt="Map" />
+        </div>
+        <div
+            class="grid grid-cols-3 lg:grid-cols-6 md:grid-cols-3 gap-16 md:gap-10 pt-5 md:px-20 w-full"
+        >
+            <div class="flex flex-col items-center font-bold">
+                <h1 class="text-xl md:text-4xl text-redBg">+300</h1>
+                <p class="text-xs md:text-base text-center text-black">
+                    EMPLEADOS
+                </p>
+            </div>
+            <div class="flex flex-col items-center font-bold">
+                <h1 class="text-xl md:text-4xl text-redBg">+320</h1>
+                <p class="text-xs md:text-base text-center text-black">
+                    PLANTAS DE ASFALTO <br />MANUFACTURADAS
+                </p>
+            </div>
+            <div class="flex flex-col items-center font-bold">
+                <h1 class="text-xl md:text-4xl text-redBg">+60</h1>
+                <p class="text-xs md:text-base text-center text-black">
+                    TRITURADORAS <br />MANUFACTURADAS
+                </p>
+            </div>
+            <div class="flex flex-col items-center font-bold">
+                <h1 class="text-xl md:text-4xl text-redBg">+25</h1>
+                <p class="text-xs md:text-base text-center text-black">
+                    AÑOS <br />MANUFACTURANDO
+                </p>
+            </div>
+            <div class="flex flex-col items-center font-bold">
+                <h1 class="text-xl md:text-4xl text-redBg">+10</h1>
+                <p class="text-xs md:text-base text-center text-black">
+                    PAÍSES
+                </p>
+            </div>
+            <div class="flex flex-col items-center font-bold">
+                <h1 class="text-xl md:text-4xl text-redBg">+150</h1>
+                <p class="text-xs md:text-base text-center text-black">
+                    PRODUCTOS
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

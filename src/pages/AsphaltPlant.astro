@@ -2,31 +2,9 @@
 import Hero from '../components/AsphaltPlants/Hero.astro';
 import Layout from '../layouts/Layout.astro';
 import MainSection from '../components/AsphaltPlants/MainSection.astro'
-import DrumMixers from '../components/AsphaltPlants/DrumMixers.astro';
-import AsphaltTanks from '../components/AsphaltPlants/AsphaltTanks.astro';
-import BinUnits from '../components/AsphaltPlants/BinUnits.astro';
-import StorageSilos from '../components/AsphaltPlants/StorageSilos.astro';
-import MexManufactur from '../components/AsphaltPlants/MexManufactur.astro';
-import Spare from '../components/AsphaltPlants/Spare.astro';
-import GallerySlider from '../components/AsphaltPlants/GallerySlider';
 import Hero1 from '../assets/images/AsphaltPlant/NewBanner.webp';
-import HotspotComponent from '../components/ImageHotspot/HotspotComponent.astro';
-
-const images1 = [
-  { src: '/Gallery/fab-silo.webp', title: 'Silo Manufacturing' },
-  { src: '/Gallery/oil-heater.webp', title: 'Oil heater thermal insulation' },
-  { src: '/Gallery/serial-parts-bg.webp', title: 'Serial parts machining' },
-  { src: '/Gallery/fly-cutting-sm.webp', title: 'Flights cutting' },
-  { src: '/Gallery/fab-planta-frio.webp', title: 'Cold mixing plant manufacturing' },
-  { src: '/Gallery/quemadores.webp', title: 'Burners manufacture' },
-  { src: '/Gallery/drum-mixer.webp', title: 'Drum mixer welding' },
-  { src: '/Gallery/elevator-manu.webp', title: 'Elevator hinges manufacturing' },
-  // { src: '/Gallery/customdes.png', title: 'Elevator hinges manufacturing' }
-  // agrega hasta 16 o más imágenes
-];
-
 ---
-<Layout title="Aphalt Plants">
+<Layout title="Plantas de asfalto">
   <head>
     <!-- Preload para la imagen Hero -->
     <link 
@@ -45,20 +23,9 @@ const images1 = [
 
   <Hero 
     heroImage={Hero1} 
-    title="ASPHALT PLANTS" 
+    title="PLANTAS DE ASFALTO" 
     altText="Modern asphalt production plant with heavy machinery" 
   />
     <MainSection />
-    <DrumMixers />
-    <!-- <Baghouses /> -->
-    <AsphaltTanks />
-    <BinUnits />
-    <!-- <HeatingSystem /> -->
-    <StorageSilos />
-    <!-- <ColdMix />  -->
-    <MexManufactur />
-    <GallerySlider client:load images={images1} />
-    <Spare /> 
-    <!-- <AnalisisInversion client:only/> -->
-    <!-- <HotspotComponent/> -->
+  
 </Layout>

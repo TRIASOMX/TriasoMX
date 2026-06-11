@@ -1,170 +1,341 @@
 ---
 import LearnBtn from "../../unitComponents/LearnBtn.astro";
+import img1 from "../../../assets/images/About/Improvement/CD3.webp";
+import img2 from "../../../assets/images/About/Improvement/CD4.webp";
+import img3 from "../../../assets/images/About/Improvement/CD1.webp";
+import img4 from "../../../assets/images/About/Improvement/CD2.webp";
 ---
 
-<section class="w-full flex flex-col justify-center items-center mt-20">
-  <div class="w-full px-8 font-bold text-grisT max-w-7xl">
-    <h1 class="text-3xl md:text-4xl">
-      DESIGN AND MANUFACTURE OF EQUIPMENT <br />TAILORED TO YOUR NEEDS OR IDEAS
+<section class="w-full flex flex-col mt-20 space-y-5">
+  <div class="w-full px-8 font-bold text-grisT max-w-7xl mx-auto">
+    <h1 class="text-3xl md:text-4xl uppercase">
+      Diseño y fabricación de equipos adaptados a <br />sus necesidades o ideas.
     </h1><br />
     <p class="text-base md:text-lg">
-      We have the availability, experience, and agility to design and
-      manufacture custom equipment tailored to your needs or ideas, utilizing
-      our extensive design library or creating entirely original solutions
+      Contamos con la disponibilidad, experiencia y agilidad para diseñar y
+      fabricar equipos personalizados adaptados a sus necesidades o ideas,
+      utilizando nuestra amplia biblioteca de diseños o creando soluciones
+      completamente originales.
     </p>
-  </div><br />
+  </div>
+
+  <div class="max-w-7xl mx-auto px-8 space-y-5">
+    <div class="flex justify-center items-center">
+      <h1 class="font-bold text-4xl text-center">
+        Experiencia en decenas de equipos personalizados para clientes
+      </h1>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4">
+      <div>
+        <img src={img1.src} alt="" />
+      </div>
+      <div><img src={img2.src} alt="" /></div>
+      <div><img src={img3.src} alt="" /></div>
+      <div><img src={img4.src} alt="" /></div>
+    </div>
+  </div>
+
   <div class="w-full bg-grisT text-white font-bold py-6 md:py-16 px-4">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-center text-xl md:text-2xl py-4 md:py-10">
-        With this, we can meet highly specialized needs for
+      <h2
+        class="text-center text-xl md:text-3xl lg:text-3xl py-4 md:py-5 font-bold"
+      >
+        Con esto, podemos cumplir las necesidades especiales para
       </h2>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10">
         <div class="border-b-2 border-b-redBg p-3">
           <p class="text-base md:text-xl text-center">
-            Projects with special requirements
+            Proyectos con requerimientos especiales.
           </p>
         </div>
         <div class="border-b-2 border-b-redBg p-3">
           <p class="text-base md:text-xl text-center">
-            Cost-effective replacement of <br /> expensive specialized equipment.
+            Reemplazo rentable de equipos <br /> especializados de alto costo.
           </p>
         </div>
         <div class="border-b-2 border-b-redBg p-3">
           <p class="text-base md:text-xl text-center">
-            Experienced clients with innovative ideas to <br /> increase productivity
-            and/or reduce costs.
+            Clientes con experiencia e ideas innovadoras <br /> para aumentar la productividad
+            y/o reducir costos.
           </p>
         </div>
         <div class="border-b-2 border-b-redBg p-3">
           <p class="text-base md:text-xl text-center">
-            Equipment not practically available on the market, or <br /> with significantly
-            different production rates <br />than existing options.
+            Equipos que prácticamente no existen en el mercado o <br /> con capacidades
+            de producción significativamente diferentes a las opciones existentes.
           </p>
         </div>
       </div>
     </div>
   </div>
-  <div class="w-full text-grisT font-bold py-6 md:py-16 px-4">
-    <div class="max-w-7xl mx-auto flex flex-col justify-center">
-      <h2 class="text-center text-xl md:text-2xl py-4 md:py-10">
-        With this, we can meet highly specialized needs for
-      </h2>
-      <div
-        class="w-full px-8 grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4 md:gap-10"
-      >
-        <div class="border-b-2 border-b-blueMain p-3">
-          <p class="text-base md:text-xl text-center">
-            Experienced professionals in design.
-          </p>
-        </div>
-        <div class="border-b-2 border-b-blueMain p-3">
-          <p class="text-base md:text-xl text-center">
-            Experienced professionals on-site.
-          </p>
-        </div>
-        <div class="border-b-2 border-b-blueMain p-6">
-          <p class="text-base md:text-xl text-center">
-            Equipment development following relevant <br /> international standards.
-          </p>
-        </div>
-        <div class="border-b-2 border-b-blueMain p-3">
-          <p class="text-base md:text-xl text-center">
-            Simulation using Finite Element software (Ansys®) <br />
-            to accurately test the real-world behavior of designs <br />
-            within a computer environment.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="w-full flex justify-center pb-10">
-    <LearnBtn href="/Improvement" />
-  </div>
-  <div class="w-full flex justify-center bg-bgBeige py-16 h-full px-8">
-    <div class="w-full max-w-7xl">
-      <h1 class="text-2xl md:text-3xl text-center font-bold text-grisT pb-10">
-        WE HAVE SPECIALIZED DEPARTMENTS IN EACH OF THE NECESSARY AREAS.
+
+  <div
+    class="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row md:flex-row items-center gap-20"
+  >
+    <div class="flex flex-col space-y-3">
+      <h1 class="font-bold text-4xl">
+        Personal <br /> especializado
       </h1>
-      <div
-        class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-start"
-      >
-        <div class="w-full">
-          <h2 class="text-lg md:text-xl text-blueMain text-center font-bold">
-            Design department
-          </h2>
-          <div class="w-full bg-grisT h-[1px] my-3"></div>
-          <p class="text-base md:text-lg font-thin text-grisT">
-            With 12 professionals constantly working on special orders, new
-            series designs, improvements to current designs, new products, and
-            technologies, who continuously receive field feedback on the
-            performance of the equipment with their designs for continuous
-            improvement.
-          </p>
-        </div>
-        <div class="w-full">
-          <h2 class="text-lg md:text-xl text-blueMain text-center font-bold">
-            Engineering department
-          </h2>
-          <div class="w-full bg-grisT h-[1px] my-3"></div>
-          <p class="text-base md:text-lg font-thin text-grisT">
-            With 6 professionals dedicated to simulating the design department’s
-            proposals and providing feedback to improve efficiency and avoid
-            equipment failures in the field.
-          </p>
-        </div>
-        <div class="w-full">
-          <h2 class="text-lg md:text-xl text-blueMain text-center font-bold">
-            Automation and control department
-          </h2>
-          <div class="w-full bg-grisT h-[1px] my-3"></div>
-          <p class="text-base md:text-lg font-thin text-grisT">
-            with 12 professionals focused on installing standard control systems
-            and designing and implementing special systems as requested.
-          </p>
-        </div>
-        <div class="w-full">
-          <h2 class="text-lg md:text-xl text-blueMain text-center font-bold">
-            Quality control department
-          </h2>
-          <div class="w-full bg-grisT h-[1px] my-3"></div>
-          <p class="text-base md:text-lg font-thin text-grisT">
-            with 6 professionals who inspect the equipment being manufactured
-            daily, from start to finish.
-          </p>
-        </div>
-        <div class="w-full">
-          <h2 class="text-lg md:text-xl text-blueMain text-center font-bold">
-            Machining department
-          </h2>
-          <div class="w-full bg-grisT h-[1px] my-3"></div>
-          <p class="text-base md:text-lg font-thin text-grisT">
-            With 20 technicians working with CNC machines, special applications,
-            manual tools, and heat treatment units.
-          </p>
-        </div>
-        <div class="w-full">
-          <h2 class="text-lg md:text-xl text-blueMain text-center font-bold">
-            Production area
-          </h2>
-          <div class="w-full bg-grisT h-[1px] my-3"></div>
-          <p class="text-base md:text-lg font-thin text-grisT">
-            With 200 experienced welders, technicians, and general workers in
-            equipment manufacturing.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="w-full flex justify-center bg-bgBeige pb-6 px-4">
-    <div class="w-full md:w-1/3">
-      <h2 class="text-lg md:text-xl text-blueMain text-center font-bold">
-        Installation, maintenance, and spare parts <br /> department
-      </h2>
-      <div class="w-full bg-grisT h-[1px] my-3"></div>
-      <p class="text-base md:text-lg font-thin text-grisT text-center">
-        With 14 specialists in the installation and maintenance of sold
-        equipment.
+      <div class="w-80 h-0.5 bg-[#14427C]"></div>
+      <p class="text-xl">
+        En Triaso contamos con personal especializado <br /> para proyecto especificos,
+        con experiencia de <br /> muchos proyectos hechos a la medida.
       </p>
     </div>
+    <div>
+      <ul class="list-disc text-xl">
+        <li>Profesionales con experiencia en diseño.</li>
+        <li>Profesionales con experiencia en campo.</li>
+        <li>
+          Desarrollo de equipos siguiendo las normas, <br /> nacionales e internacionales
+          aplicables.
+        </li>
+      </ul>
+    </div>
   </div>
+
+  <div class="flex justify-center items-center">
+    <LearnBtn />
+  </div>
+
+  <div class="w-full flex justify-center bg-bgBeige py-16 h-full px-8">
+    <div class="w-full max-w-7xl">
+      <h1 class="text-2xl md:text-3xl text-center font-bold text-grisT pb-10 uppercase">
+        Tenemos especialistas en todas las areas para hacer su equipo realidad
+      </h1>
+
+      <!-- Slider wrapper -->
+      <div class="relative w-full max-w-2xl mx-auto">
+        <!-- Track -->
+        <div class="overflow-hidden rounded-xl" id="dept-track">
+          <div
+            class="flex transition-transform duration-500 ease-in-out"
+            id="dept-slides"
+          >
+            <!-- 1 -->
+            <div
+              class="min-w-full px-8 py-8 bg-white border border-gray-200 rounded-xl"
+            >
+              <h2
+                class="text-lg md:text-xl text-blueMain text-center font-bold"
+              >
+                Departamento de diseño
+              </h2>
+              <div class="w-full bg-grisT h-[1px] my-3"></div>
+              <p class="text-base md:text-lg font-thin text-grisT">
+                Con 12 profesionales trabajando constantemente en pedidos
+                especiales, nuevos diseños de series, mejoras a diseños
+                actuales, nuevos productos y tecnologías, quienes reciben
+                continuamente retroalimentación en campo sobre el desempeño de
+                los equipos diseñados para su mejora continua.
+              </p>
+            </div>
+
+            <!-- 2 -->
+            <div
+              class="min-w-full px-8 py-8 bg-white border border-gray-200 rounded-xl"
+            >
+              <h2
+                class="text-lg md:text-xl text-blueMain text-center font-bold"
+              >
+                Departamento de ingeniería
+              </h2>
+              <div class="w-full bg-grisT h-[1px] my-3"></div>
+              <p class="text-base md:text-lg font-thin text-grisT">
+                Con 6 profesionales dedicados a simular las propuestas del
+                departamento de diseño y proporcionar retroalimentación para
+                mejorar la eficiencia y evitar fallas de los equipos en campo.
+              </p>
+            </div>
+
+            <!-- 3 -->
+            <div
+              class="min-w-full px-8 py-8 bg-white border border-gray-200 rounded-xl"
+            >
+              <h2
+                class="text-lg md:text-xl text-blueMain text-center font-bold"
+              >
+                Departamento de automatización y control
+              </h2>
+              <div class="w-full bg-grisT h-[1px] my-3"></div>
+              <p class="text-base md:text-lg font-thin text-grisT">
+                Con 12 profesionales especializados en la instalación de
+                sistemas de control estándar y en el diseño de soluciones
+                especiales para cada proyecto. Desarrollamos sistemas con
+                programación abierta que brindan mayor flexibilidad, facilidad
+                de actualización e independencia de plataformas cerradas o
+                proveedores exclusivos.
+              </p>
+            </div>
+
+            <!-- 4 -->
+            <div
+              class="min-w-full px-8 py-8 bg-white border border-gray-200 rounded-xl"
+            >
+              <h2
+                class="text-lg md:text-xl text-blueMain text-center font-bold"
+              >
+                Departamento de control de calidad
+              </h2>
+              <div class="w-full bg-grisT h-[1px] my-3"></div>
+              <p class="text-base md:text-lg font-thin text-grisT">
+                Con 6 profesionales que inspeccionan diariamente los equipos en
+                fabricación, desde el inicio hasta el final del proceso.
+              </p>
+            </div>
+
+            <!-- 5 -->
+            <div
+              class="min-w-full px-8 py-8 bg-white border border-gray-200 rounded-xl"
+            >
+              <h2
+                class="text-lg md:text-xl text-blueMain text-center font-bold"
+              >
+                Departamento de maquinado
+              </h2>
+              <div class="w-full bg-grisT h-[1px] my-3"></div>
+              <p class="text-base md:text-lg font-thin text-grisT">
+                Con 20 técnicos trabajando con máquinas CNC, aplicaciones
+                especiales, herramientas manuales y unidades de tratamiento
+                térmico.
+              </p>
+            </div>
+
+            <!-- 6 -->
+            <div
+              class="min-w-full px-8 py-8 bg-white border border-gray-200 rounded-xl"
+            >
+              <h2
+                class="text-lg md:text-xl text-blueMain text-center font-bold"
+              >
+                Área de producción
+              </h2>
+              <div class="w-full bg-grisT h-[1px] my-3"></div>
+              <p class="text-base md:text-lg font-thin text-grisT">
+                Con 200 soldadores, técnicos y trabajadores generales con
+                experiencia en la fabricación de equipos.
+              </p>
+            </div>
+
+            <div
+              class="min-w-full px-8 py-8 bg-white border border-gray-200 rounded-xl"
+            >
+              <h2
+                class="text-lg md:text-xl text-blueMain text-center font-bold"
+              >
+                Departamento de instalación, mantenimiento y refacciones
+              </h2>
+              <div class="w-full bg-grisT h-[1px] my-3"></div>
+              <p class="text-base md:text-lg font-thin text-grisT">
+                Con 14 especialistas en la instalación y mantenimiento de los
+                equipos vendidos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón anterior -->
+        <button
+          id="dept-prev"
+          class="absolute left-[-18px] top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white border border-gray-300 flex items-center justify-center text-grisT hover:bg-gray-100 transition z-10"
+          aria-label="Anterior"
+        >
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.7071 4.29289C16.0976 4.68342 16.0976 5.31658 15.7071 5.70711L9.41421 12L15.7071 18.2929C16.0976 18.6834 16.0976 19.3166 15.7071 19.7071C15.3166 20.0976 14.6834 20.0976 14.2929 19.7071L7.29289 12.7071C7.10536 12.5196 7 12.2652 7 12C7 11.7348 7.10536 11.4804 7.29289 11.2929L14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289Z"
+                fill="#000000"></path>
+            </g></svg
+          >
+        </button>
+
+        <!-- Botón siguiente -->
+        <button
+          id="dept-next"
+          class="absolute right-[-18px] top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white border border-gray-300 flex items-center justify-center text-grisT hover:bg-gray-100 transition z-10"
+          aria-label="Siguiente"
+        >
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z"
+                fill="#000000"></path>
+            </g></svg
+          >
+        </button>
+
+        <!-- Dots -->
+        <div class="flex justify-center gap-2 mt-5" id="dept-dots"></div>
+
+        <!-- Contador -->
+        <p class="text-center text-sm text-gray-400 mt-2" id="dept-counter">
+          1 / 6
+        </p>
+      </div>
+    </div>
+  </div>
+
 </section>
+
+<script>
+  const slides = document.getElementById("dept-slides")!;
+  const dotsEl = document.getElementById("dept-dots")!;
+  const counter = document.getElementById("dept-counter")!;
+  const total = 7;
+  let current = 0;
+
+  // Crear dots
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement("span");
+    dot.className = `w-2 h-2 rounded-full cursor-pointer transition-all ${i === 0 ? "bg-blueMain scale-125" : "bg-gray-300"}`;
+    dot.addEventListener("click", () => goTo(i));
+    dotsEl.appendChild(dot);
+  }
+
+  function goTo(n: number) {
+    current = (n + total) % total;
+    slides.style.transform = `translateX(-${current * 100}%)`;
+    dotsEl.querySelectorAll("span").forEach((d, i) => {
+      d.className = `w-2 h-2 rounded-full cursor-pointer transition-all ${i === current ? "bg-blueMain scale-125" : "bg-gray-300"}`;
+    });
+    counter.textContent = `${current + 1} / ${total}`;
+  }
+
+  document
+    .getElementById("dept-prev")!
+    .addEventListener("click", () => goTo(current - 1));
+  document
+    .getElementById("dept-next")!
+    .addEventListener("click", () => goTo(current + 1));
+
+  // Swipe táctil
+  let startX = 0;
+  slides.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+  slides.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
+  });
+</script>

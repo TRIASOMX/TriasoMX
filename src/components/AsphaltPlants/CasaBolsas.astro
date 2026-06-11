@@ -1,0 +1,262 @@
+---
+import { Image } from "astro:assets";
+import ASOdom from "../../assets/images/BagHouses/bagHouses1.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
+import img5 from "../../assets/images/AsphaltPlant/drum3.webp";
+import BinSelector from "../BinUnits/BinSelector";
+import img2 from "../../assets/images/maquina2.webp";
+import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
+import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
+import bin2 from "../../assets/images/AsphaltPlant/bin2.webp";
+import Tred from "../../assets/images/AsphaltStorage/redT.webp";
+---
+
+<div
+    id="Bolsas"
+    class="flex flex-col max-w-7xl mx-auto px-8 bg-white rounded-2xl pt-10"
+>
+    <div class="pt-10 flex flex-col justify-start">
+        <h1 class="text-3xl text-black font-bold">CASA DE BOLSAS</h1>
+        <div class="flex flex-row">
+            <div class="w-20 h-0.5 bg-blueMain"></div>
+            <div class="w-20 h-0.5 bg-gray-300"></div>
+        </div>
+    </div>
+
+    <div class="flex flex-row mx-auto">
+        <div
+            class="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20 pb-5"
+        >
+            <div class="flex flex-col items-center justify-center">
+                <div
+                    class="flex text-5xl font-normal justify-center lg:justify-start items-baseline w-full"
+                >
+                    4
+                    <h1>-</h1>
+                    90
+                    <p class="text-sm font-normal ml-3">mil ACFM</p>
+                </div>
+                <p
+                    class="text-black font-thin text-center md:text-start lg:text-start w-full"
+                >
+                    Capacidad de las casas de bolsas
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center">
+                <div
+                    class="flex text-5xl font-normal justify-center lg:justify-start items-baseline w-full"
+                >
+                    99.99
+                    <p class="text-sm font-normal ml-3">%</p>
+                </div>
+                <p
+                    class="text-black font-thin text-center lg:text-start w-full"
+                >
+                    Eficiencia de filtración en captura de partículas finas
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center">
+            <div>
+                <Image
+                    src={ASOdom}
+                    alt="Asphalt Storage Tank"
+                    width={500}
+                    height={500}
+                />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-7xl mx-auto px-8">
+    <SmartVideo
+        client:visible
+        src="/Videos/Webm/DMVideo.webm"
+        poster="/Gallery/AsphaltPlantPoster/7.webp"
+        isLoop={true}
+        autoplayOnMobile={false}
+    />
+</div>
+
+<div id="Tolvas" class="">
+    <div
+        class="relative w-full flex flex-col h-[50vh] items-end justify-end pt-10 bg-[url(/ProvBU1.webp)] bg-cover bg-center"
+    >
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="hidden lg:block col-span-4"></div>
+        <div
+            class="lg:w-1/4 md:w-1/2 flex flex-col bg-blueMain rounded-t-2xl lg:rounded-t-2xl px-4 pt-2 lg:mr-20 relative"
+        >
+            <div id="BinUnits" class="scroll-mt-20 col-span-1">
+                <h1 class="lg:text-4xl text-3xl text-redBg font-bold">
+                    <span class="text-white font-bold">UNIDAD DE TOLVAS</span>
+                    <br />
+                    TRIASO®
+                </h1>
+            </div>
+            <div class="col-span-2">
+                <p class="lg:text-lg text-sm text-grisSubP">
+                    Las unidades de tolvas Triaso® garantizan un almacenamiento
+                    preciso y un flujo constante de agregados hacia el sistema
+                    de mezcla. Construidas con materiales de alta resistencia y
+                    diseñadas para la producción de asfalto, ofrecen
+                    alimentación constante, durabilidad y bajo mantenimiento
+                    para operación continua en cualquier proyecto.
+                </p>
+            </div>
+        </div>
+        <div class="col-span-1 hidden lg:block"></div>
+    </div>
+</div>
+<div
+    class="bg-blueMain text-white gap-4 flex flex-col md:flex md:flex-row w-full justify-between items-center px-4 pt-4 md:p-8"
+>
+    <h1 class="lg:text-4xl text-2xl text-start w-full font-bold">
+        De 14 o 20 toneladas
+    </h1>
+    <Image src={img5} alt="Lines representing a Bin Unit" class="md:w-[50%]" />
+</div>
+
+<div
+    class="flex flex-col items-center justify-center w-auto mx-auto px-8 lg:text-lg text-base font-normal mt-10"
+>
+    <BinSelector client:only />
+</div>
+
+<div class="max-w-[2400px] flex flex-col items-center justify-center">
+    <div class="flex flex-col md:grid md:grid-cols-2 justify-center my-5">
+        <div class="flex justify-center items-center w-full">
+            <div
+                class="bg-blueMain md:rounded-r-2xl py-10 px-8 md:px-16 h-full justify-center flex flex-col"
+            >
+                <h1 class="text-white font-bold text-2xl md:text-3xl">
+                    Integración perfecta con <br /> otros equipos
+                </h1>
+                <br />
+                <p class="text-grisSubP text-sm md:text-lg font-bold">
+                    Las plantas de asfalto Triaso® están diseñadas para
+                    integrarse perfectamente con tolvas, transportadores,
+                    tanques de asfalto, etc. Esto permite operaciones
+                    sincronizadas y un flujo constante de mezcla asfáltica a lo
+                    largo de todo el sistema de procesamiento.
+                </p>
+            </div>
+        </div>
+        <div class="w-full">
+            <Image
+                src={img2}
+                alt="Asphalt plant with a Bin unit"
+                class="object-cover w-full"
+            />
+        </div>
+    </div>
+    <div class="flex justify-center items-center pb-10">
+        <LearnBtnBlue href="/BinUnits" label="Go to page Bin Units" />
+    </div>
+</div>
+
+<TwoColumnSection
+    leftBg="bg-blueMain"
+    rightBg="bg-redBg"
+    imageSrc={Tred.src}
+    imageAlt="Red T icon"
+    imageWidth="150px"
+>
+    <div slot="left" class="flex flex-col justify-center gap-3">
+        <h1 class="text-xl md:text-2xl">
+            Optimizado para eficiencia y seguridad
+        </h1>
+        <p class="text-sm lg:text-lg md:text-lg">
+            Diseñadas para ofrecer eficiencia y seguridadn minimizando el riesgo
+            de derrames y acumulación de material, garantizando un entorno de
+            trabajo más limpio y seguro. Los sistemas de descarga de fácil
+            operación y puntos de acceso permiten realizar mantenimiento y carga
+            de material de manera segura y eficiente, reduciendo tiempos muertos
+            y reforzando los estándares de seguridad en el lugar de trabajo.
+        </p>
+    </div>
+    <div slot="right" class="flex flex-col justify-center gap-3">
+        <h1 class="text-xl md:text-2xl">Almacenamiento a granel eficiente</h1>
+        <p class="text-sm lg:text-lg md:text-lg">
+            Las unidades de tolvas Triaso® ofrecen una solución eficiente y
+            organizada para el almacenamiento de agregados, asegurando acceso
+            rápido y sencillo para carga y transferencia. En plantas de asfalto,
+            optimizan el manejo de materiales, reducen los requerimientos de
+            espacio de almacenamiento y mantienen una alta eficiencia operativa.
+        </p>
+    </div>
+</TwoColumnSection>
+
+<div
+    class="w-full grid ggrid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-6 max-w-7xl px-8 mx-auto py-10 items-center justify-center"
+>
+    <div>
+        <h2 class="font-bold text-grisT text-lg md:text-xl">
+            Alimentadores de aditivos en polvo
+        </h2><br />
+        <p class="font-semibold text-grisP text-sm lg:text-lg md:text-lg">
+            Los alimentadores de aditivos en polvo Triaso® proporcionan un
+            almacenamiento y dispensado eficiente y confiable de materiales en
+            polvo. Diseñados para integrarse fácilmente con tus sistemas
+            existentes, aseguran un flujo constante y una dosificación precisa
+            de aditivos, mejorando la eficiencia general de producción con un
+            mantenimiento mínimo.
+        </p><br />
+        <div class="justify-center items-center hidden lg:flex md:flex">
+            <LearnBtnBlue
+                href="/PowderAd"
+                label="Go to page Powder Additives"
+            />
+        </div>
+    </div>
+    <div>
+        <Image src={bin2} alt="Powder Additives Feeder" />
+    </div>
+</div>
+
+<div
+    class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2"
+>
+    <div></div>
+    <div class="font-bold text-grisT text-lg md:text-xl">
+        <p class="font-bold">Tolva de RAP</p>
+    </div>
+</div>
+<div class="bg-[#393939] w-full">
+    <div
+        class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center max-w-7xl mx-auto px-8"
+    >
+        <div class="py-2">
+            <Image src={bin2} alt="Powder Additives Feeder" />
+            <div class="justify-center items-center hidden lg:flex md:flex">
+                <LearnBtnBlue
+                    href="/PowderAd"
+                    label="Go to page Powder Additives"
+                />
+            </div>
+        </div>
+        <div>
+            <p class="font-semibold text-white text-sm lg:text-lg md:text-lg">
+                Las tolvas RAP Triaso® están diseñadas para manejar y
+                transportar de manera eficiente la carpeta asfáltica reciclada
+                (RAP) en plantas de asfalto. Fabricadas para ofrecer
+                durabilidad, garantizan un flujo de material constante y
+                confiable, permitiendo una integración fluida en el proceso de
+                producción de la planta. Gracias a su estructura robusta, los
+                alimentadores RAP Triaso® pueden soportar la naturaleza pesada y
+                abrasiva del RAP, reduciendo tiempos de inactividad y asegurando
+                una alta eficiencia operativa.
+            </p><br />
+        </div>
+
+        <div class="justify-center items-center flex lg:hidden md:hidden">
+            <LearnBtnBlue
+                href="/PowderAd"
+                label="Go to page Powder Additives"
+            />
+        </div>
+    </div>
+</div>

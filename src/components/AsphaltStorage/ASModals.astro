@@ -10,66 +10,113 @@ import fiberGlass from "../../assets/images/AsphaltPlant/Aislamiento.webp";
 import ASAgitators from "../../assets/images/AsphaltPlant/agitators1.webp";
 import ASGallerySlider from "../../components/AsphaltStorage/ASGallerySlider.tsx";
 import heatExchange from "../../assets/images/AsphaltStorage/heatExchange.webp";
+import flancosImg from "../../assets/images/SidePanels/FEPlaC1_1.webp";
 import { Image } from "astro:assets";
 
 const images = [
   {
     src: ASPump.src,
-    title: "Asphalt Pumps",
+    title: "Bomba de inyección",
     description:
-      "Asphalt pumping from the tank works through a pump located inside the tank, where the asphalt is stored, with its motor positioned at the top. Once heated, the asphalt is easily —where the hose is—since at high temperatures, asphalt behaves like water. To prevent blockages inside the pipe, the pump operates in both directions: forward and reverse. When the tank finishes operating, the pump draws the asphalt from the outlet hose back into the tank. Having the asphalt pump inside the tank ",
+      "El asfalto se bombea desde el tanque mediante una bomba situada en el interior del mismo, donde se almacena el asfalto, con el motor ubicado en la parte superior. Una vez calentado, el asfalto fluye fácilmente por la manguera, ya que a altas temperaturas se comporta como el agua. Para evitar obstrucciones en el interior de la tubería, la bomba funciona en ambas direcciones: hacia adelante y hacia atrás. Cuando el tanque termina de funcionar, la bomba extrae el asfalto de la manguera de salida y lo devuelve al tanque.",
   },
   {
     src: ASAgitators.src,
-    title: "Agitators for additives and polymers",
+    title: "Agitadores para aditivos y polimeros",
     description:
-      "Designed to ensure a homogeneous blend of additives and polymers, uniform heat distribution, preventing hot spots. The agitator maintains consistent composition throughout the asphalt. ",
+      "Diseñado para garantizar una mezcla homogénea de aditivos y polímeros, así como una distribución uniforme del calor, evitando la formación de puntos calientes. El agitador mantiene una composición homogénea en todo el asfalto.",
     list: [
       {
-        text: "5 Hp agitators for:",
+        text: "Agitadores de 5 hp para:",
         sublist: [
-          "Speeding up heating and homogenizing asphalt temperature.",
-          "Incorporating type 2 polymers: natural latex, SBR, neoprene, etc.",
-          "Incorporating additives such as: Rejuvenator for recycled asphalts, asphalt softener, for warm mix applications, adhesion promoter, etc.",
-          "Maintaining homogeneity in polymer-modified asphalts.",
+          "Acelerar el calentamiento y homogeneizar la temperatura del asfalto.",
+          "Incorporación de polímeros de tipo 2: látex natural, SBR, neopreno, etc.",
+          "Incorporación de aditivos tales como: rejuvenecedor para asfaltos reciclados, plastificante de asfalto, para aplicaciones de mezclas templadas, promotor de adhesión, etc.",
+          "Mantenimiento de la homogeneidad en los asfaltos modificados con polímeros.",
         ],
       },
     ],
   },
   {
     src: ASHoses.src,
-    title: "Asphalt Hoses",
+    title: "Mangueras de asfalto",
     description:
-      "When the pump, which is submerged in the tank, is turned on, the material is transferred into a stainless-steel hose connected to the plant. From there, the flow enters the asphalt inlet, ensuring continuous and uniform delivery.",
+      "Cuando se enciende la bomba, que está sumergida en el tanque, el material se transfiere a una manguera de acero inoxidable conectada a la planta. Desde allí, el flujo entra por la entrada de asfalto, lo que garantiza un suministro continuo y uniforme.",
   },
   {
     src: fiberGlass.src,
-    title: "Three inches fiberglass insulation",
+    title: "Aislante de tres pulgadas",
     description:
-      "Our asphalt storage tanks feature three-inch fiberglass insulation, designed for superior performance in minimizing heat loss and maintaining consistent temperatures. This durable, energy-efficient insulation ensures your asphalt remains at the optimal temperature, ready for use. Additionally, the exterior is reinforced with a stainless steel sheet lining, providing enhanced durability and protection against harsh external conditions.",
+      "Nuestros tanques de almacenamiento de asfalto cuentan con un aislamiento de fibra de vidrio de tres pulgadas, diseñado para ofrecer un rendimiento superior a la hora de minimizar la pérdida de calor y mantener temperaturas constantes. Este aislamiento duradero y energéticamente eficiente garantiza que el asfalto se mantenga a la temperatura óptima, listo para su uso. Además, el exterior está reforzado con un revestimiento de chapa de acero inoxidable, lo que proporciona una mayor durabilidad y protección frente a condiciones externas adversas.",
   },
   {
     src: heatExchange.src,
-    title: "Heat exchange coils",
+    title: "Línea de transferencia de calor",
     description:
-      "When the injection pump is external to the tank and already installed on the drum mixer—such as when the drum is supplied by another manufacturer—many systems require a thermal oil line to keep the pump at operating temperature. For this reason, we install a set of heat transfer coils that utilize the tank’s thermal energy to heat the pump, eliminating the need for additional heating circuits.",
+      "Cuando la bomba de inyección es externa al tanque y ya se encuentra instalada en el tambor mezclador —por ejemplo, cuando el tambor se adquiere de otro proveedor— muchos sistemas requieren una línea de aceite térmico para mantener la bomba a temperatura de operación. Por esta razón, instalamos una línea de serpentines que aprovecha la energía térmica del tanque para calentar la bomba, eliminando la necesidad de circuitos de calentamiento adicionales.",
+  },
+  {
+    src: flancosImg.src,
+    title: "Flancos estéticos",
+    description:
+      "Estos paneles que destacan originalidad brindan un aspecto limpio, moderno y estético que refleja calidad y atención al detalle, dejando una fuerte impresión en clientes, inspectores y en el público. Ideales para proyectos en zonas urbanas o de alta visibilidad, refuerzan el compromiso de su marca con la excelencia y mejoran la presentación general de su planta de asfalto.",
   },
 ];
 ---
 
-<div class="w-full flex flex-col gap-10">
+<div class="w-full flex flex-col">
   <ASGallerySlider client:load images={images} />
-  
-  <div class="max-w-7xl px-8 mx-auto">
-    <Image
-      src={tanque360}
-      alt="Render of an 30,000 gallon Asphalt Storage Tank"
-    />
-  </div>
+  <section
+    class="relative bg-cover bg-no-repeat bg-center"
+    style={{
+      backgroundImage: "url(/Storagebg.webp)",
+    }}
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
 
-  <div class="w-full px-8 md:px-52">
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-8 flex flex-col items-start justify-start min-h-10/12 py-10"
+    >
+      <div class="space-y-5">
+        <!-- Titulo -->
+        <div>
+          <h1 class="font-bold text-3xl text-white">
+            ¿Indeciso sobre el tanque ideal para su proyecto?
+          </h1>
+        </div>
+
+        <!-- Desc -->
+        <div>
+          <p class="text-white">
+            La compra de un tanque de asfalto es una gran inversión, <br />
+            y la base de un negocio de producción de mezcla asfáltica. <br />
+            Compre inteligentemente y con criterio.
+          </p>
+        </div>
+
+        <div>
+          <p class="text-white">
+            Podemos asesorarlo de forma transparente en la inversión de su
+            tanque de <br />
+            asfalto, ayudándolo a elegir la opción más adecuada.
+          </p>
+        </div>
+
+        <div>
+          <a
+            href=""
+            class="text-white mt-5 text-xs md:text-sm font-normal border-2 border-[#14427c] rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-[#14427c] hover:bg-transparent hover:text-[#14427c]"
+          >
+            Algunos consejos antes de comprar un equipo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="w-full px-8 max-w-7xl mx-auto py-5">
     <h1 class="text-redBg text-2xl md:text-3xl font-bold text-center">
-      Set the Standard in Asphalt Heating and Storage
+      Marque el estándar en el almacenamiento de asfalto
     </h1>
   </div>
   <div
@@ -78,67 +125,34 @@ const images = [
     <div class="w-full">
       <Image src={img2} alt="Vertical Asphalt Storage Tank" />
     </div>
-    <AcordeonItemCol
-      title="Triaso® Vertical Asphalt Storage Tanks"
-      bg-Color="bg-bgMain"
-      subText=" Their upright configuration minimizes the asphalt surface exposed to air, significantly reducing oxidation — a key factor when storing polymer-modified asphalts at high temperatures for extended periods."
-      client:only
-    >
-      <div class="w-full py-6 font-bold text-grisT text-sm md:text-base">
-        <p>
-          Equipped with high-efficiency internal coils and industrial-grade
-          insulation, these tanks retain heat effectively, reduce energy
-          consumption, and maintain stable asphalt temperatures — even in
-          extreme climates.
-        </p><br />
-        <p>
-          Each tank includes OSHA-compliant safety features such as a caged
-          ladder, top manhole access, anti-slip diamond-plate decking,
-          full-perimeter handrails, and kickplates to ensure safe operation and
-          maintenance access.
-        </p><br />
-        <p>
-          At ground level, all valves, gauges, and connections are easily
-          accessible, allowing fast, safe loading and unloading, as well as
-          convenient temperature monitoring.
-        </p><br />
-        <p>
-          Standard models include a digital temperature controller, and
-          configurations can be customized with mixers, level indicators, vapor
-          condensers, and other accessories to meet the requirements of each
-          application.
+    <div class="space-y-10">
+      <div>
+        <h1 class="font-bold text-black text-3xl">
+          Tanques verticales de <br />
+          almacenamiento de asfalto Triaso®
+        </h1>
+      </div>
+      <div class="space-y-5">
+        <p class="font-bold text-[#393939]">
+          Los tanques verticales Triaso® están diseñados para <br />
+          una mayor eficiencia de espacio.
+        </p>
+        <p class="font-bold text-[#393939]">
+          Su configuración vertical minimiza la superficie de <br /> asfalto expuesta
+          al aire, reduciendo significativamente <br /> la oxidación — un factor clave
+          al almacenar asfaltos <br /> modificados con polímeros a altas temperaturas
+          por <br /> periodos prolongados.
         </p>
       </div>
-    </AcordeonItemCol>
+      <div class="flex justify-center items-center">
+        <a
+          href=""
+          class="text-white mt-5 text-xs md:text-sm font-normal border-2 border-[#14427c] rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-[#14427c] hover:bg-transparent hover:text-[#14427c]"
+        >
+          Algunos consejos antes de comprar un equipo
+        </a>
+      </div>
+    </div>
   </div>
-  <!-- <OSection /> -->
-  <TwoColumnSection
-    leftBg="bg-redBg"
-    rightBg="bg-blueMain"
-    imageSrc={Tred.src}
-    imageAlt="Red T icon"
-    imageWidth="150px"
-  >
-    <div slot="left" class="flex flex-col justify-center gap-3">
-      <h1 class="text-xl md:text-2xl">
-        Portable and Relocatable <br /> Systems
-      </h1>
-      <p class="text-sm md:text-base lg:text-lg">
-        Engineered for easy transport and quick setup, our systems deliver
-        reliable performance at any site—ideal for temporary or changing project
-        locations.
-      </p>
-    </div>
-    <div slot="right" class="flex flex-col justify-center gap-3">
-      <h1 class="text-xl md:text-2xl">Durable Fabrication</h1>
-      <p class="text-sm md:text-base lg:text-lg">
-        Our asphalt storage tanks are engineered using wear-resistant materials
-        designed to withstand abrasive and heavy-duty conditions. This robust
-        construction ensures reliable performance, even in the harshest
-        environments. By minimizing wear and tear, the design significantly
-        reduces maintenance needs and extends the system’s lifespan—delivering a
-        dependable, long-term solution.
-      </p>
-    </div>
-  </TwoColumnSection>
+
 </div>

@@ -1,0 +1,32 @@
+---
+import HeroComponent from "../unitComponents/HeroComponent.astro";
+import OdometerHule from "./OdometerHule"
+---
+
+<section>
+    <HeroComponent
+        title="Incorporadores de hule"
+        image="https://placehold.co/600x400/png"
+        imageAlt="Placeholder"
+        altImage="https://placehold.co/600x400/png"
+        descAltImage="Placeholder"
+    />
+    <div class="bg-[#1e1e1e]">
+        <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+            <div class="flex justify-center items-center text-center">
+                <h1 class="font-semibold text-white text-lg lg:text-xl">
+                    En Triaso® diseñamos que incorporadores de caucho molido
+                    reciclado (CRM) con asfalto a alta temperatura, generando
+                    asfalto ahulado listo para ser colocado en carretera.
+                    Diseñado para trabajo pesado continuo, con materiales extra
+                    reforzados y automatización total del proceso de
+                    dosificación e incorporación.
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <OdometerHule client:only/>
+</section>

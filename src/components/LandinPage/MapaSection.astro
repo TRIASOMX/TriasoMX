@@ -3,57 +3,63 @@ import Mapa from "../../assets/images/mapa.webp";
 import { Image } from "astro:assets";
 ---
 
-<section class="relative bg-cover bg-no-repeat bg-center"
+<section
+    class="relative bg-cover bg-no-repeat bg-center"
     style={{
         backgroundImage: "url(/contraflujo.webp)",
-
     }}
 >
-     <div class="absolute inset-0 bg-black/70 " />
+    <div class="absolute inset-0 bg-black/70"></div>
 
     <div
-        class=" relative z-10 max-w-7xl mx-auto  px-8 flex flex-col items-center justify-center min-h-10/12  py-10"
+        class="relative z-10 max-w-7xl mx-auto px-8 flex flex-col items-center justify-center min-h-10/12 py-10"
     >
         <div class="md:w-1/2">
             <Image src={Mapa} alt="Map" />
         </div>
         <div
-            class="grid grid-cols-3 lg:grid-cols-6 md:grid-cols-3 gap-8 md:gap-10 pt-5 md:px-20 w-full"
+            class="grid grid-cols-3 lg:grid-cols-6 md:grid-cols-3 gap-16 md:gap-10 pt-5 md:px-20 w-full"
         >
             <div class="flex flex-col items-center font-bold">
                 <h1 class="text-xl md:text-4xl text-redBg">+300</h1>
-                <p class="text-xs md:text-lg text-center text-white">EMPLOYEES</p>
+                <p class="text-xs md:text-lg text-center text-white">
+                    EMPLEADOS
+                </p>
             </div>
             <div class="flex flex-col items-center font-bold">
                 <h1 class="text-xl md:text-4xl text-redBg">+320</h1>
                 <p class="text-xs md:text-lg text-center text-white">
-                    MANUFACTURED <br />ASPHALT PLANTS
+                    PLANTAS DE ASFALTO <br />MANUFACTURADAS
                 </p>
             </div>
             <div class="flex flex-col items-center font-bold">
                 <h1 class="text-xl md:text-4xl text-redBg">+60</h1>
                 <p class="text-xs md:text-lg text-center text-white">
-                    MANUFACTURED <br />ROCK CRUSHERS
+                    TRITURADORAS <br />MANUFACTURADAS
                 </p>
             </div>
             <div class="flex flex-col items-center font-bold">
                 <h1 class="text-xl md:text-4xl text-redBg">+25</h1>
                 <p class="text-xs md:text-lg text-center text-white">
-                    YEARS OF <br />MANUFACTURING
+                    AÑOS <br />MANUFACTURANDO
                 </p>
             </div>
             <div class="flex flex-col items-center font-bold">
                 <h1 class="text-xl md:text-4xl text-redBg">+10</h1>
-                <p class="text-xs md:text-lg text-center text-white">COUNTRIES</p>
+                <p class="text-xs md:text-lg text-center text-white">PAÍSES</p>
             </div>
             <div class="flex flex-col items-center font-bold">
                 <h1 class="text-xl md:text-4xl text-redBg">+150</h1>
-                <p class="text-xs md:text-lg text-center text-white">PRODUCTS</p>
+                <p class="text-xs md:text-lg text-center text-white">
+                    PRODUCTOS
+                </p>
             </div>
         </div>
-        <p class="w-full font-bold text-white text-lg lg:text-xl text-center mt-10 px-8">
-            Strict quality control ensures the operation of your equipment with
-            low maintenance for many years.
+        <p
+            class="w-full font-bold text-white text-lg lg:text-xl text-center mt-10 px-8"
+        >
+            Un estricto control de calidad garantiza el buen funcionamiento de
+            su equipo con un mantenimiento mínimo durante muchos años.
         </p>
     </div>
 </section>

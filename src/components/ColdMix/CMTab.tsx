@@ -10,7 +10,7 @@ export default function CMTab() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 sm:px-8 mt-10 mb-6">
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-8 ">
       <div className="flex w-full border-b border-gray-200">
         {images.map((img, index) => (
           <button
@@ -25,14 +25,14 @@ export default function CMTab() {
               transition
               ${
                 activeIndex === index
-                  ? "border-b-2 border-redBg text-black font-bold"
-                  : "border-b-2 border-transparent text-grisT font-normal"
+                  ? "border-b-2 border-redBg text-white font-bold"
+                  : "border-b-2 border-transparent text-gray-400 font-normal"
               }
             `}
           >
             {index === 0
-              ? "Discharge at truck level"
-              : "Discharge at ground level"}
+              ? "Descarga en camión"
+              : "Descarga en piso"}
           </button>
         ))}
       </div>
@@ -45,7 +45,7 @@ export default function CMTab() {
             aspect-[16/9]
             sm:aspect-[4/3]
             md:aspect-[16/9]
-            bg-gray-100
+            
             rounded-2xl
             overflow-hidden
             flex

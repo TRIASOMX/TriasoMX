@@ -1,0 +1,68 @@
+---
+interface Props {
+    title: string;
+    subtitle?: string;
+    image?: string;
+}
+
+const { title, subtitle, image = "/placeholder.webp" } = Astro.props;
+
+const modalId = `modal-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<div class="relative w-full h-[420px] overflow-hidden rounded-2xl">
+    <img
+        src={image}
+        alt={title}
+        class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div
+        class="absolute inset-0 bg-gradient-to-b from-black/50 via-white/40 to-transparent" 
+    >
+    </div>
+
+    <div class="relative z-10 h-full flex flex-col items-center justify-center space-y-5 p-6  text-black">
+        <div class="flex flex-col justify-start items-center space-y-5">
+            <h1 class="text-lg lg:text-3xl  text-center font-bold">
+                La planta de asfalto más ecológica en el mercado
+            </h1>
+    
+            <h2 class="text-sm lg:text-lg opacity-90 mt-1 text-center text-[#014708] font-semibold">
+                Con esta planta de asfalto usted podrá trabajar incluso en un parque
+            </h2>
+
+            <p class="text-sm text-center text-black">Cumplimos con las exigencias de la SEMARNAT para la operación ecológica de plantas de asfalto:            </p>
+
+            <ul class=" items-center">
+                <li class="font-bold">NOM-043-SEMARNAT-1993</li>
+                <li class="font-bold">NOM-208-SEMARNAT-201</li>
+            </ul>
+        </div> 
+
+        <div class="flex flex-col items-center justify-end ">
+            <button
+            onclick={`document.getElementById('${modalId}').showModal()`}
+            class="mt-4 w-fit px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition"
+        >
+            Ver más...
+        </button>
+        </div>
+    </div>
+</div>
+
+
+<dialog
+    id={modalId}
+    class="w-[95%] md:w-[90%] max-w-6xl rounded-2xl p-0 backdrop:bg-black/70"
+>
+    <div class="bg-[#2c2c2c] text-white rounded-2xl p-6 md:p-10 relative">
+        <button
+            onclick={`document.getElementById('${modalId}').close()`}
+            class="absolute top-4 right-4 text-white text-xl"
+        >
+            ✕
+        </button>
+
+        <slot />
+    </div>
+</dialog>

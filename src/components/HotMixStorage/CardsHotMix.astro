@@ -1,0 +1,645 @@
+---
+import Card from "../unitComponents/Card.astro";
+import { Image } from "astro:assets";
+import semiSilo from "../../assets/images/AsphaltPlant/silos3.webp";
+import Logo from "../../assets/logos/LogoTriasoMX.svg";
+import suspension from "../../assets/images/HotMix/suspension.webp";
+import icon1 from "../../assets/images/HotMix/icon1.webp";
+import icon2 from "../../assets/images/HotMix/icon2.webp";
+import icon3 from "../../assets/images/HotMix/icon3.webp";
+import icon4 from "../../assets/images/HotMix/icon4.webp";
+import icon5 from "../../assets/images/HotMix/icon5.webp";
+import SiloSAE from "../../assets/images/HotMix/SiloSAE.webp";
+import SiloAEVL from "../../assets/images/HotMix/SiloAEVL.webp";
+import poster1 from "../../assets/images/HotMix/Gallery/HM1.webp";
+import poster2 from "../../assets/images/HotMix/Gallery/HM4.webp";
+import poster3 from "../../assets/images/HotMix/Gallery/HM5.webp";
+import SmartVideo from "../unitComponents/SmartVideo";
+---
+
+<section
+    class="py-16 bg-[#f0f4f8] min-h-screen flex flex-col items-center justify-start"
+>
+    <div class="w-full">
+        <div class="grid grid-cols-2 gap-6 mb-0 max-w-7xl mx-auto">
+            <!-- Card Estacionario -->
+            <div
+                id="card-estacionario"
+                class="silo-card selected relative cursor-pointer rounded-2xl pt-0 pb-8 px-8 shadow-lg transition-all duration-400"
+                onclick="selectOption('estacionario')"
+            >
+                <!-- Imagen sobrepuesta arriba -->
+                <div
+                    class="flex justify-center"
+                    style="margin-top: -60px; margin-bottom: -20px;"
+                >
+                    <img
+                        src="https://placehold.co/600x400/png"
+                        alt="Silo Estacionario"
+                        class="h-64 object-contain drop-shadow-2xl select-none pointer-events-none"
+                    />
+                </div>
+
+                <!-- Texto de la card -->
+                <div class="mt-6">
+                    <h2 class="card-title text-lg font-bold mb-3">
+                        Estacionario
+                    </h2>
+                    <ul class="card-list space-y-1.5 mb-4">
+                        <li class="flex items-start gap-2 text-sm">
+                            <span
+                                class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bullet"
+                            ></span>
+                            Instalación con grúa
+                        </li>
+                        <li class="flex items-start gap-2 text-sm">
+                            <span
+                                class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bullet"
+                            ></span>
+                            Ejes de transporte incluidos
+                        </li>
+                    </ul>
+                    <h3 class="card-subtitle text-sm font-bold mb-1">
+                        Capacidad
+                    </h3>
+                    <ul class="card-list space-y-1.5">
+                        <li class="flex items-start gap-2 text-sm">
+                            <span
+                                class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bullet"
+                            ></span>
+                            45, 95 y 120 toneladas
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card Autoeregible -->
+            <div
+                id="card-autoeregible"
+                class="silo-card relative cursor-pointer rounded-2xl pt-0 pb-8 px-8 shadow-lg transition-all duration-400"
+                onclick="selectOption('autoeregible')"
+            >
+                <!-- Imagen sobrepuesta arriba -->
+                <div
+                    class="flex justify-center"
+                    style="margin-top: -60px; margin-bottom: -20px;"
+                >
+                    <img
+                        src="https://placehold.co/600x400/png"
+                        alt="Silo Autoeregible"
+                        class="h-64 object-contain drop-shadow-2xl select-none pointer-events-none"
+                    />
+                </div>
+
+                <!-- Texto de la card -->
+                <div class="mt-6">
+                    <h2 class="card-title text-lg font-bold mb-3">
+                        Autoeregible
+                    </h2>
+                    <ul class="card-list space-y-1.5 mb-4">
+                        <li class="flex items-start gap-2 text-sm">
+                            <span
+                                class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bullet"
+                            ></span>
+                            Sistema hidráulico de levantamiento
+                        </li>
+                        <li class="flex items-start gap-2 text-sm">
+                            <span
+                                class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bullet"
+                            ></span>
+                            Sin necesidad de grúas
+                        </li>
+                        <li class="flex items-start gap-2 text-sm">
+                            <span
+                                class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bullet"
+                            ></span>
+                            10 minutos de levantamiento
+                        </li>
+                        <li class="flex items-start gap-2 text-sm">
+                            <span
+                                class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bullet"
+                            ></span>
+                            Ejes de transporte incluidos
+                        </li>
+                    </ul>
+                    <h3 class="card-subtitle text-sm font-bold mb-1">
+                        Capacidad
+                    </h3>
+                    <ul class="card-list space-y-1.5">
+                        <li class="flex items-start gap-2 text-sm">
+                            <span
+                                class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bullet"
+                            ></span>
+                            45 y 95 toneladas
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 rounded-2xl">
+            <div id="content-estacionario" class="content-block">
+                <div
+                    class="w-full flex flex-col gap-4 mt-4 tab-content text-base md:text-lg text-grisT font-bold"
+                    data-tab-content="tab1"
+                >
+                    <div
+                        class="w-full max-w-7xl mx-auto px-8 flex justify-center"
+                    >
+                        <SmartVideo
+                            client:visible
+                            src="/Videos/Webm/HMSilo.webm"
+                            poster={poster1.src}
+                            desktopWidth="80%"
+                            isLoop={false}
+                            autoplayOnMobile={false}
+                        />
+                    </div>
+                    <div
+                        class="w-full text-center px-8 max-w-7xl mx-auto py-10"
+                    >
+                        <h1
+                            class="text-blueMain text-2xl md:text-3xl font-bold"
+                        >
+                            Capacidad de 45, 95 y 135 toneladas
+                        </h1>
+                    </div>
+
+                    <div class="w-full flex flex-col bg-[#2b2b2b]">
+                        <div class="text-white py-10 w-full">
+                            <details class="group max-w-7xl mx-auto px-8">
+                                <summary
+                                    class="flex flex-row items-center justify-between cursor-pointer list-none"
+                                >
+                                    <h1 class="font-bold text-2xl md:text-3xl">
+                                        Opción de portabilidad
+                                    </h1>
+                                    <svg
+                                        class="transition-transform duration-300 group-open:rotate-180 w-[64px]"
+                                        id="dropdown-arrow"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        color="#ca1c1c"
+                                        stroke-width="1.5"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM16.0303 10.9697L12.5303 7.46967C12.2374 7.17678 11.7626 7.17678 11.4697 7.46967L7.96967 10.9697C7.67678 11.2626 7.67678 11.7374 7.96967 12.0303C8.26256 12.3232 8.73744 12.3232 9.03033 12.0303L11.25 9.81066V16C11.25 16.4142 11.5858 16.75 12 16.75C12.4142 16.75 12.75 16.4142 12.75 16V9.81066L14.9697 12.0303C15.2626 12.3232 15.7374 12.3232 16.0303 12.0303C16.3232 11.7374 16.3232 11.2626 16.0303 10.9697Z"
+                                            fill="#ca1c1c"></path>
+                                    </svg>
+                                </summary>
+                                <p class="text-base md:text-lg">
+                                    El silo semi-estacionario ofrece una opción
+                                    de portabilidad, permitiendo transportar
+                                    fácilmente el elevador de cangilones junto
+                                    con el silo en un solo viaje. Equipado con
+                                    quinta rueda, frenos y luces, garantiza un
+                                    transporte seguro y eficiente. Incluye
+                                    puntos de anclaje para fijar el
+                                    transportador durante el traslado. Las patas
+                                    traseras abatibles brindan estabilidad y
+                                    pueden levantarse con grúa para la
+                                    instalación.
+                                </p>
+                            </details>
+
+                            <div class="w-full max-w-7xl mx-auto px-8">
+                                <Image
+                                    src={semiSilo}
+                                    alt="Silo system with a worker next to it"
+                                />
+                            </div>
+
+                            <div
+                                class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-x-10 gap-y-4 my-10 px-8"
+                            >
+                                <div
+                                    class="w-full p-8 border-white rounded-2xl border-2"
+                                >
+                                    <h2 class="text-2xl md:text-3xl">
+                                        Montable en cama baja
+                                    </h2>
+                                    <ul
+                                        class="list-disc ml-6 font-thin text-base md:text-lg"
+                                    >
+                                        <li>
+                                            Con protecciones para ser transportado sin daños.
+                                        </li>
+                                        <li>
+                                            Con puntos de izaje para maniobras de levantamiento con grúa.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div
+                                    class="w-full p-8 border-white rounded-2xl border-2"
+                                >
+                                    <h2 class="text-2xl md:text-3xl">
+                                        Compuerta con sistema neumático para descargar la mezcla asfáltica a los camiones.
+                                    </h2>
+                                    <p class="text-base md:text-lg font-thin">
+                                        No incluye compresor ni tanque de aire; utiliza el sistema de aire de la planta de asfalto.
+                                    </p>
+                                </div>
+
+                                <div
+                                    class="w-full p-8 border-white rounded-2xl border-2"
+                                >
+                                    <h2 class="text-2xl md:text-3xl">
+                                        Con estructura de soporte, lo suficientemente alta para recibir camiones de volteo.
+                                    </h2>
+                                </div>
+
+                                <div
+                                    class="w-full p-8 border-white rounded-2xl border-2"
+                                >
+                                    <h2 class="text-2xl md:text-3xl">
+                                        Con control de apertura y cierre para integrarse al panel de la planta de asfalto.
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full max-w-7xl mx-auto px-8">
+                        <SmartVideo
+                            client:visible
+                            src="/Videos/Webm/HMSilo2.webm"
+                            poster={poster2.src}
+                            isLoop={true}
+                            autoplayOnMobile={false}
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div id="content-autoeregible" class="content-block hidden">
+                <div class="w-full max-w-7xl mx-auto px-8">
+                    <SmartVideo
+                        client:visible
+                        src="/Videos/Webm/HMSilo2.webm"
+                        poster={poster2.src}
+                        isLoop={true}
+                        autoplayOnMobile={false}
+                    />
+                </div>
+
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="text-[#14427c] text-center text-2xl font-bold">
+                        En Triaso entendemos que el manejo adecuado de
+                        materiales y el almacenamiento de
+                    </h1>
+                    <h1 class="text-[#14427c] text-center text-2xl font-bold">
+                        mezcla asfáltica son clave para un desempeño óptimo y
+                        una mayor durabilidad.
+                    </h1>
+                </div>
+                <div
+                    class="w-full flex flex-col items-center justify-center gap-10 mt-4 tab-content text-base md:text-lg text-grisT font-bold"
+                >
+                    <div class="w-full flex flex-col">
+                        <div
+                            class="w-full rounded-2xl overflow-hidden max-w-7xl mx-auto px-8"
+                        >
+                            <Image
+                                src={suspension}
+                                alt="Self-erecting system Silo"
+                                class="lg:w-1/2"
+                            />
+                        </div>
+                        <div class="bg-[#393939]">
+                            <div
+                                class="w-full grid grid-cols-1 items-center justify-center md:grid-cols-2 max-w-7xl mx-auto px-8"
+                            >
+                                <div class="lg:pl-5">
+                                    <h2
+                                        class="text-white text-xl md:text-2xl font-bold"
+                                    >
+                                        Sistema autoeregíble
+                                    </h2>
+                                    <br />
+                                    <p
+                                        class="font-thin text-base md:text-lg text-[#d9d9d9]"
+                                    >
+                                        El silo autoeregíble está equipado con
+                                        cilindros hidráulicos telescópicos, lo
+                                        que permite una elevación rápida y
+                                        eficiente. Con un tiempo de instalación
+                                        de solo 10 minutos, asegura una puesta
+                                        en marcha ágil. Los pernos de bloqueo
+                                        hidráulico garantizan una fijación
+                                        segura en posición vertical y
+                                        horizontal, brindando estabilidad y
+                                        precisión durante la operación.
+                                    </p>
+                                </div>
+                                <div class="max-w-7xl mx-auto px-8">
+                                    <Image
+                                        src={SiloSAE}
+                                        alt="Self-erecting system Silo"
+                                        class="lg:w-4/5 rounded-lg"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center">
+                            <Image
+                                src={SiloAEVL}
+                                alt="Self-erecting system Silo"
+                                class="w-1/2"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="w-full max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-10"
+                    >
+                        <Card>
+                            <div class="w-full flex justify-center">
+                                <Image
+                                    src={icon1}
+                                    alt="Arrow icon"
+                                    class="w-1/2 self-center"
+                                />
+                            </div>
+                            <h2 class="text-center text-xl md:text-2xl">
+                                Cilindros hidráulicos telescópicos para
+                                elevación.
+                            </h2>
+                        </Card>
+                        <Card>
+                            <div class="w-full flex justify-center">
+                                <Image
+                                    src={icon2}
+                                    alt="Watch icon"
+                                    class="w-1/2 self-center"
+                                />
+                            </div>
+                            <h2 class="text-center text-xl md:text-2xl">
+                                Tiempo de elevación de 10 minutos.
+                            </h2>
+                        </Card>
+                        <Card>
+                            <div class="w-full flex justify-center">
+                                <Image
+                                    src={icon3}
+                                    alt="Lock icon"
+                                    class="w-1/2 self-center"
+                                />
+                            </div>
+                            <h2 class="text-center text-xl md:text-2xl">
+                                Posicionamiento vertical y horizontal con pernos
+                                de bloqueo hidráulico.
+                            </h2>
+                        </Card>
+                    </div>
+                    <div
+                        class="w-full px-8 max-w-7xl mx-auto py-10 flex justify-center"
+                    >
+                        <h1
+                            class="text-blueMain text-2xl md:text-3xl text-center"
+                        >
+                            Capacidad de 45 y 95 toneladas
+                        </h1>
+                    </div>
+                    <div
+                        class="w-full bg-[#2b2b2b] text-white flex flex-col pt-10 h-full"
+                    >
+                        <div
+                            class="w-full max-w-7xl mx-auto px-8 relative h-[250px]"
+                        >
+                            <div
+                                class="w-full flex justify-between items-center"
+                            >
+                                <h2
+                                    class="text-xl md:text-2xl relative z-20 font-bold"
+                                >
+                                    Diferencia entre autoeregíble y
+                                    estacionario:
+                                </h2>
+                            </div>
+                            <br />
+
+                            <p
+                                class="font-thin text-base md:text-lg relative z-20"
+                            >
+                                Tanto los silos autoerigibles como los
+                                estacionarios comparten las mismas
+                                características y ventajas clave, ofreciendo
+                                eficiencia, durabilidad y flexibilidad. La
+                                principal diferencia radica en su funcionalidad.
+                            </p>
+
+                            <Image
+                                src={Logo}
+                                alt="Triaso Logo"
+                                class="absolute top-0 left-0 z-10 w-full"
+                            />
+                        </div>
+                        <!-- Otro contenido -->
+                        <div
+                            class="w-full flex flex-col gap-6 justify-center my-10"
+                        >
+                            <div
+                                class="w-full max-w-7xl mx-auto px-8 flex justify-between items-center gap-10"
+                            >
+                                <div class="max-w-[150px]">
+                                    <Image
+                                        src={icon4}
+                                        alt="No crane icon"
+                                        class=""
+                                    />
+                                </div>
+                                <div class="w-full items-center">
+                                    <details class="group">
+                                        <summary
+                                            class="flex items-center gap-5 cursor-pointer list-none"
+                                        >
+                                            <h1 class="text-2xl md:text-3xl">
+                                                No se requieren grúas para la
+                                                instalación
+                                            </h1>
+                                            <svg
+                                                class="transition-transform duration-300 group-open:rotate-180 w-[64px]"
+                                                id="dropdown-arrow"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                color="#ca1c1c"
+                                                stroke-width="1.5"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM16.0303 10.9697L12.5303 7.46967C12.2374 7.17678 11.7626 7.17678 11.4697 7.46967L7.96967 10.9697C7.67678 11.2626 7.67678 11.7374 7.96967 12.0303C8.26256 12.3232 8.73744 12.3232 9.03033 12.0303L11.25 9.81066V16C11.25 16.4142 11.5858 16.75 12 16.75C12.4142 16.75 12.75 16.4142 12.75 16V9.81066L14.9697 12.0303C15.2626 12.3232 15.7374 12.3232 16.0303 12.0303C16.3232 11.7374 16.3232 11.2626 16.0303 10.9697Z"
+                                                    fill="#ca1c1c"></path>
+                                            </svg>
+                                        </summary>
+                                        <p class="text-base md:text-lg">
+                                            El silo autoerigible de Triaso está
+                                            diseñado para facilitar su
+                                            transporte y una instalación rápida,
+                                            permitiendo su montaje sin necesidad
+                                            de grúas.
+                                        </p>
+                                    </details>
+                                </div>
+                            </div>
+                            <div
+                                class="w-full max-w-7xl mx-auto px-8 flex flex-row justify-between items-center gap-10"
+                            >
+                                <details class="group w-full">
+                                    <summary
+                                        class="flex w-full justify-between items-center gap-5 cursor-pointer list-none"
+                                    >
+                                        <div
+                                            class="flex flex-row items-center gap-5"
+                                        >
+                                            <h1 class="text-2xl md:text-3xl">
+                                                El silo más versátil y móvil del
+                                                mercado.
+                                            </h1>
+                                            <svg
+                                                class="transition-transform duration-300 group-open:rotate-180"
+                                                id="dropdown-arrow"
+                                                width="64"
+                                                height="64"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                color="#ca1c1c"
+                                                stroke-width="1.5"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM16.0303 10.9697L12.5303 7.46967C12.2374 7.17678 11.7626 7.17678 11.4697 7.46967L7.96967 10.9697C7.67678 11.2626 7.67678 11.7374 7.96967 12.0303C8.26256 12.3232 8.73744 12.3232 9.03033 12.0303L11.25 9.81066V16C11.25 16.4142 11.5858 16.75 12 16.75C12.4142 16.75 12.75 16.4142 12.75 16V9.81066L14.9697 12.0303C15.2626 12.3232 15.7374 12.3232 16.0303 12.0303C16.3232 11.7374 16.3232 11.2626 16.0303 10.9697Z"
+                                                    fill="#ca1c1c"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div class="w-[150px]">
+                                            <Image
+                                                src={icon5}
+                                                alt="Silo icon"
+                                                class=""
+                                            />
+                                        </div>
+                                    </summary>
+                                    <div class="w-full">
+                                        <p
+                                            class="font-thin text-base md:text-lg"
+                                        >
+                                            Este silo autoerigible revoluciona
+                                            la movilidad y la instalación con su
+                                            innovador sistema hidráulico.
+                                            Diseñado para una reubicación
+                                            sencilla, puede instalarse
+                                            completamente en solo 10 minutos.
+                                            Los pernos de bloqueo hidráulico
+                                            aseguran una colocación firme,
+                                            convirtiéndolo en la mejor opción
+                                            para almacenamiento de mezcla
+                                            asfáltica rápido, estable y
+                                            adaptable.
+                                        </p>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .silo-card.selected {
+        background-color: #1a3f6f;
+        box-shadow: 0 8px 30px rgba(26, 63, 111, 0.35);
+    }
+    .silo-card.selected .card-title {
+        color: #ffffff;
+    }
+    .silo-card.selected .card-subtitle {
+        color: #ffffff;
+    }
+    .silo-card.selected .card-list {
+        color: rgba(255, 255, 255, 0.85);
+    }
+    .silo-card.selected .bullet {
+        background-color: #ffffff;
+    }
+
+    /* ---- Card no seleccionada: blanca ---- */
+    .silo-card:not(.selected) {
+        background-color: #ffffff;
+    }
+    .silo-card:not(.selected) .card-title {
+        color: #1a3f6f;
+    }
+    .silo-card:not(.selected) .card-subtitle {
+        color: #1a3f6f;
+    }
+    .silo-card:not(.selected) .card-list {
+        color: #374151;
+    }
+    .silo-card:not(.selected) .bullet {
+        background-color: #374151;
+    }
+
+    .silo-card {
+        transition:
+            background-color 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+
+    .content-block {
+        animation: fadeUp 0.35s ease;
+    }
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<script>
+    function selectOption(option: string) {
+        const cardEst = document.getElementById("card-estacionario");
+        const cardAut = document.getElementById("card-autoeregible");
+        const contentEst = document.getElementById("content-estacionario");
+        const contentAut = document.getElementById("content-autoeregible");
+
+        if (!cardEst || !cardAut || !contentEst || !contentAut) return;
+
+        if (option === "estacionario") {
+            cardEst.classList.add("selected");
+            cardAut.classList.remove("selected");
+            contentEst.classList.remove("hidden");
+            contentAut.classList.add("hidden");
+            contentEst.classList.remove("content-block");
+            void (contentEst as HTMLElement).offsetWidth;
+            contentEst.classList.add("content-block");
+        } else {
+            cardAut.classList.add("selected");
+            cardEst.classList.remove("selected");
+            contentAut.classList.remove("hidden");
+            contentEst.classList.add("hidden");
+            contentAut.classList.remove("content-block");
+            void (contentAut as HTMLElement).offsetWidth;
+            contentAut.classList.add("content-block");
+        }
+    }
+
+    (window as any).selectOption = selectOption;
+</script>

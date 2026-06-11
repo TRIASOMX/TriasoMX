@@ -1,0 +1,731 @@
+---
+import SecondWhatsBtn from "../../../unitComponents/SecondWhatsBtn.astro";
+import poster from "../../../../../public/Videos/Webm/Posters/landing1.webp";
+import item1 from "../../../../assets/images/DrumMixers/a3.webp";
+import item2 from "../../../../assets/images/DrumMixers/a5.webp";
+import item3 from "../../../../assets/images/DrumMixers/a4.webp";
+import item4 from "../../../../assets/images/DrumMixers/Low/a2Low.webp";
+import item5 from "../../../../assets/images/DrumMixers/a6.webp";
+import item6 from "../../../../assets/images/DrumMixers/a1.webp";
+import { Image } from "astro:assets";
+import SmartVideo from "../../../unitComponents/SmartVideo";
+import DMProv1 from "../../../../assets/images/DrumMixers/DMProv1.webp";
+import obracivil from "../../../../assets/images/DrumMixers/obracivil.webp";
+import obracivil2 from "../../../../assets/images/DrumMixers/obracivil2.webp";
+import obracivil2Low from "../../../../assets/images/DrumMixers/Low/obracivil2Low.webp";
+import CasetaSeccion from "../Plus/CasetaSeccion.astro";
+import DropdownItem from "../../../unitComponents/DropdownItem.astro";
+
+import img1 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/TlvP317P268B.webp";
+import img2 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/ProvBU1.webp";
+import img3 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/DesamaqImg.webp";
+
+import img4 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/FirstImg.webp"
+import img5 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/SecondImg.webp"
+import img6 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/ThirdImg.webp"
+
+const desamaqPanels = [
+  {
+    title: "Producción y operación",
+    items: [
+      {
+        label:
+          "Ahorro en operadores innecesarios, gracias a una operación más automatizada y controlada.",
+      },
+      {
+        label:
+          "Ahorro en la eliminación de la fosa de lodos y su costosa operación.",
+      },
+      {
+        label:
+          "Ahorro en agregados vírgenes por el alto porcentaje de incorporación del RAP.",
+      },
+      {
+        label:
+          "Ahorro en jornadas laborales al evitar paros costosos y prolongados del equipo.",
+      },
+      {
+        label:
+          "Ahorro por menor desperdicio de mezcla fuera de especificación.",
+      },
+      {
+        label: "Ahorro en costos de calibración y ajustes frecuentes.",
+      },
+      {
+        label: "Ahorro en multas por la SEMARNAT por emisiones contaminantes.",
+      },
+    ],
+  },
+  {
+    title: "Mantenimiento y vida útil del equipo",
+    items: [
+      {
+        label:
+          "Gracias a componentes extra-reforzados diseñados para una larga vida útil.",
+      },
+      { label: "Por ser equipos fabricados en México y no de importación." },
+      { label: "Ahorro en refacciones recurrentes." },
+      { label: "Ahorro por mayor vida útil de filtros y mangas." },
+      { label: "Ahorro por menor desgaste en el tambor y los álabes." },
+    ],
+  },
+  {
+    title: "Energéticos y de consumo",
+    items: [
+      {
+        label: "Ahorro de combustible por la eficiencia de:",
+        subItems: [
+          { subLabel: "Nuestro quemador con sistema de precalentamiento" },
+          { subLabel: "El diseño de nuestros álabes" },
+          {
+            subLabel:
+              "Un tambor completamente sellado, sin entradas de aire frío",
+          },
+          {
+            subLabel:
+              "La capacidad de producir mezclas tibias cuando el diseño lo requiera",
+          },
+        ],
+      },
+      { label: "Ahorro en consumo eléctrico" },
+      {
+        label:
+          "La eficiencia del sistema de secado, ventilación y filtración reduce la carga eléctrica total por tonelada producida, especialmente en ventiladores y sistemas auxiliares",
+      },
+      {
+        label:
+          "Ahorro por menor sobrecalentamiento del agregado, al no requerir temperaturas excesivas para compensar pérdidas térmicas, reduciendo consumo energético y degradación del material.",
+      },
+    ],
+  },
+];
+
+const desamaqPanels2 = [
+  {
+    title: "Producción y operación",
+    items: [
+      {
+        label:
+          "Ahorro en operadores innecesarios, gracias a una operación más automatizada y controlada.",
+      },
+      {
+        label:
+          "Ahorro en la eliminación de la fosa de lodos y su costosa operación.",
+      },
+      {
+        label:
+          "Ahorro en agregados vírgenes por el alto porcentaje de incorporación del RAP.",
+      },
+      {
+        label:
+          "Ahorro en jornadas laborales al evitar paros costosos y prolongados del equipo.",
+      },
+      {
+        label:
+          "Ahorro por menor desperdicio de mezcla fuera de especificación.",
+      },
+      {
+        label: "Ahorro en multas por la SEMARNAT por emisiones contaminantes.",
+      },
+      {
+        label: "Ahorro en costos de calibración y ajustes frecuentes",
+      },
+      {
+        label:
+          "Ahorro en transporte de tolvas, tambor y casa de bolsas en una sola carga.",
+      },
+    ],
+  },
+  {
+    title: "Mantenimiento y vida útil del equipo",
+    items: [
+      {
+        label:
+          "Gracias a componentes extra-reforzados diseñados para una larga vida útil.",
+      },
+      { label: "Por ser equipos fabricados en México y no de importación." },
+      { label: "Ahorro en refacciones recurrentes." },
+      { label: "Ahorro por mayor vida útil de filtros y mangas." },
+      { label: "Ahorro por menor desgaste en el tambor y los álabes." },
+    ],
+  },
+  {
+    title: "Energéticos y de consumo",
+    items: [
+      {
+        label: "Ahorro de combustible por la eficiencia de:",
+        subItems: [
+          { subLabel: "Nuestro quemador con sistema de precalentamiento" },
+          { subLabel: "El diseño de nuestros álabes" },
+          {
+            subLabel:
+              "Un tambor completamente sellado, sin entradas de aire frío",
+          },
+          {
+            subLabel:
+              "La capacidad de producir mezclas tibias cuando el diseño lo requiera",
+          },
+        ],
+      },
+      { label: "Ahorro en consumo eléctrico" },
+      {
+        label:
+          "La eficiencia del sistema de secado, ventilación y filtración reduce la carga eléctrica total por tonelada producida, especialmente en ventiladores y sistemas auxiliares",
+      },
+      {
+        label:
+          "Ahorro por menor sobrecalentamiento del agregado, al no requerir temperaturas excesivas para compensar pérdidas térmicas, reduciendo consumo energético y degradación del material.",
+      },
+    ],
+  },
+];
+---
+
+<!-- Sección hotspot -->
+<section class="py-20">
+  <div>
+    <div
+      class="max-w-7xl mx-auto px-8 space-y-5 flex flex-col items-center justify-center"
+    >
+      <h1 class="font-bold text-black text-4xl">
+        Su mejor negocio comienza con nosotros
+      </h1>
+      <img src="https://placehold.co/1920x1080/png" alt="Placeholder" />
+    </div>
+  </div>
+</section>
+
+<section class="py-12">
+  <div class="max-w-7xl mx-auto px-8 mb-10">
+    <div class="flex border-b border-gray-200 justify-center">
+      <button
+        class="tab-button px-6 py-3 font-bold text-lg border-b-2 border-[#ca1c1c] text-black transition-all"
+        data-target="tab-1"
+      >
+        Con unidad de tolvas, independiente sobre chasis con llantas
+      </button>
+      <button
+        class="tab-button px-6 py-3 font-bold text-lg border-b-2 border-transparent text-gray-500 transition-all"
+        data-target="tab-2"
+      >
+        Con unidad de tolvas montadas sobre el mismo chasis
+      </button>
+    </div>
+  </div>
+
+  <div id="tab-container">
+    <div id="tab-1" class="tab-content block">
+      <section class="max-w-7xl mx-auto px-8 mb-20">
+        <div class="flex justify-center items-center mb-10">
+          <h1 class="text-black font-bold text-4xl text-center">
+            Ahorros que usted podrá lograr con la planta de asfalto
+          </h1>
+        </div>
+        <div>
+          <DropdownItem panels={desamaqPanels} />
+        </div>
+      </section>
+
+      <section>
+        <div class="w-full flex flex-col font-bold mt-5 lg:mt-0">
+          <div class="hidden max-w-7xl px-8 mx-auto lg:flex justify-start">
+            <Image
+              src={img1}
+              alt="Drum mixer on a construction zone"
+              class="hero-img lg:w-[70%] rounded-lg"
+            />
+          </div>
+          <div
+            class="flex max-w-7xl px-8 mx-auto lg:hidden md:flex justify-center"
+          >
+            <Image
+              src={img1}
+              alt="Drum mixer on a construction zone"
+              class="lg:w-4/5 rounded-lg"
+            />
+          </div>
+
+          <div class="">
+            <div
+              class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-2"
+            >
+              <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
+                <div class="w-full">
+                  <h2 class="text-black text-lg md:text-xl mb-4">
+                    Mayor capacidad de movilidad
+                  </h2>
+                  <p
+                    class="text-black text-sm lg:text-base text-justify font-normal"
+                  >
+                    Al montar las tolvas en un chasis independiente, estas
+                    pueden ser más sencillas de transportar, al mantener el
+                    chasis más corto del tambor mezclador, especialmente en
+                    caminos angostos. Son más sencillas de cargar de material,
+                    al poder ser cargadas desde un solo lado.
+                  </p>
+                </div>
+              </div>
+              <div class="w-full hidden lg:flex md:w-auto">
+                <Image
+                  src={img2}
+                  width={600}
+                  height={400}
+                  alt="Baghouse cleaning system"
+                  class="side-img rounded-2xl will-change-transform"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative flex justify-center max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
+          >
+            <Image
+              src={img2}
+              alt="Drum mixer"
+              class="rounded-2xl"
+            />
+          </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-8 mt-20">
+          <div class="flex flex-col">
+            <h1 class="text-4xl">
+              Con <span class="italic font-bold">Triaso</span>
+            </h1>
+            <p class="font-bold text-[#14427c] text-3xl">
+              conviértase en el proveedor preferido de mezcla asfáltica
+            </p>
+            <p class="font-bold text-[#14427c] text-3xl">
+              en todos los proyectos de pavimentación de su región.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="tab-2" class="tab-content hidden">
+      <section class="max-w-7xl mx-auto px-8 mb-20">
+        <div class="flex justify-center items-center mb-10">
+          <h1 class="text-black font-bold text-4xl text-center">
+            Ahorros que usted podrá lograr con la planta de asfalto
+          </h1>
+        </div>
+        <div>
+          <DropdownItem panels={desamaqPanels2} />
+        </div>
+      </section>
+
+      <section>
+        <div class="w-full flex flex-col font-bold mt-5 lg:mt-0">
+          <div class="hidden max-w-7xl px-8 mx-auto lg:flex justify-start">
+            <Image
+              src={img3}
+              alt="Drum mixer on a construction zone"
+              class="hero-img lg:w-[80%] rounded-lg"
+            />
+          </div>
+          <div
+            class="flex max-w-7xl px-8 mx-auto lg:hidden md:flex justify-center"
+          >
+            <Image
+              src={img3}
+              alt="Drum mixer on a construction zone"
+              class="lg:w-4/5 rounded-lg"
+            />
+          </div>
+
+          <div class="">
+            <div
+              class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-2"
+            >
+              <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
+                <div class="w-full">
+                  <h2 class="text-black text-lg md:text-xl mb-4">
+                    Mayor comodidad de operación
+                  </h2>
+                  <p
+                    class="text-black text-sm lg:text-base text-justify font-normal"
+                  >
+                    Al montar las tolvas y el tambor mezclador en el mismo
+                    chasis se simplifica la operación. Usted podrá mover toda su
+                    planta de asfalto en solo dos cargas, ahorrando en costos de
+                    transporte. Esta configuración reduce el número de
+                    componentes a desmontar, facilita la logística y agiliza los
+                    traslados entre frentes de trabajo.
+                  </p>
+                </div>
+              </div>
+              <div class="w-full hidden lg:flex md:w-auto">
+                <Image
+                  src={img2}
+                  width={600}
+                  height={400}
+                  alt="Baghouse cleaning system"
+                  class="side-img rounded-2xl will-change-transform"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative flex flex-col justify-center max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
+          >
+            <Image
+              src={img2}
+              alt="Drum mixer"
+              class="rounded-2xl w-4/5"
+            />
+
+          </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-8 mt-20">
+          <div class="flex flex-col">
+            <h1 class="text-4xl">
+              Con <span class="italic font-bold">Triaso</span>
+            </h1>
+            <p class="font-bold text-[#14427c] text-3xl">
+              conviértase en el proveedor preferido de mezcla asfáltica
+            </p>
+            <p class="font-bold text-[#14427c] text-3xl">
+              en todos los proyectos de pavimentación de su región.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- Otra sección  -->
+<section class="max-w-7xl mx-auto px-8">
+  <SmartVideo
+    client:visible
+    src="/Videos/Webm/landingVideo.webm"
+    aspectRatio="16/9"
+    poster={poster.src}
+    autoplayOnMobile={false}
+    isLoop={false}
+  />
+  <div
+    class="bg-white py-8 px-2 md:px-20 rounded-2xl flex flex-col items-center justify-center my-11"
+  >
+    <details class="group w-full flex flex-col justify-between">
+      <summary
+        class="flex flex-col justify-between items-center cursor-pointer list-none"
+      >
+        <div class="w-full flex justify-between mb-6">
+          <div class="flex flex-col gap-3">
+            <h1 class="text-2xl lg:text-5xl md:text-5xl font-normal">
+              Álabes Triaso de tambor mezclador
+            </h1>
+          </div>
+          <div>
+            <svg
+              class="transition-transform duration-300 group-open:rotate-180"
+              width="64px"
+              height="64px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              color="#0044a4"
+              stroke-width="1.5"
+              ><path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM16.0303 13.0303L12.5303 16.5303C12.2374 16.8232 11.7626 16.8232 11.4697 16.5303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L11.25 14.1893V8C11.25 7.58579 11.5858 7.25 12 7.25C12.4142 7.25 12.75 7.58579 12.75 8V14.1893L14.9697 11.9697C15.2626 11.6768 15.7374 11.6768 16.0303 11.9697C16.3232 12.2626 16.3232 12.7374 16.0303 13.0303Z"
+                fill="#0044a4"></path></svg
+            >
+          </div>
+        </div>
+      </summary>
+      <p
+        class="font-light text-sm lg:text-base md:text-base px-2 lg:px-0 md:px-0"
+      >
+        La mezcladora de tambor Triaso utiliza un diseño de contracorriente que
+        mejora tanto la eficiencia del secado como la de la mezcla. Su sistema
+        de paletas extraíbles optimiza el proceso y, gracias al control de
+        velocidad por variador de frecuencia (VFD), logra un uso más eficiente
+        del combustible y temperaturas de chimenea más bajas. Esto se traduce en
+        menores costos operativos y un menor impacto ambiental, todo ello sin
+        dejar de mantener el máximo rendimiento con un consumo energético
+        mínimo.
+      </p>
+    </details>
+
+    <div
+      class="grid grid-cols-3 md:grid-cols-6 items-start justify-around gap-5 my-10 w-full"
+    >
+      <div class="flex flex-col items-center justify-center font-light">
+        <Image src={item1} width={200} height={200} alt="Inlet Flight" />
+        <p>Álabe de entrada</p>
+      </div>
+      <div class="flex flex-col items-center justify-center font-light">
+        <Image src={item2} width={200} height={200} alt="Pusher Flight" />
+        <p class="text-center">Álabe de acondicionamiento</p>
+      </div>
+      <div class="flex flex-col items-center justify-center font-light">
+        <Image src={item3} width={200} height={200} alt="Drying Flight" />
+        <p>Álabe de secado</p>
+      </div>
+      <div class="flex flex-col items-center justify-center font-light">
+        <Image src={item4} width={200} height={200} alt="RAP Flight" />
+        <p>Álabe de RAP</p>
+      </div>
+      <div class="flex flex-col items-center justify-center font-light">
+        <Image src={item5} width={200} height={200} alt="Radiation Flight" />
+        <p class="text-center">Álabe de radiación</p>
+      </div>
+      <div class="flex flex-col items-center justify-center font-light">
+        <Image src={item6} width={200} height={200} alt="Mixing Flight" />
+        <p>Álabe de mezclado</p>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- Sección banner -->
+
+<section class="py-5">
+  <div
+    class="bg-black lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(/drumBanner.webp)] bg-cover bg-center bg-no-repeat relative"
+  >
+    <div class="absolute inset-0 bg-[#000000]/70"></div>
+    <div class="max-w-7xl mx-auto px-8 space-y-5 relative">
+      <div class="pt-5">
+        <h1 class="text-4xl font-bold text-white">
+          ¿Indeciso sobre el equipo ideal para su proyecto?
+        </h1>
+      </div>
+
+      <div
+        class="w-full flex flex-col justify-center pb-5 lg:justify-around md:justify-around items-center lg:flex-row relative"
+      >
+        <div class="">
+          <p class="text-white">
+            La compra de una planta de asfalto es una gran inversión, y la base
+            de un negocio de producción de mezcla asfáltica. Compre
+            inteligentemente y con criterio.
+          </p>
+          <p class="text-white">
+            Podemos asesorarlo de forma transparente en la inversión de su
+            planta de asfalto, ayudándolo a elegir la opción más adecuada.
+          </p>
+        </div>
+        <div
+          class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
+        >
+          <!-- Botón 1 -->
+          <SecondWhatsBtn />
+
+          <a
+            href="/Contact"
+            aria-label="Button to request a quote"
+            class="border-white border text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-between gap-2 shadow-md"
+          >
+            <div class="px-5 py-2">
+              <p>Solicitar una cotización</p>
+            </div>
+            <div class="px-5 py-2">
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                color="#FFFFFF"
+              >
+                <!-- Icono del segundo botón (opcional) -->
+                <path
+                  d="M5 12H19M19 12L12 5M19 12L12 19"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="flex justify-center items-center py-10">
+    <h1 class="font-bold text-4xl text-center text-[#393939]">
+      Las mejores plantas de asfalto <br>
+      <span class="text-[#CA1C1C]">
+        son mexicanas
+      </span>
+    </h1>
+  </div>
+
+
+
+  <div class="w-full flex flex-col font-bold mt-5 lg:mt-0">
+    <div class="hidden max-w-7xl px-8 mx-auto lg:flex justify-start">
+      <Image
+        src={img4}
+        alt="Drum mixer on a construction zone"
+        class="dhero-img lg:w-[80%] rounded-lg"
+      />
+    </div>
+    <div class="flex max-w-7xl px-8 mx-auto lg:hidden md:flex justify-center">
+      <Image
+        src={img4}
+        alt="Drum mixer on a construction zone"
+        class="lg:w-4/5 rounded-lg"
+      />
+    </div>
+
+    <div class="bg-[#14427C]">
+      <div
+        class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-2"
+      >
+        <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
+          <div class="w-full space-y-5">
+            <h2 class="text-white text-lg md:text-xl">
+              Diseñada para una inversión económica <br />
+              Fabricación para ofrecer una producción libre de problemas
+            </h2>
+            <p
+              class="text-white font-normal text-sm lg:text-lg md:text-lg text-justify"
+            >
+              Sabemos que las necesidades que debe satisfacer cada planta de
+              asfalto son completamente diferentes. Por eso, nuestras plantas
+              están diseñadas para adaptarse a los requerimientos de cada
+              producción única de mezcla asfáltica.
+            </p>
+            <p
+              class="text-white font-normal text-sm lg:text-lg md:text-lg text-justify"
+            >
+              Desde la fabricación, hasta materiales extra-reforzados,
+              fabricamos nuestras plantas para una operación continúa que mejora
+              la eficiencia y la seguridad del equipo, evitando paros
+              innecesarios y costos, cada componente tiene un propósito.
+            </p>
+          </div>
+        </div>
+        <div class="w-full hidden lg:flex md:w-auto">
+          <Image
+            src={img5}
+            width={600}
+            height={400}
+            alt="Baghouse cleaning system"
+            class="dside-img rounded-2xl will-change-transform"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl hidden  mx-auto lg:flex  lg:justify-start lg:items-center"
+    >
+      <Image
+        src={img6}
+        alt="Usage of a Drum mixer"
+        class="dfade-img rounded-lg lg:w-3/5"
+      />
+    </div>
+
+    <div
+      class="relative grid grid-cols-2 max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
+    >
+      <Image src={img5} alt="Drum mixer" class="rounded-2xl w-4/5" />
+      <Image src={img6} alt="Usage of a Drum mixer" class="rounded-lg" />
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-8 mt-20">
+    <div class="flex flex-col">
+      <h1 class="text-4xl">
+        Con <span class="italic font-bold">Triaso</span>
+      </h1>
+      <p class="font-bold text-[#14427c] text-3xl">
+        conviértase en el proveedor preferido de mezcla asfáltica
+      </p>
+      <p class="font-bold text-[#14427c] text-3xl">
+        en todos los proyectos de pavimentación de su región.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <CasetaSeccion />
+</section>
+
+<script>
+  import { initScrollAnimations } from "../../../DrumMixers/Contraflujo/Desamaq/scrollDesamaq";
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("DOMContentLoaded", () => {
+      initScrollAnimations();
+    });
+  }
+</script>
+
+<script>
+  function setupTabs() {
+    const buttons = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-target");
+
+        // Resetear botones
+        buttons.forEach((b) => {
+          b.classList.remove("border-[blue-900]", "text-blue-900");
+          b.classList.add("border-transparent", "text-gray-500");
+        });
+
+        // Activar botón clickeado
+        btn.classList.add("border-[#ca1c1c]", "text-black");
+        btn.classList.remove("border-transparent", "text-gray-500");
+
+        // Ocultar todos los contenidos
+        contents.forEach((content) => {
+          content.classList.add("hidden");
+          content.classList.remove("block");
+        });
+
+        // Mostrar contenido objetivo
+        const targetElement = document.getElementById(target);
+        if (targetElement) {
+          targetElement.classList.remove("hidden");
+          targetElement.classList.add("block");
+        }
+      });
+    });
+  }
+
+  // Ejecutar en la carga inicial y después de transiciones de View Transitions si se usan
+  setupTabs();
+  document.addEventListener("astro:after-swap", setupTabs);
+</script>
+
+<style>
+  .tab-button {
+    cursor: pointer;
+    outline: none;
+  }
+  /* Estilo opcional para suavizar la aparición del contenido */
+  .tab-content.block {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

@@ -6,126 +6,83 @@ import img1 from "../../assets/images/BinUnits/Consola.webp";
 import img2 from "../../assets/images/ColdMix/CMProv1.webp";
 import OSectionBin from "../BinUnits/OSectionBin.astro";
 import LearnBtn from "../unitComponents/LearnBtn.astro";
+import OsDrumSection from "../DrumMixers/OsDrumSection.astro";
 ---
 
-<div
-    class="w-full flex flex-col items-center justify-center font-bold mt-10 gap-10"
->
-    <div
-        class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-8 items-center gap-5"
-    >
-        <div class="hidden lg:flex md:flex">
-            <Image src={img1} alt="Control panel" class="rounded-lg" />
-        </div>
-
-        <div class="w-full">
-            <h2 class="text-black text-xl md:text-2xl font-bold">
-                Integrated Control Over Aggregate Flow
-            </h2><br />
-            <div class="space-y-5">
-                <p
-                    class="text-grisT text-sm lg:text-lg md:text-lg text-justify font-bold"
-                >
-                    Real-time aggregate flow monitoring—whether performed
-                    remotely or on-site—gives operators full control over
-                    material handling and production data through the central
-                    control system, allowing quick adjustments and ensuring
-                    consistent cold-mix results.
-                </p>
-                <p
-                    class="text-grisT text-sm lg:text-lg md:text-lg text-justify font-bold"
-                >
-                    At the same time, it provides supervisors and equipment
-                    owners with complete visibility of aggregate flow and
-                    overall operational performance.
-                </p>
-            </div>
-
-            <div class="flex flex-col items-center justify-center pt-5 lg:hidden md:hidden">
+<div class="w-full flex flex-col font-bold mt-10">
+    <div class="bg-[#14427c]">
+        <div
+            class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-8 pt-10 items-center gap-5"
+        >
+            <div class="hidden lg:flex md:flex">
                 <Image src={img1} alt="Control panel" class="rounded-lg" />
             </div>
+
+            <div class="w-full">
+                <h2 class="text-white text-xl md:text-2xl font-bold">
+                    Control integrado del flujo de agregados
+                </h2><br />
+                <div class="space-y-5">
+                    <p
+                        class="text-white text-sm lg:text-lg md:text-lg text-justify font-bold"
+                    >
+                        El monitoreo del flujo de agregados en tiempo real —ya
+                        sea de forma remota o en campo— brinda a los operadores
+                        control total sobre los materiales y los datos de
+                        producción mediante el sistema de control central,
+                        permitiendo ajustes rápidos y garantizando resultados
+                        uniformes en la mezcla en frío.
+                    </p>
+                    <p
+                        class="text-white text-sm lg:text-lg md:text-lg text-justify font-bold"
+                    >
+                        A la vez, ofrece a supervisores y propietarios una
+                        visibilidad completa del flujo de agregados y del
+                        desempeño operativo del equipo.
+                    </p>
+                </div>
+
+                <div
+                    class="flex flex-col items-center justify-center pt-5 lg:hidden md:hidden"
+                >
+                    <Image src={img1} alt="Control panel" class="rounded-lg" />
+                </div>
+            </div>
         </div>
-    </div>
-    <div
-        class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-8 items-center"
-    >
-        <div class="w-full">
-            <h2 class="text-black text-xl md:text-2xl font-bold">
-                Precision Dosing for Reliable Results
-            </h2><br />
-            <p
-                class="text-grisT text-sm lg:text-lg md:text-lg text-justify font-bold"
-            >
-                Equipped with aggregate bins and adjustable gates, cold mix
-                plants provide precise control of aggregate dosing. This
-                accuracy ensures for consistent mix quality and repeatable
-                results, even when working different material types or
-                gradations. <br /><br />
-                Real-time monitoring provides complete control over aggregate and
-                asphalt emulsion incorporation, allowing continuous access to production
-                data and equipment performance.
-            </p>
-        </div>
-        <div class="w-full flex py-5 justify-center lg:justify-end">
-            <Image
-                src={img2}
-                alt="Triaso Relief System on a tablet"
-                class="w-4/5 rounded-lg"
-            />
+
+        <div
+            class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-8 pb-10 items-center"
+        >
+            <div class="w-full">
+                <h2 class="text-white text-xl md:text-2xl font-bold">
+                    Dosificación precisa para resultados confiables
+                </h2><br />
+                <p
+                    class="text-white text-sm lg:text-lg md:text-lg text-justify font-bold"
+                >
+                    Compuertas ajustables, en tolvas permitiendo un control
+                    preciso de la dosificación de agregados. Garantizando mezcla
+                    uniforme y controlada, incluso al trabajar con distintos
+                    tipos de materiales o granulometrías.
+                    <br /><br />
+                    Entendemos la importancia de tener control total de la operación,
+                    nuestro sistema incluye un modo de operación completamente manual.
+                    No dependemos de una configuración totalmente automatizada, la
+                    planta puede seguir operando manualmente sin interrumpir la producción.
+                </p>
+            </div>
+            <div class="w-full flex py-5 justify-center lg:justify-end">
+                <Image
+                    src={img2}
+                    alt="Triaso Relief System on a tablet"
+                    class="w-4/5 rounded-lg"
+                />
+            </div>
         </div>
     </div>
 
     <OSectionBin />
-    <div
-        class="w-full flex flex-col lg:flex-row text-2xl md:text-3xl justify-between max-w-7xl mx-auto px-8"
-    >
-        <div class="w-full text-grisT">
-            <h1>AESTHETIC SIDE PANELS</h1>
-            <div class="mt-4 mb-6 flex self-start w-full">
-                <div class="w-full md:w-44 h-0.5 bg-red-500"></div>
-                <div class="w-full md:w-44 h-0.5 bg-gray-300"></div>
-            </div>
-        </div>
-        <div class="text-redBg text-start lg:text-end">
-            <h1>ENHANCE YOUR COMPANY IMAGE <br />WITH TRIASO DESIGN</h1>
-        </div>
-    </div>
-    <div
-        class="w-full max-w-7xl mx-auto px-8 flex flex-col justify-center items-center"
-    >
-        <Image src={SideP} alt={"Side Panels Image"} />
-        <LearnBtn href="/AestheticSide" />
-    </div>
+
     <CustomBins />
-    <div
-        class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-10"
-    >
-        <div class="w-full flex flex-col px-8 gap-4 text-center lg:text-start">
-            <h2 class="text-lg md:text-xl">Eco-Friendly Asphalt Solutions</h2>
-            <p class="font-thin text-sm lg:text-lg md:text-lg text-justify">
-                Cold mix technology operates at lower temperatures and produces
-                fewer emissions than traditional hot-mix plants. This makes it a
-                practical and environmentally responsible solution, especially
-                in regions with strict emissions regulations or urban work
-                zones.
-            </p>
-        </div>
-        <div class="w-full flex flex-col px-8 gap-4 text-center lg:text-end">
-            <h2 class="text-lg md:text-xl">
-                Built for Mobility and Easy Setup
-            </h2>
-            <p class="font-thin text-sm lg:text-lg md:text-lg text-justify">
-                Compact, mobile configurations make cold mix plants easy to
-                transport and set up on any site. With minimal installation
-                requirements, they are ideal for short-term project or
-                relocation from site to site quickly and efficiently.
-            </p>
-        </div>
-    </div>
-    <h2
-        class="text-blueMain text-xl md:text-2xl mb-20 px-8 lg:px-52 text-center"
-    >
-        Sell at a lower price than competitors, attract more customers, and
-        achieve higher profits
-    </h2>
+
 </div>

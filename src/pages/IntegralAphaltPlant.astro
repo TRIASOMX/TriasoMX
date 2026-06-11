@@ -1,44 +1,109 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import IntroductionSection from '../components/IntegralAsphalt/IntroductionSection.astro';
-import SlidersCarrusel from '../components/IntegralAsphalt/SlidersCarrusel';
-import Hero2 from '../components/IntegralAsphalt/Hero2.astro';
-import TabsIntegral from '../components/IntegralAsphalt/TabsIntegral';
-import NeedSection from '../components/IntegralAsphalt/NeedSection.astro';
+import IntroductionSection from "../components/IntegralAsphalt/IntroductionSection.astro";
+import SlidersCarrusel from "../components/IntegralAsphalt/SlidersCarrusel";
+import Hero2 from "../components/IntegralAsphalt/Hero2.astro";
+import TabsIntegral from "../components/IntegralAsphalt/TabsIntegral";
+import NeedSection from "../components/IntegralAsphalt/NeedSection.astro";
 import Banner from "../components/unitComponents/Banner.astro";
 import CardSection from "../components/IntegralAsphalt/CardSection.astro";
-import PlanoSection from '../components/IntegralAsphalt/PlanoSection'
+import PlanoSection from "../components/IntegralAsphalt/PlanoSection";
 import SliderHero from "../components/IntegralAsphalt/SliderHero";
-import OdometerSection from '../components/IntegralAsphalt/OdometerSection';
+import OdometerSection from "../components/IntegralAsphalt/OdometerSection";
 import CardSectionResponsive from "../components/unitComponents/CardSectionResponsive.astro";
+import HeroComponent from "../components/unitComponents/HeroComponent.astro";
 
+import hero1 from "../assets/images/IntegralAsphalt/Hero2.webp";
+import hero2 from "../../public/Gallery/tolva3.webp";
 
 const images2 = [
-  { src: '/Gallery/counterflow.webp', title: 'Counterflow drum mixer' , texto: `<span style="color:black">The counterflow drum mixer</span>, located at the center of the chassis, is engineered for efficient heat transfer and minimal fines loss, ensuring consistent asphalt mix quality. Its robust construction and advanced sealing minimize air infiltration and reduce maintenance. Designed specifically for the 10 Tph plant, it delivers reliable performance in a compact, cost-effective system.`},
-  { src: '/Gallery/Caja2.webp', title: 'External pugmill mixer' , texto: `<span style="color:black">The external pugmill mixer</span>, mounted directly below the drum outlet, ensures superior final mixing of the asphalt. This added stage guarantees a more homogeneous and consistent mix by thoroughly blending materials before discharge. Driven by a 5 hp motor with a robust gearbox, it features interchangeable wear-resistant paddles for long service life and easy maintenance.`},
-  { src: '/Gallery/aggregatesbin.webp', title: 'Aggregates bin',texto:`<span style="color:black">The aggregates bin</span> is designed to store pre-dosed material ready for asphalt production. Its trapezoidal discharge and smooth belt operation ensure steady, controlled flow to the drying system. Equipped with a lagged head pulley for improved belt grip, it supports consistent feeding for reliable mix quality throughout the process.`},
-  { src: '/Gallery/Tnq.webp', title: 'Asphalt tank', texto:`<span style="color:black">The asphalt tank </span>is designed for efficient storage and heating, ensuring a steady asphalt supply at the ideal production temperature. With a 140,000 Btu/hr burner and integrated agitator, it enables fast heating and quick start-up. A 2" pump with a 2 hp motor ensures smooth flow, optimizing plant performance. Mounted on a sturdy chassis with support legs, it offers stable stationary operation with optional mobility.`},
-  { src: '/Gallery/electricgen.webp', title: 'Electric Generator' , texto:`<span style="color:black">The electric generator </span>provides consistent, reliable power for the entire asphalt plant. With 20 kW continuous and 22 kW emergency capacity, it supports all electrical components seamlessly. Powered by a 35 hp Cummins diesel engine and a 110-liter fuel tank, it offers extended runtime with low maintenance.`},
-  { src: '/Gallery/controlgabinet.webp', title: 'Control Cabinet', texto:`<span style="color:black">The control cabinet </span>centralizes the operation of the entire plant, offering intuitive management of all key components—from aggregate feeding to asphalt injection. Built with industrial-grade components, it ensures reliable performance in demanding environments. Its user-friendly interface allows precise control of temperature, material flow, and mixer timing, streamlining production and reducing operator error.` },
-  { src: '/Gallery/fueltank.webp', title: 'Fuel Tank', texto:`<span style="color:black">The fuel tank</span>, positioned behind the asphalt tank, has a 750-liter capacity and supplies diesel to the burner system. Its placement ensures easy access for refueling while maintaining a compact layout within the plant. Built for durability and continuous operation, it supports extended production runs without interruption.` },
-  
-  { src: '/Gallery/burner.webp', title: 'Burner' , texto:`<span style="color:black">The burner </span>optimizes heat generation for the drying and mixing process in the asphalt plant, ensuring efficient and stable combustion. Built with high-strength materials and industrial-grade components, it maintains reliable performance even under demanding conditions. Its precise control system automatically adjusts the air-fuel ratio to maximize thermal efficiency, reduce fuel consumption, and minimize emissions.`},
-  
+  {
+    src: "/Gallery/counterflow.webp",
+    title: "Tambor secador de contraflujo",
+    texto: `<span style="color:black">El tambor secador de contraflujo</span>, ubicado en el centro del chasis, está diseñado para una transferencia de calor eficiente y una mínima pérdida de finos, garantizando una calidad constante en la mezcla asfáltica. Su construcción robusta y el sistema avanzado de sellado minimizan la infiltración de aire y reducen el mantenimiento. Diseñado específicamente para la planta de 10 TPH, ofrece un rendimiento confiable en un sistema compacto y rentable.`,
+  },
+  {
+    src: "/Gallery/Caja2.webp",
+    title: "Mezclador pugmill externo",
+    texto: `<span style="color:black">El mezclador externo tipo pugmill,</span> está montado directamente debajo de la salida del tambor. Esta etapa adicional asegura una mezcla más homogénea y consistente al combinar completamente los materiales antes de la descarga. Impulsado por un motor de 5 hp con una caja reductora robusta, cuenta con paletas intercambiables resistentes al desgaste para una larga vida útil y mantenimiento sencillo.`,
+  },
+  {
+    src: "/Gallery/aggregatesbin.webp",
+    title: "Tolva de agregados",
+    texto: `<span style="color:black">La tolva de agregados </span> está diseñada para almacenar material pre-dosificado listo para la producción de asfalto, o con opción de la tolva tri-partida. Su descarga trapezoidal y el funcionamiento suave de la banda transportadora aseguran un flujo constante y controlado hacia el sistema de secado. Equipada con una polea recubierta en la cabeza para mejorar la tracción de la banda, permite una alimentación continua que garantiza una mezcla de calidad constante durante todo el proceso.`,
+  },
+  {
+    src: "/Gallery/Tnq.webp",
+    title: "Tanque de asfalto",
+    texto: `<span style="color:black">El tanque de asfalto</span> está diseñado para un almacenamiento y calentamiento eficiente, garantizando un suministro constante de asfalto a la temperatura ideal para la producción. Equipado con un quemador de 140,000 Btu/h y un agitador de asfalto, permite un calentamiento rápido y tiempos de arranque más cortos. Una bomba de carga de 2" con motor de 2 hp asegura un flujo de asfalto uniforme, optimizando la eficiencia de la planta.`,
+  },
+  {
+    src: "/Gallery/electricgen.webp",
+    title: "Generador eléctrico",
+    texto: `Generador eléctrico de 20 kW en operación continua y 22 kW en modo de emergencia, diseñado para alimentar de forma confiable todos los sistemas de la planta de asfalto. Cuenta con un motor diésel Cummins de 35 hp y un tanque de 110 litros, lo que le permite operar por largas jornadas con mínimo mantenimiento. Su carcasa insonorizada asegura un funcionamiento silencioso.`,
+  },
+  {
+    src: "/Gallery/controlgabinet.webp",
+    title: "Gabinete de control",
+    texto: `<span style="color:black">El gabinete de control</span> centraliza toda la operación de la planta, ofreciendo un control sencillo y óptimo de cada etapa, desde la alimentación de agregados hasta la inyección de asfalto. Está fabricado con componentes industriales de alta calidad, lo que asegura un funcionamiento confiable incluso en condiciones exigentes. Su interfaz permite ajustar con precisión la temperatura, el flujo de materiales y los tiempos de mezclado.`,
+  },
+  {
+    src: "/Gallery/fueltank.webp",
+    title: "Tanque de combustible",
+    texto: `<span style="color:black">El tanque de combustible</span>, ubicado detrás del tanque de asfalto, tiene una capacidad de 750 litros y suministra diésel al sistema de quemado. Su colocación permite un fácil acceso para el repostaje, manteniendo al mismo tiempo un diseño compacto dentro de la planta. Construido para ofrecer durabilidad y operación continua, permite ciclos de producción prolongados sin interrupciones.`,
+  },
+
+  {
+    src: "/Gallery/burner.webp",
+    title: "Quemador",
+    texto: `<span style="color:black">El quemador </span>optimiza el calor necesario para todo el proceso de secado y mezcla en el tambor, asegurando una combustión eficiente y estable. Manteniendo un rendimiento confiable incluso en las condiciones de operación más exigentes. Su sistema de control preciso regula automáticamente la relación aire-combustible, maximizando la eficiencia térmica, reduciendo el consumo de combustible y minimizando las emisiones.`,
+  },
 ];
 ---
 
-<Layout title="Integral Asphalt Plant">
-    <SliderHero client:visible />
-    <IntroductionSection />
-    <OdometerSection client:only />
-    <div class="max-w-[1920px] mx-auto px-8">
-      <SlidersCarrusel client:visible images={images2}/> 
+<Layout title="Plantas de asfalto integrales">
+  <div class="mt-10">
+    <HeroComponent
+      title="Plantas de asfalto de 10 Tph integrales de contraflujo"
+      image={hero1.src}
+      imageAlt="Plantas de asfalto de 10 Tph integrales de contraflujo"
+      altImage={hero2.src}
+      descAltImage="Plantas de asfalto de 10 Tph integrales de contraflujo"
+    />
+  </div>
+
+  <div class="bg-[#1e1e1e]">
+    <div class="max-w-7xl mx-auto px-8 py-10">
+      <div
+        class="flex flex-col justify-center items-center text-center space-y-5"
+      >
+        <h1 class="font-thin text-white text-base">
+          Ofrece una solución compacta, todo en uno para una producción de
+          mezcla asfáltica eficiente. Combina todos los componentes montados
+          sobre un chasis. Esta planta está diseñada para ofrecer flexibilidad,
+          facilidad de transporte y un rendimiento confiable en diversos
+          entornos operativos.
+        </h1>
+        <h1 class="font-thin text-white text-base">
+          Montada sobre un chasis móvil o sobre patas estacionarias, esta planta
+          de asfalgo está diseñada para ofrecer flexibilidad, facilidad de
+          transporte y un desempeño confiable en distintos entornos de
+          operación.
+        </h1>
+      </div>
     </div>
-    <Hero2 />
-    <TabsIntegral client:visible />
-    <NeedSection />
-    <Banner />
-    <PlanoSection client:only/>
-    <!-- <CardSection /> -->
-    <CardSectionResponsive/>
+  </div>
+  <OdometerSection client:only />
+  <div class="max-w-[1920px] mx-auto px-8">
+    <SlidersCarrusel client:visible images={images2} />
+  </div>
+  <Hero2/>
+  <SliderHero client:visible />
+  <TabsIntegral client:visible />
+
+  <NeedSection />
+  <Banner />
+  <PlanoSection client:only />
+  <!-- <CardSection /> -->
+  <CardSectionResponsive />
 </Layout>

@@ -13,34 +13,34 @@ export default function App() {
             id: "A",
             label: "A",
             image: img3.src,
-            title: "Competitive pricing without compromising quality",
+            title: "Precios competitivos sin comprometer la calidad",
             description:
-              "High quality industrial solutions ensuring reliability and durability.",
+              "Soluciones industriales de alta calidad que garantizan fiabilidad y durabilidad.",
           },
           {
             id: "B",
             label: "B",
             image: img2.src,
             title:
-              "In-depth technical expertise for exceptional customer service",
+              "Amplios conocimientos técnicos para ofrecer un servicio al cliente excepcional",
             description:
-              "Our equipment is designed with cutting-edge technology for maximum performance.",
+              "Nuestros equipos están diseñados con tecnología de vanguardia para ofrecer el máximo rendimiento.",
           },
           {
             id: "C",
             label: "C",
             image: img4.src,
-            title: "Customization to adapt to specific customer needs",
+            title: "Personalización para adaptarse a las necesidades específicas del cliente",
             description:
-              "We have supplied and installed equipment worldwide with proven results.",
+              "Hemos suministrado e instalado equipos en todo el mundo con resultados probados.",
           },
           {
             id: "D",
             label: "D",
             image: img1.src,
-            title: "Immediate spare parts availability",
+            title: "Disponibilidad inmediata de piezas de repuesto",
             description:
-              "Dedicated support team to ensure smooth operation and long-term satisfaction.",
+              "Un equipo de soporte especializado para garantizar un funcionamiento fluido y la satisfacción a largo plazo.",
           },
         ]}
       />

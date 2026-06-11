@@ -30,7 +30,7 @@ const OHOdometer = () => {
           setTimeout(() => {
             setValue(1);
             setValue1(2);
-            setValue2(2);
+            setValue2(100);
             setValue4(6);
             setValue3(4);
             setValue5(2);
@@ -52,7 +52,7 @@ const OHOdometer = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full max-w-7xl mx-auto px-8 py-10 lg:py-0 lg:mt-56 lg:mb-56 md:mt-56 md:mb-56">
+    <div ref={sectionRef} className="w-full max-w-7xl mx-auto px-8 py-10 lg:py-0 lg:mt-32 lg:mb-32 md:mt-32 md:mb-32">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
         <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
           <div className="flex flex-col items-center lg:items-start justify-center">
@@ -62,29 +62,26 @@ const OHOdometer = () => {
               <Odometer value={value5} format="(,ddd)" duration={2000} />
               <h1>.</h1>
               <Odometer value={value6} format="(,ddd)" duration={2000} />
-              <p className="text-sm font-normal ml-3">million Btu/Hr</p>
+              <p className="text-sm font-normal ml-3">millones de Btu/Hr</p>
             </div>
-            <p className="text-[#4F4F4F]">Heating capacity</p>
+            <p className="text-[#4F4F4F]">Capacidad de calentamiento</p>
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value1} format="(,ddd)" duration={2000} />
-              <p className="text-sm font-normal ml-3">inches</p>
+              <p className="text-sm font-normal ml-3">pulgadas</p>
             </div>
-            <p className="text-[#4F4F4F]">High eficiency diamter coil system</p>
+            <p className="text-[#4F4F4F]">Sistema de serpentín de alta eficiencia</p>
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
-              <Odometer value={value4} format="(,ddd)" duration={2000} />
-              <h1>.</h1>
-              <Odometer value={value3} format="(,ddd)" duration={2000} />
-              <p className="text-sm font-normal ml-3">gallons</p>
+              <p className="text-sm font-normal ml-3">litros</p>
             </div>
             <p className="text-[#4F4F4F] text-start w-full">
-              Thermal oil expansion tank
+             Tanque de expansión de aceite térmico
             </p>
           </div>
         </div>
@@ -93,31 +90,6 @@ const OHOdometer = () => {
           <div>
             <img src={single.src} alt="Front of an oil heater system" />
           </div>
-          <a
-  href="#planosOil"
-  className="
-    group relative inline-flex items-center justify-center
-    px-4 py-2 rounded-xl
-    border border-black
-    text-black font-medium
-    overflow-hidden
-
-    transition-all duration-300 ease-out
-    hover:text-white hover:-translate-y-0.5 hover:shadow-lg
-  "
->
-  <span
-    className="
-      absolute inset-0 bg-black
-      translate-y-full
-      transition-transform duration-300 ease-out
-      group-hover:translate-y-0
-    "
-  />
-  <span className="relative z-10">
-    All Technical Details
-  </span>
-</a>
         </div>
       </div>
     </div>

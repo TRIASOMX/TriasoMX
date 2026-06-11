@@ -16,8 +16,12 @@ import OSection from "../unitComponents/OSection.astro";
 import siloBG from "../../assets/images/HotMix/siloBG.webp";
 import Aislamiento from "../../assets/images/HotMix/Aislamiento.webp";
 import HMGallerySlider from "./HMGallerySlider";
-import poster1 from "../../assets/images/HotMix/silos1.webp"
+import poster1 from "../../assets/images/HotMix/silos1.webp";
 import SmartVideo from "../unitComponents/SmartVideo";
+import OSHand from "../../assets/images/OSHand.webp";
+import Slider from "../IntegralAsphalt/SliderOsIntegral";
+import SliderVentajas from "./SliderVentajas.astro";
+import logo2 from "../../assets/logos/triasoLogo.png";
 
 const images = [
   {
@@ -44,30 +48,81 @@ const images = [
 <section class="w-full flex mt-6 md:mt-20 flex-col gap-4 bg-gray-100">
   <div class="flex flex-col gap-4 mt-8">
     <div
-      class="flex w-full max-w-7xl mx-auto px-4 gap-2 sm:gap-4 justify-center items-center"
+      class="flex w-full max-w-7xl mx-auto gap-3 sm:gap-5 justify-center items-stretch border border-[#c5c5c5] rounded-3xl"
     >
+      <!-- Tab 1: Computerization -->
       <button
-        class="tab-button-1 flex-1 py-5 lg:py-3 px-2 font-bold text-xs sm:text-sm md:text-xl text-center leading-tight focus:outline-none"
+        class="tab-button-1 flex-1 flex flex-col items-center justify-center gap-2 py-4 px-3 rounded-xl focus:outline-none transition-all duration-200"
         data-tab="tab1"
         aria-selected="true"
       >
-        <!-- Cambiado a true -->
-        Computerization
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="tab-icon w-8 h-8 sm:w-10 sm:h-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0H3"
+          ></path>
+        </svg>
+        <span class="font-bold text-xs sm:text-sm md:text-base leading-tight"
+          >Digitalización</span
+        >
       </button>
+
+      <!-- Tab 2: Advantages -->
       <button
-        class="tab-button-1 flex-1 py-5 lg:py-3 px-2 font-bold text-xs sm:text-sm md:text-xl text-center leading-tight focus:outline-none"
+        class="tab-button-1 flex-1 flex flex-col items-center justify-center gap-2 py-4 px-3 rounded-xl focus:outline-none transition-all duration-200"
         data-tab="tab2"
         aria-selected="false"
       >
-        <!-- Cambiado a false -->
-        Advantages
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="tab-icon w-8 h-8 sm:w-10 sm:h-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          ></path>
+        </svg>
+        <span class="font-bold text-xs sm:text-sm md:text-base leading-tight"
+          >Ventajas</span
+        >
       </button>
+
+      <!-- Tab 3: Low Maintenance -->
       <button
-        class="tab-button-1 flex-1 py-3 md:py-5 lg:py-3 px-2 font-bold text-xs sm:text-sm md:text-xl text-center leading-tight focus:outline-none"
+        class="tab-button-1 flex-1 flex flex-col items-center justify-center gap-2 py-4 px-3 rounded-xl focus:outline-none transition-all duration-200"
         data-tab="tab3"
         aria-selected="false"
       >
-        Low Maintenance
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="tab-icon w-8 h-8 sm:w-10 sm:h-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l5.654-4.654m5.96-4.994a9.064 9.064 0 0 1 .256-.539c.444-.851.961-1.659 1.542-2.403a.75.75 0 0 1 1.079-.094l2.432 2.432a.75.75 0 0 1-.093 1.079 10.38 10.38 0 0 1-2.404 1.542 8.963 8.963 0 0 1-.538.255Z"
+          ></path>
+        </svg>
+        <span class="font-bold text-xs sm:text-sm md:text-base leading-tight"
+          >Bajo mantenimiento</span
+        >
       </button>
     </div>
     <div class="py-4">
@@ -77,42 +132,145 @@ const images = [
       >
         <!-- First Section -->
         <div
-          class="w-full flex flex-col items-center justify-center gap-4 mt-4 tab-content-1 text-base md:text-lg text-grisT"
+          class="w-full flex flex-col gap-4 mt-4 tab-content-1 text-base md:text-lg text-grisT"
           data-tab-content="tab1"
         >
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 justify-center items-center"
-          >
-            <div class="p-4 font-bold lg:px-36 order-2 md:order-1">
-              <p>
-                Offers automated, precise control for weighing and delivering
-                hot mix, reducing the risk of human error and increasing
-                operational efficiency.
-              </p><br />
-              <p>
-                The silo HMI can be connected to the asphalt plant’s computer
-                using industrial protocols such as Ethernet Industrial, Modbus,
-                and CANopen. If needed, Triaso communication interface can be
-                integrated for additional protocol requirements and advanced
-                real-time data monitoring regardless of location.
-              </p><br />
-              <p>
-                Equipped with quick connection contacts for easy setup and
-                maintenance, along with protective signs to shield the
-                electrical components from weather conditions.
-              </p>
+          <!-- OS sección -->
+          <section class="bg-white overflow-visible">
+            <div class="max-w-7xl mx-auto lg:px-0">
+              <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+                <!-- Texto -->
+                <div class="text-white max-w-xl px-8">
+                  <h1
+                    class="text-2xl md:text-3xl font-semibold my-6 bg-gradient-to-r from-[#f8ad00] via-[#dc363a] to-[#3992ff] bg-clip-text text-transparent"
+                  >
+                    Sistema de operación Triaso® − Relief
+                  </h1>
+                  <p class="text-[#393939] font-semibold leading-relaxed">
+                    Ofrecemos una forma práctica y eficiente de gestionar el
+                    funcionamiento de nuestros equipos. Gracias a sistemas
+                    avanzados de monitoreo y automatización, <span
+                      class="text-black"
+                      >simplificamos tanto el manejo de los equipos como el
+                      trabajo de la tripulación.
+                    </span> Control total de cada etapa de la producción, con un seguimiento
+                    completo de todos los datos operativos.
+                  </p>
+                  <div class="pt-5 flex items-center justify-center">
+                    <a
+                      href="/Relief"
+                      aria-label="View page drum Mixers"
+                      class="text-white text-center mb-5 mt-5 text-xs md:text-sm font-normal border-2 border-[#14427c] rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-[#14427c] hover:bg-white hover:text-black hover:border-white"
+                    >
+                      Ver más
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Imagen -->
+                <div class="flex justify-end relative">
+                  <Image
+                    src={OSHand}
+                    alt="Triaso OS"
+                    class="w-[280px] md:w-[360px] lg:w-[420px]"
+                  />
+                </div>
+              </div>
+
+              <Slider client:only />
+              <div class="flex flex-col justify-center items-center px-8">
+                <div>
+                  <h1 class="font-bold text-3xl text-center text-black">
+                    Para evitar desperdicios, robos y mala operación de su
+                    planta de asfalto
+                  </h1>
+                </div>
+                <div>
+                  <p class="text-center text-black">
+                    Paro total con un solo botón desde su celular
+                  </p>
+                </div>
+              </div>
             </div>
+          </section>
+
+          <section class="flex flex-col justify-center items-center">
             <div
-              class="w-full h-auto flex justify-center items-center px-8 md:px-36 order-1 md:order-2"
+              class="w-full max-w-7xl mx-auto px-4 flex flex-col justify-center gap-2 pt-10"
             >
-              <Image
-                src={silo}
-                alt="Silo Image"
-                class={"max-w-[400px] max-h-[600px]"}
-              />
+              <Collapsable client:visible />
             </div>
-          </div>
-          <OSection />
+          </section>
+
+          <section>
+            <div
+              class="w-full bg-[#2b2b2b] text-white flex flex-col justify-center pt-10 h-full"
+            >
+              <div
+                class="w-full max-w-7xl mx-auto px-8 relative h-[300px] lg:h-[250px]"
+              >
+                <h2 class="text-xl md:text-2xl relative z-20 font-bold">
+                  Interfaz amigable
+                </h2>
+                <br />
+                <p class="font-thin text-sm md:text-base relative z-20">
+                  Diseñada para brindar a los operadores y especialmente a los
+                  dueños del equipo un mayor entendimiento de su operación,
+                  nuestra plataforma basada en la nube almacena todos los datos
+                  de producción de forma remota y segura. Le permite acceder a
+                  análisis detallados de desempeño desde cualquier ubicación y
+                  dispositivo, ya sea en la oficina, en camino o en obra. Con
+                  acceso en tiempo real a tendencias, registros y métricas
+                  operativas, la toma de decisiones se vuelve más rápida,
+                  informada y completamente independiente de su ubicación
+                  física.
+                </p>
+                <Image
+                  src={Logo}
+                  alt="Triaso Logo"
+                  class="absolute top-0 left-0 z-10 w-full opacity-40"
+                />
+              </div>
+              <div class="w-full bg-bgBeige -skew-y-2">
+                <div
+                  class="w-full grid grid-cols-1 md:grid-cols-2 py-20 max-w-7xl mx-auto px-8 skew-y-2 gap-3 md:gap-10"
+                >
+                  <div class="w-full text-center text-black">
+                    <h1 class="font-bold text-black text-xl md:text-2xl">
+                      Alarma visual y audible para nivel máximo de mezcla
+                    </h1><br />
+                    <p class="text-base md:text-lg">
+                      Alarmas visuales y audibles que alertan al operador y al
+                      personal cuando el silo está lleno.
+                    </p>
+                  </div>
+                  <div class="w-full text-center text-black">
+                    <h1 class="font-bold text-black text-xl md:text-2xl">
+                      Sensor sónico para indicar el nivel de mezcla dentro del
+                      silo
+                    </h1><br />
+                    <p class="text-base md:text-lg">
+                      Visualización en tiempo real del nivel de mezcla asfáltica
+                      en la consola del operador y dispositivos móviles.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full relative">
+                <!-- Imagen -->
+                <Image
+                  src={semiSilo}
+                  alt="Semi silo"
+                  class="w-[90vw] md:w-[60vw] mx-auto relative z-10 -mb-10"
+                />
+
+                <!-- Sección blanca -->
+                <div class="w-full bg-bgMain h-[80px] relative z-0"></div>
+              </div>
+            </div>
+          </section>
+
           <TwoColumnSection
             leftBg="bg-redBg"
             rightBg="bg-blueMain"
@@ -121,326 +279,529 @@ const images = [
             imageWidth="150px"
           >
             <div slot="left" class="flex flex-col justify-center gap-3">
-              <h1 class="text-xl md:text-2xl">Versatil Setup</h1>
+              <h1 class="text-xl md:text-2xl">Configuración versátil</h1>
               <p class="text-base md:text-lg">
-                Works seamlessly in a dedicated control cabin or under a
-                protective roof.
+                Funciona sin problemas en una cabina de control dedicada o bajo
+                un techo de protección.
               </p>
             </div>
             <div slot="right" class="flex flex-col justify-center gap-3">
-              <h1 class="text-xl md:text-2xl">Quick Adjustments</h1>
+              <h1 class="text-xl md:text-2xl">Ajustes rápidos</h1>
               <p class="text-base md:text-lg">
-                Allows rapid adjustments to control settings or operating
-                parameters to match project requirements.
+                Permite realizar ajustes rápidos en los parámetros de control u
+                operación para adaptarse a los requerimientos del proyecto.
               </p>
             </div>
           </TwoColumnSection>
-
-          <div
-            class="w-full max-w-7xl mx-auto px-4 flex flex-col justify-center gap-2 pt-10"
-          >
-            <Collapsable client:visible />
-          </div>
-          <div class="w-full max-w-7xl mx-auto px-8 py-10 flex justify-center">
-            <Image src={HMI} alt="Triaso Relief system " class="w-4/5" />
-          </div>
-          <div
-            class="w-full bg-[#2b2b2b] text-white flex flex-col justify-center pt-10 h-full"
-          >
-            <div
-              class="w-full max-w-7xl mx-auto px-8 relative h-[300px] lg:h-[250px]"
-            >
-              <h2 class="text-xl md:text-2xl relative z-20 font-bold">
-                User Friendly Interface
-              </h2>
-              <br />
-              <p class="font-thin text-sm md:text-base relative z-20">
-                Created to offer plant operators a deeper understanding of their
-                operation, this cloud-based platform stores all production data
-                remotely and securely. It gives you the freedom to access
-                detailed performance analytics from any location and any
-                device—whether you're in the office, on the road, or at a job
-                site. With real-time access to trends, logs, and operational
-                metrics, decision-making becomes faster, more informed, and
-                fully independent of your physical location.
-              </p>
-              <Image
-                src={Logo}
-                alt="Triaso Logo"
-                class="absolute top-0 left-0 z-10 w-full opacity-40"
-              />
-            </div>
-            <div class="w-full bg-bgBeige -skew-y-2">
-              <div
-                class="w-full grid grid-cols-1 md:grid-cols-2 py-20 max-w-7xl mx-auto px-8 skew-y-2 gap-3 md:gap-10"
-              >
-                <div class="w-full text-center text-black">
-                  <h1 class="font-bold text-black text-xl md:text-2xl">
-                    Visual and audible alarm for maximum mix level
-                  </h1><br />
-                  <p class="text-base md:text-lg">
-                    Visual and audible alarms to alert the operator and
-                    personnel when the silo is full.
-                  </p>
-                </div>
-                <div class="w-full text-center text-black">
-                  <h1 class="font-bold text-black text-xl md:text-2xl">
-                    Sonic sensor to indicate mix level inside the silo
-                  </h1><br />
-                  <p class="text-base md:text-lg">
-                    Real-time display of hot mix level on the operator console.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-full relative">
-              <!-- Imagen -->
-              <Image
-                src={semiSilo}
-                alt="Semi silo"
-                class="w-[90vw] md:w-[60vw] mx-auto relative z-10 -mb-10"
-              />
-
-              <!-- Sección blanca -->
-              <div class="w-full bg-bgMain h-[80px] relative z-0"></div>
-            </div>
-          </div>
         </div>
         <!-- Second Section -->
+
         <div
           class="w-full flex flex-col items-center justify-center gap-4 mt-4 tab-content-1 hidden text-base md:text-lg text-grisT"
           data-tab-content="tab2"
         >
           <div
-            class="grid grid-cols-1 md:grid-cols-2 justify-center items-center max-w-7xl mx-auto px-8"
+            class="relative w-full overflow-hidden bg-[#0d0d0d] rounded-2xl"
+            style="height: clamp(320px, 800vw, 800px);"
           >
-            <div
-              class="w-full flex flex-col justify-start items-center gap-6 order-2 md:order-1"
-            >
-              <div class="bg-white p-4 font-bold rounded-2xl">
-                <AcordeonItem
-                  client:visible
-                  title="Essential Storage Solutions for Efficient Asphalt Operations"
-                  content={`Hot mix storage silos are essential for maintaining the quality and efficiency of asphalt production and delivery operations. 
-                                
-                                Built with durable materials and advanced control systems, these silos deliver consistent performance under demanding conditions while helping reduce operating costs and downtime. Whether used in stationary or mobile configurations, the silo provides practical flexibility and dependable operation, making it an essential element of any asphalt plant.`}
-                />
+            <!-- Imagen de fondo -->
+            <div class="absolute inset-0">
+              <img
+                src="https://placehold.co/1920x1080/png"
+                alt="placeholder"
+                class="block h-full w-full object-cover object-center"
+                fetchpriority="high"
+              />
+
+              <!-- Fade inferior -->
+              <div
+                class="pointer-events-none absolute bottom-0 left-0 right-0 h-[55%]"
+                style="background: linear-gradient(to bottom, transparent 0%, rgba(10,10,10,0.55) 50%, rgba(10,10,10,0.95) 80%, #0a0a0a 100%);"
+              >
               </div>
-              <div class="flex flex-row items-start gap-5">
-                <div class="items-start">
-                  <Image
-                    src={Aislamiento}
-                    alt="Six inches fiberglass insulation"
-                    class="w-[600px]"
-                  />
-                  <div
-                    class="flex flex-col justify-end items-center pt-5 space-y-2 lg:space-y-0"
-                  >
-                    <p class="text-blueMain font-bold">Six inches</p>
-                    <p class="font-bold text-center">fiberglass insulation</p>
-                  </div>
-                </div>
-                <div class="flex flex-col gap-10">
-                  <AcordeonItem
-                    client:visible
-                    title="Optimized Insulation Design"
-                    content={`The silo walls are designed with high-efficiency insulation that not only preserves the hot-mix temperature but also minimizes heat loss, reducing energy consumption and ensuring the material stays at the ideal temperature for up to 72 hours — even in extreme weather conditions.`}
-                  />
-                  <AcordeonItem
-                    client:visible
-                    title="Enhanced Loading and Unloading Efficiency"
-                    content={`The silos are designed with an optimized loading and unloading system that allows for faster material transfer, reducing wait times and improving overall throughput. This feature enhances productivity by streamlining the flow of materials during operations.`}
-                  />
-                </div>
+
+              <!-- Fade lateral derecho -->
+              <div
+                class="pointer-events-none absolute bottom-0 right-0 top-0 w-1/4"
+                style="background: linear-gradient(to right, transparent 0%, rgba(10,10,10,0.4) 100%);"
+              >
+              </div>
+
+              <!-- Overlay diagonal -->
+              <div
+                class="pointer-events-none absolute inset-0"
+                style="background: linear-gradient(135deg, rgba(10,10,10,0.45) 0%, transparent 60%, rgba(10,10,10,0.2) 100%);"
+              >
               </div>
             </div>
-            <div class="w-full order-1 md:order-2">
-              <SmartVideo 
-                client:visible
-                src="/Videos/Webm/HMAdv.webm"
-                poster={poster1.src}
-                isLoop={true}
-                autoplayOnMobile={true}
-              />
+
+            <!-- Contenido -->
+            <div
+              class="absolute inset-0 flex items-end mt-10"
+              style="padding: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 5rem);"
+            >
+              <div class="max-w-7xl mx-auto px-8 flex flex-col">
+                <h1
+                  class="m-0 font-bold uppercase text-white text-xl md:text-3xl lg:text-4xl text-center"
+                >
+                  Mayor eficiencia en carga y descarga
+                </h1>
+
+                <p class="text-white text-center">
+                  Los silos están diseñados con un sistema optimizado de carga y
+                  descarga, garantizando entrega de material más rápida,
+                  reduciendo tiempos de espera y mejorando el rendimiento
+                  general. Aumentando la productividad al optimizar el flujo de
+                  materiales durante la operación.
+                </p>
+
+                <SliderVentajas />
+
+                <img src={logo2.src} alt="Logo" />
+              </div>
             </div>
           </div>
-
-          <HMGallerySlider client:load images={images} />
         </div>
         <!-- Third Section -->
         <div
-          class="w-full  mx-auto flex flex-col mt-4 tab-content-1 hidden text-base md:text-lg text-grisT font-bold"
+          class="w-full mx-auto flex flex-col mt-4 tab-content-1 hidden text-base md:text-lg text-grisT font-bold"
           data-tab-content="tab3"
         >
-          <div class="w-full max-w-7xl mx-auto p-8 text-center lg:text-start">
-            <h1 class="text-red-600 font-bold">
-              We understand the importance of keeping your equipment running
-              non-stop. The operation of many other machines depends on the
-              reliability of your asphalt plant.
-            </h1>
-            <p class="font-bold">
-              Strict quality control ensures the operation of your asphalt plant
-              with low maintenance for many years.
-            </p>
-          </div>
           <div
-            class="relative w-full bg-gradient-to-b from-[#e7e7e7] to-[#393939] py-20 [clip-path:ellipse(150%_100%_at_50%_100%)]"
+            class="relative w-full overflow-hidden bg-[#15437c] rounded-2xl"
+            style="height: clamp(320px, 800vw, 800px);"
           >
-            <p>­</p>
+            <!-- Imagen de fondo -->
+            <div class="absolute inset-0">
+              <img
+                src="https://placehold.co/1920x1080/png"
+                alt="placeholder"
+                class="block h-full w-full object-cover object-center"
+                fetchpriority="high"
+              />
+
+              <!-- Fade inferior -->
+              <div
+                class="pointer-events-none absolute bottom-0 left-0 right-0 h-[55%]"
+                style="background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(21,68,125,0.4) 50%,
+    rgba(21,68,125,0.75) 80%,
+    rgba(21,68,125,0.95) 100%
+  );"
+              >
+              </div>
+
+              <!-- Fade lateral derecho -->
+              <div
+                class="pointer-events-none absolute bottom-0 right-0 top-0 w-1/4"
+                style="background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(21,68,125,0.5) 100%
+  );"
+              >
+              </div>
+
+              <!-- Overlay diagonal -->
+              <div
+                class="pointer-events-none absolute inset-0"
+                style="background: linear-gradient(
+    135deg,
+    rgba(21,68,125,0.35) 0%,
+    transparent 60%,
+    rgba(21,68,125,0.2) 100%
+  );"
+              >
+              </div>
+            </div>
+
+            <!-- Contenido -->
+            <div
+              class="absolute inset-0 flex items-end mt-10"
+              style="padding: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 5rem);"
+            >
+              <div class="max-w-7xl mx-auto px-8 flex flex-col">
+                <h1
+                  class="m-0 font-bold uppercase text-white text-xl md:text-3xl lg:text-4xl text-center"
+                >
+                  Mayor eficiencia en carga y descarga
+                </h1>
+
+                <p class="text-white text-center">
+                  Los silos están diseñados con un sistema optimizado de carga y
+                  descarga, garantizando entrega de material más rápida,
+                  reduciendo tiempos de espera y mejorando el rendimiento
+                  general. Aumentando la productividad al optimizar el flujo de
+                  materiales durante la operación.
+                </p>
+
+                <div class="p-10">
+                  <div class="max-w-7xl mx-auto">
+                    <!-- CONTENEDOR -->
+                    <div
+                      class="card-row flex sm:grid sm:grid-cols-3 gap-3 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar"
+                      id="cardRow0"
+                    >
+                      <!-- CARD 1 -->
+                      <div
+                        class="relative rounded-lg overflow-hidden group cursor-pointer min-w-[85%] sm:min-w-0 snap-center"
+                      >
+                        <div
+                          class="w-full h-80 bg-black/10 flex items-center justify-center"
+                        >
+                          <img src="https://placehold.co/600x400" alt="" />
+                        </div>
+
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                        >
+                          <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                          >
+                            Disponibilidad rápida de refacciones
+                          </span>
+
+                          <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                          >
+                            <svg
+                              class="chevron w-3 h-3 transition-transform duration-300"
+                              viewBox="0 0 12 12"
+                              fill="none"
+                            >
+                              <path
+                                d="M2 4l4 4 4-4"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                          </button>
+
+                          <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                          >
+                            <p
+                              class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                              Para minimizar tiempos de inactividad, los silos
+                              están diseñados con componentes estándar y de
+                              fácil reemplazo. Esto reduce los tiempos de
+                              reparación y ayuda a mantener la operación
+                              continua sin interrupciones prolongadas.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- CARD 2 -->
+                      <div
+                        class="relative rounded-lg overflow-hidden group cursor-pointer min-w-[85%] sm:min-w-0 snap-center"
+                      >
+                        <div
+                          class="w-full h-80 bg-black/10 flex items-center justify-center"
+                        >
+                          <img src="https://placehold.co/600x400" alt="" />
+                        </div>
+
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                        >
+                          <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                          >
+                            Recubrimiento resistente a la corrosión
+                          </span>
+
+                          <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                          >
+                            <svg
+                              class="chevron w-3 h-3 transition-transform duration-300"
+                              viewBox="0 0 12 12"
+                            >
+                              <path
+                                d="M2 4l4 4 4-4"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                          </button>
+
+                          <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                          >
+                            <p
+                              class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                              Equipados con un recubrimiento especializado
+                              resistente a la corrosión que protege contra el
+                              desgaste causado por condiciones climáticas y
+                              agentes químicos, asegurando durabilidad y
+                              funcionalidad incluso en ambientes exigentes.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- CARD 3 -->
+                      <div
+                        class="relative rounded-lg overflow-hidden group cursor-pointer min-w-[85%] sm:min-w-0 snap-center"
+                      >
+                        <div
+                          class="w-full h-80 bg-black/10 flex items-center justify-center"
+                        >
+                          <img src="https://placehold.co/600x400" alt="" />
+                        </div>
+
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
+                        >
+                          <span
+                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
+                          >
+                            Materiales de alta calidad
+                          </span>
+
+                          <button
+                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+                          >
+                            <svg
+                              class="chevron w-3 h-3 transition-transform duration-300"
+                              viewBox="0 0 12 12"
+                            >
+                              <path
+                                d="M2 4l4 4 4-4"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"></path>
+                            </svg>
+                            mostrar más
+                          </button>
+
+                          <div
+                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+                          >
+                            <p
+                              class="text-white/75 text-xs leading-relaxed mt-2"
+                            >
+                              Nuestros silos están fabricados con materiales de
+                              alta calidad, seleccionados directamente por
+                              nosotros, garantizando un desempeño superior y una
+                              larga vida útil. Al fabricar cada componente
+                              internamente, mantenemos un estricto control de
+                              calidad, asegurando que cada silo cumpla con los
+                              más altos estándares de durabilidad, eficiencia y
+                              confiabilidad.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img src={logo2.src} alt="Logo" />
+              </div>
+            </div>
           </div>
 
-          <section
-            class="relative w-full bg-gradient-to-b from-[#393939] to-[#383838] overflow-hidden lg:overflow-visible"
-          >
-            <Image
-              src={siloBG}
-              alt="Silo background"
-              class="absolute hidden md:block right-0 top-1/2 -translate-y-1/2 w-[900px] max-w-none opacity-40 pointer-events-none"
-            />
-
-            <Image
-              src={siloBG}
-              alt="Silo background"
-              class="absolute md:hidden top-0 left-1/2 -translate-x-1/2 w-[110%] max-w-none opacity-20 pointer-events-none"
-            />
-
-            <div
-              class="relative z-10 max-w-7xl mx-auto text-white px-6 md:px-10 py-10"
-            >
-              <p class="mb-6">
-                The silos are built with durable, easy-to-maintain components
-                that require minimal upkeep. Their robust construction and
-                simple design reduce the need for frequent repairs, lowering
-                long-term maintenance costs and increasing the lifespan of the
-                equipment.
-              </p>
-
-              <p>
-                We understand the importance of keeping your equipment running
-                nonstop. The reliability of your silos, built to operate in a
-                variety of weather conditions—from intense heat to freezing
-                temperatures—ensures consistent performance and minimizes
-                downtime, providing dependable operation year-round.
-              </p>
-            </div>
-            <div
-              class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 my-10 z-10 px-6 md:px-10 gap-10"
-            >
-              <div class="relative pb-4">
-                <div
-                  class="absolute left-0 top-0 -translate-x-[100vw] w-[100vw] h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-blueMain"
-                >
-                </div>
-
-                <div
-                  class="relative bg-blueMain text-white p-4 sm:p-5 md:p-6 w-full md:w-4/5 h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] flex flex-col justify-center gap-4 md:gap-6 rounded-r-[30px]"
-                >
-                  <h1 class="text-lg sm:text-xl md:text-2xl font-semibold">
-                    24/7 customer service
-                  </h1>
-
-                  <p class="text-[#d9d9d9] text-sm sm:text-base">
-                    Our team is available around the clock, ready to assist at
-                    any time.
-                  </p>
-
-                  <Whatsbtn />
-                </div>
-              </div>
-
+          <div class="bg-[#393939]">
+            <div class="max-w-7xl mx-auto px-8 py-10">
               <div
-                class="w-full flex flex-col items-center justify-center gap-6 mb-5"
+                class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center gap-10"
               >
-                <AcordeonItem
-                  client:visible
-                  title="Quick Replacement Parts Availability"
-                  content="To ensure minimal downtime, the silos are designed with standard, easily replaceable parts. This reduces lead time for repairs and helps maintain smooth operations without extended interruptions."
-                />
-
-                <AcordeonItem
-                  client:visible
-                  title="Corrosion-Resistant Coating"
-                  content="Equipped with a specialized corrosion-resistant coating that protects against wear and tear from weather elements and chemicals, ensuring durability and functionality even in harsh environments."
-                />
-
-                <AcordeonItem
-                  client:visible
-                  title="High-Quality Materials, Manufactured In-House"
-                  content="Our silos are constructed using premium materials sourced directly by us, ensuring superior quality and long-lasting performance."
-                />
+                <div
+                  class="flex flex-col justify-center items-center space-y-5"
+                >
+                  <h1 class="font-bold text-white text-3xl">
+                    Nos adaptamos a su proyecto
+                  </h1>
+                  <p class="text-[#d9d9d9]">
+                    Pueden personalizarse y adaptarse a diferentes
+                    requerimientos de manejo de materiales, ofreciendo
+                    eficiencia y confiabilidad en cualquier proyecto.
+                  </p>
+                  <a
+                    href="/Contact"
+                    aria-label="Button to request a quote"
+                    class="border-white border border- text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-center gap-2 shadow-md"
+                  >
+                    Solicitar una cotización
+                    <svg
+                      width="24px"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      color="#FFFFFF"
+                    >
+                      <!-- Icono del segundo botón (opcional) -->
+                      <path
+                        d="M5 12H19M19 12L12 5M19 12L12 19"
+                        stroke="#FFFFFF"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  class="flex flex-col justify-center items-center space-y-5"
+                >
+                  <h1 class="font-bold text-white text-3xl">
+                    Servicio al cliente 24/7
+                  </h1>
+                  <p class="text-[#d9d9d9]">
+                    Nuestro equipo está disponible en todo momento, listo para
+                    asistirte cuando lo necesites, incluso fines de semana y
+                    días festivos.
+                  </p>
+                  <a
+                    href="/Contact"
+                    aria-label="Button to request a quote"
+                    class="border-white border border- text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-center gap-2 shadow-md"
+                  >
+                    Servicio y refacciones
+                    <svg
+                      width="24px"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      color="#FFFFFF"
+                    >
+                      <!-- Icono del segundo botón (opcional) -->
+                      <path
+                        d="M5 12H19M19 12L12 5M19 12L12 19"
+                        stroke="#FFFFFF"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
-          </section>
+          </div>
 
-          <section
-            class="w-full bg-gradient-to-b from-[#383838] to-[#e7e7e7] py-20"
+          <div
+            class="relative bg-gradient-to-b from-[#f0eeb8] to-white text-center py-20 px-6
+              rounded-b-[60%]"
           >
-            <p>­­</p>
-          </section>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+              Agende una reunión
+            </h2>
+
+            <p class="text-sm md:text-base mb-8 max-w-2xl mx-auto">
+              Cuéntenos más sobre su proyecto para identificar la solución
+              industrial que mejor se ajuste a sus necesidades.
+            </p>
+
+            <button
+              class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
+            >
+              Ver horarios disponibles
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<style is:global>
-  /* Estilos para los tabs activos */
-  .tab-button-1[aria-selected="true"] {
-    color: var(--rojo-btn);
-    border-bottom: 2px solid var(--rojo-btn);
-  }
-
-  .tab-button-1[aria-selected="false"] {
-    color: var(--gris-titulos);
-    border-bottom: 2px solid var(--gris-titulos);
-  }
-
-  .tab-button-1:hover:not([aria-selected="true"]) {
-    color: var(--rojo-btn);
-    border-bottom: 2px solid var(--rojo-btn);
-  }
-</style>
-
-<script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
-    const wrapper = document.getElementById('tabs-wrapper');
-    const allContents = document.querySelectorAll('.tab-content-1');
-    const buttons = document.querySelectorAll('.tab-button-1');
-    
-    let currentObserver = null;
-    const setWrapperHeight = (element) => {
-      wrapper.style.height = element.scrollHeight + 'px';
-    };
-    const observeActiveContent = (element) => {
-      if (currentObserver) {
-        currentObserver.disconnect();
-      }
-      currentObserver = new ResizeObserver(() => {
-        setWrapperHeight(element);
-      });
-      currentObserver.observe(element);
-    };
-    const activeContent = document.querySelector('.tab-content-1:not(.hidden)');
-    if (activeContent) {
-      setWrapperHeight(activeContent);
-      observeActiveContent(activeContent);
+  <style is:global>
+    .tab-button-1[aria-selected="true"] {
+      background-color: var(--azul-main, #0044a4);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(26, 58, 107, 0.35);
     }
-    buttons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('data-tab');
-        const targetContent = document.querySelector(`.tab-content-1[data-tab-content="${targetId}"]`);
-        buttons.forEach(b => b.setAttribute('aria-selected', 'false'));
-        btn.setAttribute('aria-selected', 'true');
-        allContents.forEach(c => c.classList.add('hidden'));
-        targetContent.classList.remove('hidden');
-        setWrapperHeight(targetContent);
-        observeActiveContent(targetContent);
+
+    .tab-button-1[aria-selected="false"] {
+      background-color: #ffffff;
+      color: var(--gris-titulos, #555555);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .tab-button-1:hover:not([aria-selected="true"]) {
+      background-color: #f0f4ff;
+      color: var(--azul-main, #1a3a6b);
+      border-color: var(--azul-main, #1a3a6b);
+    }
+  </style>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const wrapper = document.getElementById("tabs-wrapper");
+      const allContents = document.querySelectorAll(".tab-content-1");
+      const buttons = document.querySelectorAll(".tab-button-1");
+
+      let currentObserver = null;
+      const setWrapperHeight = (element) => {
+        wrapper.style.height = element.scrollHeight + "px";
+      };
+      const observeActiveContent = (element) => {
+        if (currentObserver) {
+          currentObserver.disconnect();
+        }
+        currentObserver = new ResizeObserver(() => {
+          setWrapperHeight(element);
+        });
+        currentObserver.observe(element);
+      };
+      const activeContent = document.querySelector(
+        ".tab-content-1:not(.hidden)",
+      );
+      if (activeContent) {
+        setWrapperHeight(activeContent);
+        observeActiveContent(activeContent);
+      }
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const targetId = btn.getAttribute("data-tab");
+          const targetContent = document.querySelector(
+            `.tab-content-1[data-tab-content="${targetId}"]`,
+          );
+          buttons.forEach((b) => b.setAttribute("aria-selected", "false"));
+          btn.setAttribute("aria-selected", "true");
+          allContents.forEach((c) => c.classList.add("hidden"));
+          targetContent.classList.remove("hidden");
+          setWrapperHeight(targetContent);
+          observeActiveContent(targetContent);
+        });
+      });
+      window.addEventListener("resize", () => {
+        const active = document.querySelector(".tab-content-1:not(.hidden)");
+        if (active) setWrapperHeight(active);
       });
     });
-    window.addEventListener('resize', () => {
-      const active = document.querySelector('.tab-content-1:not(.hidden)');
-      if (active) setWrapperHeight(active);
-    });
-  });
-</script>
+  </script>
+
+  <script>
+    document
+      .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
+      .forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const expandible = btn.nextElementSibling as HTMLElement;
+          const chevron = btn.querySelector(".chevron") as HTMLElement;
+          const isOpen =
+            expandible.style.maxHeight && expandible.style.maxHeight !== "0px";
+
+          if (isOpen) {
+            expandible.style.maxHeight = "0px";
+            chevron.style.transform = "rotate(0deg)";
+            btn.setAttribute("aria-expanded", "false");
+          } else {
+            expandible.style.maxHeight = expandible.scrollHeight + "px";
+            chevron.style.transform = "rotate(180deg)";
+            btn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+  </script>
+</section>

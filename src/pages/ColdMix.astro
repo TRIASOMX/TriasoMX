@@ -1,25 +1,115 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import CMIntroSection from '../components/ColdMix/CMIntroSection.astro';
+import CMIntroSection from "../components/ColdMix/CMIntroSection.astro";
 import CMCards from "../components/ColdMix/CMCards.astro";
-import CMTab from '../components/ColdMix/CMTab';
-import CMPugMill from '../components/ColdMix/CMPugMill.astro';
+import CMTab from "../components/ColdMix/CMTab";
+import CMPugMill from "../components/ColdMix/CMPugMill.astro";
 import CMSection from "../components/ColdMix/CMSection.astro";
 import CMSidePanels from "../components/ColdMix/CMSidePanels.astro";
 import CMOdom from "../components/ColdMix/CMOdom";
 import CMPlanos from "../components/ColdMix/CMPlanos";
 import CardSection from "../components/IntegralAsphalt/CardSection.astro";
 import CardSectionResponsive from "../components/unitComponents/CardSectionResponsive.astro";
+import Whatsbtn from "../components/unitComponents/Whatsbtn.astro";
 ---
+
 <Layout title="ColdMix Page">
- <CMIntroSection/>
- <CMCards/>
- <CMOdom client:only></CMOdom>
- <CMSection />
- <CMSidePanels />
- <CMTab client:only/>
- <CMPugMill/>
- <CMPlanos client:only/>
- <!-- <CardSection/> -->
- <CardSectionResponsive/>
+    <CMIntroSection />
+    <CMCards />
+
+    <CMSidePanels />
+    <section class="bg-[#14427c]">
+        <div class="max-w-7xl mx-auto px-8 py-10">
+            <h1 class="font-bold text-white text-3xl text-center">
+                Venda a mejor precio que la competencia, atraiga
+            </h1>
+            <h1 class="font-bold text-white text-3xl text-center">
+                mas clientes, y obtenga mayores ganancias
+            </h1>
+        </div>
+
+        <CMTab client:only />
+    </section>
+
+    <section class="">
+        <div
+            class="bg-black lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(https://placehold.co/600x400/png)] bg-cover bg-center bg-no-repeat relative"
+        >
+            <div class="absolute inset-0 bg-[#000000]/70"></div>
+            <div class="max-w-7xl mx-auto px-8 space-y-5 relative">
+                <div class="pt-5">
+                    <h1 class="text-4xl font-bold text-white">
+                        ¿Indeciso sobre la planta de mezclado en frío ideal para
+                        su proyecto?
+                    </h1>
+                </div>
+
+                <div
+                    class="w-full flex flex-col justify-center pb-5 lg:justify-around md:justify-around items-center lg:flex-row relative"
+                >
+                    <div class="">
+                        <p class="text-white">
+                            La compra de un tanque de asfalto es una gran
+                            inversión, y la base de un negocio de producción de
+                            mezcla asfáltica. Compre inteligentemente y con
+                            criterio.
+                        </p>
+                        <p class="text-white">
+                            Podemos asesorarlo de forma transparente en la
+                            inversión de su planta de asfalto, ayudándolo a
+                            elegir la opción más adecuada.
+                        </p>
+                    </div>
+                    <div
+                        class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
+                    >
+                        <!-- Botón 1 -->
+                        <Whatsbtn />
+
+                        <a
+                            href="/Contact"
+                            aria-label="Button to request a quote"
+                            class="bg-blueSecondary border-white border border- text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-center gap-2 shadow-md hover:bg-[#0044A4]/80"
+                        >
+                            Solicitar una cotización
+                            <svg
+                                width="24px"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                color="#FFFFFF"
+                            >
+                                <!-- Icono del segundo botón (opcional) -->
+                                <path
+                                    d="M5 12H19M19 12L12 5M19 12L12 19"
+                                    stroke="#FFFFFF"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center py-5">
+            <div>
+                <h1 class="font-bold text-xl lg:text-3xl">
+                    Diseñada para producciones exigentes y de gran volumen.
+                </h1>
+            </div>
+            <div>
+                <h1 class="font-bold text-xl lg:text-3xl">
+                    Fabricación para un rendimiento sin comparación.
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <CMPugMill />
+    <CMPlanos client:only />
+
 </Layout>

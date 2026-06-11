@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+import OSHand from "../../assets/images/OSHand.webp";
+import Slider from "../LandinPage/SliderOs";
+---
+
+<section class="bg-[#1e1e1e] mt-20 overflow-visible pb-10">
+    <div class="max-w-7xl mx-auto lg:px-0">
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+            <!-- Texto -->
+            <div class="text-white max-w-xl px-8">
+                <h1
+                    class="text-2xl md:text-3xl font-semibold my-6 bg-gradient-to-r from-[#f8ad00] via-[#dc363a] to-[#3992ff] bg-clip-text text-transparent"
+                >
+                    Sistema de operación Triaso® − Relief
+                </h1>
+                <p class="text-[#adadad] font-semibold leading-relaxed">
+                    Ofrecemos una forma práctica y eficiente de gestionar el
+                    funcionamiento de nuestros equipos. Con monitoreo y automatización avanzados, <span
+                        class="text-white"
+                        >simplificamos la operación de su planta de asfalto y del personal.
+                    </span> Control total de todos los procesos de la producción y rastreo de cada dato de la operación.
+                </p>
+                <div class="pt-5 flex items-center justify-center">
+                    <a
+                        href="/Relief"
+                        aria-label="View page drum Mixers"
+                        class="text-white text-center mb-5 mt-5 text-xs md:text-sm font-normal border-2 border-[#14427c] rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-[#14427c] hover:bg-white hover:text-black hover:border-white"
+                    >
+                        Ver más
+                    </a>
+                </div>
+            </div>
+
+            <!-- Imagen -->
+            <div class="flex justify-end relative">
+                <Image
+                    src={OSHand}
+                    alt="Triaso OS"
+                    class="w-[280px] md:w-[360px] lg:w-[420px] lg:-translate-y-16"
+                />
+            </div>
+        </div>
+
+        <Slider client:only />
+    </div>
+</section>
+
+<script is:inline>
+    let currentSlide = 0;
+    const slider = document.getElementById("slider");
+
+    function getVisibleSlides() {
+        if (window.innerWidth >= 1024) return 4;
+        if (window.innerWidth >= 640) return 2;
+        return 1;
+    }
+
+    function nextSlide() {
+        const visible = getVisibleSlides();
+        const total = slider.children.length;
+        currentSlide = (currentSlide + 1) % (total - visible + 1);
+        slider.style.transform = `translateX(-${currentSlide * (100 / visible)}%)`;
+    }
+
+    function prevSlide() {
+        const visible = getVisibleSlides();
+        const total = slider.children.length;
+        currentSlide =
+            (currentSlide - 1 + (total - visible + 1)) % (total - visible + 1);
+        slider.style.transform = `translateX(-${currentSlide * (100 / visible)}%)`;
+    }
+</script>

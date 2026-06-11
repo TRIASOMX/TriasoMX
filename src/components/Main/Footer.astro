@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 ---
 
-<footer class="bg-[#252726] text-white">
+<footer class="bg-[#111827] text-white">
   <div class="max-w-7xl mx-auto py-5">
     <div
       class="grid grid-cols-1 items-center justify-evenly lg:grid-cols-2 space-y-10"
@@ -17,8 +17,7 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
       >
         <Image src={Logo} alt="Triaso US" class="w-4/6" />
         <p class="text-xs px-8 lg:px-0 md:px-0">
-          Triaso we are a leading company in manufacturing and engineering
-          development.
+          Triaso es una empresa líder en fabricación y desarrollo de ingeniería.
         </p>
       </div>
 
@@ -30,14 +29,19 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
           <h4
             class="text-sm font-semibold uppercase tracking-wide mb-4 border-b border-white pb-2"
           >
-            Quick Links
+            Enlaces rápidos
           </h4>
           <ul class="space-y-2 text-sm">
             <li>
-              <a href="/AsphaltPlant" class="hover:text-gray-400">Asphalt Plants</a
+              <a href="/AsphaltPlant" class="hover:text-gray-400"
+                >Plantas de asfalto</a
               >
             </li>
-            <li><a href="/AsphaltStorage" class="hover:text-gray-400">Integral Asphalt Plants</a></li>
+            <li>
+              <a href="/AsphaltStorage" class="hover:text-gray-400"
+                >Plantas de asfalto integrales</a
+              >
+            </li>
             <li>
               <a href="/Relief" class="hover:text-gray-400">TRIASO Relief</a>
             </li>
@@ -49,11 +53,19 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
           <h4
             class="text-sm font-semibold uppercase tracking-wide mb-4 border-b border-white pb-2"
           >
-            About
+            Acerca
           </h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="/AboutUs" class="hover:text-gray-400">About us</a></li>
-            <li><a href="/Newsroom" class="hover:text-gray-400">News Room</a></li>
+            <li>
+              <a href="/AboutUs" class="hover:text-gray-400"
+                >Acerca de nosotros</a
+              >
+            </li>
+            <li>
+              <a href="/Newsroom" class="hover:text-gray-400"
+                >Tablero de noticias</a
+              >
+            </li>
             <li><a href="/Expo" class="hover:text-gray-400">Expos</a></li>
           </ul>
         </div>
@@ -63,7 +75,7 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
           <h4
             class="text-sm font-semibold uppercase tracking-wide mb-4 border-b border-white pb-2"
           >
-            Contact Us
+            Contactanos
           </h4>
 
           <a
@@ -99,7 +111,7 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
             " class="hover:text-gray-400">
               <div class="flex flex-row gap-2">
                 <Phone />
-                <p>+1 (248)-613-4885</p>
+                <p>+52 (618)-109-7672</p>
               </div>
             </a>
 
@@ -109,7 +121,7 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
             >
               <div class="flex flex-row gap-2">
                 <Mail />
-                <p> sales@triasous.com </p>
+                <p>triaso.informes@gmail.com</p>
               </div>
             </a>
           </div>
@@ -152,9 +164,12 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
     >
       <p class="text-xs">Copyright © 2026 Triaso – All rights reserved</p>
       <a href="/TermsandConditions" class="hover:text-gray-400"
-        >Terms & Conditions</a
+        >Terminos y condiciones</a
       >
-      <a href="/PrivacyPolicy" class="hover:text-gray-400">Privacy Policy</a>
+      <a href="/PrivacyPolicy" class="hover:text-gray-400"
+        >Politica de privacidad</a
+      >
     </div>
   </div>
 </footer>
+

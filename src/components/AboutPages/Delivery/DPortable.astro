@@ -2,29 +2,31 @@
 import Separator from "../../unitComponents/Separator.astro";
 import TwoColumnSection from "../../unitComponents/TwoColumnSection.astro";
 import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
-import hero2 from "../../../assets/images/About/Delivery/hero2.webp";
-import { Image } from "astro:assets";
 ---
-
-<div class="flex justify-center w-full">
-    <Image src={hero2} alt="Drum mixer loaded onto a truck" class="w-full" />
-</div>
 
 <section class="w-full max-w-7xl mx-auto py-10">
     <div class="w-full grid grid-cols-1 md:grid-cols-3 bg-white">
         <div class="w-full col-span-1 p-8">
             <h1 class="text-2xl md:text-3xl font-bold text-black">
-                Highly portable
+                Completamente portatil
             </h1>
             <Separator />
             <p class="text-base md:text-lg font-thin">
-                We understand the importance of getting your equipment up and
-                running as quickly as possible. Our Triaso equipment is designed
-                for fast installation and startup.
+                Entendemos la importancia de poner su equipo en operación lo más
+                rápido posible. Nuestros equipos Triaso están diseñados para una
+                instalación y puesta en marcha rápidas.
             </p>
         </div>
-        <div class="w-full col-span-2">
-            
+        <div class="w-full flex items-end justify-end  col-span-2">
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/wXrv16fg3vk?si=4C1BNgij4jyw3ewC"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
         </div>
     </div>
     <TwoColumnSection
@@ -36,16 +38,18 @@ import { Image } from "astro:assets";
     >
         <div slot="left" class="flex flex-col justify-center gap-3">
             <p class="text-base md:text-lg">
-                All components of our equipment are designed for integral
-                transport, ensuring efficient and rapid installation. Our robust
-                equipment can be quickly and seamlessly installed on-site.
+                Todos los componentes de nuestros equipos están diseñados para
+                transporte integral, asegurando una instalación eficiente y
+                rápida. Integramos una quinta rueda a todos nuestros equipos y
+                llantas para transportarlo sin necesidad de una caja baja, solo
+                llega el camión se conecta y transporta.
             </p>
         </div>
         <div slot="right" class="flex flex-col justify-center gap-3">
             <p class="text-base md:text-lg">
-                Triaso equipments offer the great advantage of being fully
-                portable, with the flexibility to be installed as stationary,
-                reducing operating and maintenance costs.
+                Los equipos Triaso ofrecen la gran ventaja de ser totalmente
+                portátiles, con la flexibilidad de instalarse también como
+                estacionarios, reduciendo costos de operación y mantenimiento.
             </p>
         </div>
     </TwoColumnSection>

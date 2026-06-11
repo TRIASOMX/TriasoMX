@@ -7,19 +7,19 @@ import g4 from "../../assets/images/SidePanels/FEPlaC1_1.webp"
 const SliderAesthetic = () => {
   const sidePanels = [
     {
-      nombre: "Drum mixer",
+      nombre: "Mezcladoras de tambor",
       imagen: g1.src,
     },
     {
-      nombre: "Asphalt storage tanks",
+      nombre: "Tanques de asfalto",
       imagen: g2.src,
     },
     {
-      nombre: "Bin Units",
+      nombre: "Tolvas",
       imagen: g3.src,
     },
     {
-      nombre: "Cold Mix Asphalt Plants",
+      nombre: "Mezcladoras en frío",
       imagen: g4.src,
     },
   ];

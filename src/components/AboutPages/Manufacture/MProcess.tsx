@@ -4,21 +4,11 @@ const MProcess = () => {
   return (
     <section className="w-full max-w-7xl mx-auto px-8 font-bold text-grisT">
       <div className="w-full">
-        <h1 className="text-3xl md:text-4xl">MANUFACTURING PROCESS</h1>
+        <h1 className="text-3xl md:text-4xl uppercase">proceso de fabricación</h1>
         <br />
         <p className="text-base md:text-lg">
-          Triaso has invested in the latest manufacturing technology to provide
-          high quality and support the equipment we produce: computerized lathes
-          and machining centers, computerized plasma cutters, stress relief
-          furnaces, induction hardening equipment, weld inspection devices,
-          balancers, laser aligners, and more.
+          En Triaso hemos invertido en la más moderna tecnología de fabricación para ofrecer alta calidad y respaldar los equipos que producimos: tornos y centros de maquinado computarizados, cortadoras plasma CNC, hornos para liberación de esfuerzos, equipos de endurecimiento por inducción, dispositivos de inspección de soldadura, balanceadoras, alineadores láser y más.
         </p>
-      </div>
-      <div className="w-full py-16">
-        <h2 className="text-xl md:text-2xl text-blueMain text-center">
-          By manufacturing the majority of our components,
-          <br /> we achieve significant advantages
-        </h2>
       </div>
     </section>
   );

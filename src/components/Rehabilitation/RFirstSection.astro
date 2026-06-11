@@ -1,36 +1,51 @@
-<section
-  class="w-full px-8 mt-28 flex flex-col justify-center items-center"
->
-  <div class="w-full max-w-7xl">
-    <h1 class="text-end font-bold text-3xl md:text-4xl text-grisT">
-      REHABILITATION AND MODERNIZATION <br /> OF YOUR EQUIPMENT
-    </h1><br />
-    <h2 class="text-end font-bold text-lg md:text-xl text-grisT">
-      TRIASO MANUFACTURES DIRECTLY, WE DON´T HAVE SUBCONTRACTORS
+---
+import obracivil2 from "../../assets/images/DrumMixers/obracivil2.png";
+import { Image } from "astro:assets";
+---
+
+<section class="w-full flex flex-col space-y-5">
+  <div class="w-full h-[70vh]">
+    <Image
+      src={obracivil2}
+      alt="Placeholder"
+      class="block h-full w-full object-cover object-center"
+      fetchpriority="high"
+    />
+  </div>
+
+  <div class="w-full max-w-7xl mx-auto px-8 space-y-5">
+    <h1 class="text-start font-bold text-3xl md:text-4xl text-grisT UPPERCASE">
+      Rehabilitación y modernización<br /> de sus equipos
+    </h1>
+    <div class="w-80 h-0.5 bg-[#393939]"></div>
+    <h2 class="text-start font-bold text-lg md:text-xl text-grisT uppercase">
+      fabricamos directamente, no contamos con subcontratistas
     </h2>
   </div>
   <div
-    class="w-full flex flex-col gap-4 font-bold text-base md:text-lg text-grisT mt-20 max-w-7xl"
+    class="w-full flex flex-col gap-4 font-bold text-base md:text-lg text-grisT max-w-7xl mx-auto px-8"
   >
     <p>
-      In Triaso we started many years ago rehabilitating asphalt plants and rock
-      crushers, selling them as rehabilitated, reliable and guaranteed
-      equipment. Later on, we suspended the sale of these equipment and we are
-      dedicated solely to manufacture completely new and modern equipment.
+      En Triaso comenzamos hace muchos años rehabilitando plantas de asfalto y
+      trituradoras, vendiéndolas como equipos rehabilitados, confiables y
+      garantizados. Más adelante suspendimos la venta de estos equipos para
+      dedicarnos exclusivamente a la fabricación de equipos completamente nuevos
+      y modernos.
     </p>
     <p>
-      However, we do not forget our origins, and we place ourselves at your
-      service with our highly specialized personnel for the repair,
-      rehabilitation and / or modernization of equipment of any brand.
+      Sin embargo, no olvidamos nuestros orígenes y ponemos a su servicio a
+      nuestro personal altamente especializado para la reparación,
+      rehabilitación y/o modernización de equipos de cualquier marca.
     </p>
     <p>
-      Call us for a simple consultation, full advice or sending a technician to
-      evaluate the work you want to do in your asphalt plant or rock crusher.
+      Llámenos para una consulta sencilla, asesoría completa o para enviar un
+      técnico que evalúe el trabajo que desea realizar en su planta de asfalto o
+      trituradora.
     </p>
     <p>
-      Do not sacrifice your productivity, safety of your personnel, operating
-      costs or compliance with standards by trusting your work in inexpert
-      hands.
+      No sacrifique su productividad, la seguridad de su personal, sus costos de
+      operación o el cumplimiento de normas al confiar su trabajo en manos
+      inexpertas.
     </p>
   </div>
 </section>

@@ -10,27 +10,27 @@ const SliderHero = () => {
 
 const Sliders = [
     {
-      titulo: "Ideal for pothole repair programs",
+      titulo: "Ideal para programas de bacheo",
       texto:
-        "An efficient solution for pothole patching and road maintenance, with immediate production of asphalt mix directly on the job site.",
+        "Solución eficiente para bacheo y mantenimiento vial, con producción inmediata de mezcla asfáltica directamente en el sitio de trabajo.",
       img: Hero1,
     },
     {
-      titulo: "Zero emissions, ready to operate in any place",
+      titulo: "Cero emisiones, listo para funcionar en cualquier lugar",
       texto:
-        "Designed to operate in the most inaccessible locations, this all-in-one asphalt plant easily handles the narrowest and most challenging roads.",
+        "Diseñada para funcionar en los lugares más inaccesibles, esta planta de asfalto todo en uno se adapta fácilmente a las carreteras más estrechas y difíciles.",
       img: Hero2,
     },
     {
-      titulo: "Mobility that drives your work",
+      titulo: "Movilidad que impulsa tu trabajo",
       texto:
-        "Thanks to its integrated design and optimized structure, this asphalt plant can be easily relocated without complex maneuvers or special equipment, allowing operations to start where others simply can’t reach.",
+        "Gracias a su diseño integrado y a su estructura optimizada, esta planta de asfalto se puede trasladar fácilmente sin maniobras complejas ni equipos especiales, lo que permite iniciar las operaciones en lugares a los que otras simplemente no pueden llegar.",
       img: Hero3,
     },
     {
-      titulo: "Hassle-free transportation, unlimited production",
+      titulo: "Transporte sin complicaciones, producción ilimitada",
       texto:
-        "This compact asphalt plant is designed to move easily over rough terrain and tight spaces, eliminating the logistical barriers that other equipment can’t overcome. Ideal for projects in remote or hard-to-reach locations.",
+        "Esta planta de asfalto compacta está diseñada para desplazarse con facilidad por terrenos difíciles y espacios reducidos, lo que elimina las barreras logísticas que otros equipos no pueden superar. Es ideal para proyectos en lugares remotos o de difícil acceso.",
       img: Hero4,
     },
   ];
@@ -72,7 +72,7 @@ const Sliders = [
   };
 
   return (
-    <div className="relative w-full overflow-hidden mt-[66px]">
+    <div className="relative w-full overflow-hidden">
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}

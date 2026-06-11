@@ -47,9 +47,6 @@ export default function BinSelector() {
 
   return (
     <div className="bg-gray-100 flex flex-col gap-6 text-black w-full mt-10">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center px-4">
-        From two to six bins units
-      </h1>
 
       <div className="w-full flex flex-col gap-10 justify-center items-center max-w-7xl px-4 sm:px-6 md:px-8 mx-auto">
         <div className="w-full flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
@@ -59,7 +56,7 @@ export default function BinSelector() {
               ${panelType === "aesthetic" ? "bg-blueMain text-white" : "bg-white text-black rounded-xl"}
             `}
           >
-            Aesthetic Side Panels
+            Flancos estéticos
           </button>
 
           <button
@@ -68,7 +65,7 @@ export default function BinSelector() {
               ${panelType === "without" ? "bg-blueMain text-white" : "bg-white text-black rounded-xl"}
             `}
           >
-            Without Aesthetic Side Panels
+            Sin flancos estéticos
           </button>
         </div>
         <div className="flex items-center justify-center w-full md:h-[650px]">
@@ -80,8 +77,8 @@ export default function BinSelector() {
         </div>
         <div className="flex flex-col lg:flex-row bg-white rounded-2xl py-3 px-4 lg:px-16 justify-center items-center gap-2 lg:gap-10">
           <div>
-            <p className="hidden lg:block md:block font-bold text-sm lg:text-xl md:text-xl py-2">Bin units:</p>
-            <p className=" lg:hidden md:hidden font-bold text-sm lg:text-xl md:text-xl py-2">Bin units</p>
+            <p className="hidden lg:block md:block font-bold text-sm lg:text-xl md:text-xl py-2">Tolvas:</p>
+            <p className=" lg:hidden md:hidden font-bold text-sm lg:text-xl md:text-xl py-2">Tolvas</p>
           </div>
           <div>
             {binOptions.map((num) => (

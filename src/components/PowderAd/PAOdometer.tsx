@@ -53,7 +53,7 @@ const PAOdometer = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">M3</p>
             </div>
-            <p className="text-[#4F4F4F]">Power additives capacity</p>
+            <p className="text-[#4F4F4F]">Capacidad de aditivos en polvo</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -63,7 +63,7 @@ const PAOdometer = () => {
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">kg/min</p>
             </div>
-            <p className="text-[#4F4F4F]">Discharge range with adjustable speed</p>
+            <p className="text-[#4F4F4F]">Rango de descarga con velocidad ajustable</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -72,7 +72,7 @@ const PAOdometer = () => {
               <p className="text-sm font-normal ml-3">hp</p>
             </div>
             <p className="text-[#4F4F4F] text-start w-full">
-              Rated capacity of the discharge motor
+              Potencia nominal del motor de descarga
             </p>
           </div>
         </div>

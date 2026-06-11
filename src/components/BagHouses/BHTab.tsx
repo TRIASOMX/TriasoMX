@@ -25,12 +25,11 @@ export default function Tab() {
           >
             {index === 0 ? (
               <>
-                Mounted on the same <br />
-                chassis{" "}
-                <span className="hidden md:inline">as the drum mixer</span>
+                Montado sobre el mismo chasis {" "}
+                <span className="hidden md:inline">que el tambor mezclador</span>
               </>
             ) : (
-              "Self-contained"
+              "Acoplables"
             )}
           </button>
         ))}
@@ -50,7 +49,7 @@ export default function Tab() {
 
       <div>
         <p className=" text-grisT text-sm lg:text-lg md:text-lg">
-          Self-contained and mounted integrated dust control systems designed for efficient air filtration and particulate capture in asphalt plants — configurable for both portable and stationary installations.
+          Sistemas de control de emisiones acoplables e integradas, diseñados para una filtración de aire eficiente y la captación de partículas en plantas de asfalto — configurables tanto para instalaciones portátiles como estacionarias.
         </p>
       </div>
     </div>

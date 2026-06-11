@@ -8,15 +8,165 @@ import IntegratedBaghouses from "../components/DrumMixers/IntegratedBaghouses.as
 import DrumMixPlanos from "../components/DrumMixers/DrumMixPlanos";
 import CardSection from "../components/IntegralAsphalt/CardSection.astro";
 import CardSectionResponsive from "../components/unitComponents/CardSectionResponsive.astro";
+import HeroComponent from "../components/unitComponents/HeroComponent.astro";
+import hero1 from "../assets/images/DrumMixers/heroImage.webp";
+import DropdownComponent from "../components/unitComponents/DropdownComponent.astro";
+import OsDrumSection from "../components/DrumMixers/OsDrumSection.astro";
+import StackedInfoCards from "../components/unitComponents/StackedInfoCards.astro";
+import HotspotSection from "../components/DrumMixers/HotspotSection.astro";
+import SliderTambores from "../components/DrumMixers/SliderTambores.astro";
+import QuemadorSeccion from "../components/DrumMixers/QuemadorSeccion.astro";
+import BolsasSeccion from "../components/DrumMixers/BolsasSeccion.astro";
+import hero2 from "../assets/images/DrumMixers/Contraflujo/Cpro.webp"
+import UltimaSeccion from "../components/DrumMixers/UltimaSeccion.astro";
+
+const cards = [
+    {
+        title: "La planta de asfalto de contraflujo más equipada, más robusta, más moderna de Latinoamérica.",
+        text: "",
+        bg: "#d13c3c",
+        textColor: "#ffffff",
+    },
+    {
+        title: "Con una configuración ideal para trabajo pesado y condiciones cariables la planta de asfalto está completamente equipada.",
+        text: "",
+        bg: "#14427c",
+        textColor: "#ffffff",
+    },
+    {
+        title: "Operación total manual o automática para un control eficiente y sencillo del equipo, con menor necesidad de intervención del operador.",
+        text: "",
+        bg: "#00840d",
+        textColor: "#ffffff",
+    },
+    {
+        title: "Equipos auxiliares y componentes sobredimensionados y de gran volumen, permitiendo operaciones a gran escala, con total estabilidad, continuas, intensivas y prolongadas, sin paros, con mínima intervención del operador",
+        text: "",
+        bg: "#6b97c6",
+        textColor: "#ffffff",
+    },
+];
 ---
 
-<Layout title="Drum Mixers Page">
-    <IntroSection />
+<Layout title="Tambor de contraflujo">
+    <div class="mt-10">
+
+        <HeroComponent
+            title="Tambor de Contraflujo PRO+"
+            image={hero1.src}
+            imageAlt="Tambor de Contraflujo PRO+"
+            altImage={hero2.src}
+            descAltImage="Tambor de Contraflujo PRO+"
+        />
+    </div>
+    <div class="bg-[#1e1e1e]">
+        <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+            <div class="flex flex-row justify-center items-center gap-10">
+                <a class="font-thin text-white text-xl lg:text-2xl" href="/TamborMezcla/Contraflujo/ContraDesamaq"
+                    >Desamaq</a
+                >
+                <a class="font-thin text-white text-xl lg:text-2xl" href="/TamborMezcla/Contraflujo/ContraPlus"
+                    >Plus</a
+                >
+                <a
+                    class="underline font-bold text-white text-xl lg:text-2xl"
+                    href="/DrumMixers">Pro +</a
+                >
+            </div>
+
+            <div class="flex justify-center items-center text-center">
+                <h1 class="font-semibold text-white text-lg lg:text-xl">
+                    Para contratistas experimentados que buscan la mejor planta
+                    de asfalto, con una producción y nivel de exigencias
+                    técnicas incomparables, capaz de adaptarse a cualquier
+                    proyecto, incluso con diferentes tipos de mezcla. Ideal para
+                    una operación ecológica evitando multas costosas por
+                    contaminación, con el consumo de combustible por tonelada
+                    más bajo en el mercado y mayor porcentaje de incorporación
+                    de RAP, hasta un 50%.
+                </h1>
+            </div>
+
+            <div
+                class="flex flex-col lg:flex-row md:flex-row justify-center items-center gap-5"
+            >
+                <div
+                    class="bg-black rounded-2xl w-36 text-center transition-all duration-300 hover:bg-white"
+                >
+                    <p class="py-3 font-semibold text-white hover:text-black">
+                        Cotizar
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl w-36 text-center transition-all duration-300 hover:bg-black"
+                >
+                    <p class="py-3 font-semibold text-black hover:text-white">
+                        Comparar
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <OdometerDrum client:only />
-    <OneSection />
-    <StationarySection />
-    <IntegratedBaghouses />
-    <DrumMixPlanos client:only />
+
+    <div>
+        <DropdownComponent
+            title="El modelo más avanzado para una operación automática, la más económica y sin comparación ni competencia, preferencia en su región para trabajos de pavimentación."
+        >
+            <p>
+                Triaso® ofrece la solución más avanzada para la producción
+                continua de mezcla asfáltica, con tambores mezcladores de alto
+                desempeño que integran secado, mezclado, captura de finos en la
+                casa de bolsas y su reincorporación en un solo chasis diseñado
+                para trabajo pesado. Su diseño está orientado a máxima
+                eficiencia térmica, una operación continua, eficiente y con
+                mayor control del proceso, garantizando eficiencia operativa,
+                tranquilidad de su cliente, durabilidad del pavimento en
+                cualquier proyecto y producción constante sin paros.
+            </p>
+        </DropdownComponent>
+    </div>
+    <OsDrumSection />
+
+    <div class="bg-[#1e1e1e] flex flex-col justify-center items-center px-8">
+        <div class="flex flex-col justify-center items-center pb-10">
+            <h1
+                class="text-white font-bold text-3xl text-center lg:text-start md:text-start"
+            >
+                Para evitar desperdicios, robos y mala operación de su planta de
+                asfalto
+            </h1>
+            <p class="text-white text-center lg:text-start md:text-start">
+                Paro total con un solo botón desde su celular
+            </p>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <StackedInfoCards
+        cards={cards}
+        mainTitle="Su mejor negocio comienza con nosotros"
+        mainDescription="Los contratistas que nos conocen prefieren Triaso sobre otras marcas por nuestra alta calidad, confiabilidad y precios."
+    />
+    </div>
+   
+
+    <HotspotSection />
+
+    <div class="max-w-7xl mx-auto px-8">
+        <SliderTambores />
+    </div>
+
+    <QuemadorSeccion />
+
+    <BolsasSeccion />
+
+    <DrumMixPlanos client:only /> 
+
+    <UltimaSeccion/>
+    <!-- <OneSection /> -->
+    <!-- <StationarySection />
+    <IntegratedBaghouses /> -->
     <!-- <CardSection /> -->
-    <CardSectionResponsive/>
+    <!-- <CardSectionResponsive /> -->
 </Layout>
