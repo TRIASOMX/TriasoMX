@@ -24,7 +24,7 @@ const {
   >
     <div class="left-content">
       <h2
-        class="text-4xl font-bold leading-tight mb-6 border-b-2 border-b-orange-500"
+        class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tighter mb-6 border-b-2 border-b-orange-500"
       >
         {mainTitle}
       </h2>
@@ -33,7 +33,9 @@ const {
       </p>
     </div>
 
-    <div class="cards-wrapper relative h-[700px] lg:h-[700px] md:h-[600px] overflow-hidden">
+    <div
+      class="cards-wrapper relative h-[700px] lg:h-[700px] md:h-[600px] overflow-hidden"
+    >
       {
         cards.map((card, i) => (
           <div
@@ -55,11 +57,11 @@ const {
   gsap.registerPlugin(ScrollTrigger);
   document.addEventListener("DOMContentLoaded", () => {
     const section = document.querySelector(".stack-section");
-    const wrapper = section.querySelector(".cards-wrapper"); 
+    const wrapper = section.querySelector(".cards-wrapper");
     const cards = gsap.utils.toArray(".stack-card");
 
     gsap.set(cards, {
-      y: (i) => (i === 0 ? 0 : wrapper.offsetHeight + 10), 
+      y: (i) => (i === 0 ? 0 : wrapper.offsetHeight + 10),
       zIndex: (i) => i,
       transformOrigin: "top center",
     });
@@ -69,11 +71,11 @@ const {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             initAnimation(section, cards, wrapper);
-            observer.disconnect(); 
+            observer.disconnect();
           }
         });
       },
-      { threshold: 0.1 }, 
+      { threshold: 0.1 },
     );
 
     observer.observe(section);
@@ -82,12 +84,12 @@ const {
   function initAnimation(section, cards, wrapper) {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: section, 
+        trigger: section,
         start: "top top",
         end: `+=${cards.length * 400}`,
         scrub: 0.8,
         pin: true,
-        pinSpacing: true, 
+        pinSpacing: true,
         anticipatePin: 1,
       },
     });

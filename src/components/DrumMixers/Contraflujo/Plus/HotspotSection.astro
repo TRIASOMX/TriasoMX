@@ -5,14 +5,10 @@ import item1 from "../../../../assets/images/DrumMixers/a3.webp";
 import item2 from "../../../../assets/images/DrumMixers/a5.webp";
 import item3 from "../../../../assets/images/DrumMixers/a4.webp";
 import item4 from "../../../../assets/images/DrumMixers/Low/a2Low.webp";
-import item5 from "../../../../assets/images/DrumMixers/a6.webp";
+import item5 from "../../../../assets/images/DrumMixers/a6.jpg";
 import item6 from "../../../../assets/images/DrumMixers/a1.webp";
 import { Image } from "astro:assets";
 import SmartVideo from "../../../unitComponents/SmartVideo";
-import DMProv1 from "../../../../assets/images/DrumMixers/DMProv1.webp";
-import obracivil from "../../../../assets/images/DrumMixers/obracivil.webp";
-import obracivil2 from "../../../../assets/images/DrumMixers/obracivil2.webp";
-import obracivil2Low from "../../../../assets/images/DrumMixers/Low/obracivil2Low.webp";
 import CasetaSeccion from "../Plus/CasetaSeccion.astro";
 import DropdownItem from "../../../unitComponents/DropdownItem.astro";
 
@@ -20,9 +16,9 @@ import img1 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/TlvP317P
 import img2 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/ProvBU1.webp";
 import img3 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/DesamaqImg.webp";
 
-import img4 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/FirstImg.webp"
-import img5 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/SecondImg.webp"
-import img6 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/ThirdImg.webp"
+import img4 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/FirstImg.webp";
+import img5 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/SecondImg.webp";
+import img6 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/ThirdImg.webp";
 
 const desamaqPanels = [
   {
@@ -187,9 +183,6 @@ const desamaqPanels2 = [
     <div
       class="max-w-7xl mx-auto px-8 space-y-5 flex flex-col items-center justify-center"
     >
-      <h1 class="font-bold text-black text-4xl">
-        Su mejor negocio comienza con nosotros
-      </h1>
       <img src="https://placehold.co/1920x1080/png" alt="Placeholder" />
     </div>
   </div>
@@ -279,11 +272,7 @@ const desamaqPanels2 = [
           <div
             class="relative flex justify-center max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
           >
-            <Image
-              src={img2}
-              alt="Drum mixer"
-              class="rounded-2xl"
-            />
+            <Image src={img2} alt="Drum mixer" class="rounded-2xl" />
           </div>
         </div>
 
@@ -370,12 +359,7 @@ const desamaqPanels2 = [
           <div
             class="relative flex flex-col justify-center max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
           >
-            <Image
-              src={img2}
-              alt="Drum mixer"
-              class="rounded-2xl w-4/5"
-            />
-
+            <Image src={img2} alt="Drum mixer" class="rounded-2xl w-4/5" />
           </div>
         </div>
 
@@ -417,8 +401,9 @@ const desamaqPanels2 = [
         <div class="w-full flex justify-between mb-6">
           <div class="flex flex-col gap-3">
             <h1 class="text-2xl lg:text-5xl md:text-5xl font-normal">
-              Álabes Triaso de tambor mezclador
+              Triaso Mezcladora de tambor
             </h1>
+            <h1 class="text-2xl lg:text-5xl md:text-5xl font-normal">Alabes</h1>
           </div>
           <div>
             <svg
@@ -443,46 +428,56 @@ const desamaqPanels2 = [
         class="font-light text-sm lg:text-base md:text-base px-2 lg:px-0 md:px-0"
       >
         La mezcladora de tambor Triaso utiliza un diseño de contracorriente que
-        mejora tanto la eficiencia del secado como la de la mezcla. Su sistema
-        de paletas extraíbles optimiza el proceso y, gracias al control de
-        velocidad por variador de frecuencia (VFD), logra un uso más eficiente
-        del combustible y temperaturas de chimenea más bajas. Esto se traduce en
-        menores costos operativos y un menor impacto ambiental, todo ello sin
-        dejar de mantener el máximo rendimiento con un consumo energético
-        mínimo.
+        mejora tanto la eficiencia de secado como la de mezcla. Su sistema de
+        paletas desmontables optimiza el proceso y, gracias a un control de
+        velocidad VFD, logra un uso más eficiente del combustible y temperaturas
+        de chimenea más bajas. Esto se traduce en menores costos operativos y
+        una menor huella ambiental, manteniendo el máximo rendimiento con un
+        consumo mínimo de energía.
       </p>
     </details>
 
     <div
-      class="grid grid-cols-3 md:grid-cols-6 items-start justify-around gap-5 my-10 w-full"
+      class="grid grid-cols-3 md:grid-cols-6 items-end justify-around gap-5 my-10 w-full"
     >
       <div class="flex flex-col items-center justify-center font-light">
         <Image src={item1} width={200} height={200} alt="Inlet Flight" />
-        <p>Álabe de entrada</p>
+        <div>
+          <p>Alabe de entrada</p>
+        </div>
       </div>
       <div class="flex flex-col items-center justify-center font-light">
         <Image src={item2} width={200} height={200} alt="Pusher Flight" />
-        <p class="text-center">Álabe de acondicionamiento</p>
+        <div>
+          <p>Alabe de empuje</p>
+        </div>
       </div>
       <div class="flex flex-col items-center justify-center font-light">
         <Image src={item3} width={200} height={200} alt="Drying Flight" />
-        <p>Álabe de secado</p>
+        <div>
+          <p>Alabe de secado</p>
+        </div>
       </div>
       <div class="flex flex-col items-center justify-center font-light">
         <Image src={item4} width={200} height={200} alt="RAP Flight" />
-        <p>Álabe de RAP</p>
+        <div>
+          <p>Alabe RAP</p>
+        </div>
       </div>
       <div class="flex flex-col items-center justify-center font-light">
         <Image src={item5} width={200} height={200} alt="Radiation Flight" />
-        <p class="text-center">Álabe de radiación</p>
+        <div>
+          <p>Alabe de radiación</p>
+        </div>
       </div>
       <div class="flex flex-col items-center justify-center font-light">
         <Image src={item6} width={200} height={200} alt="Mixing Flight" />
-        <p>Álabe de mezclado</p>
+        <div>
+          <p>Alabe de mezclado</p>
+        </div>
       </div>
     </div>
   </div>
-  
 </section>
 
 <!-- Sección banner -->
@@ -553,18 +548,13 @@ const desamaqPanels2 = [
   </div>
 </section>
 
-
 <section>
   <div class="flex justify-center items-center py-10">
     <h1 class="font-bold text-4xl text-center text-[#393939]">
-      Las mejores plantas de asfalto <br>
-      <span class="text-[#CA1C1C]">
-        son mexicanas
-      </span>
+      Las mejores plantas de asfalto <br />
+      <span class="text-[#CA1C1C]"> son mexicanas </span>
     </h1>
   </div>
-
-
 
   <div class="w-full flex flex-col font-bold mt-5 lg:mt-0">
     <div class="hidden max-w-7xl px-8 mx-auto lg:flex justify-start">
@@ -622,7 +612,7 @@ const desamaqPanels2 = [
       </div>
     </div>
     <div
-      class="max-w-7xl hidden  mx-auto lg:flex  lg:justify-start lg:items-center"
+      class="max-w-7xl hidden mx-auto lg:flex lg:justify-start lg:items-center"
     >
       <Image
         src={img6}

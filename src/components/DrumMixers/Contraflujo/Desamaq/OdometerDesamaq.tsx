@@ -29,16 +29,16 @@ const OdometerDesamaq = () => {
             setValue(40);
             setValue6(140);
 
-            setValue3(14)
+            setValue3(14);
             setValue1(20);
-            
+
             setValue2(30);
           }, 300); // Pequeño retraso para asegurar reinicio
         }
       },
       {
         threshold: 0.5, // cuando el 50% sea visible
-      }
+      },
     );
 
     const current = sectionRef.current;
@@ -50,10 +50,14 @@ const OdometerDesamaq = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="max-w-7xl mx-auto px-8 py-10 lg:py-0 lg:mt-32 lg:mb-32 md:mt-56 md:mb-56">
-
+    <div
+      ref={sectionRef}
+      className="max-w-7xl mx-auto px-8 py-10 lg:py-0 lg:mt-32 lg:mb-32 md:mt-56 md:mb-56"
+    >
       <div className="flex justify-center items-center pb-10">
-        <h1 className="text-[#4F4F4F] font-bold text-4xl">El equipo para arrasar con la competencia</h1>
+        <h1 className="text-[#4F4F4F] font-bold text-4xl">
+          El equipo para arrasar con la competencia
+        </h1>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
@@ -65,18 +69,22 @@ const OdometerDesamaq = () => {
               <Odometer value={value6} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-[#4F4F4F] text-center lg:text-start">Rango de producción</p>
-            <p className="text-[#4F4F4F] text-center lg:text-start text-xs">En modelos seleccionados</p>
+            <p className="text-[#4F4F4F] text-center lg:text-start">
+              Rango de producción
+            </p>
+            <p className="text-[#4F4F4F] text-center lg:text-start text-xs">
+              En modelos seleccionados
+            </p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
+            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center md:justify-start md:items-baseline w-full">
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <p>-</p>
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tons</p>
             </div>
-            <p className="text-[#4F4F4F] text-center lg:text-start">
+            <p className="text-[#4F4F4F] text-center md:text-start w-full">
               Capacidad de cada tolva
             </p>
           </div>
@@ -99,6 +107,7 @@ const OdometerDesamaq = () => {
           <div>
             <img src={odoImg.src} alt="Odometer Drum" className="rounded-2xl" />
           </div>
+          <br />
           <a
             href="#planosDrumMixers"
             className="
@@ -120,9 +129,7 @@ const OdometerDesamaq = () => {
       group-hover:translate-y-0
     "
             />
-            <span className="relative z-10">
-              Todos los detalles técnicos
-            </span>
+            <span className="relative z-10">Todos los detalles técnicos</span>
           </a>
         </div>
       </div>
