@@ -1,13 +1,11 @@
-import React, { useRef, useEffect, useState, useCallback } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import caseta1 from "../../../../assets/images/DrumMixers/caseta1.webp";
-import caseta2 from "../../../../assets/images/DrumMixers/caseta2.webp";
-import tolva3Main from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTi_Blueprint/Pla_Cf_Des_TI_VA.png";
-import tolva3Blue from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTi_Blueprint/Bp_Pla_Cf_Des_TI_VA.png";
-import tolva1L2 from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTi_Blueprint/Bp_Pla_Cf_Des_TI_VL.png";
-import tolva1L1 from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTm_Blueprint/Bp_Pla_Cf_Des_TM_VL.png";
-import tolva1F from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTi_Blueprint/Bp_Pla_Cf_Des_TI_VT.png";
+import tolva3Main from "../../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/Blueprint_Ti_FpD/PlaFpDes_TI_VA.png";
+import tolva3Blue from "../../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/Blueprint_Ti_FpD/BpFpDes_TI_VA.png";
+import tolva1L2 from "../../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/Blueprint_Ti_FpD/BpFpDes_TI_VL.png";
+import tolva1L1 from "../../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/BlueprintTm_FpD/BpPlaFpDes_TM_VL.png";
+import tolva1F from "../../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/Blueprint_Ti_FpD/BpPlaFpDes_TM_VT.png";
 import tolva1Main from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTm_Blueprint/Bp_Pla_Cf_Des_TM_VA.png";
 import { useClipPathScrollTrigger } from "../../../../components/lib/useClipPathScrollTrigger.tsx";
 gsap.registerPlugin(ScrollTrigger);
@@ -41,14 +39,14 @@ const toggleConfig = [
       lTotalMontada: 21.1,
       aTransporteMontada: 4.4,
       //Tambor
-      tLongitud: 5.4864,
+      tLongitud: 6.6,
       tDiametro: 1.2192,
     },
   },
   {
     id: "2",
     dimensions: {
-      lTotal: 16.25,
+      lTotal: 16.5,
       rAltura: 1.4,
       aTotal: 2.9,
       aTransporte: 4.2,
@@ -58,14 +56,14 @@ const toggleConfig = [
       aTransporteMontada: 4.4,
 
       //Tambor
-      tLongitud: 6.7056,
-      tDiametro: 1.524,
+      tLongitud: 6.9,
+      tDiametro: 1.37,
     },
   },
   {
     id: "3",
     dimensions: {
-      lTotal: 18.7,
+      lTotal: 17.2,
       rAltura: 1.4,
       aTotal: 2.9,
       aTransporte: 4.2,
@@ -76,13 +74,13 @@ const toggleConfig = [
 
       //Tambor
       tLongitud: 7.3152,
-      tDiametro: 1.6764,
+      tDiametro: 1.52,
     },
   },
   {
     id: "4",
     dimensions: {
-      lTotal: 20,
+      lTotal: 18.1,
       rAltura: 1.4,
       aTotal: 3,
       aTransporte: 4.2,
@@ -92,13 +90,13 @@ const toggleConfig = [
       aTransporteMontada: 4.4,
 
       //Tambor
-      tLongitud: 8.8392,
+      tLongitud: 8.52,
       tDiametro: 1.8288,
     },
   },
 ];
 
-const BinPlanosSection = () => {
+const PDPlanos = () => {
   //tabs states
   const [activeTab, setActiveTab] = useState(3);
 
@@ -617,7 +615,7 @@ const BinPlanosSection = () => {
                         </div>
                         <div className="flex justify-between">
                           <p>ACFM:</p>
-                          <p>1611</p>
+                          <p>1,611</p>
                         </div>
                         <div className="flex justify-between">
                           <p>Motor:</p>
@@ -642,7 +640,7 @@ const BinPlanosSection = () => {
                         <li>Precalentador de combustible</li>
                       </ul>
                     </div>
-                    <div className=" text-white w-full font-normal flex flex-col gap-4">
+                    {/*<div className=" text-white w-full font-normal flex flex-col gap-4">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Casa de bolsas
@@ -702,7 +700,7 @@ const BinPlanosSection = () => {
                           <p>64</p>
                         </div>
                       </div>
-                    </div>
+                    </div>*/}
                   </div>
                 </div>
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 items-start ">
@@ -874,7 +872,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               (activeData?.dimensions.aTotal ?? 0) * 3.281
                             ).toFixed(1)} ft`}
@@ -1336,10 +1334,6 @@ const BinPlanosSection = () => {
                         <h1>5% humedad:</h1>
                         <p>30 Tph</p>
                       </div>
-                      <div className="flex justify-between">
-                        <h1>Incorporación de RAP:</h1>
-                        <p>30%</p>
-                      </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
@@ -1388,7 +1382,6 @@ const BinPlanosSection = () => {
                       <li>NOM</li>
                       <li>DOT</li>
                       <li>SCT</li>
-                      <li>SEMARNAT</li>
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -1911,7 +1904,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               (activeData?.dimensions.aTotal ?? 0) * 3.281
                             ).toFixed(1)} ft`}
@@ -2143,7 +2136,7 @@ const BinPlanosSection = () => {
                         <h1>Diametro:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} mt`
+                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
                             : `${(
                                 (activeData?.dimensions.tDiametro ?? 0) *
                                 cmToFeet
@@ -2371,10 +2364,6 @@ const BinPlanosSection = () => {
                         <h1>5% humedad:</h1>
                         <p>60 Tph</p>
                       </div>
-                      <div className="flex justify-between">
-                        <h1>Incorporación de RAP:</h1>
-                        <p>40%</p>
-                      </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
@@ -2423,7 +2412,6 @@ const BinPlanosSection = () => {
                       <li>NOM</li>
                       <li>DOT</li>
                       <li>SCT</li>
-                      <li>SEMARNAT</li>
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -2941,7 +2929,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               (activeData?.dimensions.aTotal ?? 0) * 3.281
                             ).toFixed(1)} ft`}
@@ -3401,18 +3389,14 @@ const BinPlanosSection = () => {
                       </div>
                       <div className="flex justify-between">
                         <h1>5% humedad:</h1>
-                        <p>90 Tph</p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Incorporación de RAP:</h1>
-                        <p>40%</p>
+                        <p>80 Tph</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimeinto con normas industriales
+                        Cumplimiento con normas industriales
                       </h1>
                       <button
                         className="block md:hidden"
@@ -3455,7 +3439,6 @@ const BinPlanosSection = () => {
                       <li>NOM</li>
                       <li>DOT</li>
                       <li>SCT</li>
-                      <li>SEMARNAT</li>
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -4430,22 +4413,18 @@ const BinPlanosSection = () => {
                     >
                       <div className="flex justify-between">
                         <h1>3% humedad:</h1>
-                        <p>160 Tph</p>
+                        <p>140 Tph</p>
                       </div>
                       <div className="flex justify-between">
                         <h1>5% humedad:</h1>
-                        <p>120 Tph</p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Incorporación de RAP:</h1>
-                        <p>40%</p>
+                        <p>110 Tph</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimeinto con normas industriales
+                        Cumplimiento con normas industriales
                       </h1>
                       <button
                         className="block md:hidden"
@@ -4488,7 +4467,6 @@ const BinPlanosSection = () => {
                       <li>NOM</li>
                       <li>DOT</li>
                       <li>SCT</li>
-                      <li>SEMARNAT</li>
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -4580,4 +4558,4 @@ const BinPlanosSection = () => {
   );
 };
 
-export default BinPlanosSection;
+export default PDPlanos;
