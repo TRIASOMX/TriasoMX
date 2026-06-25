@@ -1,16 +1,16 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import tab3Main2 from "../../../../assets/images/DrumMixers/tab3Main2.webp";
-import tab3Right from "../../../../assets/images/DrumMixers/tab3Right.webp";
+import tab3Main2 from "../../../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/PlaFpPRO_VA.png";
+import tab3Right from "../../../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/BpPlaFp_PRO_VA.png";
 import tab6Right from "../../../../assets/images/DrumMixers/tab6Right.webp";
 import tab6Left from "../../../../assets/images/DrumMixers/tab6Left.webp";
 import tab5Main from "../../../../assets/images/DrumMixers/tab5Main.webp";
 import tab5Left from "../../../../assets/images/DrumMixers/tab5Left.webp";
-import tab1Main from "../../../../assets/images/DrumMixers/tab1Main.webp";
-import tab1Left from "../../../../assets/images/DrumMixers/tab1Left.webp";
+import tab1Main from "../../../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/BpPlaFp_PRO_VA.png";
+import tab1Left from "../../../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/BpPlaFp_PRO_VT.png";
 import tab1Right from "../../../../assets/images/DrumMixers/tab5Right.webp";
-import tab2Left from "../../../../assets/images/DrumMixers/tab2L.webp";
+import tab2Left from "../../../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/BpPlaFp_PRO_VL.png";
 import tab6Main from "../../../../assets/images/DrumMixers/tab6M.webp";
 import { useClipPathScrollTrigger } from "../../../../components/lib/useClipPathScrollTrigger.tsx";
 
@@ -264,7 +264,7 @@ const DrumMixPlanos = () => {
           className="text-white font-bold
            flex items-center justify-center
             rounded will-change-transform transform-gpu
-             z-20 w-[250px] h-[600px]"
+             z-20 w-[250px] h-[450px]"
         >
           <img
             src={tab1Main.src}
@@ -292,11 +292,11 @@ const DrumMixPlanos = () => {
       >
         <header className="mt-10 text-white" ref={otroElemento}>
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
-            Specifications
+            ESPECIFICACIONES
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              MEASURE:
+              SISTEMA DE MEDICIÓN:
             </h1>
             <div
               onClick={toggleUnit}
@@ -319,7 +319,7 @@ const DrumMixPlanos = () => {
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRIC
+                  METRICO
                 </span>
               </div>
             </div>
@@ -329,7 +329,7 @@ const DrumMixPlanos = () => {
           <div id="options" ref={optionsRef} className="w-full">
             {/* móvil */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
-              <label className="text-white block text-center">MODELS:</label>
+              <label className="text-white block text-center">MODELOS:</label>
               <div className="relative">
                 <select
                   value={activeTab}
@@ -362,7 +362,7 @@ const DrumMixPlanos = () => {
 
             {/* desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
-              <label className="text-white block text-center">MODELS:</label>
+              <label className="text-white block text-center">MODELOS:</label>
             </div>
             <div className="hidden md:flex flex-wrap justify-center gap-5  mx-auto px-2">
               {modelOptions.map((option) => (
@@ -898,7 +898,7 @@ const DrumMixPlanos = () => {
                 </div>
                 <div className="flex justify-start md:justify-center items-end my-10 overflow-x-auto w-full whitespace-nowrap flex-nowrap">
                   <div className="flex flex-col items-center justify-center shrink-0 min-w-[272px]">
-                    <div className="flex items-center justify-center w-[135px] h-[60px] self-start">
+                    <div className="flex items-center justify-center w-[135px] h-[60px] self-end">
                       <div className="border-dotted border-l border-l-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
                           <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
@@ -2059,7 +2059,7 @@ const DrumMixPlanos = () => {
                 </div>
                 <div className="flex justify-start md:justify-center items-end my-10 overflow-x-auto w-full whitespace-nowrap flex-nowrap">
                   <div className="flex flex-col items-center justify-center shrink-0 min-w-[272px]">
-                    <div className="flex items-center justify-center w-[135px] h-[60px] self-start">
+                    <div className="flex items-center justify-center w-[135px] h-[60px] self-end">
                       <div className="border-dotted border-l border-l-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
                           <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
@@ -3243,7 +3243,7 @@ const DrumMixPlanos = () => {
                 </div>
                 <div className="flex justify-start md:justify-center items-end my-10 overflow-x-auto w-full whitespace-nowrap flex-nowrap">
                   <div className="flex flex-col items-center justify-center shrink-0 min-w-[272px]">
-                    <div className="flex items-center justify-center w-[135px] h-[60px] self-start">
+                    <div className="flex items-center justify-center w-[135px] h-[60px] self-end">
                       <div className="border-dotted border-l border-l-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
                           <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
@@ -3421,7 +3421,7 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="h-[285px] w-[744px] flex justify-center items-center">
                       <img
-                        src={tab3Right.src}
+                        src={tab2Left.src}
                         alt=""
                         className="h-full w-auto"
                       />
@@ -4146,7 +4146,7 @@ const DrumMixPlanos = () => {
                       </ul>
                     </div>
                   </div>
-                  <div className="col-span-2 flex items-start justify-center w-full min-h-[600px] order-1 md:order-2">
+                  <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     <img
                       src={tab1Main.src}
                       alt=""
@@ -4385,7 +4385,7 @@ const DrumMixPlanos = () => {
                 </div>
                 <div className="flex justify-start md:justify-center items-end my-10 overflow-x-auto w-full whitespace-nowrap flex-nowrap">
                   <div className="flex flex-col items-center justify-center shrink-0 min-w-[272px]">
-                    <div className="flex items-center justify-center w-[135px] h-[60px] self-start">
+                    <div className="flex items-center justify-center w-[135px] h-[60px] self-end">
                       <div className="border-dotted border-l border-l-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
                           <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
@@ -4563,7 +4563,7 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="h-[285px] w-[744px] flex justify-center items-center">
                       <img
-                        src={tab3Right.src}
+                        src={tab2Left.src}
                         alt=""
                         className="h-full w-auto"
                       />
