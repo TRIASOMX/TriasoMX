@@ -3,9 +3,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import tolva3Main from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/PlaFpPlus_TI_VA.png";
 import tolva3Blue from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/BpPlaFpPlus_TI_VA.png";
-import tolva1L1 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/CfPTm_Blueprint/Bp_Pla_Cf_Plus_TI_VL.png";
-import tolva1L2 from "../../../../assets/images/DrumMixers/Contraflujo/Plus/CfPTi_Blueprint/Bp_Pla_Cf_Plus_TL.png";
-import tolva1F from "../../../../assets/images/DrumMixers/Contraflujo/Plus/CfPTm_Blueprint/Bp_Pla_Cf_Plus_TM_VT.png";
+import tolva1L1 from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Tm_FpP/BpPlaFpPlus_TM_VL.png";
+import tolva1L2 from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/BpPlaFpPlus_TI_VL.png";
+import tolva1F from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/BpPlaFpPlus_TI_VT.png";
 import tolva1Main from "../../../../assets/images/DrumMixers/Contraflujo/Plus/CfPTm_Blueprint/Bp_Pla_Cf_Plus_TM_VA.png";
 import { useClipPathScrollTrigger } from "../../../../components/lib/useClipPathScrollTrigger.tsx";
 gsap.registerPlugin(ScrollTrigger);
@@ -39,14 +39,14 @@ const toggleConfig = [
       lTotalMontada: 21.1,
       aTransporteMontada: 4.4,
       //Tambor
-      tLongitud: 5.4864,
+      tLongitud: 6.6,
       tDiametro: 1.2192,
     },
   },
   {
     id: "2",
     dimensions: {
-      lTotal: 16.25,
+      lTotal: 16.5,
       rAltura: 1.4,
       aTotal: 2.9,
       aTransporte: 4.2,
@@ -56,14 +56,14 @@ const toggleConfig = [
       aTransporteMontada: 4.4,
 
       //Tambor
-      tLongitud: 6.7056,
-      tDiametro: 1.524,
+      tLongitud: 6.93,
+      tDiametro: 1.37,
     },
   },
   {
     id: "3",
     dimensions: {
-      lTotal: 18.7,
+      lTotal: 17.2,
       rAltura: 1.4,
       aTotal: 2.9,
       aTransporte: 4.2,
@@ -74,7 +74,7 @@ const toggleConfig = [
 
       //Tambor
       tLongitud: 7.3152,
-      tDiametro: 1.6764,
+      tDiametro: 1.52,
     },
   },
   {
@@ -97,7 +97,24 @@ const toggleConfig = [
   {
     id: "5",
     dimensions: {
-      lTotal: 21,
+      lTotal: 18.1,
+      rAltura: 1.4,
+      aTotal: 3.0,
+      aTransporte: 4.2,
+
+      //Tolva montada
+      lTotalMontada: 22.9,
+      aTransporteMontada: 4.4,
+
+      //Tambor
+      tLongitud: 8.52,
+      tDiametro: 1.8288,
+    },
+  },
+  {
+    id: "6",
+    dimensions: {
+      lTotal: 18.9,
       rAltura: 1.4,
       aTotal: 3.1,
       aTransporte: 4.2,
@@ -107,24 +124,7 @@ const toggleConfig = [
       aTransporteMontada: 4.4,
 
       //Tambor
-      tLongitud: 8.8392,
-      tDiametro: 1.8288,
-    },
-  },
-  {
-    id: "6",
-    dimensions: {
-      lTotal: 22.3,
-      rAltura: 1.4,
-      aTotal: 3.2,
-      aTransporte: 4.2,
-
-      //Tolva montada
-      lTotalMontada: 22.9,
-      aTransporteMontada: 4.4,
-
-      //Tambor
-      tLongitud: 8.8392,
+      tLongitud: 8.78,
       tDiametro: 1.8288,
     },
   },
@@ -255,7 +255,7 @@ const BinPlanosSection = () => {
         <div
           id="boxScroll"
           ref={boxRef}
-          className="text-white font-bold flex items-center justify-center rounded will-change-transform transform-gpu z-20 w-[300px] h-[560px]"
+          className="text-white font-bold flex items-center justify-center rounded will-change-transform transform-gpu z-20 w-[350px] h-[550px]"
         >
           {panelOption === "withPanels" ? (
             <div>
@@ -520,7 +520,6 @@ const BinPlanosSection = () => {
                         <li>Álabes de velo</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
-                        <li>Álabes de RAP</li>
                         <li>Álabes de mezclado</li>
                       </ul>
                     </div>
@@ -572,14 +571,26 @@ const BinPlanosSection = () => {
                           campo.
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
-                        <li>
-                          Monitoreo remoto de los parámetros de operación, con
-                          supervisión en tiempo real y registro histórico de
-                          datos.
-                        </li>
-                        <li>
-                          Sistema de monitoreo remoto, accesible desde
-                          computadora, tablet o teléfono.
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
+                            </li>
+                          </ul>
                         </li>
                         <li>
                           Sistema de alarmas y seguridades para condiciones
@@ -657,7 +668,7 @@ const BinPlanosSection = () => {
                         </div>
                         <div className="flex justify-between">
                           <p>ACFM:</p>
-                          <p>1611</p>
+                          <p>1,611</p>
                         </div>
                         <div className="flex justify-between">
                           <p>Motor:</p>
@@ -665,11 +676,24 @@ const BinPlanosSection = () => {
                         </div>
                         <li>Alimentado con sistema de control de aire total</li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Diésel</li>
-                            <li>Gas</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Diésel
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Gas
+                            </li>
                           </ul>
                         </li>
+
                         <li>Sensores UV para monitoreo de llama</li>
                         <li>
                           Sistema de flama piloto y flama principal
@@ -686,7 +710,7 @@ const BinPlanosSection = () => {
                         <li>Precalentador de combustible</li>
                       </ul>
                     </div>
-                    <div className=" text-white w-full font-normal flex flex-col gap-4">
+                    {/*<div className=" text-white w-full font-normal flex flex-col gap-4">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Casa de bolsas
@@ -746,7 +770,7 @@ const BinPlanosSection = () => {
                           <p>64</p>
                         </div>
                       </div>
-                    </div>
+                    </div>*/}
                   </div>
                 </div>
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 items-start ">
@@ -797,6 +821,7 @@ const BinPlanosSection = () => {
                         Motores, componentes y cableado Siemens de grado
                         industrial.
                       </li>
+                      <li>Flancos estéticos para una imagen profesional</li>
                       <li>
                         Sistema de cableado simplificado para facilitar el
                         mantenimiento.
@@ -866,13 +891,18 @@ const BinPlanosSection = () => {
                         anticorrosivo.
                       </li>
                       <li className="list-none">
-                        <ul className="list-disc pl-10">
-                          <li>
+                        <ul className="ml-2 lg:ml-6">
+                          <li
+                            className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                          >
                             Tornillería galvanizada y pintura electrostática, de
                             alta resistencia y excelente adherencia.
                           </li>
                         </ul>
                       </li>
+
                       <li>
                         Aislamiento térmico con lana mineral, que reduce la
                         pérdida de calor y la temperatura superficial.
@@ -886,7 +916,6 @@ const BinPlanosSection = () => {
                         control.
                       </li>
                       <li>Forro exterior de lámina de acero inoxidable.</li>
-                      <li>Escaleras y barandales para operación segura.</li>
                     </ul>
                   </div>
                 </div>
@@ -919,7 +948,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               (activeData?.dimensions.aTotal ?? 0) * 3.281
                             ).toFixed(1)} ft`}
@@ -985,7 +1014,7 @@ const BinPlanosSection = () => {
                               dim("aTransporte", "aTransporteMontada")?.toFixed(
                                 2,
                               ) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("aTransporte", "aTransporteMontada") *
                               cmToFeet
@@ -1043,7 +1072,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("lTotal", "lTotalMontada") * cmToFeet
                             ).toFixed(1)} ft`}
@@ -1141,7 +1170,7 @@ const BinPlanosSection = () => {
                             ? `${
                                 activeData?.dimensions.tLongitud?.toFixed(2) ??
                                 ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.tLongitud ?? 0) *
                                 cmToFeet
@@ -1149,10 +1178,22 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
+                        <h1>Ancho:</h1>
+                        <p>
+                          {unit === "metric"
+                            ? `${
+                                activeData?.dimensions.aTotal?.toFixed(1) ?? ""
+                              } m`
+                            : `${(
+                                (activeData?.dimensions.aTotal ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
+                        </p>
+                      </div>
+                      <div className="flex justify-between">
                         <h1>Diametro:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} mt`
+                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
                             : `${(
                                 (activeData?.dimensions.tDiametro ?? 0) *
                                 cmToFeet
@@ -1210,7 +1251,7 @@ const BinPlanosSection = () => {
                           {unit === "metric"
                             ? `${
                                 dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("lTotal", "lTotalMontada") * cmToFeet
                               ).toFixed(1)} ft`}
@@ -1226,7 +1267,7 @@ const BinPlanosSection = () => {
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.rAltura?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.rAltura ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
@@ -1238,7 +1279,7 @@ const BinPlanosSection = () => {
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.aTotal ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
@@ -1253,7 +1294,7 @@ const BinPlanosSection = () => {
                                   "aTransporte",
                                   "aTransporteMontada",
                                 )?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("aTransporte", "aTransporteMontada") *
                                 cmToFeet
@@ -1381,10 +1422,6 @@ const BinPlanosSection = () => {
                         <h1>5% humedad:</h1>
                         <p>30 Tph</p>
                       </div>
-                      <div className="flex justify-between">
-                        <h1>Incorporación de RAP:</h1>
-                        <p>40%</p>
-                      </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
@@ -1433,7 +1470,6 @@ const BinPlanosSection = () => {
                       <li>NOM</li>
                       <li>DOT</li>
                       <li>SCT</li>
-                      <li>SEMARNAT</li>
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -1482,12 +1518,18 @@ const BinPlanosSection = () => {
                       <ul className="ml-6 list-disc">
                         <li>Diseñada para reubicación.</li>
                         <li>
-                          Tolvas cuádruples montadas en un mismo chasis para
+                          Tolvas triples montadas en un mismo chasis para
                           fácilidad en transporte.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Tolvas de 14 Tons de capacidad</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Tolvas de 14 Tons de capacidad
+                            </li>
                           </ul>
                         </li>
 
@@ -1495,7 +1537,18 @@ const BinPlanosSection = () => {
                           La quinta rueda integrada elimina la necesidad de cama
                           baja (lowboy).
                         </li>
-
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              También puede transportarse en lowboy o plataforma
+                              (flatbed) si se prefiere.
+                            </li>
+                          </ul>
+                        </li>
                         <li>
                           Montada sobre chasis de transporte estándar con dos
                           ejes y rines de 16” para carretera.
@@ -1575,7 +1628,7 @@ const BinPlanosSection = () => {
                         <li>Álabes de velo</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
-                        <li>Álabes de RAP</li>
+
                         <li>Álabes de mezclado</li>
                       </ul>
                     </div>
@@ -1627,15 +1680,28 @@ const BinPlanosSection = () => {
                           campo.
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
-                        <li>
-                          Monitoreo remoto de los parámetros de operación, con
-                          supervisión en tiempo real y registro histórico de
-                          datos.
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
+                            </li>
+                          </ul>
                         </li>
-                        <li>
-                          Sistema de monitoreo remoto, accesible desde
-                          computadora, tablet o teléfono.
-                        </li>
+
                         <li>
                           Sistema de alarmas y seguridades para condiciones
                           fuera de rango.
@@ -1720,9 +1786,21 @@ const BinPlanosSection = () => {
                         </div>
                         <li>Alimentado con sistema de control de aire total</li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Diésel</li>
-                            <li>Gas</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Diésel
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Gas
+                            </li>
                           </ul>
                         </li>
                         <li>Sensores UV para monitoreo de llama</li>
@@ -1741,7 +1819,7 @@ const BinPlanosSection = () => {
                         <li>Precalentador de combustible</li>
                       </ul>
                     </div>
-                    <div className=" text-white w-full font-normal flex flex-col gap-4">
+                    {/*<div className=" text-white w-full font-normal flex flex-col gap-4">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Casa de bolsas
@@ -1801,7 +1879,7 @@ const BinPlanosSection = () => {
                           <p>112</p>
                         </div>
                       </div>
-                    </div>
+                    </div>*/}
                   </div>
                 </div>
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 items-start ">
@@ -1852,6 +1930,7 @@ const BinPlanosSection = () => {
                         Motores, componentes y cableado Siemens de grado
                         industrial.
                       </li>
+                      <li>Flancos estéticos para una imagen profesional</li>
                       <li>
                         Sistema de cableado simplificado para facilitar el
                         mantenimiento.
@@ -1921,13 +2000,18 @@ const BinPlanosSection = () => {
                         anticorrosivo.
                       </li>
                       <li className="list-none">
-                        <ul className="list-disc pl-10">
-                          <li>
+                        <ul className="ml-2 lg:ml-6">
+                          <li
+                            className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                          >
                             Tornillería galvanizada y pintura electrostática, de
                             alta resistencia y excelente adherencia.
                           </li>
                         </ul>
                       </li>
+
                       <li>
                         Aislamiento térmico con lana mineral, que reduce la
                         pérdida de calor y la temperatura superficial.
@@ -1941,10 +2025,6 @@ const BinPlanosSection = () => {
                         control.
                       </li>
                       <li>Forro exterior de lámina de acero inoxidable.</li>
-                      <li>
-                        Escaleras y barandales para operación segura.Escaleras y
-                        barandales para operación segura.
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1977,7 +2057,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               (activeData?.dimensions.aTotal ?? 0) * 3.281
                             ).toFixed(1)} ft`}
@@ -2043,7 +2123,7 @@ const BinPlanosSection = () => {
                               dim("aTransporte", "aTransporteMontada")?.toFixed(
                                 2,
                               ) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("aTransporte", "aTransporteMontada") *
                               cmToFeet
@@ -2101,7 +2181,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("lTotal", "lTotalMontada") * cmToFeet
                             ).toFixed(1)} ft`}
@@ -2198,7 +2278,7 @@ const BinPlanosSection = () => {
                             ? `${
                                 activeData?.dimensions.tLongitud?.toFixed(2) ??
                                 ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.tLongitud ?? 0) *
                                 cmToFeet
@@ -2206,10 +2286,22 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Diametro:</h1>
+                        <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} mt`
+                            ? `${
+                                activeData?.dimensions.aTotal?.toFixed(1) ?? ""
+                              } m`
+                            : `${(
+                                (activeData?.dimensions.aTotal ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
+                        </p>
+                      </div>
+                      <div className="flex justify-between">
+                        <h1>Diámetro:</h1>
+                        <p>
+                          {unit === "metric"
+                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
                             : `${(
                                 (activeData?.dimensions.tDiametro ?? 0) *
                                 cmToFeet
@@ -2267,7 +2359,7 @@ const BinPlanosSection = () => {
                           {unit === "metric"
                             ? `${
                                 dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("lTotal", "lTotalMontada") * cmToFeet
                               ).toFixed(1)} ft`}
@@ -2283,7 +2375,7 @@ const BinPlanosSection = () => {
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.rAltura?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.rAltura ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
@@ -2295,14 +2387,14 @@ const BinPlanosSection = () => {
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.aTotal ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con tolvas en operación:</h1>
+                        <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -2310,7 +2402,7 @@ const BinPlanosSection = () => {
                                   "aTransporte",
                                   "aTransporteMontada",
                                 )?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("aTransporte", "aTransporteMontada") *
                                 cmToFeet
@@ -2437,10 +2529,6 @@ const BinPlanosSection = () => {
                         <h1>5% humedad:</h1>
                         <p>60 Tph</p>
                       </div>
-                      <div className="flex justify-between">
-                        <h1>Incorporación de RAP:</h1>
-                        <p>40%</p>
-                      </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
@@ -2489,7 +2577,6 @@ const BinPlanosSection = () => {
                       <li>NOM</li>
                       <li>DOT</li>
                       <li>SCT</li>
-                      <li>SEMARNAT</li>
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -2537,27 +2624,39 @@ const BinPlanosSection = () => {
                     >
                       <ul className="ml-6 list-disc">
                         <li>
-                          Tolvas cuádruples montadas en un mismo chasis para
+                          Tolvas triples montadas en un mismo chasis para
                           fácilidad en transporte.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Tolvas de 14 Tons de capacidad</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Tolvas de 14 Tons de capacidad
+                            </li>
                           </ul>
                         </li>
+
                         <li>Diseñada para reubicación.</li>
                         <li>
                           La quinta rueda integrada elimina la necesidad de cama
                           baja (lowboy).
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en lowboy o plataforma
                               (flatbed) si se prefiere.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Montada sobre chasis de transporte estándar con dos
                           ejes y rines de 16” para carretera.
@@ -2642,7 +2741,7 @@ const BinPlanosSection = () => {
                           <li>Álabes de velo</li>
                           <li>Álabes de radiación</li>
                           <li>Álabes de secado</li>
-                          <li>Álabes de RAP</li>
+
                           <li>Álabes de mezclado</li>
                         </ul>
                       </div>
@@ -2694,15 +2793,28 @@ const BinPlanosSection = () => {
                             campo.
                           </li>
                           <li>Sistema operativo Triaso Relief 8.0.</li>
-                          <li>
-                            Monitoreo remoto de los parámetros de operación, con
-                            supervisión en tiempo real y registro histórico de
-                            datos.
+                          <li className="list-none">
+                            <ul className="ml-2 lg:ml-6">
+                              <li
+                                className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                              >
+                                Monitoreo remoto de los parámetros de operación,
+                                con supervisión en tiempo real y registro
+                                histórico de datos.
+                              </li>
+                              <li
+                                className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                              >
+                                Sistema de monitoreo remoto, accesible desde
+                                computadora, tablet o teléfono.
+                              </li>
+                            </ul>
                           </li>
-                          <li>
-                            Sistema de monitoreo remoto, accesible desde
-                            computadora, tablet o teléfono.
-                          </li>
+
                           <li>
                             Sistema de alarmas y seguridades para condiciones
                             fuera de rango.
@@ -2760,6 +2872,7 @@ const BinPlanosSection = () => {
                             Motores, componentes y cableado Siemens de grado
                             industrial.
                           </li>
+                          <li>Flancos estéticos para una imagen profesional</li>
                           <li>
                             Sistema de cableado simplificado para facilitar el
                             mantenimiento.
@@ -2835,7 +2948,7 @@ const BinPlanosSection = () => {
                         </div>
                         <div className="flex justify-between">
                           <p>ACFM:</p>
-                          <p>4833</p>
+                          <p>4,833</p>
                         </div>
                         <div className="flex justify-between">
                           <p>Motor:</p>
@@ -2843,9 +2956,21 @@ const BinPlanosSection = () => {
                         </div>
                         <li>Alimentado con sistema de control de aire total</li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Diésel</li>
-                            <li>Gas</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Diésel
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Gas
+                            </li>
                           </ul>
                         </li>
                         <li>Sensores UV para monitoreo de llama</li>
@@ -2864,7 +2989,7 @@ const BinPlanosSection = () => {
                         <li>Precalentador de combustible</li>
                       </ul>
                     </div>
-                    <div className=" text-white w-full font-normal flex flex-col gap-4">
+                    {/*<div className=" text-white w-full font-normal flex flex-col gap-4">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Casa de bolsas
@@ -2924,7 +3049,7 @@ const BinPlanosSection = () => {
                           <p>154</p>
                         </div>
                       </div>
-                    </div>
+                    </div>*/}
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
@@ -2977,13 +3102,18 @@ const BinPlanosSection = () => {
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Aislamiento térmico con lana mineral, que reduce la
                           pérdida de calor y la temperatura superficial.
@@ -2997,7 +3127,6 @@ const BinPlanosSection = () => {
                           control.
                         </li>
                         <li>Forro exterior de lámina de acero inoxidable.</li>
-                        <li>Escaleras y barandales para operación segura.</li>
                       </ul>
                     </div>
                   </div>
@@ -3032,7 +3161,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               (activeData?.dimensions.aTotal ?? 0) * 3.281
                             ).toFixed(1)} ft`}
@@ -3098,7 +3227,7 @@ const BinPlanosSection = () => {
                               dim("aTransporte", "aTransporteMontada")?.toFixed(
                                 2,
                               ) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("aTransporte", "aTransporteMontada") *
                               cmToFeet
@@ -3156,7 +3285,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("lTotal", "lTotalMontada") * cmToFeet
                             ).toFixed(1)} ft`}
@@ -3254,7 +3383,7 @@ const BinPlanosSection = () => {
                             ? `${
                                 activeData?.dimensions.tLongitud?.toFixed(2) ??
                                 ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.tLongitud ?? 0) *
                                 cmToFeet
@@ -3262,10 +3391,22 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
+                        <h1>Ancho:</h1>
+                        <p>
+                          {unit === "metric"
+                            ? `${
+                                activeData?.dimensions.aTotal?.toFixed(1) ?? ""
+                              } m`
+                            : `${(
+                                (activeData?.dimensions.aTotal ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
+                        </p>
+                      </div>
+                      <div className="flex justify-between">
                         <h1>Diametro:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} mt`
+                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
                             : `${(
                                 (activeData?.dimensions.tDiametro ?? 0) *
                                 cmToFeet
@@ -3318,12 +3459,12 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo la rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${
                                 dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("lTotal", "lTotalMontada") * cmToFeet
                               ).toFixed(1)} ft`}
@@ -3334,12 +3475,12 @@ const BinPlanosSection = () => {
                         <p>Dos ejes</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.rAltura?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.rAltura ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
@@ -3351,14 +3492,14 @@ const BinPlanosSection = () => {
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.aTotal ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con tolvas en operación:</h1>
+                        <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -3366,7 +3507,7 @@ const BinPlanosSection = () => {
                                   "aTransporte",
                                   "aTransporteMontada",
                                 )?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("aTransporte", "aTransporteMontada") *
                                 cmToFeet
@@ -3419,7 +3560,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 `}
                     >
                       <ul className="ml-6 list-disc">
-                        <li>Accionado por dos motores de 10 HP</li>
+                        <li>Accionado por dos motores de 20 HP</li>
                         <li>
                           Sistema de accionamiento por roles de carga para
                           operación continua y confiable
@@ -3492,18 +3633,14 @@ const BinPlanosSection = () => {
                       </div>
                       <div className="flex justify-between">
                         <h1>5% humedad:</h1>
-                        <p>90 Tph</p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Incorporación de RAP:</h1>
-                        <p>40%</p>
+                        <p>80 Tph</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimeinto con normas industriales
+                        Cumplimiento con normas industriales
                       </h1>
                       <button
                         className="block md:hidden"
@@ -3546,7 +3683,6 @@ const BinPlanosSection = () => {
                       <li>NOM</li>
                       <li>DOT</li>
                       <li>SCT</li>
-                      <li>SEMARNAT</li>
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -3595,26 +3731,38 @@ const BinPlanosSection = () => {
                       <ul className="ml-6 list-disc">
                         <li>Diseñada para reubicación.</li>
                         <li>
-                          Tolvas cuádruples montadas en un mismo chasis para
+                          Tolvas triples montadas en un mismo chasis para
                           fácilidad en transporte.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Tolvas de 14 Tons de capacidad</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Tolvas de 14 Tons de capacidad
+                            </li>
                           </ul>
                         </li>
+
                         <li>
                           La quinta rueda integrada elimina la necesidad de cama
                           baja (lowboy).
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en lowboy o plataforma
                               (flatbed) si se prefiere.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Montada sobre chasis de transporte estándar con dos
                           ejes y rines de 16” para carretera.
@@ -3694,7 +3842,7 @@ const BinPlanosSection = () => {
                         <li>Álabes de velo</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
-                        <li>Álabes de RAP</li>
+
                         <li>Álabes de mezclado</li>
                       </ul>
                     </div>
@@ -3746,15 +3894,28 @@ const BinPlanosSection = () => {
                           campo.
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
-                        <li>
-                          Monitoreo remoto de los parámetros de operación, con
-                          supervisión en tiempo real y registro histórico de
-                          datos.
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
+                            </li>
+                          </ul>
                         </li>
-                        <li>
-                          Sistema de monitoreo remoto, accesible desde
-                          computadora, tablet o teléfono.
-                        </li>
+
                         <li>
                           Sistema de alarmas y seguridades para condiciones
                           fuera de rango.
@@ -3839,11 +4000,24 @@ const BinPlanosSection = () => {
                         </div>
                         <li>Alimentado con sistema de control de aire total</li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Diésel</li>
-                            <li>Gas</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Diésel
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Gas
+                            </li>
                           </ul>
                         </li>
+
                         <li>Sensores UV para monitoreo de llama</li>
                         <li>
                           Sistema de flama piloto y flama principal
@@ -3860,7 +4034,7 @@ const BinPlanosSection = () => {
                         <li>Precalentador de combustible</li>
                       </ul>
                     </div>
-                    <div className=" text-white w-full font-normal flex flex-col gap-4">
+                    {/*<div className=" text-white w-full font-normal flex flex-col gap-4">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Casa de bolsas
@@ -3920,7 +4094,7 @@ const BinPlanosSection = () => {
                           <p>224</p>
                         </div>
                       </div>
-                    </div>
+                    </div>*/}
                   </div>
                 </div>
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 items-start ">
@@ -3971,6 +4145,7 @@ const BinPlanosSection = () => {
                         Motores, componentes y cableado Siemens de grado
                         industrial.
                       </li>
+                      <li>Flancos estéticos para una imagen profesional</li>
                       <li>
                         Sistema de cableado simplificado para facilitar el
                         mantenimiento.
@@ -4040,13 +4215,18 @@ const BinPlanosSection = () => {
                         anticorrosivo.
                       </li>
                       <li className="list-none">
-                        <ul className="list-disc pl-10">
-                          <li>
+                        <ul className="ml-2 lg:ml-6">
+                          <li
+                            className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                          >
                             Tornillería galvanizada y pintura electrostática, de
                             alta resistencia y excelente adherencia.
                           </li>
                         </ul>
                       </li>
+
                       <li>
                         Aislamiento térmico con lana mineral, que reduce la
                         pérdida de calor y la temperatura superficial.
@@ -4060,7 +4240,6 @@ const BinPlanosSection = () => {
                         control.
                       </li>
                       <li>Forro exterior de lámina de acero inoxidable.</li>
-                      <li>Escaleras y barandales para operación segura.</li>
                     </ul>
                   </div>
                 </div>
@@ -4093,7 +4272,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               (activeData?.dimensions.aTotal ?? 0) * 3.281
                             ).toFixed(1)} ft`}
@@ -4159,7 +4338,7 @@ const BinPlanosSection = () => {
                               dim("aTransporte", "aTransporteMontada")?.toFixed(
                                 2,
                               ) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("aTransporte", "aTransporteMontada") *
                               cmToFeet
@@ -4217,7 +4396,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("lTotal", "lTotalMontada") * cmToFeet
                             ).toFixed(1)} ft`}
@@ -4322,10 +4501,22 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Diametro:</h1>
+                        <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} mt`
+                            ? `${
+                                activeData?.dimensions.aTotal?.toFixed(1) ?? ""
+                              } m`
+                            : `${(
+                                (activeData?.dimensions.aTotal ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
+                        </p>
+                      </div>
+                      <div className="flex justify-between">
+                        <h1>Diámetro:</h1>
+                        <p>
+                          {unit === "metric"
+                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
                             : `${(
                                 (activeData?.dimensions.tDiametro ?? 0) *
                                 cmToFeet
@@ -4378,12 +4569,12 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${
                                 dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("lTotal", "lTotalMontada") * cmToFeet
                               ).toFixed(1)} ft`}
@@ -4394,12 +4585,12 @@ const BinPlanosSection = () => {
                         <p>Tres ejes</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.rAltura?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.rAltura ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
@@ -4411,14 +4602,14 @@ const BinPlanosSection = () => {
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.aTotal ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con tolvas en operación:</h1>
+                        <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -4426,7 +4617,7 @@ const BinPlanosSection = () => {
                                   "aTransporte",
                                   "aTransporteMontada",
                                 )?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("aTransporte", "aTransporteMontada") *
                                 cmToFeet
@@ -4553,10 +4744,6 @@ const BinPlanosSection = () => {
                         <h1>5% humedad:</h1>
                         <p>120 Tph</p>
                       </div>
-                      <div className="flex justify-between">
-                        <h1>Incorporación de RAP:</h1>
-                        <p>40%</p>
-                      </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
@@ -4605,7 +4792,6 @@ const BinPlanosSection = () => {
                       <li>NOM</li>
                       <li>DOT</li>
                       <li>SCT</li>
-                      <li>SEMARNAT</li>
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -4658,13 +4844,18 @@ const BinPlanosSection = () => {
                           baja (lowboy).
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en lowboy o plataforma
                               (flatbed) si se prefiere.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Montada sobre chasis de transporte estándar con dos
                           ejes y rines de 16” para carretera.
@@ -4744,7 +4935,7 @@ const BinPlanosSection = () => {
                         <li>Álabes de velo</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
-                        <li>Álabes de RAP</li>
+
                         <li>Álabes de mezclado</li>
                       </ul>
                     </div>
@@ -4796,15 +4987,28 @@ const BinPlanosSection = () => {
                           campo.
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
-                        <li>
-                          Monitoreo remoto de los parámetros de operación, con
-                          supervisión en tiempo real y registro histórico de
-                          datos.
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
+                            </li>
+                          </ul>
                         </li>
-                        <li>
-                          Sistema de monitoreo remoto, accesible desde
-                          computadora, tablet o teléfono.
-                        </li>
+
                         <li>
                           Sistema de alarmas y seguridades para condiciones
                           fuera de rango.
@@ -4889,11 +5093,24 @@ const BinPlanosSection = () => {
                         </div>
                         <li>Alimentado con sistema de control de aire total</li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Diésel</li>
-                            <li>Gas</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Diésel
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Gas
+                            </li>
                           </ul>
                         </li>
+
                         <li>Sensores UV para monitoreo de llama</li>
                         <li>
                           Sistema de flama piloto y flama principal
@@ -4910,7 +5127,7 @@ const BinPlanosSection = () => {
                         <li>Precalentador de combustible</li>
                       </ul>
                     </div>
-                    <div className=" text-white w-full font-normal flex flex-col gap-4">
+                    {/*<div className=" text-white w-full font-normal flex flex-col gap-4">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Casa de bolsas
@@ -4970,7 +5187,7 @@ const BinPlanosSection = () => {
                           <p>280</p>
                         </div>
                       </div>
-                    </div>
+                    </div>*/}
                   </div>
                 </div>
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 items-start ">
@@ -5021,6 +5238,7 @@ const BinPlanosSection = () => {
                         Motores, componentes y cableado Siemens de grado
                         industrial.
                       </li>
+                      <li>Flancos estéticos para una imagen profesional</li>
                       <li>
                         Sistema de cableado simplificado para facilitar el
                         mantenimiento.
@@ -5142,7 +5360,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               (activeData?.dimensions.aTotal ?? 0) * 3.281
                             ).toFixed(1)} ft`}
@@ -5208,7 +5426,7 @@ const BinPlanosSection = () => {
                               dim("aTransporte", "aTransporteMontada")?.toFixed(
                                 2,
                               ) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("aTransporte", "aTransporteMontada") *
                               cmToFeet
@@ -5266,7 +5484,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("lTotal", "lTotalMontada") * cmToFeet
                             ).toFixed(1)} ft`}
@@ -5363,7 +5581,7 @@ const BinPlanosSection = () => {
                             ? `${
                                 activeData?.dimensions.tLongitud?.toFixed(2) ??
                                 ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.tLongitud ?? 0) *
                                 cmToFeet
@@ -5371,10 +5589,22 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
+                        <h1>Ancho:</h1>
+                        <p>
+                          {unit === "metric"
+                            ? `${
+                                activeData?.dimensions.aTotal?.toFixed(1) ?? ""
+                              } m`
+                            : `${(
+                                (activeData?.dimensions.aTotal ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
+                        </p>
+                      </div>
+                      <div className="flex justify-between">
                         <h1>Diametro:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} mt`
+                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
                             : `${(
                                 (activeData?.dimensions.tDiametro ?? 0) *
                                 cmToFeet
@@ -5427,12 +5657,12 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${
                                 dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("lTotal", "lTotalMontada") * cmToFeet
                               ).toFixed(1)} ft`}
@@ -5443,12 +5673,12 @@ const BinPlanosSection = () => {
                         <p>Tres ejes</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.rAltura?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.rAltura ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
@@ -5460,14 +5690,14 @@ const BinPlanosSection = () => {
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.aTotal ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con tolvas en operación:</h1>
+                        <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -5475,7 +5705,7 @@ const BinPlanosSection = () => {
                                   "aTransporte",
                                   "aTransporteMontada",
                                 )?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("aTransporte", "aTransporteMontada") *
                                 cmToFeet
@@ -5528,7 +5758,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 `}
                     >
                       <ul className="ml-6 list-disc">
-                        <li>Accionado por dos motores de 30 HP</li>
+                        <li>Accionado por dos motores de 40 HP</li>
                         <li>
                           Sistema de accionamiento por roles de carga para
                           operación continua y confiable
@@ -5602,10 +5832,6 @@ const BinPlanosSection = () => {
                         <h1>5% humedad:</h1>
                         <p>160 Tph</p>
                       </div>
-                      <div className="flex justify-between">
-                        <h1>Incorporación de RAP:</h1>
-                        <p>40%</p>
-                      </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
@@ -5654,7 +5880,6 @@ const BinPlanosSection = () => {
                       <li>NOM</li>
                       <li>DOT</li>
                       <li>SCT</li>
-                      <li>SEMARNAT</li>
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -5703,26 +5928,38 @@ const BinPlanosSection = () => {
                       <ul className="ml-6 list-disc">
                         <li>Diseñada para reubicación.</li>
                         <li>
-                          Tolvas cuádruples montadas en un mismo chasis para
+                          Tolvas triples montadas en un mismo chasis para
                           fácilidad en transporte.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Tolvas de 14 Tons de capacidad</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Tolvas de 14 Tons de capacidad
+                            </li>
                           </ul>
                         </li>
+
                         <li>
                           La quinta rueda integrada elimina la necesidad de cama
                           baja (lowboy).
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en lowboy o plataforma
                               (flatbed) si se prefiere.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Montada sobre chasis de transporte estándar con dos
                           ejes y rines de 16” para carretera.
@@ -5802,7 +6039,7 @@ const BinPlanosSection = () => {
                         <li>Álabes de velo</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
-                        <li>Álabes de RAP</li>
+
                         <li>Álabes de mezclado</li>
                       </ul>
                     </div>
@@ -5854,15 +6091,28 @@ const BinPlanosSection = () => {
                           campo.
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
-                        <li>
-                          Monitoreo remoto de los parámetros de operación, con
-                          supervisión en tiempo real y registro histórico de
-                          datos.
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
+                            </li>
+                          </ul>
                         </li>
-                        <li>
-                          Sistema de monitoreo remoto, accesible desde
-                          computadora, tablet o teléfono.
-                        </li>
+
                         <li>
                           Sistema de alarmas y seguridades para condiciones
                           fuera de rango.
@@ -5947,11 +6197,24 @@ const BinPlanosSection = () => {
                         </div>
                         <li>Alimentado con sistema de control de aire total</li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Diésel</li>
-                            <li>Gas</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Diésel
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Gas
+                            </li>
                           </ul>
                         </li>
+
                         <li>Sensores UV para monitoreo de llama</li>
                         <li>
                           Sistema de flama piloto y flama principal
@@ -5964,7 +6227,7 @@ const BinPlanosSection = () => {
                         <li>Precalentador de combustible</li>
                       </ul>
                     </div>
-                    <div className=" text-white w-full font-normal flex flex-col gap-4">
+                    {/*<div className=" text-white w-full font-normal flex flex-col gap-4">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Casa de bolsas
@@ -6024,7 +6287,7 @@ const BinPlanosSection = () => {
                           <p>382</p>
                         </div>
                       </div>
-                    </div>
+                    </div>*/}
                   </div>
                 </div>
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 items-start ">
@@ -6075,6 +6338,7 @@ const BinPlanosSection = () => {
                         Motores, componentes y cableado Siemens de grado
                         industrial.
                       </li>
+                      <li>Flancos estéticos para una imagen profesional</li>
                       <li>
                         Sistema de cableado simplificado para facilitar el
                         mantenimiento.
@@ -6144,13 +6408,18 @@ const BinPlanosSection = () => {
                         anticorrosivo.
                       </li>
                       <li className="list-none">
-                        <ul className="list-disc pl-10">
-                          <li>
+                        <ul className="ml-2 lg:ml-6">
+                          <li
+                            className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                          >
                             Tornillería galvanizada y pintura electrostática, de
                             alta resistencia y excelente adherencia.
                           </li>
                         </ul>
                       </li>
+
                       <li>
                         Aislamiento térmico con lana mineral, que reduce la
                         pérdida de calor y la temperatura superficial.
@@ -6196,7 +6465,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               (activeData?.dimensions.aTotal ?? 0) * 3.281
                             ).toFixed(1)} ft`}
@@ -6262,7 +6531,7 @@ const BinPlanosSection = () => {
                               dim("aTransporte", "aTransporteMontada")?.toFixed(
                                 2,
                               ) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("aTransporte", "aTransporteMontada") *
                               cmToFeet
@@ -6320,7 +6589,7 @@ const BinPlanosSection = () => {
                         {unit === "metric"
                           ? `${
                               dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                            } mt`
+                            } m`
                           : `${(
                               dim("lTotal", "lTotalMontada") * cmToFeet
                             ).toFixed(1)} ft`}
@@ -6417,7 +6686,7 @@ const BinPlanosSection = () => {
                             ? `${
                                 activeData?.dimensions.tLongitud?.toFixed(2) ??
                                 ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.tLongitud ?? 0) *
                                 cmToFeet
@@ -6428,7 +6697,7 @@ const BinPlanosSection = () => {
                         <h1>Diametro:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} mt`
+                            ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
                             : `${(
                                 (activeData?.dimensions.tDiametro ?? 0) *
                                 cmToFeet
@@ -6481,12 +6750,12 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${
                                 dim("lTotal", "lTotalMontada")?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("lTotal", "lTotalMontada") * cmToFeet
                               ).toFixed(1)} ft`}
@@ -6497,12 +6766,12 @@ const BinPlanosSection = () => {
                         <p>Tres ejes</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.rAltura?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.rAltura ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
@@ -6514,14 +6783,14 @@ const BinPlanosSection = () => {
                           {unit === "metric"
                             ? `${
                                 activeData?.dimensions.aTotal?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 (activeData?.dimensions.aTotal ?? 0) * cmToFeet
                               ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con tolvas en operación:</h1>
+                        <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -6529,7 +6798,7 @@ const BinPlanosSection = () => {
                                   "aTransporte",
                                   "aTransporteMontada",
                                 )?.toFixed(2) ?? ""
-                              } mt`
+                              } m`
                             : `${(
                                 dim("aTransporte", "aTransporteMontada") *
                                 cmToFeet
@@ -6582,7 +6851,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 `}
                     >
                       <ul className="ml-6 list-disc">
-                        <li>Accionado por dos motores de 30 HP</li>
+                        <li>Accionado por dos motores de 50 HP</li>
                         <li>
                           Sistema de accionamiento por roles de carga para
                           operación continua y confiable
@@ -6656,10 +6925,6 @@ const BinPlanosSection = () => {
                         <h1>5% humedad:</h1>
                         <p>200 Tph</p>
                       </div>
-                      <div className="flex justify-between">
-                        <h1>Incorporación de RAP:</h1>
-                        <p>40%</p>
-                      </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
@@ -6708,7 +6973,6 @@ const BinPlanosSection = () => {
                       <li>NOM</li>
                       <li>DOT</li>
                       <li>SCT</li>
-                      <li>SEMARNAT</li>
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -6761,22 +7025,34 @@ const BinPlanosSection = () => {
                           fácilidad en transporte.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Tolvas de 14 Tons de capacidad</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Tolvas de 14 Tons de capacidad
+                            </li>
                           </ul>
                         </li>
+
                         <li>
                           La quinta rueda integrada elimina la necesidad de cama
                           baja (lowboy).
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en lowboy o plataforma
                               (flatbed) si se prefiere.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Montada sobre chasis de transporte estándar con dos
                           ejes y rines de 16” para carretera.
