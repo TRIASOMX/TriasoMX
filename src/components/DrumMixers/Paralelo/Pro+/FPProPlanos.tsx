@@ -440,7 +440,7 @@ const DrumMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
 
@@ -697,7 +697,7 @@ const DrumMixPlanos = () => {
                             </li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -714,8 +714,8 @@ const DrumMixPlanos = () => {
                           Autocarburación del quemador por sensores en la
                           chimenea
                         </li>
-                        <li>Silenciador para quemador</li>
-                        <li>Precalentador de combustibles</li>
+                        <li>Silenciador para quemador.</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     {/* <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
@@ -1606,7 +1606,7 @@ const DrumMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
 
@@ -1860,7 +1860,7 @@ const DrumMixPlanos = () => {
                             </li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -1877,8 +1877,8 @@ const DrumMixPlanos = () => {
                           Autocarburación del quemador por sensores en la
                           chimenea
                         </li>
-                        <li>Silenciador para quemador</li>
-                        <li>Precalentador de combustibles</li>
+                        <li>Silenciador para quemador.</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     {/*<div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
@@ -2787,7 +2787,7 @@ const DrumMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
 
@@ -3042,7 +3042,7 @@ const DrumMixPlanos = () => {
                             </li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -3059,8 +3059,8 @@ const DrumMixPlanos = () => {
                           Autocarburación del quemador por sensores en la
                           chimenea
                         </li>
-                        <li>Silenciador para quemador</li>
-                        <li>Precalentador de combustibles</li>
+                        <li>Silenciador para quemador.</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     {/*<div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
@@ -3973,7 +3973,7 @@ const DrumMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
 
@@ -4232,7 +4232,7 @@ const DrumMixPlanos = () => {
                             </li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -4249,8 +4249,8 @@ const DrumMixPlanos = () => {
                           Autocarburación del quemador por sensores en la
                           chimenea
                         </li>
-                        <li>Silenciador para quemador</li>
-                        <li>Precalentador de combustibles</li>
+                        <li>Silenciador para quemador.</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     {/*<div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
@@ -5107,7 +5107,7 @@ const DrumMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
 
@@ -5361,7 +5361,7 @@ const DrumMixPlanos = () => {
                             </li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -5378,8 +5378,8 @@ const DrumMixPlanos = () => {
                           Autocarburación del quemador por sensores en la
                           chimenea
                         </li>
-                        <li>Silenciador para quemador</li>
-                        <li>Precalentador de combustibles</li>
+                        <li>Silenciador para quemador.</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     {/*<div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
@@ -6264,7 +6264,7 @@ const DrumMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
 
@@ -6518,7 +6518,7 @@ const DrumMixPlanos = () => {
                             </li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -6535,8 +6535,8 @@ const DrumMixPlanos = () => {
                           Autocarburación del quemador por sensores en la
                           chimenea
                         </li>
-                        <li>Silenciador para quemador</li>
-                        <li>Precalentador de combustibles</li>
+                        <li>Silenciador para quemador.</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     {/*<div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
@@ -7176,7 +7176,7 @@ const DrumMixPlanos = () => {
                       <div className="items-start justify-start text-white flex flex-col gap-4">
                         <div className="w-full flex justify-between border-b border-b-white">
                           <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                            Cumplimeinto con normas industriales
+                            Cumplimiento con normas industriales
                           </h1>
                           <button
                             className="block md:hidden"
@@ -7424,7 +7424,7 @@ const DrumMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
 
@@ -7678,14 +7678,14 @@ const DrumMixPlanos = () => {
                             </li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
-                          independientes
+                          independientes.
                         </li>
                         <li>
                           Sistema de filtración de combustible y regulación de
-                          seguridad
+                          seguridad.
                         </li>
                         <li>
                           Sistema de ionización para asistencia de plasma para
@@ -7693,10 +7693,10 @@ const DrumMixPlanos = () => {
                         </li>
                         <li>
                           Autocarburación del quemador por sensores en la
-                          chimenea
+                          chimenea.
                         </li>
-                        <li>Silenciador para quemador</li>
-                        <li>Precalentador de combustibles</li>
+                        <li>Silenciador para quemador.</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     {/*<div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">

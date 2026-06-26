@@ -44,8 +44,9 @@ const toggleConfig = [
       transporWidth: 365.76,
       axleConfig: "Doble eje",
       wheel: 124.968,
-      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
-      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
+      support:
+        "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: "Neumáticos de 16 pulgadas aptos para carretera",
       capacity: "50 tons",
       truckHeight: 368.808,
     },
@@ -60,8 +61,9 @@ const toggleConfig = [
       transporWidth: 365.76,
       axleConfig: "Doble eje",
       wheel: 124.968,
-      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
-      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
+      support:
+        "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: "Neumáticos de 16 pulgadas aptos para carretera",
       capacity: "50 tons",
       truckHeight: 212,
     },
@@ -76,8 +78,9 @@ const toggleConfig = [
       transporWidth: 0,
       axleConfig: "Doble eje",
       wheel: 140,
-      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
-      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
+      support:
+        "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: "Neumáticos de 16 pulgadas aptos para carretera",
       capacity: "50 tons",
       truckHeight: 368.8,
     },
@@ -92,8 +95,9 @@ const toggleConfig = [
       transporWidth: 0,
       axleConfig: "Doble eje",
       wheel: 140,
-      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
-      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
+      support:
+        "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: "Neumáticos de 16 pulgadas aptos para carretera",
       capacity: "100 tons",
       truckHeight: 368.8,
     },
@@ -108,8 +112,9 @@ const toggleConfig = [
       transporWidth: 0,
       axleConfig: "Doble eje",
       wheel: 140,
-      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
-      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
+      support:
+        "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: "Neumáticos de 16 pulgadas aptos para carretera",
       capacity: "150 tons",
       truckHeight: 368.8,
     },
@@ -124,8 +129,9 @@ const toggleConfig = [
       transporWidth: 0,
       axleConfig: "Doble eje",
       wheel: 140,
-      support: "Patas de acero con placas de base para fijación con pernos de anclaje",
-      wheels: 'Neumáticos de 16 pulgadas aptos para carretera',
+      support:
+        "Patas de acero con placas de base para fijación con pernos de anclaje",
+      wheels: "Neumáticos de 16 pulgadas aptos para carretera",
       capacity: "200 tons",
       truckHeight: 368.8,
     },
@@ -231,7 +237,10 @@ const HotMixPlanos = () => {
   });
 
   return (
-    <div ref={containerRef} className="w-full flex flex-col items-center justify-center">
+    <div
+      ref={containerRef}
+      className="w-full flex flex-col items-center justify-center"
+    >
       <div className="h-[80vh] relative flex items-center justify-center bg-bgMain w-full">
         <div
           className="absolute bottom-0 w-full h-4/6 overflow-hidden"
@@ -280,7 +289,11 @@ const HotMixPlanos = () => {
         id="sectionNueva"
         className="bg-[url('/fondopatron.webp')] bg-repeat bg-top w-full flex flex-col items-center justify-start relative bg-black overflow-hidden z-10 min-h-screen"
       >
-        <header id="planosSilos" className="mt-10 text-white" ref={otroElemento}>
+        <header
+          id="planosSilos"
+          className="mt-10 text-white"
+          ref={otroElemento}
+        >
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
           </h1>
@@ -294,8 +307,9 @@ const HotMixPlanos = () => {
             >
               {/* Fondo deslizante */}
               <div
-                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${unit === "metric" ? "translate-x-full" : ""
-                  }`}
+                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${
+                  unit === "metric" ? "translate-x-full" : ""
+                }`}
               ></div>
 
               {/* Texto sobrepuesto */}
@@ -340,7 +354,11 @@ const HotMixPlanos = () => {
                 </select>
 
                 <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-                  <svg className="w-4 h-4 text-gray-700" viewBox="0 0 20 20" fill="currentColor">
+                  <svg
+                    className="w-4 h-4 text-gray-700"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
                     <path
                       fillRule="evenodd"
                       d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z"
@@ -366,10 +384,11 @@ const HotMixPlanos = () => {
                     key={option.id}
                     onClick={() => setActiveVersion(option.id)}
                     className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300
-          ${activeVersion === option.id
-                        ? "text-black bg-white border-white"
-                        : "text-white bg-transparent border-white"
-                      }`}
+          ${
+            activeVersion === option.id
+              ? "text-black bg-white border-white"
+              : "text-white bg-transparent border-white"
+          }`}
                   >
                     {option.label}
                   </button>
@@ -378,9 +397,7 @@ const HotMixPlanos = () => {
 
             {/* mobile segundo select */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto mb-6">
-              <label className="text-white block text-center">
-                Opciones:
-              </label>
+              <label className="text-white block text-center">Opciones:</label>
 
               <div className="relative">
                 <select
@@ -397,7 +414,11 @@ const HotMixPlanos = () => {
                 </select>
 
                 <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-                  <svg className="w-4 h-4 text-gray-700" viewBox="0 0 20 20" fill="currentColor">
+                  <svg
+                    className="w-4 h-4 text-gray-700"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
                     <path
                       fillRule="evenodd"
                       d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z"
@@ -409,9 +430,7 @@ const HotMixPlanos = () => {
             </div>
             {/* opciones desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
-              <label className="text-white block text-center">
-                Opciones:
-              </label>
+              <label className="text-white block text-center">Opciones:</label>
             </div>
 
             <div className="hidden md:flex justify-center gap-5">
@@ -423,16 +442,16 @@ const HotMixPlanos = () => {
                     if (option.id === 1) setActiveVersion("50tons");
                   }}
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300
-        ${activeTab === option.id
-                      ? "text-gray-900 bg-white border-white"
-                      : "text-white bg-transparent border-white"
-                    }`}
+        ${
+          activeTab === option.id
+            ? "text-gray-900 bg-white border-white"
+            : "text-white bg-transparent border-white"
+        }`}
                 >
                   {option.label}
                 </button>
               ))}
             </div>
-
           </div>
 
           {/* Contenido de los tabs */}
@@ -471,8 +490,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -485,31 +505,37 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-4 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-4 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Sistema operativo Triaso Relief 8.0.
+                          Operación automática o manual, según se requiera en
+                          campo.
                         </li>
+                        <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
                             </li>
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
-
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
@@ -535,8 +561,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -549,22 +576,31 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Tolva de alimentación superior con sello de goma y cubierta contra lluvia.</li>
+                        <li>
+                          Tolva de alimentación superior con sello de goma y
+                          cubierta contra lluvia.
+                        </li>
                         <li>Cámara de descarga por lote de 1 m³.</li>
-                        <li>Compuertas neumáticas para descarga rápida y desvío de material de desperdicio.</li>
-                        <li>Integración con celdas de carga y control mediante lógica programable.</li>
+                        <li>
+                          Compuertas neumáticas para descarga rápida y desvío de
+                          material de desperdicio.
+                        </li>
+                        <li>
+                          Integración con celdas de carga y control mediante
+                          lógica programable.
+                        </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
                           Componentes y sistema eléctrico
-
                         </h1>
                         <button
                           className="block md:hidden"
@@ -583,8 +619,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C3_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -597,18 +634,31 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C3_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Motores, componentes y cableado Siemens de grado industrial.</li>
-                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
-                        <li>Sistema de transmisión con poleas y bujes.</li>
-                        <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                         <li>
-                          Elevador de mezcla asfáltica, de arrastre integrado con sistema abisagrado.
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
+                        </li>
+                        <li>
+                          Sistema de cableado simplificado para facilitar el
+                          mantenimiento.
+                        </li>
+                        <li>
+                          Conexiones eléctricas protegidas contra la intemperie.
+                        </li>
+                        <li>Sistema de transmisión con poleas y bujes.</li>
+                        <li>
+                          Líneas de combustible externas, sensores y cableado de
+                          señales preinstalados.
+                        </li>
+                        <li>
+                          Elevador de mezcla asfáltica, de arrastre integrado
+                          con sistema abisagrado.
                         </li>
                       </ul>
                     </div>
@@ -651,8 +701,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -665,20 +716,26 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo
                         </li>
                         <li>Flancos estéticos para una imagen profesional</li>
-                        <li>Componentes atornillados con recubrimiento anticorrosivo</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
@@ -686,17 +743,27 @@ const HotMixPlanos = () => {
                           Cubierta contra lluvia y descarga anti-segregación.
                         </li>
                         <li>
-                          Barandales de seguridad integrados y plataforma conforme a las normas OSHA.
+                          Barandales de seguridad integrados y plataforma
+                          conforme a las normas OSHA.
                         </li>
-                        <li>Aislamiento térmico con fibra de vidrio, que reduce la pérdida de calor y la temperatura superficial.</li>
+                        <li>
+                          Aislamiento térmico con fibra de vidrio, que reduce la
+                          pérdida de calor y la temperatura superficial.
+                        </li>
                         <li>
                           <ul className="list-disc ml-10">
                             <li>Hasta 72 horas de retención de temperatura.</li>
                           </ul>
                         </li>
 
-                        <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>
+                          Sellos tipo laberinto para disminuir la fuga de aire y
+                          calor.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
                         <li>Forro exterior de lámina de acero inoxidable.</li>
                       </ul>
                     </div>
@@ -722,8 +789,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C3_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -736,32 +804,39 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C3_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Diseñada para reubicación.</li>
                         <li>
-                          La quinta rueda integrada elimina la necesidad de cama baja (lowboy).
+                          La quinta rueda integrada elimina la necesidad de cama
+                          baja (lowboy).
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              También puede transportarse en lowboy o plataforma (flatbed) si se prefiere.
+                              También puede transportarse en lowboy o plataforma
+                              (flatbed) si se prefiere.
                             </li>
                           </ul>
                         </li>
-                        <li>Patas de soporte atornillables para montaje rápido en sitio.</li>
                         <li>
-                          Iluminación y reflejantes conformes a normativa DOT para visibilidad durante el transporte.
+                          Patas de soporte atornillables para montaje rápido en
+                          sitio.
+                        </li>
+                        <li>
+                          Iluminación y reflejantes conformes a normativa DOT
+                          para visibilidad durante el transporte.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Cumplimeinto con normas industriales
+                          Cumplimiento con normas industriales
                         </h1>
                         <button
                           className="block md:hidden"
@@ -780,8 +855,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C3_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -794,10 +870,11 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C3_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>NOM</li>
                         <li>DOT</li>
@@ -954,7 +1031,7 @@ const HotMixPlanos = () => {
                         </div>
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
-                          {unit === "metric"
+                        {unit === "metric"
                           ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
                           : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
@@ -1021,8 +1098,9 @@ const HotMixPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1035,26 +1113,26 @@ const HotMixPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1089,8 +1167,9 @@ const HotMixPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1103,44 +1182,42 @@ const HotMixPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Longitud del chasis:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.chasisLenght ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.chasisLenght?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.chasisLenght ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.chasisLenght ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho de transporte:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.transporWidth ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.transporWidth ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.transporWidth ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.transporWidth ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1155,8 +1232,8 @@ const HotMixPlanos = () => {
                         <h1>Altura del enganche de quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1179,16 +1256,16 @@ const HotMixPlanos = () => {
                         <h1>Altura de descarga a camión:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.truckHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.truckHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total (punto más alto):</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1217,8 +1294,9 @@ const HotMixPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1231,43 +1309,43 @@ const HotMixPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base grid grid-cols-1 md:grid-cols-3 justify-center w-full gap-3 gap-6 lg:gap-20 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C5_1
-                        ? "max-h-[600px] opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100`}
+                      className={`text-sm lg:text-base grid grid-cols-1 md:grid-cols-3 justify-center w-full gap-3 gap-6 lg:gap-20 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C5_1
+                          ? "max-h-[600px] opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100`}
                     >
                       <div className="text-white font-normal col-span-1">
                         <div className="flex justify-between">
                           <h1>Longitud:</h1>
                           <p>
                             {unit === "metric"
-                          ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((slatConveyor?.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                              ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} mt`
+                              : `${((slatConveyor?.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
                           <h1>Ancho:</h1>
                           <p>
                             {unit === "metric"
-                          ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((slatConveyor?.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                              ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} mt`
+                              : `${((slatConveyor?.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
                           <h1>Altura (en posición de trabajo):</h1>
                           <p>
                             {unit === "metric"
-                          ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} mt`
-                          : `${((slatConveyor?.heightErec ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                              ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} mt`
+                              : `${((slatConveyor?.heightErec ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
                           <h1>Altura de descarga:</h1>
                           <p>
                             {unit === "metric"
-                          ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} mt`
-                          : `${((slatConveyor?.chain ?? 0) * cmToFeet).toFixed(1)} ft`}
+                              ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} mt`
+                              : `${((slatConveyor?.chain ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         {/* <div className="flex justify-between">
@@ -1293,31 +1371,33 @@ const HotMixPlanos = () => {
                       <div className="flex flex-col text-white col-span-1 md:col-span-2 w-full justify-center">
                         <ul className="ml-2 lg:ml-6 list-disc w-full">
                           <li>
-                            Se transporta junto con el silo sobre el mismo chasis.
-
+                            Se transporta junto con el silo sobre el mismo
+                            chasis.
                           </li>
                           <li>
-                            Estructura independiente, no fijada al bastidor del silo.
-
+                            Estructura independiente, no fijada al bastidor del
+                            silo.
+                          </li>
+                          <li>Capacidad de hasta 320 TPH.</li>
+                          <li>
+                            Paletas de acero reforzadas para mayor durabilidad y
+                            desempeño uniforme.
                           </li>
                           <li>
-                            Capacidad de hasta 320 TPH.
-                          </li>
-                          <li>Paletas de acero reforzadas para mayor durabilidad y desempeño uniforme.</li>
-                          <li>
-                            Compuerta de salida secundaria para cuando se requiera
-
+                            Compuerta de salida secundaria para cuando se
+                            requiera
                           </li>
                           <li>
-                            Puertas de acceso superiores para facilitar la limpieza e inspección.
-
+                            Puertas de acceso superiores para facilitar la
+                            limpieza e inspección.
                           </li>
                           <li>
-                            Sistema manual de tensado de cadena para una operación confiable a largo plazo.
-
+                            Sistema manual de tensado de cadena para una
+                            operación confiable a largo plazo.
                           </li>
                           <li>
-                            Alineación rápida con la entrada del silo durante la instalación.
+                            Alineación rápida con la entrada del silo durante la
+                            instalación.
                           </li>
                         </ul>
                       </div>
@@ -1356,8 +1436,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1370,30 +1451,37 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-4 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-4 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Sistema operativo Triaso Relief 8.0.
+                          Operación automática o manual, según se requiera en
+                          campo.
                         </li>
+                        <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
                             </li>
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
@@ -1419,8 +1507,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1433,15 +1522,25 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Tolva de alimentación superior con sello de goma y cubierta contra lluvia.</li>
+                        <li>
+                          Tolva de alimentación superior con sello de goma y
+                          cubierta contra lluvia.
+                        </li>
                         <li>Cámara de descarga por lote de 1 m³.</li>
-                        <li>Compuertas neumáticas para descarga rápida y desvío de material de desperdicio.</li>
-                        <li>Integración con celdas de carga y control mediante lógica programable.</li>
+                        <li>
+                          Compuertas neumáticas para descarga rápida y desvío de
+                          material de desperdicio.
+                        </li>
+                        <li>
+                          Integración con celdas de carga y control mediante
+                          lógica programable.
+                        </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
@@ -1466,8 +1565,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C3_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1480,18 +1580,31 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C3_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Motores, componentes y cableado Siemens de grado industrial.</li>
-                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
-                        <li>Sistema de transmisión con poleas y bujes.</li>
-                        <li>Líneas de combustible externas, sensores y cableado de señales preinstalados.</li>
                         <li>
-                          Elevador de mezcla asfáltica, de arrastre integrado con sistema abisagrado.
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
+                        </li>
+                        <li>
+                          Sistema de cableado simplificado para facilitar el
+                          mantenimiento.
+                        </li>
+                        <li>
+                          Conexiones eléctricas protegidas contra la intemperie.
+                        </li>
+                        <li>Sistema de transmisión con poleas y bujes.</li>
+                        <li>
+                          Líneas de combustible externas, sensores y cableado de
+                          señales preinstalados.
+                        </li>
+                        <li>
+                          Elevador de mezcla asfáltica, de arrastre integrado
+                          con sistema abisagrado.
                         </li>
                       </ul>
                     </div>
@@ -1530,8 +1643,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1544,20 +1658,26 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         <li>Flancos estéticos para una imagen profesional</li>
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
@@ -1565,19 +1685,26 @@ const HotMixPlanos = () => {
                           Cubierta contra lluvia y descarga anti-segregación.
                         </li>
                         <li>
-                          Barandales de seguridad integrados y plataforma conforme a las normas OSHA.
+                          Barandales de seguridad integrados y plataforma
+                          conforme a las normas OSHA.
                         </li>
-                        <li>Aislamiento térmico con fibra de vidrio, que reduce la pérdida de calor y la temperatura superficial.
+                        <li>
+                          Aislamiento térmico con fibra de vidrio, que reduce la
+                          pérdida de calor y la temperatura superficial.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
-                            <li>
-                              Hasta 72 horas de retención de temperatura.
-                            </li>
+                            <li>Hasta 72 horas de retención de temperatura.</li>
                           </ul>
                         </li>
-                        <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>
+                          Sellos tipo laberinto para disminuir la fuga de aire y
+                          calor.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
                         <li>Forro exterior de lámina de acero inoxidable.</li>
                       </ul>
                     </div>
@@ -1603,8 +1730,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C3_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1617,30 +1745,39 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C3_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Diseñada para reubicación.</li>
                         <li>
-                          La quinta rueda integrada elimina la necesidad de cama baja (lowboy).
+                          La quinta rueda integrada elimina la necesidad de cama
+                          baja (lowboy).
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              También puede transportarse en lowboy o plataforma (flatbed) si se prefiere.
+                              También puede transportarse en lowboy o plataforma
+                              (flatbed) si se prefiere.
                             </li>
                           </ul>
                         </li>
-                        <li>Patas de soporte atornillables para montaje rápido en sitio.</li>
-                        <li>Iluminación y reflejantes conformes a normativa DOT para visibilidad durante el transporte.</li>
+                        <li>
+                          Patas de soporte atornillables para montaje rápido en
+                          sitio.
+                        </li>
+                        <li>
+                          Iluminación y reflejantes conformes a normativa DOT
+                          para visibilidad durante el transporte.
+                        </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Cumplimeinto con normas industriales
+                          Cumplimiento con normas industriales
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1659,8 +1796,9 @@ const HotMixPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C3_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1673,10 +1811,11 @@ const HotMixPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C3_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>NOM</li>
                         <li>DOT</li>
@@ -1715,7 +1854,6 @@ const HotMixPlanos = () => {
                         {unit === "metric"
                           ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
                           : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
-
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1885,8 +2023,9 @@ const HotMixPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1899,25 +2038,26 @@ const HotMixPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
-                        {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          {unit === "metric"
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1952,8 +2092,9 @@ const HotMixPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1966,17 +2107,18 @@ const HotMixPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       {/* <div className="flex justify-between">
@@ -2027,11 +2169,14 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda (si se entrega preinstalado)::</h1>
+                        <h1>
+                          Altura del enganche de quinta rueda (si se entrega
+                          preinstalado)::
+                        </h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2053,17 +2198,17 @@ const HotMixPlanos = () => {
                       <div className="flex justify-between">
                         <h1>Altura de descarga a camión:</h1>
                         <p>
-                            {unit === "metric"
-                          ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.truckHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          {unit === "metric"
+                            ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.truckHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Total height (heighest point):</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -2092,8 +2237,9 @@ const HotMixPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2106,43 +2252,43 @@ const HotMixPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base grid grid-cols-1 md:grid-cols-3 justify-center w-full gap-3 gap-6 lg:gap-20 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C5_1
-                        ? "max-h-[600px] opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100`}
+                      className={`text-sm lg:text-base grid grid-cols-1 md:grid-cols-3 justify-center w-full gap-3 gap-6 lg:gap-20 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C5_1
+                          ? "max-h-[600px] opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100`}
                     >
                       <div className="text-white font-normal col-span-1">
                         <div className="flex justify-between">
                           <h1>Longitud:</h1>
                           <p>
                             {unit === "metric"
-                          ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((slatConveyor?.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                              ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} mt`
+                              : `${((slatConveyor?.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
                           <h1>Ancho:</h1>
                           <p>
                             {unit === "metric"
-                          ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((slatConveyor?.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                              ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} mt`
+                              : `${((slatConveyor?.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
                           <h1>Altura (en posición de trabajo):</h1>
                           <p>
                             {unit === "metric"
-                          ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} mt`
-                          : `${((slatConveyor?.heightErec ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                              ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} mt`
+                              : `${((slatConveyor?.heightErec ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
                           <h1>Altura de descarga:</h1>
                           <p>
                             {unit === "metric"
-                          ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} mt`
-                          : `${((slatConveyor?.chain ?? 0) * cmToFeet).toFixed(1)} ft`}
+                              ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} mt`
+                              : `${((slatConveyor?.chain ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         {/* <div className="flex justify-between">
@@ -2165,41 +2311,41 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                       </div>
-                      
+
                       <div className="flex flex-col text-white col-span-1 md:col-span-2 w-full justify-center">
                         <ul className="ml-2 lg:ml-6 list-disc w-full">
                           <li>
-                            Se transporta junto con el silo sobre el mismo chasis.
-
+                            Se transporta junto con el silo sobre el mismo
+                            chasis.
                           </li>
                           <li>
-                            Estructura independiente, no fijada al bastidor del silo.
-
+                            Estructura independiente, no fijada al bastidor del
+                            silo.
+                          </li>
+                          <li>Capacidad de hasta 320 TPH.</li>
+                          <li>
+                            Paletas de acero reforzadas para mayor durabilidad y
+                            desempeño uniforme.
                           </li>
                           <li>
-                            Capacidad de hasta 320 TPH.
-
-                          </li>
-                          <li>Paletas de acero reforzadas para mayor durabilidad y desempeño uniforme.
+                            Compuerta de salida secundaria para cuando se
+                            requiera
                           </li>
                           <li>
-                            Compuerta de salida secundaria para cuando se requiera
-
-                          </li>
-                          <li>
-                            Puertas de acceso superiores para facilitar la limpieza e inspección.
-
+                            Puertas de acceso superiores para facilitar la
+                            limpieza e inspección.
                           </li>
                           <li>
                             Driven by industrial motor and reducer for easy
                             maintenance
                           </li>
                           <li>
-                            Sistema manual de tensado de cadena para una operación confiable a largo plazo.
-
+                            Sistema manual de tensado de cadena para una
+                            operación confiable a largo plazo.
                           </li>
                           <li>
-                            Alineación rápida con la entrada del silo durante la instalación.
+                            Alineación rápida con la entrada del silo durante la
+                            instalación.
                           </li>
                         </ul>
                       </div>

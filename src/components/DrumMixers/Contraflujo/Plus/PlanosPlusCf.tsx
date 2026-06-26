@@ -517,7 +517,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
                         <li>Álabes de RAP</li>
@@ -670,7 +670,7 @@ const BinPlanosSection = () => {
                             <li>Gas</li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -683,7 +683,7 @@ const BinPlanosSection = () => {
                           Autocarburación del quemador por sensores en la
                           chimenea
                         </li>
-                        <li>Precalentador de combustible</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     <div className=" text-white w-full font-normal flex flex-col gap-4">
@@ -810,7 +810,8 @@ const BinPlanosSection = () => {
                         señales preinstalados.
                       </li>
                       <li>
-                        Elevador de mezcla asfáltica, de arrastre montable
+                        Elevador de mezcla asfáltica, de arrastre integrado con
+                        sistema abisagrado.
                       </li>
                     </ul>
                   </div>
@@ -1390,7 +1391,7 @@ const BinPlanosSection = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimeinto con normas industriales
+                        Cumplimiento con normas industriales
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1572,7 +1573,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
                         <li>Álabes de RAP</li>
@@ -1725,7 +1726,7 @@ const BinPlanosSection = () => {
                             <li>Gas</li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -1738,7 +1739,7 @@ const BinPlanosSection = () => {
                           Autocarburación del quemador por sensores en la
                           chimenea
                         </li>
-                        <li>Precalentador de combustible</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     <div className=" text-white w-full font-normal flex flex-col gap-4">
@@ -1865,7 +1866,8 @@ const BinPlanosSection = () => {
                         señales preinstalados.
                       </li>
                       <li>
-                        Elevador de mezcla asfáltica, de arrastre montable
+                        Elevador de mezcla asfáltica, de arrastre integrado con
+                        sistema abisagrado.
                       </li>
                     </ul>
                   </div>
@@ -2446,7 +2448,7 @@ const BinPlanosSection = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimeinto con normas industriales
+                        Cumplimiento con normas industriales
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2639,7 +2641,7 @@ const BinPlanosSection = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                         >
                           <li>Álabes de entrada</li>
-                          <li>Álabes de velo</li>
+                          <li>Álabes de acondicionamiento</li>
                           <li>Álabes de radiación</li>
                           <li>Álabes de secado</li>
                           <li>Álabes de RAP</li>
@@ -2774,7 +2776,8 @@ const BinPlanosSection = () => {
                             de señales preinstalados.
                           </li>
                           <li>
-                            Elevador de mezcla asfáltica, de arrastre montable
+                            Elevador de mezcla asfáltica, de arrastre integrado
+                            con sistema abisagrado.
                           </li>
                         </ul>
                       </div>
@@ -2848,7 +2851,7 @@ const BinPlanosSection = () => {
                             <li>Gas</li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -2861,7 +2864,7 @@ const BinPlanosSection = () => {
                           Autocarburación del quemador por sensores en la
                           chimenea
                         </li>
-                        <li>Precalentador de combustible</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     <div className=" text-white w-full font-normal flex flex-col gap-4">
@@ -3503,7 +3506,7 @@ const BinPlanosSection = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimeinto con normas industriales
+                        Cumplimiento con normas industriales
                       </h1>
                       <button
                         className="block md:hidden"
@@ -3691,7 +3694,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
                         <li>Álabes de RAP</li>
@@ -3844,7 +3847,7 @@ const BinPlanosSection = () => {
                             <li>Gas</li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -3857,7 +3860,7 @@ const BinPlanosSection = () => {
                           Autocarburación del quemador por sensores en la
                           chimenea
                         </li>
-                        <li>Precalentador de combustible</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     <div className=" text-white w-full font-normal flex flex-col gap-4">
@@ -3984,7 +3987,8 @@ const BinPlanosSection = () => {
                         señales preinstalados.
                       </li>
                       <li>
-                        Elevador de mezcla asfáltica, de arrastre montable
+                        Elevador de mezcla asfáltica, de arrastre integrado con
+                        sistema abisagrado.
                       </li>
                     </ul>
                   </div>
@@ -4562,7 +4566,7 @@ const BinPlanosSection = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimeinto con normas industriales
+                        Cumplimiento con normas industriales
                       </h1>
                       <button
                         className="block md:hidden"
@@ -4741,7 +4745,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
                         <li>Álabes de RAP</li>
@@ -4894,7 +4898,7 @@ const BinPlanosSection = () => {
                             <li>Gas</li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -4907,7 +4911,7 @@ const BinPlanosSection = () => {
                           Autocarburación del quemador por sensores en la
                           chimenea
                         </li>
-                        <li>Precalentador de combustible</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     <div className=" text-white w-full font-normal flex flex-col gap-4">
@@ -5034,7 +5038,8 @@ const BinPlanosSection = () => {
                         señales preinstalados.
                       </li>
                       <li>
-                        Elevador de mezcla asfáltica, de arrastre montable
+                        Elevador de mezcla asfáltica, de arrastre integrado con
+                        sistema abisagrado.
                       </li>
                     </ul>
                   </div>
@@ -5611,7 +5616,7 @@ const BinPlanosSection = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimeinto con normas industriales
+                        Cumplimiento con normas industriales
                       </h1>
                       <button
                         className="block md:hidden"
@@ -5799,7 +5804,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
                         <li>Álabes de RAP</li>
@@ -5952,7 +5957,7 @@ const BinPlanosSection = () => {
                             <li>Gas</li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -5961,7 +5966,7 @@ const BinPlanosSection = () => {
                           Sistema de filtración de combustible y regulación de
                           seguridad
                         </li>
-                        <li>Precalentador de combustible</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     <div className=" text-white w-full font-normal flex flex-col gap-4">
@@ -6088,7 +6093,8 @@ const BinPlanosSection = () => {
                         señales preinstalados.
                       </li>
                       <li>
-                        Elevador de mezcla asfáltica, de arrastre montable
+                        Elevador de mezcla asfáltica, de arrastre integrado con
+                        sistema abisagrado.
                       </li>
                     </ul>
                   </div>

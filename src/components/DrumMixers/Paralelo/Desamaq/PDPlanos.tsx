@@ -487,7 +487,7 @@ const PDPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
                         <li>Álabes de mezclado</li>
@@ -545,7 +545,7 @@ const PDPlanos = () => {
                           para confiabilidad en sitio.
                         </li>
                         <li>
-                          Gabinete de control lateral para operación manual
+                          Controles en caseta de control para operación manual
                         </li>
                       </ul>
                     </div>
@@ -610,7 +610,9 @@ const PDPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <div className="flex justify-between">
-                          <p>Quemador:</p>
+                          <div>
+                            <li>Quemador:</li>
+                          </div>
                           <p>7.5 millones de BTU/hr</p>
                         </div>
                         <div className="flex justify-between">
@@ -628,7 +630,7 @@ const PDPlanos = () => {
                             <li>Gas</li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -637,7 +639,7 @@ const PDPlanos = () => {
                           Sistema de filtración de combustible y regulación de
                           seguridad
                         </li>
-                        <li>Precalentador de combustible</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     {/*<div className=" text-white w-full font-normal flex flex-col gap-4">
@@ -764,7 +766,8 @@ const PDPlanos = () => {
                         señales preinstalados.
                       </li>
                       <li>
-                        Elevador de mezcla asfáltica, de arrastre montable
+                        Elevador de mezcla asfáltica, de arrastre integrado con
+                        sistema abisagrado.
                       </li>
                     </ul>
                   </div>
@@ -1339,7 +1342,7 @@ const PDPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimeinto con normas industriales
+                        Cumplimiento con normas industriales
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1519,7 +1522,7 @@ const PDPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
                         <li>Álabes de mezclado</li>
@@ -1577,7 +1580,7 @@ const PDPlanos = () => {
                           para confiabilidad en sitio.
                         </li>
                         <li>
-                          Gabinete de control lateral para operación manual
+                          Controles en caseta de control para operación manual
                         </li>
                       </ul>
                     </div>
@@ -1660,7 +1663,7 @@ const PDPlanos = () => {
                             <li>Gas</li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -1669,7 +1672,7 @@ const PDPlanos = () => {
                           Sistema de filtración de combustible y regulación de
                           seguridad
                         </li>
-                        <li>Precalentador de combustible</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     <div className=" text-white w-full font-normal flex flex-col gap-4">
@@ -1796,7 +1799,8 @@ const PDPlanos = () => {
                         señales preinstalados.
                       </li>
                       <li>
-                        Elevador de mezcla asfáltica, de arrastre montable
+                        Elevador de mezcla asfáltica, de arrastre integrado con
+                        sistema abisagrado.
                       </li>
                     </ul>
                   </div>
@@ -2369,7 +2373,7 @@ const PDPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimeinto con normas industriales
+                        Cumplimiento con normas industriales
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2553,7 +2557,7 @@ const PDPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                         >
                           <li>Álabes de entrada</li>
-                          <li>Álabes de velo</li>
+                          <li>Álabes de acondicionamiento</li>
                           <li>Álabes de radiación</li>
                           <li>Álabes de secado</li>
                           <li>Álabes de mezclado</li>
@@ -2611,7 +2615,7 @@ const PDPlanos = () => {
                             diseñados para confiabilidad en sitio.
                           </li>
                           <li>
-                            Gabinete de control lateral para operación manual
+                            Controles en caseta de control para operación manual
                           </li>
                         </ul>
                       </div>
@@ -2676,7 +2680,8 @@ const PDPlanos = () => {
                             de señales preinstalados.
                           </li>
                           <li>
-                            Elevador de mezcla asfáltica, de arrastre montable
+                            Elevador de mezcla asfáltica, de arrastre integrado
+                            con sistema abisagrado.
                           </li>
                         </ul>
                       </div>
@@ -2750,7 +2755,7 @@ const PDPlanos = () => {
                             <li>Gas</li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -2759,7 +2764,7 @@ const PDPlanos = () => {
                           Sistema de filtración de combustible y regulación de
                           seguridad
                         </li>
-                        <li>Precalentador de combustible</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     <div className=" text-white w-full font-normal flex flex-col gap-4">
@@ -3574,7 +3579,7 @@ const PDPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Álabes de entrada</li>
-                        <li>Álabes de velo</li>
+                        <li>Álabes de acondicionamiento</li>
                         <li>Álabes de radiación</li>
                         <li>Álabes de secado</li>
                         <li>Álabes de mezclado</li>
@@ -3632,7 +3637,7 @@ const PDPlanos = () => {
                           para confiabilidad en sitio.
                         </li>
                         <li>
-                          Gabinete de control lateral para operación manual
+                          Controles en caseta de control para operación manual
                         </li>
                       </ul>
                     </div>
@@ -3715,7 +3720,7 @@ const PDPlanos = () => {
                             <li>Gas</li>
                           </ul>
                         </li>
-                        <li>Sensores UV para monitoreo de llama</li>
+                        <li>Sensores UV para monitoreo de llama.</li>
                         <li>
                           Sistema de flama piloto y flama principal
                           independientes
@@ -3724,7 +3729,7 @@ const PDPlanos = () => {
                           Sistema de filtración de combustible y regulación de
                           seguridad
                         </li>
-                        <li>Precalentador de combustible</li>
+                        <li>Precalentador de combustible.</li>
                       </ul>
                     </div>
                     <div className=" text-white w-full font-normal flex flex-col gap-4">
@@ -3851,7 +3856,8 @@ const PDPlanos = () => {
                         señales preinstalados.
                       </li>
                       <li>
-                        Elevador de mezcla asfáltica, de arrastre montable
+                        Elevador de mezcla asfáltica, de arrastre integrado con
+                        sistema abisagrado.
                       </li>
                     </ul>
                   </div>
