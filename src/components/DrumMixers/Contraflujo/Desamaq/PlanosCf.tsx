@@ -1,8 +1,6 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import caseta1 from "../../../../assets/images/DrumMixers/caseta1.webp";
-import caseta2 from "../../../../assets/images/DrumMixers/caseta2.webp";
 import tolva3Main from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTi_Blueprint/Pla_Cf_Des_TI_VA.png";
 import tolva3Blue from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTi_Blueprint/Bp_Pla_Cf_Des_TI_VA.png";
 import tolva1L2 from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTi_Blueprint/Bp_Pla_Cf_Des_TI_VL.png";
@@ -11,23 +9,6 @@ import tolva1F from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/Cf
 import tolva1Main from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTm_Blueprint/Bp_Pla_Cf_Des_TM_VA.png";
 import { useClipPathScrollTrigger } from "../../../../components/lib/useClipPathScrollTrigger.tsx";
 gsap.registerPlugin(ScrollTrigger);
-
-const singleUnit = [
-  {
-    length: 365.75,
-    width: 268.22,
-    height: 201.17,
-    capacity: "20 tons",
-  },
-];
-
-const casetaMedidas = [
-  {
-    cLongitud: 4.3,
-    cAncho: 2.2,
-    cAltura: 3.1,
-  },
-];
 
 const toggleConfig = [
   {
@@ -184,13 +165,7 @@ const BinPlanosSection = () => {
       label: "Tolvas montadas",
     },
   ];
-  const cabinSize = [
-    {
-      length: 4.34,
-      width: 2.22,
-      height: 3.09,
-    },
-  ];
+
   const modelOptions = [
     { id: 1, label: "40 TPH" },
     { id: 2, label: "80 TPH" },
@@ -199,7 +174,7 @@ const BinPlanosSection = () => {
   ];
 
   useClipPathScrollTrigger({
-    enabled: activeTab === 3,
+    enabled: activeTab === 3 && panelOption === "withPanels",
 
     boxRef,
     nextSectionRef,
@@ -1190,7 +1165,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <div className="flex justify-between">
-                          <h1>Longitud total (incluyendo el enganche):</h1>
+                          <h1>Longitud total (incluyendo quinta rueda):</h1>
                           <p>
                             {unit === "metric"
                               ? `${
@@ -1207,7 +1182,7 @@ const BinPlanosSection = () => {
                           <p>Un eje</p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura del enganche de quinta rueda:</h1>
+                          <h1>Altura de la quinta rueda:</h1>
                           <p>
                             {unit === "metric"
                               ? `${
@@ -1235,7 +1210,7 @@ const BinPlanosSection = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura con tolvas en operación:</h1>
+                          <h1>Altura para transporte:</h1>
                           <p>
                             {unit === "metric"
                               ? `${
@@ -2308,7 +2283,7 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <div className="flex justify-between">
-                          <h1>Longitud total (incluyendo el enganche):</h1>
+                          <h1>Longitud total (incluyendo quinta rueda):</h1>
                           <p>
                             {unit === "metric"
                               ? `${
@@ -2325,7 +2300,7 @@ const BinPlanosSection = () => {
                           <p>Un eje</p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura del enganche de quinta rueda:</h1>
+                          <h1>Altura de la quinta rueda:</h1>
                           <p>
                             {unit === "metric"
                               ? `${
@@ -2353,7 +2328,7 @@ const BinPlanosSection = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura con tolvas en operación:</h1>
+                          <h1>Altura para transporte:</h1>
                           <p>
                             {unit === "metric"
                               ? `${
@@ -3481,7 +3456,7 @@ const BinPlanosSection = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura con tolvas en operación:</h1>
+                          <h1>Altura para transporte:</h1>
                           <p>
                             {unit === "metric"
                               ? `${
@@ -4596,7 +4571,7 @@ const BinPlanosSection = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura con tolvas en operación:</h1>
+                          <h1>Altura para transporte:</h1>
                           <p>
                             {unit === "metric"
                               ? `${

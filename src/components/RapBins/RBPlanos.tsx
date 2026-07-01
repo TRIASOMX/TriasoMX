@@ -10,7 +10,7 @@ import tolva1L1 from "../../assets/images/BinUnits/tolva1L1.webp";
 import tolva1F from "../../assets/images/BinUnits/tolva1F.webp";
 import tolva2F1 from "../../assets/images/BinUnits/tolva2F1.webp";
 import tolva1Main from "../../assets/images/BinUnits/tolva1Main.webp";
-import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScrollTrigger.tsx"
+import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScrollTrigger.tsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,10 +32,9 @@ const toggleConfig = [
       length: 7.22,
       tLenght: 10.88,
       tWheel: 1.34,
-      tStructurew: 2.60,
+      tStructurew: 2.6,
       hOperation: 3.81,
       tph: 60,
-
 
       //with Aesthetic Side Panels
       aSingleLength: 3.65,
@@ -45,7 +44,7 @@ const toggleConfig = [
       aLength: 7.22,
       aTlenght: 10.88,
       aTwheel: 1.34,
-      aTstructurew: 2.60,
+      aTstructurew: 2.6,
       aHoperation: 3.81,
       aTph: 60,
     },
@@ -61,10 +60,9 @@ const toggleConfig = [
       length: 10.88,
       tLenght: 10.88,
       tWheel: 1.34,
-      tStructurew: 2.60,
+      tStructurew: 2.6,
       hOperation: 3.81,
       tph: 60,
-
 
       //with Aesthetic Side Panels
       aSingleLength: 3.65,
@@ -74,7 +72,7 @@ const toggleConfig = [
       aLength: 9.57,
       aTlenght: 10.88,
       aTwheel: 1.34,
-      aTstructurew: 2.60,
+      aTstructurew: 2.6,
       aHoperation: 3.81,
       aTph: 60,
     },
@@ -82,7 +80,9 @@ const toggleConfig = [
 ];
 const RBPlanos = () => {
   //logica de cambio de imagenes
-  const [panelOption, setPanelOption] = useState<"withPanels" | "withoutPanels">("withPanels");
+  const [panelOption, setPanelOption] = useState<
+    "withPanels" | "withoutPanels"
+  >("withPanels");
   //tabs states
   const [activeTab, setActiveTab] = useState(2);
 
@@ -107,15 +107,15 @@ const RBPlanos = () => {
     setUnit(newUnit);
   };
   const activeData = toggleConfig.find(
-    (item) => item.id === activeTab.toString()
+    (item) => item.id === activeTab.toString(),
   );
 
   // Helper: elige la dimensión correcta según si tiene paneles o no
   type DimKey = keyof NonNullable<typeof activeData>["dimensions"];
   const dim = (withKey: DimKey, withoutKey: DimKey): number =>
     panelOption === "withPanels"
-      ? activeData?.dimensions[withKey] ?? 0
-      : activeData?.dimensions[withoutKey] ?? 0;
+      ? (activeData?.dimensions[withKey] ?? 0)
+      : (activeData?.dimensions[withoutKey] ?? 0);
   //ESTADOS DE LOS DROPWDOWNS
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     C1_1: false,
@@ -160,7 +160,6 @@ const RBPlanos = () => {
     columnGrid2Ref: columnGrid2,
     containerRef,
   });
-
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
@@ -207,7 +206,11 @@ const RBPlanos = () => {
         id="sectionNueva"
         className="bg-[url('/fondopatron.webp')] bg-repeat bg-top w-full flex flex-col items-center justify-start relative bg-black overflow-hidden z-10 min-h-screen"
       >
-        <header id="planosRapBins" className="mt-10 text-white" ref={otroElemento}>
+        <header
+          id="planosRapBins"
+          className="mt-10 text-white"
+          ref={otroElemento}
+        >
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
           </h1>
@@ -221,16 +224,15 @@ const RBPlanos = () => {
             >
               {/* Fondo deslizante */}
               <div
-                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${unit === "metric" ? "translate-x-full" : ""
-                  }`}
+                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${
+                  unit === "metric" ? "translate-x-full" : ""
+                }`}
               ></div>
 
               {/* Texto sobrepuesto */}
               <div className="relative z-10 flex h-full items-center justify-between px-4 text-sm font-bold">
                 <span
-                  className={
-                    unit === "imperial" ? "text-black" : "text-white"
-                  }
+                  className={unit === "imperial" ? "text-black" : "text-white"}
                 >
                   Imperial
                 </span>
@@ -248,17 +250,18 @@ const RBPlanos = () => {
           {/* Contenedor de los botones */}
           <div id="options" ref={optionsRef} className="w-full">
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto mb-6">
-              <label className="text-white block text-center">
-                Flancos:
-              </label>
+              <label className="text-white block text-center">Flancos:</label>
 
               <div className="relative">
                 <select
                   value={panelOption}
                   onChange={(e) =>
-                    setPanelOption(e.target.value as "withPanels" | "withoutPanels")
+                    setPanelOption(
+                      e.target.value as "withPanels" | "withoutPanels",
+                    )
                   }
-                  className="w-full px-5 py-3 pr-12 rounded-full bg-white text-gray-900 text-sm font-medium appearance-none focus:outline-none focus:ring-2 focus:ring-white/50">
+                  className="w-full px-5 py-3 pr-12 rounded-full bg-white text-gray-900 text-sm font-medium appearance-none focus:outline-none focus:ring-2 focus:ring-white/50"
+                >
                   {exteriorOptions.map((option) => (
                     <option key={option.id} value={option.id}>
                       {option.label}
@@ -283,32 +286,30 @@ const RBPlanos = () => {
             </div>
 
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
-              <label className="text-white block text-center">
-                Flancos:
-              </label>
+              <label className="text-white block text-center">Flancos:</label>
             </div>
             <div className="hidden lg:flex justify-center gap-5 mb-6">
               {exteriorOptions.map((option) => (
                 <button
                   key={option.id}
-                  onClick={() => setPanelOption(option.id as "withPanels" | "withoutPanels")}
+                  onClick={() =>
+                    setPanelOption(option.id as "withPanels" | "withoutPanels")
+                  }
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300
-                      ${panelOption === option.id
-                      ? "text-black bg-white border-white"
-                      : "text-white bg-transparent border-white"
-                    }`}
+                      ${
+                        panelOption === option.id
+                          ? "text-black bg-white border-white"
+                          : "text-white bg-transparent border-white"
+                      }`}
                 >
                   {option.label}
                 </button>
               ))}
             </div>
 
-
             {/* móvil */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
-              <label className="text-white block text-center">
-                Modelos:
-              </label>
+              <label className="text-white block text-center">Modelos:</label>
               <div className="relative">
                 <select
                   value={activeTab}
@@ -341,9 +342,7 @@ const RBPlanos = () => {
 
             {/* desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
-              <label className="text-white block text-center">
-                Modelos:
-              </label>
+              <label className="text-white block text-center">Modelos:</label>
             </div>
             <div className="hidden md:flex flex-wrap justify-center gap-5  mx-auto px-2">
               {modelOptions.map((option) => (
@@ -351,9 +350,10 @@ const RBPlanos = () => {
                   key={option.id}
                   onClick={() => setActiveTab(option.id)}
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300 w-[150px]
-                    ${activeTab === option.id
-                      ? "text-gray-900 bg-white border-white"
-                      : "text-white bg-transparent border-white"
+                    ${
+                      activeTab === option.id
+                        ? "text-gray-900 bg-white border-white"
+                        : "text-white bg-transparent border-white"
                     }`}
                 >
                   {option.label}
@@ -397,8 +397,9 @@ const RBPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -411,25 +412,35 @@ const RBPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Banda dosificadora de 18" con velocidad variable</li>
-                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibradores en la tolva de finos para asegurar una alimentación constante
+                          Banda dosificadora de 18" con velocidad variable
                         </li>
                         <li>
-                          Sensor de flujo para material fino con alarma de nivel bajo
-
+                          Polea de cabeza recubierta de hule para agarre
+                          confiable
                         </li>
                         <li>
-                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
-
+                          Vibradores en la tolva de finos para asegurar una
+                          alimentación constante
                         </li>
-                        <li>Poleas de cabeza recubiertas de hule y rodillos estándar CEMA</li>
+                        <li>
+                          Sensor de flujo para material fino con alarma de nivel
+                          bajo
+                        </li>
+                        <li>
+                          Transportador de alimentación de 24" con banda ancha
+                          para un traslado más estable a baja velocidad
+                        </li>
+                        <li>
+                          Poleas de cabeza recubiertas de hule y rodillos
+                          estándar CEMA
+                        </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
@@ -454,8 +465,9 @@ const RBPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -468,30 +480,46 @@ const RBPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
-
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         {panelOption === "withPanels" ? (
                           <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Tanque de aire de 120 galones para operación del cañon de aire.</li>
-                        <li>Limpiadores de banda para prolongar su vida útil.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
-                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
+                        <li>
+                          Tanque de aire de 120 galones para operación del cañon
+                          de aire.
+                        </li>
+                        <li>
+                          Limpiadores de banda para prolongar su vida útil.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
+                        <li>
+                          Solapas laterales integradas para mantener el material
+                          dentro de la banda.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -525,8 +553,9 @@ const RBPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -539,28 +568,36 @@ const RBPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Operación automática o manual, según se requiera en
+                          campo.
+                        </li>
+                        <li>
+                          Monitoreo remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
-
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
@@ -586,8 +623,9 @@ const RBPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -600,32 +638,45 @@ const RBPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6ml-6 list-disc list-inside ${openSections.C2_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6ml-6 list-disc list-inside ${
+                          openSections.C2_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              También puede transportarse en cama baja o plataforma.
+                              También puede transportarse en cama baja o
+                              plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos.
                         </li>
-                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
                         <li>
-                          Sistema de luces y señalamientos para transporte conforme a normas de carretera.
+                          La instalación no requiere grúa ni equipo de izaje.
+                        </li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
+                        <li>
+                          Sistema de luces y señalamientos para transporte
+                          conforme a normas de carretera.
                         </li>
                       </ul>
                     </div>
@@ -654,8 +705,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -668,19 +720,27 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Motores, componentes y cableado Siemens de grado industrial.
+                        Motores, componentes y cableado Siemens de grado
+                        industrial.
                       </li>
-                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>
+                        Sistema de cableado simplificado para facilitar el
+                        mantenimiento.
+                      </li>
+                      <li>
+                        Conexiones eléctricas protegidas contra la intemperie.
+                      </li>
                       <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                        Líneas de combustible externas, sensores y cableado de
+                        señales preinstalados.
                       </li>
                     </ul>
                   </div>
@@ -706,8 +766,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -720,10 +781,11 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full text-sm lg:text-base list-disc list-inside ${openSections.C3_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full text-sm lg:text-base list-disc list-inside ${
+                        openSections.C3_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="w-full flex justify-between">
                         <p>Máxima capacidad de alimentación:</p>
@@ -753,8 +815,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -767,10 +830,11 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>SEMARNAT</li>
                       <li>SCT</li>
@@ -805,11 +869,10 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("aWidth", "width")?.toFixed(2) ?? ""
-                          } mt`
-                          : `${(
-                            (dim("aWidth", "width")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${dim("aWidth", "width")?.toFixed(2) ?? ""} mt`
+                          : `${(dim("aWidth", "width") * cmToFeet).toFixed(
+                              1,
+                            )} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -868,11 +931,10 @@ const RBPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${dim("aHeight", "height")?.toFixed(2) ?? ""
-                          } mt`
-                          : `${(
-                            (dim("aHeight", "height")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${dim("aHeight", "height")?.toFixed(2) ?? ""} mt`
+                          : `${(dim("aHeight", "height") * cmToFeet).toFixed(
+                              1,
+                            )} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -924,11 +986,10 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("aLength", "length")?.toFixed(2) ?? ""
-                          } mt`
-                          : `${(
-                            (dim("aLength", "length")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${dim("aLength", "length")?.toFixed(2) ?? ""} mt`
+                          : `${(dim("aLength", "length") * cmToFeet).toFixed(
+                              1,
+                            )} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -974,7 +1035,8 @@ const RBPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Dimensiones de unidad individual                      </h1>
+                        Dimensiones de unidad individual{" "}
+                      </h1>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -992,8 +1054,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1006,19 +1069,20 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aSingleLength", "singleLength")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aSingleLength", "singleLength")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("aSingleLength", "singleLength") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1026,9 +1090,9 @@ const RBPlanos = () => {
                         <p>
                           {unit === "metric"
                             ? `${dim("aWidth", "width")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aWidth", "width")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(dim("aWidth", "width") * cmToFeet).toFixed(
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1036,9 +1100,9 @@ const RBPlanos = () => {
                         <p>
                           {unit === "metric"
                             ? `${dim("aSingleHeight", "singleHeight")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aSingleHeight", "singleHeight")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("aSingleHeight", "singleHeight") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1050,7 +1114,8 @@ const RBPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Estructura y chasis                      </h1>
+                        Estructura y chasis{" "}
+                      </h1>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1068,8 +1133,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1082,19 +1148,20 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud total (incluido el enganche):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aTlenght", "tLenght")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aTlenght", "tLenght")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("aTlenght", "tLenght") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1102,13 +1169,13 @@ const RBPlanos = () => {
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aTwheel", "tWheel")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aTwheel", "tWheel")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(dim("aTwheel", "tWheel") * cmToFeet).toFixed(
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1116,9 +1183,9 @@ const RBPlanos = () => {
                         <p>
                           {unit === "metric"
                             ? `${dim("aTstructurew", "tStructurew")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aTstructurew", "tStructurew")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("aTstructurew", "tStructurew") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1126,11 +1193,11 @@ const RBPlanos = () => {
                         <p>
                           {unit === "metric"
                             ? `${dim("aHoperation", "hOperation")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aHoperation", "hOperation")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("aHoperation", "hOperation") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
-                      </div>  
+                      </div>
                     </div>
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
@@ -1155,8 +1222,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1169,10 +1237,11 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 `}
+                      className={`text-sm lg:text-base grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 `}
                     >
                       <ul className="ml-2 lg:ml-6 list-disc">
                         <li>Grizzlies</li>
@@ -1233,8 +1302,9 @@ const RBPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1247,27 +1317,34 @@ const RBPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Banda dosificadora de 18" con velocidad variable</li>
-                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibradores en la tolva de finos para asegurar una alimentación constante
-
+                          Banda dosificadora de 18" con velocidad variable
                         </li>
                         <li>
-                          Sensor de flujo para material fino con alarma de nivel bajo
-
+                          Polea de cabeza recubierta de hule para agarre
+                          confiable
                         </li>
                         <li>
-                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
-
+                          Vibradores en la tolva de finos para asegurar una
+                          alimentación constante
                         </li>
                         <li>
-                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
+                          Sensor de flujo para material fino con alarma de nivel
+                          bajo
+                        </li>
+                        <li>
+                          Transportador de alimentación de 24" con banda ancha
+                          para un traslado más estable a baja velocidad
+                        </li>
+                        <li>
+                          Poleas de cabeza recubiertas de hule y rodillos
+                          estándar CEMA
                         </li>
                       </ul>
                     </div>
@@ -1294,8 +1371,9 @@ const RBPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1308,30 +1386,46 @@ const RBPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         {panelOption === "withPanels" ? (
                           <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
-
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Tanque de aire de 120 galones para operación del cañon de aire.</li>
-                        <li>Limpiadores de banda para prolongar su vida útil.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
-                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
+                        <li>
+                          Tanque de aire de 120 galones para operación del cañon
+                          de aire.
+                        </li>
+                        <li>
+                          Limpiadores de banda para prolongar su vida útil.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
+                        <li>
+                          Solapas laterales integradas para mantener el material
+                          dentro de la banda.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -1364,8 +1458,9 @@ const RBPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1378,28 +1473,36 @@ const RBPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Operación automática o manual, según se requiera en
+                          campo.
+                        </li>
+                        <li>
+                          Monitoreo remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
-
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
@@ -1426,8 +1529,9 @@ const RBPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1440,32 +1544,45 @@ const RBPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6ml-6 list-disc list-inside ${openSections.C2_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6ml-6 list-disc list-inside ${
+                          openSections.C2_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              También puede transportarse en cama baja o plataforma.
+                              También puede transportarse en cama baja o
+                              plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos.
                         </li>
-                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
                         <li>
-                          Sistema de luces y señalamientos para transporte conforme a normas de carretera.
+                          La instalación no requiere grúa ni equipo de izaje.
+                        </li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
+                        <li>
+                          Sistema de luces y señalamientos para transporte
+                          conforme a normas de carretera.
                         </li>
                       </ul>
                     </div>
@@ -1495,8 +1612,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1509,19 +1627,27 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Motores, componentes y cableado Siemens de grado industrial.
+                        Motores, componentes y cableado Siemens de grado
+                        industrial.
                       </li>
-                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>
+                        Sistema de cableado simplificado para facilitar el
+                        mantenimiento.
+                      </li>
+                      <li>
+                        Conexiones eléctricas protegidas contra la intemperie.
+                      </li>
                       <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                        Líneas de combustible externas, sensores y cableado de
+                        señales preinstalados.
                       </li>
                     </ul>
                   </div>
@@ -1548,8 +1674,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1562,10 +1689,11 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full text-sm lg:text-base list-disc list-inside ${openSections.C3_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full text-sm lg:text-base list-disc list-inside ${
+                        openSections.C3_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="w-full flex justify-between">
                         <p>Máxima capacidad de alimentación:</p>
@@ -1596,8 +1724,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1610,10 +1739,11 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>SEMARNAT</li>
                       <li>SCT</li>
@@ -1648,11 +1778,10 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("aWidth", "width")?.toFixed(2) ?? ""
-                          } mt`
-                          : `${(
-                            (dim("aWidth", "width")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${dim("aWidth", "width")?.toFixed(2) ?? ""} mt`
+                          : `${(dim("aWidth", "width") * cmToFeet).toFixed(
+                              1,
+                            )} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1711,11 +1840,10 @@ const RBPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${dim("aHeight", "height")?.toFixed(2) ?? ""
-                          } mt`
-                          : `${(
-                            (dim("aHeight", "height")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${dim("aHeight", "height")?.toFixed(2) ?? ""} mt`
+                          : `${(dim("aHeight", "height") * cmToFeet).toFixed(
+                              1,
+                            )} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1767,11 +1895,10 @@ const RBPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("aLength", "length")?.toFixed(2) ?? ""
-                          } mt`
-                          : `${(
-                            (dim("aLength", "length")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${dim("aLength", "length")?.toFixed(2) ?? ""} mt`
+                          : `${(dim("aLength", "length") * cmToFeet).toFixed(
+                              1,
+                            )} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1837,8 +1964,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1851,19 +1979,20 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aSingleLength", "singleLength")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aSingleLength", "singleLength")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("aSingleLength", "singleLength") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1871,9 +2000,9 @@ const RBPlanos = () => {
                         <p>
                           {unit === "metric"
                             ? `${dim("aWidth", "width")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aWidth", "width")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(dim("aWidth", "width") * cmToFeet).toFixed(
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1881,9 +2010,9 @@ const RBPlanos = () => {
                         <p>
                           {unit === "metric"
                             ? `${dim("aSingleHeight", "singleHeight")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aSingleHeight", "singleHeight")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("aSingleHeight", "singleHeight") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1915,8 +2044,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1929,19 +2059,20 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud total (incluido el enganche):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aTlenght", "tLenght")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aTlenght", "tLenght")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("aTlenght", "tLenght") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1949,13 +2080,13 @@ const RBPlanos = () => {
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aTwheel", "tWheel")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aTwheel", "tWheel")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(dim("aTwheel", "tWheel") * cmToFeet).toFixed(
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1963,9 +2094,9 @@ const RBPlanos = () => {
                         <p>
                           {unit === "metric"
                             ? `${dim("aTstructurew", "tStructurew")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aTstructurew", "tStructurew")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("aTstructurew", "tStructurew") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1973,9 +2104,9 @@ const RBPlanos = () => {
                         <p>
                           {unit === "metric"
                             ? `${dim("aHoperation", "hOperation")?.toFixed(2) ?? ""} mt`
-                            : `${((dim("aHoperation", "hOperation")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("aHoperation", "hOperation") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -2003,8 +2134,9 @@ const RBPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2017,10 +2149,11 @@ const RBPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`text-sm lg:text-base grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 `}
+                      className={`text-sm lg:text-base grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 `}
                     >
                       <ul className="ml-2 lg:ml-6 list-disc">
                         <li>Grizzlies</li>

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScrollTrigger.tsx"
+import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScrollTrigger.tsx";
 import ATMain from "../../assets/images/AsphaltStorage/ATMain.webp";
 import ATR1 from "../../assets/images/AsphaltStorage/ATR1.webp";
 import ATR2 from "../../assets/images/AsphaltStorage/ATR2.webp";
@@ -155,7 +155,6 @@ const ASPlanos = () => {
     containerRef,
   });
 
-
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <div className="h-[100vh] lg:h-[80vh] relative flex items-center justify-center bg-bgMain w-full">
@@ -201,7 +200,11 @@ const ASPlanos = () => {
         id="sectionNueva"
         className="bg-[url('/fondopatron.webp')] bg-repeat bg-top w-full flex flex-col items-center justify-start relative bg-black overflow-hidden z-10 min-h-screen"
       >
-        <header id="planosAsphaltStorage" className="mt-10 text-white" ref={otroElemento}>
+        <header
+          id="planosAsphaltStorage"
+          className="mt-10 text-white"
+          ref={otroElemento}
+        >
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             ESPECIFICACIONES
           </h1>
@@ -215,8 +218,9 @@ const ASPlanos = () => {
             >
               {/* Fondo deslizante */}
               <div
-                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${unit === "metric" ? "translate-x-full" : ""
-                  }`}
+                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${
+                  unit === "metric" ? "translate-x-full" : ""
+                }`}
               ></div>
 
               {/* Texto sobrepuesto */}
@@ -239,9 +243,7 @@ const ASPlanos = () => {
           <div id="options" ref={optionsRef} className="w-full">
             {/* móvil */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
-              <label className="text-white block text-center">
-                MODELOS:
-              </label>
+              <label className="text-white block text-center">MODELOS:</label>
               <div className="relative">
                 <select
                   value={activeTab}
@@ -274,9 +276,7 @@ const ASPlanos = () => {
 
             {/* desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
-              <label className="text-white block text-center">
-                MODELS:
-              </label>
+              <label className="text-white block text-center">MODELS:</label>
             </div>
             <div className="hidden md:flex flex-wrap justify-center gap-5  mx-auto px-2">
               {modelOptions.map((option) => (
@@ -284,9 +284,10 @@ const ASPlanos = () => {
                   key={option.id}
                   onClick={() => handleTabChange(option.id)}
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300 w-[150px]
-                    ${activeTab === option.id
-                      ? "text-gray-900 bg-white border-white"
-                      : "text-white bg-transparent border-white"
+                    ${
+                      activeTab === option.id
+                        ? "text-gray-900 bg-white border-white"
+                        : "text-white bg-transparent border-white"
                     }`}
                 >
                   {option.label}
@@ -335,8 +336,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -349,13 +351,15 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Opción de caldera (para calentamiento con aceite) en lugar de calentamiento por fuego directo
+                          Opción de caldera (para calentamiento con aceite) en
+                          lugar de calentamiento por fuego directo
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
@@ -363,10 +367,12 @@ const ASPlanos = () => {
                           </ul>
                         </li>
                         <li>
-                          Sistema de serpentín de alta eficiencia de 2” dentro del tanque de asfalto
+                          Sistema de serpentín de alta eficiencia de 2” dentro
+                          del tanque de asfalto
                         </li>
                         <li>
-                          Conexiones para autotanques con sistemas de calentamiento por serpentín
+                          Conexiones para autotanques con sistemas de
+                          calentamiento por serpentín
                         </li>
                         <li>Revestimiento exterior de acero inoxidable</li>
                       </ul>
@@ -394,8 +400,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -408,29 +415,37 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Sistema operativo Triaso Relief 8.0.
+                          Operación automática o manual, según se requiera en
+                          campo.
                         </li>
+                        <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
                             </li>
-                            <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.</li>
+                            <li>
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
+                            </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
-
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
@@ -457,8 +472,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C3_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -471,29 +487,44 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C3_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <ul className="list-disc pl-10">
-                          <li>También puede transportarse en cama baja o plataforma.</li>
+                          <li>
+                            También puede transportarse en cama baja o
+                            plataforma.
+                          </li>
                         </ul>
                         <li>
-                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos.
                         </li>
                         <li>
                           La instalación no requiere grúa ni equipo de izaje.
                         </li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
-                        <li>Sistema de luces y señalamientos para transporte conforme a normas de carretera.</li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
+                        <li>
+                          Sistema de luces y señalamientos para transporte
+                          conforme a normas de carretera.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -526,8 +557,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -540,10 +572,11 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>SEMARNAT</li>
                         <li>SCT </li>
@@ -574,8 +607,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -588,19 +622,27 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Motores, componentes y cableado Siemens de grado industrial.
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
                         </li>
-                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>
+                          Sistema de cableado simplificado para facilitar el
+                          mantenimiento.
+                        </li>
+                        <li>
+                          Conexiones eléctricas protegidas contra la intemperie.
+                        </li>
                         <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                          Líneas de combustible externas, sensores y cableado de
+                          señales preinstalados.
                         </li>
                       </ul>
                     </div>
@@ -627,8 +669,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -641,28 +684,42 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         <li>Flancos estéticos para una imagen profesional</li>
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Aislamiento térmico con fibra de vidrio de tres pulgadas, que reduce la pérdida de calor y la temperatura superficial.
+                          Aislamiento térmico con fibra de vidrio de tres
+                          pulgadas, que reduce la pérdida de calor y la
+                          temperatura superficial.
                         </li>
-                        <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>
+                          Sellos tipo laberinto para disminuir la fuga de aire y
+                          calor.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
                         <li>Forro exterior de lámina de acero inoxidable.</li>
                       </ul>
                     </div>
@@ -692,8 +749,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -706,10 +764,11 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Temperatura máxima alcanzable:</h1>
@@ -932,8 +991,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -946,35 +1006,34 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1006,8 +1065,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1020,17 +1080,18 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1038,29 +1099,27 @@ const ASPlanos = () => {
                         <p>Un solo eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
-  
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1097,8 +1156,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1111,13 +1171,15 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Opción de caldera (para calentamiento con aceite) en lugar de calentamiento por fuego directo
+                          Opción de caldera (para calentamiento con aceite) en
+                          lugar de calentamiento por fuego directo
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
@@ -1125,10 +1187,12 @@ const ASPlanos = () => {
                           </ul>
                         </li>
                         <li>
-                          Sistema de serpentín de alta eficiencia de 2” dentro del tanque de asfalto
+                          Sistema de serpentín de alta eficiencia de 2” dentro
+                          del tanque de asfalto
                         </li>
                         <li>
-                          Conexiones para autotanques con sistemas de calentamiento por serpentín
+                          Conexiones para autotanques con sistemas de
+                          calentamiento por serpentín
                         </li>
                         <li>Revestimiento exterior de acero inoxidable</li>
                       </ul>
@@ -1155,8 +1219,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1169,29 +1234,37 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Sistema operativo Triaso Relief 8.0.
+                          Operación automática o manual, según se requiera en
+                          campo.
                         </li>
+                        <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
                             </li>
-                            <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                            <li>
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
@@ -1217,8 +1290,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C3_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1231,31 +1305,44 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C3_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <ul className="list-disc pl-10">
                           <li>
-                            También puede transportarse en cama baja o plataforma.
+                            También puede transportarse en cama baja o
+                            plataforma.
                           </li>
                         </ul>
 
                         <li>
-                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos.
                         </li>
-                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
                         <li>
-                          Sistema de luces y señalamientos para transporte conforme a normas de carretera.
+                          La instalación no requiere grúa ni equipo de izaje.
+                        </li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
+                        <li>
+                          Sistema de luces y señalamientos para transporte
+                          conforme a normas de carretera.
                         </li>
                       </ul>
                     </div>
@@ -1286,8 +1373,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1300,10 +1388,11 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>SEMARNAT</li>
                         <li>SCT </li>
@@ -1333,8 +1422,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1347,19 +1437,27 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Motores, componentes y cableado Siemens de grado industrial.
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
                         </li>
-                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>
+                          Sistema de cableado simplificado para facilitar el
+                          mantenimiento.
+                        </li>
+                        <li>
+                          Conexiones eléctricas protegidas contra la intemperie.
+                        </li>
                         <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                          Líneas de combustible externas, sensores y cableado de
+                          señales preinstalados.
                         </li>
                       </ul>
                     </div>
@@ -1385,8 +1483,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1399,28 +1498,42 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         <li>Flancos estéticos para una imagen profesional</li>
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Aislamiento térmico con fibra de vidrio de tres pulgadas, que reduce la pérdida de calor y la temperatura superficial.
+                          Aislamiento térmico con fibra de vidrio de tres
+                          pulgadas, que reduce la pérdida de calor y la
+                          temperatura superficial.
                         </li>
-                        <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>
+                          Sellos tipo laberinto para disminuir la fuga de aire y
+                          calor.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
                         <li>Forro exterior de lámina de acero inoxidable.</li>
                       </ul>
                     </div>
@@ -1449,8 +1562,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1463,10 +1577,11 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Temperatura máxima alcanzable:</h1>
@@ -1689,8 +1804,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1703,35 +1819,34 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1763,8 +1878,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1777,17 +1893,18 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1795,29 +1912,27 @@ const ASPlanos = () => {
                         <p>Un solo eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
-  
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1854,8 +1969,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1868,13 +1984,15 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Opción de caldera (para calentamiento con aceite) en lugar de calentamiento por fuego directo
+                          Opción de caldera (para calentamiento con aceite) en
+                          lugar de calentamiento por fuego directo
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
@@ -1882,10 +2000,12 @@ const ASPlanos = () => {
                           </ul>
                         </li>
                         <li>
-                          Sistema de serpentín de alta eficiencia de 2” dentro del tanque de asfalto
+                          Sistema de serpentín de alta eficiencia de 2” dentro
+                          del tanque de asfalto
                         </li>
                         <li>
-                          Conexiones para autotanques con sistemas de calentamiento por serpentín
+                          Conexiones para autotanques con sistemas de
+                          calentamiento por serpentín
                         </li>
                         <li>Revestimiento exterior de acero inoxidable</li>
                       </ul>
@@ -1912,8 +2032,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1926,29 +2047,37 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Sistema operativo Triaso Relief 8.0.
+                          Operación automática o manual, según se requiera en
+                          campo.
                         </li>
+                        <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
                             </li>
-                            <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                            <li>
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
@@ -1974,8 +2103,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C3_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1988,28 +2118,40 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C3_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <li>
                           También puede transportarse en cama baja o plataforma.
                         </li>
                         <li>
-                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos.
                         </li>
-                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
                         <li>
-                          Sistema de luces y señalamientos para transporte conforme a normas de carretera.
+                          La instalación no requiere grúa ni equipo de izaje.
+                        </li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
+                        <li>
+                          Sistema de luces y señalamientos para transporte
+                          conforme a normas de carretera.
                         </li>
                       </ul>
                     </div>
@@ -2040,8 +2182,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2054,10 +2197,11 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>SEMARNAT</li>
                         <li>SCT </li>
@@ -2087,8 +2231,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2101,19 +2246,27 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Motores, componentes y cableado Siemens de grado industrial.
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
                         </li>
-                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>
+                          Sistema de cableado simplificado para facilitar el
+                          mantenimiento.
+                        </li>
+                        <li>
+                          Conexiones eléctricas protegidas contra la intemperie.
+                        </li>
                         <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                          Líneas de combustible externas, sensores y cableado de
+                          señales preinstalados.
                         </li>
                       </ul>
                     </div>
@@ -2139,8 +2292,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2153,28 +2307,42 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         <li>Flancos estéticos para una imagen profesional</li>
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Aislamiento térmico con fibra de vidrio de tres pulgadas, que reduce la pérdida de calor y la temperatura superficial.
+                          Aislamiento térmico con fibra de vidrio de tres
+                          pulgadas, que reduce la pérdida de calor y la
+                          temperatura superficial.
                         </li>
-                        <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>
+                          Sellos tipo laberinto para disminuir la fuga de aire y
+                          calor.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
                         <li>Forro exterior de lámina de acero inoxidable.</li>
                       </ul>
                     </div>
@@ -2203,8 +2371,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2217,10 +2386,11 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Temperatura máxima alcanzable:</h1>
@@ -2384,7 +2554,7 @@ const ASPlanos = () => {
                         data-imperial="722.37 cm"
                         data-metric="23.7 ft"
                       >
-                         {unit === "metric"
+                        {unit === "metric"
                           ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
                           : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
@@ -2443,8 +2613,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2457,35 +2628,34 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2517,8 +2687,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2531,17 +2702,18 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2549,29 +2721,27 @@ const ASPlanos = () => {
                         <p>Un solo eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
-  
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -2608,8 +2778,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2622,13 +2793,15 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Opción de caldera (para calentamiento con aceite) en lugar de calentamiento por fuego directo
+                          Opción de caldera (para calentamiento con aceite) en
+                          lugar de calentamiento por fuego directo
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
@@ -2636,10 +2809,12 @@ const ASPlanos = () => {
                           </ul>
                         </li>
                         <li>
-                          Sistema de serpentín de alta eficiencia de 2” dentro del tanque de asfalto
+                          Sistema de serpentín de alta eficiencia de 2” dentro
+                          del tanque de asfalto
                         </li>
                         <li>
-                          Conexiones para autotanques con sistemas de calentamiento por serpentín
+                          Conexiones para autotanques con sistemas de
+                          calentamiento por serpentín
                         </li>
                         <li>Revestimiento exterior de acero inoxidable</li>
                       </ul>
@@ -2666,8 +2841,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2680,29 +2856,37 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Sistema operativo Triaso Relief 8.0.
+                          Operación automática o manual, según se requiera en
+                          campo.
                         </li>
+                        <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
                             </li>
-                            <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                            <li>
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
@@ -2728,8 +2912,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C3_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2742,28 +2927,43 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C3_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <ul className="list-disc pl-10">
-                          <li>También puede transportarse en cama baja o plataforma.</li>
+                          <li>
+                            También puede transportarse en cama baja o
+                            plataforma.
+                          </li>
                         </ul>
                         <li>
-                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos.
                         </li>
-                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
                         <li>
-                          Sistema de luces y señalamientos para transporte conforme a normas de carretera.
+                          La instalación no requiere grúa ni equipo de izaje.
+                        </li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
+                        <li>
+                          Sistema de luces y señalamientos para transporte
+                          conforme a normas de carretera.
                         </li>
                       </ul>
                     </div>
@@ -2794,8 +2994,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2808,10 +3009,11 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>SEMARNAT</li>
                         <li>SCT </li>
@@ -2841,8 +3043,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2855,19 +3058,27 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Motores, componentes y cableado Siemens de grado industrial.
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
                         </li>
-                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>
+                          Sistema de cableado simplificado para facilitar el
+                          mantenimiento.
+                        </li>
+                        <li>
+                          Conexiones eléctricas protegidas contra la intemperie.
+                        </li>
                         <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                          Líneas de combustible externas, sensores y cableado de
+                          señales preinstalados.
                         </li>
                       </ul>
                     </div>
@@ -2893,8 +3104,9 @@ const ASPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2907,30 +3119,42 @@ const ASPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
+                        <li>Flancos estéticos para una imagen profesional</li>
                         <li>
-                          Flancos estéticos para una imagen profesional
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
                         </li>
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Aislamiento térmico con fibra de vidrio de tres pulgadas, que reduce la pérdida de calor y la temperatura superficial.
+                          Aislamiento térmico con fibra de vidrio de tres
+                          pulgadas, que reduce la pérdida de calor y la
+                          temperatura superficial.
                         </li>
-                        <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>
+                          Sellos tipo laberinto para disminuir la fuga de aire y
+                          calor.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
                         <li>Forro exterior de lámina de acero inoxidable.</li>
                       </ul>
                     </div>
@@ -2959,8 +3183,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2973,10 +3198,11 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Temperatura máxima alcanzable:</h1>
@@ -3199,8 +3425,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3213,35 +3440,34 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3273,8 +3499,9 @@ const ASPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3287,17 +3514,18 @@ const ASPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3305,29 +3533,27 @@ const ASPlanos = () => {
                         <p>Un solo eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
-  
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>

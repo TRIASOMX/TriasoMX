@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import M1 from "../../assets/images/ColdMix/Planos/M2.webp";
 import M2 from "../../assets/images/ColdMix/Planos/M3.webp";
 import FW from "../../assets/images/ColdMix/Planos/FW.webp";
-import FL from "../../assets/images/ColdMix/Planos/PlaMFMspVT.webp"
+import FL from "../../assets/images/ColdMix/Planos/PlaMFMspVT.webp";
 import A2GLA from "../../assets/images/ColdMix/Planos/2GLA.webp";
 import A2GLW from "../../assets/images/ColdMix/Planos/2GLW.webp";
 import A2GWA from "../../assets/images/ColdMix/Planos/2GWA.webp";
@@ -337,7 +337,6 @@ const CMPlanos = () => {
     { id: "withoutPanels", label: "Sin flancos estéticos" },
   ];
 
-
   useClipPathScrollTrigger({
     enabled: activeTab === 3,
 
@@ -411,8 +410,9 @@ const CMPlanos = () => {
             >
               {/* Fondo deslizante */}
               <div
-                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${unit === "metric" ? "translate-x-full" : ""
-                  }`}
+                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${
+                  unit === "metric" ? "translate-x-full" : ""
+                }`}
               ></div>
 
               {/* Texto sobrepuesto */}
@@ -436,7 +436,6 @@ const CMPlanos = () => {
           <div id="options" ref={optionsRef} className="w-full">
             {/* MOBILE */}
             <div className="md:hidden flex flex-col gap-6 px-4 w-full max-w-7xl mx-auto">
-
               {/* BIN UNITS */}
               <div className="flex justify-between items-center">
                 <label className="text-white">UNIDAD DE TOLVAS</label>
@@ -467,7 +466,6 @@ const CMPlanos = () => {
                     </svg>
                   </div>
                 </div>
-
               </div>
 
               {/* DISCHARGE */}
@@ -500,7 +498,6 @@ const CMPlanos = () => {
                     </svg>
                   </div>
                 </div>
-
               </div>
 
               {/* MOUNTED ON */}
@@ -533,7 +530,6 @@ const CMPlanos = () => {
                     </svg>
                   </div>
                 </div>
-
               </div>
 
               {/* EXTERIOR */}
@@ -566,25 +562,26 @@ const CMPlanos = () => {
                     </svg>
                   </div>
                 </div>
-
               </div>
             </div>
             {/* DESKTOP */}
             <div className="hidden md:grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
-
               {/* BIN UNITS */}
               <div>
-                <h1 className="text-white text-center mb-10">UNIDAD DE TOLVAS</h1>
+                <h1 className="text-white text-center mb-10">
+                  UNIDAD DE TOLVAS
+                </h1>
                 <div className="grid grid-cols-2 gap-3 justify-items-center">
                   {binUnitOptions.map((opt) => (
                     <button
                       key={opt.id}
                       onClick={() => setActiveTab(opt.id)}
                       className={`px-4 py-2 text-sm font-medium border rounded-full max-w-[100px]
-            ${activeTab === opt.id
-                          ? "text-gray-900 bg-white border-white"
-                          : "text-white bg-transparent border-white"
-                        }`}
+            ${
+              activeTab === opt.id
+                ? "text-gray-900 bg-white border-white"
+                : "text-white bg-transparent border-white"
+            }`}
                     >
                       {opt.label}
                     </button>
@@ -601,10 +598,11 @@ const CMPlanos = () => {
                       key={opt.id}
                       onClick={() => setDischargeVersion(opt.id)}
                       className={`px-4 py-2 text-sm font-medium border rounded-full w-2/3
-            ${dischargeVersion === opt.id
-                          ? "text-gray-900 bg-white border-white"
-                          : "text-white bg-transparent border-white"
-                        }`}
+            ${
+              dischargeVersion === opt.id
+                ? "text-gray-900 bg-white border-white"
+                : "text-white bg-transparent border-white"
+            }`}
                     >
                       {opt.label}
                     </button>
@@ -621,10 +619,11 @@ const CMPlanos = () => {
                       key={opt.id}
                       onClick={() => setMountedVersion(opt.id)}
                       className={`px-4 py-2 text-sm font-medium border rounded-full max-w-[100px]
-            ${mountedVersion === opt.id
-                          ? "text-gray-900 bg-white border-white"
-                          : "text-white bg-transparent border-white"
-                        }`}
+            ${
+              mountedVersion === opt.id
+                ? "text-gray-900 bg-white border-white"
+                : "text-white bg-transparent border-white"
+            }`}
                     >
                       {opt.label}
                     </button>
@@ -641,10 +640,11 @@ const CMPlanos = () => {
                       key={opt.id}
                       onClick={() => setActiveVersion(opt.id)}
                       className={`px-4 py-2 text-sm font-medium border rounded-full
-            ${activeVersion === opt.id
-                          ? "text-black bg-white border-white"
-                          : "text-white bg-transparent border-white"
-                        }`}
+            ${
+              activeVersion === opt.id
+                ? "text-black bg-white border-white"
+                : "text-white bg-transparent border-white"
+            }`}
                     >
                       {opt.label}
                     </button>
@@ -652,7 +652,6 @@ const CMPlanos = () => {
                 </div>
               </div>
             </div>
-
           </div>
 
           {/* Contenido de los tabs */}
@@ -671,7 +670,8 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3 ">
-                          Sistema de alimentación y dosificacióN                        </h1>
+                          Sistema de alimentación y dosificacióN{" "}
+                        </h1>
                         <button
                           aria-label="See more about the feeding and dosign system"
                           className="block md:hidden"
@@ -690,8 +690,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -704,22 +705,34 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Banda dosificadora de 18" con velocidad variable</li>
-                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibradores en la tolva de finos para asegurar una alimentación constante
-                        </li>
-                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
-                        <li>
-                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
+                          Banda dosificadora de 18" con velocidad variable
                         </li>
                         <li>
-                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
+                          Polea de cabeza recubierta de hule para agarre
+                          confiable
+                        </li>
+                        <li>
+                          Vibradores en la tolva de finos para asegurar una
+                          alimentación constante
+                        </li>
+                        <li>
+                          Sensor de flujo para material fino con alarma de nivel
+                          bajo
+                        </li>
+                        <li>
+                          Transportador de alimentación de 24" con banda ancha
+                          para un traslado más estable a baja velocidad
+                        </li>
+                        <li>
+                          Poleas de cabeza recubiertas de hule y rodillos
+                          estándar CEMA
                         </li>
                       </ul>
                     </div>
@@ -746,8 +759,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -760,28 +774,42 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         {activeVersion === "withPanels" ? (
                           <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Limpiadores de banda para prolongar su vida útil.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
-                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
+                        <li>
+                          Limpiadores de banda para prolongar su vida útil.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
+                        <li>
+                          Solapas laterales integradas para mantener el material
+                          dentro de la banda.
+                        </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
@@ -807,8 +835,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -821,16 +850,19 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Mezclador horizontal de doble eje</li>
                         <li>Revestimientos de acero de alta resistencia</li>
                         <li>Paletas intercambiables</li>
                         <li>Tiempo de mezclado ajustable</li>
-                        <li>Compuerta de descarga directo a montones o camiones</li>
+                        <li>
+                          Compuerta de descarga directo a montones o camiones
+                        </li>
                         <li>Motor eléctrico de 10–125 HP</li>
                         <li>Transmisión con reductor de velocidad</li>
                       </ul>
@@ -863,8 +895,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -877,28 +910,36 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Operación automática o manual, según se requiera en
+                          campo.
+                        </li>
+                        <li>
+                          Monitoreo remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
-
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
@@ -925,8 +966,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -939,19 +981,27 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Motores, componentes y cableado Siemens de grado industrial.
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
                         </li>
-                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>
+                          Sistema de cableado simplificado para facilitar el
+                          mantenimiento.
+                        </li>
+                        <li>
+                          Conexiones eléctricas protegidas contra la intemperie.
+                        </li>
                         <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                          Líneas de combustible externas, sensores y cableado de
+                          señales preinstalados.
                         </li>
                       </ul>
                     </div>
@@ -978,8 +1028,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -992,49 +1043,53 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc ${openSections.C2_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc ${
+                          openSections.C2_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li className="ml-6">Diseñado para reubicación y movimiento frecuente.</li>
+                        <li className="ml-6">
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
 
                         {mountedVersion !== "legs" ? (
                           <li>
                             <ul className="list-disc ml-6">
                               <li>
-                                Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
-
+                                Con quinta rueda integrada, evitando el uso de
+                                cama baja si no se desea.
                               </li>
 
                               <li className="list-none">
                                 <ul className="list-disc ml-10">
                                   <li>
-                                    También puede transportarse en cama baja o plataforma.
-
+                                    También puede transportarse en cama baja o
+                                    plataforma.
                                   </li>
                                 </ul>
                               </li>
 
                               <li>
-                                Montado sobre chasis de transporte con un eje y llantas de uso carretera.
-
+                                Montado sobre chasis de transporte con un eje y
+                                llantas de uso carretera.
                               </li>
 
                               <li>
-                                Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.
-
+                                Enganche tipo arrastre con acoplamiento de
+                                seguridad y sistema de frenos.
                               </li>
                               <li>
-                                La instalación no requiere grúa ni equipo de izaje.
-
+                                La instalación no requiere grúa ni equipo de
+                                izaje.
                               </li>
                               <li>
-                                Patas de soporte atornilladas, para un armado rápido en sitio.
-
+                                Patas de soporte atornilladas, para un armado
+                                rápido en sitio.
                               </li>
                               <li>
-                                Sistema de luces y señalamientos para transporte conforme a normas de carretera.
+                                Sistema de luces y señalamientos para transporte
+                                conforme a normas de carretera.
                               </li>
                             </ul>
                           </li>
@@ -1042,10 +1097,12 @@ const CMPlanos = () => {
                           <li>
                             <ul className="list-disc ml-6">
                               <li>
-                                Montado sobre un chasis estándar sostenido por patas</li>
+                                Montado sobre un chasis estándar sostenido por
+                                patas
+                              </li>
                               <li>
-                                Patas de soporte atornilladas, para un armado rápido en sitio.
-
+                                Patas de soporte atornilladas, para un armado
+                                rápido en sitio.
                               </li>
                               <li>Montaje rápido sin cimientos</li>
                             </ul>
@@ -1079,8 +1136,9 @@ const CMPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1093,12 +1151,15 @@ const CMPlanos = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Bomba de asfalto/emulsión con variador de frecuencia</li>
+                      <li>
+                        Bomba de asfalto/emulsión con variador de frecuencia
+                      </li>
                       <li>Caudalímetro para dosificación precisa</li>
                       <li>Tanque opcional de agua/aditivos con bomba</li>
                       <li>Sistema integrado de tubería y filtración</li>
@@ -1127,8 +1188,9 @@ const CMPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1141,10 +1203,11 @@ const CMPlanos = () => {
                       </button>
                     </div>
                     <ul
-                      className={`list-disc text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`list-disc text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>SEMARNAT</li>
                       <li>SCT</li>
@@ -1178,11 +1241,9 @@ const CMPlanos = () => {
                         </div>
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
-                        
-                         {unit === "metric"
+                        {unit === "metric"
                           ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
                           : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
-
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1361,8 +1422,9 @@ const CMPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1375,35 +1437,34 @@ const CMPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 text-sm lg:text-base ml-2 lg:ml-6 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 text-sm lg:text-base ml-2 lg:ml-6 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
-                           {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
-                  
+                          {unit === "metric"
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
-                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          {unit === "metric"
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
-                           {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
-                         
+                          {unit === "metric"
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1431,8 +1492,9 @@ const CMPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1445,17 +1507,18 @@ const CMPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 text-sm lg:text-base ml-2 lg:ml-6 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 text-sm lg:text-base ml-2 lg:ml-6 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud total (incluido el enganche):</h1>
                         <p>
-                           {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          {unit === "metric"
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1467,27 +1530,27 @@ const CMPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
-                           {unit === "metric"
-                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          {unit === "metric"
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
-                           {unit === "metric"
-                          ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.totalHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          {unit === "metric"
+                            ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.totalHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura de descarga (desde el suelo):</h1>
                         <p>
-                           {unit === "metric"
-                          ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.dischargeHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          {unit === "metric"
+                            ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.dischargeHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1515,8 +1578,9 @@ const CMPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1529,25 +1593,26 @@ const CMPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`w-full justify-center text-sm lg:text-base ml-2 lg:ml-6 items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 `}
+                      className={`w-full justify-center text-sm lg:text-base ml-2 lg:ml-6 items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 `}
                     >
                       <div className="flex justify-between">
                         <h1>Ancho de la cinta de alimentación:</h1>
                         <p>
-                           {unit === "metric"
-                          ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.feeding ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          {unit === "metric"
+                            ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.feeding ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho de la cinta colectora: </h1>
                         <p>
-                           {unit === "metric"
-                          ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.collector ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          {unit === "metric"
+                            ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.collector ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1569,7 +1634,8 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Sistema de alimentación y dosificación</h1>
+                          Sistema de alimentación y dosificación
+                        </h1>
                         <button
                           aria-label="See more about the feeding and dosign system"
                           className="block md:hidden"
@@ -1588,8 +1654,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1602,22 +1669,34 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Banda dosificadora de 18" con velocidad variable</li>
-                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibradores en la tolva de finos para asegurar una alimentación constante
-                        </li>
-                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
-                        <li>
-                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
+                          Banda dosificadora de 18" con velocidad variable
                         </li>
                         <li>
-                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
+                          Polea de cabeza recubierta de hule para agarre
+                          confiable
+                        </li>
+                        <li>
+                          Vibradores en la tolva de finos para asegurar una
+                          alimentación constante
+                        </li>
+                        <li>
+                          Sensor de flujo para material fino con alarma de nivel
+                          bajo
+                        </li>
+                        <li>
+                          Transportador de alimentación de 24" con banda ancha
+                          para un traslado más estable a baja velocidad
+                        </li>
+                        <li>
+                          Poleas de cabeza recubiertas de hule y rodillos
+                          estándar CEMA
                         </li>
                       </ul>
                     </div>
@@ -1644,8 +1723,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1658,28 +1738,42 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         {activeVersion === "withPanels" ? (
                           <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Limpiadores de banda para prolongar su vida útil.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
-                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
+                        <li>
+                          Limpiadores de banda para prolongar su vida útil.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
+                        <li>
+                          Solapas laterales integradas para mantener el material
+                          dentro de la banda.
+                        </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
@@ -1705,8 +1799,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1719,16 +1814,19 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Mezclador horizontal de doble eje</li>
                         <li>Revestimientos de acero de alta resistencia</li>
                         <li>Paletas intercambiables</li>
                         <li>Tiempo de mezclado ajustable</li>
-                        <li>Compuerta de descarga directo a montones o camiones</li>
+                        <li>
+                          Compuerta de descarga directo a montones o camiones
+                        </li>
                         <li>Motor eléctrico de 10–125 HP</li>
                         <li>Transmisión con reductor de velocidad</li>
                       </ul>
@@ -1763,8 +1861,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1777,27 +1876,36 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Operación automática o manual, según se requiera en
+                          campo.
+                        </li>
+                        <li>
+                          Monitoreo remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                       </ul>
                     </div>
@@ -1824,8 +1932,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1838,19 +1947,27 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Motores, componentes y cableado Siemens de grado industrial.
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
                         </li>
-                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>
+                          Sistema de cableado simplificado para facilitar el
+                          mantenimiento.
+                        </li>
+                        <li>
+                          Conexiones eléctricas protegidas contra la intemperie.
+                        </li>
                         <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                          Líneas de combustible externas, sensores y cableado de
+                          señales preinstalados.
                         </li>
                       </ul>
                     </div>
@@ -1877,8 +1994,9 @@ const CMPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1891,43 +2009,53 @@ const CMPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc ${openSections.C2_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc ${
+                          openSections.C2_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li className="ml-6">Diseñado para reubicación y movimiento frecuente.</li>
+                        <li className="ml-6">
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
 
                         {mountedVersion !== "legs" ? (
                           <li>
                             <ul className="list-disc ml-6">
                               <li>
-                                Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                                Con quinta rueda integrada, evitando el uso de
+                                cama baja si no se desea.
                               </li>
 
                               <li className="list-none">
                                 <ul className="list-disc ml-10">
                                   <li>
-                                    También puede transportarse en cama baja o plataforma.
+                                    También puede transportarse en cama baja o
+                                    plataforma.
                                   </li>
                                 </ul>
                               </li>
 
                               <li>
-                                Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                                Montado sobre chasis de transporte con un eje y
+                                llantas de uso carretera.
                               </li>
 
                               <li>
-                                Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos.
+                                Enganche tipo arrastre con acoplamiento de
+                                seguridad y sistema de frenos.
                               </li>
                               <li>
-                                La instalación no requiere grúa ni equipo de izaje.
+                                La instalación no requiere grúa ni equipo de
+                                izaje.
                               </li>
                               <li>
-                                Patas de soporte atornilladas, para un armado rápido en sitio.
+                                Patas de soporte atornilladas, para un armado
+                                rápido en sitio.
                               </li>
                               <li>
-                                Sistema de luces y señalamientos para transporte conforme a normas de carretera.
+                                Sistema de luces y señalamientos para transporte
+                                conforme a normas de carretera.
                               </li>
                             </ul>
                           </li>
@@ -1935,11 +2063,12 @@ const CMPlanos = () => {
                           <li>
                             <ul className="list-disc ml-6">
                               <li>
-                                Montado sobre un chasis estándar apoyado en patas
+                                Montado sobre un chasis estándar apoyado en
+                                patas
                               </li>
                               <li>
-                                Patas de soporte atornilladas, para un armado rápido en sitio.
-
+                                Patas de soporte atornilladas, para un armado
+                                rápido en sitio.
                               </li>
                               <li>Montaje rápido sin necesidad de cimientos</li>
                             </ul>
@@ -1973,8 +2102,9 @@ const CMPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1987,12 +2117,15 @@ const CMPlanos = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Bomba de asfalto/emulsión con variador de frecuencia</li>
+                      <li>
+                        Bomba de asfalto/emulsión con variador de frecuencia
+                      </li>
                       <li>Caudalímetro para dosificación precisa</li>
                       <li>Tanque opcional de agua/aditivos con bomba</li>
                       <li>Sistema integrado de tubería y filtración</li>
@@ -2021,8 +2154,9 @@ const CMPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2035,10 +2169,11 @@ const CMPlanos = () => {
                       </button>
                     </div>
                     <ul
-                      className={`list-disc text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`list-disc text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>SEMARNAT</li>
                       <li>SCT</li>
@@ -2143,7 +2278,6 @@ const CMPlanos = () => {
                         {unit === "metric"
                           ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
                           : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
-
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -2254,8 +2388,9 @@ const CMPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2268,34 +2403,34 @@ const CMPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
-                          
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -2323,8 +2458,9 @@ const CMPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2337,17 +2473,18 @@ const CMPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud total (incluido el enganche):</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2359,28 +2496,27 @@ const CMPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
-  
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.totalHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.totalHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura de descarga:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.dischargeHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.dischargeHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -2408,8 +2544,9 @@ const CMPlanos = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2422,26 +2559,26 @@ const CMPlanos = () => {
                       </button>
                     </div>
                     <div
-                      className={`flex flex-col w-full justify-around items-start transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 `}
+                      className={`flex flex-col w-full justify-around items-start transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 `}
                     >
                       <div className="flex justify-between">
                         <h1>Sistema de alimentación y descarga:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.feeding ?? 0) * cmToFeet).toFixed(1)} ft`}
-
+                            ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.feeding ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho de la cinta de alimentación:</h1>
                         <p>
                           {unit === "metric"
-                          ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} mt`
-                          : `${((activeData?.dimensions.collector ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} mt`
+                            : `${((activeData?.dimensions.collector ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>

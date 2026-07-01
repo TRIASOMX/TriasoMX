@@ -23,7 +23,7 @@ import tolva1L1 from "../../assets/images/BinUnits/tolva1L1.webp";
 import tolva1F from "../../assets/images/BinUnits/tolva1F.webp";
 import tolva1Main from "../../assets/images/BinUnits/tolva1Main.webp";
 import tolva3L2 from "../../assets/images/BinUnits/tolva3L2.webp";
-import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScrollTrigger.tsx"
+import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScrollTrigger.tsx";
 gsap.registerPlugin(ScrollTrigger);
 
 const singleUnit = [
@@ -65,7 +65,6 @@ const toggleConfig = [
       awheel: 134.11,
       atotalWidth: 260,
       aheightWithBins: 381,
-
     },
   },
   {
@@ -88,13 +87,13 @@ const toggleConfig = [
       //Aesthetic Side Panels
       awidth: 268.22,
       aheight: 381.0,
-      alength: 957.90,
+      alength: 957.9,
 
       asingleLength: 365.75,
       asingleWidth: 268.22,
       asingleHeight: 201.17,
 
-      atotalLength: 957.90,
+      atotalLength: 957.9,
       awheel: 134.11,
       atotalWidth: 260,
       aheightWithBins: 381,
@@ -106,13 +105,13 @@ const toggleConfig = [
       //No Aesthetic Side Panels
       width: 268.22,
       height: 381,
-      length: 1333.30,
+      length: 1333.3,
 
       singleLength: 365.75,
       singleWidth: 268.22,
       singleHeight: 201.17,
 
-      totalLength: 1333.30,
+      totalLength: 1333.3,
       wheel: 134.11,
       totalWidth: 260,
       heightWithBins: 381,
@@ -120,13 +119,13 @@ const toggleConfig = [
       //Aesthetic Side Panels
       awidth: 268.22,
       aheight: 381.0,
-      alength: 1333.30,
+      alength: 1333.3,
 
       asingleLength: 365.75,
       asingleWidth: 268.22,
       asingleHeight: 201.17,
 
-      atotalLength: 1330.30,
+      atotalLength: 1330.3,
       awheel: 134.11,
       atotalWidth: 260,
       aheightWithBins: 381,
@@ -202,13 +201,13 @@ const toggleConfig = [
       //No Aesthetic Side Panels
       width: 268.22,
       height: 381.0,
-      length: 2423.80,
+      length: 2423.8,
 
       singleLength: 365.75,
       singleWidth: 268.22,
       singleHeight: 201.17,
 
-      totalLength: 2423.80,
+      totalLength: 2423.8,
       wheel: 134.11,
       totalWidth: 260,
       heightWithBins: 381,
@@ -233,7 +232,9 @@ const BinPlanosSection = () => {
   //tabs states
   const [activeTab, setActiveTab] = useState(3);
 
-  const [panelOption, setPanelOption] = useState<"withPanels" | "withoutPanels">("withPanels");
+  const [panelOption, setPanelOption] = useState<
+    "withPanels" | "withoutPanels"
+  >("withPanels");
 
   const cmToFeet = 0.0328084;
   //animation
@@ -251,15 +252,15 @@ const BinPlanosSection = () => {
   const [unit, setUnit] = useState<"metric" | "imperial">("metric");
 
   const activeData = toggleConfig.find(
-    (item) => item.id === activeTab.toString()
+    (item) => item.id === activeTab.toString(),
   );
 
   // Helper: elige la dimensión correcta según si tiene paneles o no
   type DimKey = keyof NonNullable<typeof activeData>["dimensions"];
   const dim = (withKey: DimKey, withoutKey: DimKey): number =>
     panelOption === "withPanels"
-      ? activeData?.dimensions[withKey] ?? 0
-      : activeData?.dimensions[withoutKey] ?? 0;
+      ? (activeData?.dimensions[withKey] ?? 0)
+      : (activeData?.dimensions[withoutKey] ?? 0);
 
   // Función para alternar unidades
   const toggleUnit = () => {
@@ -377,7 +378,11 @@ const BinPlanosSection = () => {
         id="sectionNueva"
         className="bg-[url('/fondopatron.webp')] bg-repeat bg-top w-full flex flex-col items-center justify-start relative bg-black overflow-hidden z-10 min-h-screen"
       >
-        <header id="planosBinUnits" className="mt-10 text-white" ref={otroElemento}>
+        <header
+          id="planosBinUnits"
+          className="mt-10 text-white"
+          ref={otroElemento}
+        >
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
           </h1>
@@ -391,8 +396,9 @@ const BinPlanosSection = () => {
             >
               {/* Fondo deslizante */}
               <div
-                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${unit === "metric" ? "translate-x-full" : ""
-                  }`}
+                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${
+                  unit === "metric" ? "translate-x-full" : ""
+                }`}
               ></div>
 
               {/* Texto sobrepuesto */}
@@ -415,17 +421,18 @@ const BinPlanosSection = () => {
           {/* Contenedor de los botones */}
           <div id="options" ref={optionsRef} className="w-full">
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto mb-6">
-              <label className="text-white block text-center">
-                EXTERIOR:
-              </label>
+              <label className="text-white block text-center">EXTERIOR:</label>
 
               <div className="relative">
                 <select
                   value={panelOption}
                   onChange={(e) =>
-                    setPanelOption(e.target.value as "withPanels" | "withoutPanels")
+                    setPanelOption(
+                      e.target.value as "withPanels" | "withoutPanels",
+                    )
                   }
-                  className="w-full px-5 py-3 pr-12 rounded-full bg-white text-gray-900 text-sm font-medium appearance-none focus:outline-none focus:ring-2 focus:ring-white/50">
+                  className="w-full px-5 py-3 pr-12 rounded-full bg-white text-gray-900 text-sm font-medium appearance-none focus:outline-none focus:ring-2 focus:ring-white/50"
+                >
                   {exteriorOptions.map((option) => (
                     <option key={option.id} value={option.id}>
                       {option.label}
@@ -450,32 +457,30 @@ const BinPlanosSection = () => {
             </div>
 
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
-              <label className="text-white block text-center">
-                EXTERIOR:
-              </label>
+              <label className="text-white block text-center">EXTERIOR:</label>
             </div>
             <div className="hidden lg:flex justify-center gap-5 mb-6">
               {exteriorOptions.map((option) => (
                 <button
                   key={option.id}
-                  onClick={() => setPanelOption(option.id as "withPanels" | "withoutPanels")}
+                  onClick={() =>
+                    setPanelOption(option.id as "withPanels" | "withoutPanels")
+                  }
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300
-                      ${panelOption === option.id
-                      ? "text-black bg-white border-white"
-                      : "text-white bg-transparent border-white"
-                    }`}
+                      ${
+                        panelOption === option.id
+                          ? "text-black bg-white border-white"
+                          : "text-white bg-transparent border-white"
+                      }`}
                 >
                   {option.label}
                 </button>
               ))}
             </div>
 
-
             {/* móvil */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
-              <label className="text-white block text-center">
-                MODELOS:
-              </label>
+              <label className="text-white block text-center">MODELOS:</label>
               <div className="relative">
                 <select
                   value={activeTab}
@@ -508,9 +513,7 @@ const BinPlanosSection = () => {
 
             {/* desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
-              <label className="text-white block text-center">
-                MODELS:
-              </label>
+              <label className="text-white block text-center">MODELS:</label>
             </div>
             <div className="hidden md:flex flex-wrap justify-center gap-5  mx-auto px-2">
               {modelOptions.map((option) => (
@@ -518,9 +521,10 @@ const BinPlanosSection = () => {
                   key={option.id}
                   onClick={() => setActiveTab(option.id)}
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300 w-[150px]
-                    ${activeTab === option.id
-                      ? "text-gray-900 bg-white border-white"
-                      : "text-white bg-transparent border-white"
+                    ${
+                      activeTab === option.id
+                        ? "text-gray-900 bg-white border-white"
+                        : "text-white bg-transparent border-white"
                     }`}
                 >
                   {option.label}
@@ -564,8 +568,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -578,22 +583,34 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Banda dosificadora de 18" con velocidad variable</li>
-                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibradores en la tolva de finos para asegurar una alimentación constante
-                        </li>
-                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
-                        <li>
-                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
+                          Banda dosificadora de 18" con velocidad variable
                         </li>
                         <li>
-                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
+                          Polea de cabeza recubierta de hule para agarre
+                          confiable
+                        </li>
+                        <li>
+                          Vibradores en la tolva de finos para asegurar una
+                          alimentación constante
+                        </li>
+                        <li>
+                          Sensor de flujo para material fino con alarma de nivel
+                          bajo
+                        </li>
+                        <li>
+                          Transportador de alimentación de 24" con banda ancha
+                          para un traslado más estable a baja velocidad
+                        </li>
+                        <li>
+                          Poleas de cabeza recubiertas de hule y rodillos
+                          estándar CEMA
                         </li>
                       </ul>
                     </div>
@@ -619,8 +636,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -633,28 +651,43 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         {panelOption === "withPanels" ? (
                           <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Limpiadores de banda para prolongar la vida útil de la banda.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
-                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
+                        <li>
+                          Limpiadores de banda para prolongar la vida útil de la
+                          banda.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
+                        <li>
+                          Solapas laterales integradas para mantener el material
+                          dentro de la banda.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -688,8 +721,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -702,35 +736,46 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Operación automática o manual, según se requiera en
+                          campo.
+                        </li>
+                        <li>
+                          Monitoreo remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                        Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                         <li>
-                        Adaptable a la infraestructura de control existente de la planta de asfalto
+                          Adaptable a la infraestructura de control existente de
+                          la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                            Integración sin complicaciones con los sistemas de control central
+                              Integración sin complicaciones con los sistemas de
+                              control central
                             </li>
                           </ul>
                         </li>
@@ -758,8 +803,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -772,30 +818,43 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              También puede transportarse en cama baja o plataforma.
+                              También puede transportarse en cama baja o
+                              plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos, con sistema de luces y
+                          señalamientos a normas de carretera.
                         </li>
-                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                        <li>
+                          La instalación no requiere grúa ni equipo de izaje.
+                        </li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -804,7 +863,7 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                       Componentes y sistema eléctrico
+                        Componentes y sistema eléctrico
                       </h1>
                       <button
                         className="block md:hidden"
@@ -823,8 +882,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -837,19 +897,27 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Motores, componentes y cableado Siemens de grado industrial.
+                        Motores, componentes y cableado Siemens de grado
+                        industrial.
                       </li>
-                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>
+                        Sistema de cableado simplificado para facilitar el
+                        mantenimiento.
+                      </li>
+                      <li>
+                        Conexiones eléctricas protegidas contra la intemperie.
+                      </li>
                       <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                        Líneas de combustible externas, sensores y cableado de
+                        señales preinstalados.
                       </li>
                     </ul>
                   </div>
@@ -875,8 +943,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -889,10 +958,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Capacidad máxima de alimentación:</h1>
@@ -922,8 +992,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -936,10 +1007,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>SEMARNAT</li>
                       <li>SCT </li>
@@ -972,16 +1044,12 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("awidth", "width")?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (dim("awidth", "width")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${dim("awidth", "width")?.toFixed(1) ?? ""} cm`
+                          : `${(dim("awidth", "width") * cmToFeet).toFixed(
+                              1,
+                            )} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1038,15 +1106,12 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p
-                        className="text-white text-lg"
-                      >
+                      <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${dim("aheight", "height")?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (dim("aheight", "height")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${dim("aheight", "height")?.toFixed(1) ?? ""} cm`
+                          : `${(dim("aheight", "height") * cmToFeet).toFixed(
+                              1,
+                            )} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1096,15 +1161,12 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("alength", "length")?.toFixed(1) ?? ""
-                          } cm`
-                          : `${(
-                            (dim("alength", "length")) * cmToFeet
-                          ).toFixed(1)} ft`}
+                          ? `${dim("alength", "length")?.toFixed(1) ?? ""} cm`
+                          : `${(dim("alength", "length") * cmToFeet).toFixed(
+                              1,
+                            )} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1169,8 +1231,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1183,19 +1246,20 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
-                        <p >
+                        <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength")?.toFixed(1) ?? ""} cm`
-                            : `${((dim("asingleLength", "singleLength")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("asingleLength", "singleLength") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1203,19 +1267,19 @@ const BinPlanosSection = () => {
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth")?.toFixed(1) ?? ""} cm`
-                            : `${((dim("asingleWidth", "singleWidth")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("asingleWidth", "singleWidth") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
-                        <p >
+                        <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight")?.toFixed(1) ?? ""} cm`
-                            : `${((dim("asingleHeight", "singleHeight")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("asingleHeight", "singleHeight") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1246,8 +1310,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1260,19 +1325,20 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength")?.toFixed(1) ?? ""} cm`
-                            : `${((dim("atotalLength", "totalLength")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("atotalLength", "totalLength") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1280,13 +1346,13 @@ const BinPlanosSection = () => {
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel")?.toFixed(1) ?? ""} cm`
-                            : `${((dim("awheel", "wheel")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(dim("awheel", "wheel") * cmToFeet).toFixed(
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1294,19 +1360,20 @@ const BinPlanosSection = () => {
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth")?.toFixed(1) ?? ""} cm`
-                            : `${((dim("atotalWidth", "totalWidth")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("atotalWidth", "totalWidth") * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con tolvas en operación:</h1>
+                        <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins")?.toFixed(1) ?? ""} cm`
-                            : `${((dim("aheightWithBins", "heightWithBins")) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                            : `${(
+                                dim("aheightWithBins", "heightWithBins") *
+                                cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1333,8 +1400,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1347,10 +1415,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 `}
+                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 `}
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>
@@ -1406,8 +1475,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1420,22 +1490,34 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Banda dosificadora de 18" con velocidad variable</li>
-                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibradores en la tolva de finos para asegurar una alimentación constante
-                        </li>
-                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
-                        <li>
-                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
+                          Banda dosificadora de 18" con velocidad variable
                         </li>
                         <li>
-                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
+                          Polea de cabeza recubierta de hule para agarre
+                          confiable
+                        </li>
+                        <li>
+                          Vibradores en la tolva de finos para asegurar una
+                          alimentación constante
+                        </li>
+                        <li>
+                          Sensor de flujo para material fino con alarma de nivel
+                          bajo
+                        </li>
+                        <li>
+                          Transportador de alimentación de 24" con banda ancha
+                          para un traslado más estable a baja velocidad
+                        </li>
+                        <li>
+                          Poleas de cabeza recubiertas de hule y rodillos
+                          estándar CEMA
                         </li>
                       </ul>
                     </div>
@@ -1461,8 +1543,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1475,28 +1558,43 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                         Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         {panelOption === "withPanels" ? (
                           <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Limpiadores de banda para prolongar la vida útil de la banda.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
-                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
+                        <li>
+                          Limpiadores de banda para prolongar la vida útil de la
+                          banda.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
+                        <li>
+                          Solapas laterales integradas para mantener el material
+                          dentro de la banda.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -1530,8 +1628,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1544,35 +1643,46 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Operación automática o manual, según se requiera en
+                          campo.
+                        </li>
+                        <li>
+                          Monitoreo remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable a la infraestructura de control existente de la planta de asfalto
+                          Adaptable a la infraestructura de control existente de
+                          la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Integración sin complicaciones con los sistemas de control central
+                              Integración sin complicaciones con los sistemas de
+                              control central
                             </li>
                           </ul>
                         </li>
@@ -1600,8 +1710,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1614,30 +1725,43 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              También puede transportarse en cama baja o plataforma.
+                              También puede transportarse en cama baja o
+                              plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos, con sistema de luces y
+                          señalamientos a normas de carretera.
                         </li>
-                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                        <li>
+                          La instalación no requiere grúa ni equipo de izaje.
+                        </li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -1646,7 +1770,7 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                       Componentes y sistema eléctrico
+                        Componentes y sistema eléctrico
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1665,8 +1789,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1679,19 +1804,27 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Motores, componentes y cableado Siemens de grado industrial.
+                        Motores, componentes y cableado Siemens de grado
+                        industrial.
                       </li>
-                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>
+                        Sistema de cableado simplificado para facilitar el
+                        mantenimiento.
+                      </li>
+                      <li>
+                        Conexiones eléctricas protegidas contra la intemperie.
+                      </li>
                       <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                       Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                        Líneas de combustible externas, sensores y cableado de
+                        señales preinstalados.
                       </li>
                     </ul>
                   </div>
@@ -1717,8 +1850,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1731,10 +1865,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Capacidad máxima de alimentación:</h1>
@@ -1764,8 +1899,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1778,10 +1914,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>SEMARNAT</li>
                       <li>SCT</li>
@@ -1814,9 +1951,7 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -1884,9 +2019,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p
-                        className="text-white text-lg"
-                      >
+                      <p className="text-white text-lg">
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -1939,9 +2072,7 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -2009,8 +2140,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2023,10 +2155,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
@@ -2080,8 +2213,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2094,13 +2228,14 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
@@ -2112,7 +2247,7 @@ const BinPlanosSection = () => {
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} cm`
@@ -2128,7 +2263,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con tolvas en operación:</h1>
+                        <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
@@ -2159,8 +2294,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2173,10 +2309,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 `}
+                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 `}
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>
@@ -2237,8 +2374,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2251,22 +2389,34 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Banda dosificadora de 18" con velocidad variable</li>
-                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibradores en la tolva de finos para asegurar una alimentación constante
-                        </li>
-                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
-                        <li>
-                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
+                          Banda dosificadora de 18" con velocidad variable
                         </li>
                         <li>
-                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
+                          Polea de cabeza recubierta de hule para agarre
+                          confiable
+                        </li>
+                        <li>
+                          Vibradores en la tolva de finos para asegurar una
+                          alimentación constante
+                        </li>
+                        <li>
+                          Sensor de flujo para material fino con alarma de nivel
+                          bajo
+                        </li>
+                        <li>
+                          Transportador de alimentación de 24" con banda ancha
+                          para un traslado más estable a baja velocidad
+                        </li>
+                        <li>
+                          Poleas de cabeza recubiertas de hule y rodillos
+                          estándar CEMA
                         </li>
                       </ul>
                     </div>
@@ -2293,8 +2443,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2307,28 +2458,43 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         {panelOption === "withPanels" ? (
                           <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                             Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Limpiadores de banda para prolongar la vida útil de la banda.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
-                        <li>Solapas laterales integradas para mantener el material dentro de la banda.</li>
+                        <li>
+                          Limpiadores de banda para prolongar la vida útil de la
+                          banda.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
+                        <li>
+                          Solapas laterales integradas para mantener el material
+                          dentro de la banda.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -2361,8 +2527,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2375,35 +2542,46 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Operación automática o manual, según se requiera en
+                          campo.
+                        </li>
+                        <li>
+                          Monitoreo remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable a la infraestructura de control existente de la planta de asfalto
+                          Adaptable a la infraestructura de control existente de
+                          la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Integración sin complicaciones con los sistemas de control central
+                              Integración sin complicaciones con los sistemas de
+                              control central
                             </li>
                           </ul>
                         </li>
@@ -2432,8 +2610,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2446,30 +2625,43 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                             También puede transportarse en cama baja o plataforma.
+                              También puede transportarse en cama baja o
+                              plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos, con sistema de luces y
+                          señalamientos a normas de carretera.
                         </li>
-                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                        <li>
+                          La instalación no requiere grúa ni equipo de izaje.
+                        </li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -2478,7 +2670,7 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                       Componentes y sistema eléctrico
+                        Componentes y sistema eléctrico
                       </h1>
                       <button
                         aria-label="See more abou the components and electrical composition"
@@ -2498,8 +2690,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2512,19 +2705,27 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Motores, componentes y cableado Siemens de grado industrial.
+                        Motores, componentes y cableado Siemens de grado
+                        industrial.
                       </li>
-                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>
+                        Sistema de cableado simplificado para facilitar el
+                        mantenimiento.
+                      </li>
+                      <li>
+                        Conexiones eléctricas protegidas contra la intemperie.
+                      </li>
                       <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                       Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                        Líneas de combustible externas, sensores y cableado de
+                        señales preinstalados.
                       </li>
                     </ul>
                   </div>
@@ -2551,8 +2752,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2565,10 +2767,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Capacidad máxima de alimentación:</h1>
@@ -2599,8 +2802,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2613,15 +2817,15 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>SEMARNAT</li>
                       <li>SCT </li>
                       <li>NOM-001-SEDE</li>
-                 
                     </ul>
                   </div>
                 </div>
@@ -2650,9 +2854,7 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -2712,9 +2914,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p
-                        className="text-white text-lg"
-                      >
+                      <p className="text-white text-lg">
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -2767,9 +2967,7 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -2838,8 +3036,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2852,10 +3051,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
@@ -2910,8 +3110,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2924,13 +3125,14 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
@@ -2942,7 +3144,7 @@ const BinPlanosSection = () => {
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} cm`
@@ -2958,7 +3160,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con tolvas en operación:</h1>
+                        <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
@@ -2990,8 +3192,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3004,10 +3207,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 `}
+                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 `}
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>
@@ -3063,8 +3267,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -3077,22 +3282,34 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Banda dosificadora de 18" con velocidad variable</li>
-                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibradores en la tolva de finos para asegurar una alimentación constante
-                        </li>
-                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
-                        <li>
-                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
+                          Banda dosificadora de 18" con velocidad variable
                         </li>
                         <li>
-                         Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
+                          Polea de cabeza recubierta de hule para agarre
+                          confiable
+                        </li>
+                        <li>
+                          Vibradores en la tolva de finos para asegurar una
+                          alimentación constante
+                        </li>
+                        <li>
+                          Sensor de flujo para material fino con alarma de nivel
+                          bajo
+                        </li>
+                        <li>
+                          Transportador de alimentación de 24" con banda ancha
+                          para un traslado más estable a baja velocidad
+                        </li>
+                        <li>
+                          Poleas de cabeza recubiertas de hule y rodillos
+                          estándar CEMA
                         </li>
                       </ul>
                     </div>
@@ -3118,8 +3335,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -3132,28 +3350,42 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         {panelOption === "withPanels" ? (
                           <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Limpiadores de banda para prolongar su vida útil.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
-                        <li>Tablas de contención integradas para mantener el material dentro de la banda.</li>
+                        <li>
+                          Limpiadores de banda para prolongar su vida útil.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
+                        <li>
+                          Tablas de contención integradas para mantener el
+                          material dentro de la banda.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -3187,8 +3419,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -3201,35 +3434,46 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Operación automática o manual, según se requiera en
+                          campo.
+                        </li>
+                        <li>
+                          Monitoreo remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable a la infraestructura de control existente de la planta de asfalto
+                          Adaptable a la infraestructura de control existente de
+                          la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Integración sin complicaciones con los sistemas de control central
+                              Integración sin complicaciones con los sistemas de
+                              control central
                             </li>
                           </ul>
                         </li>
@@ -3257,8 +3501,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -3271,30 +3516,43 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              También puede transportarse en cama baja o plataforma.
+                              También puede transportarse en cama baja o
+                              plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                         Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos, con sistema de luces y
+                          señalamientos a normas de carretera.
                         </li>
-                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                        <li>
+                          La instalación no requiere grúa ni equipo de izaje.
+                        </li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -3322,8 +3580,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3336,19 +3595,27 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Motores, componentes y cableado Siemens de grado industrial.
+                        Motores, componentes y cableado Siemens de grado
+                        industrial.
                       </li>
-                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>
+                        Sistema de cableado simplificado para facilitar el
+                        mantenimiento.
+                      </li>
+                      <li>
+                        Conexiones eléctricas protegidas contra la intemperie.
+                      </li>
                       <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                        Líneas de combustible externas, sensores y cableado de
+                        señales preinstalados.
                       </li>
                     </ul>
                   </div>
@@ -3374,8 +3641,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3388,10 +3656,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Capacidad máxima de alimentación:</h1>
@@ -3421,8 +3690,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3435,10 +3705,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>SEMARNAT</li>
                       <li>SCT</li>
@@ -3471,9 +3742,7 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -3541,9 +3810,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p
-                        className="text-white text-lg"
-                      >
+                      <p className="text-white text-lg">
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -3596,9 +3863,7 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -3666,8 +3931,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3680,10 +3946,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
@@ -3737,8 +4004,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3751,13 +4019,14 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
@@ -3769,7 +4038,7 @@ const BinPlanosSection = () => {
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} cm`
@@ -3785,7 +4054,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con tolvas en operación:</h1>
+                        <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
@@ -3816,8 +4085,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3830,10 +4100,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 `}
+                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 `}
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>
@@ -3889,8 +4160,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -3903,22 +4175,34 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Banda dosificadora de 18" con velocidad variable</li>
-                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibradores en la tolva de finos para asegurar una alimentación constante
-                        </li>
-                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
-                        <li>
-                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
+                          Banda dosificadora de 18" con velocidad variable
                         </li>
                         <li>
-                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
+                          Polea de cabeza recubierta de hule para agarre
+                          confiable
+                        </li>
+                        <li>
+                          Vibradores en la tolva de finos para asegurar una
+                          alimentación constante
+                        </li>
+                        <li>
+                          Sensor de flujo para material fino con alarma de nivel
+                          bajo
+                        </li>
+                        <li>
+                          Transportador de alimentación de 24" con banda ancha
+                          para un traslado más estable a baja velocidad
+                        </li>
+                        <li>
+                          Poleas de cabeza recubiertas de hule y rodillos
+                          estándar CEMA
                         </li>
                       </ul>
                     </div>
@@ -3944,8 +4228,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -3958,28 +4243,42 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         {panelOption === "withPanels" ? (
                           <li>Flancos estéticos para una imagen profesional</li>
                         ) : null}
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Limpiadores de banda para prolongar su vida útil.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
-                        <li>Tablas de contención integradas para mantener el material dentro de la banda.</li>
+                        <li>
+                          Limpiadores de banda para prolongar su vida útil.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
+                        <li>
+                          Tablas de contención integradas para mantener el
+                          material dentro de la banda.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -4013,8 +4312,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -4027,35 +4327,46 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Operación automática o manual, según se requiera en
+                          campo.
+                        </li>
+                        <li>
+                          Monitoreo remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable a la infraestructura de control existente de la planta de asfalto
+                          Adaptable a la infraestructura de control existente de
+                          la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Integración sin complicaciones con los sistemas de control central
+                              Integración sin complicaciones con los sistemas de
+                              control central
                             </li>
                           </ul>
                         </li>
@@ -4083,8 +4394,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -4097,30 +4409,43 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              También puede transportarse en cama baja o plataforma.
+                              También puede transportarse en cama baja o
+                              plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos, con sistema de luces y
+                          señalamientos a normas de carretera.
                         </li>
-                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                        <li>
+                          La instalación no requiere grúa ni equipo de izaje.
+                        </li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -4148,8 +4473,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -4162,19 +4488,27 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Motores, componentes y cableado Siemens de grado industrial.
+                        Motores, componentes y cableado Siemens de grado
+                        industrial.
                       </li>
-                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>
+                        Sistema de cableado simplificado para facilitar el
+                        mantenimiento.
+                      </li>
+                      <li>
+                        Conexiones eléctricas protegidas contra la intemperie.
+                      </li>
                       <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                        Líneas de combustible externas, sensores y cableado de
+                        señales preinstalados.
                       </li>
                     </ul>
                   </div>
@@ -4200,8 +4534,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -4214,10 +4549,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Capacidad máxima de alimentación:</h1>
@@ -4228,7 +4564,7 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                       Cumplimiento con estándares de la industria
+                        Cumplimiento con estándares de la industria
                       </h1>
                       <button
                         className="block md:hidden"
@@ -4247,8 +4583,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -4261,10 +4598,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>SEMARNAT</li>
                       <li>SCT </li>
@@ -4297,9 +4635,7 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -4359,9 +4695,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p
-                        className="text-white text-lg"
-                      >
+                      <p className="text-white text-lg">
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -4414,9 +4748,7 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -4484,8 +4816,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -4498,10 +4831,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
@@ -4555,8 +4889,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -4569,13 +4904,14 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
@@ -4587,7 +4923,7 @@ const BinPlanosSection = () => {
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} cm`
@@ -4603,7 +4939,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con tolvas en operación:</h1>
+                        <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
@@ -4634,8 +4970,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -4648,10 +4985,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 `}
+                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 `}
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>
@@ -4688,7 +5026,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                         Sistema de alimentación y dosificacióN
+                          Sistema de alimentación y dosificacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -4707,8 +5045,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -4721,22 +5060,34 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Banda dosificadora de 18" con velocidad variable</li>
-                        <li>Polea de cabeza recubierta de hule para agarre confiable</li>
                         <li>
-                          Vibradores en la tolva de finos para asegurar una alimentación constante
-                        </li>
-                        <li>Sensor de flujo para material fino con alarma de nivel bajo</li>
-                        <li>
-                          Transportador de alimentación de 24" con banda ancha para un traslado más estable a baja velocidad
+                          Banda dosificadora de 18" con velocidad variable
                         </li>
                         <li>
-                          Poleas de cabeza recubiertas de hule y rodillos estándar CEMA
+                          Polea de cabeza recubierta de hule para agarre
+                          confiable
+                        </li>
+                        <li>
+                          Vibradores en la tolva de finos para asegurar una
+                          alimentación constante
+                        </li>
+                        <li>
+                          Sensor de flujo para material fino con alarma de nivel
+                          bajo
+                        </li>
+                        <li>
+                          Transportador de alimentación de 24" con banda ancha
+                          para un traslado más estable a baja velocidad
+                        </li>
+                        <li>
+                          Poleas de cabeza recubiertas de hule y rodillos
+                          estándar CEMA
                         </li>
                       </ul>
                     </div>
@@ -4762,8 +5113,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -4776,28 +5128,44 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Flancos estéticos para una imagen profesional.</li>
+                          <li>
+                            Flancos estéticos para una imagen profesional.
+                          </li>
                         ) : null}
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Limpiadores de banda para prolongar su vida útil.</li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
-                        <li>Tablas de contención integradas para mantener el material dentro de la banda.</li>
+                        <li>
+                          Limpiadores de banda para prolongar su vida útil.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
+                        <li>
+                          Tablas de contención integradas para mantener el
+                          material dentro de la banda.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -4812,7 +5180,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                         Control y operacióN
+                          Control y operacióN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -4831,8 +5199,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -4845,35 +5214,46 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Operación automática o manual, según se requiera en
+                          campo.
+                        </li>
+                        <li>
+                          Monitoreo remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                         <li>
-                         Adaptable a la infraestructura de control existente de la planta de asfalto
+                          Adaptable a la infraestructura de control existente de
+                          la planta de asfalto
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              Integración sin complicaciones con los sistemas de control central
+                              Integración sin complicaciones con los sistemas de
+                              control central
                             </li>
                           </ul>
                         </li>
@@ -4901,8 +5281,9 @@ const BinPlanosSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -4915,30 +5296,43 @@ const BinPlanosSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Diseñado para reubicación y movimiento frecuente.</li>
                         <li>
-                          Con quinta rueda integrada, evitando el uso de cama baja si no se desea.
+                          Diseñado para reubicación y movimiento frecuente.
+                        </li>
+                        <li>
+                          Con quinta rueda integrada, evitando el uso de cama
+                          baja si no se desea.
                         </li>
                         <li className="list-none">
                           <ul className="list-disc ml-10">
                             <li>
-                              También puede transportarse en cama baja o plataforma.
+                              También puede transportarse en cama baja o
+                              plataforma.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                          Montado sobre chasis de transporte con un eje y
+                          llantas de uso carretera.
                         </li>
                         <li>
-                          Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
+                          Enganche tipo arrastre con acoplamiento de seguridad y
+                          sistema de frenos, con sistema de luces y
+                          señalamientos a normas de carretera.
                         </li>
-                        <li>La instalación no requiere grúa ni equipo de izaje.</li>
-                        <li>Patas de soporte atornilladas, para un armado rápido en sitio.</li>
+                        <li>
+                          La instalación no requiere grúa ni equipo de izaje.
+                        </li>
+                        <li>
+                          Patas de soporte atornilladas, para un armado rápido
+                          en sitio.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -4966,8 +5360,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -4980,19 +5375,27 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>
-                        Motores, componentes y cableado Siemens de grado industrial.
+                        Motores, componentes y cableado Siemens de grado
+                        industrial.
                       </li>
-                      <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                      <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                      <li>
+                        Sistema de cableado simplificado para facilitar el
+                        mantenimiento.
+                      </li>
+                      <li>
+                        Conexiones eléctricas protegidas contra la intemperie.
+                      </li>
                       <li>Sistema de transmisión con poleas y bujes.</li>
                       <li>
-                        Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                        Líneas de combustible externas, sensores y cableado de
+                        señales preinstalados.
                       </li>
                     </ul>
                   </div>
@@ -5018,8 +5421,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -5032,10 +5436,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Capacidad máxima de alimentación:</h1>
@@ -5065,8 +5470,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -5079,10 +5485,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>SEMARNAT</li>
                       <li>SCT</li>
@@ -5115,9 +5522,7 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
                           ? `${dim("awidth", "width").toFixed(1)} cm`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
@@ -5177,9 +5582,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p
-                        className="text-white text-lg"
-                      >
+                      <p className="text-white text-lg">
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} cm`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -5232,9 +5635,7 @@ const BinPlanosSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p
-                        className="text-white lg:text-lg text-base w-full text-center mx-4"
-                      >
+                      <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
                           ? `${dim("alength", "length").toFixed(1)} cm`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
@@ -5302,8 +5703,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -5316,10 +5718,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
@@ -5373,8 +5776,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -5387,13 +5791,14 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo el enganche):</h1>
+                        <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
@@ -5405,7 +5810,7 @@ const BinPlanosSection = () => {
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} cm`
@@ -5421,7 +5826,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con tolvas en operación:</h1>
+                        <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
@@ -5452,8 +5857,9 @@ const BinPlanosSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -5466,10 +5872,11 @@ const BinPlanosSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 `}
+                      className={`grid grid-cols-1 md:grid-cols-2 w-full justify-center items-center transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 `}
                     >
                       <ul className="ml-6 list-disc">
                         <li>Grizzlies</li>

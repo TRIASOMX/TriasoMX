@@ -1229,7 +1229,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura del enganche de quinta rueda:</h1>
+                        <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
@@ -2170,7 +2170,7 @@ const HotMixPlanos = () => {
                       </div>
                       <div className="flex justify-between">
                         <h1>
-                          Altura del enganche de quinta rueda (si se entrega
+                          Altura de la quinta rueda (si se entrega
                           preinstalado)::
                         </h1>
                         <p>
