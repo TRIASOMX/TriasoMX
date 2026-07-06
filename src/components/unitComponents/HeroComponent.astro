@@ -65,9 +65,7 @@ const rgbColor = hexToRgb(accentColor);
     style="padding: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 5rem);"
   >
     <div class="max-w-7xl mx-auto px-8 flex flex-col items-center justify-center">
-      <h1 class="m-0 font-bold uppercase text-white text-xl md:text-3xl lg:text-4xl text-center">
-        {title}
-      </h1>
+      
 
       {altImage && (
         <img
@@ -75,6 +73,9 @@ const rgbColor = hexToRgb(accentColor);
           alt={descAltImage}
           class="block w-[75%] mt-4"
         />
+        <h1 class="m-0 font-bold uppercase text-white text-xl md:text-3xl lg:text-4xl text-center">
+        {title}
+      </h1>
       )}
     </div>
   </div>

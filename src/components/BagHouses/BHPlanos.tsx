@@ -12,105 +12,105 @@ const toggleConfig = [
   {
     id: "12",
     dimensions: {
-      width: 277,
-      height: 420,
-      length: 914,
-      tanklenght: 704,
-      tangheight: 274.1,
+      width: 2.77,
+      height: 4.2,
+      length: 9.14,
+      tanklenght: 7.04,
+      tangheight: 2.741,
       capacity: 45000,
       wheel: 149.5,
-      acfm: 14000,
-      fArea: 18,
+      acfm: "14,000",
+      fArea: "1,100",
       bags: 168,
     },
   },
   {
     id: "16",
     dimensions: {
-      width: 277,
-      height: 420,
-      length: 1000,
-      tanklenght: 921,
-      tangheight: 274.1,
+      width: 2.77,
+      height: 4.2,
+      length: 10.0,
+      tanklenght: 9.21,
+      tangheight: 2.741,
       capacity: 60000,
       wheel: 149.5,
-      acfm: 19250,
-      fArea: 24,
+      acfm: "19,250",
+      fArea: "2,463",
       bags: 224,
     },
   },
   {
     id: "20",
     dimensions: {
-      width: 277,
-      height: 420,
-      length: 1090,
-      tanklenght: 1149,
-      tangheight: 274.1,
+      width: 2.77,
+      height: 4.2,
+      length: 10.9,
+      tanklenght: 11.49,
+      tangheight: 2.741,
       capacity: 45000,
       wheel: 149.5,
-      acfm: 24500,
-      fArea: 33,
-      bags: 308,
+      acfm: "24,500",
+      fArea: "3,079",
+      bags: 280,
     },
   },
   {
     id: "24",
     dimensions: {
-      width: 277,
-      height: 420,
-      length: 1262,
-      tanklenght: 1423.56,
-      tangheight: 274.1,
+      width: 2.77,
+      height: 4.2,
+      length: 12.62,
+      tanklenght: 14.2356,
+      tangheight: 2.741,
       capacity: 100000,
       wheel: 149.5,
-      acfm: 35000,
-      fArea: 52,
+      acfm: "35,000",
+      fArea: "4,310",
       bags: 392,
     },
   },
   {
     id: "30",
     dimensions: {
-      width: 277,
-      height: 460,
-      length: 1310,
-      tanklenght: 1697.51,
-      tangheight: 274.1,
+      width: 2.77,
+      height: 4.6,
+      length: 13.1,
+      tanklenght: 16.9751,
+      tangheight: 2.741,
       capacity: 120000,
       wheel: 149.5,
-      acfm: 52500,
-      fArea: 63,
-      bags: 408,
+      acfm: "52,000",
+      fArea: "6,384",
+      bags: 336,
     },
   },
   {
     id: "31",
     dimensions: {
-      width: 277,
-      height: 460,
-      length: 1570,
-      tanklenght: 1697.51,
-      tangheight: 274.1,
+      width: 2.77,
+      height: 4.6,
+      length: 15.7,
+      tanklenght: 16.9751,
+      tangheight: 2.741,
       capacity: 120000,
       wheel: 149.5,
-      acfm: 70000,
-      fArea: 89,
+      acfm: "70,000",
+      fArea: "9,044",
       bags: 476,
     },
   },
   {
     id: "32",
     dimensions: {
-      width: 277,
-      height: 460,
-      length: 1800,
-      tanklenght: 1697.51,
-      tangheight: 274.1,
+      width: 2.77,
+      height: 4.6,
+      length: 18.0,
+      tanklenght: 16.9751,
+      tangheight: 2.741,
       capacity: 120000,
       wheel: 149.5,
-      acfm: 87500,
-      fArea: 110,
+      acfm: "87,000",
+      fArea: "11,172",
       bags: 588,
     },
   },
@@ -122,8 +122,8 @@ const BHPlanos = () => {
   //tabs states
   const [activeTab, setActiveTab] = useState(1);
   // valor de cm a pies
-  const cmToFeet = 0.01;
-  const m3ToFt = 35.315;
+  const cmToFeet = 3.28;
+
   //animation
   const boxRef = useRef<HTMLDivElement>(null);
   const nextSectionRef = useRef<HTMLDivElement>(null);
@@ -216,7 +216,7 @@ const BHPlanos = () => {
           className="text-white font-bold
            flex items-center justify-center
             rounded will-change-transform transform-gpu
-             z-20 w-[180px] h-[600px]"
+             z-20 w-[180px] h-[500px]"
         >
           <img
             src={bgPlanos.src}
@@ -253,7 +253,7 @@ const BHPlanos = () => {
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              Medidas:
+              SISTEMA DE MEDICIÓN:
             </h1>
             <div
               onClick={toggleUnit}
@@ -271,12 +271,12 @@ const BHPlanos = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  MT
+                  IMPERIAL
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  CM
+                  MÉTRICO
                 </span>
               </div>
             </div>
@@ -353,7 +353,7 @@ const BHPlanos = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center">
                   <div
-                    className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
@@ -405,41 +405,19 @@ const BHPlanos = () => {
                           <div>
                             <li>ACFM:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.acfm?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.acfm ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.acfm}</p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Área de filtración:</h1>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.fArea?.toFixed(1) ?? ""
-                                } m3`
-                              : `${(
-                                  (activeData?.dimensions.fArea ?? 0) * m3ToFt
-                                ).toFixed(1)} m3`}
-                          </p>
+                          <div>
+                            <li>Área de filtración:</li>
+                          </div>
+                          <p>{activeData?.dimensions.fArea} ft2</p>
                         </div>
                         <div className="flex justify-between">
                           <div>
                             <li>Bolsas:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.bags?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.bags ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.bags}</p>
                         </div>
                       </div>
                     </div>
@@ -513,13 +491,18 @@ const BHPlanos = () => {
                           la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sencilla con sistemas de control
                               centralizados.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Resistencia térmica de hasta 204 °C en operación
                           continua y 220 °C en picos de temperatura con bolsas
@@ -531,73 +514,11 @@ const BHPlanos = () => {
                         </li>
                       </ul>
                     </div>
-                    <div className="flex flex-col items-start justify-start gap-4 text-white">
-                      <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Componentes y sistema eléctrico
-                        </h1>
-                        <button
-                          aria-label="See more about the components and electrical composition"
-                          className="block md:hidden"
-                          onClick={() =>
-                            setOpenSections((prev) => ({
-                              ...prev,
-                              C3_1: !prev.C3_1,
-                            }))
-                          }
-                        >
-                          <svg
-                            width="28px"
-                            height="28px"
-                            stroke-width="1.5"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            color="#000000"
-                            className={`transition-transform duration-300 transform ${
-                              openSections.C3_1 ? "rotate-180" : ""
-                            }`}
-                          >
-                            <path
-                              d="M6 9L12 15L18 9"
-                              stroke="#ffffff"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
-                      <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
-                          openSections.C3_1
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
-                      >
-                        <li>
-                          Motores, componentes y cableado Siemens de grado
-                          industrial.
-                        </li>
-                        <li>
-                          Sistema de cableado simplificado para facilitar el
-                          mantenimiento.
-                        </li>
-                        <li>
-                          Conexiones eléctricas protegidas contra la intemperie.
-                        </li>
-                        <li>Sistema de transmisión con poleas y bujes.</li>
-                        <li>
-                          Líneas de combustible externas, sensores y cableado de
-                          señales preinstalados.
-                        </li>
-                      </ul>
-                    </div>
                   </div>
 
-                  <div className="col-span-2 flex items-start justify-center w-full order-1 md:order-2 h-[600px]"></div>
+                  <div className="col-span-2 flex items-start justify-center w-full order-1 md:order-2 h-[550px]"></div>
                   <div
-                    className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
@@ -647,29 +568,34 @@ const BHPlanos = () => {
                       >
                         <li>Operación manual o automática.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Variador de velocidad en el extractor para regular
                               la sobretemperatura
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Ciclos de limpieza por aire pulsante (pulse jet).
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Chimenea con puertos para pruebas ecológicas y
                           monitoreo ambiental.
                         </li>
-                        <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Extractor de gases con separación centrífuga que
-                              elimina hasta el 70% del polvo antes de la
-                              filtración.
-                            </li>
-                          </ul>
+                        <li>
+                          Extractor de gases con separación centrífuga que
+                          elimina hasta el 70% del polvo antes de la filtración.
                         </li>
+
                         <li>
                           Cámara de sedimentación y deflectores internos que
                           garantizan un flujo de aire uniforme y protegen las
@@ -740,13 +666,18 @@ const BHPlanos = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Montado sobre chasis de transporte con un eje y
                           llantas de uso carretera.
@@ -958,18 +889,27 @@ const BHPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Sistema de alarmas y seguridades para condiciones
                           fuera de rango.
@@ -991,7 +931,7 @@ const BHPlanos = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center">
                   <div
-                    className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
@@ -1043,41 +983,19 @@ const BHPlanos = () => {
                           <div>
                             <li>ACFM:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.acfm?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.acfm ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.acfm}</p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Área de filtración:</h1>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.fArea?.toFixed(1) ?? ""
-                                } m3`
-                              : `${(
-                                  (activeData?.dimensions.fArea ?? 0) * m3ToFt
-                                ).toFixed(1)} m3`}
-                          </p>
+                          <div>
+                            <li>Área de filtración:</li>
+                          </div>
+                          <p>{activeData?.dimensions.fArea} ft2</p>
                         </div>
                         <div className="flex justify-between">
                           <div>
                             <li>Bolsas:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.bags?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.bags ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.bags}</p>
                         </div>
                       </div>
                     </div>
@@ -1151,8 +1069,12 @@ const BHPlanos = () => {
                           la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sencilla con sistemas de control
                               centralizados.
                             </li>
@@ -1233,7 +1155,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
 
-                  <div className="col-span-2 flex items-center justify-center w-full order-1 md:order-2 h-[550px] pb-[100px]">
+                  <div className="col-span-2 flex items-start justify-start self-start w-full order-1 md:order-2 h-[550px] pb-[100px]">
                     <img
                       src={bgPlanos.src}
                       alt=""
@@ -1241,7 +1163,7 @@ const BHPlanos = () => {
                     />
                   </div>
                   <div
-                    className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
@@ -1291,29 +1213,34 @@ const BHPlanos = () => {
                       >
                         <li>Operación manual o automática.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Variador de velocidad en el extractor para regular
                               la sobretemperatura
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Ciclos de limpieza por aire pulsante (pulse jet).
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Chimenea con puertos para pruebas ecológicas y
                           monitoreo ambiental.
                         </li>
-                        <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Extractor de gases con separación centrífuga que
-                              elimina hasta el 70% del polvo antes de la
-                              filtración.
-                            </li>
-                          </ul>
+                        <li>
+                          Extractor de gases con separación centrífuga que
+                          elimina hasta el 70% del polvo antes de la filtración.
                         </li>
+
                         <li>
                           Cámara de sedimentación y deflectores internos que
                           garantizan un flujo de aire uniforme y protegen las
@@ -1384,8 +1311,12 @@ const BHPlanos = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -1602,13 +1533,21 @@ const BHPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -1635,7 +1574,7 @@ const BHPlanos = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center">
                   <div
-                    className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
@@ -1687,41 +1626,19 @@ const BHPlanos = () => {
                           <div>
                             <li>ACFM:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.acfm?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.acfm ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.acfm}</p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Área de filtración:</h1>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.fArea?.toFixed(1) ?? ""
-                                } m3`
-                              : `${(
-                                  (activeData?.dimensions.fArea ?? 0) * m3ToFt
-                                ).toFixed(1)} m3`}
-                          </p>
+                          <div>
+                            <li>Área de filtración:</li>
+                          </div>
+                          <p>{activeData?.dimensions.fArea} ft2</p>
                         </div>
                         <div className="flex justify-between">
                           <div>
                             <li>Bolsas:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.bags?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.bags ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.bags}</p>
                         </div>
                       </div>
                     </div>
@@ -1795,8 +1712,12 @@ const BHPlanos = () => {
                           la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sencilla con sistemas de control
                               centralizados.
                             </li>
@@ -1877,7 +1798,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
 
-                  <div className="col-span-2 flex items-center justify-center w-full order-1 md:order-2 h-[550px] pb-[100px]">
+                  <div className="col-span-2 flex items-center justify-center w-full self-start order-1 md:order-2 h-[550px] pb-[100px]">
                     <img
                       src={bgPlanos.src}
                       alt=""
@@ -1885,7 +1806,7 @@ const BHPlanos = () => {
                     />
                   </div>
                   <div
-                    className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
@@ -1935,29 +1856,34 @@ const BHPlanos = () => {
                       >
                         <li>Operación manual o automática.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Variador de velocidad en el extractor para regular
                               la sobretemperatura
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Ciclos de limpieza por aire pulsante (pulse jet).
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Chimenea con puertos para pruebas ecológicas y
                           monitoreo ambiental.
                         </li>
-                        <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Extractor de gases con separación centrífuga que
-                              elimina hasta el 70% del polvo antes de la
-                              filtración.
-                            </li>
-                          </ul>
+                        <li>
+                          Extractor de gases con separación centrífuga que
+                          elimina hasta el 70% del polvo antes de la filtración.
                         </li>
+
                         <li>
                           Cámara de sedimentación y deflectores internos que
                           garantizan un flujo de aire uniforme y protegen las
@@ -2028,8 +1954,12 @@ const BHPlanos = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -2246,13 +2176,21 @@ const BHPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -2279,7 +2217,7 @@ const BHPlanos = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center">
                   <div
-                    className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
@@ -2331,41 +2269,19 @@ const BHPlanos = () => {
                           <div>
                             <li>ACFM:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.acfm?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.acfm ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.acfm}</p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Área de filtración:</h1>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.fArea?.toFixed(1) ?? ""
-                                } m3`
-                              : `${(
-                                  (activeData?.dimensions.fArea ?? 0) * m3ToFt
-                                ).toFixed(1)} m3`}
-                          </p>
+                          <div>
+                            <li>Área de filtración:</li>
+                          </div>
+                          <p>{activeData?.dimensions.fArea} ft2</p>
                         </div>
                         <div className="flex justify-between">
                           <div>
                             <li>Bolsas:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.bags?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.bags ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.bags}</p>
                         </div>
                       </div>
                     </div>
@@ -2440,8 +2356,12 @@ const BHPlanos = () => {
                           la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sencilla con sistemas de control
                               centralizados.
                             </li>
@@ -2522,7 +2442,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
 
-                  <div className="col-span-2 flex items-center justify-center w-full order-1 md:order-2 h-[550px] pb-[100px]">
+                  <div className="col-span-2 flex items-center justify-center w-full self-start order-1 md:order-2 h-[550px] pb-[100px]">
                     <img
                       src={bgPlanos.src}
                       alt=""
@@ -2530,7 +2450,7 @@ const BHPlanos = () => {
                     />
                   </div>
                   <div
-                    className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
@@ -2580,29 +2500,34 @@ const BHPlanos = () => {
                       >
                         <li>Operación manual o automática.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Variador de velocidad en el extractor para regular
                               la sobretemperatura
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Ciclos de limpieza por aire pulsante (pulse jet).
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Chimenea con puertos para pruebas ecológicas y
                           monitoreo ambiental.
                         </li>
-                        <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Extractor de gases con separación centrífuga que
-                              elimina hasta el 70% del polvo antes de la
-                              filtración.
-                            </li>
-                          </ul>
+                        <li>
+                          Extractor de gases con separación centrífuga que
+                          elimina hasta el 70% del polvo antes de la filtración.
                         </li>
+
                         <li>
                           Cámara de sedimentación y deflectores internos que
                           garantizan un flujo de aire uniforme y protegen las
@@ -2673,8 +2598,12 @@ const BHPlanos = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -2891,13 +2820,21 @@ const BHPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -2924,7 +2861,7 @@ const BHPlanos = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center">
                   <div
-                    className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
@@ -2976,41 +2913,19 @@ const BHPlanos = () => {
                           <div>
                             <li>ACFM:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.acfm?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.acfm ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.acfm}</p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Área de filtración:</h1>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.fArea?.toFixed(1) ?? ""
-                                } m3`
-                              : `${(
-                                  (activeData?.dimensions.fArea ?? 0) * m3ToFt
-                                ).toFixed(1)} m3`}
-                          </p>
+                          <div>
+                            <li>Área de filtración:</li>
+                          </div>
+                          <p>{activeData?.dimensions.fArea} ft2</p>
                         </div>
                         <div className="flex justify-between">
                           <div>
                             <li>Bolsas:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.bags?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.bags ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.bags}</p>
                         </div>
                       </div>
                     </div>
@@ -3084,8 +2999,12 @@ const BHPlanos = () => {
                           la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sencilla con sistemas de control
                               centralizados.
                             </li>
@@ -3166,7 +3085,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
 
-                  <div className="col-span-2 flex items-center justify-center w-full order-1 md:order-2 h-[550px] pb-[100px]">
+                  <div className="col-span-2 flex items-center justify-center w-full self-start order-1 md:order-2 h-[550px] pb-[100px]">
                     <img
                       src={bgPlanos.src}
                       alt=""
@@ -3174,7 +3093,7 @@ const BHPlanos = () => {
                     />
                   </div>
                   <div
-                    className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
@@ -3224,29 +3143,34 @@ const BHPlanos = () => {
                       >
                         <li>Operación manual o automática.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Variador de velocidad en el extractor para regular
                               la sobretemperatura
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Ciclos de limpieza por aire pulsante (pulse jet).
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Chimenea con puertos para pruebas ecológicas y
                           monitoreo ambiental.
                         </li>
-                        <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Extractor de gases con separación centrífuga que
-                              elimina hasta el 70% del polvo antes de la
-                              filtración.
-                            </li>
-                          </ul>
+                        <li>
+                          Extractor de gases con separación centrífuga que
+                          elimina hasta el 70% del polvo antes de la filtración.
                         </li>
+
                         <li>
                           Cámara de sedimentación y deflectores internos que
                           garantizan un flujo de aire uniforme y protegen las
@@ -3317,8 +3241,12 @@ const BHPlanos = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -3535,13 +3463,21 @@ const BHPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -3568,7 +3504,7 @@ const BHPlanos = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center">
                   <div
-                    className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
@@ -3620,41 +3556,19 @@ const BHPlanos = () => {
                           <div>
                             <li>ACFM:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.acfm?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.acfm ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.acfm}</p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Área de filtración:</h1>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.fArea?.toFixed(1) ?? ""
-                                } m3`
-                              : `${(
-                                  (activeData?.dimensions.fArea ?? 0) * m3ToFt
-                                ).toFixed(1)} m3`}
-                          </p>
+                          <div>
+                            <li>Área de filtración:</li>
+                          </div>
+                          <p>{activeData?.dimensions.fArea} ft2</p>
                         </div>
                         <div className="flex justify-between">
                           <div>
                             <li>Bolsas:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.bags?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.bags ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.bags}</p>
                         </div>
                       </div>
                     </div>
@@ -3728,8 +3642,12 @@ const BHPlanos = () => {
                           la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sencilla con sistemas de control
                               centralizados.
                             </li>
@@ -3810,7 +3728,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
 
-                  <div className="col-span-2 flex items-center justify-center w-full order-1 md:order-2 h-[550px] pb-[100px]">
+                  <div className="col-span-2 flex items-center justify-center w-full self-start order-1 md:order-2 h-[550px] pb-[100px]">
                     <img
                       src={bgPlanos.src}
                       alt=""
@@ -3818,7 +3736,7 @@ const BHPlanos = () => {
                     />
                   </div>
                   <div
-                    className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
@@ -3868,29 +3786,34 @@ const BHPlanos = () => {
                       >
                         <li>Operación manual o automática.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Variador de velocidad en el extractor para regular
                               la sobretemperatura
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Ciclos de limpieza por aire pulsante (pulse jet).
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Chimenea con puertos para pruebas ecológicas y
                           monitoreo ambiental.
                         </li>
-                        <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Extractor de gases con separación centrífuga que
-                              elimina hasta el 70% del polvo antes de la
-                              filtración.
-                            </li>
-                          </ul>
+                        <li>
+                          Extractor de gases con separación centrífuga que
+                          elimina hasta el 70% del polvo antes de la filtración.
                         </li>
+
                         <li>
                           Cámara de sedimentación y deflectores internos que
                           garantizan un flujo de aire uniforme y protegen las
@@ -3961,8 +3884,12 @@ const BHPlanos = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -4179,13 +4106,21 @@ const BHPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -4212,7 +4147,7 @@ const BHPlanos = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center">
                   <div
-                    className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
@@ -4264,41 +4199,19 @@ const BHPlanos = () => {
                           <div>
                             <li>ACFM:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.acfm?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.acfm ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.acfm}</p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Área de filtración:</h1>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.fArea?.toFixed(1) ?? ""
-                                } m3`
-                              : `${(
-                                  (activeData?.dimensions.fArea ?? 0) * m3ToFt
-                                ).toFixed(1)} m3`}
-                          </p>
+                          <div>
+                            <li>Área de filtración:</li>
+                          </div>
+                          <p>{activeData?.dimensions.fArea} ft2</p>
                         </div>
                         <div className="flex justify-between">
                           <div>
                             <li>Bolsas:</li>
                           </div>
-                          <p>
-                            {unit === "metric"
-                              ? `${
-                                  activeData?.dimensions.bags?.toFixed(1) ?? ""
-                                } cm`
-                              : `${(
-                                  (activeData?.dimensions.bags ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
-                          </p>
+                          <p>{activeData?.dimensions.bags}</p>
                         </div>
                       </div>
                     </div>
@@ -4372,8 +4285,12 @@ const BHPlanos = () => {
                           la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sencilla con sistemas de control
                               centralizados.
                             </li>
@@ -4454,7 +4371,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
 
-                  <div className="col-span-2 flex items-center justify-center w-full order-1 md:order-2 h-[550px] pb-[100px]">
+                  <div className="col-span-2 flex items-center justify-center w-full self-start order-1 md:order-2 h-[550px] pb-[100px]">
                     <img
                       src={bgPlanos.src}
                       alt=""
@@ -4462,7 +4379,7 @@ const BHPlanos = () => {
                     />
                   </div>
                   <div
-                    className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
@@ -4512,29 +4429,34 @@ const BHPlanos = () => {
                       >
                         <li>Operación manual o automática.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Variador de velocidad en el extractor para regular
                               la sobretemperatura
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Ciclos de limpieza por aire pulsante (pulse jet).
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Chimenea con puertos para pruebas ecológicas y
                           monitoreo ambiental.
                         </li>
-                        <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Extractor de gases con separación centrífuga que
-                              elimina hasta el 70% del polvo antes de la
-                              filtración.
-                            </li>
-                          </ul>
+                        <li>
+                          Extractor de gases con separación centrífuga que
+                          elimina hasta el 70% del polvo antes de la filtración.
                         </li>
+
                         <li>
                           Cámara de sedimentación y deflectores internos que
                           garantizan un flujo de aire uniforme y protegen las
@@ -4605,8 +4527,12 @@ const BHPlanos = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -4823,13 +4749,21 @@ const BHPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -4878,10 +4812,10 @@ const BHPlanos = () => {
                 </div>
                 <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                   {unit === "metric"
-                    ? `${activeData?.dimensions.width?.toFixed(1) ?? ""} cm`
+                    ? `${activeData?.dimensions.width?.toFixed(1) ?? ""} m`
                     : `${(
                         (activeData?.dimensions.width ?? 0) * cmToFeet
-                      ).toFixed(1)} mt`}
+                      ).toFixed(1)} ft`}
                 </p>
                 <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                   <div className="bg-white h-[1px] w-full relative">
@@ -4941,10 +4875,10 @@ const BHPlanos = () => {
               <div className="my-3">
                 <p className="text-white text-lg">
                   {unit === "metric"
-                    ? `${activeData?.dimensions.height?.toFixed(1) ?? ""} cm`
+                    ? `${activeData?.dimensions.height?.toFixed(1) ?? ""} m`
                     : `${(
                         (activeData?.dimensions.height ?? 0) * cmToFeet
-                      ).toFixed(1)} mt`}
+                      ).toFixed(1)} ft`}
                 </p>
               </div>
               <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -4997,10 +4931,10 @@ const BHPlanos = () => {
                 </div>
                 <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                   {unit === "metric"
-                    ? `${activeData?.dimensions.length?.toFixed(1) ?? ""} cm`
+                    ? `${activeData?.dimensions.length?.toFixed(1) ?? ""} m`
                     : `${(
                         (activeData?.dimensions.length ?? 0) * cmToFeet
-                      ).toFixed(1)} mt`}
+                      ).toFixed(1)} ft`}
                 </p>
                 <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                   <div className="bg-white h-[1px] w-full relative">
