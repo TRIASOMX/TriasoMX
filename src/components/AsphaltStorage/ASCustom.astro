@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import img2 from "../../assets/images/AsphaltStorage/SliderStorage/P-3a.webp";
 import AsphaltComponent from "../unitComponents/AsphaltComponent";
-import ATG1 from "../../assets/images/AsphaltStorage/ATG1.webp"
-import ATG2 from "../../assets/images/AsphaltStorage/ATG2.webp"
+import ATG1 from "../../assets/images/AsphaltStorage/ATG1.webp";
+import ATG2 from "../../assets/images/AsphaltStorage/ATG2.webp";
 
 import stg1 from "../../assets/images/AsphaltStorage/TankImages/1.webp";
 import stg2 from "../../assets/images/AsphaltStorage/TankImages/2.webp";
@@ -17,402 +17,384 @@ import stg9 from "../../assets/images/AsphaltStorage/TankImages/9.webp";
 import stg10 from "../../assets/images/AsphaltStorage/TankImages/10.webp";
 
 const sections = [
-    {
-        title: "Completamente versatiles",
-        subtitle:
-            "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
-        items: [
-            {
-                label: "Tanque de almacenamiento de asfalto",
-                children: ["30,000 Lt"],
-            },
-        ],
-        image: stg1,
-    },
-    {
-        title: "Completamente versatiles",
-        subtitle:
-            "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
-        items: [
-            {
-                label: "Tanque de almacenamiento de asfalto",
-                children: ["30,000 Lt"],
-            },
-            {
-                label: "Con chasis",
-                children: ["Montado sobre llantas"],
-            },
-        ],
-        image: stg2,
-    },
-    {
-        title: "Completamente versatiles",
-        subtitle:
-            "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
-        items: [
-            {
-                label: "Tanque de almacenamiento de asfalto",
-                children: ["45,000 Lt"],
-            },
-            {
-                label: "Con chasis",
-                children: ["Montado sobre patas"],
-            },
-        ],
-        image: stg3,
-    },
-    {
-        title: "Completamente versatiles",
-        subtitle:
-            "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
-        items: [
-            {
-                label: "Tanque de almacenamiento de asfalto",
-                children: ["60,000 Lt"],
-            },
-            {
-                label: "Con chasis",
-                children: ["Montado sobre patas"],
-            },
-        ],
-        image: stg4,
-    },
-    {
-        title: "Completamente versatiles",
-        subtitle:
-            "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
-        items: [
-            {
-                label: "Tanque de almacenamiento de asfalto",
-                children: ["60,000 Lt"],
-            },
-            {
-                label: "Con chasis",
-                children: ["Montado sobre llantas"],
-            },
-        ],
-        image: stg5,
-    },
-    {
-        title: "Completamente versatiles",
-        subtitle:
-            "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
-        items: [
-            {
-                label: "Tanque de almacenamiento de asfalto",
-                children: ["60,000 Lt"],
-            },
-            {
-                label: "Con chasis",
-                children: ["Montado sobre llantas"],
-            },
-            {
-                label: "Bombas de asfalto y sistema eléctrico",
-            },
-        ],
-        image: stg6,
-    },
-    {
-        title: "Completamente versatiles",
-        subtitle:
-            "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
-        items: [
-            {
-                label: "Tanque de almacenamiento de asfalto",
-                children: ["60,000 Lt"],
-            },
-            {
-                label: "Con chasis",
-                children: ["Montado sobre llantas"],
-            },
-            {
-                label: "Bombas de asfalto y sistema eléctrico",
-            },
-            {
-                label: "Quemador",
-                children: ["Sistema de gas o diésel"],
-            },
-        ],
-        image: stg7,
-    },
-    {
-        title: "Completamente versatiles",
-        subtitle:
-            "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
-        items: [
-            {
-                label: "Tanque de almacenamiento de asfalto",
-                children: ["60,000 Lt"],
-            },
-            {
-                label: "Con chasis",
-                children: ["Montado sobre llantas"],
-            },
-            {
-                label: "Bombas de asfalto y sistema eléctrico",
-            },
-            {
-                label: "Quemador",
-                children: ["Sistema de gas o diésel"],
-            },
-            {
-                label: "Radar de nivel de asfalto",
-            },
-        ],
-        image: stg8,
-    },
-    {
-        title: "Completamente versatiles",
-        subtitle:
-            "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
-        items: [
-            {
-                label: "Tanque de almacenamiento de asfalto",
-                children: ["60,000 Lt"],
-            },
-            {
-                label: "Con chasis",
-                children: ["Montado sobre llantas"],
-            },
-            {
-                label: "Bombas de asfalto y sistema eléctrico",
-            },
-            {
-                label: "Quemador",
-                children: ["Sistema de gas o diésel"],
-            },
-            {
-                label: "Radar de nivel de asfalto",
-            },
-            {
-                label: "Pasillo superior",
-            },
-        ],
-        image: stg9,
-    },
-    {
-        title: "Completamente versatiles",
-        subtitle:
-            "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
-        items: [
-            {
-                label: "Tanque de almacenamiento de asfalto",
-                children: ["60,000 Lt"],
-            },
-            {
-                label: "Con chasis",
-                children: ["Montado sobre llantas"],
-            },
-            {
-                label: "Bombas de asfalto y sistema eléctrico",
-            },
-            {
-                label: "Quemador",
-                children: ["Sistema de gas o diésel"],
-            },
-            {
-                label: "Radar de nivel de asfalto",
-            },
-            {
-                label: "Pasillo superior",
-            },
-            {
-                label: "Agitadores para cualquier aplicación",
-            },
-        ],
-        image: stg9,
-    },
+  {
+    title: "Completamente versatiles",
+    subtitle:
+      "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
+    items: [
+      {
+        label: "Tanque de almacenamiento de asfalto",
+        children: ["30,000 Lt"],
+      },
+    ],
+    image: stg1,
+  },
+  {
+    title: "Completamente versatiles",
+    subtitle:
+      "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
+    items: [
+      {
+        label: "Tanque de almacenamiento de asfalto",
+        children: ["30,000 Lt"],
+      },
+      {
+        label: "Con chasis",
+        children: ["Montado sobre llantas"],
+      },
+    ],
+    image: stg2,
+  },
+  {
+    title: "Completamente versatiles",
+    subtitle:
+      "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
+    items: [
+      {
+        label: "Tanque de almacenamiento de asfalto",
+        children: ["45,000 Lt"],
+      },
+      {
+        label: "Con chasis",
+        children: ["Montado sobre patas"],
+      },
+    ],
+    image: stg3,
+  },
+  {
+    title: "Completamente versatiles",
+    subtitle:
+      "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
+    items: [
+      {
+        label: "Tanque de almacenamiento de asfalto",
+        children: ["60,000 Lt"],
+      },
+      {
+        label: "Con chasis",
+        children: ["Montado sobre patas"],
+      },
+    ],
+    image: stg4,
+  },
+  {
+    title: "Completamente versatiles",
+    subtitle:
+      "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
+    items: [
+      {
+        label: "Tanque de almacenamiento de asfalto",
+        children: ["60,000 Lt"],
+      },
+      {
+        label: "Con chasis",
+        children: ["Montado sobre llantas"],
+      },
+    ],
+    image: stg5,
+  },
+  {
+    title: "Completamente versatiles",
+    subtitle:
+      "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
+    items: [
+      {
+        label: "Tanque de almacenamiento de asfalto",
+        children: ["60,000 Lt"],
+      },
+      {
+        label: "Con chasis",
+        children: ["Montado sobre llantas"],
+      },
+      {
+        label: "Bombas de asfalto y sistema eléctrico",
+      },
+    ],
+    image: stg6,
+  },
+  {
+    title: "Completamente versatiles",
+    subtitle:
+      "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
+    items: [
+      {
+        label: "Tanque de almacenamiento de asfalto",
+        children: ["60,000 Lt"],
+      },
+      {
+        label: "Con chasis",
+        children: ["Montado sobre llantas"],
+      },
+      {
+        label: "Bombas de asfalto y sistema eléctrico",
+      },
+      {
+        label: "Quemador",
+        children: ["Sistema de gas o diésel"],
+      },
+    ],
+    image: stg7,
+  },
+  {
+    title: "Completamente versatiles",
+    subtitle:
+      "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
+    items: [
+      {
+        label: "Tanque de almacenamiento de asfalto",
+        children: ["60,000 Lt"],
+      },
+      {
+        label: "Con chasis",
+        children: ["Montado sobre llantas"],
+      },
+      {
+        label: "Bombas de asfalto y sistema eléctrico",
+      },
+      {
+        label: "Quemador",
+        children: ["Sistema de gas o diésel"],
+      },
+      {
+        label: "Radar de nivel de asfalto",
+      },
+    ],
+    image: stg8,
+  },
+  {
+    title: "Completamente versatiles",
+    subtitle:
+      "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
+    items: [
+      {
+        label: "Tanque de almacenamiento de asfalto",
+        children: ["60,000 Lt"],
+      },
+      {
+        label: "Con chasis",
+        children: ["Montado sobre llantas"],
+      },
+      {
+        label: "Bombas de asfalto y sistema eléctrico",
+      },
+      {
+        label: "Quemador",
+        children: ["Sistema de gas o diésel"],
+      },
+      {
+        label: "Radar de nivel de asfalto",
+      },
+      {
+        label: "Pasillo superior",
+      },
+    ],
+    image: stg9,
+  },
+  {
+    title: "Completamente versatiles",
+    subtitle:
+      "Desde los tanques de almacenamiento de asfalto menos equipados hasta los más equipados.",
+    items: [
+      {
+        label: "Tanque de almacenamiento de asfalto",
+        children: ["60,000 Lt"],
+      },
+      {
+        label: "Con chasis",
+        children: ["Montado sobre llantas"],
+      },
+      {
+        label: "Bombas de asfalto y sistema eléctrico",
+      },
+      {
+        label: "Quemador",
+        children: ["Sistema de gas o diésel"],
+      },
+      {
+        label: "Radar de nivel de asfalto",
+      },
+      {
+        label: "Pasillo superior",
+      },
+      {
+        label: "Agitadores para cualquier aplicación",
+      },
+    ],
+    image: stg9,
+  },
 ];
 ---
 
 <div
-    class="w-full flex flex-col items-center justify-center font-bold bg-blueMain py-10"
+  class="w-full flex flex-col items-center justify-center font-bold bg-blueMain py-10"
 >
-    <div class="max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-2">
-        <div class="flex flex-col justify-center text-white">
-            <h1 class="text-2xl md:text-6xl w-full text-start">
-                Tanques de almacenamiento de asfalto
-                <br /> totalmente personalizables
-            </h1><br />
-            <h1 class="text-xl md:text-3xl w-full text-start">
-                Características adaptables para cumplir con los requisitos
-                específicos del proyecto y los objetivos operativos.
-            </h1>
-        </div>
-        <div class="w-full flex flex-col justify-center items-center">
-            <div class="p-8 flex items-center justify-center">
-                <Image
-                    src={img2}
-                    alt="Customizable Bin Unit Diagram"
-                    class="w-full"
-                />
-            </div>
-        </div>
+  <div class="max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-2">
+    <div class="flex flex-col justify-center text-white">
+      <h1 class="text-2xl md:text-6xl w-full text-start max-w-[50ch]">
+        Tanques de asfalto totalmente equipados a us necesidades
+      </h1><br />
+      <h1 class="text-xl md:text-3xl w-full text-start">
+        Características adaptables para cumplir con los requisitos específicos
+        del proyecto y los objetivos operativos.
+      </h1>
     </div>
+    <div class="w-full flex flex-col justify-center items-center">
+      <div class="p-8 flex items-center justify-center">
+        <Image src={img2} alt="Customizable Bin Unit Diagram" class="w-full" />
+      </div>
+    </div>
+  </div>
 
-    <details class="group w-full">
-        <summary
-            class="list-none cursor-pointer flex justify-center items-center"
+  <details class="group w-full">
+    <summary class="list-none cursor-pointer flex justify-center items-center">
+      <div class="text-blueMain px-4 py-2 rounded-2xl">
+        <svg
+          width="84"
+          height="84"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="transition-transform duration-300 group-open:rotate-180"
         >
-            <div class="text-blueMain px-4 py-2 rounded-2xl">
-                <svg
-                    width="84"
-                    height="84"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="transition-transform duration-300 group-open:rotate-180"
-                >
-                    <path
-                        d="M6 9L12 15L18 9"
-                        stroke="#ffffff"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                </svg>
-            </div>
-        </summary>
+          <path
+            d="M6 9L12 15L18 9"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </summary>
 
-        <div class="flex flex-col justify-center items-center max-w-7xl mx-auto px-8">
-            <div>
-               <p class="text-[#fdfefe]">
-                Nuestros tanques de asfalto están diseñados para adaptarse a tus
-                necesidades específicas. Podemos personalizarlos completamente,
-                desde el color y la capacidad hasta el tipo de sistema de
-                calentamiento y el uso previsto. Ya sea que necesite una
-                solución estándar o un diseño a la medida, garantizamos que su
-                tanque sea fabricado exactamente según sus requisitos, con la
-                opción de tanques de asfalto verticales fijos o tanques de
-                asfalto móviles.
-            </p> 
-            </div>
-            <div class="flex flex-row gap-5 py-10">
-                <Image src={ATG2} alt="Planta 1" width={600} height={400}/>
-                <Image src={ATG1} alt="Planta 2" width={600} height={400}/>
-
-            </div>
-        </div>
-        <div
-            class="w-full overflow-hidden
+    <div
+      class="flex flex-col justify-center items-center max-w-7xl mx-auto px-8"
+    >
+      <div>
+        <p class="text-[#fdfefe] font-normal">
+          Nuestros tanques de asfalto están diseñados para adaptarse a tus
+          necesidades específicas. Podemos personalizarlos completamente, desde
+          el color y la capacidad hasta el tipo de sistema de calentamiento y el
+          uso previsto. Ya sea que necesite una solución estándar o un diseño a
+          la medida, garantizamos que su tanque sea fabricado exactamente según
+          sus requisitos, con la opción de tanques de asfalto verticales fijos o
+          tanques de asfalto móviles.
+        </p>
+      </div>
+      <div class="flex flex-row gap-5 py-10">
+        <Image src={ATG2} alt="Planta 1" width={600} height={400} />
+        <Image src={ATG1} alt="Planta 2" width={600} height={400} />
+      </div>
+    </div>
+    <div
+      class="w-full overflow-hidden
            transition duration-300 ease-in-out animate-content"
+    >
+      <div class="text-white max-w-7xl px-8 mx-auto list-inside py-8">
+        <h1 class="w-full text-start text-xl md:text-3xl mb-6">Opciones</h1>
+
+        <div
+          class="flex flex-col xl:flex-row items-start justify-between gap-2 w-full"
         >
-            <div class="text-white max-w-7xl px-8 mx-auto list-inside py-8">
-                <h1 class="w-full text-start text-xl md:text-3xl mb-6">
-                    Opciones
-                </h1>
+          <div class="flex flex-col gap-4 text-xl md:text-2xl">
+            <h1>Exterior</h1>
+            <ul class="text-base md:text-lg font-normal pl-8 list-disc">
+              <li>Barandales conforme a normas OSHA</li>
+              <li>Flancos estéticos</li>
+              <li>Sobre patas o sobre llantas</li>
+            </ul>
+          </div>
 
-                <div
-                    class="flex flex-col xl:flex-row items-start justify-between gap-2 w-full"
-                >
-                    <div class="flex flex-col gap-4 text-xl md:text-2xl">
-                        <h1>Exterior</h1>
-                        <ul
-                            class="text-base md:text-lg font-normal pl-8 list-disc"
-                        >
-                            <li>Barandales conforme a normas OSHA</li>
-                            <li>Flancos estéticos</li>
-                            <li>Sobre patas o sobre llantas</li>
-                        </ul>
-                    </div>
+          <div class="flex flex-col gap-3 text-xl md:text-2xl">
+            <h1>Sistema general</h1>
+            <ul class="text-base md:text-lg font-normal pl-8 list-disc">
+              <li>Condensadores de vapor</li>
+              <li>Válvulas manuales</li>
+            </ul>
+          </div>
 
-                    <div class="flex flex-col gap-3 text-xl md:text-2xl">
-                        <h1>Sistema general</h1>
-                        <ul
-                            class="text-base md:text-lg font-normal pl-8 list-disc"
-                        >
-                            <li>Condensadores de vapor</li>
-                            <li>Válvulas manuales</li>
-                        </ul>
-                    </div>
+          <div class="flex flex-col text-xl md:text-2xl">
+            <ul class="text-base md:text-lg font-normal pl-8 list-disc">
+              <li>Con bomba sumergible</li>
+              <li>Sistema de control computarizado</li>
+            </ul>
+          </div>
 
-                    <div class="flex flex-col text-xl md:text-2xl">
-                        <ul
-                            class="text-base md:text-lg font-normal pl-8 list-disc"
-                        >
-                            <li>Con bomba sumergible</li>
-                            <li>Sistema de control computarizado</li>
-                        </ul>
-                    </div>
-
-                    <div class="flex flex-col gap-4 text-xl md:text-2xl">
-                        <h1>Sistemas de calentamiento</h1>
-                        <ul
-                            class="text-base md:text-lg font-normal pl-8 list-disc"
-                        >
-                            <li>Fuego directo</li>
-                            <li class="list-none">
-                                <ul class="pl-8 list-disc">
-                                    <li>Calentamiento con gas LP (propano)</li>
-                                    <li>Calentamiento con diésel</li>
-                                </ul>
-                            </li>
-                            <li>Calderas</li>
-                            <li>Línea de transferencia de calor</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h1 class="text-lg lg:text-2xl my-6">
-                    Agitadores para cualquier aplicación
-                </h1>
-
-                <ul
-                    class="flex list-disc w-full gap-1 md:gap-10 pl-8 font-normal
-               flex-col md:flex-row"
-                >
-                    <li>Incorporadores de hule</li>
-                    <li>Incorporadores para todo tipo de polímeros</li>
-                    <li>Agitadores para cualquier aplicación</li>
+          <div class="flex flex-col gap-4 text-xl md:text-2xl">
+            <h1>Sistemas de calentamiento</h1>
+            <ul class="text-base md:text-lg font-normal pl-8 list-disc">
+              <li>Fuego directo</li>
+              <li class="list-none">
+                <ul class="pl-8 list-disc">
+                  <li>Calentamiento con gas LP (propano)</li>
+                  <li>Calentamiento con diésel</li>
                 </ul>
-
-                <AsphaltComponent client:only data={sections} />
-            </div>
+              </li>
+              <li>Calderas</li>
+              <li>Línea de transferencia de calor</li>
+            </ul>
+          </div>
         </div>
-    </details>
+
+        <h1 class="text-lg lg:text-2xl my-6">
+          Agitadores para cualquier aplicación
+        </h1>
+
+        <ul
+          class="flex list-disc w-full gap-1 md:gap-10 pl-8 font-normal
+               flex-col md:flex-row"
+        >
+          <li>Incorporadores de hule</li>
+          <li>Incorporadores para todo tipo de polímeros</li>
+          <li>Agitadores para cualquier aplicación</li>
+        </ul>
+
+        <AsphaltComponent client:only data={sections} />
+      </div>
+    </div>
+  </details>
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const dropdown = document.getElementById("extradiv");
-        const arrow = document.getElementById("dropdown-arrow");
-        const button = document.getElementById("dropdown-button");
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdown = document.getElementById("extradiv");
+    const arrow = document.getElementById("dropdown-arrow");
+    const button = document.getElementById("dropdown-button");
 
-        if (button) {
-            button.addEventListener("click", () => {
-                if (!dropdown || !arrow) return;
+    if (button) {
+      button.addEventListener("click", () => {
+        if (!dropdown || !arrow) return;
 
-                const isClosed =
-                    dropdown.style.maxHeight === "0px" ||
-                    !dropdown.style.maxHeight;
+        const isClosed =
+          dropdown.style.maxHeight === "0px" || !dropdown.style.maxHeight;
 
-                if (isClosed) {
-                    dropdown.style.maxHeight = dropdown.scrollHeight + "px";
-                    arrow.style.transform = "rotate(180deg)";
-                } else {
-                    dropdown.style.maxHeight = "0px";
-                    arrow.style.transform = "rotate(0deg)";
-                }
-            });
+        if (isClosed) {
+          dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+          arrow.style.transform = "rotate(180deg)";
+        } else {
+          dropdown.style.maxHeight = "0px";
+          arrow.style.transform = "rotate(0deg)";
         }
-    });
+      });
+    }
+  });
 </script>
 <style>
-    #dropdown-arrow {
-        transition: transform 0.3s ease;
-    }
+  #dropdown-arrow {
+    transition: transform 0.3s ease;
+  }
 
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-5px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
     }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-    details[open] .animate-content {
-        animation: slideDown 0.4s ease-in;
-    }
+  details[open] .animate-content {
+    animation: slideDown 0.4s ease-in;
+  }
 </style>

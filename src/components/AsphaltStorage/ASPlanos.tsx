@@ -25,7 +25,7 @@ const toggleConfig = [
       length: 1281.5,
       tanklenght: 704,
       tangheight: 274.1,
-      capacity: 45000,
+      capacity: "45,000",
       wheel: 149.5,
     },
   },
@@ -37,7 +37,7 @@ const toggleConfig = [
       length: 1498.75,
       tanklenght: 921,
       tangheight: 274.1,
-      capacity: 60000,
+      capacity: "60,000",
       wheel: 149.5,
     },
   },
@@ -49,7 +49,7 @@ const toggleConfig = [
       length: 1726.26,
       tanklenght: 1149,
       tangheight: 274.1,
-      capacity: 45000,
+      capacity: "45,000",
       wheel: 149.5,
     },
   },
@@ -61,7 +61,7 @@ const toggleConfig = [
       length: 2000.38,
       tanklenght: 1423.56,
       tangheight: 274.1,
-      capacity: 100000,
+      capacity: "90,000",
       wheel: 149.5,
     },
   },
@@ -73,7 +73,7 @@ const toggleConfig = [
       length: 2274.51,
       tanklenght: 1697.51,
       tangheight: 274.1,
-      capacity: 120000,
+      capacity: "120,000",
       wheel: 149.5,
     },
   },
@@ -309,7 +309,7 @@ const ASPlanos = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center">
                   <div
-                    className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
@@ -359,22 +359,28 @@ const ASPlanos = () => {
                       >
                         <li>
                           Opción de caldera (para calentamiento con aceite) en
-                          lugar de calentamiento por fuego directo
+                          lugar de calentamiento por fuego directo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>Capacidades de 1,000,000 y 2,400,000 Btu/hr</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Capacidades de 1,000,000 y 2,400,000 Btu/hr.
+                            </li>
                           </ul>
                         </li>
                         <li>
                           Sistema de serpentín de alta eficiencia de 2” dentro
-                          del tanque de asfalto
+                          del tanque de asfalto.
                         </li>
                         <li>
                           Conexiones para autotanques con sistemas de
-                          calentamiento por serpentín
+                          calentamiento por serpentín.
                         </li>
-                        <li>Revestimiento exterior de acero inoxidable</li>
+                        <li>Revestimiento exterior de acero inoxidable.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
@@ -427,13 +433,21 @@ const ASPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -500,12 +514,19 @@ const ASPlanos = () => {
                           Con quinta rueda integrada, evitando el uso de cama
                           baja si no se desea.
                         </li>
-                        <ul className="list-disc pl-10">
-                          <li>
-                            También puede transportarse en cama baja o
-                            plataforma.
-                          </li>
-                        </ul>
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              También puede transportarse en cama baja o
+                              plataforma.
+                            </li>
+                          </ul>
+                        </li>
+
                         <li>
                           Montado sobre chasis de transporte con un eje y
                           llantas de uso carretera.
@@ -530,7 +551,7 @@ const ASPlanos = () => {
                   </div>
                   <div className="col-span-2 flex items-start justify-center w-full order-1 md:order-2 h-[600px]"></div>
                   <div
-                    className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
@@ -700,13 +721,18 @@ const ASPlanos = () => {
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Aislamiento térmico con fibra de vidrio de tres
                           pulgadas, que reduce la pérdida de calor y la
@@ -776,6 +802,9 @@ const ASPlanos = () => {
                       </div>
                       <div className="flex justify-between text-end">
                         <h1>Sistema de calentamiento de alta eficiencia:</h1>
+                        <p>
+                          Mantiene el asfalto en condiciones óptimas de trabajo.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -811,7 +840,7 @@ const ASPlanos = () => {
                         data-metric="8.8 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -875,7 +904,7 @@ const ASPlanos = () => {
                         data-metric="12.75 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -932,7 +961,7 @@ const ASPlanos = () => {
                         data-metric="23.7 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -967,7 +996,7 @@ const ASPlanos = () => {
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start gap-10 w-full max-w-[1550px]">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
@@ -1016,7 +1045,7 @@ const ASPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1024,7 +1053,7 @@ const ASPlanos = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1032,7 +1061,7 @@ const ASPlanos = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1090,7 +1119,7 @@ const ASPlanos = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1102,7 +1131,7 @@ const ASPlanos = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1110,7 +1139,7 @@ const ASPlanos = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1118,7 +1147,7 @@ const ASPlanos = () => {
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1133,7 +1162,7 @@ const ASPlanos = () => {
                 ref={containerRef}
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center">
-                  <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
+                  <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
@@ -1179,22 +1208,28 @@ const ASPlanos = () => {
                       >
                         <li>
                           Opción de caldera (para calentamiento con aceite) en
-                          lugar de calentamiento por fuego directo
+                          lugar de calentamiento por fuego directo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>Capacidades de 1,000,000 y 2,400,000 Btu/hr</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Capacidades de 1,000,000 y 2,400,000 Btu/hr.
+                            </li>
                           </ul>
                         </li>
                         <li>
                           Sistema de serpentín de alta eficiencia de 2” dentro
-                          del tanque de asfalto
+                          del tanque de asfalto.
                         </li>
                         <li>
                           Conexiones para autotanques con sistemas de
-                          calentamiento por serpentín
+                          calentamiento por serpentín.
                         </li>
-                        <li>Revestimiento exterior de acero inoxidable</li>
+                        <li>Revestimiento exterior de acero inoxidable.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
@@ -1246,13 +1281,21 @@ const ASPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -1318,12 +1361,18 @@ const ASPlanos = () => {
                           Con quinta rueda integrada, evitando el uso de cama
                           baja si no se desea.
                         </li>
-                        <ul className="list-disc pl-10">
-                          <li>
-                            También puede transportarse en cama baja o
-                            plataforma.
-                          </li>
-                        </ul>
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              También puede transportarse en cama baja o
+                              plataforma.
+                            </li>
+                          </ul>
+                        </li>
 
                         <li>
                           Montado sobre chasis de transporte con un eje y
@@ -1350,7 +1399,7 @@ const ASPlanos = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     <img src={AS15.src} alt="" className="w-auto h-[650px]" />
                   </div>
-                  <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
+                  <div className="flex flex-col items-start justify-start gap-0 md:gap-10  h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
@@ -1514,8 +1563,12 @@ const ASPlanos = () => {
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -1589,7 +1642,9 @@ const ASPlanos = () => {
                       </div>
                       <div className="flex justify-between text-end">
                         <h1>Sistema de calentamiento de alta eficiencia:</h1>
-                        <p></p>
+                        <p>
+                          Mantiene el asfalto en condiciones óptimas de trabajo.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -1625,7 +1680,7 @@ const ASPlanos = () => {
                         data-metric="8.8 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -1689,7 +1744,7 @@ const ASPlanos = () => {
                         data-metric="12.75 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -1746,7 +1801,7 @@ const ASPlanos = () => {
                         data-metric="23.7 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -1781,7 +1836,7 @@ const ASPlanos = () => {
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full gap-10 w-full max-w-[1550px]">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
@@ -1829,7 +1884,7 @@ const ASPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1837,7 +1892,7 @@ const ASPlanos = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1845,7 +1900,7 @@ const ASPlanos = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1903,7 +1958,7 @@ const ASPlanos = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1915,7 +1970,7 @@ const ASPlanos = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1923,7 +1978,7 @@ const ASPlanos = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1931,7 +1986,7 @@ const ASPlanos = () => {
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1946,7 +2001,7 @@ const ASPlanos = () => {
                 ref={containerRef}
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center">
-                  <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
+                  <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
@@ -1992,22 +2047,28 @@ const ASPlanos = () => {
                       >
                         <li>
                           Opción de caldera (para calentamiento con aceite) en
-                          lugar de calentamiento por fuego directo
+                          lugar de calentamiento por fuego directo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>Capacidades de 1,000,000 y 2,400,000 Btu/hr</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Capacidades de 1,000,000 y 2,400,000 Btu/hr.
+                            </li>
                           </ul>
                         </li>
                         <li>
                           Sistema de serpentín de alta eficiencia de 2” dentro
-                          del tanque de asfalto
+                          del tanque de asfalto.
                         </li>
                         <li>
                           Conexiones para autotanques con sistemas de
-                          calentamiento por serpentín
+                          calentamiento por serpentín.
                         </li>
-                        <li>Revestimiento exterior de acero inoxidable</li>
+                        <li>Revestimiento exterior de acero inoxidable.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
@@ -2059,13 +2120,21 @@ const ASPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -2131,8 +2200,17 @@ const ASPlanos = () => {
                           Con quinta rueda integrada, evitando el uso de cama
                           baja si no se desea.
                         </li>
-                        <li>
-                          También puede transportarse en cama baja o plataforma.
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              También puede transportarse en cama baja o
+                              plataforma.
+                            </li>
+                          </ul>
                         </li>
                         <li>
                           Montado sobre chasis de transporte con un eje y
@@ -2159,7 +2237,7 @@ const ASPlanos = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     <img src={AS25.src} alt="" className="w-auto h-[650px]" />
                   </div>
-                  <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
+                  <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
@@ -2317,14 +2395,18 @@ const ASPlanos = () => {
                           Estructura extra reforzada para trabajo pesado a largo
                           plazo.
                         </li>
-                        <li>Flancos estéticos para una imagen profesional</li>
+                        <li>Flancos estéticos para una imagen profesional.</li>
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -2398,7 +2480,9 @@ const ASPlanos = () => {
                       </div>
                       <div className="flex justify-between text-end">
                         <h1>Sistema de calentamiento de alta eficiencia:</h1>
-                        <p></p>
+                        <p>
+                          Mantiene el asfalto en condiciones óptimas de trabajo.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -2434,7 +2518,7 @@ const ASPlanos = () => {
                         data-metric="8.8 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -2498,7 +2582,7 @@ const ASPlanos = () => {
                         data-metric="12.75 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -2555,7 +2639,7 @@ const ASPlanos = () => {
                         data-metric="23.7 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -2590,7 +2674,7 @@ const ASPlanos = () => {
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full gap-10 w-full max-w-[1550px]">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
@@ -2638,7 +2722,7 @@ const ASPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2646,7 +2730,7 @@ const ASPlanos = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2654,7 +2738,7 @@ const ASPlanos = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2712,7 +2796,7 @@ const ASPlanos = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2724,7 +2808,7 @@ const ASPlanos = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2732,7 +2816,7 @@ const ASPlanos = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2740,7 +2824,7 @@ const ASPlanos = () => {
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2755,7 +2839,7 @@ const ASPlanos = () => {
                 ref={containerRef}
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center">
-                  <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
+                  <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
@@ -2801,22 +2885,28 @@ const ASPlanos = () => {
                       >
                         <li>
                           Opción de caldera (para calentamiento con aceite) en
-                          lugar de calentamiento por fuego directo
+                          lugar de calentamiento por fuego directo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>Capacidades de 1,000,000 y 2,400,000 Btu/hr</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Capacidades de 1,000,000 y 2,400,000 Btu/hr.
+                            </li>
                           </ul>
                         </li>
                         <li>
                           Sistema de serpentín de alta eficiencia de 2” dentro
-                          del tanque de asfalto
+                          del tanque de asfalto.
                         </li>
                         <li>
                           Conexiones para autotanques con sistemas de
-                          calentamiento por serpentín
+                          calentamiento por serpentín.
                         </li>
-                        <li>Revestimiento exterior de acero inoxidable</li>
+                        <li>Revestimiento exterior de acero inoxidable.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
@@ -2868,13 +2958,21 @@ const ASPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -2940,12 +3038,18 @@ const ASPlanos = () => {
                           Con quinta rueda integrada, evitando el uso de cama
                           baja si no se desea.
                         </li>
-                        <ul className="list-disc pl-10">
-                          <li>
-                            También puede transportarse en cama baja o
-                            plataforma.
-                          </li>
-                        </ul>
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              También puede transportarse en cama baja o
+                              plataforma.
+                            </li>
+                          </ul>
+                        </li>
                         <li>
                           Montado sobre chasis de transporte con un eje y
                           llantas de uso carretera.
@@ -2971,7 +3075,7 @@ const ASPlanos = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     <img src={AS30.src} alt="" className="w-auto h-[650px]" />
                   </div>
-                  <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
+                  <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
@@ -3129,14 +3233,18 @@ const ASPlanos = () => {
                           Estructura extra reforzada para trabajo pesado a largo
                           plazo.
                         </li>
-                        <li>Flancos estéticos para una imagen profesional</li>
+                        <li>Flancos estéticos para una imagen profesional.</li>
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -3210,7 +3318,9 @@ const ASPlanos = () => {
                       </div>
                       <div className="flex justify-between text-end">
                         <h1>Sistema de calentamiento de alta eficiencia:</h1>
-                        <p></p>
+                        <p>
+                          Mantiene el asfalto en condiciones óptimas de trabajo.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -3246,7 +3356,7 @@ const ASPlanos = () => {
                         data-metric="8.8 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -3310,7 +3420,7 @@ const ASPlanos = () => {
                         data-metric="12.75 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -3367,7 +3477,7 @@ const ASPlanos = () => {
                         data-metric="23.7 ft"
                       >
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -3402,7 +3512,7 @@ const ASPlanos = () => {
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full gap-10 w-full max-w-[1550px]">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
@@ -3450,7 +3560,7 @@ const ASPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.tanklenght ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3458,7 +3568,7 @@ const ASPlanos = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3466,7 +3576,7 @@ const ASPlanos = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.tangheight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3524,7 +3634,7 @@ const ASPlanos = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3536,7 +3646,7 @@ const ASPlanos = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3544,7 +3654,7 @@ const ASPlanos = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3552,7 +3662,7 @@ const ASPlanos = () => {
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>

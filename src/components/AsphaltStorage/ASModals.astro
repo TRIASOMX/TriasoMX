@@ -1,73 +1,60 @@
 ---
-import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
-import Tred from "../../assets/images/AsphaltStorage/redT.webp";
 import img2 from "../../assets/images/AsphaltPlant/tanqueV.webp";
-import tanque360 from "../../assets/images/AsphaltStorage/Tqe60.webp";
-import AcordeonItemCol from "../unitComponents/AcordeonItemCol";
 import ASPump from "../../assets/images/AsphaltStorage/ASPump.webp";
 import ASHoses from "../../assets/images/AsphaltStorage/ASHoses.webp";
 import fiberGlass from "../../assets/images/AsphaltPlant/Aislamiento.webp";
 import ASAgitators from "../../assets/images/AsphaltPlant/agitators1.webp";
-import ASGallerySlider from "../../components/AsphaltStorage/ASGallerySlider.tsx";
 import heatExchange from "../../assets/images/AsphaltStorage/heatExchange.webp";
 import flancosImg from "../../assets/images/SidePanels/FEPlaC1_1.webp";
+import Slider from "../AsphaltStorage/Slider";
 import { Image } from "astro:assets";
-
-const images = [
+const slides = [
   {
-    src: ASPump.src,
+    id: 1,
     title: "Bomba de inyección",
-    description:
-      "El asfalto se bombea desde el tanque mediante una bomba situada en el interior del mismo, donde se almacena el asfalto, con el motor ubicado en la parte superior. Una vez calentado, el asfalto fluye fácilmente por la manguera, ya que a altas temperaturas se comporta como el agua. Para evitar obstrucciones en el interior de la tubería, la bomba funciona en ambas direcciones: hacia adelante y hacia atrás. Cuando el tanque termina de funcionar, la bomba extrae el asfalto de la manguera de salida y lo devuelve al tanque.",
+    text: "El asfalto se bombea desde el tanque mediante una bomba situada en el interior del mismo, donde se almacena el asfalto, con el motor ubicado en la parte superior. Una vez calentado, el asfalto fluye fácilmente por la manguera, ya que a altas temperaturas se comporta como el agua. Para evitar obstrucciones en el interior de la tubería, la bomba funciona en ambas direcciones: hacia adelante y hacia atrás. Cuando el tanque termina de funcionar, la bomba extrae el asfalto de la manguera de salida y lo devuelve al tanque.",
+    image: ASPump.src,
   },
   {
-    src: ASAgitators.src,
+    id: 2,
     title: "Agitadores para aditivos y polimeros",
-    description:
-      "Diseñado para garantizar una mezcla homogénea de aditivos y polímeros, así como una distribución uniforme del calor, evitando la formación de puntos calientes. El agitador mantiene una composición homogénea en todo el asfalto.",
-    list: [
-      {
-        text: "Agitadores de 5 hp para:",
-        sublist: [
-          "Acelerar el calentamiento y homogeneizar la temperatura del asfalto.",
-          "Incorporación de polímeros de tipo 2: látex natural, SBR, neopreno, etc.",
-          "Incorporación de aditivos tales como: rejuvenecedor para asfaltos reciclados, plastificante de asfalto, para aplicaciones de mezclas templadas, promotor de adhesión, etc.",
-          "Mantenimiento de la homogeneidad en los asfaltos modificados con polímeros.",
-        ],
-      },
-    ],
+    text: "Diseñado para garantizar una mezcla homogénea de aditivos y polímeros, así como una distribución uniforme del calor, evitando la formación de puntos calientes. El agitador mantiene una composición homogénea en todo el asfalto.",
+    image: ASAgitators.src,
   },
   {
-    src: ASHoses.src,
+    id: 3,
     title: "Mangueras de asfalto",
-    description:
-      "Cuando se enciende la bomba, que está sumergida en el tanque, el material se transfiere a una manguera de acero inoxidable conectada a la planta. Desde allí, el flujo entra por la entrada de asfalto, lo que garantiza un suministro continuo y uniforme.",
+    text: "Cuando se enciende la bomba, que está sumergida en el tanque, el material se transfiere a una manguera de acero inoxidable conectada a la planta. Desde allí, el flujo entra por la entrada de asfalto, lo que garantiza un suministro continuo y uniforme.",
+    image: ASHoses.src,
   },
   {
-    src: fiberGlass.src,
+    id: 4,
     title: "Aislante de tres pulgadas",
-    description:
-      "Nuestros tanques de almacenamiento de asfalto cuentan con un aislamiento de fibra de vidrio de tres pulgadas, diseñado para ofrecer un rendimiento superior a la hora de minimizar la pérdida de calor y mantener temperaturas constantes. Este aislamiento duradero y energéticamente eficiente garantiza que el asfalto se mantenga a la temperatura óptima, listo para su uso. Además, el exterior está reforzado con un revestimiento de chapa de acero inoxidable, lo que proporciona una mayor durabilidad y protección frente a condiciones externas adversas.",
+    text: "Nuestros tanques de almacenamiento de asfalto cuentan con un aislamiento de fibra de vidrio de tres pulgadas, diseñado para ofrecer un rendimiento superior a la hora de minimizar la pérdida de calor y mantener temperaturas constantes. Este aislamiento duradero y energéticamente eficiente garantiza que el asfalto se mantenga a la temperatura óptima, listo para su uso. Además, el exterior está reforzado con un revestimiento de chapa de acero inoxidable, lo que proporciona una mayor durabilidad y protección frente a condiciones externas adversas.",
+    image: fiberGlass.src,
   },
   {
-    src: heatExchange.src,
+    id: 5,
     title: "Línea de transferencia de calor",
-    description:
-      "Cuando la bomba de inyección es externa al tanque y ya se encuentra instalada en el tambor mezclador —por ejemplo, cuando el tambor se adquiere de otro proveedor— muchos sistemas requieren una línea de aceite térmico para mantener la bomba a temperatura de operación. Por esta razón, instalamos una línea de serpentines que aprovecha la energía térmica del tanque para calentar la bomba, eliminando la necesidad de circuitos de calentamiento adicionales.",
+    text: "Cuando la bomba de inyección es externa al tanque y ya se encuentra instalada en el tambor mezclador —por ejemplo, cuando el tambor se adquiere de otro proveedor— muchos sistemas requieren una línea de aceite térmico para mantener la bomba a temperatura de operación. Por esta razón, instalamos una línea de serpentines que aprovecha la energía térmica del tanque para calentar la bomba, eliminando la necesidad de circuitos de calentamiento adicionales.",
+    image: heatExchange.src,
   },
   {
-    src: flancosImg.src,
+    id: 6,
     title: "Flancos estéticos",
-    description:
-      "Estos paneles que destacan originalidad brindan un aspecto limpio, moderno y estético que refleja calidad y atención al detalle, dejando una fuerte impresión en clientes, inspectores y en el público. Ideales para proyectos en zonas urbanas o de alta visibilidad, refuerzan el compromiso de su marca con la excelencia y mejoran la presentación general de su planta de asfalto.",
+    text: "Estos paneles que destacan originalidad brindan un aspecto limpio, moderno y estético que refleja calidad y atención al detalle, dejando una fuerte impresión en clientes, inspectores y en el público. Ideales para proyectos en zonas urbanas o de alta visibilidad, refuerzan el compromiso de su marca con la excelencia y mejoran la presentación general de su planta de asfalto.",
+    image: flancosImg.src,
   },
 ];
 ---
 
 <div class="w-full flex flex-col">
-  <ASGallerySlider client:load images={images} />
+  <div class="w-full flex justify-cente items-center bg-[#14427c]">
+    <Slider slides={slides} client:only />
+  </div>
+
   <section
-    class="relative bg-cover bg-no-repeat bg-center"
+    class="relative bg-cover bg-no-repeat bg-center h-[70vh] md:h-[50vh] flex justify-center items-center w-full"
     style={{
       backgroundImage: "url(/Storagebg.webp)",
     }}
@@ -75,7 +62,7 @@ const images = [
     <div class="absolute inset-0 bg-black/70"></div>
 
     <div
-      class="relative z-10 max-w-7xl mx-auto px-8 flex flex-col items-start justify-start min-h-10/12 py-10"
+      class="relative z-10 max-w-7xl w-full px-8 flex flex-col items-start justify-start py-10"
     >
       <div class="space-y-5">
         <!-- Titulo -->
@@ -114,7 +101,7 @@ const images = [
     </div>
   </section>
 
-  <div class="w-full px-8 max-w-7xl mx-auto py-5">
+  <div class="w-full px-8 max-w-7xl mx-auto py-5 my-5 md:my-20">
     <h1 class="text-redBg text-2xl md:text-3xl font-bold text-center">
       Marque el estándar en el almacenamiento de asfalto
     </h1>
@@ -154,5 +141,4 @@ const images = [
       </div>
     </div>
   </div>
-
 </div>
