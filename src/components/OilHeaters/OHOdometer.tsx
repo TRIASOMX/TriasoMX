@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 import single from "../../assets/images/OilHeaters/OilHeaterVT.webp";
@@ -9,8 +9,8 @@ const OHOdometer = () => {
   const [value, setValue] = useState(0);
   const [value1, setValue1] = useState(0);
   const [value2, setValue2] = useState(0);
-  const [value3, setValue3] = useState(0);
-  const [value4, setValue4] = useState(0);
+  const [, setValue3] = useState(0);
+  const [, setValue4] = useState(0);
   const [value5, setValue5] = useState(0);
   const [value6, setValue6] = useState(0);
 

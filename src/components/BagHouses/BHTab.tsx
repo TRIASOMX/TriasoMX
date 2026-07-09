@@ -13,7 +13,7 @@ export default function Tab() {
   return (
     <div className="max-w-7xl px-8 mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center items-start gap-8 mt-10 mb-4">
       <div className="flex lg:flex-col items-stretch justify-around gap-4 md:gap-10">
-        {images.map((img, index) => (
+        {images.map((_img, index) => (
           <button
             aria-label="Select tab"
             key={index}

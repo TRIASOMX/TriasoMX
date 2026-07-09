@@ -7,7 +7,7 @@ import standarRight from "../../assets/images/IntegralAsphalt/standarright.webp"
 import standarLeft from "../../assets/images/IntegralAsphalt/standarleft.webp";
 import { forwardRef } from "react";
 
-const TabsPlane = forwardRef<HTMLDivElement, {}>((props, ref) => {
+const TabsPlane = forwardRef<HTMLDivElement, {}>((_props, ref) => {
   const [activeTab, setActiveTab] = useState(3); // 1, 2 o 3
 
   return (

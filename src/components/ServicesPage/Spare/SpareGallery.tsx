@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import img1 from "../../../assets/images/Service/Spare/Gallery/SpareParts01.webp";
 import img2 from "../../../assets/images/Service/Spare/Gallery/SpareParts-02.webp";
@@ -36,7 +35,7 @@ const SpareGallery = () => {
         <h1 className="font-bold text-xl lg:text-5xl md:text-5xl">GALERÍA</h1>
       </div>
       <div className="w-full px-4 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 py-10 max-w-7xl">
-        {ItemGallery.map((element, i) => (
+        {ItemGallery.map((element) => (
           <div
             className="w-full bg-white flex cursor-pointer shadow hover:scale-105 transition-transform"
             onClick={() => {

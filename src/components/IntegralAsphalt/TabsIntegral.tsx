@@ -14,7 +14,7 @@ export default function TabsIntegral() {
     <div className="w-full flex flex-col justify-center items-center  mt-10 mb-2 max-w-7xl mx-auto px-4">
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full text-center gap-2">
-        {images.map((img, index) => (
+        {images.map((_img, index) => (
           <button
             aria-label="Tab Selector"
             key={index}

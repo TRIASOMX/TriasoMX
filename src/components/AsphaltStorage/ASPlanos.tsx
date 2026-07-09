@@ -1,17 +1,15 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScrollTrigger.tsx";
 import ATMain from "../../assets/images/AsphaltStorage/ATMain.webp";
 import ATR1 from "../../assets/images/AsphaltStorage/ATR1.webp";
 import ATR2 from "../../assets/images/AsphaltStorage/ATR2.webp";
-import ATR3 from "../../assets/images/AsphaltStorage/ATR3.webp";
 import ATR4 from "../../assets/images/AsphaltStorage/ATR4.webp";
 import ATR5 from "../../assets/images/AsphaltStorage/ATR5.webp";
 import ATL1 from "../../assets/images/AsphaltStorage/ATL1.webp";
 import AS12 from "../../assets/images/AsphaltStorage/AS12.webp";
 import AS15 from "../../assets/images/AsphaltStorage/AS15.webp";
-import AS20 from "../../assets/images/AsphaltStorage/AS20.webp";
 import AS25 from "../../assets/images/AsphaltStorage/AS25.webp";
 import AS30 from "../../assets/images/AsphaltStorage/AS30.webp";
 

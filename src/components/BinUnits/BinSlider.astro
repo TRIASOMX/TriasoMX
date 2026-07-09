@@ -163,7 +163,6 @@ const duplicatedSlides = [...slides, ...slides];
 
     const TOTAL_SLIDES = 5;
     let currentIndex = 0;
-    let slidesVisible = getSlidesVisible();
     let isTransitioning = false;
     let autoplayTimer: ReturnType<typeof setInterval>;
 
@@ -271,7 +270,7 @@ const duplicatedSlides = [...slides, ...slides];
     }
 
     function onResize() {
-      slidesVisible = getSlidesVisible();
+      getSlidesVisible();
       updateTrack(false);
     }
 

@@ -1,9 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import img1 from "../../assets/images/Relief/MainPhoto.webp";
 import img2 from "../../assets/images/Relief/TriasoOS1.webp";
-import ScrollIndicator from "./ScrollIndicator";
 import DeviceShowcase from "./DeviceShowcase";
 import image1 from "../../assets/images/Relief/1.png";
 import image2 from "../../assets/images/Relief/2.png";

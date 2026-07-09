@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 
@@ -8,10 +8,10 @@ const PrecalentadoresOdometro = () => {
 
     const [value, setValue] = useState(0);
     const [value1, setValue1] = useState(0);
-    const [value2, setValue2] = useState(0);
-    const [value3, setValue3] = useState(0);
+    const [_value2, setValue2] = useState(0);
+    const [_value3, setValue3] = useState(0);
     const [value4, setValue4] = useState(0);
-    const [value5, setValue5] = useState(0);
+    const [_value5, setValue5] = useState(0);
 
     useEffect(() => {
         const observer = new IntersectionObserver(

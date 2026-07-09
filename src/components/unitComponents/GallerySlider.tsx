@@ -50,15 +50,6 @@ export default function GallerySlider({
     };
   }, []);
 
-  const getVisibleThumbRange = () => {
-    let start = Math.max(0, currentIndex - Math.floor(visibleThumbs / 2));
-    const end = Math.min(slides.length - 1, start + visibleThumbs - 1);
-    if (end === slides.length - 1) {
-      start = Math.max(0, end - visibleThumbs + 1);
-    }
-    return { start, end };
-  };
-
   const goToPrevious = () => {
     if (currentIndex > 0) {
       setDirection("left");
@@ -126,8 +117,6 @@ export default function GallerySlider({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [currentIndex, isFullscreen]);
-
-  const { start: thumbStart, end: thumbEnd } = getVisibleThumbRange();
 
   return (
     <div className="w-full">

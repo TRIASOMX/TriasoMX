@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PreIMG from "../../assets/images/FuelPreHeaters/planos/PreCVABp.webp"
@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FPHPlanos = () => {
   //tabs states
-  const [activeTab, setActiveTab] = useState(3);
+  const [activeTab, _setActiveTab] = useState(3);
   //animation
   const boxRef = useRef<HTMLDivElement>(null);
   const nextSectionRef = useRef<HTMLDivElement>(null);

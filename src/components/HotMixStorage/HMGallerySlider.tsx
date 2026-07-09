@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface ImageData {
     src: any;
@@ -28,17 +28,9 @@ export default function HMGallerySlider({ images }: Props) {
     }, []);
 
     const isMobile = windowWidth < 768;
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex] = useState(0);
     const itemsPerPage = isMobile ? 1 : 3;
     const totalPages = Math.ceil(images.length / itemsPerPage);
-
-    const nextSlide = () => {
-        setCurrentIndex((prev) => (prev + 1 >= totalPages ? 0 : prev + 1));
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev - 1 < 0 ? totalPages - 1 : prev - 1));
-    };
 
     const offset = -(currentIndex * (100 / totalPages));
 

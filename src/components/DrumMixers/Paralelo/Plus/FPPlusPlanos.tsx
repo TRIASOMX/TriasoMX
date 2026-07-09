@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import tolva3Main from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/PlaFpPlus_TI_VA.png";

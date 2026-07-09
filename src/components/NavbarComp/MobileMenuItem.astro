@@ -1,13 +1,6 @@
 ---
 // src/components/MobileMenuItem.astro
 
-
-type MenuItem = {
-  title: string;
-  url: string;
-  children?: MenuItem[];
-};
-
 import MobileMenuItem from './MobileMenuItem.astro';
 const { item, isFirstLevel = false, level = 0 } = Astro.props;
 const hasChildren = item.children && item.children.length > 0;

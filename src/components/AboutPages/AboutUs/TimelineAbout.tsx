@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { timelineData } from "./timelineData";
 import TimelineBar from "./timelineBar";
 import TimelineContent from "./timelineContent";

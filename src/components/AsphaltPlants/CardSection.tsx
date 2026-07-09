@@ -57,11 +57,6 @@ interface CardData {
     content: React.ReactNode;
 }
 
-interface Item {
-    text: string;
-    img: ImageMetadata;
-}
-
 const Tagline = ({ word, light = false }: { word: string; light?: boolean }) => (
     <div className={`flex flex-col sm:flex-row justify-between items-start sm:items-center w-full mt-10 gap-2 ${light ? "text-white" : "text-[#393939]"}`}>
         <p className="text-sm sm:text-base lg:text-xl font-bold">La planta de asfalto más</p>

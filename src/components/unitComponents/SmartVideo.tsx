@@ -42,7 +42,7 @@ const SmartVideo: React.FC<SmartVideoProps> = ({
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [_isPlaying, setIsPlaying] = useState<boolean>(false);
   const [hasPlayedOnce, setHasPlayedOnce] = useState<boolean>(false);
 
   useEffect(() => {

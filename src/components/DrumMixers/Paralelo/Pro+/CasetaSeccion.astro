@@ -380,8 +380,6 @@ import { Image } from "astro:assets";
   const getMaxIndex = () => Math.max(0, getTotalCards() - getVisibleCount());
 
   function updateCarrusel() {
-    const card = track.children[0] as HTMLElement;
-    const gap = 10;
     const offset = currentIndex * 345;
     track.style.transform = `translateX(-${offset}px)`;
     btnPrev.disabled = currentIndex === 0;

@@ -1,4 +1,3 @@
-import React from 'react'
 import img1 from '../../assets/images/Relief/TriasoOS2.webp'
 import { useState, useRef, useEffect } from 'react'
 export default function ReliefThirdSection() {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import ValorPlanta from "./ValorPlanta";
 import RentabilidadInversionista from "./RentabilidadInversionista";
@@ -10,7 +10,7 @@ import ResumenFinanciero from "./ResumenFinanciero";
 import { pdf } from '@react-pdf/renderer';
 import { InversionPDF } from "./InversionPDF";
 
-import { parseNumber, pmt } from "../lib/utils";
+import { pmt } from "../lib/utils";
 
 export default function AnalisisInversion() {
   const [isClient, setIsClient] = useState(false);

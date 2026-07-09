@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, type ReactNode } from "react";
+import { useState, useRef, type ReactNode } from "react";
 
 type AccordionProps = {
   title: string;
@@ -16,7 +16,7 @@ export default function AcordeonItemCol({
   bgColor = "bg-white",
   image = "",
   imageClassName = "",
-  imageWrapperClassName = "",
+  imageWrapperClassName: _imageWrapperClassName = "",
   subText = "",
 }: AccordionProps) {
   const [isOpen, setIsOpen] = useState(false);

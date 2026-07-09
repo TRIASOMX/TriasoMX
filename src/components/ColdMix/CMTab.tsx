@@ -12,7 +12,7 @@ export default function CMTab() {
   return (
     <section className="w-full max-w-7xl mx-auto px-4 sm:px-8 ">
       <div className="flex w-full border-b border-gray-200">
-        {images.map((img, index) => (
+        {images.map((_img, index) => (
           <button
             key={index}
             aria-label="Tab Selector"

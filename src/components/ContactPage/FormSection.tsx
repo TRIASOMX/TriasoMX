@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function FormSection() {
   return (
     <div className="max-w-7xl px-8 mx-auto" style={{ marginTop: "100px" }}>

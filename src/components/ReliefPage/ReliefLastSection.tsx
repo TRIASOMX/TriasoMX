@@ -1,5 +1,3 @@
-import React from 'react'
-
 import img1 from "../../assets/images/Relief/TriasoOS7.webp"
 import img2 from "../../assets/images/Relief/5.webp"
 

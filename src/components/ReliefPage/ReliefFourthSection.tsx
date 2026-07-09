@@ -1,7 +1,6 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import img1 from "../../assets/images/Relief/TriasoOS2.webp";
 import img2 from "../../assets/images/Relief/TriasoOS4.webp";
 import img3 from "../../assets/images/Relief/TriasoOS3.webp";
 

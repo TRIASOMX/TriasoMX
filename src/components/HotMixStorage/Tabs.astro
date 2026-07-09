@@ -1,48 +1,14 @@
 ---
-import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 import Logo from "../../assets/logos/LogoTriasoMX.svg";
-import HMI from "../../assets/images/HotMix/HMI.webp";
 import { Image } from "astro:assets";
-import silo from "../../assets/images/AsphaltPlant/silos1.webp";
-import silo1 from "../../assets/images/HotMix/siloCone.webp";
-import silo2 from "../../assets/images/HotMix/siloUse.webp";
-import silo3 from "../../assets/images/HotMix/siloSealed.webp";
 import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
 import Collapsable from "../HotMixStorage/Collapsable";
 import Tred from "../../assets/images/AsphaltStorage/redT.webp";
-import AcordeonItem from "../unitComponents/AcordeonItem";
 import semiSilo from "../../assets/images/AsphaltPlant/silos3.webp";
-import OSection from "../unitComponents/OSection.astro";
-import siloBG from "../../assets/images/HotMix/siloBG.webp";
-import Aislamiento from "../../assets/images/HotMix/Aislamiento.webp";
-import HMGallerySlider from "./HMGallerySlider";
-import poster1 from "../../assets/images/HotMix/silos1.webp";
-import SmartVideo from "../unitComponents/SmartVideo";
 import OSHand from "../../assets/images/OSHand.webp";
 import Slider from "../IntegralAsphalt/SliderOsIntegral";
 import SliderVentajas from "./SliderVentajas.astro";
 import logo2 from "../../assets/logos/triasoLogo.png";
-
-const images = [
-  {
-    src: silo3.src,
-    title: "Asphalt Pumps",
-    description:
-      " Our silo cones are designed with a steep 66° angle to ensure full cross-sectional flow. This design guarantees first-in/first-out discharge, eliminates material buildup on the walls, and prevents material buildup along the walls, and minimizes mix segregation. The result is aclean, consistent flow with every load.",
-  },
-  {
-    src: silo2.src,
-    title: "Agitators for additives and polymers",
-    description:
-      "The silos use a top-mounted batcher that collects a full load of mix before discharging it in a single motion through overlapping clam-style gates. The gates open simultaneously, directing the mix to fall centered, distributing  it evenly across the silo floor. This design minimizes material segregation, reduces wear, and prevents buildup within the cone area.",
-  },
-  {
-    src: silo1.src,
-    title: "Asphalt Hoses",
-    description:
-      "To prevent premature hardening, the silo remains fully sealed during storage. This airtight design blocks air exposure, preserving the mix quality and delaying oxidation.",
-  },
-];
 ---
 
 <section class="w-full flex mt-6 md:mt-20 flex-col gap-4 bg-gray-100">

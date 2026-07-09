@@ -5,7 +5,7 @@ interface Props {
     image?: string;
 }
 
-const { title, subtitle, image = "/placeholder.webp" } = Astro.props;
+const { title, image = "/placeholder.webp" } = Astro.props;
 
 const modalId = `modal-${Math.random().toString(36).slice(2, 9)}`;
 ---

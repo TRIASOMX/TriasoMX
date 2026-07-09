@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import FeatureCards from './CardsComponent';
 import gsap from "gsap"; // Importar GSAP
 import { ScrollTrigger } from "gsap/ScrollTrigger"; // Importar ScrollTrigger

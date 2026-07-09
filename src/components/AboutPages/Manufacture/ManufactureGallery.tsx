@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import img1 from "../../../assets/images/Manufacture/1.webp";
 import img2 from "../../../assets/images/Manufacture/2.webp";
@@ -88,7 +87,7 @@ const ManufactureGallery = () => {
     <div className="w-full flex flex-col justify-center items-center">
 
       <div className="w-full px-4 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 py-10 max-w-7xl items-center">
-        {ItemGallery.map((element, i) => (
+        {ItemGallery.map((element) => (
           <div
             className="w-full bg-white flex cursor-pointer shadow hover:scale-105 transition-transform"
             onClick={() => {

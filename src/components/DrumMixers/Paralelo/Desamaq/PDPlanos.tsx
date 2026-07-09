@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import tolva3Main from "../../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/Blueprint_Ti_FpD/PlaFpDes_TI_VA.png";
@@ -163,13 +163,6 @@ const PDPlanos = () => {
     {
       id: "withoutPanels",
       label: "Tolvas montadas",
-    },
-  ];
-  const cabinSize = [
-    {
-      length: 4.34,
-      width: 2.22,
-      height: 3.09,
     },
   ];
   const modelOptions = [

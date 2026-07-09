@@ -1,5 +1,3 @@
-import React from "react";
-
 const MProcess = () => {
   return (
     <section className="w-full max-w-7xl mx-auto px-8 font-bold text-grisT">

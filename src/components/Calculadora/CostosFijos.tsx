@@ -1,5 +1,4 @@
-import React from "react";
-import { formatCurrency, formatNumber } from "../../components/lib/utils";
+import { formatCurrency } from "../../components/lib/utils";
 
 interface Props {
   state: any;
@@ -7,7 +6,7 @@ interface Props {
 }
 
 export default function CostosFijos({ state, onChange }: Props) {
-  const { cfOperador, cfMantenimiento, cfPayloder, cf, tcFijos } = state;
+  const { cfOperador, cfMantenimiento, cfPayloder, cf } = state;
 
   return (
     <section className="bg-white rounded-xl shadow p-6 border border-gray-200 space-y-4">

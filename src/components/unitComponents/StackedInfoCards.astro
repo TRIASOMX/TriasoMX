@@ -1,18 +1,10 @@
 ---
-interface Card {
-  title: string;
-  text: string;
-  bg: string;
-  textColor: string;
-  content: string;
-}
-
 const {
   cards = [],
   mainTitle,
   mainDescription,
-  imageSrc,
-  imageAlt = "Persistent image",
+  imageSrc: _imageSrc,
+  imageAlt: _imageAlt = "Persistent image",
 } = Astro.props;
 ---
 
@@ -37,7 +29,7 @@ const {
       class="cards-wrapper relative h-[700px] lg:h-[700px] md:h-[600px] overflow-hidden"
     >
       {
-        cards.map((card, i) => (
+        cards.map((card) => (
           <div
             class="stack-card absolute w-full max-w-lg top-[10%] lg:top-[30%] md:top-[60%] right-0 rounded-xl p-10 shadow-xl"
             style={`background:${card.bg}; color:${card.textColor}`}
@@ -70,7 +62,7 @@ const {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            initAnimation(section, cards, wrapper);
+            initAnimation(section, cards);
             observer.disconnect();
           }
         });
@@ -81,7 +73,7 @@ const {
     observer.observe(section);
   });
 
-  function initAnimation(section, cards, wrapper) {
+  function initAnimation(section, cards) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,

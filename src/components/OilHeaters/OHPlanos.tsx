@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import OilHeaterVAB from "../../assets/images/OilHeaters/Planos/OilHeaterVABp.webp"

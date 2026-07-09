@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import g1 from "../../assets/images/SidePanels/FEPlaC_1.webp"
 import g2 from "../../assets/images/SidePanels/TqesFeChasis_1.webp"
 import g3 from "../../assets/images/SidePanels/TolvasFE.webp"

@@ -33,29 +33,6 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
     return ""; // 3 o más elementos usan el justify-start por defecto para hacer scroll normal
   };
 
-  const syncDot = useCallback(() => {
-    const track = trackRef.current;
-    if (!track) return;
-  
-    const cards = track.querySelectorAll<HTMLElement>("[data-card]");
-    const trackRect = track.getBoundingClientRect();
-  
-    let closestIndex = 0;
-    let closestDistance = Infinity;
-  
-    cards.forEach((card, i) => {
-      const rect = card.getBoundingClientRect();
-      const distance = Math.abs(rect.left - trackRect.left);
-  
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestIndex = i;
-      }
-    });
-  
-    setActiveIndex(closestIndex);
-  }, []);
-
   const scrollToIndex = useCallback((index: number) => {
     const track = trackRef.current;
     if (!track) return;

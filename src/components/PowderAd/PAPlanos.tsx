@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -8,13 +8,6 @@ import imgPlano2 from "../../assets/images/PowderA/planos/BluePrintVL.webp";
 import imgPlano3 from "../../assets/images/PowderA/planos/BluePrintVT.webp";
 import { useClipPathScrollTrigger } from "../lib/useClipPathScrollTrigger";
 
-const cabinSize = [
-  {
-    length: 434.71,
-    width: 222.93,
-    height: 309.34,
-  },
-];
 const toggleConfig = {
   id: "1",
   dimensions: {
@@ -33,7 +26,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PAPlanos = () => {
   //tabs states
-  const [activeTab, setActiveTab] = useState(3);
+  const [activeTab] = useState(3);
   //animation
   const boxRef = useRef<HTMLDivElement>(null);
   const nextSectionRef = useRef<HTMLDivElement>(null);

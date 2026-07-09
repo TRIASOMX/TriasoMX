@@ -1,19 +1,10 @@
-import React, { useRef, useEffect, useState, useCallback } from "react";
+import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import caseta1 from "../../../assets/images/DrumMixers/caseta1.webp";
 import caseta2 from "../../../assets/images/DrumMixers/caseta2.webp";
 import tab3Main2 from "../../../assets/images/DrumMixers/tab3Main2.webp";
-import tab3Right from "../../../assets/images/DrumMixers/tab3Right.webp";
-import tab6Right from "../../../assets/images/DrumMixers/tab6Right.webp";
-import tab6Left from "../../../assets/images/DrumMixers/tab6Left.webp";
-import tab5Main from "../../../assets/images/DrumMixers/tab5Main.webp";
-import tab5Left from "../../../assets/images/DrumMixers/tab5Left.webp";
 import tab1Main from "../../../assets/images/DrumMixers/tab1Main.webp";
-import tab1Left from "../../../assets/images/DrumMixers/tab1Left.webp";
-import tab1Right from "../../../assets/images/DrumMixers/tab5Right.webp";
-import tab2Left from "../../../assets/images/DrumMixers/tab2L.webp";
-import tab6Main from "../../../assets/images/DrumMixers/tab6M.webp";
 import { useClipPathScrollTrigger } from "../../../components/lib/useClipPathScrollTrigger.tsx"
 
 const cabinSize = [
@@ -22,24 +13,6 @@ const cabinSize = [
     width: 222.93,
     height: 309.34,
   },
-];
-const toggleConfig = [
-  {
-    id: "3",
-    dimensions: {
-      width: 309.4,
-      height: 705.37,
-      length: 2127.37,
-      diameter: 182.88,
-      drumLenght: 878,
-      drumHeight: 264.31,
-      transportationHeight: 424.57,
-      wheel: 140.0,
-      humidity3: 140,
-      humidity5: 180,
-    },
-  },
-
 ];
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,11 +51,6 @@ const DrumMixPlanos = () => {
     C5_1: false,
     C5_2: false,
   });
-  //ACTIVE DATA
-  const activeData = toggleConfig.find(
-    (item) => item.id === activeTab.toString()
-  );
-
   const modelOptions = [
 
     { id: 3, label: "140-180 Tph" },

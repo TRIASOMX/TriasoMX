@@ -50,8 +50,6 @@ interface ProtectionCard extends BaseCard {
 
 type CardData = VideoCard | ProductCard | FeatureCard | ProtectionCard | FirstCard;
 
-const HIGHLIGHT = "#58a25f";
-
 const CARDS: CardData[] = [
   {
     id: 1,

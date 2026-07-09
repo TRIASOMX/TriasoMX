@@ -1,4 +1,3 @@
-import React from 'react';
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
@@ -74,7 +73,7 @@ interface Props {
 
 export const InversionPDF = ({ state }: Props) => {
   const {
-    dlls, pesos,
+    dlls,
     anual, meses, reventa, rentaMensual,
     horasxmes, rap,
     agrv, tav,
@@ -85,7 +84,7 @@ export const InversionPDF = ({ state }: Props) => {
     electri, elecpesosxlitro, electon, telec,
     cosvariables, tcVariables,
     cfOperador, cfMantenimiento, cfPayloder, tcFijos,
-    prodton, prodm3, produc, precioventa, ingresos, ucostos, utilidad
+    prodton, produc, precioventa, ingresos, ucostos, utilidad
   } = state;
 
   return (

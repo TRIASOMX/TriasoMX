@@ -1,4 +1,3 @@
-import React from "react";
 import { formatCurrency, formatNumber } from "../../components/lib/utils";
 interface Props {
   state: any;
