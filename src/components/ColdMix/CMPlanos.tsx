@@ -712,7 +712,7 @@ const CMPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Banda dosificadora de 18" con velocidad variable
+                          Banda dosificadora de 18" con velocidad variable.
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre
@@ -1676,7 +1676,7 @@ const CMPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Banda dosificadora de 18" con velocidad variable
+                          Banda dosificadora de 18" con velocidad variable.
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre

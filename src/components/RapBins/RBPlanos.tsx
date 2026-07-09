@@ -14,12 +14,6 @@ import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScroll
 
 gsap.registerPlugin(ScrollTrigger);
 
-const singleUnit = {
-  capacity: "20 tons",
-};
-const structure = {
-  axleConfi: "One Axle",
-};
 const toggleConfig = [
   {
     id: "1",
@@ -419,7 +413,7 @@ const RBPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Banda dosificadora de 18" con velocidad variable
+                          Banda dosificadora de 18" con velocidad variable.
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre
@@ -1324,7 +1318,7 @@ const RBPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Banda dosificadora de 18" con velocidad variable
+                          Banda dosificadora de 18" con velocidad variable.
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre

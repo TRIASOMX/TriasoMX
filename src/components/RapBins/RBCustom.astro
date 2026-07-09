@@ -3,187 +3,194 @@ import img1Low from "../../assets/images/RapBins/Low/TolvaConfComplLow.webp";
 import Image from "astro/components/Image.astro";
 ---
 
-<div class="my-16">
-    <h1 class="text-center text-3xl md:text-5xl text-black font-bold">
-        Con estos equipos usted podrá abatir las
-    </h1>
-    <h1 class="text-center text-3xl md:text-5xl text-black font-bold">
-        costosas horas de producción
-    </h1>
-</div>
-
-<div class="w-full mx-auto px-5 text-center mb-5 min-h-[88px] ">
-    <div class="mb-5">
-        <p class="font-thin text-black">Optimización de jornadas de trabajo.</p>
-        <p class="font-thin text-black">Ahorro de horas hombre.</p>
-        <p class="font-thin text-black">Menos paros por maniobras logísticas.</p>
-        <p class="font-thin text-black">Mejor control de flujos de material.</p>
-    </div>
+<div
+  class="w-full mx-auto px-5 text-center mb-5 space-y-4 flex flex-col justify-center"
+>
+  <h1
+    class="self-center text-3xl md:text-5xl text-black font-bold max-w-[40ch] w-full"
+  >
+    Con estos equipos usted podrá abatir las costosas horas de producción
+  </h1>
+  <div class="mb-5">
+    <p class="font-thin text-black text-lg md:text-2xl">
+      Optimización de jornadas de trabajo.
+    </p>
+    <p class="font-thin text-black text-lg md:text-2xl">
+      Ahorro de horas hombre.
+    </p>
+    <p class="font-thin text-black text-lg md:text-2xl">
+      Menos paros por maniobras logísticas.
+    </p>
+    <p class="font-thin text-black text-lg md:text-2xl">
+      Mejor control de flujos de material.
+    </p>
+  </div>
 </div>
 
 <div
-    class="w-full flex flex-col items-center justify-center font-bold mt-10 bg-blueMain py-10"
+  class="w-full flex flex-col items-center justify-center font-bold mt-10 bg-blueMain py-10"
 >
-    <div class="w-full max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-2">
-        <div class="flex flex-col justify-center text-white">
-            <h1 class="text-2xl md:text-6xl w-full text-start">
-                Unidades de tolvas de RAP <br />Totalmente personalizables
-            </h1>
-            <h1 class="text-xl md:text-4xl w-full text-start">
-                Desde 14 a 20 tons
-            </h1>
-        </div>
-        <div class="w-full flex flex-col justify-center items-center">
-            <div class="p-8 flex items-center justify-center">
-                <Image
-                    src={img1Low}
-                    alt="Customizable Bin Unit Diagram"
-                    class="w-full"
-                />
-            </div>
-        </div>
+  <div class="w-full max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-2">
+    <div class="flex flex-col justify-center text-white">
+      <h1 class="text-2xl md:text-6xl w-full text-start">
+        Unidades de tolvas de RAP <br />Totalmente personalizables
+      </h1><br />
+      <h1 class="text-xl md:text-4xl w-full text-start">Desde 14 a 20 tons</h1>
     </div>
-
-    <div class="">
-        <button
-            aria-label="See more information about the customizable RAP units"
-            class="text-blueMain px-4 py-2 rounded-2xl text-6xl"
-            onclick="toggleDropdown()"
-            id="dropdown-button"
-        >
-            <svg
-                width="84px"
-                height="84px"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                color="#ffffff"
-                id="dropdown-arrow"
-            >
-                <path
-                    d="M6 9L12 15L18 9"
-                    stroke="#ffffff"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"></path>
-            </svg>
-        </button>
+    <div class="w-full flex flex-col justify-center items-center">
+      <div class="p-8 flex items-center justify-center">
+        <Image
+          src={img1Low}
+          alt="Customizable Bin Unit Diagram"
+          class="w-full"
+        />
+      </div>
     </div>
+  </div>
 
-    <div
-        class="w-full transition-all duration-300 overflow-hidden"
-        id="extradiv"
-        style="max-height: 0"
+  <div class="">
+    <button
+      aria-label="See more information about the customizable RAP units"
+      class="text-blueMain px-4 py-2 rounded-2xl text-6xl"
+      onclick="toggleDropdown()"
+      id="dropdown-button"
     >
-        <div
-            class="text-white w-full max-w-7xl px-8 mx-auto list-inside md:mb-0 md:opacity-100"
-        >
-            <h1 class="w-full text-start text-xl md:text-3xl mb-6">Opciones</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="flex flex-col justify-start items-start">
-                    <div class="flex flex-col items-start justify-center">
-                        <h1
-                            class="text-bgMain text-lg lg:text-xl md:text-xl mb-6"
-                        >
-                        Control de materiales y alimentación
-                        </h1>
-                        <div class="grid grid-cols-2 gap-6">
-                            <ul
-                                class="font-normal text-grisSubP text-sm lg:text-base md:text-base list-disc pl-4 space-y-3"
-                            >
-                                <li>Compuertas de control de profundidad ajustables</li>
-                                <li>Vibradores de tolva</li>
-                                <li>Sensores de humedad</li>
-                            </ul>
-                            <ul
-                                class="font-normal text-grisSubP text-sm lg:text-base md:text-base list-disc pl-4 space-y-3"
-                            >
-                                <li>Gargantas de alimentación con autodescarga</li>
-                                <li>Sistema de pesaje</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-start justify-center mt-6">
-                        <h1 class="text-bgMain text-lg md:text-xl mb-6">
-                            Monitoreo y seguridad operativa
-                        </h1>
-                        <div class="grid grid-cols-2 gap-6">
-                            <ul
-                                class="font-normal text-grisSubP text-sm lg:text-base md:text-base list-disc pl-4 space-y-3"
-                            >
-                                <li>Indicadores de nivel de tolva</li>
-                                <li>Protección de malla metálica</li>
-                                <li>Bandeja para cables</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col items-start justify-start h-full">
-                    <h1 class="text-bgMain text-lg md:text-xl mb-6">
-                        Configuración estructural
-                    </h1>
-                    <div class="grid grid-cols-2 gap-6">
-                        <ul
-                            class="font-normal text-grisSubP text-sm lg:text-base md:text-base list-disc pl-4 space-y-3"
-                        >
-                            <li>Pasillos</li>
-                            <li>Grizzlies</li>
-                            <li>Divisiones de tolva</li>
-                            <li>Cubiertas de tolva</li>
-                            <li>Montado sobre llantas</li>
-                        </ul>
-                        <ul
-                            class="font-normal text-grisSubP text-sm lg:text-base md:text-base list-disc pl-4 space-y-3"
-                        >
-                            <li>Flancos estéticos</li>
-                            <li>Bulkheads</li>
-                            <li>Extensiones de tolva</li>
-                            <li>Muros de contención integrados</li>
-                            <li>Cribas de preselección integradas</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      <svg
+        width="84px"
+        height="84px"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        color="#ffffff"
+        id="dropdown-arrow"
+      >
+        <path
+          d="M6 9L12 15L18 9"
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </button>
+  </div>
 
-    <div class="max-w-7xl mx-auto px-8 flex flex-col justify-center items-center space-y-5">
-        <div>
-            <h1 class="text-3xl text-white">Su mejor negocio comienza aquí</h1>
+  <div
+    class="w-full transition-all duration-300 overflow-hidden"
+    id="extradiv"
+    style="max-height: 0"
+  >
+    <div
+      class="text-white w-full max-w-7xl px-8 mx-auto list-inside md:mb-0 md:opacity-100"
+    >
+      <h1 class="w-full text-start text-xl md:text-3xl mb-6">Opciones</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="flex flex-col justify-start items-start">
+          <div class="flex flex-col items-start justify-center">
+            <h1 class="text-bgMain text-lg lg:text-xl md:text-xl mb-6">
+              Control de materiales y alimentación
+            </h1>
+            <div class="grid grid-cols-2 gap-6">
+              <ul
+                class="font-normal text-grisSubP text-sm lg:text-base md:text-base list-disc pl-4 space-y-3"
+              >
+                <li>Compuertas de control de profundidad ajustables</li>
+                <li>Vibradores de tolva</li>
+                <li>Sensores de humedad</li>
+              </ul>
+              <ul
+                class="font-normal text-grisSubP text-sm lg:text-base md:text-base list-disc pl-4 space-y-3"
+              >
+                <li>Gargantas de alimentación con autodescarga</li>
+                <li>Sistema de pesaje</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col items-start justify-center mt-6">
+            <h1 class="text-bgMain text-lg md:text-xl mb-6">
+              Monitoreo y seguridad operativa
+            </h1>
+            <div class="grid grid-cols-2 gap-6">
+              <ul
+                class="font-normal text-grisSubP text-sm lg:text-base md:text-base list-disc pl-4 space-y-3"
+              >
+                <li>Indicadores de nivel de tolva</li>
+                <li>Protección de malla metálica</li>
+                <li>Bandeja para cables</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col justify-center items-center text-center">
-            <p class="text-white">Por cada 10% de RAP incorporado en la mezcla, <br> el costo de producción de la mezcla asfáltica   <br> <span class="text-4xl">se reduce 7%</span>         </p>
+        <div class="flex flex-col items-start justify-start h-full">
+          <h1 class="text-bgMain text-lg md:text-xl mb-6">
+            Configuración estructural
+          </h1>
+          <div class="grid grid-cols-2 gap-6">
+            <ul
+              class="font-normal text-grisSubP text-sm lg:text-base md:text-base list-disc pl-4 space-y-3"
+            >
+              <li>Pasillos</li>
+              <li>Grizzlies</li>
+              <li>Divisiones de tolva</li>
+              <li>Cubiertas de tolva</li>
+              <li>Montado sobre llantas</li>
+            </ul>
+            <ul
+              class="font-normal text-grisSubP text-sm lg:text-base md:text-base list-disc pl-4 space-y-3"
+            >
+              <li>Flancos estéticos</li>
+              <li>Bulkheads</li>
+              <li>Extensiones de tolva</li>
+              <li>Muros de contención integrados</li>
+              <li>Cribas de preselección integradas</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+
+  <div
+    class="max-w-7xl mx-auto px-8 flex flex-col justify-center items-center space-y-5"
+  >
+    <div>
+      <h1 class="text-3xl text-white">Su mejor negocio comienza aquí</h1>
+    </div>
+    <div class="flex flex-col justify-center items-center text-center">
+      <p class="text-white">
+        Por cada 10% de RAP incorporado en la mezcla, <br /> el costo de producción
+        de la mezcla asfáltica <br />
+        <span class="text-4xl">se reduce 7%</span>
+      </p>
+    </div>
+  </div>
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const dropdown = document.getElementById("extradiv");
-        const arrow = document.getElementById("dropdown-arrow");
-        const button = document.getElementById("dropdown-button");
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdown = document.getElementById("extradiv");
+    const arrow = document.getElementById("dropdown-arrow");
+    const button = document.getElementById("dropdown-button");
 
-        if (button) {
-            button.addEventListener("click", () => {
-                if (!dropdown || !arrow) return;
+    if (button) {
+      button.addEventListener("click", () => {
+        if (!dropdown || !arrow) return;
 
-                const isClosed =
-                    dropdown.style.maxHeight === "0px" ||
-                    !dropdown.style.maxHeight;
+        const isClosed =
+          dropdown.style.maxHeight === "0px" || !dropdown.style.maxHeight;
 
-                if (isClosed) {
-                    dropdown.style.maxHeight = dropdown.scrollHeight + "px";
-                    arrow.style.transform = "rotate(180deg)";
-                } else {
-                    dropdown.style.maxHeight = "0px";
-                    arrow.style.transform = "rotate(0deg)";
-                }
-            });
+        if (isClosed) {
+          dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+          arrow.style.transform = "rotate(180deg)";
+        } else {
+          dropdown.style.maxHeight = "0px";
+          arrow.style.transform = "rotate(0deg)";
         }
-    });
+      });
+    }
+  });
 </script>
 <style>
-    #dropdown-arrow {
-        transition: transform 0.3s ease;
-    }
+  #dropdown-arrow {
+    transition: transform 0.3s ease;
+  }
 </style>

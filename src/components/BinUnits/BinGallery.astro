@@ -1,14 +1,8 @@
 ---
-import GallerySlider from "../unitComponents/GallerySlider";
 import { Image } from "astro:assets";
 import Tred from "../../assets/images/AsphaltStorage/redT.webp";
-import Separator from "../unitComponents/Separator.astro";
-import sideP from "../../assets/images/SidePanels/TolvasFE.webp";
-import LearnBtn from "../unitComponents/LearnBtn.astro";
 import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
-import BUFeeders from "../../assets/images/BinUnits/BUFeeders.webp";
 import binHigh from "../../assets/images/BinUnits/binHigh.webp";
-import img1 from "../../assets/images/BinUnits/TolvaCinta.webp";
 import img2 from "../../assets/images/BinUnits/ProvBU1.webp";
 import img3 from "../../assets/images/BinUnits/ProvBU3.webp";
 import img4 from "../../assets/images/BinUnits/1.webp";
@@ -48,34 +42,32 @@ const binSlides2 = [
 ---
 
 <div class="w-full flex flex-col">
-  <section>
-    <TwoColumnSection
-      leftBg="bg-redBg"
-      rightBg="bg-blueMain"
-      imageSrc={Tred.src}
-      imageAlt="Red T icon"
-      imageWidth="150px"
-    >
-      <div slot="left" class="flex flex-col justify-center gap-3">
-        <h1 class="text-xl md:text-2xl">Nos adaptamos a su proyecto</h1>
-        <p class="text-sm md:text-base lg:text-lg">
-          Pueden personalizarse y adaptarse a diferentes requerimientos de
-          manejo de materiales, ofreciendo eficiencia y confiabilidad en
-          cualquier proyecto.
-        </p>
-        <Whatsbtn />
-      </div>
+  <TwoColumnSection
+    leftBg="bg-redBg"
+    rightBg="bg-blueMain"
+    imageSrc={Tred.src}
+    imageAlt="Red T icon"
+    imageWidth="150px"
+  >
+    <div slot="left" class="flex flex-col justify-center gap-3">
+      <h1 class="text-xl md:text-2xl">Nos adaptamos a su proyecto</h1>
+      <p class="text-sm md:text-base lg:text-lg">
+        Pueden personalizarse y adaptarse a diferentes requerimientos de manejo
+        de materiales, ofreciendo eficiencia y confiabilidad en cualquier
+        proyecto.
+      </p>
+      <Whatsbtn />
+    </div>
 
-      <div slot="right" class="flex flex-col justify-center gap-3">
-        <h1 class="text-xl md:text-2xl">Servicio al cliente 24/7</h1>
-        <p class="text-sm md:text-base lg:text-lg">
-          Nuestro equipo está disponible en todo momento, listo para asistirte
-          cuando lo necesites, incluso fines de semana y días festivos.
-        </p>
-        <Whatsbtn />
-      </div>
-    </TwoColumnSection>
-  </section>
+    <div slot="right" class="flex flex-col justify-center gap-3">
+      <h1 class="text-xl md:text-2xl">Servicio al cliente 24/7</h1>
+      <p class="text-sm md:text-base lg:text-lg">
+        Nuestro equipo está disponible en todo momento, listo para asistirte
+        cuando lo necesites, incluso fines de semana y días festivos.
+      </p>
+      <Whatsbtn />
+    </div>
+  </TwoColumnSection>
 
   <section>
     <div
@@ -97,7 +89,9 @@ const binSlides2 = [
     </div>
   </section>
 
-  <div class="w-full max-w-7xl px-8 mx-auto text-2xl md:text-4xl font-bold">
+  <div
+    class="w-full max-w-7xl px-8 mx-auto text-2xl md:text-4xl font-bold my-10 md:my-20"
+  >
     <div class="flex flex-col max-w-7xl mx-auto items-center">
       <div
         class="grid grid-cols-2 lg:flex lg:flex-row items-center justify-center"
@@ -143,7 +137,7 @@ const binSlides2 = [
       <div class="flex flex-col w-full md:flex-row lg:flex-row">
         <div class="text-white font-bold flex flex-col justify-center">
           <h1 class="text-2xl md:text-3xl">Equipo altamente portátil</h1><br />
-          <p class="text-base md:text-lg lg:pr-8 md:pr-8">
+          <p class="text-base md:text-xl lg:pr-8 md:pr-8">
             Entendemos la importancia de poner su equipo en operación lo más
             rápido posible. Nuestro equipo Triaso está diseñado para una
             instalación y puesta en marcha rápidas.
@@ -171,7 +165,7 @@ const binSlides2 = [
           <h1 class="text-2xl md:text-3xl lg:text-end">
             En cualquier momento, en cualquier lugar
           </h1><br />
-          <p class="text-base md:text-lg lg:text-end">
+          <p class="text-base md:text-xl lg:text-end">
             Entendemos la importancia de que su equipo permanezca operando sin
             interrupciones.
           </p>
@@ -182,7 +176,7 @@ const binSlides2 = [
       <div class="flex flex-col w-full md:flex-row lg:flex-row">
         <div class="text-white font-bold flex flex-col justify-center">
           <h1 class="text-2xl md:text-3xl">Almacenamiento sencillo</h1><br />
-          <p class="text-base md:text-lg lg:pr-8 md:pr-8">
+          <p class="text-base md:text-xl lg:pr-8 md:pr-8">
             Diseñado para facilitar su resguardo, nuestro equipo puede
             almacenarse de manera rápida y práctica en cualquier lugar.
           </p>

@@ -17,6 +17,7 @@ export interface SliderProps {
   aspectRatio?: number;
   /** Ancho máximo de una tarjeta en px (desktop). Por defecto 720 */
   cardMaxWidth?: number;
+  dark?: boolean;
 }
 
 /* ------------------------------------------------------------------ */
@@ -27,6 +28,7 @@ export default function Slider({
   slides,
   aspectRatio = 1.42,
   cardMaxWidth = 720,
+  dark = false,
 }: SliderProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
@@ -195,6 +197,16 @@ export default function Slider({
     userSelect: "none",
     background: "#111",
   };
+  const arrowStyle: CSSProperties = {
+    background: "none",
+    border: "none",
+    color: dark ? "#111" : "white",
+    cursor: "pointer",
+    padding: 6,
+    opacity: 0.55,
+    transition: "opacity .2s ease",
+    display: "inline-flex",
+  };
 
   return (
     <section
@@ -202,7 +214,7 @@ export default function Slider({
         width: "100%",
         position: "relative",
         fontFamily: "system-ui, sans-serif",
-        marginBlock: 30,
+        paddingBlock: 30,
       }}
     >
       <style>{`.slider-track::-webkit-scrollbar{display:none}
@@ -432,14 +444,3 @@ export default function Slider({
     </section>
   );
 }
-
-const arrowStyle: CSSProperties = {
-  background: "none",
-  border: "none",
-  color: "#111",
-  cursor: "pointer",
-  padding: 6,
-  opacity: 0.55,
-  transition: "opacity .2s ease",
-  display: "inline-flex",
-};

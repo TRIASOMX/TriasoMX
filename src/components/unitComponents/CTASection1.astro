@@ -1,0 +1,43 @@
+---
+import WhatsbtnAstroComponent from "./Whatsbtn.astro";
+import CotizacionBtnAstroComponent from "./cotizacionBtn.astro";
+---
+
+<section class="">
+  <div
+    class="bg-[#2b2b2b] lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(/triasoLogo.webp)] bg-center bg-no-repeat relative"
+  >
+    <div class="absolute inset-0 bg-[#000000]/60"></div>
+    <div class="max-w-7xl mx-auto px-8 space-y-5 relative">
+      <div class="pt-5">
+        <h1 class="text-4xl font-bold text-white">
+          ¿Indeciso sobre el equipo ideal para su proyecto?
+        </h1>
+      </div>
+
+      <div
+        class="w-full flex flex-col justify-center pb-5 lg:justify-around md:justify-around items-center lg:flex-row relative"
+      >
+        <div class="">
+          <p class="text-white">
+            La compra de una planta de asfalto es una gran inversión, y la base
+            de un negocio de producción de mezcla asfáltica. Compre
+            inteligentemente y con criterio.
+          </p>
+          <p class="text-white">
+            Podemos asesorarlo de forma transparente en la inversión de su
+            planta de asfalto, ayudándolo a elegir la opción más adecuada.
+          </p>
+        </div>
+        <div
+          class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
+        >
+          <!-- Botón 1 -->
+          <WhatsbtnAstroComponent />
+
+          <CotizacionBtnAstroComponent />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -26,205 +26,197 @@ import tolva3L2 from "../../assets/images/BinUnits/tolva3L2.webp";
 import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScrollTrigger.tsx";
 gsap.registerPlugin(ScrollTrigger);
 
-const singleUnit = [
-  {
-    length: 365.75,
-    width: 268.22,
-    height: 201.17,
-    capacity: "20 tons",
-  },
-];
 const toggleConfig = [
   {
     id: "1",
     dimensions: {
       //No Aesthetic Side Panels
-      width: 268.22,
-      height: 381.0,
-      length: 722.37,
+      width: 2.6822,
+      height: 3.81,
+      length: 7.2237,
 
-      singleLength: 365.75,
-      singleWidth: 268.22,
-      singleHeight: 201.17,
+      singleLength: 3.6575,
+      singleWidth: 2.6822,
+      singleHeight: 2.0117,
 
-      totalLength: 722.37,
-      wheel: 134.11,
-      totalWidth: 260,
-      heightWithBins: 381,
+      totalLength: 7.2237,
+      wheel: 1.3411,
+      totalWidth: 2.6,
+      heightWithBins: 3.81,
 
       //Aesthetic Side Panels
-      awidth: 268.22,
-      aheight: 381.0,
-      alength: 722.37,
+      awidth: 2.6822,
+      aheight: 3.81,
+      alength: 7.2237,
 
-      asingleLength: 365.75,
-      asingleWidth: 268.22,
-      asingleHeight: 201.17,
+      asingleLength: 3.6575,
+      asingleWidth: 2.6822,
+      asingleHeight: 2.0117,
 
-      atotalLength: 722.37,
-      awheel: 134.11,
-      atotalWidth: 260,
-      aheightWithBins: 381,
+      atotalLength: 7.2237,
+      awheel: 1.3411,
+      atotalWidth: 2.6,
+      aheightWithBins: 3.81,
     },
   },
   {
     id: "2",
     dimensions: {
       //No Aesthetic Side Panels
-      width: 268.22,
-      height: 388.62,
-      length: 1088.13,
+      width: 2.6822,
+      height: 3.8862,
+      length: 10.8813,
 
-      singleLength: 365.75,
-      singleWidth: 268.22,
-      singleHeight: 201.17,
+      singleLength: 3.6575,
+      singleWidth: 2.6822,
+      singleHeight: 2.0117,
 
-      totalLength: 1088.13,
-      wheel: 134.11,
-      totalWidth: 260,
-      heightWithBins: 381,
+      totalLength: 10.8813,
+      wheel: 1.3411,
+      totalWidth: 2.6,
+      heightWithBins: 3.81,
 
       //Aesthetic Side Panels
-      awidth: 268.22,
-      aheight: 381.0,
-      alength: 957.9,
+      awidth: 2.6822,
+      aheight: 3.81,
+      alength: 9.579,
 
-      asingleLength: 365.75,
-      asingleWidth: 268.22,
-      asingleHeight: 201.17,
+      asingleLength: 3.6575,
+      asingleWidth: 2.6822,
+      asingleHeight: 2.0117,
 
-      atotalLength: 957.9,
-      awheel: 134.11,
-      atotalWidth: 260,
-      aheightWithBins: 381,
+      atotalLength: 9.579,
+      awheel: 1.3411,
+      atotalWidth: 2.6,
+      aheightWithBins: 3.81,
     },
   },
   {
     id: "3",
     dimensions: {
       //No Aesthetic Side Panels
-      width: 268.22,
-      height: 381,
-      length: 1333.3,
+      width: 2.6822,
+      height: 3.81,
+      length: 13.333,
 
-      singleLength: 365.75,
-      singleWidth: 268.22,
-      singleHeight: 201.17,
+      singleLength: 3.6575,
+      singleWidth: 2.6822,
+      singleHeight: 2.0117,
 
-      totalLength: 1333.3,
-      wheel: 134.11,
-      totalWidth: 260,
-      heightWithBins: 381,
+      totalLength: 13.333,
+      wheel: 1.3411,
+      totalWidth: 2.6,
+      heightWithBins: 3.81,
 
       //Aesthetic Side Panels
-      awidth: 268.22,
-      aheight: 381.0,
-      alength: 1333.3,
+      awidth: 2.6822,
+      aheight: 3.81,
+      alength: 13.333,
 
-      asingleLength: 365.75,
-      asingleWidth: 268.22,
-      asingleHeight: 201.17,
+      asingleLength: 3.6575,
+      asingleWidth: 2.6822,
+      asingleHeight: 2.0117,
 
-      atotalLength: 1330.3,
-      awheel: 134.11,
-      atotalWidth: 260,
-      aheightWithBins: 381,
+      atotalLength: 13.303,
+      awheel: 1.3411,
+      atotalWidth: 2.6,
+      aheightWithBins: 3.81,
     },
   },
   {
     id: "4",
     dimensions: {
       //No Aesthetic Side Panels
-      width: 268.22,
-      height: 381.0,
-      length: 1697,
+      width: 2.6822,
+      height: 3.81,
+      length: 16.97,
 
-      singleLength: 365.75,
-      singleWidth: 268.22,
-      singleHeight: 201.17,
+      singleLength: 3.6575,
+      singleWidth: 2.6822,
+      singleHeight: 2.0117,
 
-      totalLength: 1697,
-      wheel: 134.11,
-      totalWidth: 260,
-      heightWithBins: 381,
+      totalLength: 16.97,
+      wheel: 1.3411,
+      totalWidth: 2.6,
+      heightWithBins: 3.81,
 
       //Aesthetic Side Panels
-      awidth: 268.22,
-      aheight: 381.0,
-      alength: 1697,
+      awidth: 2.6822,
+      aheight: 3.81,
+      alength: 16.97,
 
-      asingleLength: 365.75,
-      asingleWidth: 268.22,
-      asingleHeight: 201.17,
+      asingleLength: 3.6575,
+      asingleWidth: 2.6822,
+      asingleHeight: 2.0117,
 
-      atotalLength: 1697,
-      awheel: 134.11,
-      atotalWidth: 260,
-      aheightWithBins: 381,
+      atotalLength: 16.97,
+      awheel: 1.3411,
+      atotalWidth: 2.6,
+      aheightWithBins: 3.81,
     },
   },
   {
     id: "5",
     dimensions: {
       //No Aesthetic Side Panels
-      width: 268.22,
-      height: 381.0,
-      length: 2060.45,
+      width: 2.6822,
+      height: 3.81,
+      length: 20.6045,
 
-      singleLength: 365.75,
-      singleWidth: 268.22,
-      singleHeight: 201.17,
+      singleLength: 3.6575,
+      singleWidth: 2.6822,
+      singleHeight: 2.0117,
 
-      totalLength: 2060.45,
-      wheel: 134.11,
-      totalWidth: 260,
-      heightWithBins: 381,
+      totalLength: 20.6045,
+      wheel: 1.3411,
+      totalWidth: 2.6,
+      heightWithBins: 3.81,
 
       //Aesthetic Side Panels
-      awidth: 268.22,
-      aheight: 381.0,
-      alength: 2060.45,
+      awidth: 2.6822,
+      aheight: 3.81,
+      alength: 20.6045,
 
-      asingleLength: 365.75,
-      asingleWidth: 268.22,
-      asingleHeight: 201.17,
+      asingleLength: 3.6575,
+      asingleWidth: 2.6822,
+      asingleHeight: 2.0117,
 
-      atotalLength: 2060.45,
-      awheel: 134.11,
-      atotalWidth: 260,
-      aheightWithBins: 381,
+      atotalLength: 20.6045,
+      awheel: 1.3411,
+      atotalWidth: 2.6,
+      aheightWithBins: 3.81,
     },
   },
   {
     id: "6",
     dimensions: {
       //No Aesthetic Side Panels
-      width: 268.22,
-      height: 381.0,
-      length: 2423.8,
+      width: 2.6822,
+      height: 3.81,
+      length: 24.238,
 
-      singleLength: 365.75,
-      singleWidth: 268.22,
-      singleHeight: 201.17,
+      singleLength: 3.6575,
+      singleWidth: 2.6822,
+      singleHeight: 2.0117,
 
-      totalLength: 2423.8,
-      wheel: 134.11,
-      totalWidth: 260,
-      heightWithBins: 381,
+      totalLength: 24.238,
+      wheel: 1.3411,
+      totalWidth: 2.6,
+      heightWithBins: 3.81,
 
       //Aesthetic Side Panels
-      awidth: 268.22,
-      aheight: 381.0,
-      alength: 722.37,
+      awidth: 2.6822,
+      aheight: 3.81,
+      alength: 7.2237,
 
-      asingleLength: 365.75,
-      asingleWidth: 268.22,
-      asingleHeight: 201.17,
+      asingleLength: 3.6575,
+      asingleWidth: 2.6822,
+      asingleHeight: 2.0117,
 
-      atotalLength: 722.37,
-      awheel: 134.11,
-      atotalWidth: 260,
-      aheightWithBins: 381,
+      atotalLength: 7.2237,
+      awheel: 1.3411,
+      atotalWidth: 2.6,
+      aheightWithBins: 3.81,
     },
   },
 ];
@@ -236,7 +228,7 @@ const BinPlanosSection = () => {
     "withPanels" | "withoutPanels"
   >("withPanels");
 
-  const cmToFeet = 0.0328084;
+  const cmToFeet = 3.28084;
   //animation
   const boxRef = useRef<HTMLDivElement>(null);
   const nextSectionRef = useRef<HTMLDivElement>(null);
@@ -302,21 +294,21 @@ const BinPlanosSection = () => {
   const exteriorOptions = [
     {
       id: "withPanels",
-      label: "Aesthetic Side Panels",
+      label: "FLANCOS ESTÉTICOS",
     },
     {
       id: "withoutPanels",
-      label: "Without Aesthetic Side Panels",
+      label: "SIN FLANCOS ESTÉTICOS",
     },
   ];
 
   const modelOptions = [
-    { id: 1, label: "1 Bin" },
-    { id: 2, label: "2 Bins" },
-    { id: 3, label: "3 Bins" },
-    { id: 4, label: "4 Bins" },
-    { id: 5, label: "5 Bins" },
-    { id: 6, label: "6 Bins" },
+    { id: 1, label: "1 UNIDAD" },
+    { id: 2, label: "2 UNIDADES" },
+    { id: 3, label: "3 UNIDADES" },
+    { id: 4, label: "4 UNIDADES" },
+    { id: 5, label: "5 UNIDADES" },
+    { id: 6, label: "6 UNIDADES" },
   ];
 
   useClipPathScrollTrigger({
@@ -513,7 +505,7 @@ const BinPlanosSection = () => {
 
             {/* desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
-              <label className="text-white block text-center">MODELS:</label>
+              <label className="text-white block text-center">MODELOS:</label>
             </div>
             <div className="hidden md:flex flex-wrap justify-center gap-5  mx-auto px-2">
               {modelOptions.map((option) => (
@@ -590,27 +582,27 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Banda dosificadora de 18" con velocidad variable
+                          Banda dosificadora de 18" con velocidad variable..
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre
-                          confiable
+                          confiable.
                         </li>
                         <li>
                           Vibradores en la tolva de finos para asegurar una
-                          alimentación constante
+                          alimentación constante.
                         </li>
                         <li>
                           Sensor de flujo para material fino con alarma de nivel
-                          bajo
+                          bajo.
                         </li>
                         <li>
                           Transportador de alimentación de 24" con banda ancha
-                          para un traslado más estable a baja velocidad
+                          para un traslado más estable a baja velocidad.
                         </li>
                         <li>
                           Poleas de cabeza recubiertas de hule y rodillos
-                          estándar CEMA
+                          estándar CEMA.
                         </li>
                       </ul>
                     </div>
@@ -662,20 +654,27 @@ const BinPlanosSection = () => {
                           plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Flancos estéticos para una imagen profesional</li>
+                          <li>
+                            Flancos estéticos para una imagen profesional.
+                          </li>
                         ) : null}
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Limpiadores de banda para prolongar la vida útil de la
                           banda.
@@ -752,13 +751,18 @@ const BinPlanosSection = () => {
                           datos.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
+
                         <li>
                           Sistema de alarmas y seguridades para condiciones
                           fuera de rango.
@@ -769,13 +773,17 @@ const BinPlanosSection = () => {
                         </li>
                         <li>
                           Adaptable a la infraestructura de control existente de
-                          la planta de asfalto
+                          la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sin complicaciones con los sistemas de
-                              control central
+                              control central.
                             </li>
                           </ul>
                         </li>
@@ -832,8 +840,12 @@ const BinPlanosSection = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -1046,7 +1058,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("awidth", "width")?.toFixed(1) ?? ""} cm`
+                          ? `${dim("awidth", "width")?.toFixed(1) ?? ""} m`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(
                               1,
                             )} ft`}
@@ -1108,7 +1120,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${dim("aheight", "height")?.toFixed(1) ?? ""} cm`
+                          ? `${dim("aheight", "height")?.toFixed(1) ?? ""} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(
                               1,
                             )} ft`}
@@ -1163,7 +1175,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("alength", "length")?.toFixed(1) ?? ""} cm`
+                          ? `${dim("alength", "length")?.toFixed(1) ?? ""} m`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(
                               1,
                             )} ft`}
@@ -1256,7 +1268,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleLength", "singleLength")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("asingleLength", "singleLength")?.toFixed(1) ?? ""} m`
                             : `${(
                                 dim("asingleLength", "singleLength") * cmToFeet
                               ).toFixed(1)} ft`}
@@ -1266,7 +1278,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleWidth", "singleWidth")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("asingleWidth", "singleWidth")?.toFixed(1) ?? ""} m`
                             : `${(
                                 dim("asingleWidth", "singleWidth") * cmToFeet
                               ).toFixed(1)} ft`}
@@ -1276,7 +1288,7 @@ const BinPlanosSection = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleHeight", "singleHeight")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("asingleHeight", "singleHeight")?.toFixed(1) ?? ""} m`
                             : `${(
                                 dim("asingleHeight", "singleHeight") * cmToFeet
                               ).toFixed(1)} ft`}
@@ -1335,7 +1347,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalLength", "totalLength")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("atotalLength", "totalLength")?.toFixed(1) ?? ""} m`
                             : `${(
                                 dim("atotalLength", "totalLength") * cmToFeet
                               ).toFixed(1)} ft`}
@@ -1349,7 +1361,7 @@ const BinPlanosSection = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("awheel", "wheel")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("awheel", "wheel")?.toFixed(1) ?? ""} m`
                             : `${(dim("awheel", "wheel") * cmToFeet).toFixed(
                                 1,
                               )} ft`}
@@ -1359,7 +1371,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalWidth", "totalWidth")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("atotalWidth", "totalWidth")?.toFixed(1) ?? ""} m`
                             : `${(
                                 dim("atotalWidth", "totalWidth") * cmToFeet
                               ).toFixed(1)} ft`}
@@ -1369,7 +1381,7 @@ const BinPlanosSection = () => {
                         <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aheightWithBins", "heightWithBins")?.toFixed(1) ?? ""} cm`
+                            ? `${dim("aheightWithBins", "heightWithBins")?.toFixed(1) ?? ""} m`
                             : `${(
                                 dim("aheightWithBins", "heightWithBins") *
                                 cmToFeet
@@ -1497,27 +1509,27 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Banda dosificadora de 18" con velocidad variable
+                          Banda dosificadora de 18" con velocidad variable..
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre
-                          confiable
+                          confiable.
                         </li>
                         <li>
                           Vibradores en la tolva de finos para asegurar una
-                          alimentación constante
+                          alimentación constante.
                         </li>
                         <li>
                           Sensor de flujo para material fino con alarma de nivel
-                          bajo
+                          bajo.
                         </li>
                         <li>
                           Transportador de alimentación de 24" con banda ancha
-                          para un traslado más estable a baja velocidad
+                          para un traslado más estable a baja velocidad.
                         </li>
                         <li>
                           Poleas de cabeza recubiertas de hule y rodillos
-                          estándar CEMA
+                          estándar CEMA.
                         </li>
                       </ul>
                     </div>
@@ -1569,15 +1581,21 @@ const BinPlanosSection = () => {
                           plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Flancos estéticos para una imagen profesional</li>
+                          <li>
+                            Flancos estéticos para una imagen profesional.
+                          </li>
                         ) : null}
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -1659,8 +1677,12 @@ const BinPlanosSection = () => {
                           datos.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -1679,10 +1701,14 @@ const BinPlanosSection = () => {
                           la planta de asfalto
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sin complicaciones con los sistemas de
-                              control central
+                              control central.
                             </li>
                           </ul>
                         </li>
@@ -1739,8 +1765,12 @@ const BinPlanosSection = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -1953,7 +1983,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("awidth", "width").toFixed(1)} cm`
+                          ? `${dim("awidth", "width").toFixed(1)} m`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -2021,7 +2051,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${dim("aheight", "height").toFixed(1)} cm`
+                          ? `${dim("aheight", "height").toFixed(1)} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -2074,7 +2104,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("alength", "length").toFixed(1)} cm`
+                          ? `${dim("alength", "length").toFixed(1)} m`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -2165,7 +2195,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleLength", "singleLength").toFixed(1)} cm`
+                            ? `${dim("asingleLength", "singleLength").toFixed(1)} m`
                             : `${(dim("asingleLength", "singleLength") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2173,7 +2203,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleWidth", "singleWidth").toFixed(1)} cm`
+                            ? `${dim("asingleWidth", "singleWidth").toFixed(1)} m`
                             : `${(dim("asingleWidth", "singleWidth") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2181,7 +2211,7 @@ const BinPlanosSection = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleHeight", "singleHeight").toFixed(1)} cm`
+                            ? `${dim("asingleHeight", "singleHeight").toFixed(1)} m`
                             : `${(dim("asingleHeight", "singleHeight") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2238,7 +2268,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
+                            ? `${dim("atotalLength", "totalLength").toFixed(1)} m`
                             : `${(dim("atotalLength", "totalLength") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2250,7 +2280,7 @@ const BinPlanosSection = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("awheel", "wheel").toFixed(1)} cm`
+                            ? `${dim("awheel", "wheel").toFixed(1)} m`
                             : `${(dim("awheel", "wheel") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2258,7 +2288,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalWidth", "totalWidth").toFixed(1)} cm`
+                            ? `${dim("atotalWidth", "totalWidth").toFixed(1)} m`
                             : `${(dim("atotalWidth", "totalWidth") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2266,7 +2296,7 @@ const BinPlanosSection = () => {
                         <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
+                            ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} m`
                             : `${(dim("aheightWithBins", "heightWithBins") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2396,33 +2426,33 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Banda dosificadora de 18" con velocidad variable
+                          Banda dosificadora de 18" con velocidad variable.
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre
-                          confiable
+                          confiable.
                         </li>
                         <li>
                           Vibradores en la tolva de finos para asegurar una
-                          alimentación constante
+                          alimentación constante.
                         </li>
                         <li>
                           Sensor de flujo para material fino con alarma de nivel
-                          bajo
+                          bajo.
                         </li>
                         <li>
                           Transportador de alimentación de 24" con banda ancha
-                          para un traslado más estable a baja velocidad
+                          para un traslado más estable a baja velocidad.
                         </li>
                         <li>
                           Poleas de cabeza recubiertas de hule y rodillos
-                          estándar CEMA
+                          estándar CEMA.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 upppercase">
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
                         </h1>
                         <button
@@ -2469,15 +2499,21 @@ const BinPlanosSection = () => {
                           plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Flancos estéticos para una imagen profesional</li>
+                          <li>
+                            Flancos estéticos para una imagen profesional.
+                          </li>
                         ) : null}
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -2558,8 +2594,12 @@ const BinPlanosSection = () => {
                           datos.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -2575,13 +2615,17 @@ const BinPlanosSection = () => {
                         </li>
                         <li>
                           Adaptable a la infraestructura de control existente de
-                          la planta de asfalto
+                          la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sin complicaciones con los sistemas de
-                              control central
+                              control central.
                             </li>
                           </ul>
                         </li>
@@ -2639,8 +2683,12 @@ const BinPlanosSection = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -2856,7 +2904,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("awidth", "width").toFixed(1)} cm`
+                          ? `${dim("awidth", "width").toFixed(1)} m`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -2916,7 +2964,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${dim("aheight", "height").toFixed(1)} cm`
+                          ? `${dim("aheight", "height").toFixed(1)} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -2969,7 +3017,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("alength", "length").toFixed(1)} cm`
+                          ? `${dim("alength", "length").toFixed(1)} m`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -3061,7 +3109,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleLength", "singleLength").toFixed(1)} cm`
+                            ? `${dim("asingleLength", "singleLength").toFixed(1)} m`
                             : `${(dim("asingleLength", "singleLength") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3069,7 +3117,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleWidth", "singleWidth").toFixed(1)} cm`
+                            ? `${dim("asingleWidth", "singleWidth").toFixed(1)} m`
                             : `${(dim("asingleWidth", "singleWidth") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3077,7 +3125,7 @@ const BinPlanosSection = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleHeight", "singleHeight").toFixed(1)} cm`
+                            ? `${dim("asingleHeight", "singleHeight").toFixed(1)} m`
                             : `${(dim("asingleHeight", "singleHeight") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3135,7 +3183,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
+                            ? `${dim("atotalLength", "totalLength").toFixed(1)} m`
                             : `${(dim("atotalLength", "totalLength") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3147,7 +3195,7 @@ const BinPlanosSection = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("awheel", "wheel").toFixed(1)} cm`
+                            ? `${dim("awheel", "wheel").toFixed(1)} m`
                             : `${(dim("awheel", "wheel") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3155,7 +3203,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalWidth", "totalWidth").toFixed(1)} cm`
+                            ? `${dim("atotalWidth", "totalWidth").toFixed(1)} m`
                             : `${(dim("atotalWidth", "totalWidth") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3163,7 +3211,7 @@ const BinPlanosSection = () => {
                         <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
+                            ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} m`
                             : `${(dim("aheightWithBins", "heightWithBins") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3289,27 +3337,27 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Banda dosificadora de 18" con velocidad variable
+                          Banda dosificadora de 18" con velocidad variable.
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre
-                          confiable
+                          confiable.
                         </li>
                         <li>
                           Vibradores en la tolva de finos para asegurar una
-                          alimentación constante
+                          alimentación constante.
                         </li>
                         <li>
                           Sensor de flujo para material fino con alarma de nivel
-                          bajo
+                          bajo.
                         </li>
                         <li>
                           Transportador de alimentación de 24" con banda ancha
-                          para un traslado más estable a baja velocidad
+                          para un traslado más estable a baja velocidad.
                         </li>
                         <li>
                           Poleas de cabeza recubiertas de hule y rodillos
-                          estándar CEMA
+                          estándar CEMA.
                         </li>
                       </ul>
                     </div>
@@ -3361,15 +3409,21 @@ const BinPlanosSection = () => {
                           plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Flancos estéticos para una imagen profesional</li>
+                          <li>
+                            Flancos estéticos para una imagen profesional.
+                          </li>
                         ) : null}
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -3450,8 +3504,12 @@ const BinPlanosSection = () => {
                           datos.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -3467,13 +3525,17 @@ const BinPlanosSection = () => {
                         </li>
                         <li>
                           Adaptable a la infraestructura de control existente de
-                          la planta de asfalto
+                          la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sin complicaciones con los sistemas de
-                              control central
+                              control central.
                             </li>
                           </ul>
                         </li>
@@ -3530,8 +3592,12 @@ const BinPlanosSection = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -3744,7 +3810,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("awidth", "width").toFixed(1)} cm`
+                          ? `${dim("awidth", "width").toFixed(1)} m`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -3812,7 +3878,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${dim("aheight", "height").toFixed(1)} cm`
+                          ? `${dim("aheight", "height").toFixed(1)} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -3865,7 +3931,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("alength", "length").toFixed(1)} cm`
+                          ? `${dim("alength", "length").toFixed(1)} m`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -3956,7 +4022,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleLength", "singleLength").toFixed(1)} cm`
+                            ? `${dim("asingleLength", "singleLength").toFixed(1)} m`
                             : `${(dim("asingleLength", "singleLength") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3964,7 +4030,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleWidth", "singleWidth").toFixed(1)} cm`
+                            ? `${dim("asingleWidth", "singleWidth").toFixed(1)} m`
                             : `${(dim("asingleWidth", "singleWidth") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -3972,7 +4038,7 @@ const BinPlanosSection = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleHeight", "singleHeight").toFixed(1)} cm`
+                            ? `${dim("asingleHeight", "singleHeight").toFixed(1)} m`
                             : `${(dim("asingleHeight", "singleHeight") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -4029,7 +4095,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
+                            ? `${dim("atotalLength", "totalLength").toFixed(1)} m`
                             : `${(dim("atotalLength", "totalLength") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -4041,7 +4107,7 @@ const BinPlanosSection = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("awheel", "wheel").toFixed(1)} cm`
+                            ? `${dim("awheel", "wheel").toFixed(1)} m`
                             : `${(dim("awheel", "wheel") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -4049,7 +4115,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalWidth", "totalWidth").toFixed(1)} cm`
+                            ? `${dim("atotalWidth", "totalWidth").toFixed(1)} m`
                             : `${(dim("atotalWidth", "totalWidth") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -4057,7 +4123,7 @@ const BinPlanosSection = () => {
                         <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
+                            ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} m`
                             : `${(dim("aheightWithBins", "heightWithBins") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -4182,27 +4248,27 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Banda dosificadora de 18" con velocidad variable
+                          Banda dosificadora de 18" con velocidad variable.
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre
-                          confiable
+                          confiable.
                         </li>
                         <li>
                           Vibradores en la tolva de finos para asegurar una
-                          alimentación constante
+                          alimentación constante.
                         </li>
                         <li>
                           Sensor de flujo para material fino con alarma de nivel
-                          bajo
+                          bajo.
                         </li>
                         <li>
                           Transportador de alimentación de 24" con banda ancha
-                          para un traslado más estable a baja velocidad
+                          para un traslado más estable a baja velocidad.
                         </li>
                         <li>
                           Poleas de cabeza recubiertas de hule y rodillos
-                          estándar CEMA
+                          estándar CEMA.
                         </li>
                       </ul>
                     </div>
@@ -4254,15 +4320,21 @@ const BinPlanosSection = () => {
                           plazo.
                         </li>
                         {panelOption === "withPanels" ? (
-                          <li>Flancos estéticos para una imagen profesional</li>
+                          <li>
+                            Flancos estéticos para una imagen profesional.
+                          </li>
                         ) : null}
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -4343,8 +4415,12 @@ const BinPlanosSection = () => {
                           datos.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -4363,10 +4439,14 @@ const BinPlanosSection = () => {
                           la planta de asfalto
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sin complicaciones con los sistemas de
-                              control central
+                              control central.
                             </li>
                           </ul>
                         </li>
@@ -4423,8 +4503,12 @@ const BinPlanosSection = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -4637,7 +4721,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("awidth", "width").toFixed(1)} cm`
+                          ? `${dim("awidth", "width").toFixed(1)} m`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -4697,7 +4781,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${dim("aheight", "height").toFixed(1)} cm`
+                          ? `${dim("aheight", "height").toFixed(1)} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -4750,7 +4834,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("alength", "length").toFixed(1)} cm`
+                          ? `${dim("alength", "length").toFixed(1)} m`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -4841,7 +4925,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleLength", "singleLength").toFixed(1)} cm`
+                            ? `${dim("asingleLength", "singleLength").toFixed(1)} m`
                             : `${(dim("asingleLength", "singleLength") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -4849,7 +4933,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleWidth", "singleWidth").toFixed(1)} cm`
+                            ? `${dim("asingleWidth", "singleWidth").toFixed(1)} m`
                             : `${(dim("asingleWidth", "singleWidth") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -4857,7 +4941,7 @@ const BinPlanosSection = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleHeight", "singleHeight").toFixed(1)} cm`
+                            ? `${dim("asingleHeight", "singleHeight").toFixed(1)} m`
                             : `${(dim("asingleHeight", "singleHeight") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -4914,7 +4998,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
+                            ? `${dim("atotalLength", "totalLength").toFixed(1)} m`
                             : `${(dim("atotalLength", "totalLength") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -4926,7 +5010,7 @@ const BinPlanosSection = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("awheel", "wheel").toFixed(1)} cm`
+                            ? `${dim("awheel", "wheel").toFixed(1)} m`
                             : `${(dim("awheel", "wheel") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -4934,7 +5018,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalWidth", "totalWidth").toFixed(1)} cm`
+                            ? `${dim("atotalWidth", "totalWidth").toFixed(1)} m`
                             : `${(dim("atotalWidth", "totalWidth") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -4942,7 +5026,7 @@ const BinPlanosSection = () => {
                         <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
+                            ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} m`
                             : `${(dim("aheightWithBins", "heightWithBins") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -5067,27 +5151,27 @@ const BinPlanosSection = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Banda dosificadora de 18" con velocidad variable
+                          Banda dosificadora de 18" con velocidad variable.
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre
-                          confiable
+                          confiable.
                         </li>
                         <li>
                           Vibradores en la tolva de finos para asegurar una
-                          alimentación constante
+                          alimentación constante.
                         </li>
                         <li>
                           Sensor de flujo para material fino con alarma de nivel
-                          bajo
+                          bajo.
                         </li>
                         <li>
                           Transportador de alimentación de 24" con banda ancha
-                          para un traslado más estable a baja velocidad
+                          para un traslado más estable a baja velocidad.
                         </li>
                         <li>
                           Poleas de cabeza recubiertas de hule y rodillos
-                          estándar CEMA
+                          estándar CEMA.
                         </li>
                       </ul>
                     </div>
@@ -5148,8 +5232,12 @@ const BinPlanosSection = () => {
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -5230,8 +5318,12 @@ const BinPlanosSection = () => {
                           datos.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -5250,10 +5342,14 @@ const BinPlanosSection = () => {
                           la planta de asfalto
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               Integración sin complicaciones con los sistemas de
-                              control central
+                              control central.
                             </li>
                           </ul>
                         </li>
@@ -5310,8 +5406,12 @@ const BinPlanosSection = () => {
                           baja si no se desea.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
                               También puede transportarse en cama baja o
                               plataforma.
                             </li>
@@ -5524,7 +5624,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("awidth", "width").toFixed(1)} cm`
+                          ? `${dim("awidth", "width").toFixed(1)} m`
                           : `${(dim("awidth", "width") * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -5584,7 +5684,7 @@ const BinPlanosSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${dim("aheight", "height").toFixed(1)} cm`
+                          ? `${dim("aheight", "height").toFixed(1)} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -5637,7 +5737,7 @@ const BinPlanosSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${dim("alength", "length").toFixed(1)} cm`
+                          ? `${dim("alength", "length").toFixed(1)} m`
                           : `${(dim("alength", "length") * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -5728,7 +5828,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleLength", "singleLength").toFixed(1)} cm`
+                            ? `${dim("asingleLength", "singleLength").toFixed(1)} m`
                             : `${(dim("asingleLength", "singleLength") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -5736,7 +5836,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleWidth", "singleWidth").toFixed(1)} cm`
+                            ? `${dim("asingleWidth", "singleWidth").toFixed(1)} m`
                             : `${(dim("asingleWidth", "singleWidth") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -5744,7 +5844,7 @@ const BinPlanosSection = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("asingleHeight", "singleHeight").toFixed(1)} cm`
+                            ? `${dim("asingleHeight", "singleHeight").toFixed(1)} m`
                             : `${(dim("asingleHeight", "singleHeight") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -5801,7 +5901,7 @@ const BinPlanosSection = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalLength", "totalLength").toFixed(1)} cm`
+                            ? `${dim("atotalLength", "totalLength").toFixed(1)} m`
                             : `${(dim("atotalLength", "totalLength") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -5813,7 +5913,7 @@ const BinPlanosSection = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("awheel", "wheel").toFixed(1)} cm`
+                            ? `${dim("awheel", "wheel").toFixed(1)} m`
                             : `${(dim("awheel", "wheel") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -5821,7 +5921,7 @@ const BinPlanosSection = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("atotalWidth", "totalWidth").toFixed(1)} cm`
+                            ? `${dim("atotalWidth", "totalWidth").toFixed(1)} m`
                             : `${(dim("atotalWidth", "totalWidth") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -5829,7 +5929,7 @@ const BinPlanosSection = () => {
                         <h1>Altura para transporte:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} cm`
+                            ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} m`
                             : `${(dim("aheightWithBins", "heightWithBins") * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>

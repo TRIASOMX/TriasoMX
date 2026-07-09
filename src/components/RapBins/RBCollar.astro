@@ -1,17 +1,12 @@
 ---
 import rap from "../../assets/images/DrumMixers/rap.webp";
-import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
-import Tred from "../../assets/images/AsphaltStorage/redT.webp";
+import TaqAire from "../../assets/images/RapBins/TqeAire.webp";
+import Sopladores from "../../assets/images/RapBins/Sopladores.webp";
 import AcordeonItem from "../unitComponents/AcordeonItem";
 import binUnit1 from "../../assets/images/BinUnits/binUnit1.webp";
-import img1 from "../../assets/images/RapBins/RAProv3.webp";
-import img1Low from "../../assets/images/RapBins/Low/RAProv3Low.webp";
 import img2 from "../../assets/images/RapBins/RAProv1.webp";
 import RAProv5 from "../../assets/images/RapBins/RAProv5.webp";
-import OSection from "../unitComponents/OSection.astro";
-import rapFlight from "../../assets/images/DrumMixers/a21.webp";
-import heroIMG from "../../assets/images/RapBins/heroBG.webp";
-import img4 from "../../assets/images/RapBins/RapProv6.webp";
+import heroIMG from "../../assets/images/RapBins/HeroRBins.webp";
 import img4Low from "../../assets/images/RapBins/Low/RapProv6Low.webp";
 import { Image } from "astro:assets";
 import poster1 from "../../assets/images/RapBins/Gallery/RBG1.webp";
@@ -20,7 +15,49 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
 import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 
 import OSHand from "../../assets/images/OSHand.webp";
-import Slider from "../IntegralAsphalt/SliderOsIntegral";
+import Slider from "../AsphaltStorage/Slider";
+import CotizacionBtn from "../unitComponents/cotizacionBtn.astro";
+
+const slides = [
+  {
+    id: 1,
+    title: "Tanque de aire",
+    text: "Tanque de aire de 450 Lts para los sopladores explosivos, diseñado para la mezcla asfáltica apelmazada.El resultado es un flujo limpio y uniforme en cada descarga.",
+    image: TaqAire.src,
+  },
+  {
+    id: 2,
+    title: "Sopladores explosivos",
+    text: "Los sopladores explosivos están diseñados para deshacer los apelmazamientos de de mezcla asfáltica atorada con aire del tanque de aire 450 Lts.",
+    image: Sopladores.src,
+  },
+  {
+    id: 3,
+    title: "Transportador",
+    text: "El transportador está diseñado para integrar la carpeta asfáltica recuperada directamente en el collar de RAP. Garantizando un flujo constante al tambor mezclador.",
+    image: rap.src,
+  },
+];
+const slides2 = [
+  {
+    id: 1,
+    title: "Cribado de RAP",
+    text: "El cribado de RAP elimina material sobredimensionado y contaminantes antes del proceso. Se realiza mediante una criba vibratoria integrada al sistema de RAP. Independiente o integrada directamente en la tolva de RAP, sin necesidad de un transportador adicional.",
+    image: TaqAire.src,
+  },
+  {
+    id: 2,
+    title: "Trituradores de RAP",
+    text: "Los trituradores de RAP reducen material sobredimensionado. Se instalan en la descarga de la criba de RAP y pueden operar en un sistema de recirculación cerrada para un control preciso del tamaño.",
+    image: Sopladores.src,
+  },
+  {
+    id: 3,
+    title: "Transportadores de RAP",
+    text: "Los transportadores de RAP aseguran un flujo continuo y controlado del material dentro del sistema. Están diseñados para trabajo pesado, con estructura reforzada y velocidad adecuada para mantener estabilidad en la alimentación y precisión en el proceso.",
+    image: rap.src,
+  },
+];
 ---
 
 <section class="w-full font-bold">
@@ -45,158 +82,17 @@ import Slider from "../IntegralAsphalt/SliderOsIntegral";
           en el tambor de forma uniforme.
         </p>
         <div class="flex flex-col justify-center items-center">
-          <div class="w-1/4">
-            <LearnBtnBlue />
-          </div>
+          <LearnBtnBlue />
         </div>
       </div>
     </div>
   </div>
-
-  <div class="bg-[#393939] p-10">
-    <div class="max-w-7xl mx-auto">
-      <div class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3" id="cardRow0">
-        <!-- Card 1-A -->
-        <div
-          class="relative rounded-lg overflow-hidden group cursor-pointer"
-          data-card="0-0"
-        >
-          <div class="w-full h-44 bg-black/10 flex items-center justify-center">
-            <img src="https://placehold.co/600x400" alt="" />
-          </div>
-
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-          >
-            <span
-              class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-            >
-              Tanque de aire
-            </span>
-            <button
-              class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-              aria-expanded="false"
-            >
-              <svg
-                class="chevron w-3 h-3 transition-transform duration-300"
-                viewBox="0 0 12 12"
-                fill="none"
-              >
-                <path
-                  d="M2 4l4 4 4-4"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"></path>
-              </svg>
-              mostrar más
-            </button>
-            <div
-              class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-            >
-              <p class="text-white/75 text-xs leading-relaxed mt-2">
-                Tanque de aire de 450 Lts para los sopladores explosivos,
-                diseñado para la mezcla asfáltica apelmazada.El resultado es un
-                flujo limpio y uniforme en cada descarga.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 1-B -->
-        <div
-          class="relative rounded-lg overflow-hidden group cursor-pointer"
-          data-card="0-1"
-        >
-          <div class="w-full h-44 bg-black/10 flex items-center justify-center">
-            <img src="https://placehold.co/600x400" alt="" />
-          </div>
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-          >
-            <span
-              class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-            >
-              Sopladores explosivos
-            </span>
-            <button
-              class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-              aria-expanded="false"
-            >
-              <svg
-                class="chevron w-3 h-3 transition-transform duration-300"
-                viewBox="0 0 12 12"
-                fill="none"
-              >
-                <path
-                  d="M2 4l4 4 4-4"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"></path>
-              </svg>
-              mostrar más
-            </button>
-            <div
-              class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-            >
-              <p class="text-white/75 text-xs leading-relaxed mt-2">
-                Los sopladores explosivos están diseñados para deshacer los
-                apelmazamientos de de mezcla asfáltica atorada con aire del
-                tanque de aire 450 Lts.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 1-C -->
-        <div
-          class="relative rounded-lg overflow-hidden group cursor-pointer"
-          data-card="0-2"
-        >
-          <div class="w-full h-44 bg-black/10 flex items-center justify-center">
-            <img src="https://placehold.co/600x400" alt="" />
-          </div>
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-          >
-            <span
-              class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-            >
-              Transportador
-            </span>
-            <button
-              class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-              aria-expanded="false"
-            >
-              <svg
-                class="chevron w-3 h-3 transition-transform duration-300"
-                viewBox="0 0 12 12"
-                fill="none"
-              >
-                <path
-                  d="M2 4l4 4 4-4"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"></path>
-              </svg>
-              mostrar más
-            </button>
-            <div
-              class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-            >
-              <p class="text-white/75 text-xs leading-relaxed mt-2">
-                El transportador está diseñado para integrar la carpeta
-                asfáltica recuperada directamente en el collar de RAP.
-                Garantizando un flujo constante al tambor mezclador.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="bg-[#393939]">
+    <Slider slides={slides} dark={false} client:only />
   </div>
 
   <!-- --------------------------------------------------------------------------- -->
-  <div class="flex">
+  <div class="flex w-full">
     <Image
       src={heroIMG}
       alt="Banner of a Counterflow asphalt plant on a road"
@@ -208,6 +104,7 @@ import Slider from "../IntegralAsphalt/SliderOsIntegral";
     <SmartVideo
       client:visible
       src="/Videos/Webm/ProvVideo1.webm"
+      aspectRatio="12/8"
       poster={poster1.src}
       isLoop={false}
       autoplayOnMobile={false}
@@ -235,19 +132,19 @@ import Slider from "../IntegralAsphalt/SliderOsIntegral";
       >
         <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
           <div class="w-full">
-        <h2 class="text-white text-lg md:text-xl">
-            Sabemos la importancia de que su equipo no pare de trabajar.
-          </h2>
-          <p
-            class="text-[#d9d9d9] pt-2 text-sm lg:text-lg md:text-lg text-justify"
-          >
-            Equipado con tolvas de RAP de gran capacidad, este proceso de
-            alimentación maneja altos volúmenes de material manteniendo una
-            distribución uniforme. El sistema está diseñado para prevenir
-            acumulaciones, asegurando un flujo continuo y estable hacia el
-            tambor mezclador sin interrupciones.
-          </p>
-        </div>
+            <h2 class="text-white text-lg md:text-xl">
+              Sabemos la importancia de que su equipo no pare de trabajar.
+            </h2>
+            <p
+              class="text-[#d9d9d9] pt-2 text-sm lg:text-lg md:text-lg text-justify"
+            >
+              Equipado con tolvas de RAP de gran capacidad, este proceso de
+              alimentación maneja altos volúmenes de material manteniendo una
+              distribución uniforme. El sistema está diseñado para prevenir
+              acumulaciones, asegurando un flujo continuo y estable hacia el
+              tambor mezclador sin interrupciones.
+            </p>
+          </div>
         </div>
         <div class="w-full hidden lg:flex md:w-auto">
           <Image
@@ -259,7 +156,7 @@ import Slider from "../IntegralAsphalt/SliderOsIntegral";
           />
         </div>
       </div>
-    </div>    
+    </div>
 
     <div
       class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"
@@ -352,7 +249,7 @@ import Slider from "../IntegralAsphalt/SliderOsIntegral";
   <!-- Banner -->
   <section class="">
     <div
-      class="bg-black lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(https://placehold.co/600x400/png)] bg-cover bg-center bg-no-repeat relative"
+      class="lg:h-[50vh] md:h-[50vh] flex items-center bg-[#393939] bg-cover bg-center bg-no-repeat relative"
     >
       <div class="absolute inset-0 bg-[#000000]/70"></div>
       <div class="max-w-7xl mx-auto px-8 space-y-5 relative">
@@ -381,31 +278,7 @@ import Slider from "../IntegralAsphalt/SliderOsIntegral";
           >
             <!-- Botón 1 -->
             <Whatsbtn />
-
-            <a
-              href="/Contact"
-              aria-label="Button to request a quote"
-              class="bg-blueSecondary border-white border border- text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-center gap-2 shadow-md hover:bg-[#0044A4]/80"
-            >
-              Solicitar una cotización
-              <svg
-                width="24px"
-                height="24px"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                color="#FFFFFF"
-              >
-                <!-- Icono del segundo botón (opcional) -->
-                <path
-                  d="M5 12H19M19 12L12 5M19 12L12 19"
-                  stroke="#FFFFFF"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
-            </a>
+            <CotizacionBtn />
           </div>
         </div>
       </div>
@@ -474,7 +347,9 @@ import Slider from "../IntegralAsphalt/SliderOsIntegral";
         </div>
         <div class="flex flex-col justify-center mx-auto">
           <div>
-            <h1 class="text-center text-white">
+            <h1
+              class="text-center text-white text-2xl md:text-4xl max-w-[20ch]"
+            >
               Control integrado del flujo de RAP
             </h1>
           </div>
@@ -483,7 +358,9 @@ import Slider from "../IntegralAsphalt/SliderOsIntegral";
 
         <div class="flex flex-col justify-center mx-auto">
           <div>
-            <h1 class="text-center text-white">
+            <h1
+              class="text-center text-white text-2xl md:text-4xl max-w-[20ch]"
+            >
               Dosificación precisa para resultados confiables
             </h1>
           </div>
@@ -507,200 +384,21 @@ import Slider from "../IntegralAsphalt/SliderOsIntegral";
     <div class="max-w-7xl mx-auto px-8 space-y-5 py-10">
       <!-- titulo -->
       <div class="flex flex-col space-y-5">
-        <h1 class="font-bold text-3xl">Sistemas de trituración de RAP</h1>
-        <p class="text-[#393939]">
+        <h1 class="font-bold text-2xl md:text-4xl">
+          Sistemas de trituración de RAP
+        </h1>
+        <p class="text-[#393939] text-base md:text-lg">
           Como opción adicional para una operación completa, en Triaso ofrecemos
           sistemas de trituración integrados al sistema de RAP, capaces de
           reducir el material hasta la granulometría requerida para su mezcla.
+          <br />
+          Con control preciso de tamaño, su planta puede procesar incluso los lotes
+          de RAP más difíciles de integrar, manteniendo estabilidad en la producción
+          y calidad constante de la mezcla asfáltica.
         </p>
-        <p class="text-[#393939]">
-          Con control preciso de tamaño, su planta puede procesar incluso los
-          lotes de RAP más difíciles de integrar, manteniendo estabilidad en la
-          producción y calidad constante de la mezcla asfáltica.
-        </p>
-      </div>
-
-      <!-- cards -->
-      <div class="">
-        <div class="max-w-7xl mx-auto">
-          <div
-            class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3"
-            id="cardRow0"
-          >
-            <!-- Card 1-A -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="0-0"
-            >
-              <div
-                class="w-full h-80 bg-black/10 flex items-center justify-center"
-              >
-                <img src="https://placehold.co/600x400" alt="" />
-              </div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-              >
-                <span
-                  class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                >
-                  Placeholder
-                </span>
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p class="text-white/75 text-xs leading-relaxed mt-2">
-                    El cribado de RAP elimina material sobredimensionado y
-                    contaminantes antes del proceso. Se realiza mediante una
-                    criba vibratoria integrada al sistema de RAP. Independiente
-                    o integrada directamente en la tolva de RAP, sin necesidad
-                    de un transportador adicional.
-                  </p>
-                  <ul class="list-disc pl-5">
-                    <li class="text-white/75 text-xs leading-relaxed mt-2">
-                      Una, dos o tres camas
-                    </li>
-                    <li class="text-white/75 text-xs leading-relaxed mt-2">
-                      Integración directa a la tolva de RAP
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 1-B -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="0-1"
-            >
-              <div
-                class="w-full h-80 bg-black/10 flex items-center justify-center"
-              >
-                <img src="https://placehold.co/600x400" alt="" />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-              >
-                <span
-                  class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                >
-                  Placeholder
-                </span>
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p class="text-white/75 text-xs leading-relaxed mt-2">
-                    Los trituradores de RAP reducen material sobredimensionado.
-                    Se instalan en la descarga de la criba de RAP y pueden
-                    operar en un sistema de recirculación cerrada para un
-                    control preciso del tamaño.
-                  </p>
-                  <ul class="list-disc pl-5">
-                    <li class="text-white/75 text-xs leading-relaxed mt-2">
-                      Recirculación cerrada
-                    </li>
-                    <li class="text-white/75 text-xs leading-relaxed mt-2">
-                      Integración directa a la tolva de RAP
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 1-C -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="0-2"
-            >
-              <div
-                class="w-full h-80 bg-black/10 flex items-center justify-center"
-              >
-                <img src="https://placehold.co/600x400" alt="" />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-              >
-                <span
-                  class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                >
-                  Transportador
-                </span>
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p class="text-white/75 text-xs leading-relaxed mt-2">
-                    Los transportadores de RAP aseguran un flujo continuo y
-                    controlado del material dentro del sistema. Están diseñados
-                    para trabajo pesado, con estructura reforzada y velocidad
-                    adecuada para mantener estabilidad en la alimentación y
-                    precisión en el proceso.
-                  </p>
-                  <ul class="list-disc pl-5">
-                    <li class="text-white/75 text-xs leading-relaxed mt-2">
-                      Recirculación cerrada
-                    </li>
-                    <li class="text-white/75 text-xs leading-relaxed mt-2">
-                      Integración directa a la tolva de RAP
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+    <Slider slides={slides2} dark={true} client:only />
   </section>
 </section>
 
