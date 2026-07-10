@@ -1,40 +1,12 @@
 ---
-import HeroComponent from "../unitComponents/HeroComponent.astro";
-import heroImage from "../../assets/images/BagHouses/BHProv7.webp";
 import BHG3 from "../../assets/images/BagHouses/heroImage2.webp";
+import HeroComponentV1 from "../unitComponents/HeroComponentV1.astro";
 ---
 
 <section class="">
-  <HeroComponent
-    title="Casa de bolsas"
-    image={heroImage.src}
-    altImage={BHG3.src}
-    imageAlt="Casa de bolsas"
-    descAltImage="Casa de bolsas"
+  <HeroComponentV1
+    title="CASA DE BOLSAS"
+    text="Las casas de bolsas Triaso® están diseñadas para una captura total de finos y control total de humos contaminantes. Mediante tecnología ‘pulse-jet’, estos sistemas integrados y compactos están diseñados para lograr la máxima eficiencia de filtración, capturando partículas finas, asegurando el cumplimiento de las normativas ambientales y mejorando la seguridad en el área de trabajo, con una eficiencia de filtración de hasta 99.99%. Pensadas para plantas de asfalto y procesamiento de agregados, mejorando la calidad de la mezcla al permitir la reincorporación controlada de finos, y ayudan a una operación más sustentable al reducir el polvo y las emisiones."
+    heroImage={BHG3.src}
   />
-
-  <div class="bg-[#000000]/95">
-    <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
-      <div
-        class="flex flex-col space-y-5 justify-center items-center text-center"
-      >
-        <h1 class="text-white text-lg lg:text-xl">
-          Las casas de bolsas Triaso® están diseñadas para una captura total de
-          finos y control total de humos contaminantes. Mediante tecnología
-          ‘pulse-jet’, estos sistemas integrados y compactos están diseñados
-          para lograr la máxima eficiencia de filtración, capturando partículas
-          finas, asegurando el cumplimiento de las normativas ambientales y
-          mejorando la seguridad en el área de trabajo, con una eficiencia de
-          filtración de hasta 99.99%.
-        </h1>
-
-        <h1 class="text-white text-lg lg:text-xl">
-          Pensadas para plantas de asfalto y procesamiento de agregados,
-          mejorando la calidad de la mezcla al permitir la reincorporación
-          controlada de finos, y ayudan a una operación más sustentable al
-          reducir el polvo y las emisiones.
-        </h1>
-      </div>
-    </div>
-  </div>
 </section>

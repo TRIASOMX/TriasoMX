@@ -2,9 +2,9 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import img1 from "../../assets/images/FuelPreHeaters/Gallery/PREH1.webp"
-import img2 from "../../assets/images/FuelPreHeaters/FPH1.webp"
-import img3 from "../../assets/images/FuelPreHeaters/FPH4.webp"
+import img1 from "../../assets/images/FuelPreHeaters/Gallery/PREH1.webp";
+import img2 from "../../assets/images/FuelPreHeaters/FPH1.webp";
+import img3 from "../../assets/images/FuelPreHeaters/FPH4.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,7 +52,10 @@ const CARDS: CardData[] = [
     type: "video",
     videoSrc: "/Videos/Webm/bprov1.webm",
     title: "Sin humo, sin residuos, sin fallas prematuras",
-    highlightWords: ["humo", "residuos", "fallas"].map((word) => ({ word, color: HIGHLIGHT })),
+    highlightWords: ["humo", "residuos", "fallas"].map((word) => ({
+      word,
+      color: HIGHLIGHT,
+    })),
     body: "El combustible sin calentar suele provocar una combustión incompleta, generando humo y dejando gotas sin quemar. Contaminando la mezcla asfáltica, reduciendo la vida del pavimento, los gases residuales contaminan fuertemente, muy visiblemente y de olores. El precalentamiento elimina todos estos problemas.",
   },
   {
@@ -154,9 +157,21 @@ function SplitLayout({
   );
 }
 
-const ProductImage = ({ src, alt, sizes }: { src: string; alt: string; sizes: string }) => (
+const ProductImage = ({
+  src,
+  alt,
+  sizes,
+}: {
+  src: string;
+  alt: string;
+  sizes: string;
+}) => (
   <div className={`flex-shrink-0 ${sizes}`}>
-    <img src={src} alt={alt} className="w-full h-auto object-contain drop-shadow-2xl" />
+    <img
+      src={src}
+      alt={alt}
+      className="w-full h-auto object-contain drop-shadow-2xl"
+    />
   </div>
 );
 
@@ -190,7 +205,13 @@ function ProductCardContent({ card }: { card: ProductCard }) {
   return (
     <SplitLayout
       bg="bg-[#f2f2f0]"
-      media={<ProductImage src={card.imageSrc} alt={card.title} sizes="w-44 sm:w-60 md:w-72 lg:w-[55%]" />}
+      media={
+        <ProductImage
+          src={card.imageSrc}
+          alt={card.title}
+          sizes="w-44 sm:w-60 md:w-72 lg:w-[55%]"
+        />
+      }
     >
       <h2 className={`${TITLE_CLASS} font-black`}>{card.title}</h2>
       <p className={`${BODY_CLASS} text-gray-600 font-thin`}>{card.body}</p>
@@ -202,11 +223,20 @@ function FeatureCardContent({ card }: { card: FeatureCard }) {
   return (
     <SplitLayout
       bg="bg-[#eeecea]"
-      media={<ProductImage src={card.imageSrc} alt={card.title} sizes="w-32 sm:w-44 md:w-56 lg:w-[55%]" />}
+      media={
+        <ProductImage
+          src={card.imageSrc}
+          alt={card.title}
+          sizes="w-32 sm:w-44 md:w-56 lg:w-[55%]"
+        />
+      }
     >
       <h2 className={`${TITLE_CLASS} font-black`}>{card.title}</h2>
       {card.paragraphs.map((p, i) => (
-        <p key={i} className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+        <p
+          key={i}
+          className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 leading-relaxed"
+        >
           {p}
         </p>
       ))}
@@ -257,7 +287,6 @@ function CardContent({ card }: { card: CardData }) {
   return <Renderer card={card} />;
 }
 
-
 const MOBILE_BG: Record<CardData["type"], string> = {
   video: "bg-black",
   product: "bg-[#f2f2f0]",
@@ -279,7 +308,9 @@ function MobileCardContent({
   const bodyColor = isVideo ? "text-white/80" : "text-gray-900";
 
   return (
-    <div className={`relative w-full h-full overflow-hidden ${MOBILE_BG[card.type]}`}>
+    <div
+      className={`relative w-full h-full overflow-hidden ${MOBILE_BG[card.type]}`}
+    >
       {/* Capa media anclada y centrada */}
       <div
         ref={mediaRef}
@@ -305,7 +336,9 @@ function MobileCardContent({
       </div>
 
       {/* Overlay oscurecedor sutil para el video */}
-      {isVideo && <div className="absolute inset-0 bg-black/40 pointer-events-none" />}
+      {isVideo && (
+        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+      )}
 
       {/* Panel de texto que sube desde abajo */}
       <div
@@ -314,9 +347,7 @@ function MobileCardContent({
         style={{
           transform: "translateY(55%)",
           opacity: 0,
-          background: isVideo
-            ? ""
-            : "",
+          background: isVideo ? "" : "",
         }}
       >
         <div className={textColor}>
@@ -327,23 +358,32 @@ function MobileCardContent({
               className="text-2xl font-black tracking-tight leading-tight"
             />
           ) : (
-            <h2 className="text-2xl font-black tracking-tight leading-tight">{card.title}</h2>
+            <h2 className="text-2xl font-black tracking-tight leading-tight">
+              {card.title}
+            </h2>
           )}
 
           {card.type === "feature" ? (
             <>
               {card.paragraphs.map((p, i) => (
-                <p key={i} className={`mt-3 text-sm leading-relaxed ${bodyColor}`}>
+                <p
+                  key={i}
+                  className={`mt-3 text-sm leading-relaxed ${bodyColor}`}
+                >
                   {p}
                 </p>
               ))}
               {card.bullet && (
-                <ul className={`mt-3 list-disc list-inside text-sm ${bodyColor}`}>
+                <ul
+                  className={`mt-3 list-disc list-inside text-sm ${bodyColor}`}
+                >
                   <li className="leading-relaxed">{card.bullet}</li>
                 </ul>
               )}
               {card.footer && (
-                <p className="mt-4 text-sm font-semibold text-gray-800">{card.footer}</p>
+                <p className="mt-4 text-sm font-semibold text-gray-800">
+                  {card.footer}
+                </p>
               )}
             </>
           ) : (
@@ -378,7 +418,7 @@ export default function StackScroll() {
             opacity: i === activeIndex ? 1 : 0.4,
             duration: 0.35,
             ease: "power2.out",
-          })
+          }),
         );
 
       cards.forEach((card, i) =>
@@ -387,11 +427,11 @@ export default function StackScroll() {
           yPercent: 0,
           zIndex: total - i,
           transformOrigin: "top center",
-        })
+        }),
       );
 
       dots.forEach((dot, i) =>
-        gsap.set(dot, { height: i === 0 ? 32 : 8, opacity: i === 0 ? 1 : 0.4 })
+        gsap.set(dot, { height: i === 0 ? 32 : 8, opacity: i === 0 ? 1 : 0.4 }),
       );
 
       for (let i = 0; i < total - 1; i++) {
@@ -416,7 +456,9 @@ export default function StackScroll() {
       // ANIMACIÓN MÓVIL
       const mm = gsap.matchMedia();
       mm.add("(max-width: 639px)", () => {
-        const medias = mobileMediaRef.current.filter(Boolean) as HTMLDivElement[];
+        const medias = mobileMediaRef.current.filter(
+          Boolean,
+        ) as HTMLDivElement[];
         const texts = mobileTextRef.current.filter(Boolean) as HTMLDivElement[];
 
         const triggers: ScrollTrigger[] = [];
@@ -437,12 +479,11 @@ export default function StackScroll() {
             },
           });
 
-          tl.to(textEl, { yPercent: 0, opacity: 1, ease: "none" }, 0)
-            .to(
-              mediaEl,
-              { filter: `blur(${MOBILE_BLUR_PX}px)`, ease: "none" },
-              0
-            );
+          tl.to(textEl, { yPercent: 0, opacity: 1, ease: "none" }, 0).to(
+            mediaEl,
+            { filter: `blur(${MOBILE_BLUR_PX}px)`, ease: "none" },
+            0,
+          );
 
           if (tl.scrollTrigger) triggers.push(tl.scrollTrigger);
         });
@@ -466,7 +507,9 @@ export default function StackScroll() {
         {CARDS.map((card, i) => (
           <div
             key={card.id}
-            ref={(el) => { cardsRef.current[i] = el; }}
+            ref={(el) => {
+              cardsRef.current[i] = el;
+            }}
             className="absolute inset-0 w-full h-full overflow-hidden"
             style={{ willChange: "transform, border-radius" }}
           >
@@ -476,8 +519,12 @@ export default function StackScroll() {
             <div className="lg:hidden md:hidden w-full h-full relative">
               <MobileCardContent
                 card={card}
-                mediaRef={(el) => { mobileMediaRef.current[i] = el; }}
-                textRef={(el) => { mobileTextRef.current[i] = el; }}
+                mediaRef={(el) => {
+                  mobileMediaRef.current[i] = el;
+                }}
+                textRef={(el) => {
+                  mobileTextRef.current[i] = el;
+                }}
               />
             </div>
           </div>
@@ -487,7 +534,9 @@ export default function StackScroll() {
           {CARDS.map((card, i) => (
             <div
               key={card.id}
-              ref={(el) => { dotsRef.current[i] = el; }}
+              ref={(el) => {
+                dotsRef.current[i] = el;
+              }}
               className="w-[3px] rounded-full"
               style={{ backgroundColor: INDICATOR_COLORS[i], height: 8 }}
             />

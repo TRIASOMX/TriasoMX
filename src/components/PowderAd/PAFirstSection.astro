@@ -1,28 +1,12 @@
 ---
-import HeroComponent from "../unitComponents/HeroComponent.astro";
+import HeroComponentV1 from "../unitComponents/HeroComponentV1.astro";
 import hero2 from "../../assets/images/PowderA/Gallery/PAF1.webp";
 ---
 
 <section>
-  <HeroComponent
+  <HeroComponentV1
     title="Alimentador de aditivos en polvo con tolva"
-    image="https://placehold.co/1920x1080/png"
-    imageAlt="Alimentador de aditivos en polvo con tolva"
-    altImage={hero2.src}
-    descAltImage="Alimentador de aditivos en polvo con tolva"
+    text="Los alimentadores de aditivos en polvo con tolva Triaso® están diseñados para el almacenamiento y manejo eficiente de materiales secos y pulverizados. Ofrecen operación confiable en aplicaciones industriales exigentes, con construcción robusta, flujo uniforme y bajo mantenimiento."
+    heroImage={hero2.src}
   />
-  <div class="bg-[#1e1e1e]">
-    <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
-      <div class="flex justify-center items-center text-center">
-        <h1 class="font-semibold text-white text-lg lg:text-xl">
-          Los alimentadores de aditivos en polvo con tolva Triaso® están
-          diseñados para el almacenamiento y manejo eficiente de materiales
-          secos y pulverizados. Ofrecen operación confiable en aplicaciones
-          industriales exigentes, con construcción robusta, flujo uniforme y
-          bajo mantenimiento.
-        </h1>
-      </div>
-    </div>
-  </div>
 </section>
-

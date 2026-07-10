@@ -1,39 +1,16 @@
 ---
-import HeroComponent from "../unitComponents/HeroComponent.astro";
-import img1 from "../../assets/images/Burners/251022-Escudo.webp";
+import HeroComponentV1 from "../unitComponents/HeroComponentV1.astro";
 import img2 from "../../assets/images/Burners/Gallery/B2.webp";
 import BurnerOdometer from "../../components/Burners/BurnerOdometer";
 ---
 
 <section>
   <div>
-    <HeroComponent
+    <HeroComponentV1
       title="QUEMADORES"
-      image={img1.src}
-      imageAlt="QUEMADORES"
-      altImage={img2.src}
-      descAltImage="QUEMADORES"
+      text="Nuestros quemadores Triaso® de ‘aire total’ están diseñados para una combustión completa y eficiente, utilizando un sistema totalmente sellado que no depende de los gases de escape del tambor. Con estos quemadores evitamos la contaminación, atmosférica y de la mezcla y la obstrucción del filtro, mientras ahorra combustible y mantiene un desempeño constante durante toda la jornada. Su sistema de control preciso de aire garantiza una operación limpia, bajas emisiones y resultados confiables en cualquier clima y altitud."
+      heroImage={img2.src}
     />
-  </div>
-  <div class="bg-[#1e1e1e]">
-    <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
-      <div
-        class="flex flex-col space-y-5 justify-center items-center text-center"
-      >
-        <h1 class="font-semibold text-white text-lg lg:text-xl">
-          Nuestros quemadores Triaso® de ‘aire total’ están diseñados para una
-          combustión completa y eficiente, utilizando un sistema totalmente
-          sellado que no depende de los gases de escape del tambor.
-        </h1>
-        <h1 class="font-semibold text-white text-lg lg:text-xl">
-          Con estos quemadores evitamos la contaminación, atmosférica y de la
-          mezcla y la obstrucción del filtro, mientras ahorra combustible y
-          mantiene un desempeño constante durante toda la jornada. Su sistema de
-          control preciso de aire garantiza una operación limpia, bajas
-          emisiones y resultados confiables en cualquier clima y altitud.
-        </h1>
-      </div>
-    </div>
   </div>
 </section>
 

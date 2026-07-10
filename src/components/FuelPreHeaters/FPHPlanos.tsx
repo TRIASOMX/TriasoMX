@@ -1,17 +1,17 @@
 import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import PreIMG from "../../assets/images/FuelPreHeaters/planos/PreCVABp.webp"
-import PreBP1 from "../../assets/images/FuelPreHeaters/planos/PreBP1.webp"
-import PreBP2 from "../../assets/images/FuelPreHeaters/planos/PreBP2.webp"
-import PreBP3 from "../../assets/images/FuelPreHeaters/planos/PreBP3.webp"
-import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScrollTrigger.tsx"
+import PreIMG from "../../assets/images/FuelPreHeaters/planos/PreCVABp.webp";
+import PreBP1 from "../../assets/images/FuelPreHeaters/planos/PreBP1.webp";
+import PreBP2 from "../../assets/images/FuelPreHeaters/planos/PreBP2.webp";
+import PreBP3 from "../../assets/images/FuelPreHeaters/planos/PreBP3.webp";
+import { useClipPathScrollTrigger } from "../../components/lib/useClipPathScrollTrigger.tsx";
 
 const toggleConfig = [
   {
-    width: 86,
-    height: 108.7,
-    length: 82,
+    width: 0.86,
+    height: 1.087,
+    length: 0.82,
   },
 ];
 gsap.registerPlugin(ScrollTrigger);
@@ -31,7 +31,7 @@ const FPHPlanos = () => {
   const clipTargetRef = useRef<HTMLDivElement>(null);
 
   // valor de cm a pies
-  const cmToFeet = 0.01;
+  const cmToFeet = 3.28084;
   //SWITCH LOGIC
   const [unit, setUnit] = useState<"metric" | "imperial">("metric");
   //ESTADOS DE LOS DROPWDOWNS
@@ -123,7 +123,7 @@ const FPHPlanos = () => {
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              Medidas:
+              MEDIDAS:
             </h1>
             <div
               onClick={toggleUnit}
@@ -131,8 +131,9 @@ const FPHPlanos = () => {
             >
               {/* Fondo deslizante */}
               <div
-                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${unit === "metric" ? "translate-x-full" : ""
-                  }`}
+                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${
+                  unit === "metric" ? "translate-x-full" : ""
+                }`}
               ></div>
 
               {/* Texto sobrepuesto */}
@@ -140,12 +141,12 @@ const FPHPlanos = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  MT
+                  IMPERIAL
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  CM
+                  METRICO
                 </span>
               </div>
             </div>
@@ -188,8 +189,8 @@ const FPHPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                          Diseño
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          DISEÑO
                         </h1>
                         <button
                           aria-label="See more about the design"
@@ -209,8 +210,9 @@ const FPHPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -223,27 +225,30 @@ const FPHPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`font-thin transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`font-thin transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                         Diseñado específicamente para su uso con quemadores Triaso.
-
+                          Diseñado específicamente para su uso con quemadores
+                          Triaso.
                         </li>
                         <li>
-                          Compatible con combustibles alternativos para una combustión eficiente.
+                          Compatible con combustibles alternativos para una
+                          combustión eficiente.
                         </li>
                         <li>
-                          Evita la contaminación de la mezcla asfáltica por residuos de combustible.
+                          Evita la contaminación de la mezcla asfáltica por
+                          residuos de combustible.
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                          Resistencia y seguridad
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          RESISTENCIA Y SEGURIDAD
                         </h1>
                         <button
                           aria-label="See more about the heating system"
@@ -263,8 +268,9 @@ const FPHPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -277,34 +283,52 @@ const FPHPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`font-thin transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`font-thin transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Estructura reforzada para trabajo pesado a largo plazo.</li>
                         <li>
-                          Componentes atornillados con recubrimiento anticorrosivo.
+                          Estructura reforzada para trabajo pesado a largo
+                          plazo.
+                        </li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
+                            </li>
                           </ul>
                         </li>
                         <li>
-                          Aislamiento térmico con fibra de vidrio de tres pulgadas, que reduce la pérdida de calor y la temperatura superficial.
+                          Aislamiento térmico con fibra de vidrio de tres
+                          pulgadas, que reduce la pérdida de calor y la
+                          temperatura superficial.
                         </li>
-                        <li>Sellos tipo laberinto para disminuir la fuga de aire y calor.</li>
                         <li>
-                          Carcasa resistente al polvo que protege el módulo de control.
+                          Sellos tipo laberinto para disminuir la fuga de aire y
+                          calor.
+                        </li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
                         </li>
                         <li>Forro exterior de lámina de acero inoxidable.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                          Componentes y sistema eléctrico
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          COMPONENTES Y SISTEMA ELÉCTRICO
                         </h1>
                         <button
                           aria-label="See more about the components and electrical composition"
@@ -324,8 +348,9 @@ const FPHPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -338,19 +363,27 @@ const FPHPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`font-thin transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`font-thin transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Motores, componentes y cableado Siemens de grado industrial.
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
                         </li>
-                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>
+                          Sistema de cableado simplificado para facilitar el
+                          mantenimiento.
+                        </li>
+                        <li>
+                          Conexiones eléctricas protegidas contra la intemperie.
+                        </li>
                         <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                          Líneas de combustible externas, sensores y cableado de
+                          señales preinstalados.
                         </li>
                       </ul>
                     </div>
@@ -363,8 +396,8 @@ const FPHPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                          Sistema de filtración
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          SISTEMA DE FILTRACIÓN
                         </h1>
                         <button
                           aria-label="See more about the filtration system"
@@ -384,8 +417,9 @@ const FPHPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -398,22 +432,26 @@ const FPHPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`font-thin transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`font-thin transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Colador integrado para la filtración interna del combustible.
+                          Colador integrado para la filtración interna del
+                          combustible.
                         </li>
                         <li>Elimina impurezas mayores a malla 100.</li>
-                        <li>Fácil de limpiar, sin necesidad de herramientas.</li>
+                        <li>
+                          Fácil de limpiar, sin necesidad de herramientas.
+                        </li>
                       </ul>
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                          Control y Operación
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          CONTROL Y OPERACIÓN
                         </h1>
                         <button
                           aria-label="See more about the control and operation"
@@ -433,8 +471,9 @@ const FPHPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -447,44 +486,68 @@ const FPHPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block md:mb-0`}
+                        className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block md:mb-0`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Sistema operativo Triaso Relief 8.0.
+                          Operación automática o manual, según se requiera en
+                          campo.
                         </li>
-                        <li>
-                          <ul>
-                            <li>
-                              Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                        <li>Sistema operativo Triaso Relief 8.0.</li>
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Monitoreo remoto de los parámetros de operación,
+                              con supervisión en tiempo real y registro
+                              histórico de datos.
                             </li>
-                            <li>Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.</li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
+                            </li>
                           </ul>
                         </li>
                         <li>
-                         Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable a la infraestructura de control existente de la planta de asfalto.
+                          Adaptable a la infraestructura de control existente de
+                          la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>Integración sencilla con sistemas de control centralizados.</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Integración sencilla con sistemas de control
+                              centralizados.
+                            </li>
                           </ul>
                         </li>
-                        
                       </ul>
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                          Sistema de calentamiento
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          SISTEMA DE CALENTAMIENTO
                         </h1>
                         <button
                           aria-label="See more about the durability and safety"
@@ -504,8 +567,9 @@ const FPHPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -518,20 +582,22 @@ const FPHPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block md:mb-0`}
+                        className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block md:mb-0`}
                       >
+                        <li>Resistencia eléctrica en línea de 13.5 kW.</li>
                         <li>
-                          Resistencia eléctrica en línea de 13.5 kW.
+                          Calienta el combustible hasta 40 °C con un flujo de
+                          840 litros por hora.
                         </li>
-                        <li>Calienta el combustible hasta 40 °C con un flujo de 840 litros por hora.</li>
                         <li>
-                          Sistema de seguridad que evita su activación si no hay combustible en la tubería.
+                          Sistema de seguridad que evita su activación si no hay
+                          combustible en la tubería.
                         </li>
                         <li>Control preciso de la temperatura deseada.</li>
-
                       </ul>
                     </div>
                   </div>
@@ -563,10 +629,10 @@ const FPHPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${toggleConfig[0].width.toFixed(1) ?? ""} cm`
+                          ? `${toggleConfig[0].width.toFixed(1) ?? ""} m`
                           : `${(
-                            (toggleConfig[0].width ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                              (toggleConfig[0].width ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -625,10 +691,10 @@ const FPHPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${toggleConfig[0].height?.toFixed(1) ?? ""} cm`
+                          ? `${toggleConfig[0].height?.toFixed(1) ?? ""} m`
                           : `${(
-                            (toggleConfig[0].height ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                              (toggleConfig[0].height ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -680,10 +746,10 @@ const FPHPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${toggleConfig[0].length?.toFixed(1) ?? ""} cm`
+                          ? `${toggleConfig[0].length?.toFixed(1) ?? ""} m`
                           : `${(
-                            (toggleConfig[0].length ?? 0) * cmToFeet
-                          ).toFixed(1)} mt`}
+                              (toggleConfig[0].length ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -722,8 +788,8 @@ const FPHPlanos = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                       <div className="text-white font-normal flex flex-col gap-4">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
-                            Dimensiones
+                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            DIMENSIONES
                           </h1>
                           <button
                             aria-label="See more about the dimensions"
@@ -743,8 +809,9 @@ const FPHPlanos = () => {
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
                               color="#000000"
-                              className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                                }`}
+                              className={`transition-transform duration-300 transform ${
+                                openSections.C3_1 ? "rotate-180" : ""
+                              }`}
                             >
                               <path
                                 d="M6 9L12 15L18 9"
@@ -757,42 +824,46 @@ const FPHPlanos = () => {
                           </button>
                         </div>
                         <div
-                          className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 md:mb-0 list-disc list-inside ${openSections.C3_1
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
-                            } md:max-h-full md:opacity-100 md:block`}
+                          className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 md:mb-0 list-disc list-inside ${
+                            openSections.C3_1
+                              ? "max-h-96 opacity-1 mb-4"
+                              : "max-h-0 opacity-0"
+                          } md:max-h-full md:opacity-100 md:block`}
                         >
                           <div className="flex justify-between">
                             <h1>Longitud:</h1>
                             <p>
                               {unit === "metric"
-                                ? `${toggleConfig[0].length?.toFixed(1) ?? ""
-                                } cm`
+                                ? `${
+                                    toggleConfig[0].length?.toFixed(1) ?? ""
+                                  } ft`
                                 : `${(
-                                  (toggleConfig[0].length ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
+                                    (toggleConfig[0].length ?? 0) * cmToFeet
+                                  ).toFixed(1)} m`}
                             </p>
                           </div>
                           <div className="flex justify-between">
                             <h1>Ancho:</h1>
                             <p>
                               {unit === "metric"
-                                ? `${toggleConfig[0].width?.toFixed(1) ?? ""
-                                } cm`
+                                ? `${
+                                    toggleConfig[0].width?.toFixed(1) ?? ""
+                                  } ft`
                                 : `${(
-                                  (toggleConfig[0].width ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
+                                    (toggleConfig[0].width ?? 0) * cmToFeet
+                                  ).toFixed(1)} m`}
                             </p>
                           </div>
                           <div className="flex justify-between">
                             <h1>Altura:</h1>
                             <p>
                               {unit === "metric"
-                                ? `${toggleConfig[0].height?.toFixed(1) ?? ""
-                                } cm`
+                                ? `${
+                                    toggleConfig[0].height?.toFixed(1) ?? ""
+                                  } ft`
                                 : `${(
-                                  (toggleConfig[0].height ?? 0) * cmToFeet
-                                ).toFixed(1)} mt`}
+                                    (toggleConfig[0].height ?? 0) * cmToFeet
+                                  ).toFixed(1)} m`}
                             </p>
                           </div>
                         </div>

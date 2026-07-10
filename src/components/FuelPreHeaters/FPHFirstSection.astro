@@ -1,39 +1,17 @@
 ---
-import HeroComponent from "../unitComponents/HeroComponent.astro";
+import HeroComponentV1 from "../unitComponents/HeroComponentV1.astro";
 import PrecalentadoresOdometro from "./PrecalentadoresOdometro";
+import heroImg from "../../assets/images/FuelPreHeaters/FPH1.webp";
 ---
 
 <section>
-  <HeroComponent
-    title="precalentadores"
-    image="https://placehold.co/1920x1080/png"
-    altImage="https://placehold.co/600x400/png"
-    imageAlt="precalentadores"
-    descAltImage="precalentadores"
+  <HeroComponentV1
+    title="PRECALENTADORES"
+    text="En Triaso® diseñamos precalentadores de combustible para mejorar la eficiencia de combustión al reducir la viscosidad de cualquier tipo de combustible antes de la ignición. Al precalentar el combustible, se logra una atomización adecuada, eliminando microgotas sin quemar que contaminan la mezcla, obstruyen los filtros y generan humo excesivo. Los precalentadores aseguran una combustión más limpia, menores emisiones y un desempeño constante, protegiendo la calidad de la mezcla asfáltica y reduciendo el consumo de combustible en cualquier condición de trabajo."
+    heroImage={heroImg.src}
   />
-  <div class="bg-[#1e1e1e]">
-    <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
-      <div class="flex flex-col space-y-5 justify-center items-center text-center">
-        <h1 class="font-semibold text-white text-lg lg:text-xl">
-          En Triaso® diseñamos precalentadores de combustible para mejorar la
-          eficiencia de combustión al reducir la viscosidad de cualquier tipo de
-          combustible antes de la ignición.
-        </h1>
-        <h1 class="font-semibold text-white text-lg lg:text-xl">
-          Al precalentar el combustible, se logra una atomización adecuada,
-          eliminando microgotas sin quemar que contaminan la mezcla, obstruyen
-          los filtros y generan humo excesivo. Los precalentadores aseguran una
-          combustión más limpia, menores emisiones y un desempeño constante,
-          protegiendo la calidad de la mezcla asfáltica y reduciendo el consumo
-          de combustible en cualquier condición de trabajo.
-        </h1>
-      </div>
-    </div>
-  </div>
 </section>
 
-<section> 
-  <PrecalentadoresOdometro client:only/>
+<section>
+  <PrecalentadoresOdometro client:only />
 </section>
-
-

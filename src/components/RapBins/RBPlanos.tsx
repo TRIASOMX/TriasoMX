@@ -417,23 +417,23 @@ const RBPlanos = () => {
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre
-                          confiable
+                          confiable.
                         </li>
                         <li>
                           Vibradores en la tolva de finos para asegurar una
-                          alimentación constante
+                          alimentación constante.
                         </li>
                         <li>
                           Sensor de flujo para material fino con alarma de nivel
-                          bajo
+                          bajo.
                         </li>
                         <li>
                           Transportador de alimentación de 24" con banda ancha
-                          para un traslado más estable a baja velocidad
+                          para un traslado más estable a baja velocidad.
                         </li>
                         <li>
                           Poleas de cabeza recubiertas de hule y rodillos
-                          estándar CEMA
+                          estándar CEMA.
                         </li>
                       </ul>
                     </div>
@@ -1334,23 +1334,23 @@ const RBPlanos = () => {
                         </li>
                         <li>
                           Polea de cabeza recubierta de hule para agarre
-                          confiable
+                          confiable.
                         </li>
                         <li>
                           Vibradores en la tolva de finos para asegurar una
-                          alimentación constante
+                          alimentación constante.
                         </li>
                         <li>
                           Sensor de flujo para material fino con alarma de nivel
-                          bajo
+                          bajo.
                         </li>
                         <li>
                           Transportador de alimentación de 24" con banda ancha
-                          para un traslado más estable a baja velocidad
+                          para un traslado más estable a baja velocidad.
                         </li>
                         <li>
                           Poleas de cabeza recubiertas de hule y rodillos
-                          estándar CEMA
+                          estándar CEMA.
                         </li>
                       </ul>
                     </div>

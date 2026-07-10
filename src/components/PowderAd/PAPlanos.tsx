@@ -14,10 +14,10 @@ const toggleConfig = {
     width: 3.78,
     width2: 1.92,
     height: 3.94,
-    length: 4.70,
-    length2: 2.40,
+    length: 4.7,
+    length2: 2.4,
     dosing: 3.15,
-    feeding: 3.50,
+    feeding: 3.5,
     screw: 1.06,
     height2: 1.21,
   },
@@ -81,7 +81,6 @@ const PAPlanos = () => {
     containerRef,
   });
 
-
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <div className="h-[80vh] relative flex items-center justify-center bg-bgMain w-full">
@@ -126,13 +125,17 @@ const PAPlanos = () => {
         id="sectionNueva"
         className="bg-[url('/fondopatron.webp')] bg-repeat bg-top w-full flex flex-col items-center justify-start relative bg-black overflow-hidden z-10 min-h-screen"
       >
-        <header id="planosPowder" className="mt-10 text-white" ref={otroElemento}>
+        <header
+          id="planosPowder"
+          className="mt-10 text-white"
+          ref={otroElemento}
+        >
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              Medidas:
+              MEDIDAS:
             </h1>
             <div
               onClick={toggleUnit}
@@ -140,8 +143,9 @@ const PAPlanos = () => {
             >
               {/* Fondo deslizante */}
               <div
-                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${unit === "metric" ? "translate-x-full" : ""
-                  }`}
+                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${
+                  unit === "metric" ? "translate-x-full" : ""
+                }`}
               ></div>
 
               {/* Texto sobrepuesto */}
@@ -149,12 +153,12 @@ const PAPlanos = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  MT
+                  IMPERIAL
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  CM
+                  METRICO
                 </span>
               </div>
             </div>
@@ -191,14 +195,15 @@ const PAPlanos = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center w-full">
                   <div
-                    className="flex flex-col items-start justify-between gap-0 md:gap-4 w-full h-full order-2 md:order-1"
+                    className="flex flex-col items-start justify-between gap-0 md:gap-10 w-full h-full order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
-                    <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
+                    <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Sistema de alimentación y dosificación                        </h1>
+                          SISTEMA DE ALIMENTACIÓN Y DOSIFICACIÓN
+                        </h1>
                         <button
                           aria-label="See more about the feeding and dosing system"
                           className="block md:hidden"
@@ -217,8 +222,9 @@ const PAPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -231,23 +237,25 @@ const PAPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Tornillo dosificador fabricado en acero 1045</li>
+                        <li>Tornillo dosificador fabricado en acero 1045.</li>
                         <li>
-                          Dosificación de velocidad variable, ajustable de 3 a 7 kg/min
+                          Dosificación de velocidad variable, ajustable de 3 a 7
+                          kg/min.
                         </li>
-                        <li>Sensor de alarma por bajo nivel</li>
-                        <li>Descarga directa al tambor mezclador</li>
+                        <li>Sensor de alarma por bajo nivel.</li>
+                        <li>Descarga directa al tambor mezclador.</li>
                       </ul>
                     </div>
-                    <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
+                    <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Componentes y sistema eléctrico
+                          COMPONENTES Y SISTEMA ELÉCTRICO
                         </h1>
                         <button
                           aria-label="See more about the coponents and electrical composition"
@@ -267,8 +275,9 @@ const PAPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -281,33 +290,46 @@ const PAPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Motores, componentes y cableado Siemens de grado industrial.
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Siemens motors: 3 Hp (dosificación) y 1.5 Hp (alimentación)
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Siemens motors: 3 Hp (dosificación) y 1.5 Hp
+                              (alimentación).
                             </li>
                           </ul>
                         </li>
-                        <li>Sistema de cableado simplificado para facilitar el mantenimiento.</li>
-                        <li>Conexiones eléctricas protegidas contra la intemperie.</li>
+                        <li>
+                          Sistema de cableado simplificado para facilitar el
+                          mantenimiento.
+                        </li>
+                        <li>
+                          Conexiones eléctricas protegidas contra la intemperie.
+                        </li>
                         <li>Sistema de transmisión con poleas y bujes.</li>
                         <li>
-                          Líneas de combustible externas, sensores y cableado de señales preinstalados.
+                          Líneas de combustible externas, sensores y cableado de
+                          señales preinstalados.
                         </li>
                       </ul>
                     </div>
-                    <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
+                    <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Portabilidad
+                          PORTABILIDAD
                         </h1>
                         <button
                           aria-label="See more about the portability"
@@ -327,8 +349,9 @@ const PAPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -341,47 +364,57 @@ const PAPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C1_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C1_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Diseñado para reubicación.</li>
                         <li>Opción para:</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Montado sobre chasis de transporte estándar, con un eje y rines de 16” para carretera.
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Montado sobre chasis de transporte estándar, con
+                              un eje y rines de 16” para carretera.
                             </li>
                             <li className="list-none">
                               <ul className="list-disc ml-6">
                                 <li>
-                                  Montado sobre chasis de transporte con un eje y llantas de uso carretera.
+                                  Montado sobre chasis de transporte con un eje
+                                  y llantas de uso carretera.
                                 </li>
                                 <li>
-                                  Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.
+                                  Enganche tipo arrastre con acoplamiento de
+                                  seguridad y sistema de frenos, con sistema de
+                                  luces y señalamientos a normas de carretera.
                                 </li>
                                 <li>
-                                  Patas de soporte atornilladas, para un armado rápido en sitio.
+                                  Patas de soporte atornilladas, para un armado
+                                  rápido en sitio.
                                 </li>
                               </ul>
                             </li>
                           </ul>
                         </li>
-                        <li>Montado en patas</li>
+                        <li>Montado en patas.</li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-span-2 flex items-start justify-center w-full min-h-[600px] order-1 md:order-2"></div>
                   <div
-                    className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10"
+                    className="flex flex-col items-start justify-start h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10"
                     id="column2"
                     ref={columnGrid2}
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Control y operación
+                          CONTROL Y OPERACIÓN
                         </h1>
                         <button
                           aria-label="See more about the control and operation of the system"
@@ -401,8 +434,9 @@ const PAPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -415,35 +449,54 @@ const PAPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>Operación automática o manual, según se requiera en campo.</li>
                         <li>
-                          Monitoreo remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Operación automática o manual, según se requiera en
+                          campo.
                         </li>
                         <li>
-                          <ul>
-                            <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                          Monitoreo remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
+                        </li>
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                         <li>
-                          Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          Controles independientes y de fácil manejo, diseñados
+                          para confiabilidad en sitio.
                         </li>
                         <li>
-                          Adaptable a la infraestructura de control existente de la planta de asfalto
+                          Adaptable a la infraestructura de control existente de
+                          la planta de asfalto.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Integración sin complicaciones con los sistemas de control central
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Integración sin complicaciones con los sistemas de
+                              control central.
                             </li>
                           </ul>
                         </li>
@@ -452,7 +505,7 @@ const PAPlanos = () => {
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Resistencia y seguridad
+                          RESISTENCIA Y SEGURIDAD
                         </h1>
                         <button
                           aria-label="See more about the durability and safety"
@@ -472,8 +525,9 @@ const PAPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -486,29 +540,42 @@ const PAPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block md:mb-0`}
+                        className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block md:mb-0`}
                       >
                         <li>
-                          Estructura extra reforzada para trabajo pesado a largo plazo.
+                          Estructura extra reforzada para trabajo pesado a largo
+                          plazo.
                         </li>
-                        <li>Componentes atornillados con recubrimiento anticorrosivo.</li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Tornillería galvanizada y pintura electrostática, de alta resistencia y excelente adherencia.
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
                             </li>
                           </ul>
                         </li>
-                        <li>Carcasa resistente al polvo que protege el módulo de control.</li>
+                        <li>
+                          Carcasa resistente al polvo que protege el módulo de
+                          control.
+                        </li>
                       </ul>
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Cumplimiento con estándares de la industria
+                          CUMPLIMIENTO CON ESTÁNDARES DE LA INDUSTRIA
                         </h1>
                         <button
                           aria-label="See more about the compliance with industry standards"
@@ -528,8 +595,9 @@ const PAPlanos = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_3 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_3 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -542,10 +610,11 @@ const PAPlanos = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C2_3
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block md:mb-0`}
+                        className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${
+                          openSections.C2_3
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block md:mb-0`}
                       >
                         <li>SEMARNAT</li>
                         <li>SCT</li>
@@ -584,11 +653,14 @@ const PAPlanos = () => {
                         <div className="flex flex-col justify-center items-center">
                           <p className="text-white lg:text-lg text-base w-full text-center mx-4 ">
                             {unit === "metric"
-                              ? `${toggleConfig?.dimensions.width.toFixed(2) ?? ""
-                              } mt`
+                              ? `${
+                                  toggleConfig?.dimensions.width.toFixed(2) ??
+                                  ""
+                                } m`
                               : `${(
-                                (toggleConfig?.dimensions.width ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                                  (toggleConfig?.dimensions.width ?? 0) *
+                                  cmToFeet
+                                ).toFixed(1)} ft`}
                           </p>
                         </div>
 
@@ -649,11 +721,14 @@ const PAPlanos = () => {
                         <div className="flex flex-col justify-center items-center">
                           <p className="text-white lg:text-lg text-base w-full text-center mx-4 ">
                             {unit === "metric"
-                              ? `${toggleConfig?.dimensions.width2.toFixed(2) ?? ""
-                              } mt`
+                              ? `${
+                                  toggleConfig?.dimensions.width2.toFixed(2) ??
+                                  ""
+                                } m`
                               : `${(
-                                (toggleConfig?.dimensions.width2 ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                                  (toggleConfig?.dimensions.width2 ?? 0) *
+                                  cmToFeet
+                                ).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="border-dotted border-r border-r-white h-[20px] w-[20px] flex items-center justify-center">
@@ -679,7 +754,6 @@ const PAPlanos = () => {
                           </div>
                         </div>
                       </div>
-
                     </div>
                     {/* medio */}
                     <div className="flex flex-col items-center justify-end min-w-[90px] h-[330px] shrink-0 pb-8">
@@ -708,11 +782,13 @@ const PAPlanos = () => {
                       <div className="my-3 flex flex-col">
                         <p className="text-white text-lg">
                           {unit === "metric"
-                            ? `${toggleConfig?.dimensions.height.toFixed(2) ?? ""
-                            } mt`
+                            ? `${
+                                toggleConfig?.dimensions.height.toFixed(2) ?? ""
+                              } m`
                             : `${(
-                              (toggleConfig?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (toggleConfig?.dimensions.height ?? 0) *
+                                cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -766,11 +842,14 @@ const PAPlanos = () => {
                         <div className="flex flex-col justify-center items-center">
                           <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                             {unit === "metric"
-                              ? `${toggleConfig?.dimensions.length.toFixed(2) ?? ""
-                              } mt`
+                              ? `${
+                                  toggleConfig?.dimensions.length.toFixed(2) ??
+                                  ""
+                                } m`
                               : `${(
-                                (toggleConfig?.dimensions.length ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                                  (toggleConfig?.dimensions.length ?? 0) *
+                                  cmToFeet
+                                ).toFixed(1)} ft`}
                           </p>
                         </div>
 
@@ -831,11 +910,14 @@ const PAPlanos = () => {
                         <div className="flex flex-col justify-center items-center">
                           <p className="text-white lg:text-lg text-base w-full text-center mx-4 ">
                             {unit === "metric"
-                              ? `${toggleConfig?.dimensions.length2.toFixed(2) ?? ""
-                              } mt`
+                              ? `${
+                                  toggleConfig?.dimensions.length2.toFixed(2) ??
+                                  ""
+                                } m`
                               : `${(
-                                (toggleConfig?.dimensions.length2 ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                                  (toggleConfig?.dimensions.length2 ?? 0) *
+                                  cmToFeet
+                                ).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="border-dotted border-r border-r-white h-[20px] w-[50px] flex items-center justify-center">
@@ -863,17 +945,15 @@ const PAPlanos = () => {
                       </div>
                     </div>
                   </div>
-
-
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-center w-full mt-10 gap-0 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-center w-full gap-0 md:gap-10 self-center">
                   <div className="col-span-1 md:col-span-2 flex flex-col items-start justify-start w-full md:gap-10 h-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                       <div className="text-white font-normal flex flex-col gap-4">
                         <div className="w-full flex justify-between border-b border-b-white">
                           <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                            Dimensiones de unidad
+                            DIMENSIONES DE UNIDAD
                           </h1>
                           <button
                             aria-label="See more about the bin dimensions"
@@ -893,8 +973,9 @@ const PAPlanos = () => {
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
                               color="#000000"
-                              className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                                }`}
+                              className={`transition-transform duration-300 transform ${
+                                openSections.C3_1 ? "rotate-180" : ""
+                              }`}
                             >
                               <path
                                 d="M6 9L12 15L18 9"
@@ -907,33 +988,36 @@ const PAPlanos = () => {
                           </button>
                         </div>
                         <div
-                          className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 md:mb-0 list-disc list-inside ${openSections.C3_1
-                            ? "max-h-96 opacity-1 mb-4"
-                            : "max-h-0 opacity-0"
-                            } md:max-h-full md:opacity-100 md:block`}
+                          className={`transition-all duration-500 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 md:mb-0 list-disc list-inside ${
+                            openSections.C3_1
+                              ? "max-h-96 opacity-1 mb-4"
+                              : "max-h-0 opacity-0"
+                          } md:max-h-full md:opacity-100 md:block`}
                         >
                           <div className="flex justify-between">
                             <h1>Longitud:</h1>
                             <p>
                               {unit === "metric"
-                                ? `${toggleConfig?.dimensions.dosing.toFixed(
-                                  2
-                                ) ?? ""
-                                } mt`
+                                ? `${
+                                    toggleConfig?.dimensions.dosing.toFixed(
+                                      2,
+                                    ) ?? ""
+                                  } m`
                                 : `${(
-                                  (toggleConfig?.dimensions.dosing ?? 0) *
-                                  cmToFeet
-                                ).toFixed(1)} ft`}{" "}
+                                    (toggleConfig?.dimensions.dosing ?? 0) *
+                                    cmToFeet
+                                  ).toFixed(1)} ft`}{" "}
                               (sección de dosificación)<br></br>
                               {unit === "metric"
-                                ? `${toggleConfig?.dimensions.feeding.toFixed(
-                                  2
-                                ) ?? ""
-                                } mt`
+                                ? `${
+                                    toggleConfig?.dimensions.feeding.toFixed(
+                                      2,
+                                    ) ?? ""
+                                  } m`
                                 : `${(
-                                  (toggleConfig?.dimensions.feeding ?? 0) *
-                                  cmToFeet
-                                ).toFixed(1)} ft`}{" "}
+                                    (toggleConfig?.dimensions.feeding ?? 0) *
+                                    cmToFeet
+                                  ).toFixed(1)} ft`}{" "}
                               (sección de alimentación)
                             </p>
                           </div>
@@ -941,27 +1025,29 @@ const PAPlanos = () => {
                             <h1>Diametro de tornillo: </h1>
                             <p>
                               {unit === "metric"
-                                ? `${toggleConfig?.dimensions.screw.toFixed(2) ??
-                                ""
-                                } mt`
+                                ? `${
+                                    toggleConfig?.dimensions.screw.toFixed(2) ??
+                                    ""
+                                  } m`
                                 : `${(
-                                  (toggleConfig?.dimensions.screw ?? 0) *
-                                  cmToFeet
-                                ).toFixed(1)} ft`}
+                                    (toggleConfig?.dimensions.screw ?? 0) *
+                                    cmToFeet
+                                  ).toFixed(1)} ft`}
                             </p>
                           </div>
                           <div className="flex justify-between">
                             <h1>Altura:</h1>
                             <p>
                               {unit === "metric"
-                                ? `${toggleConfig?.dimensions.height2.toFixed(
-                                  2
-                                ) ?? ""
-                                } mt`
+                                ? `${
+                                    toggleConfig?.dimensions.height2.toFixed(
+                                      2,
+                                    ) ?? ""
+                                  } m`
                                 : `${(
-                                  (toggleConfig?.dimensions.dosing ?? 0) *
-                                  cmToFeet
-                                ).toFixed(1)} ft`}
+                                    (toggleConfig?.dimensions.dosing ?? 0) *
+                                    cmToFeet
+                                  ).toFixed(1)} ft`}
                             </p>
                           </div>
                           <div className="flex justify-between">
