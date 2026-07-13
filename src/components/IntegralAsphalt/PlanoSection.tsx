@@ -32,8 +32,8 @@ const asphalTank = [
 const binUnit = [
   {
     length: 3.17,
-    width: 1.90,
-    height: 1.60,
+    width: 1.9,
+    height: 1.6,
     capcity: "8 ton",
   },
 ];
@@ -63,14 +63,14 @@ const toggleConfig = [
   {
     id: "3",
     dimensions: {
-      width: 2.90,
+      width: 2.9,
       height: 4.21,
       length: 8.76,
       support: "Pre-set stationary legs",
       chasisWidth: 2.54,
       wheel: "11-22.5 tires",
       axleConfig: "Dual 8-lug axles",
-      fifthWheel: 1.30,
+      fifthWheel: 1.3,
     },
   },
 ];
@@ -110,12 +110,11 @@ const PlanoSection = () => {
     C6_1: false,
     C6_2: false,
     C6_3: false,
-
   });
   // valor de cm a pies
   const cmToFeet = 3.28084;
   const activeData = toggleConfig.find(
-    (item) => item.id === activeTab.toString()
+    (item) => item.id === activeTab.toString(),
   );
   // Función para alternar unidades
   const toggleUnit = () => {
@@ -123,10 +122,9 @@ const PlanoSection = () => {
     setUnit(newUnit);
   };
   const modelOptions = [
-    { id: 1, label: "Chasis estándar para movilidad de planta vacía" },
-    { id: 2, label: "Chasis ligero con patas de soporte" },
-    { id: 3, label: "Chasis reforzado para movilidad de planta llena" },
-
+    { id: 1, label: "CHASIS ESTÁNDAR PARA MOVILIDAD DE PLANTA VACÍA" },
+    { id: 2, label: "CHASIS LIGERO CON PATAS DE SOPORTE" },
+    { id: 3, label: "CHASIS REFORZADO PARA MOVILIDAD DE PLANTA LLENA" },
   ];
 
   useClipPathScrollTrigger({
@@ -142,7 +140,6 @@ const PlanoSection = () => {
     columnGrid2Ref: columnGrid2,
     containerRef,
   });
-
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
@@ -189,7 +186,11 @@ const PlanoSection = () => {
         id="sectionNueva"
         className="bg-[url('/fondopatron.webp')] bg-repeat bg-top w-full flex flex-col items-center justify-start relative bg-black overflow-hidden z-10 min-h-screen"
       >
-        <header id="planosIntegral" className="mt-10 text-white" ref={otroElemento}>
+        <header
+          id="planosIntegral"
+          className="mt-10 text-white"
+          ref={otroElemento}
+        >
           <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
           </h1>
@@ -203,8 +204,9 @@ const PlanoSection = () => {
             >
               {/* Fondo deslizante */}
               <div
-                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${unit === "metric" ? "translate-x-full" : ""
-                  }`}
+                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${
+                  unit === "metric" ? "translate-x-full" : ""
+                }`}
               ></div>
 
               {/* Texto sobrepuesto */}
@@ -228,9 +230,7 @@ const PlanoSection = () => {
           <div id="options" ref={optionsRef} className="w-full">
             {/* móvil */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
-              <label className="text-white block text-center">
-                OPCIONES:
-              </label>
+              <label className="text-white block text-center">OPCIONES:</label>
               <div className="relative">
                 <select
                   value={activeTab}
@@ -263,9 +263,7 @@ const PlanoSection = () => {
 
             {/* desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
-              <label className="text-white block text-center">
-                OPCIONES:
-              </label>
+              <label className="text-white block text-center">OPCIONES:</label>
             </div>
             <div className="hidden md:flex flex-wrap justify-center gap-5  mx-auto px-2">
               {modelOptions.map((option) => (
@@ -273,9 +271,10 @@ const PlanoSection = () => {
                   key={option.id}
                   onClick={() => setActiveTab(option.id)}
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300 w-[300px]
-                    ${activeTab === option.id
-                      ? "text-gray-900 bg-white border-white"
-                      : "text-white bg-transparent border-white"
+                    ${
+                      activeTab === option.id
+                        ? "text-gray-900 bg-white border-white"
+                        : "text-white bg-transparent border-white"
                     }`}
                 >
                   {option.label}
@@ -296,11 +295,11 @@ const PlanoSection = () => {
                 ref={containerRef}
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center w-full">
-                  <div className="flex flex-col w-full h-full items-start justify-between gap-0 order-2 md:order-1">
+                  <div className="flex flex-col w-full h-full items-start justify-start gap-0 md:gap-10 order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Construcción y Diseño
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          CONSTRUCCIÓN Y DISEÑO
                         </h1>
                         <button
                           className="block md:hidden"
@@ -319,8 +318,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -333,24 +333,30 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Patas de soporte plegables con altura de trabajo preestablecida
+                          Patas de soporte plegables con altura de trabajo
+                          preestablecida
                         </li>
-                        <li>Tambor fabricado con acero aleado resistente a altas temperaturas</li>
                         <li>
-                          Protección frontal reforzada y sellos de EPDM en los extremos del tambor
+                          Tambor fabricado con acero aleado resistente a altas
+                          temperaturas
+                        </li>
+                        <li>
+                          Protección frontal reforzada y sellos de EPDM en los
+                          extremos del tambor
                         </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y Operación
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          CONTROL Y OPERACIÓN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -369,8 +375,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -383,40 +390,53 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Gabinete de control electrónico con amperímetro</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Controles independientes y de fácil manejo,
+                              diseñados para confiabilidad en sitio.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Controles digitales de temperatura y dosificación de asfalto
+                          Controles digitales de temperatura y dosificación de
+                          asfalto
                         </li>
 
-                        <li>
-                          Variador de velocidad para ajustes en la mezcla
-                        </li>
+                        <li>Variador de velocidad para ajustes en la mezcla</li>
 
                         <li>
-                          Opción remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Opción remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
 
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                       </ul>
                     </div>
@@ -428,11 +448,11 @@ const PlanoSection = () => {
                       className="w-[200px] h-[588px]"
                     />
                   </div>
-                  <div className="flex flex-col items-start justify-between w-full h-full col-span-1 order-3 md:order-3">
+                  <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full col-span-1 order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Sistema de Quemador
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          SISTEMA DE QUEMADOR
                         </h1>
                         <button
                           className="block md:hidden"
@@ -451,8 +471,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -465,30 +486,28 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
+                        <li>Quemador diésel modulante</li>
                         <li>
-                          Quemador diésel modulante
+                          Diseño de aire total (total-air) de 1.5 a 3.0 millones
+                          de BTU/h
                         </li>
                         <li>
-                          Diseño de aire total (total-air) de 1.5 a 3.0 millones de BTU/h
+                          Motor de 1.5 HP con sensores UV y sistema de
+                          filtración de combustible
                         </li>
-                        <li>
-                          Motor de 1.5 HP con sensores UV y sistema de filtración de combustible
-                        </li>
-                        <li>
-                          Cumple con normas de seguridad de EE. UU.
-                        </li>
-
+                        <li>Cumple con normas de seguridad de EE. UU.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Componentes y Eléctrico
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          COMPONENTES Y ELÉCTRICO
                         </h1>
                         <button
                           className="block md:hidden"
@@ -507,8 +526,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -521,41 +541,68 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Dos motores de 3 HP para rotación del tambor</li>
+                        <li>Cuatro reductores de engranajes</li>
                         <li>
-                          Cuatro reductores de engranajes
-                        </li>
-                        <li>
-                          Motor de bomba de engranaje de 1 HP para inyección de asfalto
-
+                          Motor de bomba de engranaje de 1 HP para inyección de
+                          asfalto
                         </li>
 
                         <li>
-                          Motores, componentes y cableado Siemens de grado industrial.
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
                         </li>
 
                         <li>
-                          Sistema de 110 V en gabinete de control con paro de emergencia
+                          Sistema de 110 V en gabinete de control con paro de
+                          emergencia
                         </li>
 
-                        <li>
-                          Generador trifásico de 20 kW
-                        </li>
+                        <li>Generador trifásico de 20 kW</li>
 
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               20 kW en servicio continuo
                             </li>
-                            <li>22 kW en servicio de emergencia</li>
-                            <li>Voltaje 220/440</li>
-                            <li>Motor Cummins de 35 HP</li>
-                            <li>Tanque diésel de 110 L</li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              22 kW en servicio de emergencia
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Voltaje 220/440
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Motor Cummins de 35 HP
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Tanque diésel de 110 L
+                            </li>
                           </ul>
                         </li>
                       </ul>
@@ -565,8 +612,8 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Álabes
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        ÁLABES
                       </h1>
                       <button
                         className="block md:hidden"
@@ -585,8 +632,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -599,10 +647,11 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>Álabes de entrada</li>
                       <li>Álabes de secado tipo velo</li>
@@ -615,8 +664,8 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Resistencia y seguridad
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        RESISTENCIA Y SEGURIDAD
                       </h1>
                       <button
                         className="block md:hidden"
@@ -635,8 +684,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -649,17 +699,31 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>Bolsas filtrantes Nomex (opcional)</li>
-                      <li>Aislamiento con fibra de vidrio de 1.5" en tambor y tanque</li>
-                      <li>Revestimiento exterior de acero inoxidable en el tanque</li>
-                      <li>Pintura automotriz horneada, resistente a la corrosión</li>
-                      <li>Partes móviles protegidas y señalización de seguridad para el operador</li>
-                      <li>Estructura extra reforzada para trabajo pesado a largo plazo.</li>
+                      <li>
+                        Aislamiento con fibra de vidrio de 1.5" en tambor y
+                        tanque
+                      </li>
+                      <li>
+                        Revestimiento exterior de acero inoxidable en el tanque
+                      </li>
+                      <li>
+                        Pintura automotriz horneada, resistente a la corrosión
+                      </li>
+                      <li>
+                        Partes móviles protegidas y señalización de seguridad
+                        para el operador
+                      </li>
+                      <li>
+                        Estructura extra reforzada para trabajo pesado a largo
+                        plazo.
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -667,8 +731,8 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Portabilidad
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        PORTABILIDAD
                       </h1>
                       <button
                         className="block md:hidden"
@@ -687,8 +751,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -701,23 +766,36 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Montado en chasis ligero para fácil reubicación cuando está vacío</li>
-                      <li>Capacidad de carga de 10 toneladas, soportada por dos ejes con birlos de 8 pernos y ocho llantas de 16".</li>
-                      <li>Enganche tipo tirón con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.</li>
-                      <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                      <li>
+                        Montado en chasis ligero para fácil reubicación cuando
+                        está vacío
+                      </li>
+                      <li>
+                        Capacidad de carga de 10 toneladas, soportada por dos
+                        ejes con birlos de 8 pernos y ocho llantas de 16".
+                      </li>
+                      <li>
+                        Enganche tipo tirón con acoplamiento de seguridad y
+                        sistema de frenos, con sistema de luces y señalamientos
+                        a normas de carretera.
+                      </li>
+                      <li>
+                        La instalación no requiere grúa ni equipo de izaje.
+                      </li>
                     </ul>
                   </div>
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Sistema de Mezcla y Alimentación
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        SISTEMA DE MEZCLA Y ALIMENTACIÓN
                       </h1>
                       <button
                         className="block md:hidden"
@@ -736,8 +814,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -750,15 +829,28 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Mezclador externo tipo pugmill (motor de 5 HP, paletas Hardox, eje simple)</li>
-                      <li>Tolva de agregados montada de 8 toneladas con compuerta ajustable</li>
-                      <li>Banda de alimentación de 18" de ancho con polea principal revestida</li>
-                      <li>Mini banda transportadora (9" x 6 m) con motor de 1 HP y reductor de gusano</li>
+                      <li>
+                        Mezclador externo tipo pugmill (motor de 5 HP, paletas
+                        Hardox, eje simple)
+                      </li>
+                      <li>
+                        Tolva de agregados montada de 8 toneladas con compuerta
+                        ajustable
+                      </li>
+                      <li>
+                        Banda de alimentación de 18" de ancho con polea
+                        principal revestida
+                      </li>
+                      <li>
+                        Mini banda transportadora (9" x 6 m) con motor de 1 HP y
+                        reductor de gusano
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -766,8 +858,8 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-start items-start">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Tanque de Asfalto
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        TANQUE DE ASFALTO
                       </h1>
                       <button
                         className="block md:hidden"
@@ -786,8 +878,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -800,22 +893,30 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Tanque de asfalto montado con capacidad de 6,000 L</li>
-                      <li>Calentamiento directo con quemador de 140,000 BTU/h</li>
+                      <li>
+                        Tanque de asfalto montado con capacidad de 6,000 L
+                      </li>
+                      <li>
+                        Calentamiento directo con quemador de 140,000 BTU/h
+                      </li>
                       <li>Bomba de 2" con motor de 2 HP</li>
-                      <li>Agitador de asfalto integrado para un arranque más rápido</li>
+                      <li>
+                        Agitador de asfalto integrado para un arranque más
+                        rápido
+                      </li>
                     </ul>
                   </div>
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Tasa de Producción
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        TASA DE PRODUCCIÓN
                       </h1>
                       <button
                         className="block md:hidden"
@@ -834,8 +935,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -848,21 +950,23 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>Nominal: 10 TPH en operación continua</li>
-                      <li>Producción continua durante 10 horas (con tanque lleno)</li>
+                      <li>
+                        Producción continua durante 10 horas (con tanque lleno)
+                      </li>
                     </ul>
                   </div>
 
-
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimiento con Normativas Industriales
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        CUMPLIMIENTO CON NORMATIVAS INDUSTRIALES
                       </h1>
                       <button
                         className="block md:hidden"
@@ -881,8 +985,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -895,21 +1000,31 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C5_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C5_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Mezclador externo tipo pugmill (motor de 5 HP, paletas Hardox, eje simple)</li>
-                      <li>Tolva de agregados montada de 8 toneladas con compuerta ajustable</li>
-                      <li>Banda de alimentación de 18" de ancho con polea principal revestida</li>
-                      <li>Mini banda transportadora (9" x 6 m) con motor de 1 HP y reductor de gusano</li>
+                      <li>
+                        Mezclador externo tipo pugmill (motor de 5 HP, paletas
+                        Hardox, eje simple)
+                      </li>
+                      <li>
+                        Tolva de agregados montada de 8 toneladas con compuerta
+                        ajustable
+                      </li>
+                      <li>
+                        Banda de alimentación de 18" de ancho con polea
+                        principal revestida
+                      </li>
+                      <li>
+                        Mini banda transportadora (9" x 6 m) con motor de 1 HP y
+                        reductor de gusano
+                      </li>
                     </ul>
                   </div>
                 </div>
-
-
-
 
                 <div className="flex justify-start md:justify-center items-end my-10 overflow-x-auto w-full">
                   <div className="flex flex-col items-center justify-center">
@@ -938,11 +1053,12 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
-                          } mt`
+                          ? `${
+                              activeData?.dimensions.width?.toFixed(2) ?? ""
+                            } m`
                           : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                              (activeData?.dimensions.width ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1001,11 +1117,12 @@ const PlanoSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
-                          } mt`
+                          ? `${
+                              activeData?.dimensions.height?.toFixed(2) ?? ""
+                            } m`
                           : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                              (activeData?.dimensions.height ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -1057,11 +1174,12 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
-                          } mt`
+                          ? `${
+                              activeData?.dimensions.length?.toFixed(2) ?? ""
+                            } m`
                           : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                              (activeData?.dimensions.length ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -1099,7 +1217,7 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        Chasis y estructura
+                        CHASIS Y ESTRUCTURA
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1118,8 +1236,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1132,20 +1251,22 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C5_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Largo total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.length?.toFixed(2) ?? ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.length ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1156,36 +1277,39 @@ const PlanoSection = () => {
                         <h1>Ancho del chasis:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.chasisWidth?.toFixed(
-                              2
-                            ) ?? ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.chasisWidth?.toFixed(
+                                  2,
+                                ) ?? ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.chasisWidth ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.chasisWidth ?? 0) *
+                                cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.width?.toFixed(2) ?? ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.width ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.height?.toFixed(2) ?? ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.height ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -1194,8 +1318,8 @@ const PlanoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full mt-0 md:mt-10 gap-0 md:gap-10">
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Dimensiones del tambor
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        DIMENSIONES DEL TAMBOR
                       </h1>
                       <button
                         className="block"
@@ -1214,8 +1338,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1228,47 +1353,48 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C5_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].length?.toFixed(2) ?? ""} mt`
+                            ? `${drumMixer[0].length?.toFixed(2) ?? ""} m`
                             : `${(
-                              (drumMixer[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (drumMixer[0].length ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        DIMENSIONeS del tanque de asfalto
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        DIMENSIONES DEL TANQUE DE ASFALTO
                       </h1>
                       <button
                         className="block"
@@ -1287,8 +1413,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1301,39 +1428,40 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C5_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <div className="flex justify-between">
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].length?.toFixed(2) ?? ""} mt`
+                            ? `${asphalTank[0].length?.toFixed(2) ?? ""} m`
                             : `${(
-                              (asphalTank[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (asphalTank[0].length ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${asphalTank[0].width?.toFixed(2) ?? ""} m`
                             : `${(
-                              (asphalTank[0].width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (asphalTank[0].width ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].height?.toFixed(2) ?? ""} mt`
+                            ? `${asphalTank[0].height?.toFixed(2) ?? ""} m`
                             : `${(
-                              (asphalTank[0].height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (asphalTank[0].height ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1348,8 +1476,8 @@ const PlanoSection = () => {
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Dimensiones de la tolva
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        DIMENSIONES DE LA TOLVA
                       </h1>
                       <button
                         className="block"
@@ -1368,8 +1496,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1382,39 +1511,40 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C5_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <div className="flex justify-between">
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].length?.toFixed(2) ?? ""} mt`
+                            ? `${binUnit[0].length?.toFixed(2) ?? ""} m`
                             : `${((binUnit[0].length ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${binUnit[0].width?.toFixed(2) ?? ""} m`
                             : `${((binUnit[0].width ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].height?.toFixed(2) ?? ""} mt`
+                            ? `${binUnit[0].height?.toFixed(2) ?? ""} m`
                             : `${((binUnit[0].height ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} mt`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -1436,11 +1566,11 @@ const PlanoSection = () => {
                 ref={containerRef}
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center w-full">
-                  <div className="flex flex-col w-full h-full items-start justify-between gap-0 order-2 md:order-1">
+                  <div className="flex flex-col w-full h-full items-start justify-start gap-0 md:gap-10 order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Construcción y Diseño
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          CONSTRUCCIÓN Y DISEÑO
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1459,8 +1589,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1473,25 +1604,30 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Patas de soporte plegables con altura de trabajo preestablecida
+                          Patas de soporte plegables con altura de trabajo
+                          preestablecida
                         </li>
-                        <li>Tambor fabricado con acero aleado resistente a altas temperaturas</li>
                         <li>
-                          Protección frontal reforzada y sellos de EPDM en los extremos del tambor
+                          Tambor fabricado con acero aleado resistente a altas
+                          temperaturas
                         </li>
-
+                        <li>
+                          Protección frontal reforzada y sellos de EPDM en los
+                          extremos del tambor
+                        </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y Operación
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          CONTROL Y OPERACIÓN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1510,8 +1646,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1524,35 +1661,50 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Gabinete de control electrónico con amperímetro</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Controles independientes y de fácil manejo,
+                              diseñados para confiabilidad en sitio.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Controles digitales de temperatura y dosificación de asfalto
+                          Controles digitales de temperatura y dosificación de
+                          asfalto
+                        </li>
+                        <li>Variador de velocidad para ajustes en la mezcla</li>
+                        <li>
+                          Opción remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
+                        </li>
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
+                            </li>
+                          </ul>
                         </li>
                         <li>
-                          Variador de velocidad para ajustes en la mezcla
-                        </li>
-                        <li>
-                          Opción remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
-                        </li>
-                        <ul className="list-disc ml-10">
-                          <li>
-                            Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
-                          </li>
-                        </ul>
-                        <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                       </ul>
                     </div>
@@ -1564,11 +1716,11 @@ const PlanoSection = () => {
                       className="w-[200px] h-[588px]"
                     />
                   </div>
-                  <div className="flex flex-col items-start justify-between w-full h-full col-span-1 order-3 md:order-3">
+                  <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full col-span-1 order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Sistema de Quemador
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          SISTEMA DE QUEMADOR
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1587,8 +1739,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1601,25 +1754,29 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
+                        <li>Quemador diésel modulante</li>
+
                         <li>
-                          Quemador diésel modulante
-
+                          Diseño de aire total (total-air) de 1.5 a 3.0 millones
+                          de BTU/h
                         </li>
-
-                        <li>Diseño de aire total (total-air) de 1.5 a 3.0 millones de BTU/h</li>
-                        <li>Motor de 1.5 HP con sensores UV y sistema de filtración de combustible</li>
+                        <li>
+                          Motor de 1.5 HP con sensores UV y sistema de
+                          filtración de combustible
+                        </li>
                         <li>Cumple con normas de seguridad de EE. UU.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Componentes y Eléctrico
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          COMPONENTES Y ELÉCTRICO
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1638,8 +1795,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -1652,28 +1810,64 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <li>
-                          Dos motores de 3 HP para rotación del tambor
-                        </li>
+                        <li>Dos motores de 3 HP para rotación del tambor</li>
                         <li>Cuatro reductores de engranajes</li>
                         <li>
-                          Motor de bomba de engranaje de 1 HP para inyección de asfalto
+                          Motor de bomba de engranaje de 1 HP para inyección de
+                          asfalto
                         </li>
-                        <li>Motores, componentes y cableado Siemens de grado industrial.</li>
-                        <li>Sistema de 110 V en gabinete de control con paro de emergencia</li>
+                        <li>
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
+                        </li>
+                        <li>
+                          Sistema de 110 V en gabinete de control con paro de
+                          emergencia
+                        </li>
                         <li>Generador trifásico de 20 kW</li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>20 kW en servicio continuo</li>
-                            <li>22 kW en servicio de emergencia</li>
-                            <li>Voltaje 220/440</li>
-                            <li>Motor Cummins de 35 HP</li>
-                            <li>Tanque diésel de 110 L</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              20 kW en servicio continuo
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              22 kW en servicio de emergencia
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Voltaje 220/440
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Motor Cummins de 35 HP
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Tanque diésel de 110 L
+                            </li>
                           </ul>
                         </li>
                       </ul>
@@ -1684,8 +1878,8 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Álabes
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        ÁLABES
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1704,8 +1898,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1718,10 +1913,11 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>Álabes de entrada</li>
                       <li>Álabes de secado tipo velo</li>
@@ -1734,8 +1930,8 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Resistencia y seguridad
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        RESISTENCIA Y SEGURIDAD
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1754,8 +1950,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1768,17 +1965,31 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>Bolsas filtrantes Nomex (opcional)</li>
-                      <li>Aislamiento con fibra de vidrio de 1.5" en tambor y tanque</li>
-                      <li>Revestimiento exterior de acero inoxidable en el tanque</li>
-                      <li>Pintura automotriz horneada, resistente a la corrosión</li>
-                      <li>Partes móviles protegidas y señalización de seguridad para el operador</li>
-                      <li>Estructura extra reforzada para trabajo pesado a largo plazo.</li>
+                      <li>
+                        Aislamiento con fibra de vidrio de 1.5" en tambor y
+                        tanque
+                      </li>
+                      <li>
+                        Revestimiento exterior de acero inoxidable en el tanque
+                      </li>
+                      <li>
+                        Pintura automotriz horneada, resistente a la corrosión
+                      </li>
+                      <li>
+                        Partes móviles protegidas y señalización de seguridad
+                        para el operador
+                      </li>
+                      <li>
+                        Estructura extra reforzada para trabajo pesado a largo
+                        plazo.
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1786,8 +1997,8 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Portabilidad
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        PORTABILIDAD
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1806,8 +2017,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1820,23 +2032,36 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Montado en chasis ligero para fácil reubicación cuando está vacío</li>
-                      <li>Capacidad de carga de 10 toneladas, soportada por dos ejes con birlos de 8 pernos y ocho llantas de 16".</li>
-                      <li>Enganche tipo tirón con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.</li>
-                      <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                      <li>
+                        Montado en chasis ligero para fácil reubicación cuando
+                        está vacío
+                      </li>
+                      <li>
+                        Capacidad de carga de 10 toneladas, soportada por dos
+                        ejes con birlos de 8 pernos y ocho llantas de 16".
+                      </li>
+                      <li>
+                        Enganche tipo tirón con acoplamiento de seguridad y
+                        sistema de frenos, con sistema de luces y señalamientos
+                        a normas de carretera.
+                      </li>
+                      <li>
+                        La instalación no requiere grúa ni equipo de izaje.
+                      </li>
                     </ul>
                   </div>
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Sistema de Mezcla y Alimentación
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        SISTEMA DE MEZCLA Y ALIMENTACIÓN
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1855,8 +2080,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1869,15 +2095,28 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Mezclador externo tipo pugmill (motor de 5 HP, paletas Hardox, eje simple)</li>
-                      <li>Tolva de agregados montada de 8 toneladas con compuerta ajustable</li>
-                      <li>Banda de alimentación de 18" de ancho con polea principal revestida</li>
-                      <li>Mini banda transportadora (9" x 6 m) con motor de 1 HP y reductor de gusano</li>
+                      <li>
+                        Mezclador externo tipo pugmill (motor de 5 HP, paletas
+                        Hardox, eje simple)
+                      </li>
+                      <li>
+                        Tolva de agregados montada de 8 toneladas con compuerta
+                        ajustable
+                      </li>
+                      <li>
+                        Banda de alimentación de 18" de ancho con polea
+                        principal revestida
+                      </li>
+                      <li>
+                        Mini banda transportadora (9" x 6 m) con motor de 1 HP y
+                        reductor de gusano
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1885,8 +2124,8 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-start items-start gap-5">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Tanque de Asfalto
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        TANQUE DE ASFALTO
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1905,8 +2144,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1919,22 +2159,31 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Tanque de asfalto montado con capacidad de 6,000 L</li>
-                      <li>Calentamiento directo con quemador de 140,000 BTU/h</li>
+                      <li>
+                        Tanque de asfalto montado con capacidad de 6,000 L
+                      </li>
+                      <li>
+                        Calentamiento directo con quemador de 140,000 BTU/h
+                      </li>
                       <li>Bomba de 2" con motor de 2 HP</li>
-                      <li>Agitador de asfalto integrado para un arranque más rápido</li>
+                      <li>
+                        Agitador de asfalto integrado para un arranque más
+                        rápido
+                      </li>
                     </ul>
                   </div>
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Tasa de Producción                      </h1>
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        TASA DE PRODUCCIÓN
+                      </h1>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1952,8 +2201,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -1966,21 +2216,23 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>Nominal: 10 TPH en operación continua</li>
-                      <li>Producción continua durante 10 horas (con tanque lleno)</li>
+                      <li>
+                        Producción continua durante 10 horas (con tanque lleno)
+                      </li>
                     </ul>
                   </div>
 
-
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimiento con Normativas Industriales
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        CUMPLIMIENTO CON NORMATIVAS INDUSTRIALES
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1999,8 +2251,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2013,10 +2266,11 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C5_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C5_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>EPA</li>
                       <li>OSHA</li>
@@ -2025,9 +2279,6 @@ const PlanoSection = () => {
                     </ul>
                   </div>
                 </div>
-
-
-
 
                 <div className="flex justify-start md:justify-center items-end my-10 overflow-x-auto w-full">
                   <div className="flex flex-col items-center justify-center">
@@ -2056,11 +2307,12 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
-                          } mt`
+                          ? `${
+                              activeData?.dimensions.width?.toFixed(2) ?? ""
+                            } m`
                           : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                              (activeData?.dimensions.width ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2119,11 +2371,12 @@ const PlanoSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
-                          } mt`
+                          ? `${
+                              activeData?.dimensions.height?.toFixed(2) ?? ""
+                            } m`
                           : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                              (activeData?.dimensions.height ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -2175,11 +2428,12 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
-                          } mt`
+                          ? `${
+                              activeData?.dimensions.length?.toFixed(2) ?? ""
+                            } m`
                           : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                              (activeData?.dimensions.length ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -2216,8 +2470,8 @@ const PlanoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full mt-10">
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Chasis y estructura
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        CHASIS Y ESTRUCTURA
                       </h1>
                       <button
                         aria-label="See more about the chassis and structure of the system"
@@ -2237,8 +2491,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2251,20 +2506,22 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C5_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Largo total (incluyendo enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.length?.toFixed(2) ?? ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.length ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2295,36 +2552,39 @@ const PlanoSection = () => {
                         <h1>Ancho del chasis:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.chasisWidth?.toFixed(
-                              2
-                            ) ?? ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.chasisWidth?.toFixed(
+                                  2,
+                                ) ?? ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.chasisWidth ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.chasisWidth ?? 0) *
+                                cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.width?.toFixed(2) ?? ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.width ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.height?.toFixed(2) ?? ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.height ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -2333,8 +2593,8 @@ const PlanoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full mt-0 md:mt-10 gap-0 md:gap-10">
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Dimensiones del tambor
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        DIMENSIONES DEL TAMBOR
                       </h1>
                       <button
                         className="block"
@@ -2353,8 +2613,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2367,47 +2628,48 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C5_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].length?.toFixed(2) ?? ""} mt`
+                            ? `${drumMixer[0].length?.toFixed(2) ?? ""} m`
                             : `${(
-                              (drumMixer[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (drumMixer[0].length ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        DIMENSIONeS del tanque de asfalto
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        DIMENSIONES DEL TANQUE DE ASFALTO
                       </h1>
                       <button
                         className="block"
@@ -2426,8 +2688,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C6_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C6_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2440,39 +2703,40 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C6_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C6_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <div className="flex justify-between">
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].length?.toFixed(2) ?? ""} mt`
+                            ? `${asphalTank[0].length?.toFixed(2) ?? ""} m`
                             : `${(
-                              (asphalTank[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (asphalTank[0].length ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${asphalTank[0].width?.toFixed(2) ?? ""} m`
                             : `${(
-                              (asphalTank[0].width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (asphalTank[0].width ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].height?.toFixed(2) ?? ""} mt`
+                            ? `${asphalTank[0].height?.toFixed(2) ?? ""} m`
                             : `${(
-                              (asphalTank[0].height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (asphalTank[0].height ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2487,8 +2751,8 @@ const PlanoSection = () => {
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Dimensiones de la tolva
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        DIMENSIONES DE LA TOLVA
                       </h1>
                       <button
                         className="block"
@@ -2507,8 +2771,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C6_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C6_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2521,39 +2786,40 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C6_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C6_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <div className="flex justify-between">
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].length?.toFixed(2) ?? ""} mt`
+                            ? `${binUnit[0].length?.toFixed(2) ?? ""} m`
                             : `${((binUnit[0].length ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${binUnit[0].width?.toFixed(2) ?? ""} m`
                             : `${((binUnit[0].width ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].height?.toFixed(2) ?? ""} mt`
+                            ? `${binUnit[0].height?.toFixed(2) ?? ""} m`
                             : `${((binUnit[0].height ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -2576,14 +2842,14 @@ const PlanoSection = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center w-full">
                   <div
-                    className="flex flex-col w-full h-full items-start justify-between gap-0 order-2 md:order-1"
+                    className="flex flex-col w-full h-full items-start justify-start gap-0 md:gap-10 order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Construcción y Diseño
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          CONSTRUCCIÓN Y DISEÑO
                         </h1>
                         <button
                           aria-label="See more about the Durability and Safety"
@@ -2603,8 +2869,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2617,22 +2884,30 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>
-                          Patas de soporte plegables con altura de trabajo preestablecida
+                          Patas de soporte plegables con altura de trabajo
+                          preestablecida
                         </li>
-                        <li>Tambor fabricado con acero aleado resistente a altas temperaturas</li>
-                        <li>Protección frontal reforzada y sellos de EPDM en los extremos del tambor</li>
+                        <li>
+                          Tambor fabricado con acero aleado resistente a altas
+                          temperaturas
+                        </li>
+                        <li>
+                          Protección frontal reforzada y sellos de EPDM en los
+                          extremos del tambor
+                        </li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y Operación
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          CONTROL Y OPERACIÓN
                         </h1>
                         <button
                           aria-label="See more about the control and operation of the system"
@@ -2652,8 +2927,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C1_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2666,51 +2942,64 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C1_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
                         <li>Gabinete de control electrónico con amperímetro</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
-                              Controles independientes y de fácil manejo, diseñados para confiabilidad en sitio.
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Controles independientes y de fácil manejo,
+                              diseñados para confiabilidad en sitio.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Controles digitales de temperatura y dosificación de asfalto
+                          Controles digitales de temperatura y dosificación de
+                          asfalto
                         </li>
+                        <li>Variador de velocidad para ajustes en la mezcla</li>
                         <li>
-                          Variador de velocidad para ajustes en la mezcla
-                        </li>
-                        <li>
-                          Opción remoto de los parámetros de operación, con supervisión en tiempo real y registro histórico de datos.
+                          Opción remoto de los parámetros de operación, con
+                          supervisión en tiempo real y registro histórico de
+                          datos.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>
-                              Sistema de monitoreo remoto, accesible desde computadora, tablet o teléfono.
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Sistema de monitoreo remoto, accesible desde
+                              computadora, tablet o teléfono.
                             </li>
                           </ul>
                         </li>
                         <li>
-                          Sistema de alarmas y seguridades para condiciones fuera de rango.
+                          Sistema de alarmas y seguridades para condiciones
+                          fuera de rango.
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-span-2 flex items-start mb-6 md:mb-0 justify-center w-full h-[588px] order-1 md:order-2"></div>
                   <div
-                    className="flex flex-col items-start justify-between w-full h-full col-span-1 order-3 md:order-3"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full col-span-1 order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Sistema de Quemador
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          SISTEMA DE QUEMADOR
                         </h1>
                         <button
                           aria-label="See more about the components and electrical composition"
@@ -2730,8 +3019,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_1 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2744,23 +3034,28 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
+                        <li>Quemador diésel modulante</li>
                         <li>
-                          Quemador diésel modulante
+                          Diseño de aire total (total-air) de 1.5 a 3.0 millones
+                          de BTU/h
                         </li>
-                        <li>Diseño de aire total (total-air) de 1.5 a 3.0 millones de BTU/h</li>
-                        <li>Motor de 1.5 HP con sensores UV y sistema de filtración de combustible</li>
+                        <li>
+                          Motor de 1.5 HP con sensores UV y sistema de
+                          filtración de combustible
+                        </li>
                         <li>Cumple con normas de seguridad de EE. UU.</li>
                       </ul>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Componentes y Eléctrico
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                          COMPONENTES Y ELÉCTRICO
                         </h1>
                         <button
                           aria-label="See more about the portability"
@@ -2780,8 +3075,9 @@ const PlanoSection = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C2_2 ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
                           >
                             <path
                               d="M6 9L12 15L18 9"
@@ -2794,32 +3090,64 @@ const PlanoSection = () => {
                         </button>
                       </div>
                       <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C2_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
+                        <li>Dos motores de 3 HP para rotación del tambor</li>
+                        <li>Cuatro reductores de engranajes</li>
                         <li>
-                          Dos motores de 3 HP para rotación del tambor
+                          Motor de bomba de engranaje de 1 HP para inyección de
+                          asfalto
                         </li>
                         <li>
-                          Cuatro reductores de engranajes
+                          Motores, componentes y cableado Siemens de grado
+                          industrial.
                         </li>
                         <li>
-                          Motor de bomba de engranaje de 1 HP para inyección de asfalto
+                          Sistema de 110 V en gabinete de control con paro de
+                          emergencia
                         </li>
-                        <li>
-                          Motores, componentes y cableado Siemens de grado industrial.
-                        </li>
-                        <li>Sistema de 110 V en gabinete de control con paro de emergencia</li>
                         <li>Generador trifásico de 20 kW</li>
                         <li className="list-none">
-                          <ul className="list-disc pl-10">
-                            <li>20 kW en servicio continuo</li>
-                            <li>22 kW en servicio de emergencia</li>
-                            <li>Voltaje 220/440</li>
-                            <li>Motor Cummins de 35 HP</li>
-                            <li>Tanque diésel de 110 L</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              20 kW en servicio continuo
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              22 kW en servicio de emergencia
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Voltaje 220/440
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Motor Cummins de 35 HP
+                            </li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Tanque diésel de 110 L
+                            </li>
                           </ul>
                         </li>
                       </ul>
@@ -2830,8 +3158,8 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Álabes
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        ÁLABES
                       </h1>
                       <button
                         aria-label="See more about the burner system"
@@ -2851,8 +3179,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2865,10 +3194,11 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>Álabes de entrada</li>
                       <li>Álabes de secado tipo velo</li>
@@ -2881,8 +3211,8 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Resistencia y seguridad
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        RESISTENCIA Y SEGURIDAD
                       </h1>
                       <button
                         aria-label="See more about the compliance with industry standards"
@@ -2902,8 +3232,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2916,27 +3247,40 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>Bolsas filtrantes Nomex (opcional)</li>
-                      <li>Aislamiento con fibra de vidrio de 1.5" en tambor y tanque</li>
-                      <li>Revestimiento exterior de acero inoxidable en el tanque</li>
-                      <li>Pintura automotriz horneada, resistente a la corrosión</li>
-                      <li>Partes móviles protegidas y señalización de seguridad para el operador</li>
-                      <li>Estructura extra reforzada para trabajo pesado a largo plazo.</li>
+                      <li>
+                        Aislamiento con fibra de vidrio de 1.5" en tambor y
+                        tanque
+                      </li>
+                      <li>
+                        Revestimiento exterior de acero inoxidable en el tanque
+                      </li>
+                      <li>
+                        Pintura automotriz horneada, resistente a la corrosión
+                      </li>
+                      <li>
+                        Partes móviles protegidas y señalización de seguridad
+                        para el operador
+                      </li>
+                      <li>
+                        Estructura extra reforzada para trabajo pesado a largo
+                        plazo.
+                      </li>
                     </ul>
                   </div>
                 </div>
 
-
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Portabilidad
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        PORTABILIDAD
                       </h1>
                       <button
                         aria-label="See more about the burner system"
@@ -2956,8 +3300,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C3_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C3_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -2970,23 +3315,36 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C3_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C3_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Montado en un chasis de servicio estándar diseñado para trasladar la planta vacía.</li>
-                      <li>Capacidad de carga de 10 toneladas, soportada por dos ejes con birlos de 8 pernos y ocho llantas de 16".</li>
-                      <li>Enganche tipo arrastre con acoplamiento de seguridad y sistema de frenos, con sistema de luces y señalamientos a normas de carretera.</li>
-                      <li>La instalación no requiere grúa ni equipo de izaje.</li>
+                      <li>
+                        Montado en un chasis de servicio estándar diseñado para
+                        trasladar la planta vacía.
+                      </li>
+                      <li>
+                        Capacidad de carga de 10 toneladas, soportada por dos
+                        ejes con birlos de 8 pernos y ocho llantas de 16".
+                      </li>
+                      <li>
+                        Enganche tipo arrastre con acoplamiento de seguridad y
+                        sistema de frenos, con sistema de luces y señalamientos
+                        a normas de carretera.
+                      </li>
+                      <li>
+                        La instalación no requiere grúa ni equipo de izaje.
+                      </li>
                     </ul>
                   </div>
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Sistema de Mezcla y Alimentación
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        SISTEMA DE MEZCLA Y ALIMENTACIÓN
                       </h1>
                       <button
                         aria-label="See more about the compliance with industry standards"
@@ -3006,8 +3364,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3020,15 +3379,28 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C4_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C4_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Mezclador externo tipo pugmill (motor de 5 HP, paletas Hardox, eje simple)</li>
-                      <li>Tolva de agregados montada de 8 toneladas con compuerta ajustable</li>
-                      <li>Banda de alimentación de 18" de ancho con polea principal revestida</li>
-                      <li>Mini banda transportadora (9" x 6 m) con motor de 1 HP y reductor de gusano</li>
+                      <li>
+                        Mezclador externo tipo pugmill (motor de 5 HP, paletas
+                        Hardox, eje simple)
+                      </li>
+                      <li>
+                        Tolva de agregados montada de 8 toneladas con compuerta
+                        ajustable
+                      </li>
+                      <li>
+                        Banda de alimentación de 18" de ancho con polea
+                        principal revestida
+                      </li>
+                      <li>
+                        Mini banda transportadora (9" x 6 m) con motor de 1 HP y
+                        reductor de gusano
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -3036,8 +3408,8 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Tanque de Asfalto
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        TANQUE DE ASFALTO
                       </h1>
                       <button
                         aria-label="See more about the burner system"
@@ -3057,8 +3429,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3071,22 +3444,30 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C4_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C4_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
-                      <li>Tanque de asfalto montado con capacidad de 6,000 L</li>
-                      <li>Calentamiento directo con quemador de 140,000 BTU/h</li>
+                      <li>
+                        Tanque de asfalto montado con capacidad de 6,000 L
+                      </li>
+                      <li>
+                        Calentamiento directo con quemador de 140,000 BTU/h
+                      </li>
                       <li>Bomba de 2" con motor de 2 HP</li>
-                      <li>Agitador de asfalto integrado para un arranque más rápido</li>
+                      <li>
+                        Agitador de asfalto integrado para un arranque más
+                        rápido
+                      </li>
                     </ul>
                   </div>
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Tasa de Producción
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        TASA DE PRODUCCIÓN
                       </h1>
                       <button
                         aria-label="See more about the burner system"
@@ -3106,8 +3487,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C4_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C4_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3120,20 +3502,23 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C4_3
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C4_3
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>Nominal: 10 TPH en operación continua</li>
-                      <li>Producción continua durante 10 horas (con tanque lleno)</li>
+                      <li>
+                        Producción continua durante 10 horas (con tanque lleno)
+                      </li>
                     </ul>
                   </div>
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Cumplimiento con Normativas Industriales
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        CUMPLIMIENTO CON NORMATIVAS INDUSTRIALES
                       </h1>
                       <button
                         aria-label="See more about the compliance with industry standards"
@@ -3153,8 +3538,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3167,10 +3553,11 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <ul
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${openSections.C5_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                        openSections.C5_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <li>EPA</li>
                       <li>OSHA</li>
@@ -3179,7 +3566,6 @@ const PlanoSection = () => {
                     </ul>
                   </div>
                 </div>
-
 
                 <div className="flex justify-start md:justify-center items-end my-10 overflow-x-auto w-full">
                   <div className="flex flex-col items-center justify-center">
@@ -3208,11 +3594,12 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
-                          } mt`
+                          ? `${
+                              activeData?.dimensions.width?.toFixed(2) ?? ""
+                            } m`
                           : `${(
-                            (activeData?.dimensions.width ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                              (activeData?.dimensions.width ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -3271,11 +3658,12 @@ const PlanoSection = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
-                          } mt`
+                          ? `${
+                              activeData?.dimensions.height?.toFixed(2) ?? ""
+                            } m`
                           : `${(
-                            (activeData?.dimensions.height ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                              (activeData?.dimensions.height ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                     </div>
                     <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -3327,11 +3715,12 @@ const PlanoSection = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
-                          } mt`
+                          ? `${
+                              activeData?.dimensions.length?.toFixed(2) ?? ""
+                            } m`
                           : `${(
-                            (activeData?.dimensions.length ?? 0) * cmToFeet
-                          ).toFixed(1)} ft`}
+                              (activeData?.dimensions.length ?? 0) * cmToFeet
+                            ).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                         <div className="bg-white h-[1px] w-full relative">
@@ -3368,8 +3757,8 @@ const PlanoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full mt-10">
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Chasis y estructura
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        CHASIS Y ESTRUCTURA
                       </h1>
                       <button
                         aria-label="See more about the chassis and structure of the system"
@@ -3389,8 +3778,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3403,20 +3793,22 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        } md:max-h-full md:opacity-100 md:block`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C5_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
                         <h1>Largo total (incluyendo quinta rueda)::</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.length?.toFixed(2) ?? ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.length?.toFixed(2) ?? ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.length ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3431,13 +3823,14 @@ const PlanoSection = () => {
                         <h1>Altura enganche quinta rueda</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.fifthWheel?.toFixed(2) ??
-                            ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.fifthWheel?.toFixed(2) ??
+                                ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.fifthWheel ?? 0) *
-                              cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.fifthWheel ?? 0) *
+                                cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3469,14 +3862,15 @@ const PlanoSection = () => {
                           <div className="flex justify-between">
                             <p>
                               {unit === "metric"
-                                ? `${activeData?.dimensions.chasisWidth?.toFixed(
-                                  2
-                                ) ?? ""
-                                } mt`
+                                ? `${
+                                    activeData?.dimensions.chasisWidth?.toFixed(
+                                      2,
+                                    ) ?? ""
+                                  } m`
                                 : `${(
-                                  (activeData?.dimensions.chasisWidth ?? 0) *
-                                  cmToFeet
-                                ).toFixed(1)} ft`}
+                                    (activeData?.dimensions.chasisWidth ?? 0) *
+                                    cmToFeet
+                                  ).toFixed(1)} ft`}
                             </p>
                           </div>
                         </p>
@@ -3485,22 +3879,24 @@ const PlanoSection = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.width?.toFixed(2) ?? ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.width?.toFixed(2) ?? ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.width ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${activeData?.dimensions.height?.toFixed(2) ?? ""
-                            } mt`
+                            ? `${
+                                activeData?.dimensions.height?.toFixed(2) ?? ""
+                              } m`
                             : `${(
-                              (activeData?.dimensions.height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (activeData?.dimensions.height ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                     </div>
@@ -3509,8 +3905,8 @@ const PlanoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full mt-0 md:mt-10 gap-0 md:gap-10">
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Dimensiones del tambor
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        DIMENSIONES DEL TAMBOR
                       </h1>
                       <button
                         aria-label="See more about the Drum Mixer Specifications"
@@ -3530,8 +3926,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C5_3 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C5_3 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3544,47 +3941,48 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C5_3
-                        ? "max-h-[650px] opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C5_3
+                          ? "max-h-[650px] opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <div className="flex justify-between">
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].length?.toFixed(2) ?? ""} mt`
+                            ? `${drumMixer[0].length?.toFixed(2) ?? ""} m`
                             : `${(
-                              (drumMixer[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (drumMixer[0].length ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
                             : `${((drumMixer[0].width ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        DIMENSIONeS del tanque de asfalto
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        DIMENSIONES DEL TANQUE DE ASFALTO
                       </h1>
                       <button
                         aria-label="See more about the Asphalt Tank specifications"
@@ -3604,8 +4002,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C6_1 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C6_1 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3618,39 +4017,40 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C6_1
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C6_1
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <div className="flex justify-between">
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].length?.toFixed(2) ?? ""} mt`
+                            ? `${asphalTank[0].length?.toFixed(2) ?? ""} m`
                             : `${(
-                              (asphalTank[0].length ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (asphalTank[0].length ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${asphalTank[0].width?.toFixed(2) ?? ""} m`
                             : `${(
-                              (asphalTank[0].width ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (asphalTank[0].width ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${asphalTank[0].height?.toFixed(2) ?? ""} mt`
+                            ? `${asphalTank[0].height?.toFixed(2) ?? ""} m`
                             : `${(
-                              (asphalTank[0].height ?? 0) * cmToFeet
-                            ).toFixed(1)} ft`}
+                                (asphalTank[0].height ?? 0) * cmToFeet
+                              ).toFixed(1)} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
@@ -3665,8 +4065,8 @@ const PlanoSection = () => {
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        Dimensiones de la tolva
+                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        DIMENSIONES DE LA TOLVA
                       </h1>
                       <button
                         aria-label="See more about the Bin Units specifications"
@@ -3686,8 +4086,9 @@ const PlanoSection = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                           color="#000000"
-                          className={`transition-transform duration-300 transform ${openSections.C6_2 ? "rotate-180" : ""
-                            }`}
+                          className={`transition-transform duration-300 transform ${
+                            openSections.C6_2 ? "rotate-180" : ""
+                          }`}
                         >
                           <path
                             d="M6 9L12 15L18 9"
@@ -3700,39 +4101,40 @@ const PlanoSection = () => {
                       </button>
                     </div>
                     <div
-                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${openSections.C6_2
-                        ? "max-h-96 opacity-1 mb-4"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`transition-all duration-500 md:mb-0 overflow-hidden w-full list-disc list-inside ${
+                        openSections.C6_2
+                          ? "max-h-96 opacity-1 mb-4"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <div className="flex justify-between">
                         <h1>Largo:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].length?.toFixed(2) ?? ""} mt`
+                            ? `${binUnit[0].length?.toFixed(2) ?? ""} m`
                             : `${((binUnit[0].length ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].width?.toFixed(2) ?? ""} mt`
+                            ? `${binUnit[0].width?.toFixed(2) ?? ""} m`
                             : `${((binUnit[0].width ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">
                         <h1>Alto:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${binUnit[0].height?.toFixed(2) ?? ""} mt`
+                            ? `${binUnit[0].height?.toFixed(2) ?? ""} m`
                             : `${((binUnit[0].height ?? 0) * cmToFeet).toFixed(
-                              1
-                            )} ft`}
+                                1,
+                              )} ft`}
                         </p>
                       </div>
                       <div className="flex justify-between">

@@ -9,6 +9,7 @@ import OSHand from "../../assets/images/OSHand.webp";
 import Slider from "../IntegralAsphalt/SliderOsIntegral";
 import SliderVentajas from "./SliderVentajas.astro";
 import logo2 from "../../assets/logos/triasoLogo.png";
+import Spare from "../../assets/images/Boxes.webp";
 ---
 
 <section class="w-full flex mt-6 md:mt-20 flex-col gap-4 bg-gray-100">
@@ -18,13 +19,13 @@ import logo2 from "../../assets/logos/triasoLogo.png";
     >
       <!-- Tab 1: Computerization -->
       <button
-        class="tab-button-1 flex-1 flex flex-col items-center justify-center gap-2 py-4 px-3 rounded-xl focus:outline-none transition-all duration-200"
+        class="tab-button-1 flex-1 flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-xl focus:outline-none transition-all duration-200"
         data-tab="tab1"
         aria-selected="true"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="tab-icon w-8 h-8 sm:w-10 sm:h-10"
+          class="tab-icon w-5 h-5 sm:w-6 sm:h-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
@@ -43,13 +44,13 @@ import logo2 from "../../assets/logos/triasoLogo.png";
 
       <!-- Tab 2: Advantages -->
       <button
-        class="tab-button-1 flex-1 flex flex-col items-center justify-center gap-2 py-4 px-3 rounded-xl focus:outline-none transition-all duration-200"
+        class="tab-button-1 flex-1 flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-xl focus:outline-none transition-all duration-200"
         data-tab="tab2"
         aria-selected="false"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="tab-icon w-8 h-8 sm:w-10 sm:h-10"
+          class="tab-icon w-5 h-5 sm:w-6 sm:h-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
@@ -68,13 +69,13 @@ import logo2 from "../../assets/logos/triasoLogo.png";
 
       <!-- Tab 3: Low Maintenance -->
       <button
-        class="tab-button-1 flex-1 flex flex-col items-center justify-center gap-2 py-4 px-3 rounded-xl focus:outline-none transition-all duration-200"
+        class="tab-button-1 flex-1 flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-xl focus:outline-none transition-all duration-200"
         data-tab="tab3"
         aria-selected="false"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="tab-icon w-8 h-8 sm:w-10 sm:h-10"
+          class="tab-icon w-5 h-5 sm:w-6 sm:h-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
@@ -392,15 +393,18 @@ import logo2 from "../../assets/logos/triasoLogo.png";
                 <h1
                   class="m-0 font-bold uppercase text-white text-xl md:text-3xl lg:text-4xl text-center"
                 >
-                  Mayor eficiencia en carga y descarga
+                  Sabemos la importancia de mantener su equipo operando de forma
+                  continua
                 </h1>
 
                 <p class="text-white text-center">
-                  Los silos están diseñados con un sistema optimizado de carga y
-                  descarga, garantizando entrega de material más rápida,
-                  reduciendo tiempos de espera y mejorando el rendimiento
-                  general. Aumentando la productividad al optimizar el flujo de
-                  materiales durante la operación.
+                  Los silos son fabricados con componentes reforzados y de fácil
+                  mantenimiento que requieren mínima atención, disminuyendo los
+                  costos de mantenimiento a largo plazo y aumentando la vida
+                  útil del equipo. La confiabilidad de sus silos, diseñados para
+                  trabajar en diversas condiciones climáticas, asegurando un
+                  desempeño constante, minimizando tiempos de inactividad,
+                  brindando una operación confiable durante todo el año.
                 </p>
 
                 <div class="p-10">
@@ -417,7 +421,7 @@ import logo2 from "../../assets/logos/triasoLogo.png";
                         <div
                           class="w-full h-80 bg-black/10 flex items-center justify-center"
                         >
-                          <img src="https://placehold.co/600x400" alt="" />
+                          <img src={Spare.src} alt="" />
                         </div>
 
                         <div
@@ -469,7 +473,7 @@ import logo2 from "../../assets/logos/triasoLogo.png";
                         <div
                           class="w-full h-80 bg-black/10 flex items-center justify-center"
                         >
-                          <img src="https://placehold.co/600x400" alt="" />
+                          <img src={Spare.src} alt="" />
                         </div>
 
                         <div
@@ -520,7 +524,7 @@ import logo2 from "../../assets/logos/triasoLogo.png";
                         <div
                           class="w-full h-80 bg-black/10 flex items-center justify-center"
                         >
-                          <img src="https://placehold.co/600x400" alt="" />
+                          <img src={Spare.src} alt="" />
                         </div>
 
                         <div

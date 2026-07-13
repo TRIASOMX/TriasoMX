@@ -1,169 +1,163 @@
 ---
 import Card from "../unitComponents/Card.astro";
 import { Image } from "astro:assets";
+import caldera1 from "../../assets/images/OilHeaters/caldera1.webp";
+import caldera2 from "../../assets/images/OilHeaters/caldera2.webp";
 ---
 
 <section class="w-full mt-10 md:mt-20 flex flex-col gap-5 md:gap-10 font-bold">
-    <div
-        class="w-full max-w-7xl mx-auto px-8 pb-10 lg:pb-0 md:pb-0 text-center"
-    >
-        <h2 class="text-redBg text-2xl md:text-3xl">
-            Mantenga el asfalto fluyendo, mantenga sus ganancias creciendo
-        </h2>
-    </div>
-    <div
-        class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 max-w-7xl mx-auto px-4 text-grisT font-bold"
-    >
-        <Card>
-            <h2 class="text-lg md:text-xl">Control preciso de temperatura:</h2>
-            <p class="text-base md:text-lg font-thin">
-                Mantiene temperaturas exactas del proceso dentro de una
-                tolerancia de ±1 °C, asegurando condiciones ideales para la
-                producción de materiales.
-            </p>
-        </Card>
-        <Card>
-            <h2 class="text-lg md:text-xl">
-                Capacidad de calentamiento personalizable:
-            </h2>
-            <p class="text-base md:text-lg font-thin">
-                Disponible en múltiples configuraciones para adaptarse a los
-                requerimientos específicos de su proyecto — desde operaciones
-                compactas hasta sistemas industriales de gran escala.
-            </p>
-        </Card>
-        <Card>
-            <h2 class="text-lg md:text-xl">Quemadores de alta eficiencia:</h2>
-            <p class="text-base md:text-lg font-thin">
-                Equipados con tecnología de bajo NOx que minimiza las emisiones
-                mientras maximiza la eficiencia del combustible.
-            </p>
-        </Card>
-        <Card>
-            <h2 class="text-lg md:text-xl">
-                Sistema de circulación de aceite térmico:
-            </h2>
-            <p class="text-base md:text-lg font-thin">
-                Garantiza una distribución uniforme del calor en todo el
-                sistema, evitando puntos calientes y la degradación del
-                material.
-            </p>
-        </Card>
-    </div>
+  <div class="w-full max-w-7xl mx-auto px-8 pb-10 lg:pb-0 md:pb-0 text-center">
+    <h2 class="text-redBg text-2xl md:text-3xl">
+      Mantenga el asfalto fluyendo, mantenga sus ganancias creciendo
+    </h2>
+  </div>
+  <div
+    class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 max-w-7xl mx-auto px-4 text-grisT font-bold"
+  >
+    <Card>
+      <h2 class="text-lg md:text-xl">Control preciso de temperatura:</h2>
+      <p class="text-base md:text-lg font-thin">
+        Mantiene temperaturas exactas del proceso dentro de una tolerancia de ±1
+        °C, asegurando condiciones ideales para la producción de materiales.
+      </p>
+    </Card>
+    <Card>
+      <h2 class="text-lg md:text-xl">
+        Capacidad de calentamiento personalizable:
+      </h2>
+      <p class="text-base md:text-lg font-thin">
+        Disponible en múltiples configuraciones para adaptarse a los
+        requerimientos específicos de su proyecto — desde operaciones compactas
+        hasta sistemas industriales de gran escala.
+      </p>
+    </Card>
+    <Card>
+      <h2 class="text-lg md:text-xl">Quemadores de alta eficiencia:</h2>
+      <p class="text-base md:text-lg font-thin">
+        Equipados con tecnología de bajo NOx que minimiza las emisiones mientras
+        maximiza la eficiencia del combustible.
+      </p>
+    </Card>
+    <Card>
+      <h2 class="text-lg md:text-xl">
+        Sistema de circulación de aceite térmico:
+      </h2>
+      <p class="text-base md:text-lg font-thin">
+        Garantiza una distribución uniforme del calor en todo el sistema,
+        evitando puntos calientes y la degradación del material.
+      </p>
+    </Card>
+  </div>
 </section>
 
 <!--  -->
 <section>
-    <div class="w-full flex flex-col font-bold mt-10">
-        <div class="max-w-7xl px-8 mx-auto flex justify-start">
-            <Image
-                src="https://placehold.co/1270x500/png"
-                alt="Baghouse"
-                class="hero-img md:w-4/5 lg:w-4/6 rounded-lg"
-                width={1270}
-                height={500}
-                fetchpriority="high"
-                loading="lazy"
-            />
-        </div>
-        <div class="bg-[#393939]">
-            <div
-                class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-2"
+  <div class="w-full flex flex-col font-bold mt-10">
+    <div class="max-w-7xl px-8 mx-auto flex justify-start">
+      <Image
+        src={caldera1}
+        alt="Baghouse"
+        class="hero-img md:w-4/5 lg:w-4/6 rounded-lg"
+        width={1270}
+        height={500}
+        fetchpriority="high"
+        loading="lazy"
+      />
+    </div>
+    <div class="bg-[#393939]">
+      <div
+        class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-2"
+      >
+        <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
+          <div class="w-full">
+            <h2 class="text-white text-lg md:text-xl">
+              Eficiencia para calentamiento de equipos secundarios con linea de
+              aceite térmico
+            </h2>
+            <p
+              class="text-[#d9d9d9] text-sm lg:text-lg md:text-lg text-justify"
             >
-                <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
-                    <div class="w-full">
-                        <h2 class="text-white text-lg md:text-xl">
-                            Eficiencia para calentamiento de equipos secundarios
-                            con linea de aceite térmico
-                        </h2>
-                        <p
-                            class="text-[#d9d9d9] text-sm lg:text-lg md:text-lg text-justify"
-                        >
-                            El uso más eficiente de una caldera de aceite
-                            térmico es el calentamiento de aceite para la
-                            recirculación hacía más sistemas que requieren
-                            calentamientos por linea de aceite térmico, así como
-                            otros tanque de afalto, silos, bombas de inyección o
-                            descarga.
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full hidden lg:flex md:w-auto">
-                    <Image
-                        src="https://placehold.co/400x600/png"
-                        width={400}
-                        height={600}
-                        alt="Baghouse cleaning system"
-                        class="side-img rounded-2xl will-change-transform"
-                    />
-                </div>
-            </div>
+              El uso más eficiente de una caldera de aceite térmico es el
+              calentamiento de aceite para la recirculación hacía más sistemas
+              que requieren calentamientos por linea de aceite térmico, así como
+              otros tanque de afalto, silos, bombas de inyección o descarga.
+            </p>
+          </div>
         </div>
-
-        <div
-            class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"
-        >
-            <Image
-                src="https://placehold.co/1270x500/png"
-                width={1270}
-                height={500}
-                alt="Baghouse"
-                class="fade-img rounded-lg lg:w-3/5 will-change-transform"
-            />
+        <div class="w-full hidden lg:flex md:w-auto">
+          <Image
+            src="https://placehold.co/400x600/png"
+            width={400}
+            height={600}
+            alt="Baghouse cleaning system"
+            class="side-img rounded-2xl will-change-transform"
+          />
         </div>
-
-        <div class="relative flex flex-row px-8 gap-2 lg:hidden">
-            <Image
-                src="https://placehold.co/600x400/png"
-                width={600}
-                height={400}
-                alt="Baghouse cleaning system"
-                class="rounded-2xl w-1/2 object-contain"
-            />
-
-            <Image
-                src="https://placehold.co/600x400/png"
-                width={600}
-                height={400}
-                alt="Baghouse"
-                class="rounded-lg w-1/2 object-contain"
-            />
-        </div>
+      </div>
     </div>
 
+    <div
+      class="max-w-7xl hidden px-8 mx-auto lg:flex justify-center lg:justify-start"
+    >
+      <Image
+        src={caldera2}
+        width={1270}
+        height={500}
+        alt="Baghouse"
+        class="fade-img rounded-lg lg:w-3/5 will-change-transform"
+      />
+    </div>
+
+    <div class="relative flex flex-row px-8 gap-2 lg:hidden">
+      <Image
+        src="https://placehold.co/600x400/png"
+        width={600}
+        height={400}
+        alt="Baghouse cleaning system"
+        class="rounded-2xl w-1/2 object-contain"
+      />
+
+      <Image
+        src="https://placehold.co/600x400/png"
+        width={600}
+        height={400}
+        alt="Baghouse"
+        class="rounded-lg w-1/2 object-contain"
+      />
+    </div>
+  </div>
 </section>
 
 <script>
-    import { initScrollAnimations } from "../DrumMixers/Contraflujo/Desamaq/scrollDesamaq";
+  import { initScrollAnimations } from "../DrumMixers/Contraflujo/Desamaq/scrollDesamaq";
 
-    if (typeof window !== "undefined") {
-        window.addEventListener("DOMContentLoaded", () => {
-            initScrollAnimations();
-        });
-    }
+  if (typeof window !== "undefined") {
+    window.addEventListener("DOMContentLoaded", () => {
+      initScrollAnimations();
+    });
+  }
 </script>
 
 <script>
-    document
-        .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
-        .forEach((btn) => {
-            btn.addEventListener("click", (e) => {
-                e.stopPropagation();
-                const expandible = btn.nextElementSibling as HTMLElement;
-                const chevron = btn.querySelector(".chevron") as HTMLElement;
-                const isOpen =
-                    expandible.style.maxHeight &&
-                    expandible.style.maxHeight !== "0px";
+  document
+    .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
+    .forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const expandible = btn.nextElementSibling as HTMLElement;
+        const chevron = btn.querySelector(".chevron") as HTMLElement;
+        const isOpen =
+          expandible.style.maxHeight && expandible.style.maxHeight !== "0px";
 
-                if (isOpen) {
-                    expandible.style.maxHeight = "0px";
-                    chevron.style.transform = "rotate(0deg)";
-                    btn.setAttribute("aria-expanded", "false");
-                } else {
-                    expandible.style.maxHeight = expandible.scrollHeight + "px";
-                    chevron.style.transform = "rotate(180deg)";
-                    btn.setAttribute("aria-expanded", "true");
-                }
-            });
-        });
+        if (isOpen) {
+          expandible.style.maxHeight = "0px";
+          chevron.style.transform = "rotate(0deg)";
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          expandible.style.maxHeight = expandible.scrollHeight + "px";
+          chevron.style.transform = "rotate(180deg)";
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
 </script>

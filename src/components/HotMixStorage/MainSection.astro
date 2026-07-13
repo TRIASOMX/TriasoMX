@@ -1,37 +1,12 @@
 ---
-import HeroComponent from "../unitComponents/HeroComponent.astro";
 import img1 from "../../assets/images/HotMix/Gallery/HM10.webp";
+import HeroComponentV1 from "../unitComponents/HeroComponentV1.astro";
 ---
 
 <section>
-    <HeroComponent
-        title="Silos de almacenamiento de mezcla asfáltica"
-        image="https://placehold.co/1920x1080/png"
-        imageAlt="Silos de almacenamiento de mezcla asfáltica"
-        altImage={img1.src}
-        descAltImage="Img"
-    />
-    <div class="bg-[#1e1e1e]">
-        <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
-            <div
-                class="flex flex-col space-y-5 justify-center items-center text-center"
-            >
-                <h1 class="font-semibold text-white text-lg lg:text-xl">
-                    Los silos de almacenamiento de mezcla asfáltica Triaso®
-                    están diseñados para optimizar el almacenamiento, manejo y
-                    despacho de la mezcla asfáltica, asegurando un desempeño de
-                    alta calidad y cumpliendo con las exigencias de los
-                    proyectos de construcción modernos. Diseñados para
-                    durabilidad y eficiencia, estos silos mantienen la
-                    temperatura y la integridad de la mezcla hasta por 72 horas.
-                </h1>
-                <h1 class="font-semibold text-white text-lg lg:text-xl">
-                    Ya sea para instalaciones fijas o para operación móvil,
-                    nuestros silos ofrecen soluciones confiables adaptadas a sus
-                    necesidades.
-                </h1>
-            </div>
-        </div>
-    </div>
+  <HeroComponentV1
+    title="Silos de almacenamiento de mezcla asfáltica"
+    text="Los silos de almacenamiento de mezcla asfáltica Triaso® están diseñados para optimizar el almacenamiento, manejo y despacho de la mezcla asfáltica, asegurando un desempeño de alta calidad y cumpliendo con las exigencias de los proyectos de construcción modernos. Diseñados para durabilidad y eficiencia, estos silos mantienen la temperatura y la integridad de la mezcla hasta por 72 horas. Ya sea para instalaciones fijas o para operación móvil, nuestros silos ofrecen soluciones confiables adaptadas a sus necesidades."
+    heroImage={img1.src}
+  />
 </section>
-

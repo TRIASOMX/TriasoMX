@@ -4,143 +4,111 @@ import img1 from "../../assets/images/OilHeaters/21.webp";
 import img2 from "../../assets/images/OilHeaters/23.webp";
 import img3 from "../../assets/images/OilHeaters/24.webp";
 import img4 from "../../assets/images/OilHeaters/22.webp";
-import HeroComponent from "../unitComponents/HeroComponent.astro";
 import OHOdometer from "./OHOdometer";
+import HeroComponentV1AstroComponent from "../unitComponents/HeroComponentV1.astro";
 import { Image } from "astro:assets";
 ---
 
 <section>
-    <HeroComponent
-        title="Calderas de aceite térmico"
-        image="https://placehold.co/1920x1080/png"
-        imageAlt="alt"
-        altImage={oil.src}
-        descAltImage="Caldera"
-    />
-    <div class="bg-[#1e1e1e]">
-        <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
-            <div class="flex justify-center items-center text-center">
-                <h1 class="font-semibold text-white text-lg lg:text-xl">
-                    Diseñados para una regulación precisa de la temperatura,
-                    nuestras de aceite térmico garantizan una distribución
-                    uniforme del calor en el tanque de asfalto —o en cualquier
-                    sistema que requiera calentamiento constante. Gracias a su
-                    diseño de circulación de aceite térmico, ofrecen un
-                    desempeño óptimo, evitando puntos calientes y manteniendo la
-                    estabilidad de temperatura en todo el proceso, siendo
-                    capaces de conectarse a más sistemas de calentamiento de la
-                    planta de asfalto.
-                    
-                </h1>
-            </div>
-        </div>
-    </div>
+  <HeroComponentV1AstroComponent
+    title="Calderas de aceite térmico"
+    text="Diseñados para una regulación precisa de la temperatura, nuestras de aceite térmico garantizan una distribución uniforme del calor en el tanque de asfalto —o en cualquier sistema que requiera calentamiento constante. Gracias a su diseño de circulación de aceite térmico, ofrecen un desempeño óptimo, evitando puntos calientes y manteniendo la estabilidad de temperatura en todo el proceso, siendo capaces de conectarse a más sistemas de calentamiento de la planta de asfalto."
+    heroImage={oil.src}
+  />
 </section>
 
 <section
-    class="w-full mt-20 md:mt-32 font-bold text-grisT flex flex-col gap-10"
+  class="w-full mt-20 md:mt-32 font-bold text-grisT flex flex-col gap-10"
 >
-    <OHOdometer client:only />
+  <OHOdometer client:only />
 
+  <div
+    class="w-full grid grid-cols-2 md:grid-cols-4 gap-8 px-4 sm:px-8 max-w-7xl mx-auto"
+  >
+    <!-- ITEM -->
     <div
-        class="w-full grid grid-cols-2 md:grid-cols-4 gap-8 px-4 sm:px-8 max-w-7xl mx-auto"
+      class="flex flex-col items-center lg:items-start text-center lg:text-start gap-2"
     >
-        <!-- ITEM -->
-        <div
-            class="flex flex-col items-center lg:items-start text-center lg:text-start gap-2"
-        >
-            <Image
-                src={img1}
-                alt="Box icon"
-                class="w-[160px] md:w-[180px] object-contain"
-            />
+      <Image
+        src={img1}
+        alt="Box icon"
+        class="w-[160px] md:w-[180px] object-contain"
+      />
 
-            <p
-                class="text-sm md:text-base text-grisT font-light leading-relaxed"
-            >
-                Las calderas de aceite térmico Triaso permiten una
-            </p>
+      <p class="text-sm md:text-base text-grisT font-light leading-relaxed">
+        Las calderas de aceite térmico Triaso permiten una
+      </p>
 
-            <h3 class="text-grisT text-lg md:text-xl font-semibold">
-                instalación rápida
-            </h3>
+      <h3 class="text-grisT text-lg md:text-xl font-semibold">
+        instalación rápida
+      </h3>
 
-            <p
-                class="text-sm md:text-base text-grisT font-light leading-relaxed"
-            >
-                sin maquinaria pesada, ideales para operaciones reubicables
-            </p>
-        </div>
-
-        <!-- ITEM -->
-        <div
-            class="flex flex-col items-center text-center lg:items-start lg:text-start gap-2"
-        >
-            <Image
-                src={img2}
-                alt="Location icon"
-                class="w-[160px] md:w-[180px] object-contain"
-            />
-            <p
-                class="text-sm md:text-base text-grisT font-light leading-relaxed"
-            >
-                Preservación de la
-            </p>
-            <h3 class="text-grisT text-lg md:text-xl font-semibold">calidad</h3>
-
-            <p
-                class="text-sm md:text-base text-grisT font-light leading-relaxed"
-            >
-                e integridad del asfalto
-            </p>
-        </div>
-
-        <!-- ITEM -->
-        <div
-            class="flex flex-col items-center text-center lg:items-start lg:text-start gap-2"
-        >
-            <Image
-                src={img3}
-                alt="List icon"
-                class="w-[160px] md:w-[180px] object-contain"
-            />
-            <p
-                class="text-sm md:text-base text-grisT font-light leading-relaxed"
-            >
-                Optimiza el flujo de aceite mediante
-            </p>
-
-            <h3 class="text-grisT text-lg md:text-xl font-semibold">
-                control preciso
-            </h3>
-        </div>
-
-        <!-- ITEM -->
-        <div
-            class="flex flex-col items-center text-center lg:items-start lg:text-start gap-2"
-        >
-            <Image
-                src={img4}
-                alt="Badge icon"
-                class="w-[160px] md:w-[180px] object-contain"
-            />
-            <h3 class="text-grisT text-sm md:text-base lg:text-base font-normal">
-                Retención térmica de
-            </h3>
-
-            <h3 class="text-grisT text-lg md:text-xl font-semibold">
-                larga duración,
-            </h3>
-
-            <p
-                class="text-sm md:text-base text-grisT font-light leading-relaxed"
-            >
-                manteniéndolo líquido y de alta calidad por 
-            </p>
-
-            <h3 class="text-grisT text-lg md:text-xl font-semibold">
-                periodos prolongados
-            </h3>
-        </div>
+      <p class="text-sm md:text-base text-grisT font-light leading-relaxed">
+        sin maquinaria pesada, ideales para operaciones reubicables
+      </p>
     </div>
+
+    <!-- ITEM -->
+    <div
+      class="flex flex-col items-center text-center lg:items-start lg:text-start gap-2"
+    >
+      <Image
+        src={img2}
+        alt="Location icon"
+        class="w-[160px] md:w-[180px] object-contain"
+      />
+      <p class="text-sm md:text-base text-grisT font-light leading-relaxed">
+        Preservación de la
+      </p>
+      <h3 class="text-grisT text-lg md:text-xl font-semibold">calidad</h3>
+
+      <p class="text-sm md:text-base text-grisT font-light leading-relaxed">
+        e integridad del asfalto
+      </p>
+    </div>
+
+    <!-- ITEM -->
+    <div
+      class="flex flex-col items-center text-center lg:items-start lg:text-start gap-2"
+    >
+      <Image
+        src={img3}
+        alt="List icon"
+        class="w-[160px] md:w-[180px] object-contain"
+      />
+      <p class="text-sm md:text-base text-grisT font-light leading-relaxed">
+        Optimiza el flujo de aceite mediante
+      </p>
+
+      <h3 class="text-grisT text-lg md:text-xl font-semibold">
+        control preciso
+      </h3>
+    </div>
+
+    <!-- ITEM -->
+    <div
+      class="flex flex-col items-center text-center lg:items-start lg:text-start gap-2"
+    >
+      <Image
+        src={img4}
+        alt="Badge icon"
+        class="w-[160px] md:w-[180px] object-contain"
+      />
+      <h3 class="text-grisT text-sm md:text-base lg:text-base font-normal">
+        Retención térmica de
+      </h3>
+
+      <h3 class="text-grisT text-lg md:text-xl font-semibold">
+        larga duración,
+      </h3>
+
+      <p class="text-sm md:text-base text-grisT font-light leading-relaxed">
+        manteniéndolo líquido y de alta calidad por
+      </p>
+
+      <h3 class="text-grisT text-lg md:text-xl font-semibold">
+        periodos prolongados
+      </h3>
+    </div>
+  </div>
 </section>

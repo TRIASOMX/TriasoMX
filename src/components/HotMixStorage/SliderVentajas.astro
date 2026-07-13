@@ -1,32 +1,36 @@
 ---
+import siloSealed from "../../assets/images/HotMix/siloSealed.webp";
+import siloUse from "../../assets/images/HotMix/siloUse.webp";
+import siloCone from "../../assets/images/HotMix/siloCone.webp";
+import aislamiento from "../../assets/images/HotMix/Aislamiento.webp";
 const slides = [
   {
     id: 1,
     title: "Sellado de arriba hacia abajo",
     description:
       "Nuestros conos de silo están diseñados con un ángulo pronunciado de 66° para asegurar un flujo completo en toda la sección. Este diseño garantiza una descarga tipo primero en entrar, primero en salir (FIFO), elimina la acumulación de material en las paredes y minimiza la segregación de la mezcla. El resultado es un flujo limpio y uniforme en cada descarga.",
-    image: "https://placehold.co/600x400/png",
+    image: siloSealed.src,
   },
   {
     id: 2,
     title: "Distribución uniforme sin segregación",
     description:
       "Los silos utilizan una bacha superior que recolecta una carga completa de mezcla antes de descargarla en un solo movimiento mediante compuertas dobles. Las compuertas se abren simultáneamente, dirigiendo la caída de la mezcla de forma centrada y distribuyéndola uniformemente en el fondo del silo. Este diseño elimina la segregación del material, reduce el desgaste y evita la acumulación en la zona del cono.",
-    image: "https://placehold.co/600x400/png",
+    image: siloUse.src,
   },
   {
     id: 3,
     title: "Cono del silo",
     description:
       "Para evitar el endurecimiento prematuro, el silo permanece completamente sellado durante el almacenamiento. Este diseño hermético bloquea la exposición al aire, preservando la calidad de la mezcla y retrasando la oxidación.",
-    image: "https://placehold.co/600x400/png",
+    image: siloCone.src,
   },
   {
     id: 4,
     title: "Aislamiento de fibra de vidrio de seis pulgadas",
     description:
       "Para que la temperatura de la mezcla dentro dle silo se pueda conservar más de 72 horas sin perder calidad, insulamos todos nuestros silos con fibra de vidrio y acero inoxidable.",
-    image: "https://placehold.co/600x400/png",
+    image: aislamiento.src,
   },
 ];
 
@@ -35,7 +39,6 @@ const duplicatedSlides = [...slides, ...slides];
 
 <section class="py-10">
   <div class="max-w-7xl mx-auto px-4">
-
     <div class="relative">
       <div class="overflow-hidden" id="slider-wrapper">
         <div
@@ -140,7 +143,7 @@ const duplicatedSlides = [...slides, ...slides];
     const prevBtn = document.getElementById("prev-btn") as HTMLButtonElement;
     const nextBtn = document.getElementById("next-btn") as HTMLButtonElement;
     const dotsContainer = document.getElementById(
-      "dots-container"
+      "dots-container",
     ) as HTMLElement;
     const dots = dotsContainer.querySelectorAll<HTMLButtonElement>(".dot");
 

@@ -1,198 +1,34 @@
 ---
+import Slider from "../AsphaltStorage/Slider";
+import SiloUse from "../../assets/images/HotMix/siloUse.webp";
 
+const slider = [
+  {
+    title: "Cadena con paso de 4”",
+    text: "La cadena con paso de 4” diseñada para trabajo pesado. Con una resistencia a la tensión de 50,000 lbs (22,700 kg) y guías de cadena tipo flotante para evitar atascos, garantiza un funcionamiento suave y confiable, así como durabilidad, eficiencia y mantenimiento mínimo.",
+    image: SiloUse.src,
+  },
+  {
+    title: "Sellado y aislado",
+    text: "Sensores de tensión de cadena y protección contra sobrecarga para una operación segura y automatizada.",
+    image: SiloUse.src,
+  },
+  {
+    title: "Sistema de accionamiento eficiente",
+    text: "Equipado con motor y reductor de grado industrial para una operación confiable.",
+    image: SiloUse.src,
+  },
+];
 ---
 
 <div class="w-full max-w-7xl px-8 mx-auto font-bold text-grisT mt-20">
-    <h1 class="text-2xl md:text-3xl">Elevador de cangilones</h1>
-    <br />
-    <p class="text-grisT text-base md:text-lg">
-        El elevador de cangilones es diseñado para transferir de manera
-        eficiente la mezcla asfáltica desde el tambor mezclador hasta la parte
-        superior del silo. Diseñado para ofrecer durabilidad y un desempeño
-        constante, asegura la conservación del calor y la integridad de la
-        mezcla durante todo el proceso.
-    </p>
-    <div class="p-10">
-        <div class="">
-            <div
-                class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3"
-                id="cardRow0"
-            >
-                <!-- Card 1-A -->
-                <div
-                    class="relative rounded-lg overflow-hidden group cursor-pointer"
-                    data-card="0-0"
-                >
-                    <div
-                        class="w-full h-80 bg-black/10 flex items-center justify-center"
-                    >
-                        <img src="https://placehold.co/600x400" alt="" />
-                    </div>
-
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                    >
-                        <span
-                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                        >
-                            Cadena con paso de 4”
-                        </span>
-                        <button
-                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                            aria-expanded="false"
-                        >
-                            <svg
-                                class="chevron w-3 h-3 transition-transform duration-300"
-                                viewBox="0 0 12 12"
-                                fill="none"
-                            >
-                                <path
-                                    d="M2 4l4 4 4-4"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"></path>
-                            </svg>
-                            mostrar más
-                        </button>
-                        <div
-                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                        >
-                            <p
-                                class="text-white/75 text-xs leading-relaxed mt-2"
-                            >
-                                La cadena con paso de 4” diseñada para trabajo
-                                pesado. Con una resistencia a la tensión de
-                                50,000 lbs (22,700 kg) y guías de cadena tipo
-                                flotante para evitar atascos, garantiza un
-                                funcionamiento suave y confiable, así como
-                                durabilidad, eficiencia y mantenimiento mínimo.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 1-B -->
-                <div
-                    class="relative rounded-lg overflow-hidden group cursor-pointer"
-                    data-card="0-1"
-                >
-                    <div
-                        class="w-full h-80 bg-black/10 flex items-center justify-center"
-                    >
-                        <img src="https://placehold.co/600x400" alt="" />
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                    >
-                        <span
-                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                        >
-                            Sellado y aislado
-                        </span>
-                        <button
-                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                            aria-expanded="false"
-                        >
-                            <svg
-                                class="chevron w-3 h-3 transition-transform duration-300"
-                                viewBox="0 0 12 12"
-                                fill="none"
-                            >
-                                <path
-                                    d="M2 4l4 4 4-4"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"></path>
-                            </svg>
-                            mostrar más
-                        </button>
-                        <div
-                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                        >
-                            <p
-                                class="text-white/75 text-xs leading-relaxed mt-2"
-                            >
-                                Sensores de tensión de cadena y protección
-                                contra sobrecarga para una operación segura y
-                                automatizada.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 1-C -->
-                <div
-                    class="relative rounded-lg overflow-hidden group cursor-pointer"
-                    data-card="0-2"
-                >
-                    <div
-                        class="w-full h-80 bg-black/10 flex items-center justify-center"
-                    >
-                        <img src="https://placehold.co/600x400" alt="" />
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-                    >
-                        <span
-                            class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-                        >
-                            Sistema de accionamiento eficiente
-                        </span>
-                        <button
-                            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                            aria-expanded="false"
-                        >
-                            <svg
-                                class="chevron w-3 h-3 transition-transform duration-300"
-                                viewBox="0 0 12 12"
-                                fill="none"
-                            >
-                                <path
-                                    d="M2 4l4 4 4-4"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"></path>
-                            </svg>
-                            mostrar más
-                        </button>
-                        <div
-                            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                        >
-                            <p
-                                class="text-white/75 text-xs leading-relaxed mt-2"
-                            >
-                                Equipado con motor y reductor de grado
-                                industrial para una operación confiable.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <h1 class="text-2xl md:text-3xl uppercase">Elevador de cangilones</h1>
+  <br />
+  <p class="text-grisT text-base md:text-lg">
+    El elevador de cangilones es diseñado para transferir de manera eficiente la
+    mezcla asfáltica desde el tambor mezclador hasta la parte superior del silo.
+    Diseñado para ofrecer durabilidad y un desempeño constante, asegura la
+    conservación del calor y la integridad de la mezcla durante todo el proceso.
+  </p>
 </div>
-
-
-  <script is:inline>
-    document
-      .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
-      .forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          const expandible = btn.nextElementSibling as HTMLElement;
-          const chevron = btn.querySelector(".chevron") as HTMLElement;
-          const isOpen =
-            expandible.style.maxHeight && expandible.style.maxHeight !== "0px";
-
-          if (isOpen) {
-            expandible.style.maxHeight = "0px";
-            chevron.style.transform = "rotate(0deg)";
-            btn.setAttribute("aria-expanded", "false");
-          } else {
-            expandible.style.maxHeight = expandible.scrollHeight + "px";
-            chevron.style.transform = "rotate(180deg)";
-            btn.setAttribute("aria-expanded", "true");
-          }
-        });
-      });
-  </script>
+<Slider slides={slider} dark={true} client:only />

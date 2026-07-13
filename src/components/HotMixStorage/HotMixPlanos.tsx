@@ -209,17 +209,17 @@ const HotMixPlanos = () => {
   };
 
   const productionCapacityOptions = [
-    { id: "50tons", label: "50 tons", tab: 1 },
-    { id: "100tons", label: "100 tons", tab: 1 },
-    { id: "50tons", label: "50 tons", tab: 2 },
-    { id: "100tons", label: "100 tons", tab: 2 },
-    { id: "150tons", label: "150 tons", tab: 2 },
-    { id: "200tons", label: "200 tons", tab: 2 },
+    { id: "50tons", label: "50 TONS", tab: 1 },
+    { id: "100tons", label: "100 TONS", tab: 1 },
+    { id: "50tons", label: "50 TONS", tab: 2 },
+    { id: "100tons", label: "100 TONS", tab: 2 },
+    { id: "150tons", label: "150 TONS", tab: 2 },
+    { id: "200tons", label: "200 TONS", tab: 2 },
   ] as const;
 
   const siloOptions = [
-    { id: 1, label: "Auto-eregible" },
-    { id: 2, label: "Semi-estacionario" },
+    { id: 1, label: "AUTO-EREGIBLE" },
+    { id: 2, label: "SEMI-ESTACIONARIO" },
   ];
 
   useClipPathScrollTrigger({
@@ -299,7 +299,7 @@ const HotMixPlanos = () => {
           </h1>
           <div className="flex items-center justify-center mt-10">
             <h1 className="mr-3" id="measure">
-              Unidad:
+              UNIDAD:
             </h1>
             <div
               onClick={toggleUnit}
@@ -317,12 +317,12 @@ const HotMixPlanos = () => {
                 <span
                   className={unit === "imperial" ? "text-black" : "text-white"}
                 >
-                  Imperial
+                  IMPERIAL
                 </span>
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  Métrico
+                  MÉTRICO
                 </span>
               </div>
             </div>
@@ -334,7 +334,7 @@ const HotMixPlanos = () => {
             {/* mobile primer select */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto mb-6">
               <label className="text-white block text-center">
-                Capacidad de producción:
+                CAPACIDAD DE PRODUCCIÓN:
               </label>
 
               <div className="relative">
@@ -371,7 +371,7 @@ const HotMixPlanos = () => {
             {/* label de primer select y botones */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
               <label className="text-white block text-center">
-                Capacidad de producción:
+                CAPACIDAD DE PRODUCCIÓN:
               </label>
             </div>
 
@@ -397,7 +397,7 @@ const HotMixPlanos = () => {
 
             {/* mobile segundo select */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto mb-6">
-              <label className="text-white block text-center">Opciones:</label>
+              <label className="text-white block text-center">OPCIONES:</label>
 
               <div className="relative">
                 <select
@@ -430,7 +430,7 @@ const HotMixPlanos = () => {
             </div>
             {/* opciones desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
-              <label className="text-white block text-center">Opciones:</label>
+              <label className="text-white block text-center">OPCIONES:</label>
             </div>
 
             <div className="hidden md:flex justify-center gap-5">
@@ -464,14 +464,14 @@ const HotMixPlanos = () => {
               <div className="flex flex-col items-center justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-center w-full">
                   <div
-                    className="flex flex-col items-start justify-start gap-0 md:gap-4 h-full col-span-1 w-full order-2 md:order-1 mt-10 md:mt-0"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-2 md:order-1 mt-10 md:mt-0"
                     id="column1"
                     ref={columnGrid1}
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Control y operación
+                          CONTROL Y OPERACIÓN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -517,13 +517,21 @@ const HotMixPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -542,7 +550,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Sistema de alimentación y descarga
+                          SISTEMA DE ALIMENTACIÓN Y DESCARGA
                         </h1>
                         <button
                           className="block md:hidden"
@@ -600,7 +608,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Componentes y sistema eléctrico
+                          COMPONENTES Y SISTEMA ELÉCTRICO
                         </h1>
                         <button
                           className="block md:hidden"
@@ -663,7 +671,7 @@ const HotMixPlanos = () => {
                       </ul>
                     </div>
                   </div>
-                  <div className="col-span-1 md:col-span-2 flex items-start justify-center w-full h-[600px] order-1 md:order-2">
+                  <div className="col-span-1 md:col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     {activeVersion === "50tons" ? (
                       <div className="w-full"></div>
                     ) : (
@@ -675,14 +683,14 @@ const HotMixPlanos = () => {
                     )}
                   </div>
                   <div
-                    className="flex flex-col items-start justify-start h-full gap-0 md:gap-4 w-full col-span-1 order-3 md:order-3"
+                    className="flex flex-col items-start justify-start h-full gap-0 md:gap-10 w-full col-span-1 order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Resistencia y seguridad
+                          RESISTENCIA Y SEGURIDAD
                         </h1>
                         <button
                           className="block md:hidden"
@@ -732,8 +740,12 @@ const HotMixPlanos = () => {
                           anticorrosivo
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -750,9 +762,15 @@ const HotMixPlanos = () => {
                           Aislamiento térmico con fibra de vidrio, que reduce la
                           pérdida de calor y la temperatura superficial.
                         </li>
-                        <li>
-                          <ul className="list-disc ml-10">
-                            <li>Hasta 72 horas de retención de temperatura.</li>
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Hasta 72 horas de retención de temperatura.
+                            </li>
                           </ul>
                         </li>
 
@@ -770,7 +788,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Portabilidad
+                          PORTABILIDAD
                         </h1>
                         <button
                           className="block md:hidden"
@@ -816,8 +834,12 @@ const HotMixPlanos = () => {
                           baja (lowboy).
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               También puede transportarse en lowboy o plataforma
                               (flatbed) si se prefiere.
                             </li>
@@ -836,7 +858,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Cumplimiento con normas industriales
+                          CUMPLIMIENTO CON NORMAS INDUSTRIALES
                         </h1>
                         <button
                           className="block md:hidden"
@@ -911,7 +933,7 @@ const HotMixPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -979,7 +1001,7 @@ const HotMixPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -1032,7 +1054,7 @@ const HotMixPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -1079,7 +1101,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Dimensiones del silo
+                        DIMENSIONES DEL SILO
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1123,7 +1145,7 @@ const HotMixPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1131,7 +1153,7 @@ const HotMixPlanos = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1148,7 +1170,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1 md:col-span-2 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Estructura y chasis
+                        ESTRUCTURA Y CHASIS
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1192,7 +1214,7 @@ const HotMixPlanos = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1200,7 +1222,7 @@ const HotMixPlanos = () => {
                         <h1>Longitud del chasis:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.chasisLenght ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.chasisLenght ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.chasisLenght ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1208,7 +1230,7 @@ const HotMixPlanos = () => {
                         <h1>Ancho de transporte:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.transporWidth ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.transporWidth ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.transporWidth ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1216,7 +1238,7 @@ const HotMixPlanos = () => {
                         <h1>Ancho total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1232,7 +1254,7 @@ const HotMixPlanos = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1256,7 +1278,7 @@ const HotMixPlanos = () => {
                         <h1>Altura de descarga a camión:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.truckHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1264,7 +1286,7 @@ const HotMixPlanos = () => {
                         <h1>Altura total (punto más alto):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1275,7 +1297,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1 md:col-span-3 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Elevador alimentador de cangilones
+                        ELEVADOR ALIMENTADOR DE CANGILONES
                       </h1>
                       <button
                         className="block md:hidden"
@@ -1320,7 +1342,7 @@ const HotMixPlanos = () => {
                           <h1>Longitud:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} mt`
+                              ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} m`
                               : `${((slatConveyor?.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
@@ -1328,7 +1350,7 @@ const HotMixPlanos = () => {
                           <h1>Ancho:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} mt`
+                              ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} m`
                               : `${((slatConveyor?.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
@@ -1336,7 +1358,7 @@ const HotMixPlanos = () => {
                           <h1>Altura (en posición de trabajo):</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} mt`
+                              ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} m`
                               : `${((slatConveyor?.heightErec ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
@@ -1344,7 +1366,7 @@ const HotMixPlanos = () => {
                           <h1>Altura de descarga:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} mt`
+                              ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} m`
                               : `${((slatConveyor?.chain ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
@@ -1410,14 +1432,14 @@ const HotMixPlanos = () => {
               <div className="flex flex-col items-center justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-center w-full">
                   <div
-                    className="flex flex-col items-start justify-start gap-0 md:gap-4 h-full col-span-1 w-full order-2 md:order-1 mt-10 md:mt-0"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-2 md:order-1 mt-10 md:mt-0"
                     id="column1"
                     ref={columnGrid1}
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Control y operación
+                          CONTROL Y OPERACIÓN
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1463,13 +1485,21 @@ const HotMixPlanos = () => {
                         </li>
                         <li>Sistema operativo Triaso Relief 8.0.</li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               Monitoreo remoto de los parámetros de operación,
                               con supervisión en tiempo real y registro
                               histórico de datos.
                             </li>
-                            <li>
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -1488,7 +1518,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Sistema de alimentación y descarga
+                          SISTEMA DE ALIMENTACIÓN Y DESCARGA
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1546,7 +1576,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Componentes y sistema eléctrico
+                          COMPONENTES Y SISTEMA ELÉCTRICO
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1609,7 +1639,7 @@ const HotMixPlanos = () => {
                       </ul>
                     </div>
                   </div>
-                  <div className="col-span-1 md:col-span-2 flex items-start justify-center w-full h-[600px] order-1 md:order-2">
+                  <div className="col-span-1 md:col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     <img
                       src={selectedImage}
                       alt="Selected image"
@@ -1617,14 +1647,14 @@ const HotMixPlanos = () => {
                     />
                   </div>
                   <div
-                    className="flex flex-col items-start justify-start h-full gap-0 md:gap-4 w-full col-span-1 order-3 md:order-3"
+                    className="flex flex-col items-start justify-start h-full gap-0 md:gap-10 w-full col-span-1 order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Resistencia y seguridad
+                          RESISTENCIA Y SEGURIDAD
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1674,8 +1704,12 @@ const HotMixPlanos = () => {
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -1693,8 +1727,14 @@ const HotMixPlanos = () => {
                           pérdida de calor y la temperatura superficial.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>Hasta 72 horas de retención de temperatura.</li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
+                              Hasta 72 horas de retención de temperatura.
+                            </li>
                           </ul>
                         </li>
                         <li>
@@ -1711,7 +1751,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Portabilidad
+                          PORTABILIDAD
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1757,8 +1797,12 @@ const HotMixPlanos = () => {
                           baja (lowboy).
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               También puede transportarse en lowboy o plataforma
                               (flatbed) si se prefiere.
                             </li>
@@ -1777,7 +1821,7 @@ const HotMixPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Cumplimiento con normas industriales
+                          CUMPLIMIENTO CON NORMAS INDUSTRIALES
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1852,7 +1896,7 @@ const HotMixPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -1912,7 +1956,7 @@ const HotMixPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -1965,7 +2009,7 @@ const HotMixPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -2004,7 +2048,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Dimensiones del silo
+                        DIMENSIONES DEL SILO
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2048,7 +2092,7 @@ const HotMixPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2056,7 +2100,7 @@ const HotMixPlanos = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2073,7 +2117,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1 md:col-span-2 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Estructura y chasis
+                        ESTRUCTURA Y CHASIS
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2117,7 +2161,7 @@ const HotMixPlanos = () => {
                         <h1>Longitud total (incluyendo quinta rueda):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2175,7 +2219,7 @@ const HotMixPlanos = () => {
                         </h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2199,7 +2243,7 @@ const HotMixPlanos = () => {
                         <h1>Altura de descarga a camión:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.truckHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2207,7 +2251,7 @@ const HotMixPlanos = () => {
                         <h1>Total height (heighest point):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2218,7 +2262,7 @@ const HotMixPlanos = () => {
                   <div className="text-white font-normal col-span-1 md:col-span-3 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Elevador alimentador de cangilones
+                        ELEVADOR ALIMENTADOR DE CANGILONES
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2263,7 +2307,7 @@ const HotMixPlanos = () => {
                           <h1>Longitud:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} mt`
+                              ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} m`
                               : `${((slatConveyor?.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
@@ -2271,7 +2315,7 @@ const HotMixPlanos = () => {
                           <h1>Ancho:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} mt`
+                              ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} m`
                               : `${((slatConveyor?.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
@@ -2279,7 +2323,7 @@ const HotMixPlanos = () => {
                           <h1>Altura (en posición de trabajo):</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} mt`
+                              ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} m`
                               : `${((slatConveyor?.heightErec ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
@@ -2287,7 +2331,7 @@ const HotMixPlanos = () => {
                           <h1>Altura de descarga:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} mt`
+                              ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} m`
                               : `${((slatConveyor?.chain ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>

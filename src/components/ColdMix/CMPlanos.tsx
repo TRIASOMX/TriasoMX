@@ -323,18 +323,18 @@ const CMPlanos = () => {
   ];
 
   const dischargeOptions = [
-    { id: "groundLevel", label: "A nivel del suelo" },
-    { id: "truckLevel", label: "A nivel del camión" },
+    { id: "groundLevel", label: "A NIVEL DEL SUELO" },
+    { id: "truckLevel", label: "A NIVEL DEL CAMIÓN" },
   ];
 
   const mountedOptions = [
-    { id: "legs", label: "Patas" },
-    { id: "wheels", label: "Ruedas" },
+    { id: "legs", label: "PATAS" },
+    { id: "wheels", label: "RUEDAS" },
   ];
 
   const exteriorOptions = [
-    { id: "withPanels", label: "Con flancos estéticos" },
-    { id: "withoutPanels", label: "Sin flancos estéticos" },
+    { id: "withPanels", label: "CON FLANCOS ESTÉTICOS" },
+    { id: "withoutPanels", label: "SIN FLANCOS ESTÉTICOS" },
   ];
 
   useClipPathScrollTrigger({
@@ -666,11 +666,11 @@ const CMPlanos = () => {
                 ref={containerRef}
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center w-full">
-                  <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
+                  <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3 ">
-                          Sistema de alimentación y dosificacióN{" "}
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          SISTEMA DE ALIMENTACIÓN Y DOSIFICACIÓN
                         </h1>
                         <button
                           aria-label="See more about the feeding and dosign system"
@@ -739,7 +739,7 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Resistencia y seguridad
+                          RESISTENCIA Y SEGURIDAD
                         </h1>
                         <button
                           aria-label="See more about durability and safety"
@@ -792,8 +792,12 @@ const CMPlanos = () => {
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -815,7 +819,7 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Sistema de mezcla del pugmill
+                          SISTEMA DE MEZCLA DEL PUGMILL
                         </h1>
                         <button
                           aria-label="See more about the Pugmill Mixing System"
@@ -871,11 +875,11 @@ const CMPlanos = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     <img src={M1.src} alt="" className="w-[115px] h-auto" />
                   </div>
-                  <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
+                  <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Control y operacióN
+                          CONTROL Y OPERACIÓN
                         </h1>
                         <button
                           aria-label="See more about control and operation of the system"
@@ -926,8 +930,12 @@ const CMPlanos = () => {
                           datos.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -946,7 +954,7 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Componentes y sistema eléctrico
+                          COMPONENTES Y SISTEMA ELÉCTRICO
                         </h1>
                         <button
                           aria-label="See more about the components and electrical composition"
@@ -1008,7 +1016,7 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Portabilidad
+                          PORTABILIDAD
                         </h1>
                         <button
                           aria-label="See more about the portability of the system"
@@ -1062,8 +1070,12 @@ const CMPlanos = () => {
                               </li>
 
                               <li className="list-none">
-                                <ul className="list-disc ml-10">
-                                  <li>
+                                <ul className="ml-2 lg:ml-6">
+                                  <li
+                                    className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                                  before:w-2 before:rounded-full before:border before:border-white
+                                  before:bg-transparent"
+                                  >
                                     También puede transportarse en cama baja o
                                     plataforma.
                                   </li>
@@ -1116,7 +1128,7 @@ const CMPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Inyección de emulsión y aditivos
+                        INYECCIÓN DE EMULSIÓN Y ADITIVOS
                       </h1>
                       <button
                         aria-label="See more about Emulsion and Additives Injection"
@@ -1168,7 +1180,7 @@ const CMPlanos = () => {
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-10 lg:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Cumplimiento con estándares de la industria
+                        CUMPLIMIENTO CON ESTÁNDARES DE LA INDUSTRIA
                       </h1>
                       <button
                         aria-label="See more about the compliance with industry standards"
@@ -1242,7 +1254,7 @@ const CMPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -1310,7 +1322,7 @@ const CMPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -1363,7 +1375,7 @@ const CMPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -1402,7 +1414,7 @@ const CMPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Dimensiones
+                        DIMENSIONES
                       </h1>
                       <button
                         aria-label="See more about the Tank Dimensions"
@@ -1447,7 +1459,7 @@ const CMPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1455,7 +1467,7 @@ const CMPlanos = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1463,7 +1475,7 @@ const CMPlanos = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1472,7 +1484,7 @@ const CMPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Estructura y chasis
+                        ESTRUCTURA Y CHASIS
                       </h1>
                       <button
                         aria-label="See more about the Chassis and structure"
@@ -1517,7 +1529,7 @@ const CMPlanos = () => {
                         <h1>Longitud total (incluido el enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1533,7 +1545,7 @@ const CMPlanos = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1541,7 +1553,7 @@ const CMPlanos = () => {
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.totalHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1549,7 +1561,7 @@ const CMPlanos = () => {
                         <h1>Altura de descarga (desde el suelo):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.dischargeHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1558,7 +1570,7 @@ const CMPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Sistema de alimentación y descarga
+                        SISTEMA DE ALIMENTACIÓN Y DESCARGA
                       </h1>
                       <button
                         aria-label="See more about the feeding and discharge system"
@@ -1603,7 +1615,7 @@ const CMPlanos = () => {
                         <h1>Ancho de la cinta de alimentación:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.feeding ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1611,7 +1623,7 @@ const CMPlanos = () => {
                         <h1>Ancho de la cinta colectora: </h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.collector ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -1627,14 +1639,14 @@ const CMPlanos = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center w-full">
                   <div
-                    className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Sistema de alimentación y dosificación
+                          SISTEMA DE ALIMENTACIÓN Y DOSIFICACIÓN
                         </h1>
                         <button
                           aria-label="See more about the feeding and dosign system"
@@ -1703,7 +1715,7 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Resistencia y seguridad
+                          RESISTENCIA Y SEGURIDAD
                         </h1>
                         <button
                           aria-label="See more about the durability and safety of the system"
@@ -1756,8 +1768,12 @@ const CMPlanos = () => {
                           anticorrosivo.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               Tornillería galvanizada y pintura electrostática,
                               de alta resistencia y excelente adherencia.
                             </li>
@@ -1779,7 +1795,7 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Sistema de mezcla del pugmill
+                          SISTEMA DE MEZCLA DEL PUGMILL
                         </h1>
                         <button
                           aria-label="See more about the Pugmill Mixing System"
@@ -1834,14 +1850,14 @@ const CMPlanos = () => {
                   </div>
                   <div className="col-span-2 flex items-start justify-center w-full min-h-[900px] order-1 md:order-2"></div>
                   <div
-                    className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3"
                     id="column2"
                     ref={columnGrid2}
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Control y operación
+                          CONTROL Y OPERACIÓN
                         </h1>
                         <button
                           aria-label="See more about the Control and Operation of the system"
@@ -1892,8 +1908,12 @@ const CMPlanos = () => {
                           datos.
                         </li>
                         <li className="list-none">
-                          <ul className="list-disc ml-10">
-                            <li>
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white
+                            before:bg-transparent"
+                            >
                               Sistema de monitoreo remoto, accesible desde
                               computadora, tablet o teléfono.
                             </li>
@@ -1912,7 +1932,7 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Componentes y sistema eléctrico
+                          COMPONENTES Y SISTEMA ELÉCTRICO
                         </h1>
                         <button
                           aria-label="See more about the components and electrical composition of the system"
@@ -1974,7 +1994,7 @@ const CMPlanos = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          Portabilidad
+                          PORTABILIDAD
                         </h1>
                         <button
                           aria-label="See more about the portability of the system"
@@ -2028,8 +2048,12 @@ const CMPlanos = () => {
                               </li>
 
                               <li className="list-none">
-                                <ul className="list-disc ml-10">
-                                  <li>
+                                <ul className="ml-2 lg:ml-6">
+                                  <li
+                                    className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                                  before:w-2 before:rounded-full before:border before:border-white
+                                  before:bg-transparent"
+                                  >
                                     También puede transportarse en cama baja o
                                     plataforma.
                                   </li>
@@ -2082,7 +2106,7 @@ const CMPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Inyección de emulsión y aditivos
+                        INYECCIÓN DE EMULSIÓN Y ADITIVOS
                       </h1>
                       <button
                         aria-label="See more about the Emulsion and Additives injection"
@@ -2134,7 +2158,7 @@ const CMPlanos = () => {
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-10 lg:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        Cumplimiento con estándares de la industria
+                        CUMPLIMIENTO CON ESTÁNDARES DE LA INDUSTRIA
                       </h1>
                       <button
                         aria-label="See more about the compliance with industry standards"
@@ -2208,7 +2232,7 @@ const CMPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -2276,7 +2300,7 @@ const CMPlanos = () => {
                     <div className="my-3">
                       <p className="text-white text-lg">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                     </div>
@@ -2329,7 +2353,7 @@ const CMPlanos = () => {
                       </div>
                       <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                         {unit === "metric"
-                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                          ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                           : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                       </p>
                       <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
@@ -2368,7 +2392,7 @@ const CMPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        Dimensiones
+                        DIMENSIONES
                       </h1>
                       <button
                         aria-label="See more about the dimensions of the system"
@@ -2413,7 +2437,7 @@ const CMPlanos = () => {
                         <h1>Longitud:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2421,7 +2445,7 @@ const CMPlanos = () => {
                         <h1>Ancho:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2429,7 +2453,7 @@ const CMPlanos = () => {
                         <h1>Altura:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2438,7 +2462,7 @@ const CMPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
-                        Chasis y estructura
+                        CHASIS Y ESTRUCTURA
                       </h1>
                       <button
                         aria-label="See more about the chassis and structure of the system"
@@ -2483,7 +2507,7 @@ const CMPlanos = () => {
                         <h1>Longitud total (incluido el enganche):</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2499,7 +2523,7 @@ const CMPlanos = () => {
                         <h1>Altura de la quinta rueda:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2507,7 +2531,7 @@ const CMPlanos = () => {
                         <h1>Altura total:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.totalHeight ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.totalHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2515,7 +2539,7 @@ const CMPlanos = () => {
                         <h1>Altura de descarga:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.dischargeHeight ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.dischargeHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2569,7 +2593,7 @@ const CMPlanos = () => {
                         <h1>Sistema de alimentación y descarga:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.feeding ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>
@@ -2577,7 +2601,7 @@ const CMPlanos = () => {
                         <h1>Ancho de la cinta de alimentación:</h1>
                         <p>
                           {unit === "metric"
-                            ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} mt`
+                            ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} m`
                             : `${((activeData?.dimensions.collector ?? 0) * cmToFeet).toFixed(1)} ft`}
                         </p>
                       </div>

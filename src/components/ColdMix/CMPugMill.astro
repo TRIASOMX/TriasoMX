@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import img2 from "../../assets/images/ColdMix/pugmill2.webp";
-import SliderCold from "./SliderCold.astro";
 import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
 import AcordeonItem from "../unitComponents/AcordeonItem";
 import binUnit1 from "../../assets/images/BinUnits/binUnit1.webp";
@@ -12,11 +11,45 @@ import SmartVideo from "../unitComponents/SmartVideo";
 import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 import DropdownComponent from "../unitComponents/DropdownComponent.astro";
 import Card from "../unitComponents/Card.astro";
+import Slider from "../AsphaltStorage/Slider";
+import ProvBU2 from "../../assets/images/BinUnits/ProvBU2.webp";
+import ProvBU4 from "../../assets/images/BinUnits/ProvBU4.webp";
+import FineVibrator from "../../assets/images/BinUnits/FineVibrator.webp";
+import sidePanels from "../../assets/images/SidePanels/TolvasFE.webp";
+import paletas1 from "../../assets/images/ColdMix/pugmill2.webp";
+import paletas2 from "../../assets/images/ColdMix/pugmill3.webp";
+import paletas3 from "../../assets/images/ColdMix/CMG8.webp";
+const slides = [
+  {
+    id: 1,
+    title: "Vibrador en tolva de finos para flujo continuo de material",
+    text: "Equipada con un vibrador en la tolva de finos para evitar la acumulación de material causada por la humedad y asegurar un flujo continuo de alimentación.",
+    image: FineVibrator.src,
+  },
+  {
+    id: 2,
+    title: "Sistemas de dosificación de precisión en unidades de tolvas",
+    text: "Desde nuestros inicios como fabricantes de plantas de asfalto, identificamos un problema en la mayoría de las plantas del mercado: la dosificación de agregados basada únicamente en peso y no en volumen. Este enfoque limita la precisión del diseño de mezcla, ya que el peso de los agregados varía con la humedad, mientras que el volumen se mantiene constante.",
+    image: ProvBU2.src,
+  },
+  {
+    id: 3,
+    title: "Sistemas de dosificación por volumen preciso",
+    text: "Nuestras tolvas están equipadas con sistemas de dosificación avanzados, diseñados para ofrecer la máxima precisión y confiabilidad. Garantizamos un flujo y una distribución exacta del material, cumpliendo con las necesidad de proyectos con especificaciones de exactitud.",
+    image: ProvBU4.src,
+  },
+  {
+    id: 4,
+    title: "Flancos esteticos",
+    text: "Para requerimientos especiales, ya sea que necesite una solución estándar o un diseño a la medida.",
+    image: sidePanels.src,
+  },
+];
 ---
 
 <!-- Sección sliders -->
 <section>
-  <SliderCold />
+  <Slider slides={slides} dark={true} client:only />
 </section>
 
 <div class="w-full font-bold flex flex-col justify-center items-center">
@@ -92,7 +125,10 @@ import Card from "../unitComponents/Card.astro";
         eficiencia y confiabilidad en cualquier proyecto.
       </p>
     </div>
-    <div slot="right" class="flex flex-col justify-center lg:pl-3 md:pl-5">
+    <div
+      slot="right"
+      class="flex flex-col justify-center lg:pl-3 md:pl-5 w-full"
+    >
       <h1 class="text-xl md:text-2xl">Servicio al cliente 24/7</h1>
       <div class="text-sm lg:text-lg md:text-lg">
         <p>
@@ -102,10 +138,7 @@ import Card from "../unitComponents/Card.astro";
           días festivos.
         </p>
       </div>
-
-      <div>
-        <Whatsbtn />
-      </div>
+      <Whatsbtn />
     </div>
   </TwoColumnSection>
 
@@ -154,7 +187,7 @@ import Card from "../unitComponents/Card.astro";
       <Card>
         <div>
           <Image
-            src="https://placehold.co/600x400/png"
+            src={paletas1}
             alt="Cold mix plant with a plugmill mixer"
             width={600}
             height={400}
@@ -281,7 +314,7 @@ import Card from "../unitComponents/Card.astro";
       <Card>
         <div>
           <Image
-            src="https://placehold.co/600x400/png"
+            src={paletas2}
             alt="Cold mix plant with a plugmill mixer"
             width={600}
             height={400}
@@ -400,7 +433,7 @@ import Card from "../unitComponents/Card.astro";
       <Card>
         <div>
           <Image
-            src="https://placehold.co/600x400/png"
+            src={paletas3}
             alt="Cold mix plant with a plugmill mixer"
             width={600}
             height={400}

@@ -1,43 +1,17 @@
 ---
-import HeroComponent from "../unitComponents/HeroComponent.astro";
-import HeroCold from "../../assets/images/ColdMix/HeroColdMix.webp";
 import poster1 from "../../../public/Videos/Webm/Posters/10.webp";
 import SmartVideo from "../unitComponents/SmartVideo";
 import CMOdom from "./CMOdom";
+import HeroComponentV1 from "../unitComponents/HeroComponentV1.astro";
+import CMG5 from "../../assets/images/ColdMix/GallerySlider/CMG5.webp";
 ---
 
 <section>
-  <div>
-    <HeroComponent
-      title="PLANTAS DE MEZCLADO EN FRÍO"
-      image={HeroCold.src}
-      imageAlt="PLANTAS DE MEZCLADO EN FRÍO"
-    />
-  </div>
-
-  <div class="bg-[#1e1e1e]">
-    <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
-      <div
-        class="flex flex-col space-y-5 justify-center items-center text-center"
-      >
-        <h1 class="font-semibold text-white text-lg lg:text-xl">
-          Las plantas Triaso® de mezcla en frío están diseñadas específicamente
-          para producir mezclas de agregados sin aplicar calor. Mediante un
-          pugmill de doble eje, estas plantas combinan agregados sin calentar
-          con emulsión asfáltica u otros ligantes líquidos para obtener una
-          mezcla uniforme y resistente, adecuada para una amplia variedad de
-          aplicaciones.
-        </h1>
-        <h1 class="font-semibold text-white text-lg lg:text-xl">
-          Equipadas con tolvas de dosificación precisa, aseguran un control
-          exacto de las proporciones de los materiales, ofreciendo un desempeño
-          consistente en cada lote. Su capacidad para manejar distintos tipos de
-          agregados las hace ideales para bacheo, mantenimiento de carreteras y
-          trabajos de pavimentación a pequeña escala.
-        </h1>
-      </div>
-    </div>
-  </div>
+  <HeroComponentV1
+    title="PLANTAS DE MEZCLADO EN FRÍO"
+    text="Las plantas Triaso® de mezcla en frío están diseñadas específicamente para producir mezclas de agregados sin aplicar calor. Mediante un pugmill de doble eje, estas plantas combinan agregados sin calentar con emulsión asfáltica u otros ligantes líquidos para obtener una mezcla uniforme y resistente, adecuada para una amplia variedad de aplicaciones. Equipadas con tolvas de dosificación precisa, aseguran un control exacto de las proporciones de los materiales, ofreciendo un desempeño consistente en cada lote. Su capacidad para manejar distintos tipos de agregados las hace ideales para bacheo, mantenimiento de carreteras y trabajos de pavimentación a pequeña escala."
+    heroImage={CMG5.src}
+  />
 </section>
 
 <div class="w-full flex flex-col justify-center">

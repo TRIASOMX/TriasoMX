@@ -1,66 +1,75 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MainSection from '../components/HotMixStorage/MainSection.astro';
-import TabsHot from '../components/HotMixStorage/Tabs.astro';
+import MainSection from "../components/HotMixStorage/MainSection.astro";
+import TabsHot from "../components/HotMixStorage/Tabs.astro";
 import HotMixPlanos from "../components/HotMixStorage/HotMixPlanos";
 import SlatConveyor from "../components/HotMixStorage/SlatConveyor.astro";
 import HMOdometer from "../components/HotMixStorage/HMOdometer";
-import HotMixGallery from "../components/HotMixStorage/HotMixGallery.astro"
+import HotMixGallery from "../components/HotMixStorage/HotMixGallery.astro";
 import ItemsSlider from "../components/LandinPage/ItemsSlider";
 import CardSectionResponsive from "../components/unitComponents/CardSectionResponsive.astro";
 import CardsHotMix from "../components/HotMixStorage/CardsHotMix.astro";
 const iconos = [
-    {
-        src: "/Gallery/sliderHotMix/1.webp",
-        title: "Preservación de la calidad",
-        texto: "Preservación de la calidad e integridad del asfalto.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/2.webp",
-        title: "Logística eficiente",
-        texto: "Agiliza la entrega con reportes, historial y control preciso del flujo de asfalto",
-    },
-    {
-        src: "/Gallery/sliderHotMix/3.webp",
-        title: "Opciones de almacenamiento versátiles",
-        texto: "Retención térmica prolongada que mantiene el asfalto líquido y en buen estado por más tiempo.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/4.webp",
-        title: "Movilidad",
-        texto: "Nuestros tanque permiten una instalación rápida sin maquinaria pesada, ideal para operaciones reubicables.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/7.webp",
-        title: "Seguridad mejorada",
-        texto: "Equipados con protecciones, alarmas e indicadores visuales para proteger al personal y al equipo.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/8.webp",
-        title: "Rentabilidad",
-        texto: "Reduce paros, costos de transporte y mantenimiento gracias a su diseño eficiente y desempeño confiable.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/9.webp",
-        title: "Mejora el nombre de la empresa",
-        texto: "La estética industrial eleva la apariencia de tu operación.",
-    },
-    {
-        src: "/Gallery/sliderHotMix/10.webp",
-        title: "Personalizable",
-        texto: "Características adaptables para cumplir con los requisitos específicos del proyecto y los objetivos operativos.",
-    },
+  {
+    src: "/Gallery/sliderHotMix/1.webp",
+    title: "Preservación de la calidad",
+    texto: "Preservación de la calidad e integridad del asfalto.",
+  },
+  {
+    src: "/Gallery/sliderHotMix/2.webp",
+    title: "Logística eficiente",
+    texto:
+      "Agiliza la entrega con reportes, historial y control preciso del flujo de asfalto",
+  },
+  {
+    src: "/Gallery/sliderHotMix/3.webp",
+    title: "Opciones de almacenamiento versátiles",
+    texto:
+      "Retención térmica prolongada que mantiene el asfalto líquido y en buen estado por más tiempo.",
+  },
+  {
+    src: "/Gallery/sliderHotMix/4.webp",
+    title: "Movilidad",
+    texto:
+      "Nuestros tanque permiten una instalación rápida sin maquinaria pesada, ideal para operaciones reubicables.",
+  },
+  {
+    src: "/Gallery/sliderHotMix/7.webp",
+    title: "Seguridad mejorada",
+    texto:
+      "Equipados con protecciones, alarmas e indicadores visuales para proteger al personal y al equipo.",
+  },
+  {
+    src: "/Gallery/sliderHotMix/8.webp",
+    title: "Rentabilidad",
+    texto:
+      "Reduce paros, costos de transporte y mantenimiento gracias a su diseño eficiente y desempeño confiable.",
+  },
+  {
+    src: "/Gallery/sliderHotMix/9.webp",
+    title: "Mejora el nombre de la empresa",
+    texto: "La estética industrial eleva la apariencia de tu operación.",
+  },
+  {
+    src: "/Gallery/sliderHotMix/10.webp",
+    title: "Personalizable",
+    texto:
+      "Características adaptables para cumplir con los requisitos específicos del proyecto y los objetivos operativos.",
+  },
 ];
 ---
-<Layout title="Hot-Mix Storage Silos">
-    <MainSection/>
-    <HMOdometer client:only/>
-    <TabsHot />
-    <ItemsSlider client:load images={iconos}/>
-    <CardsHotMix/>
 
-    <SlatConveyor />
-    <HotMixGallery/>
-    <HotMixPlanos client:only/>
-    <CardSectionResponsive/>
+<Layout title="Hot-Mix Storage Silos">
+  <MainSection />
+  <HMOdometer client:only />
+  <TabsHot />
+  <div class="py-6 md:py-20">
+    <ItemsSlider client:load images={iconos} />
+  </div>
+  <CardsHotMix />
+
+  <SlatConveyor />
+  <HotMixGallery />
+  <HotMixPlanos client:only />
+  <CardSectionResponsive />
 </Layout>
