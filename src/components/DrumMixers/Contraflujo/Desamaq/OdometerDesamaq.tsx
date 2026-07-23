@@ -1,13 +1,14 @@
 import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
-import odoImg from "../../../../assets/images/DrumMixers/Contraflujo/cfDesamaqOdometer.webp";
+import odoImg from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/PlaCfDes.webp";
 import "odometer/themes/odometer-theme-default.css";
+import FillLinkButton from "../../../unitComponents/FillLinkButton";
 
 const OdometerDesamaq = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   const [value, setValue] = useState(0);
-  const [value1, setValue1] = useState(0);
+
   const [value2, setValue2] = useState(0);
   const [value3, setValue3] = useState(0);
   const [, setValue4] = useState(0);
@@ -19,7 +20,7 @@ const OdometerDesamaq = () => {
         if (entry.isIntersecting) {
           // Reinicia valores antes de animar
           setValue(0);
-          setValue1(0);
+
           setValue2(0);
           setValue3(0);
           setValue4(0);
@@ -27,10 +28,9 @@ const OdometerDesamaq = () => {
 
           setTimeout(() => {
             setValue(40);
-            setValue6(140);
+            setValue6(160);
 
             setValue3(14);
-            setValue1(20);
 
             setValue2(30);
           }, 300); // Pequeño retraso para asegurar reinicio
@@ -52,16 +52,16 @@ const OdometerDesamaq = () => {
   return (
     <div
       ref={sectionRef}
-      className="max-w-7xl mx-auto px-8 py-10 lg:py-0 lg:mt-32 lg:mb-32 md:mt-56 md:mb-56"
+      className="max-w-[1500px] mx-auto px-8 md:px-0 py-10 md:py-20 min-h-[90vh]"
     >
       <div className="flex justify-center items-center pb-10">
         <h1 className="text-[#4F4F4F] font-bold text-4xl">
-          El equipo para arrasar con la competencia
+          El equipo para una inversión económica y expandible
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
-        <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
+      <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
+        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
           <div className="flex flex-col items-center justify-center lg:items-start">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
               <Odometer value={value} format="(,ddd)" duration={2000} />
@@ -80,8 +80,7 @@ const OdometerDesamaq = () => {
           <div className="flex flex-col items-center justify-center">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center md:justify-start md:items-baseline w-full">
               <Odometer value={value3} format="(,ddd)" duration={2000} />
-              <p>-</p>
-              <Odometer value={value1} format="(,ddd)" duration={2000} />
+
               <p className="text-sm font-normal ml-3">Tons</p>
             </div>
             <p className="text-[#4F4F4F] text-center md:text-start w-full">
@@ -90,47 +89,25 @@ const OdometerDesamaq = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full gap-1 lg:gap-0">
+            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center md:justify-start md:items-baseline w-full gap-1 lg:gap-0">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <h1 className="text-sm font-normal ml-3">%</h1>
             </div>
-            <p className="text-[#4F4F4F] text-center lg:text-start w-full">
+            <p className="text-[#4F4F4F] text-center md:text-start w-full">
               Incorporación de RAP
             </p>
-            <p className="text-[#4F4F4F] text-center lg:text-start text-xs">
+            <p className="text-[#4F4F4F] text-center md:text-start text-xs w-full">
               Pavimento Asfáltico Recuperado
             </p>
           </div>
+
+          <FillLinkButton href="#planosDrumMixers" />
         </div>
 
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center col-span-1 md:col-span-4">
           <div>
             <img src={odoImg.src} alt="Odometer Drum" className="rounded-2xl" />
           </div>
-          <br />
-          <a
-            href="#planosDrumMixers"
-            className="
-    group relative inline-flex items-center justify-center
-    px-4 py-2 rounded-xl
-    border border-black
-    text-black font-medium
-    overflow-hidden
-
-    transition-all duration-300 ease-out
-    hover:text-white hover:-translate-y-0.5 hover:shadow-lg
-  "
-          >
-            <span
-              className="
-      absolute inset-0 bg-black
-      translate-y-full
-      transition-transform duration-300 ease-out
-      group-hover:translate-y-0
-    "
-            />
-            <span className="relative z-10">Todos los detalles técnicos</span>
-          </a>
         </div>
       </div>
     </div>

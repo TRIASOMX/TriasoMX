@@ -1,18 +1,19 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import OdometerDesamaq from "../../../components/DrumMixers/Contraflujo/Desamaq/OdometerDesamaq";
-import HeroComponent from "../../../components/unitComponents/HeroComponent.astro";
-import hero1 from "../../../assets/images/DrumMixers/Contraflujo/Desamaq/HeroImage.webp";
+
 import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
 import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
-import QuemadorSeccion from "../../../components/DrumMixers/QuemadorSeccion.astro";
+import QuemadorSeccion from "../../../components/DrumMixers/Contraflujo/Desamaq/QuemadorSeccion.astro";
 import BolsasSeccion from "../../../components/DrumMixers/Contraflujo/Desamaq/BolsasSeccion.astro";
 import hero2 from "../../../assets/images/DrumMixers/Contraflujo/CDesamac.webp";
 import HotspotSectionContra from "../../../components/DrumMixers/Contraflujo/Desamaq/HotspotSection.astro";
 import UltimaSeccion from "../../../components/DrumMixers/UltimaSeccion.astro";
 
 import PlanosCf from "../../../components/DrumMixers/Contraflujo/Desamaq/PlanosCf";
-import SliderTamborCom from "../../../components/DrumMixers/SliderTamborCom.astro";
+import SliderTamborCom from "../../../components/DrumMixers/Contraflujo/Desamaq/SliderTambores.astro";
+
+import HeroComponentV1 from "../../../components/unitComponents/HeroComponentV1.astro";
 
 const cards = [
   {
@@ -47,82 +48,50 @@ const cards = [
 ---
 
 <Layout title="Tambor de contraflujo">
-  <div class="mt-10">
-    <HeroComponent
+  <div class="">
+    <HeroComponentV1
       title="Tambor de Contraflujo Desamaq"
-      accentColor="#14427c"
-      image={hero1.src}
-      imageAlt="Tambor de Contraflujo Desamaq"
-      altImage={hero2.src}
-      descAltImage="Tambor de Contraflujo Desamaq"
-    />
-  </div>
-  <div class="bg-[#14427c]">
-    <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
-      <div class="flex flex-row justify-center items-center gap-10">
-        <a
-          class="underline font-bold text-white text-xl lg:text-2xl"
-          href="/TamborMezcla/Contraflujo/ContraDesamaq">Desamaq</a
-        >
-        <a
-          class="font-thin text-white text-xl lg:text-2xl"
-          href="/TamborMezcla/Contraflujo/ContraPlus">Plus</a
-        >
-        <a class="font-thin text-white text-xl lg:text-2xl" href="/DrumMixers"
-          >Pro +</a
-        >
-      </div>
-
-      <div class="flex justify-center items-center text-center">
-        <h1 class="font-semibold text-white text-lg lg:text-xl">
-          Ideal para contratistas que están iniciando con proyectos pequeños y
-          buscan no depender de otros productores de mezcla. Ideal para una
-          operación ecológica evitando multas y paros costosos por
-          contaminación, con bajo consumo de combustible ofreciendo una
-          excelente relación costo-beneficio en su categoría.
-        </h1>
-      </div>
-
-      <div
-        class="flex flex-col lg:flex-row md:flex-row justify-center items-center gap-5"
-      >
-        <div
-          class="bg-black rounded-2xl w-36 text-center transition-all duration-300 hover:bg-white"
-        >
-          <p class="py-3 font-semibold text-white hover:text-black">Cotizar</p>
-        </div>
-        <div
-          class="bg-white rounded-2xl w-36 text-center transition-all duration-300 hover:bg-black"
-        >
-          <p class="py-3 font-semibold text-black hover:text-white">Comparar</p>
+      text="Para contratistas que están iniciando y buscan no depender de otros productores de mezcla. Ideal para una operación ecológica evitando multas y paros costosos por contaminación, con bajo consumo de combustible ofreciendo una excelente relación costo-beneficio en su categoría."
+      heroImage={hero2.src}
+      btns={true}
+      bgColor="#14427c"
+      textColor="#ffffff"
+      titleColor="#ffffff"
+    >
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-row justify-center items-center gap-10">
+          <a
+            class="underline font-bold text-white text-xl lg:text-2xl"
+            href="/TamborMezcla/Contraflujo/ContraDesamaq">Desamaq</a
+          >
+          <a
+            class="font-thin text-white text-xl lg:text-2xl"
+            href="/TamborMezcla/Contraflujo/ContraPlus">Plus</a
+          >
+          <a class="font-thin text-white text-xl lg:text-2xl" href="/DrumMixers"
+            >Pro +</a
+          >
         </div>
       </div>
-    </div>
+    </HeroComponentV1>
   </div>
 
   <OdometerDesamaq client:only />
 
   <div>
     <DropdownComponent
-      title="El modelo para una operación manual, es el equipo más económico del mercado, sin comprometer rendimiento."
+      title="LA PLANTA DE ASFALTO MÁS MODERNA DE LATINOAMÉRICA ES MEXICANA"
     >
       <div class="space-y-5">
         <p>
-          Triaso® ofrece una solución práctica y confiable para la producción
+          Ofrecemos una solución práctica y confiable para la producción
           continua de mezcla asfáltica, con tambores mezcladores que integran
           secado, mezclado, captura de finos en la casa de bolsas y su
           reincorporación en un solo chasis diseñado para trabajo pesado, con
-          opción de tolvas montadas. Su diseño está orientado a una operación
-          estable, garantizando eficiencia operativa, tranquilidad de su cliente
-          y durabilidad del pavimento en cualquier proyecto.
-        </p>
-
-        <p>
-          Fabricados con materiales resistentes y componentes de mantenimiento
-          sencillo, estos tambores priorizan la eficiencia energética y una
-          mezcla asfáltica uniforme. Son ideales para operaciones móviles y
-          proyectos que requieren confiabilidad operativa sin complejidad
-          innecesaria.
+          opción de tolvas montadas o independientes. Este diseño está orientado
+          a una operación estable, garantizando eficiencia operativa,
+          tranquilidad de su cliente y durabilidad del pavimento en cualquier
+          proyecto.
         </p>
       </div>
     </DropdownComponent>

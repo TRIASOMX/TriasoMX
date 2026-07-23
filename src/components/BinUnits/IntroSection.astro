@@ -2,13 +2,13 @@
 import { Image } from "astro:assets";
 import BOdometer from "./BOdometer";
 import HeroImage from "../../assets/images/BinUnits/Tolv.webp";
-import HeroComponentV1 from "../unitComponents/HeroComponentV1.astro";
 import Slider from "../AsphaltStorage/Slider";
-import img1 from "../../assets/images/BinUnits/FineVibrator.webp";
+import img1 from "../../assets/images/AsphaltPlant/drum3.webp";
 import img2 from "../../assets/images/BinUnits/ProvBU2.webp";
 import img3 from "../../assets/images/BinUnits/ProvBU4.webp";
 import img4 from "../../assets/images/SidePanels/TolvasFE.webp";
 import img5 from "../../assets/images/BinUnits/BUFeeders.webp";
+import HeroComponentV2 from "../unitComponents/HeroComponentV2.astro";
 
 const slides = [
   {
@@ -44,8 +44,11 @@ const slides = [
 ];
 ---
 
-<HeroComponentV1
+<HeroComponentV2
   title="Unidades de tolvas independientes para agregados Triaso®"
+  titleColor="white"
+  textColor="white"
+  bgColor="#1e1e1e"
   text="Los tanques de asfalto Triaso® están diseñados para almacenar y mantener el asfalto en condiciones óptimas, asegurando una calidad y un desempeño constantes. Fabricados con materiales de alta resistencia y aislamiento de alta eficiencia, mantienen el asfalto listo para usarse en cualquier aplicación. Ideales para la producción de asfalto modificado con polímeros, estos tanques ofrecen la durabilidad y funcionalidad necesarias tanto para proyectos pequeños como para operaciones de gran escala."
   heroImage={HeroImage.src}
 />
@@ -65,7 +68,7 @@ const slides = [
         <Image src={img1} alt="Lines resembling the shape of a Bin Unit" />
       </div>
       <div class="px-8 lg:w-1/2">
-        <h1 class="text-white">
+        <h1 class="text-white text-sm md:text-base font-normal">
           Fabricadas con materiales de extra-reforzados y disponibles en
           configuraciones adaptables, estas tolvas ofrecen larga vida útil,
           mínimo mantenimiento y un desempeño óptimo para operación continua en

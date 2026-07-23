@@ -1,7 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import OdometerFlujo from "../../../components/DrumMixers/OdometerFlujo";
-import HeroComponent from "../../../components/unitComponents/HeroComponent.astro";
+import HeroComponentV1 from "../../../components/unitComponents/HeroComponentV1.astro";
 import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
 import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
 import HotspotSection from "../../../components/DrumMixers/Paralelo/Desamaq/HotspotSection.astro";
@@ -9,7 +9,7 @@ import QuemadorSeccion from "../../../components/DrumMixers/Paralelo/Desamaq/Que
 import LavadoraSeccion from "../../../components/DrumMixers/LavadoraSeccion.astro";
 import UltimaSeccion from "../../../components/DrumMixers/UltimaSeccion.astro";
 import Hero2 from "../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/FDesamac.webp";
-import SliderTamborCom from "../../../components/DrumMixers/SliderTamborCom.astro";
+import SliderTamborCom from "../../../components/DrumMixers/Contraflujo/Desamaq/SliderTambores.astro";
 import PDPlanos from "../../../components/DrumMixers/Paralelo/Desamaq/PDPlanos";
 
 const cards = [
@@ -45,18 +45,16 @@ const cards = [
 ---
 
 <Layout title="Tambor de Paralelo Desamaq">
-  <div class="mt-10">
-    <HeroComponent
+  <div class="">
+    <HeroComponentV1
       title="Tambor de Paralelo Desamaq"
-      accentColor="#14427c"
-      image="https://placehold.co/1920x1080/png"
-      imageAlt="Tambor de Contraflujo Desamaq"
-      altImage={Hero2.src}
-      descAltImage="placeholder"
-    />
-  </div>
-  <div class="bg-[#14427c]">
-    <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+      text="Para contratistas que están iniciando con proyectos pequeños y buscan no depender de otros productores de mezcla, evitando paros costosas, con bajo consumo de combustible ofreciendo una excelente relación costo-beneficio en su categoría."
+      heroImage={Hero2.src}
+      btns={true}
+      bgColor="#14427c"
+      textColor="white"
+      titleColor="white"
+    >
       <div class="flex flex-row justify-center items-center gap-10">
         <a
           class="font-bold underline text-white text-xl lg:text-2xl"
@@ -71,54 +69,25 @@ const cards = [
           href="/TamborMezcla/Paralelo/ParaleloPro">Pro +</a
         >
       </div>
-
-      <div class="flex justify-center items-center text-center">
-        <h1 class="text-white text-lg lg:text-xl">
-          La mejor planta de asfalto de flujo paralelo de su categoría, ideal
-          para contratistas que están iniciando con proyectos pequeños y buscan
-          no depender de otros productores de mezcla. Con bajo consumo de
-          combustible por tonelada ofreciendo una excelente relación
-          costo-beneficio en su categoría.
-        </h1>
-      </div>
-
-      <div
-        class="flex flex-col lg:flex-row md:flex-row justify-center items-center gap-5"
-      >
-        <div
-          class="bg-black rounded-2xl w-36 text-center transition-all duration-300 hover:bg-white"
-        >
-          <p class="py-3 font-semibold text-white hover:text-black">Cotizar</p>
-        </div>
-        <div
-          class="bg-white rounded-2xl w-36 text-center transition-all duration-300 hover:bg-black"
-        >
-          <p class="py-3 font-semibold text-black hover:text-white">Comparar</p>
-        </div>
-      </div>
-    </div>
+    </HeroComponentV1>
   </div>
+
   <OdometerFlujo client:only />
 
   <div>
     <DropdownComponent
-      title="El modelo óptimo si busca una operación manual y el equipo más económico del mercado, sin comprometer rendimiento. "
+      title="LA PLANTA DE ASFALTO MÁS PRODUCTIVA AL MENOR PRECIO DE LATINOAMERICA ES MEXICANA"
     >
       <div class="space-y-5">
         <p>
-          Triaso® ofrece una solución práctica y confiable para la producción
-          continua de mezcla asfáltica, con tambores mezcladores que integran
-          secado, mezclado, control de emisiones con lavadura en un solo chasis
-          diseñado para trabajo pesado, con opción de tolvas montadas. Diseñados
-          para una operación estable y eficiente, permiten una producción
-          constante con bajos costos de operación.
-        </p>
-        <p>
-          Fabricados con materiales resistentes y componentes de mantenimiento
-          sencillo, estos tambores priorizan la eficiencia energética y una
-          mezcla asfáltica uniforme. Son ideales para operaciones móviles y
-          proyectos que requieren confiabilidad operativa sin complejidad
-          innecesaria.
+          Ofrecemos la solución más avanzada para la producción continua de
+          mezcla asfáltica, con tambores mezcladores de alto desempeño que
+          integran secado, mezclado, captura de finos en la lavadora y su
+          desecho en fosas de lodos. Nuestro diseño está orientado a máxima
+          eficiencia térmica, una operación continua, eficiente y con mayor
+          control del proceso, garantizando eficiencia operativa, tranquilidad
+          de su cliente, durabilidad del pavimento en cualquier proyecto y
+          producción constante sin paros.
         </p>
       </div>
     </DropdownComponent>

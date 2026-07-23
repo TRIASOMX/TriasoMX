@@ -1,7 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
-import bagHouseMain from "../../assets/images/BagHouses/bagHouseMain.webp"
+import bagHouseMain from "../../assets/images/BagHouses/bagHouseMain.webp";
+import FillLinkButton from "../unitComponents/FillLinkButton";
 
 const BHOdometer = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -37,7 +38,7 @@ const BHOdometer = () => {
       },
       {
         threshold: 0.5, // cuando el 50% sea visible
-      }
+      },
     );
 
     const current = sectionRef.current;
@@ -49,14 +50,16 @@ const BHOdometer = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="max-w-7xl px-8 mx-auto lg:mt-56 lg:mb-56 md:mt-56 md:mb-56">
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
-        <div className="flex flex-col items-start justify-center mx-auto py-10 lg:py-0 lg:mx-0 gap-10 md:gap-20">
-          <div className="flex flex-col items-center lg:items-start justify-center">
+    <div
+      ref={sectionRef}
+      className="w-full max-w-7xl flex flex-col justify-center items-center py-10 md:py-20 px-8 md:px-0"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center max-w-[1500px]">
+        <div className="flex flex-col justify-between col-span-1 md:col-span-2 h-full">
+          <div className="flex flex-col items-center lg:items-start justify-center w-full">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
-              <span className="w-[3.6ch] flex flex-row">
+              <span className="flex flex-row">
                 <Odometer value={value} format="(,ddd)" duration={2000} />
-
 
                 <p>-</p>
 
@@ -68,18 +71,20 @@ const BHOdometer = () => {
             <p className="text-[#4F4F4F]">Capacidad de casa de bolsas</p>
           </div>
 
-          <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6ch] lg:w-[5.1ch] md:w-[5.1ch]">
+          <div className="flex flex-col items-center justify-center w-full">
+            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal w-full justify-center lg:justify-start items-baseline">
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p>.</p>
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">%</p>
             </div>
-            <p className="text-[#4F4F4F]">Filtración de captura de particulas finas</p>
+            <p className="text-[#4F4F4F] w-full">
+              Filtración de captura de particulas finas
+            </p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6.7ch] lg:w-[6.4ch] md:w-[6.4ch]">
+            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center w-full lg:justify-start items-baseline ">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value3} format="(,ddd)" duration={2000} />
@@ -89,21 +94,30 @@ const BHOdometer = () => {
               Gama de bolsas para plantas de asfalto
             </p>
           </div>
+          <FillLinkButton href="#planos" />
         </div>
 
-        <div className="flex flex-col items-center justify-center py-10 space-y-5">
-          <div className="lg:w-3/5">
-            <img src={bagHouseMain.src} alt="Baghouse Odometer" className="rounded-lg" />
+        <div className="flex flex-col items-center justify-center w-full col-span-1 md:col-span-4">
+          <div className="lg:w-3/5 self-end">
+            <img
+              src={bagHouseMain.src}
+              alt="Baghouse Odometer"
+              className="rounded-lg"
+            />
           </div>
         </div>
       </div>
 
       <div className="flex flex-col justify-center items-center py-10">
         <div>
-          <h1 className="text-4xl font-bold">Cumplimiento total de las normas ecológicas</h1>
+          <h1 className="text-4xl font-bold">
+            Cumplimiento total de las normas ecológicas
+          </h1>
         </div>
         <div>
-          <p className="font-thin text-[#393939] text-3xl">de México, Latinoamérica y Estados Unidos</p>
+          <p className="font-thin text-[#393939] text-3xl">
+            de México, Latinoamérica y Estados Unidos
+          </p>
         </div>
       </div>
     </div>

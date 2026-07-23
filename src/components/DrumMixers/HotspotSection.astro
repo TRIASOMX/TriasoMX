@@ -1,6 +1,6 @@
 ---
 import DropdownItem from "../unitComponents/DropdownItem.astro";
-import SecondWhatsBtn from "../unitComponents/SecondWhatsBtn.astro";
+import CTASection from "../unitComponents/CTASection.astro";
 import poster from "../../../public/Videos/Webm/Posters/landing1.webp";
 import { Image } from "astro:assets";
 import SmartVideo from "../unitComponents/SmartVideo";
@@ -90,7 +90,6 @@ const drumMixersPanels = [
     ],
   },
 ];
-
 ---
 
 <!-- Sección hotspot -->
@@ -109,10 +108,15 @@ const drumMixersPanels = [
 
 <!-- Sección dropdowns -->
 <section class="max-w-7xl mx-auto px-8">
-  <div class="flex justify-center items-center">
-    <h1 class="text-black font-bold text-4xl">
+  <div class="w-full text-center">
+    <h1 class="text-black font-bold text-2xl md:text-4xl">
       Ahorros que usted podrá lograr con la planta de adfalto
-    </h1>
+    </h1><br />
+    <p class="text-black font-semibold text-xl md:text-2xl">
+      Los equipos Triaso tienen muchas ventajas, que muy probablemente solo
+      apreciará el operador, pero usted como propietario si se dará cuenta de la
+      gran productividad, ahorros y control que le brindarán estas ventajas.
+    </p>
   </div>
 
   <div>
@@ -122,71 +126,14 @@ const drumMixersPanels = [
 
 <!-- Sección banner -->
 
-<section class="">
-  <div
-    class="bg-black lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(/drumBanner.webp)] bg-cover bg-center bg-no-repeat relative"
-  >
-    <div class="absolute inset-0 bg-[#000000]/70"></div>
-    <div class="max-w-7xl mx-auto px-8 space-y-5 relative">
-      <div class="pt-5">
-        <h1 class="text-4xl font-bold text-white">
-          ¿Indeciso sobre el equipo ideal para su proyecto?
-        </h1>
-      </div>
-
-      <div
-        class="w-full flex flex-col justify-center pb-5 lg:justify-around md:justify-around items-center lg:flex-row relative"
-      >
-        <div class="">
-          <p class="text-white">
-            La compra de una planta de asfalto es una gran inversión, y la base
-            de un negocio de producción de mezcla asfáltica. Compre
-            inteligentemente y con criterio.
-          </p>
-          <p class="text-white">
-            Podemos asesorarlo de forma transparente en la inversión de su
-            planta de asfalto, ayudándolo a elegir la opción más adecuada.
-          </p>
-        </div>
-        <div
-          class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
-        >
-          <!-- Botón 1 -->
-          <SecondWhatsBtn />
-
-          <a
-            href="/Contact"
-            aria-label="Button to request a quote"
-            class="border-white border text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-between gap-2 shadow-md"
-          >
-            <div class="px-5 py-2">
-              <p>Solicitar una cotización</p>
-            </div>
-            <div class="px-5 py-2">
-              <svg
-                width="24px"
-                height="24px"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                color="#FFFFFF"
-              >
-                <!-- Icono del segundo botón (opcional) -->
-                <path
-                  d="M5 12H19M19 12L12 5M19 12L12 19"
-                  stroke="#FFFFFF"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<CTASection
+  title="¿Indeciso sobre el equipo ideal para su proyecto?"
+  text={[
+    "La compra de una planta de asfalto es una gran inversión, y la base de un negocio de producción de mezcla asfáltica. Compre inteligentemente y con criterio.",
+    "Podemos asesorarlo de forma transparente en la inversión de su planta de asfalto, ayudándolo a elegir la opción más adecuada.",
+  ]}
+  bgImage="/drumBanner.webp"
+/>
 
 <!-- Otra sección  -->
 <section class="max-w-7xl mx-auto px-8">
@@ -233,12 +180,13 @@ const drumMixersPanels = [
       >
         <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
           <div class="w-full">
-            <h2 class="text-white text-lg md:text-xl">
+            <h2 class="text-white text-lg md:text-3xl">
               Diseñada para producciones exigentes y de gran volumen fabricación
               para un rendimiento sin comparación
             </h2>
+            <br />
             <p
-              class="text-[#f3f3f5] text-sm lg:text-base md:text-base text-justify"
+              class="text-[#f3f3f5] text-sm lg:text-base md:text-base text-justify font-normal"
             >
               Fabricados con materiales de alta resistencia y componentes de
               larga vida útil, estos tambores garantizan eficiencia energética
@@ -277,7 +225,7 @@ const drumMixersPanels = [
       <Image src={DMProv1} alt="Usage of a Drum mixer" class="rounded-lg" />
     </div>
   </div>
-
+  <!--
   <div class="max-w-7xl mx-auto px-8 mt-20">
     <div class="flex flex-col">
       <h1 class="text-4xl">
@@ -290,10 +238,10 @@ const drumMixersPanels = [
         en todos los proyectos de pavimentación de su región.
       </p>
     </div>
-  </div>
+  </div> -->
 </section>
 
-<section>
+<section class="min-h-[90vh]">
   <CasetaSeccion />
 </section>
 

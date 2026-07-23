@@ -2,8 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import OdometerDrum from "../components/DrumMixers/OdometerDrum";
 import DrumMixPlanos from "../components/DrumMixers/DrumMixPlanos";
-import HeroComponent from "../components/unitComponents/HeroComponent.astro";
-import hero1 from "../assets/images/DrumMixers/heroImage.webp";
+import HeroComponentV1 from "../components/unitComponents/HeroComponentV1.astro";
 import DropdownComponent from "../components/unitComponents/DropdownComponent.astro";
 import OsDrumSection from "../components/DrumMixers/OsDrumSection.astro";
 import StackedInfoCards from "../components/unitComponents/StackedInfoCards.astro";
@@ -17,7 +16,7 @@ import SliderTamborCom from "../components/DrumMixers/SliderTamborCom.astro";
 const cards = [
   {
     title:
-      "La planta de asfalto de contraflujo más equipada, más robusta, más moderna de Latinoamérica.",
+      "La planta de asfalto más robusta, moderna y equipada de latinoamérica es mexicana",
     text: "",
     bg: "#d13c3c",
     textColor: "#ffffff",
@@ -47,17 +46,16 @@ const cards = [
 ---
 
 <Layout title="Tambor de contraflujo">
-  <div class="mt-10">
-    <HeroComponent
-      title="Tambor de Contraflujo PRO+"
-      image={hero1.src}
-      imageAlt="Tambor de Contraflujo PRO+"
-      altImage={hero2.src}
-      descAltImage="Tambor de Contraflujo PRO+"
-    />
-  </div>
-  <div class="bg-[#1e1e1e]">
-    <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+  <div class="">
+    <HeroComponentV1
+      title="TAMBOR DE CONTRAFLUJO PRO+"
+      text="Para contratistas experimentados que buscan la mejor planta de asfalto, con la mayor producción y nivel de exigencias técnicas incomparables, capaz de adaptarse a cualquier proyecto, incluso con diferentes tipos de mezcla. Ideal para una operación ecológica evitando multas y paros costosos por contaminación, con el consumo de combustible más bajo en el mercado y mayor porcentaje de incorporación de RAP, hasta un 50%."
+      heroImage={hero2.src}
+      btns={true}
+      bgColor="#1e1e1e"
+      titleColor="#ffffff"
+      textColor="#ffffff"
+    >
       <div class="flex flex-row justify-center items-center gap-10">
         <a
           class="font-thin text-white text-xl lg:text-2xl"
@@ -72,46 +70,20 @@ const cards = [
           href="/DrumMixers">Pro +</a
         >
       </div>
-
-      <div class="flex justify-center items-center text-center">
-        <h1 class="font-semibold text-white text-lg lg:text-xl">
-          Para contratistas experimentados que buscan la mejor planta de
-          asfalto, con una producción y nivel de exigencias técnicas
-          incomparables, capaz de adaptarse a cualquier proyecto, incluso con
-          diferentes tipos de mezcla. Ideal para una operación ecológica
-          evitando multas costosas por contaminación, con el consumo de
-          combustible por tonelada más bajo en el mercado y mayor porcentaje de
-          incorporación de RAP, hasta un 50%.
-        </h1>
-      </div>
-
-      <div
-        class="flex flex-col lg:flex-row md:flex-row justify-center items-center gap-5"
-      >
-        <div
-          class="bg-black rounded-2xl w-36 text-center transition-all duration-300 hover:bg-white"
-        >
-          <p class="py-3 font-semibold text-white hover:text-black">Cotizar</p>
-        </div>
-        <div
-          class="bg-white rounded-2xl w-36 text-center transition-all duration-300 hover:bg-black"
-        >
-          <p class="py-3 font-semibold text-black hover:text-white">Comparar</p>
-        </div>
-      </div>
-    </div>
+    </HeroComponentV1>
   </div>
+
   <OdometerDrum client:only />
 
   <div>
     <DropdownComponent
-      title="El modelo más avanzado para una operación automática, la más económica y sin comparación ni competencia, preferencia en su región para trabajos de pavimentación."
+      title="LA PLANTA DE ASFALTO MÁS ROBUSTA, MODERNA Y EQUIPADA DE LATINOAMÉRICA ES MEXICANA"
     >
       <p>
-        Triaso® ofrece la solución más avanzada para la producción continua de
-        mezcla asfáltica, con tambores mezcladores de alto desempeño que
-        integran secado, mezclado, captura de finos en la casa de bolsas y su
-        reincorporación en un solo chasis diseñado para trabajo pesado. Su
+        Ofrecemos la solución más avanzada para la producción continua de mezcla
+        asfáltica, con tambores mezcladores de alto desempeño que integran
+        secado, mezclado, captura de finos en la casa de bolsas y su
+        reincorporación en un solo chasis diseñado para trabajo pesado. Nuestro
         diseño está orientado a máxima eficiencia térmica, una operación
         continua, eficiente y con mayor control del proceso, garantizando
         eficiencia operativa, tranquilidad de su cliente, durabilidad del
@@ -122,7 +94,7 @@ const cards = [
   <OsDrumSection />
 
   <div class="bg-[#1e1e1e] flex flex-col justify-center items-center px-8">
-    <div class="flex flex-col justify-center items-center pb-10">
+    <div class="flex flex-col justify-center items-center">
       <h1
         class="text-white font-bold text-3xl text-center lg:text-start md:text-start"
       >
@@ -132,9 +104,18 @@ const cards = [
         Paro total con un solo botón desde su celular
       </p>
     </div>
+    <div class="flex items-center justify-center">
+      <a
+        href="/Relief"
+        aria-label="View page drum Mixers"
+        class="text-white text-center mb-5 mt-5 text-xs md:text-sm font-normal border-2 border-[#14427c] rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-[#14427c] hover:bg-white hover:text-black hover:border-white"
+      >
+        Ver más
+      </a>
+    </div>
   </div>
 
-  <div class="mt-5">
+  <div class="mt-5 md:mt-14">
     <StackedInfoCards
       cards={cards}
       mainTitle="Su mejor negocio comienza con nosotros"

@@ -1,9 +1,12 @@
 // src/components/Tabs.tsx
 import { useState } from "react";
 
-
 const images = [
-  { id: 0, src: "/Gallery/baghouses1.webp", alt: "Baghouse mounted on the same chasis as the drum mixer" },
+  {
+    id: 0,
+    src: "/Gallery/baghouses3.webp",
+    alt: "Baghouse mounted on the same chasis as the drum mixer",
+  },
   { id: 1, src: "/Gallery/baghouses2.webp", alt: "Baghouse self-contained" },
 ];
 
@@ -18,39 +21,42 @@ export default function Tab() {
             aria-label="Select tab"
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`text-center min-h-[80px] md:text-start font-normal p-4 rounded-xl md:pr-4 md:w-8/12 text-sm md:text-base ${activeIndex === index
-              ? "border-red-500 text-white bg-blueMain"
-              : "border-transparent bg-white text-grisT"
-              }`}
+            className={`text-center min-h-[80px] md:text-start font-normal p-4 rounded-xl md:pr-4 md:w-8/12 text-sm md:text-base ${
+              activeIndex === index
+                ? "border-red-500 text-white bg-blueMain"
+                : "border-transparent bg-white text-grisT"
+            }`}
           >
             {index === 0 ? (
               <>
-                Montado sobre el mismo chasis {" "}
-                <span className="hidden md:inline">que el tambor mezclador</span>
+                Montado sobre el mismo chasis{" "}
+                <span className="hidden md:inline">
+                  que el tambor mezclador
+                </span>
               </>
             ) : (
               "Acoplables"
             )}
           </button>
         ))}
+        <div>
+          <p className=" text-grisT text-sm lg:text-lg md:text-lg">
+            Sistemas de control de emisiones acoplables e integradas, diseñados
+            para una filtración de aire eficiente y la captación de partículas
+            en plantas de asfalto — configurables tanto para instalaciones
+            portátiles como estacionarias.
+          </p>
+        </div>
       </div>
 
-
-      <div className=" w-full aspect-[16/9]">
+      <div className=" w-full aspect-[16/9] flex justify-start items-start">
         <img
           src={images[activeIndex].src}
           alt={images[activeIndex].alt}
-          className="border-2 border-blueMain rounded-2xl h-[350px] w-full object-contain md:object-cover lg:object-cover"
+          className="rounded-2xl h-[350px] w-full object-contain"
           fetchPriority="high"
           loading="eager"
         />
-      </div>
-
-
-      <div>
-        <p className=" text-grisT text-sm lg:text-lg md:text-lg">
-          Sistemas de control de emisiones acoplables e integradas, diseñados para una filtración de aire eficiente y la captación de partículas en plantas de asfalto — configurables tanto para instalaciones portátiles como estacionarias.
-        </p>
       </div>
     </div>
   );

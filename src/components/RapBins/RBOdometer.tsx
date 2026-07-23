@@ -34,7 +34,7 @@ const RPOdometer = () => {
       },
       {
         threshold: 0.5, // cuando el 50% sea visible
-      }
+      },
     );
 
     const current = sectionRef.current;
@@ -46,7 +46,10 @@ const RPOdometer = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full max-w-7xl px-8 mx-auto lg:mt-36 lg:mb-36 md:mt-36 md:mb-36">
+    <div
+      ref={sectionRef}
+      className="w-full max-w-7xl px-8 mx-auto lg:mt-36 lg:mb-36 md:mt-36 md:mb-36"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
         <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
           <div className="flex flex-col items-center lg:items-start justify-center">
@@ -74,13 +77,18 @@ const RPOdometer = () => {
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">pulgadas</p>
             </div>
-            <p className="text-[#4F4F4F] text-center lg:text-start w-full">banda dosificadora</p>
+            <p className="text-[#4F4F4F] text-center lg:text-start w-full">
+              banda dosificadora
+            </p>
           </div>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-6">
           <div className="w-4/6 pt-10 lg:pt-0 md:pt-0">
-            <img src={img1.src} alt="Back of the RAP (Reclaimed Asphalt Pavement) Bin Unit"  />
+            <img
+              src={img1.src}
+              alt="Back of the RAP (Reclaimed Asphalt Pavement) Bin Unit"
+            />
           </div>
           {/* <a
             href="#planosRapBins"

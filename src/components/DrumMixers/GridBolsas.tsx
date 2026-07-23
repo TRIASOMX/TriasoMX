@@ -27,10 +27,7 @@ function GridCard({
   const fit = item.imageFit ?? "cover";
 
   return (
-    <div
-      className={`relative overflow-hidden rounded-2xl  ${className}`}
-    >
-    
+    <div className={`relative overflow-hidden rounded-2xl  ${className}`}>
       <img
         src={item.image}
         alt={item.title}
@@ -112,7 +109,6 @@ export default function ProductGrid({ items }: ProductGridProps) {
 
   return (
     <div className="w-full">
-
       <div className="flex flex-col gap-4 lg:hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="h-72 md:h-80 md:row-span-2">
@@ -123,7 +119,7 @@ export default function ProductGrid({ items }: ProductGridProps) {
               className="h-full"
             />
           </div>
-          <div className="h-64 md:h-auto">
+          <div className="h-64 md:h-40">
             <GridCard
               item={card1}
               expanded={expandedIndex === 1}
@@ -131,7 +127,7 @@ export default function ProductGrid({ items }: ProductGridProps) {
               className="h-full"
             />
           </div>
-          <div className="h-64 md:h-auto md:col-start-2">
+          <div className="h-64 md:h-40 md:col-start-2">
             <GridCard
               item={card2}
               expanded={expandedIndex === 2}
@@ -140,7 +136,7 @@ export default function ProductGrid({ items }: ProductGridProps) {
             />
           </div>
         </div>
-        <div className="h-64 md:h-72">
+        <div className="h-72 md:h-[26rem]">
           <GridCard
             item={card3}
             expanded={expandedIndex === 3}
@@ -155,35 +151,35 @@ export default function ProductGrid({ items }: ProductGridProps) {
         className="hidden lg:grid gap-4"
         style={{
           gridTemplateColumns: "repeat(3, 1fr)",
-          gridTemplateRows: "repeat(7, minmax(80px, 1fr))",
+          gridTemplateRows: "repeat(9, minmax(80px, 1fr))",
         }}
       >
         <GridCard
           item={card0}
           expanded={expandedIndex === 0}
           onToggle={() => toggle(0)}
-          className="col-start-1 row-start-1 row-end-6"
+          className="col-start-1 row-start-1 row-end-7"
         />
 
         <GridCard
           item={card1}
           expanded={expandedIndex === 1}
           onToggle={() => toggle(1)}
-          className="col-start-2 col-end-4 row-start-1 row-end-3"
+          className="col-start-2 col-end-4 row-start-1 row-end-4"
         />
 
         <GridCard
           item={card2}
           expanded={expandedIndex === 2}
           onToggle={() => toggle(2)}
-          className="col-start-2 col-end-4 row-start-3 row-end-6"
+          className="col-start-2 col-end-4 row-start-4 row-end-7"
         />
 
         <GridCard
           item={card3}
           expanded={expandedIndex === 3}
           onToggle={() => toggle(3)}
-          className="col-start-1 col-end-4 row-start-6 row-end-8"
+          className="col-start-1 col-end-4 row-start-7 row-end-10"
           forceContainOnLg
         />
       </div>

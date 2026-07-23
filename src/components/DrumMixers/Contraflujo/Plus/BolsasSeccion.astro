@@ -9,6 +9,8 @@ import slider2 from "../../../../assets/images/BagHouses/BHProv7.webp";
 import slider3 from "../../../../assets/images/BagHouses/damper.webp";
 import ATimage from "../../../../assets/images/DrumMixers/ATHero.webp";
 import CardTambor from "../../../unitComponents/CardTambor.astro";
+import semarnat1 from "../../../../assets/images/DrumMixers/semarnat1.webp";
+import semarnat2 from "../../../../assets/images/DrumMixers/semarnat2.webp";
 ---
 
 <!--Seccoón T -->
@@ -40,10 +42,10 @@ import CardTambor from "../../../unitComponents/CardTambor.astro";
   </TwoColumnSection>
 </section>
 <!-- Sección de casas de bolsas integradas -->
-<section>
+<section class="flex justify-center items-center">
   <div class="max-w-7xl mx-auto px-8">
-    <div class="py-10">
-      <h1 class="text-3xl text-black font-bold uppercase">
+    <div class="py-6 md:py-16">
+      <h1 class="text-xl md:text-4xl text-black font-bold uppercase">
         CASA DE BOLSAS IntegraDA
       </h1>
       <div class="flex flex-row">
@@ -109,13 +111,13 @@ import CardTambor from "../../../unitComponents/CardTambor.astro";
     >
       <CardTambor
         image={slider3.src}
-        title="Roles de carga"
-        description="El damper consiste en una Serie de placas que al reducir su apertura varían el flujo de los gases de escape provenientes de la casa de bolsas, para regular la temperatura de la mezcla y economizar combustible. La apertura automática del damper se ajusta mediante el sistema de operación Triaso Relief™. Este sistema ajusta la apertura en función de la presión interna de la casa de bolsas, manteniendo un rango estable de diferencia de presión dentro de la casa de bolsas."
+        title="Apertura automática del damper"
+        description="El damper consiste en una Serie de placas que al reducir su apertura varían el flujo de los gases de escape provenientes de la casa de bolsas. Para regular la temperatura de la mezcla y economizar combustible. La apertura automática del damper se ajusta mediante el sistema de operación Triaso Relief™. Este sistema ajusta la apertura en función de la presión interna de la casa de bolsas, manteniendo un rango estable de diferencia de presión dentro de la casa de bolsas."
       />
 
       <CardTambor
         image={slider2.src}
-        title="Roles de carga"
+        title="Secuencia de disparos automáticos en casa de bolsas"
         description="El nuevo sistema de disparos dentro de la casa de bolsas provienen de unas boquillas ultra sónicas que usan aire secundario para una repartición más equilibrada y con mayor fuerza repartida dentro de las bolsas. Los disparos se regulan de la misma forma que la apertura del damper, mediante el sistema de operación Triaso Relief™. El sistema ajusta la secuencia de disparos, en función de la presión interna de la casa de bolsas, manteniendo un rango estable de diferencia de presión dentro de la casa de bolsas."
       />
     </div>
@@ -135,10 +137,7 @@ import CardTambor from "../../../unitComponents/CardTambor.astro";
               de combustión.
             </p>
 
-            <img
-              src="https://placehold.co/600x400/png"
-              class="mt-4 rounded-lg"
-            />
+            <img src={semarnat1.src} class="mt-4 rounded-lg" />
 
             <ul>
               <li>ZVM: Zona del Valle de México</li>
@@ -156,10 +155,7 @@ import CardTambor from "../../../unitComponents/CardTambor.astro";
               provenientes de fuentes fijas.
             </p>
 
-            <img
-              src="https://placehold.co/600x400/png"
-              class="mt-4 rounded-lg"
-            />
+            <img src={semarnat2.src} class="mt-4 rounded-lg" />
           </div>
         </div>
       </CardEmergente>

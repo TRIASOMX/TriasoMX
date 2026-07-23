@@ -1,18 +1,21 @@
 ---
 import BHFirst from "../components/BagHouses/BHFirst.astro";
-import BHImgSelector from '../components/BagHouses/BHImgSelector.astro';
+import BHImgSelector from "../components/BagHouses/BHImgSelector.astro";
 import BHOdometer from "../components/BagHouses/BHOdometer";
 import BHPlanos from "../components/BagHouses/BHPlanos";
-import Tab from '../components/BagHouses/BHTab';
+import Tab from "../components/BagHouses/BHTab";
 import CardSectionResponsive from "../components/unitComponents/CardSectionResponsive.astro";
 import Layout from "../layouts/Layout.astro";
-
 ---
+
 <Layout title="BagHouses Page">
-    <BHFirst/>
-    <BHOdometer client:only/>
-    <Tab client:visible/>
-    <BHImgSelector/>
-    <BHPlanos client:only/> 
-    <CardSectionResponsive/>
-</Layout>  
+  <BHFirst />
+  <section class="flex justify-center">
+    <BHOdometer client:only />
+  </section>
+  <Tab client:visible />
+  <BHImgSelector />
+  <BHPlanos client:only />
+  <CardSectionResponsive />
+</Layout>
+

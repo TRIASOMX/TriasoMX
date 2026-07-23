@@ -1,7 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import OdometerFlujo from "../../../components/DrumMixers/Paralelo/Plus/fpPlusOdometer";
-import HeroComponent from "../../../components/unitComponents/HeroComponent.astro";
+import HeroComponentV1 from "../../../components/unitComponents/HeroComponentV1.astro";
 import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
 import OsDrumSection from "../../../components/DrumMixers/OsDrumSection.astro";
 import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
@@ -9,10 +9,10 @@ import HotspotSection from "../../../components/DrumMixers/Paralelo/Plus/Hotspot
 import QuemadorSeccion from "../../../components/DrumMixers/Paralelo/Plus/QuemadorSeccion.astro";
 import LavadoraSeccion from "../../../components/DrumMixers/LavadoraSeccion.astro";
 import UltimaSeccion from "../../../components/DrumMixers/UltimaSeccion.astro";
-import HeroImage from "../../../assets/images/DrumMixers/FlujoParalelo/Plus/HeroImage.webp";
 import HeroImage2 from "../../../assets/images/DrumMixers/FlujoParalelo/Plus/FPlus.webp";
-import SliderTamborCom from "../../../components/DrumMixers/SliderTamborCom.astro";
+import SliderTamborCom from "../../../components/DrumMixers/Paralelo/Plus/SliderTamborFPlus.astro";
 import FPPlusPlanos from "../../../components/DrumMixers/Paralelo/Plus/FPPlusPlanos";
+import LearnBtnBlue from "../../../components/unitComponents/LearnBtnBlue.astro";
 
 const cards = [
   {
@@ -47,18 +47,13 @@ const cards = [
 ---
 
 <Layout title="Tambor de Paralelo Plus">
-  <div class="mt-10">
-    <HeroComponent
+  <div class="">
+    <HeroComponentV1
       title="Tambor de Flujo paralelo Plus"
-      accentColor="#f4f5f6"
-      image={HeroImage.src}
-      imageAlt="Tambor de Contraflujo Desamaq"
-      altImage={HeroImage2.src}
-      descAltImage="placeholder"
-    />
-  </div>
-  <div class="bg-[#f4f5f6]">
-    <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+      text="Para contratistas experimentados que buscan una planta con producción y nivel de exigencias técnicas superiores, capaz de adaptarse a cualquier proyecto, incluso con diferentes tipos de mezcla. Evitando paros costosos, con bajo consumo de combustible ofreciendo una excelente relación costo-beneficio en su categoría."
+      heroImage={HeroImage2.src}
+      btns={true}
+    >
       <div class="flex flex-row justify-center items-center gap-10">
         <a
           class="font-thin text-black text-xl lg:text-2xl"
@@ -73,53 +68,25 @@ const cards = [
           href="/TamborMezcla/Paralelo/ParaleloPro">Pro +</a
         >
       </div>
-
-      <div class="flex justify-center items-center text-center">
-        <h1 class="text-black text-lg lg:text-xl">
-          Para contratistas experimentados que buscan una producción con
-          exigencias técnicas superiores, siendo capaces de adaptarse a
-          cualquier proyecto, incluso con diferentes diseños de mezcla. Es la
-          mejor planta de asfalto de flujo paralelo, combinando funcionalidad,
-          robustez y control optimizado para asegurar calidad en cada jornada.
-        </h1>
-      </div>
-
-      <div
-        class="flex flex-col lg:flex-row md:flex-row justify-center items-center gap-5"
-      >
-        <div
-          class="bg-black rounded-2xl w-36 text-center transition-all duration-300 hover:bg-white"
-        >
-          <p class="py-3 font-semibold text-white hover:text-black">Cotizar</p>
-        </div>
-        <div
-          class="bg-white rounded-2xl w-36 text-center transition-all duration-300 hover:bg-black"
-        >
-          <p class="py-3 font-semibold text-black hover:text-white">Comparar</p>
-        </div>
-      </div>
-    </div>
+    </HeroComponentV1>
   </div>
+
   <OdometerFlujo client:only />
 
   <div>
     <DropdownComponent
-      title="El modelo ideal si busca automatización, rendimiento, calidad y economía de compra, compitiendo con plantas de asfalto en su región."
+      title="LA PLANTA DE ASFALTO MÁS ROBUSTA Y MODERNA DE LATINOAMÉRICA ES MEXICANA"
     >
       <div class="space-y-5">
         <p>
-          Triaso® ofrece la solución ideal para la producción continua de mezcla
-          asfáltica, integrando secado, mezclado, control de emisiones con
-          lavadura en un solo chasis diseñado para trabajo pesado, con opción de
-          tolvas montadas. Su diseño está orientado a una operación continua,
-          eficiente y con mayor control del proceso.
-        </p>
-        <p>
-          Fabricados con materiales reforzados y componentes de mayor
-          durabilidad, estos tambores aseguran eficiencia energética, menor
-          desgaste y una mezcla asfáltica de alta calidad. Son ideales para
-          operaciones móviles o semi-fijas que buscan mayor productividad y
-          estabilidad en jornadas prolongadas.
+          Ofrecemos la solución más avanzada para la producción continua de
+          mezcla asfáltica, con tambores mezcladores de alto desempeño que
+          integran secado, mezclado, captura de finos en la lavadora y su
+          desecho en fosas de lodos. Nuestro diseño está orientado a máxima
+          eficiencia térmica, una operación continua, eficiente y con mayor
+          control del proceso, garantizando eficiencia operativa, tranquilidad
+          de su cliente, durabilidad del pavimento en cualquier proyecto y
+          producción constante sin paros.
         </p>
       </div>
     </DropdownComponent>
@@ -135,7 +102,8 @@ const cards = [
       </h1>
       <p class="text-white text-center lg:text-start md:text-start">
         Paro total con un solo botón desde su celular
-      </p>
+      </p><br />
+      <LearnBtnBlue />
     </div>
   </div>
 

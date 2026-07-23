@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 import ASOdom from "../../assets/images/AsphaltStorage/ASOdo.webp";
+import FillLinkButton from "../unitComponents/FillLinkButton";
 
 const ASOdometer = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -37,7 +38,7 @@ const ASOdometer = () => {
       },
       {
         threshold: 0.5, // cuando el 50% sea visible
-      }
+      },
     );
 
     const current = sectionRef.current;
@@ -50,8 +51,8 @@ const ASOdometer = () => {
 
   return (
     <div ref={sectionRef} className="max-w-7xl px-8 mx-auto  ">
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center pb-10">
-        <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
+      <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center pb-10">
+        <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20 col-span-1 md:col-span-2">
           <div className="flex flex-col items-center justify-center">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-start items-baseline w-full">
               <Odometer value={value} format="(,ddd)" duration={2000} />
@@ -87,9 +88,10 @@ const ASOdometer = () => {
               de btu/hr de capacidad
             </p>
           </div>
+          <FillLinkButton href="#planos" />
         </div>
 
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center col-span-1 md:col-span-4">
           <div className="pb-[50px] pt-[50px]">
             <img src={ASOdom.src} alt="Back of an Asphalt Storage Tank" />
           </div>

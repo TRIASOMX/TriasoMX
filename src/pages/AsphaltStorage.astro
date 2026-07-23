@@ -12,7 +12,7 @@ import img1 from "../assets/images/AsphaltStorage/sedenaBG.jpg";
 import img2 from "../assets/images/AsphaltStorage/Low/versatil.webp";
 import img3 from "../assets/images/AsphaltStorage/Calentamiento.webp";
 import img4 from "../assets/images/AsphaltStorage/Versatilidad.webp";
-import HeroComponentV1 from "../components/unitComponents/HeroComponentV1.astro";
+import HeroComponentV2 from "../components/unitComponents/HeroComponentV2.astro";
 const slides = [
   {
     id: 1,
@@ -57,21 +57,35 @@ const slides = [
   title="Asphalt Storage"
   description="Information about asphalt storage facilities and regulations."
 >
-  <HeroComponentV1
+  <HeroComponentV2
     title="Tanques de almacenamiento de asfalto Triaso®"
-    text="Los tanques de asfalto Triaso® están diseñados para almacenar y mantener el asfalto en condiciones óptimas, asegurando una calidad y un desempeño constantes. Fabricados con materiales de alta resistencia y aislamiento de alta eficiencia, mantienen el asfalto listo para usarse en cualquier aplicación. Ideales para la producción de asfalto modificado con polímeros, estos tanques ofrecen la durabilidad y funcionalidad necesarias tanto para proyectos pequeños como para operaciones de gran escala."
+    bgColor="#1e1e1e"
+    textColor="white"
+    titleColor="white"
     heroImage={HeroImg.src}
-  />
+  >
+    <p
+      class="text-sm md:text-base font-normal text-white max-w-[160ch] self-center"
+    >
+      Los tanques de asfalto Triaso® están diseñados para almacenar y mantener
+      el asfalto en condiciones óptimas, asegurando una calidad y un desempeño
+      constantes. Fabricados con materiales de alta resistencia y aislamiento de
+      alta eficiencia, mantienen el asfalto listo para usarse en cualquier
+      aplicación. <br /> Ideales para la producción de asfalto modificado con polímeros,
+      estos tanques ofrecen la durabilidad y funcionalidad necesarias tanto para proyectos
+      pequeños como para operaciones de gran escala.
+    </p>
+  </HeroComponentV2>
 
   <div class="w-full h-auto md:h-[100vh] flex justify-center items-center">
     <ASOdometer client:only />
   </div>
 
   <br />
-  <h2 class="text-center text-[#14427c] font-bold text-2xl md:text-3xl mb-10">
+  <h2 class="text-center text-[#14427c] font-bold text-2xl md:text-3xl">
     Eficiencia térmica que reduce el consumo de combustible.
   </h2>
-  <Slider slides={slides} client:only /><br />
+  <Slider slides={slides} dark={true} client:only /><br />
   <h2
     class="text-center text-[#c11b1b] font-bold text-2xl md:text-3xl mb-10 max-w-[70ch] mx-auto"
   >

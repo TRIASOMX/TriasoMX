@@ -1,8 +1,6 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import OdometerDrum from "../../../components/DrumMixers/Contraflujo/Plus/OdometerPlus";
-import HeroComponent from "../../../components/unitComponents/HeroComponent.astro";
-import hero1 from "../../../assets/images/DrumMixers/Contraflujo/Plus/HeroImage.webp";
 import DropdownComponent from "../../../components/unitComponents/DropdownComponent.astro";
 import StackedInfoCards from "../../../components/unitComponents/StackedInfoCards.astro";
 import HotspotSection from "../../../components/DrumMixers/Contraflujo/Plus/HotspotSection.astro";
@@ -11,7 +9,8 @@ import BolsasSeccion from "../../../components/DrumMixers/Contraflujo/Plus/Bolsa
 import hero2 from "../../../assets/images/DrumMixers/Contraflujo/Cplus.webp";
 import UltimaSeccion from "../../../components/DrumMixers/UltimaSeccion.astro";
 import PlanosPlusCf from "../../../components/DrumMixers/Contraflujo/Plus/PlanosPlusCf";
-import SliderTamborCom from "../../../components/DrumMixers/SliderTamborCom.astro";
+import HeroComponentV1 from "../../../components/unitComponents/HeroComponentV1.astro";
+import SliderTamborPlusAstroComponent from "../../../components/DrumMixers/Contraflujo/Plus/SliderTamborPlus.astro";
 
 const cards = [
   {
@@ -46,18 +45,13 @@ const cards = [
 ---
 
 <Layout title="Tambor de contraflujo">
-  <div class="mt-10">
-    <HeroComponent
+  <div class="">
+    <HeroComponentV1
       title="Tambor de Contraflujo Plus"
-      image={hero1.src}
-      accentColor="#f4f5f6"
-      imageAlt="Tambor de Contraflujo Plus"
-      altImage={hero2.src}
-      descAltImage="Tambor de Contraflujo Plus"
-    />
-  </div>
-  <div class="bg-[#f4f5f6]">
-    <div class="max-w-7xl mx-auto px-8 space-y-10 py-10">
+      text="Para contratistas experimentados que buscan una planta con producción y nivel de exigencias técnicas superiores, capaz de adaptarse a cualquier proyecto, incluso con diferentes tipos de mezcla. Ideal para una operación ecológica evitando multas y paros costosos por contaminación, con bajo consumo de combustible ofreciendo una excelente relación costo-beneficio en su categoría, con alto porcentaje de incorporación de RAP de hasta 40%."
+      heroImage={hero2.src}
+      btns={true}
+    >
       <div class="flex flex-row justify-center items-center gap-10">
         <a
           class="font-thin text-black text-xl lg:text-2xl"
@@ -71,57 +65,25 @@ const cards = [
           >Pro +</a
         >
       </div>
-
-      <div class="flex justify-center items-center text-center">
-        <h1 class="font-semibold text-black text-lg lg:text-xl">
-          Para contratistas experimentados que buscan una producción exigencias
-          técnica superiores, siendo capaces de adaptarse a cualquier proyecto,
-          incluso con diferentes tipos de mezcla. Ideal para una operación
-          ecológica evitando multas y paros costosos por contaminación, con bajo
-          consumo de combustible ofreciendo una excelente relación
-          costo-beneficio en su categoría, con alto porcentaje de incorporación
-          de RAP de hasta 40%.
-        </h1>
-      </div>
-
-      <div
-        class="flex flex-col lg:flex-row md:flex-row justify-center items-center gap-5"
-      >
-        <div
-          class="bg-black rounded-2xl w-36 text-center transition-all duration-300 hover:bg-white"
-        >
-          <p class="py-3 font-semibold text-white hover:text-black">Cotizar</p>
-        </div>
-        <div
-          class="bg-white rounded-2xl w-36 text-center transition-all duration-300 hover:bg-black"
-        >
-          <p class="py-3 font-semibold text-black hover:text-white">Comparar</p>
-        </div>
-      </div>
-    </div>
+    </HeroComponentV1>
   </div>
+
   <OdometerDrum client:only />
 
   <div>
     <DropdownComponent
-      title="El modelo ideal si busca automatización, rendimiento, calidad y economía de compra, compitiendo con plantas de asfalto en su región."
+      title="LA PLANTA DE ASFALTO MÁS ROBUSTA Y MODERNA DE LATINOAMÉRICA ES MEXICANA"
     >
-      <div class="space-y-5">
+      <div class="space-y-5 text-[#f3f3f5]">
         <p>
-          Triaso® ofrece la solución ideal para la producción continua de mezcla
+          Ofrecemos la solución ideal para la producción continua de mezcla
           asfáltica, integrando secado, mezclado, incorporación de RAP, captura
           de finos en la casa de bolsas y su reincorporación en un solo chasis
-          diseñado para trabajo pesado, con opción de tolvas montadas. Su diseño
-          está orientado a una operación continua, eficiente y con mayor control
-          del proceso, garantizando eficiencia operativa, tranquilidad de su
-          cliente y durabilidad del pavimento en cualquier proyecto.
-        </p>
-        <p>
-          Fabricados con materiales reforzados y componentes de mayor
-          durabilidad, estos tambores aseguran eficiencia energética, menor
-          desgaste y una mezcla asfáltica de alta calidad. Son ideales para
-          operaciones móviles o semi-fijas que buscan mayor productividad y
-          estabilidad en jornadas prolongadas.
+          diseñado para trabajo pesado, con opción de tolvas montadas o
+          independientes. Nuestro diseño está orientado a una operación
+          continua, eficiente y con mayor control del proceso, garantizando
+          eficiencia operativa, tranquilidad de su cliente y durabilidad del
+          pavimento en cualquier proyecto.
         </p>
       </div>
     </DropdownComponent>
@@ -153,7 +115,7 @@ const cards = [
   <HotspotSection />
 
   <div class="max-w-7xl mx-auto px-8">
-    <SliderTamborCom />
+    <SliderTamborPlusAstroComponent />
   </div>
 
   <QuemadorSeccion />

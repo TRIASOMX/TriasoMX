@@ -4,35 +4,53 @@ import poster1 from "../../../../assets/images/Burners/Gallery/B1.webp";
 import img4 from "../../../../assets/images/Burners/preHeat.webp";
 ---
 
-<section>
+<section class="min-h-[70vh] md:mt-14 flex justify-center">
   <!-- Sección arriba -->
   <div
-    class="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row justify-center lg:justify-between"
+    class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center"
   >
-    <div class="">
+    <div class="w-full col-span-1 flex flex-col gap-6">
       <div>
         <h1
-          class="uppercase text-2xl md:text-5xl font-extrabold text-[#393939]"
+          class="uppercase text-2xl md:text-5xl font-extrabold text-[#393939] max-w-[40ch]"
         >
-          Quemadores de
+          Quemadores de aire total
         </h1>
-        <h1
-          class="uppercase text-2xl md:text-5xl font-extrabold text-[#393939]"
-        >
-          aire total
-        </h1>
-        <div class="border-b-2 border-[#ca1c1c] h-0.5 w-full my-5"></div>
+
+        <div class="h-1 bg-[#ca1c1c] w-1/2 my-5"></div>
       </div>
       <div class="flex flex-col">
-        <p>Desde 6 a 125 millones de Btu/Hr,</p>
-        <p>con precalentador, filtro y más</p>
+        <p class="max-w-[30ch] text-base md:text-lg">
+          Desde 6 a 125 millones de Btu/Hr, con precalentador, filtro y más
+        </p>
+      </div>
+      <div class="flex flex-col w-full max-w-[600px] gap-3">
+        <div
+          class="bg-white w-full rounded-2xl flex justify-center items-center"
+        >
+          <div class="mx-auto py-4">
+            <p class="font-bold text-xl md:text-2xl">Aire 100% regulado</p>
+          </div>
+        </div>
+        <div
+          class="bg-[#393939] rounded-2xl w-full flex justify-center items-center"
+        >
+          <div class="mx-auto py-4">
+            <p class="font-bold text-white text-xl md:text-2xl">
+              Bajas emisiones de NOx
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="flex items-center justify-center lg:justify-end w-full">
+    <div
+      class="flex items-center justify-center lg:justify-end w-full col-span-1"
+    >
       <SmartVideo
         client:visible
         src="/Videos/Webm/burnerVideo.webm"
-        width="70%"
+        aspectRatio="11/9"
+        width="100%"
         poster={poster1.src}
         isLoop={true}
         autoplayOnMobile={false}
@@ -40,24 +58,6 @@ import img4 from "../../../../assets/images/Burners/preHeat.webp";
     </div>
   </div>
   <!-- Sección 2 -->
-  <div class="flex flex-col md:flex-row gap-4 max-w-7xl mx-auto px-8">
-    <div
-      class="bg-white lg:w-[600px] rounded-2xl flex justify-center items-center"
-    >
-      <div class="mx-auto py-10">
-        <p class="font-bold text-xl md:text-2xl">Aire 100% regulado</p>
-      </div>
-    </div>
-    <div
-      class="bg-[#393939] rounded-2xl lg:w-[600px] flex justify-center items-center"
-    >
-      <div class="mx-auto py-10">
-        <p class="font-bold text-white text-xl md:text-2xl">
-          Bajas emisiones de NOx
-        </p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- Sección sliders -->

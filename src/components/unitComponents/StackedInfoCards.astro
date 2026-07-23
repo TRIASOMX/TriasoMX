@@ -16,11 +16,12 @@ const {
   >
     <div class="left-content">
       <h2
-        class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tighter mb-6 border-b-2 border-b-orange-500"
+        class="text-3xl md:text-[60px] font-extrabold leading-tight tracking-tighter"
       >
         {mainTitle}
       </h2>
-      <p class="text-neutral-600 max-w-md">
+      <div class="w-1/2 h-1 bg-[#ca1c1c] my-5"></div>
+      <p class="text-black w-full text-base md:text-2xl">
         {mainDescription}
       </p>
     </div>
@@ -34,7 +35,9 @@ const {
             class="stack-card absolute w-full max-w-lg top-[10%] lg:top-[30%] md:top-[60%] right-0 rounded-xl p-10 shadow-xl"
             style={`background:${card.bg}; color:${card.textColor}`}
           >
-            <h3 class="text-2xl font-semibold mb-4">{card.title}</h3>
+            <h3 class="text-2xl md:text-3xl font-semibold mb-4">
+              {card.title}
+            </h3>
             <p class="text-base opacity-90 leading-relaxed">{card.text}</p>
           </div>
         ))

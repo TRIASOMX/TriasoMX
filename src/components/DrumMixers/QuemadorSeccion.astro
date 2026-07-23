@@ -4,51 +4,128 @@ import poster1 from "../../assets/images/Burners/Gallery/B1.webp";
 import QuemadorSlider from "./QuemadorSlider";
 import slide2 from "../../assets/images/Burners/preHeat.webp";
 import slide3 from "../../assets/images/DrumMixers/Contraflujo/Pro+/Plasma.webp";
+import slide4 from "../../assets/images/Burners/PlaCQuemador.webp";
+import slide5 from "../../assets/images/Burners/QmdorSil.webp";
 
 const slides = [
   {
     title: "Precalentador de combustible",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget neque hendrerit, volutpat nulla sed, pulvinar ligula. Quisque eleifend blandit nisl vitae vestibulum.",
+      "Con los precalentadores reducimos la viscosidad del combustible, garantizando una atomización adecuada y una combustión limpia, sin demoras ni fuentes de calor externas.",
     image: slide2.src,
-    bgColor: "#1a1a2e",
+    bgColor: "#fffaea",
+    titleColor: "#000000",
+    descriptionColor: "#000000",
+    extraContent: `
+      <h1 class="font-bold text-sm">Problemas causados por no precalentar los combustibles de bajo costo:</h1>
+      <ul class="list-disc pl-5">
+        <li class="text-sm">Las microgotas sin quemar provocan una pérdida considerable de combustible.</li>
+        <li class="text-sm">La mezcla asfáltica se contamina con combustible sin quemar.</li>
+        <li class="text-sm">Esta contaminación reduce significativamente la vida útil del pavimento asfáltico.</li>
+        <li class="text-sm">La atmósfera se ve afectada por los gases generados por una combustión incompleta.</li>
+      </ul>
+    `,
   },
   {
-    title: "Sistema ionizador de plasma para optimizar la combustión.",
+    title:
+      "Sistema de ionización para asistencia de plasma que asiste la combustión.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget neque hendrerit, volutpat nulla sed, pulvinar ligula. Quisque eleifend blandit nisl vitae vestibulum.",
+      "La combustión mejora cuando el combustible se fragmenta en componentes más pequeños y reactivos antes de entrar a la llama. Al aplicar energía eléctrica mediante ionización y asistencia de plasma, las moléculas del combustible no se queman, pero se energizan y se rompen parcialmente, reduciendo su complejidad molecular.",
     image: slide3.src,
-    bgColor: "#0d2b4e",
+    bgColor: "#14427c",
+    titleColor: "#ffffff",
+    descriptionColor: "#ffffff",
+    extraContent: `
+      <ul class="list-disc pl-5 text-white">
+        <li class="text-sm">Evita apagados o inestabilidad del quemador.</li>
+        <li class="text-sm">Reduce picos localizados de temperatura.</li>
+        <li class="text-sm">Contribuye a una combustión más uniforme.</li>
+        <li class="list-none text-sm">
+          <ul class="ml-2 lg:ml-6">
+            <li class="text-sm relative pl-5 before:absolute before:left-0 before:top-2 before:h-2 before:w-2 before:rounded-full before:border before:border-white before:bg-transparent">
+              Se logra un gran ahorro de combustible
+            </li>
+          </ul>
+        </li>
+        <li class="text-sm">Disminuye la formación de contaminantes como NOx, al evitar zonas de sobrecalentamiento.</li>
+      </ul>
+    `,
+  },
+  {
+    title: "Autocarburación del quemador por sensores en la chimenea",
+    description:
+      "Nuestra más reciente innovación en quemadores incorpora un sensor de oxígeno que regula automáticamente el exceso de oxígeno a no más del 3%, eliminando la necesidad de ajustes manuales de carburación del combustible al reubicar el equipo. Gracias a nuestro sistema de auto-carburación, los niveles de NOx se mantienen aún más bajos.",
+    image: slide4.src,
+    bgColor: "#b7422a",
+    titleColor: "#ffffff",
+    descriptionColor: "#ffffff",
+    extraContent: `
+      <ul class="list-disc pl-5 text-white text-sm">
+        <li class="text-sm">Los sensores mandan datos al quemador para que se carbure automáticamente en tiempo real.</li>
+        <li class="text-sm">Se eficienta la combustión y baja el consumo de combustible.</li>
+        <li class="text-sm">En cambios de lugar de trabajo el quemador se autocarbura a la nueva altura sobre el nivel del mar.</li>
+      </ul>
+    `,
+  },
+  {
+    title: "Silenciador para quemador",
+    description:
+      "Operación silenciosa para cumplir con límites estrictos de ruido, reduciendo el ruido del quemador y permitiendo que la planta de asfalto opere en zonas urbanas o en ubicaciones con regulaciones acústicas estrictas.",
+    image: slide5.src,
+    bgColor: "#ffffff",
+    titleColor: "#000000",
+    descriptionColor: "#000000",
   },
 ];
 ---
 
-<section>
+<section class="min-h-[70vh] md:mt-14 flex justify-center">
   <!-- Sección arriba -->
   <div
-    class="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row justify-center lg:justify-between"
+    class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center"
   >
-    <div class="">
+    <div class="w-full col-span-1 flex flex-col gap-6">
       <div>
-        <h1 class="uppercase text-4xl font-extrabold text-[#393939]">
-          Quemadores de
+        <h1
+          class="uppercase text-2xl md:text-5xl font-extrabold text-[#393939] max-w-[40ch]"
+        >
+          Quemadores de aire total
         </h1>
-        <h1 class="uppercase text-4xl font-extrabold text-[#393939]">
-          aire total
-        </h1>
-        <div class="border-b-2 border-[#ca1c1c] h-0.5 w-full my-5"></div>
+
+        <div class="h-1 bg-[#ca1c1c] w-1/2 my-5"></div>
       </div>
       <div class="flex flex-col">
-        <p>Desde 6 a 125 millones de Btu/Hr,</p>
-        <p>con precalentador, filtro y más</p>
+        <p class="max-w-[30ch] text-base md:text-lg">
+          Desde 6 a 125 millones de Btu/Hr, con precalentador, filtro y más
+        </p>
+      </div>
+      <div class="flex flex-col w-full max-w-[600px] gap-3">
+        <div
+          class="bg-white w-full rounded-2xl flex justify-center items-center"
+        >
+          <div class="mx-auto py-4">
+            <p class="font-bold text-xl md:text-2xl">Aire 100% regulado</p>
+          </div>
+        </div>
+        <div
+          class="bg-[#393939] rounded-2xl w-full flex justify-center items-center"
+        >
+          <div class="mx-auto py-4">
+            <p class="font-bold text-white text-xl md:text-2xl">
+              Bajas emisiones de NOx
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="flex items-center justify-center lg:justify-end w-full">
+    <div
+      class="flex items-center justify-center lg:justify-end w-full col-span-1"
+    >
       <SmartVideo
         client:visible
         src="/Videos/Webm/burnerVideo.webm"
         aspectRatio="11/9"
-        width="70%"
+        width="100%"
         poster={poster1.src}
         isLoop={true}
         autoplayOnMobile={false}
@@ -56,29 +133,11 @@ const slides = [
     </div>
   </div>
   <!-- Sección 2 -->
-  <div class="flex flex-col md:flex-row max-w-7xl mx-auto px-8 gap-2">
-    <div
-      class="bg-white lg:w-[600px] rounded-2xl flex justify-center items-center"
-    >
-      <div class="mx-auto py-10">
-        <p class="font-bold text-xl md:text-2xl">Aire 100% regulado</p>
-      </div>
-    </div>
-    <div
-      class="bg-[#393939] rounded-2xl lg:w-[600px] flex justify-center items-center"
-    >
-      <div class="mx-auto py-10">
-        <p class="font-bold text-white text-xl md:text-2xl">
-          Bajas emisiones de NOx
-        </p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- Sección sliders -->
 
-<section class="pt-10">
+<section class="pt-10 w-full self-center">
   <div class="max-w-7xl mx-auto px-8 space-y-2">
     <h1 class="text-[#ca1c1c] font-bold text-4xl">
       Flama, mezcla y calidad consistente

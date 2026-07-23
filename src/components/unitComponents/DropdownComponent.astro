@@ -11,28 +11,34 @@ const { title } = Astro.props;
     <button
       class="dropdown-toggle w-full flex items-center justify-between px-6 py-4 text-left"
     >
-      <span class="text-sm md:text-lg lg:text-lg font-bold">
+      <span class="text-lg md:text-2xl font-bold">
         {title}
       </span>
 
-      <span class="dropdown-icon flex items-center justify-center w-8 h-8 rounded-full bg-neutral-800 transition-transform duration-300">
+      <span
+        class="dropdown-icon flex items-center justify-center w-8 h-8 rounded-full bg-neutral-800 transition-transform duration-300"
+      >
         ▼
       </span>
     </button>
 
-    <div class="dropdown-content max-h-0 overflow-hidden transition-all duration-300">
-      <div class="px-6 pb-6 text-sm text-neutral-300">
+    <div
+      class="dropdown-content max-h-0 overflow-hidden transition-all duration-300"
+    >
+      <div class="px-6 pb-6 text-xs md:text-lg text-neutral-300">
         <slot />
       </div>
     </div>
-
   </div>
 </div>
 
 <script is:inline>
-  const toggle = document.currentScript.parentElement.querySelector(".dropdown-toggle");
-  const content = document.currentScript.parentElement.querySelector(".dropdown-content");
-  const icon = document.currentScript.parentElement.querySelector(".dropdown-icon");
+  const toggle =
+    document.currentScript.parentElement.querySelector(".dropdown-toggle");
+  const content =
+    document.currentScript.parentElement.querySelector(".dropdown-content");
+  const icon =
+    document.currentScript.parentElement.querySelector(".dropdown-icon");
 
   toggle.addEventListener("click", () => {
     const open = content.style.maxHeight;

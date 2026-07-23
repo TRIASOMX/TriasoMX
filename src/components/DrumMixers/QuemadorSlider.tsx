@@ -6,6 +6,9 @@ export interface SlideItem {
   image: string;
   bgColor: string;
   accentColor?: string;
+  titleColor?: string;
+  descriptionColor?: string;
+  extraContent?: string;
 }
 
 interface ProductSliderProps {
@@ -61,7 +64,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
       {
         root: track,
         threshold: 0.6,
-      }
+      },
     );
 
     cards.forEach((card) => observer.observe(card));
@@ -75,7 +78,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
     setIsDragging(true);
     dragStart.current = { x: e.pageX, scrollLeft: track.scrollLeft };
   };
-  
+
   const onMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
@@ -84,7 +87,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
     track.scrollLeft =
       dragStart.current.scrollLeft - (e.pageX - dragStart.current.x) * 1.1;
   };
-  
+
   const stopDrag = () => setIsDragging(false);
 
   return (
@@ -120,7 +123,7 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
                   src={slide.image}
                   alt={slide.title}
                   draggable={false}
-                  className="absolute inset-0 w-full h-full object-contain p-8 z-0 transition-transform duration-500 "
+                  className="absolute inset-0 w-full h-full object-contain z-0 transition-transform duration-500 "
                   style={{
                     transform: isExpanded
                       ? "scale(0.82) translateY(-6%)"
@@ -145,8 +148,9 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
 
                 <div className="absolute top-0 left-0 right-0 z-20 p-5">
                   <h3
-                    className="font-bold text-white leading-snug"
+                    className="font-bold leading-snug"
                     style={{
+                      color: slide.titleColor ?? "#ffffff",
                       fontSize: "clamp(0.95rem, 2.2vw, 1.2rem)",
                       textShadow: "0 2px 16px rgba(0,0,0,0.55)",
                     }}
@@ -159,13 +163,22 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
                   className="absolute left-0 right-0 z-20 px-5 overflow-hidden transition-all duration-500 ease-in-out"
                   style={{
                     bottom: "52px",
-                    maxHeight: isExpanded ? "240px" : "0px",
+                    maxHeight: isExpanded ? "320px" : "0px",
                     opacity: isExpanded ? 1 : 0,
                   }}
                 >
-                  <p className="text-black text-sm leading-relaxed">
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: slide.descriptionColor ?? "#000000" }}
+                  >
                     {slide.description}
                   </p>
+                  {slide.extraContent && (
+                    <div
+                      className="mt-2"
+                      dangerouslySetInnerHTML={{ __html: slide.extraContent }}
+                    />
+                  )}
                 </div>
 
                 <button

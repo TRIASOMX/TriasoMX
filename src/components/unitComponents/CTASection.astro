@@ -1,0 +1,43 @@
+---
+import WhatsbtnAstroComponent from "./Whatsbtn.astro";
+import CotizacionBtnAstroComponent from "./cotizacionBtn.astro";
+
+export interface Props {
+  title: string;
+  text: string | string[];
+  bgImage: string;
+  quoteHref?: string;
+}
+
+const { title, text, bgImage } = Astro.props;
+
+const paragraphs = Array.isArray(text) ? text : [text];
+---
+
+<section>
+  <div
+    class="bg-black lg:h-[50vh] md:h-[50vh] flex items-center bg-cover bg-center bg-no-repeat relative"
+    style={`background-image: url(${bgImage});`}
+  >
+    <div class="absolute inset-0 bg-[#000000]/70"></div>
+    <div class="max-w-7xl mx-auto px-8 space-y-5 relative">
+      <div class="pt-5">
+        <h1 class="text-4xl font-bold text-white">{title}</h1>
+      </div>
+
+      <div
+        class="w-full flex flex-col justify-center pb-5 lg:justify-around md:justify-around items-center lg:flex-row relative"
+      >
+        <div>
+          {paragraphs.map((paragraph) => <p class="text-white">{paragraph}</p>)}
+        </div>
+        <div
+          class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
+        >
+          <WhatsbtnAstroComponent />
+          <CotizacionBtnAstroComponent />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+---
+export interface Props {
+  cotizarHref: string;
+  compararHref: string;
+}
+
+const { cotizarHref, compararHref } = Astro.props;
+---
+
+<div
+  class="flex flex-col lg:flex-row md:flex-row justify-center items-center gap-5"
+>
+  <a
+    href={cotizarHref}
+    class="bg-black rounded-lg w-36 text-center transition-all duration-300 hover:bg-white"
+  >
+    <p class="py-3 font-semibold text-white hover:text-black">Cotizar</p>
+  </a>
+  <a
+    href={compararHref}
+    class="bg-white rounded-lg w-36 text-center transition-all duration-300 hover:bg-black"
+  >
+    <p class="py-3 font-semibold text-black hover:text-white">Comparar</p>
+  </a>
+</div>

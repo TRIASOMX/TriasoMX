@@ -11,6 +11,28 @@ export interface Slide {
   alt?: string;
 }
 
+export interface SliderModalSection {
+  title: string;
+  /** Color de fondo del bloque, ej. "#fffaea" */
+  background: string;
+  paragraphs: string[];
+  imgSrc?: string;
+  imgAlt?: string;
+  /** Posición de la imagen respecto al texto (desktop). Por defecto "left" */
+  imagePosition?: "left" | "right";
+  /** Alineación del título (desktop). Por defecto "left" */
+  titleAlign?: "left" | "right";
+}
+
+export interface SliderLastSlideModal {
+  /** Texto del botón que abre la modal. Por defecto "Ver más" */
+  buttonText?: string;
+  /** Título general de la modal (opcional) */
+  title?: string;
+  /** Bloques de contenido de la modal */
+  sections: SliderModalSection[];
+}
+
 export interface SliderProps {
   slides: Slide[];
   /** Relación de aspecto de cada tarjeta (ancho / alto). Por defecto 1.42 */
@@ -18,6 +40,8 @@ export interface SliderProps {
   /** Ancho máximo de una tarjeta en px (desktop). Por defecto 720 */
   cardMaxWidth?: number;
   dark?: boolean;
+  /** Si se define, agrega un botón en la última tarjeta que abre una modal */
+  lastSlideModal?: SliderLastSlideModal;
 }
 
 /* ------------------------------------------------------------------ */
@@ -29,6 +53,7 @@ export default function Slider({
   aspectRatio = 1.42,
   cardMaxWidth = 720,
   dark = false,
+  lastSlideModal,
 }: SliderProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
@@ -36,6 +61,8 @@ export default function Slider({
   const [sidePadding, setSidePadding] = useState(24);
   // --- texto expandido por tarjeta (solo mobile / md) -------------
   const [expanded, setExpanded] = useState<Record<number, boolean>>({});
+  // --- modal de la última tarjeta (opcional, vía lastSlideModal) --
+  const [modalOpen, setModalOpen] = useState(false);
   // --- estado de arrastre (solo desktop / puntero) ----------------
   const drag = useRef({
     down: false,
@@ -125,6 +152,9 @@ export default function Slider({
   const onPointerDown = (e: React.PointerEvent) => {
     // solo arrastre con puntero fino (ratón / trackpad); el táctil usa scroll nativo
     if (e.pointerType === "touch") return;
+    // no iniciar el arrastre si el pointerdown viene de un botón: capturar el
+    // puntero aquí redirigiría también su click al track, y el botón nunca lo recibiría
+    if ((e.target as HTMLElement).closest("button")) return;
     const el = trackRef.current;
     if (!el) return;
     drag.current = {
@@ -250,6 +280,31 @@ export default function Slider({
           transform:rotate(180deg);
         }
 
+        .modal-open-btn{
+          display:inline-flex;
+        }
+
+        .modal-section-row{
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          gap:16px;
+        }
+        .modal-title-row{
+          display:flex;
+        }
+        @media (min-width: 1024px){
+          .modal-section-row{
+            flex-direction:row;
+          }
+          .modal-section-row.reverse{
+            flex-direction:row-reverse;
+          }
+          .modal-title-row.align-right{
+            justify-content:flex-end;
+          }
+        }
+
         @media (max-width: 1023px){
           .card-text{
             max-height:0;
@@ -262,6 +317,12 @@ export default function Slider({
             margin-top:12px;
           }
           .see-more-btn{
+            display:inline-flex;
+          }
+          .modal-open-btn{
+            display:none;
+          }
+          .modal-open-btn.is-expanded{
             display:inline-flex;
           }
         }
@@ -382,6 +443,7 @@ export default function Slider({
                       opacity: 0.9,
                       maxWidth: "80%",
                     }}
+                    className="font-normal"
                   >
                     {s.text}
                   </p>
@@ -408,6 +470,32 @@ export default function Slider({
                     <path d="M1 1 L5 5 L9 1" />
                   </svg>
                 </button>
+
+                {lastSlideModal && i === slides.length - 1 && (
+                  <button
+                    type="button"
+                    className={`modal-open-btn${isExpanded ? " is-expanded" : ""}`}
+                    style={{
+                      alignItems: "center",
+                      gap: 8,
+                      marginTop: 16,
+                      background: "#fff",
+                      border: "none",
+                      borderRadius: 8,
+                      padding: "10px 20px",
+                      color: "#000",
+                      fontSize: 14,
+                      fontWeight: 500,
+                      cursor: "pointer",
+                    }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setModalOpen(true);
+                    }}
+                  >
+                    {lastSlideModal.buttonText ?? "Ver más"}
+                  </button>
+                )}
               </div>
             </article>
           );
@@ -441,6 +529,159 @@ export default function Slider({
           />
         ))}
       </div>
+
+      {/* Modal de la última tarjeta */}
+      {lastSlideModal && modalOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="slider-modal-title"
+          onClick={() => setModalOpen(false)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,.5)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 24,
+            zIndex: 1000,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: "#fff",
+              borderRadius: 16,
+              overflow: "hidden",
+              width: "min(92vw, 44rem)",
+              maxHeight: "88vh",
+              overflowY: "auto",
+            }}
+          >
+            <div style={{ padding: "24px" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "flex-start",
+                  gap: 16,
+                  marginBottom: 16,
+                }}
+              >
+                {lastSlideModal.title && (
+                  <h3
+                    id="slider-modal-title"
+                    style={{
+                      margin: 0,
+                      fontSize: 22,
+                      fontWeight: 700,
+                      color: "#111",
+                    }}
+                  >
+                    {lastSlideModal.title}
+                  </h3>
+                )}
+                <button
+                  type="button"
+                  aria-label="Cerrar"
+                  onClick={() => setModalOpen(false)}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                    padding: 4,
+                    color: "#111",
+                    flexShrink: 0,
+                    marginLeft: "auto",
+                  }}
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  >
+                    <path d="M6 6l12 12M18 6L6 18" />
+                  </svg>
+                </button>
+              </div>
+
+              <div
+                style={{ display: "flex", flexDirection: "column", gap: 16 }}
+              >
+                {lastSlideModal.sections.map((section, si) => (
+                  <div
+                    key={si}
+                    style={{
+                      background: section.background,
+                      borderRadius: 16,
+                      padding: 20,
+                    }}
+                  >
+                    <div
+                      className={`modal-title-row${
+                        section.titleAlign === "right" ? " align-right" : ""
+                      }`}
+                    >
+                      <h4
+                        style={{
+                          margin: "0 0 16px",
+                          fontWeight: 700,
+                          fontSize: 15,
+                          color: "#111",
+                          textTransform: "uppercase",
+                          letterSpacing: ".04em",
+                        }}
+                      >
+                        {section.title}
+                      </h4>
+                    </div>
+
+                    <div
+                      className={`modal-section-row${
+                        section.imagePosition === "right" ? " reverse" : ""
+                      }`}
+                    >
+                      {section.imgSrc && (
+                        <img
+                          src={section.imgSrc}
+                          alt={section.imgAlt ?? ""}
+                          style={{ width: 150, height: "auto", flexShrink: 0 }}
+                        />
+                      )}
+                      <div
+                        style={{
+                          flex: "1 1 240px",
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 8,
+                        }}
+                      >
+                        {section.paragraphs.map((p, pi) => (
+                          <p
+                            key={pi}
+                            style={{
+                              margin: 0,
+                              fontSize: 12.5,
+                              lineHeight: 1.6,
+                              color: "#4b5563",
+                            }}
+                          >
+                            {p}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

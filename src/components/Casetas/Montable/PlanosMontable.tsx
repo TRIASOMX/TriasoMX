@@ -5,13 +5,15 @@ import caseta1 from "../../../assets/images/DrumMixers/caseta1.webp";
 import caseta2 from "../../../assets/images/DrumMixers/caseta2.webp";
 import tab3Main2 from "../../../assets/images/DrumMixers/tab3Main2.webp";
 import tab1Main from "../../../assets/images/DrumMixers/tab1Main.webp";
-import { useClipPathScrollTrigger } from "../../../components/lib/useClipPathScrollTrigger.tsx"
-
+import { useClipPathScrollTrigger } from "../../../components/lib/useClipPathScrollTrigger.tsx";
+import mainCaseta from "../../../assets/images/Casetas/VF.webp";
+import mainBlueP from "../../../assets/images/Casetas/BpVF.webp";
+import LateralCaseta from "../../../assets/images/Casetas/BpVL.webp";
 const cabinSize = [
   {
-    length: 434.71,
-    width: 222.93,
-    height: 309.34,
+    length: 1.8,
+    width: 1.95,
+    height: 3.1,
   },
 ];
 gsap.registerPlugin(ScrollTrigger);
@@ -30,7 +32,7 @@ const DrumMixPlanos = () => {
   const imgRef = useRef<HTMLImageElement>(null);
   const clipTargetRef = useRef<HTMLDivElement>(null);
   // valor de cm a pies
-  const cmToFeet = 0.0328084;
+  const cmToFeet = 3.28084;
   //SWITCH LOGIC
   const [unit, setUnit] = useState<"metric" | "imperial">("metric");
   //ESTADOS DE LOS DROPWDOWNS
@@ -51,11 +53,7 @@ const DrumMixPlanos = () => {
     C5_1: false,
     C5_2: false,
   });
-  const modelOptions = [
-
-    { id: 3, label: "140-180 Tph" },
-
-  ];
+  const modelOptions = [{ id: 3, label: "140-180 Tph" }];
 
   // Función para alternar unidades
   const toggleUnit = () => {
@@ -77,7 +75,6 @@ const DrumMixPlanos = () => {
     containerRef,
   });
 
-
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <div className="h-[80vh] relative flex items-center justify-center bg-bgMain w-full">
@@ -96,10 +93,10 @@ const DrumMixPlanos = () => {
           className="text-white font-bold
            flex items-center justify-center
             rounded will-change-transform transform-gpu
-             z-20 w-[250px] h-[600px]"
+             z-20 w-[350px] h-[450px]"
         >
           <img
-            src={tab1Main.src}
+            src={mainBlueP.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
             alt="Imagen de fondo"
             style={{
@@ -110,7 +107,7 @@ const DrumMixPlanos = () => {
           />
           <img
             ref={imgRef}
-            src={tab3Main2.src}
+            src={mainCaseta.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
             alt="Imagen superior"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
@@ -136,8 +133,9 @@ const DrumMixPlanos = () => {
             >
               {/* Fondo deslizante */}
               <div
-                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${unit === "metric" ? "translate-x-full" : ""
-                  }`}
+                className={`absolute top-0 left-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${
+                  unit === "metric" ? "translate-x-full" : ""
+                }`}
               ></div>
 
               {/* Texto sobrepuesto */}
@@ -160,9 +158,7 @@ const DrumMixPlanos = () => {
           <div id="options" ref={optionsRef} className="w-full">
             {/* móvil */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
-              <label className="text-white block text-center">
-                MODELS:
-              </label>
+              <label className="text-white block text-center">MODELS:</label>
               <div className="relative">
                 <select
                   value={activeTab}
@@ -195,9 +191,7 @@ const DrumMixPlanos = () => {
 
             {/* desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:pb-5">
-              <label className="text-white block text-center">
-                MODELS:
-              </label>
+              <label className="text-white block text-center">MODELS:</label>
             </div>
             <div className="hidden md:flex flex-wrap justify-center gap-5  mx-auto px-2">
               {modelOptions.map((option) => (
@@ -205,9 +199,10 @@ const DrumMixPlanos = () => {
                   key={option.id}
                   onClick={() => setActiveTab(option.id)}
                   className={`px-4 py-2 text-sm font-medium border rounded-full transition-all duration-300 w-[150px]
-                    ${activeTab === option.id
-                      ? "text-gray-900 bg-white border-white"
-                      : "text-white bg-transparent border-white"
+                    ${
+                      activeTab === option.id
+                        ? "text-gray-900 bg-white border-white"
+                        : "text-white bg-transparent border-white"
                     }`}
                 >
                   {option.label}
@@ -229,22 +224,284 @@ const DrumMixPlanos = () => {
               >
                 <div className="flex flex-col md:grid md:grid-cols-4 justify-center items-center w-full">
                   <div
-                    className="flex flex-col items-start justify-between gap-0 md:gap-4 w-full h-full order-2 md:order-1"
+                    className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full order-2 md:order-1"
                     id="column1"
                     ref={columnGrid1}
                   >
+                    <div className="w-full flex flex-col gap-4 text-white col-span-1">
+                      <div className="w-full flex border-b border-b-white">
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Resistencia y seguridad
+                        </h1>
+                        <button
+                          aria-label="See the capacity of the baghouse"
+                          className="block md:hidden"
+                          onClick={() =>
+                            setOpenSections((prev) => ({
+                              ...prev,
+                              C1_1: !prev.C1_1,
+                            }))
+                          }
+                        >
+                          <svg
+                            width="28px"
+                            height="28px"
+                            stroke-width="1.5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            color="#000000"
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_1 ? "rotate-180" : ""
+                            }`}
+                          >
+                            <path
+                              d="M6 9L12 15L18 9"
+                              stroke="#ffffff"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C1_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
+                      >
+                        <li>Muros tipo panel aislado.</li>
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Muros calibre 16
+                            </li>
+                          </ul>
+                        </li>
+
+                        <li>
+                          3" de aislamiento térmico con fibra de vidrio, que
+                          reduce la pérdida de energía.
+                        </li>
+                        <li>Ventanas panorámicas.</li>
+                        <li>
+                          Estructura reforzada para trabajo pesado a largo
+                          plazo.
+                        </li>
+                        <li>
+                          Componentes atornillados con recubrimiento
+                          anticorrosivo.
+                        </li>
+                        <li className="list-none">
+                          <ul className="ml-2 lg:ml-6">
+                            <li
+                              className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
+                            before:w-2 before:rounded-full before:border before:border-white 
+                            before:bg-transparent"
+                            >
+                              Tornillería galvanizada y pintura electrostática,
+                              de alta resistencia y excelente adherencia.
+                            </li>
+                          </ul>
+                        </li>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
+                      <div className="w-full flex justify-between border-b border-b-white">
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Medidas de la caseta de control
+                        </h1>
+                        <button
+                          aria-label="See more abour the Maintenance and Advantages"
+                          className="block md:hidden"
+                          onClick={() =>
+                            setOpenSections((prev) => ({
+                              ...prev,
+                              C1_2: !prev.C1_2,
+                            }))
+                          }
+                        >
+                          <svg
+                            width="28px"
+                            height="28px"
+                            stroke-width="1.5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            color="#000000"
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C1_2 ? "rotate-180" : ""
+                            }`}
+                          >
+                            <path
+                              d="M6 9L12 15L18 9"
+                              stroke="#ffffff"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden w-full ${
+                          openSections.C1_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
+                      >
+                        <div className="flex justify-between w-full">
+                          <h1>Length:</h1>
+                          <p>
+                            {unit === "metric"
+                              ? `${cabinSize[0].length?.toFixed(1) ?? ""} m`
+                              : `${(
+                                  (cabinSize[0].length ?? 0) * cmToFeet
+                                ).toFixed(1)} ft`}
+                          </p>
+                        </div>
+                        <div className="flex justify-between">
+                          <h1>Width:</h1>
+                          <p>
+                            {unit === "metric"
+                              ? `${cabinSize[0].width?.toFixed(1) ?? ""} m`
+                              : `${(
+                                  (cabinSize[0].width ?? 0) * cmToFeet
+                                ).toFixed(1)} ft`}
+                          </p>
+                        </div>
+                        <div className="flex justify-between">
+                          <h1>Height:</h1>
+                          <p>
+                            {unit === "metric"
+                              ? `${cabinSize[0].height?.toFixed(1) ?? ""} m`
+                              : `${(
+                                  (cabinSize[0].height ?? 0) * cmToFeet
+                                ).toFixed(1)} ft`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div className="col-span-2 flex items-start justify-center w-full min-h-[600px] order-1 md:order-2"></div>
                   <div
-                    className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10"
+                    className="flex flex-col items-start justify-start h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10"
                     id="column2"
                     ref={columnGrid2}
                   >
-
+                    <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
+                      <div className="w-full flex justify-between border-b border-b-white">
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          PORTABILIDAD
+                        </h1>
+                        <button
+                          aria-label="See more about the control and the operation of the system"
+                          className="block md:hidden"
+                          onClick={() =>
+                            setOpenSections((prev) => ({
+                              ...prev,
+                              C2_1: !prev.C2_1,
+                            }))
+                          }
+                        >
+                          <svg
+                            width="28px"
+                            height="28px"
+                            stroke-width="1.5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            color="#000000"
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_1 ? "rotate-180" : ""
+                            }`}
+                          >
+                            <path
+                              d="M6 9L12 15L18 9"
+                              stroke="#ffffff"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <ul
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
+                      >
+                        <li>4 puntos de izaje.</li>
+                        <li>
+                          Puntos de enganche para cables de grúa o payloader.
+                        </li>
+                        <li>
+                          Puntos de inserción de horquillas de montacargas.
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="flex flex-col items-start justify-center gap-4 text-white">
+                      <div className="w-full flex justify-between border-b border-b-white">
+                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          Componentes y sistema eléctrico
+                        </h1>
+                        <button
+                          aria-label="See more about the cleaning operation"
+                          className="block md:hidden"
+                          onClick={() =>
+                            setOpenSections((prev) => ({
+                              ...prev,
+                              C2_2: !prev.C2_2,
+                            }))
+                          }
+                        >
+                          <svg
+                            width="28px"
+                            height="28px"
+                            stroke-width="1.5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            color="#000000"
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C2_2 ? "rotate-180" : ""
+                            }`}
+                          >
+                            <path
+                              d="M6 9L12 15L18 9"
+                              stroke="#ffffff"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <ul
+                        className={`transition-all duration-500 md:mb-0 overflow-hidden ml-6 list-disc list-inside ${
+                          openSections.C2_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
+                      >
+                        <li>
+                          Instalación eléctrica 110 V con iluminación interior.
+                        </li>
+                        <li>Aire acondicionado de 1.5 toneladas.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-center w-full mt-10 gap-0 md:gap-10">
-                  <div className="col-span-2 overflow-x-auto">
+                <div className="flex justify-center items-center w-full mt-10 gap-0 md:gap-10">
+                  <div className="w-full overflow-x-auto">
                     <div className="flex justify-start md:justify-center items-end my-10">
                       <div className="flex flex-col items-center justify-center">
                         <div className="flex items-center justify-center w-full h-[60px]">
@@ -272,10 +529,10 @@ const DrumMixPlanos = () => {
                           </div>
                           <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                             {unit === "metric"
-                              ? `${cabinSize[0].width?.toFixed(1) ?? ""} cm`
+                              ? `${cabinSize[0].width?.toFixed(1) ?? ""} m`
                               : `${(
-                                (cabinSize[0].width ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                                  (cabinSize[0].width ?? 0) * cmToFeet
+                                ).toFixed(1)} ft`}
                           </p>
                           <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                             <div className="bg-white h-[1px] w-full relative">
@@ -302,7 +559,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="w-[272px] h-[353px] flex items-center justify-center">
                           <img
-                            src={caseta1.src}
+                            src={mainBlueP.src}
                             alt=""
                             className="max-w-full max-h-full object-contain"
                           />
@@ -334,10 +591,10 @@ const DrumMixPlanos = () => {
                         <div className="my-3">
                           <p className="text-white text-lg">
                             {unit === "metric"
-                              ? `${cabinSize[0].height?.toFixed(1) ?? ""} cm`
+                              ? `${cabinSize[0].height?.toFixed(1) ?? ""} m`
                               : `${(
-                                (cabinSize[0].height ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                                  (cabinSize[0].height ?? 0) * cmToFeet
+                                ).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="border-dotted border-b border-b-white w-full h-full flex items-center justify-center">
@@ -391,8 +648,8 @@ const DrumMixPlanos = () => {
                             {unit === "metric"
                               ? `${cabinSize[0].length?.toFixed(1) ?? ""} cm`
                               : `${(
-                                (cabinSize[0].length ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
+                                  (cabinSize[0].length ?? 0) * cmToFeet
+                                ).toFixed(1)} ft`}
                           </p>
                           <div className="border-dotted border-r border-r-white h-full w-full flex items-center justify-center">
                             <div className="bg-white h-[1px] w-full relative">
@@ -417,9 +674,9 @@ const DrumMixPlanos = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="h-[353px] w-[497px] flex justify-center items-center">
+                        <div className="h-[353px] w-[300px] flex justify-center items-center">
                           <img
-                            src={caseta2.src}
+                            src={LateralCaseta.src}
                             alt=""
                             className="max-w-full max-h-full object-contain"
                           />
@@ -427,146 +684,9 @@ const DrumMixPlanos = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-span-1 w-full flex flex-col items-start justify-center md:gap-10">
-                    <div className="text-white font-normal col-span-1 w-full flex flex-col gap-4">
-                      <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          CONTROL CABIN DIMENSIONS
-                        </h1>
-                        <button
-                          aria-label="See more about the control cabin dimensions"
-                          className="block md:hidden"
-                          onClick={() =>
-                            setOpenSections((prev) => ({
-                              ...prev,
-                              C5_1: !prev.C5_1,
-                            }))
-                          }
-                        >
-                          <svg
-                            width="28px"
-                            height="28px"
-                            stroke-width="1.5"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C5_1 ? "rotate-180" : ""
-                              }`}
-                          >
-                            <path
-                              d="M6 9L12 15L18 9"
-                              stroke="#ffffff"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
-                      <div
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C5_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
-                      >
-                        <div className="flex justify-between">
-                          <h1>Length:</h1>
-                          <p>
-                            {unit === "metric"
-                              ? `${cabinSize[0].length?.toFixed(1) ?? ""} cm`
-                              : `${(
-                                (cabinSize[0].length ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
-                          </p>
-                        </div>
-                        <div className="flex justify-between">
-                          <h1>Width:</h1>
-                          <p>
-                            {unit === "metric"
-                              ? `${cabinSize[0].width?.toFixed(1) ?? ""} cm`
-                              : `${(
-                                (cabinSize[0].width ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
-                          </p>
-                        </div>
-                        <div className="flex justify-between">
-                          <h1>Height:</h1>
-                          <p>
-                            {unit === "metric"
-                              ? `${cabinSize[0].height?.toFixed(1) ?? ""} cm`
-                              : `${(
-                                (cabinSize[0].height ?? 0) * cmToFeet
-                              ).toFixed(1)} ft`}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
-                      <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                          CONTROL CABIN
-                        </h1>
-                        <button
-                          aria-label="See more about the control cabin"
-                          className="block md:hidden"
-                          onClick={() =>
-                            setOpenSections((prev) => ({
-                              ...prev,
-                              C5_2: !prev.C5_2,
-                            }))
-                          }
-                        >
-                          <svg
-                            width="28px"
-                            height="28px"
-                            stroke-width="1.5"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            color="#000000"
-                            className={`transition-transform duration-300 transform ${openSections.C5_2 ? "rotate-180" : ""
-                              }`}
-                          >
-                            <path
-                              d="M6 9L12 15L18 9"
-                              stroke="#ffffff"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
-                      <ul
-                        className={`transition-all duration-500 md:mb-0 overflow-hidden text-sm lg:text-base ml-2 lg:ml-6 list-disc list-inside ${openSections.C5_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                          } md:max-h-full md:opacity-100 md:block`}
-                      >
-                        <li>7' x 10' control cabin, towable.</li>
-                        <li>
-                          Portable, with hitch, 3,000 lb axle, two 8-14.5 tires,
-                          and electric brakes.
-                        </li>
-                        <li>Insulated panel-style walls.</li>
-                        <li>
-                          110-volt electrical installation with interior
-                          lighting.
-                        </li>
-                        <li>Panoramic windows.</li>
-                        <li>1.5-ton air conditioning unit.</li>
-                        <li>Standard road lights: brake and turn signals.</li>
-                        <li>
-                          Jack stand for parking and hitch height adjustment.
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
                 </div>
               </div>
             )}
-
           </div>
         </div>
       </div>

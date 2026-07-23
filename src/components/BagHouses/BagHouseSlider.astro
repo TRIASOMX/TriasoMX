@@ -1,118 +1,64 @@
 ---
-import ProductFeatureCards, {
-  type FeatureCard,
-} from "../../components/unitComponents/ProductFeaturedCard.astro";
-import { Image } from "astro:assets";
-import venturiSys from "../../assets/images/BagHouses/venturiSys.webp";
-import ratioSys from "../../assets/images/BagHouses/ratioSys.webp";
 import img1 from "../../assets/images/BagHouses/BHoppers.webp";
 import img2 from "../../assets/images/BagHouses/finesReturn.webp";
 import img3 from "../../assets/images/BagHouses/BoquillasVL.webp";
+import venturiSys from "../../assets/images/BagHouses/venturiSys.webp";
+import ratioSys from "../../assets/images/BagHouses/ratioSys.webp";
+import Slider from "../AsphaltStorage/Slider";
 
-const cards: FeatureCard[] = [
+const cards = [
   {
-    image: img1,
-    imageClass: "object-fit h-full",
+    // Slider expects image as string (url). Use imported image src.
+    image: img1.src,
     title: "Tolva de finos",
-    description:
-      "Posicionadas directamente debajo de la casa de bolsas, estas tolvas permiten la recolección controlada de finos, que pueden almacenarse temporalmente, descargarse o reincorporarse a la mezcla asfáltica según la configuración de la planta. Una cámara de separación reduce la velocidad del aire para que más material caiga a la tolva, mientras que los deflectores internos distribuyen el aire uniformemente y protegen las mangas.",
+    text: "Posicionadas directamente debajo de la casa de bolsas, estas tolvas permiten la recolección controlada de finos, que pueden almacenarse temporalmente, descargarse o reincorporarse a la mezcla asfáltica según la configuración de la planta. Una cámara de separación reduce la velocidad del aire para que más material caiga a la tolva, mientras que los deflectores internos distribuyen el aire uniformemente y protegen las mangas.",
   },
   {
-    image: img2,
-    imageClass: "object-cover h-full",
+    image: img2.src,
     title: "Sistema de retorno de finos",
-    description:
-      "Una vez que se recolectan los finos en las tolvas, una serie de tornillos transportadores reintegran al tambor mezclador, justo donde se inyecta el asfalto líquido, asegurando que los finos se integren a la mezcla. Evitando que vuelvan a dispersarse en el aire, reduciendo la pérdida de material y mejorando la calidad y durabilidad de la mezcla asfáltica. Este proceso optimiza el uso de recursos, mejora el desempeño ambiental y reduce costos de operación.",
+    text: "Una vez que se recolectan los finos en las tolvas, una serie de tornillos transportadores reintegran al tambor mezclador, justo donde se inyecta el asfalto líquido, asegurando que los finos se integren a la mezcla. Evitando que vuelvan a dispersarse en el aire, reduciendo la pérdida de material y mejorando la calidad y durabilidad de la mezcla asfáltica. Este proceso optimiza el uso de recursos, mejora el desempeño ambiental y reduce costos de operación.",
   },
   {
-    image: img3,
-    imageClass: "object-cover h-full",
+    image: img3.src,
     title: "Boquillas Triaso supersónicas",
-    description:
-      "Nuestras boquillas supersónicas se fabrican internamente mediante impresión 3D con aleaciones de carbono, ofreciendo alta resistencia a impactos, temperaturas elevadas y vibraciones. Esto asegura una captación altamente eficiente de partículas finas en el filtro de mangas.",
-    modalTrigger: true,
-    modalButtonLabel: "Todos los detalles técnicos",
+    text: "Nuestras boquillas supersónicas se fabrican internamente mediante impresión 3D con aleaciones de carbono, ofreciendo alta resistencia a impactos, temperaturas elevadas y vibraciones. Esto asegura una captación altamente eficiente de partículas finas en el filtro de mangas.",
   },
 ];
+
+const detallesTecnicos = {
+  buttonText: "Todos los detalles técnicos",
+  sections: [
+    {
+      title: "Sistema venturi típico",
+      background: "#fffaea",
+      imgSrc: venturiSys.src,
+      imgAlt: "Sistema Venturi",
+      paragraphs: [
+        "En los sistemas de filtración con venturi, el diseño del flujo de aire introduce varias ineficiencias que afectan tanto la captación de polvo como la durabilidad del sistema. El flujo de alta velocidad al salir del venturi genera una zona de baja presión en la parte superior de la manga, atrayendo el polvo hacia esa área. Esto provoca una acumulación desigual y reduce la capacidad de filtración. Con el tiempo, las partículas finas se incrustan profundamente en la tela, haciendo menos efectiva la limpieza.",
+        "Otro problema es la ubicación del pulso de aire de limpieza cerca de la boca de la manga. Esta posición limita su capacidad de inducir aire adicional que ayudaría a remover el polvo. Además, el venturi angosto acelera el aire filtrado hacia el plenum, generando un flujo ascendente que se opone al pulso de limpieza. Como resultado, se requieren pulsos más intensos, aumentando el consumo de energía y el esfuerzo mecánico sobre las mangas, lo que acelera su desgaste y reduce su vida útil.",
+      ],
+    },
+    {
+      title: "Sistema supersónico Triaso",
+      background: "#bfbfbf",
+      imgSrc: ratioSys.src,
+      imgAlt: "Sistema Triaso",
+      imagePosition: "right" as const,
+      titleAlign: "right" as const,
+      paragraphs: [
+        "Nuestro nuevo modelo de casa de bolsas mejora la captura de finos al rediseñar completamente el flujo de aire. En lugar de utilizar un sistema tradicional de venturi, usamos una boquilla supersónica convergente-divergente para generar el chorro de limpieza. Induciendo una mayor cantidad de aire secundario, aumentando la eficiencia de limpieza. Además, al eliminar el venturi se reduce la velocidad en la entrada de la manga, evitando la presión negativa que normalmente provoca acumulación de polvo en la parte superior.",
+        "Al aprovechar completamente la boca de la manga, el chorro de aire se expande de forma uniforme, reduciendo el riesgo de desprendimientos bruscos finos en la manga. Inflando la manga de manera más uniforme, logrando un ciclo de limpieza más efectivo y menor desgaste del material. Como resultado, el modelo Triaso requiere solo la mitad del área de filtración en comparación con sistemas tradicionales con venturi, permitiendo un alto desempeño en un diseño más compacto.",
+      ],
+    },
+  ],
+};
 ---
 
-<ProductFeatureCards cards={cards}>
-  <Fragment slot="modal">
-    <div class="w-full flex flex-col gap-2">
-      <div class="p-6 bg-[#fffaea] rounded-2xl">
-        <h2
-          class="font-bold text-lg text-gray-900 uppercase tracking-wide mb-4"
-        >
-          Sistema venturi típico
-        </h2>
-        <div
-          class="flex flex-col lg:flex-row justify-center items-center gap-3"
-        >
-          <Image
-            src={venturiSys}
-            alt="Sistema Venturi"
-            class="w-[150px] h-auto"
-          />
-          <div class="space-y-2 lg:w-full lg:max-w-7xl">
-            <p class="text-gray-600 text-xs leading-relaxed">
-              En los sistemas de filtración con venturi, el diseño del flujo de
-              aire introduce varias ineficiencias que afectan tanto la captación
-              de polvo como la durabilidad del sistema. El flujo de alta
-              velocidad al salir del venturi genera una zona de baja presión en
-              la parte superior de la manga, atrayendo el polvo hacia esa área.
-              Esto provoca una acumulación desigual y reduce la capacidad de
-              filtración. Con el tiempo, las partículas finas se incrustan
-              profundamente en la tela, haciendo menos efectiva la limpieza.
-            </p>
-            <p class="text-gray-600 text-xs leading-relaxed">
-              Otro problema es la ubicación del pulso de aire de limpieza cerca
-              de la boca de la manga. Esta posición limita su capacidad de
-              inducir aire adicional que ayudaría a remover el polvo. Además, el
-              venturi angosto acelera el aire filtrado hacia el plenum,
-              generando un flujo ascendente que se opone al pulso de limpieza.
-              Como resultado, se requieren pulsos más intensos, aumentando el
-              consumo de energía y el esfuerzo mecánico sobre las mangas, lo que
-              acelera su desgaste y reduce su vida útil.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="p-6 bg-[#bfbfbf] rounded-2xl">
-        <div class="flex lg:justify-end lg:items-end">
-          <h2
-            class="font-bold text-lg text-gray-900 uppercase tracking-wide mb-4"
-          >
-            Sistema supersónico Triaso
-          </h2>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-3">
-          <div class="space-y-2 lg:w-full lg:max-w-7xl">
-            <p class="text-gray-600 text-xs leading-relaxed">
-              Nuestro nuevo modelo de casa de bolsas mejora la captura de finos
-              al rediseñar completamente el flujo de aire. En lugar de utilizar
-              un sistema tradicional de venturi, usamos una boquilla supersónica
-              convergente-divergente para generar el chorro de limpieza.
-              Induciendo una mayor cantidad de aire secundario, aumentando la
-              eficiencia de limpieza. Además, al eliminar el venturi se reduce
-              la velocidad en la entrada de la manga, evitando la presión
-              negativa que normalmente provoca acumulación de polvo en la parte
-              superior.
-            </p>
-            <p class="text-gray-600 text-xs leading-relaxed">
-              Al aprovechar completamente la boca de la manga, el chorro de aire
-              se expande de forma uniforme, reduciendo el riesgo de
-              desprendimientos bruscos finos en la manga. Inflando la manga de
-              manera más uniforme, logrando un ciclo de limpieza más efectivo y
-              menor desgaste del material. Como resultado, el modelo Triaso
-              requiere solo la mitad del área de filtración en comparación con
-              sistemas tradicionales con venturi, permitiendo un alto desempeño
-              en un diseño más compacto.
-            </p>
-          </div>
-          <Image src={ratioSys} alt="Sistema Triaso" class="w-[150px] h-auto" />
-        </div>
-      </div>
-    </div>
-  </Fragment>
-</ProductFeatureCards>
+<section class="bg-[#393939]">
+  <Slider
+    slides={cards}
+    dark={false}
+    lastSlideModal={detallesTecnicos}
+    client:only
+  />
+</section>

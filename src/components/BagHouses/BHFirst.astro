@@ -1,12 +1,30 @@
 ---
-import BHG3 from "../../assets/images/BagHouses/heroImage2.webp";
-import HeroComponentV1 from "../unitComponents/HeroComponentV1.astro";
+import BHG3 from "../../assets/images/BagHouses/GallerySlider/BHG4.webp";
+import HeroComponentV2 from "../unitComponents/HeroComponentV2.astro";
 ---
 
 <section class="">
-  <HeroComponentV1
+  <HeroComponentV2
     title="CASA DE BOLSAS"
-    text="Las casas de bolsas Triaso® están diseñadas para una captura total de finos y control total de humos contaminantes. Mediante tecnología ‘pulse-jet’, estos sistemas integrados y compactos están diseñados para lograr la máxima eficiencia de filtración, capturando partículas finas, asegurando el cumplimiento de las normativas ambientales y mejorando la seguridad en el área de trabajo, con una eficiencia de filtración de hasta 99.99%. Pensadas para plantas de asfalto y procesamiento de agregados, mejorando la calidad de la mezcla al permitir la reincorporación controlada de finos, y ayudan a una operación más sustentable al reducir el polvo y las emisiones."
+    subTitle="BAGHOUSES"
     heroImage={BHG3.src}
-  />
+    bgColor="#1e1e1e"
+    textColor="white"
+    titleColor="white"
+  >
+    <p
+      class="font-normal text-sm md:text-base text-white max-w-[150ch] self-center"
+    >
+      Las casas de bolsas Triaso® están diseñadas para una captura total de
+      finos y control total de humos contaminantes. Mediante tecnología
+      ‘pulse-jet’, estos sistemas integrados y compactos están diseñados para
+      lograr la máxima eficiencia de filtración, capturando partículas finas,
+      asegurando el cumplimiento de las normativas ambientales y mejorando la
+      seguridad en el área de trabajo, con una eficiencia de filtración de hasta
+      99.99%. <br /><br /> Pensadas para plantas de asfalto y procesamiento de agregados,
+      mejorando la calidad de la mezcla al permitir la reincorporación controlada
+      de finos, y ayudan a una operación más sustentable al reducir el polvo y las
+      emisiones.
+    </p>
+  </HeroComponentV2>
 </section>
