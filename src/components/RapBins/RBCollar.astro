@@ -17,6 +17,10 @@ import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 import OSHand from "../../assets/images/OSHand.webp";
 import Slider from "../AsphaltStorage/Slider";
 import CotizacionBtn from "../unitComponents/cotizacionBtn.astro";
+import consola from "../../assets/images/RapBins/Consola.webp";
+import quijada from "../../assets/images/RapBins/quijada.webp";
+import criba from "../../assets/images/RapBins/criba.webp";
+import transportador from "../../assets/images/RapBins/transportador.webp";
 
 const slides = [
   {
@@ -43,19 +47,19 @@ const slides2 = [
     id: 1,
     title: "Cribado de RAP",
     text: "El cribado de RAP elimina material sobredimensionado y contaminantes antes del proceso. Se realiza mediante una criba vibratoria integrada al sistema de RAP. Independiente o integrada directamente en la tolva de RAP, sin necesidad de un transportador adicional.",
-    image: TaqAire.src,
+    image: criba.src,
   },
   {
     id: 2,
     title: "Trituradores de RAP",
     text: "Los trituradores de RAP reducen material sobredimensionado. Se instalan en la descarga de la criba de RAP y pueden operar en un sistema de recirculación cerrada para un control preciso del tamaño.",
-    image: Sopladores.src,
+    image: quijada.src,
   },
   {
     id: 3,
     title: "Transportadores de RAP",
     text: "Los transportadores de RAP aseguran un flujo continuo y controlado del material dentro del sistema. Están diseñados para trabajo pesado, con estructura reforzada y velocidad adecuada para mantener estabilidad en la alimentación y precisión en el proceso.",
-    image: rap.src,
+    image: transportador.src,
   },
 ];
 ---
@@ -288,9 +292,9 @@ const slides2 = [
   <!-- OS sección -->
   <section class="bg-white overflow-visible">
     <div class="max-w-7xl mx-auto lg:px-0">
-      <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 items-center gap-12">
         <!-- Texto -->
-        <div class="text-white max-w-xl px-8">
+        <div class="text-white w-full px-8 col-span-1 md:col-span-2">
           <h1
             class="text-2xl md:text-3xl font-semibold my-6 bg-gradient-to-r from-[#f8ad00] via-[#dc363a] to-[#3992ff] bg-clip-text text-transparent"
           >
@@ -317,7 +321,7 @@ const slides2 = [
         </div>
 
         <!-- Imagen -->
-        <div class="flex justify-end relative">
+        <div class="flex justify-end relative col-span-1 md:col-span-1">
           <Image
             src={OSHand}
             alt="Triaso OS"
@@ -338,7 +342,7 @@ const slides2 = [
       >
         <div class="pt-5">
           <Image
-            src="https://placehold.co/600x400/png"
+            src={consola}
             alt="Placeholder"
             width={600}
             height={400}

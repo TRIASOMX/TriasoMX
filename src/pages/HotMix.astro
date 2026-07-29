@@ -61,7 +61,9 @@ const iconos = [
 
 <Layout title="Hot-Mix Storage Silos">
   <MainSection />
-  <HMOdometer client:only />
+  <section class="w-full flex justify-center">
+    <HMOdometer client:only />
+  </section>
   <TabsHot />
   <div class="py-6 md:py-20">
     <ItemsSlider client:load images={iconos} />

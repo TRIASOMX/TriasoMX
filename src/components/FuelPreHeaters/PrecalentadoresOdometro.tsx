@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 import heroImg from "../../assets/images/FuelPreHeaters/FPH1.webp";
+import FillLinkButton from "../unitComponents/FillLinkButton";
 
 const PrecalentadoresOdometro = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -49,10 +50,13 @@ const PrecalentadoresOdometro = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="max-w-7xl px-8 mx-auto my-10 md:my-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
-        <div className="flex flex-col items-start justify-center mx-auto py-10 lg:py-0 lg:mx-0 gap-10 md:gap-20">
-          <div className="flex flex-col items-center lg:items-start justify-center mx-auto lg:mx-0">
+    <div
+      ref={sectionRef}
+      className="max-w-[1500px] px-8 mx-auto my-10 md:my-20"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
+        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
+          <div className="flex flex-col items-center lg:items-start justify-center w-full">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <span className="w-[3ch] flex flex-row">
                 <Odometer value={value} format="(,ddd)" duration={2000} />
@@ -63,8 +67,8 @@ const PrecalentadoresOdometro = () => {
             <p className="text-[#4F4F4F]">Calentamiento de cualquier cadual</p>
           </div>
 
-          <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6ch] lg:w-[6ch] md:w-[6ch]">
+          <div className="flex flex-col items-start justify-center w-full">
+            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline">
               <Odometer value={value1} format="(,ddd).dd" duration={2000} />
               <p className="text-sm font-normal ml-3">Litros</p>
             </div>
@@ -73,8 +77,8 @@ const PrecalentadoresOdometro = () => {
             </p>
           </div>
 
-          <div className="flex flex-col items-center justify-center mx-auto lg:mx-0 md:mx-0">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6.7ch] lg:w-[8ch] md:w-[6.4ch]">
+          <div className="flex flex-col items-start justify-center w-full">
+            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline">
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Calibre malla</p>
             </div>
@@ -82,24 +86,16 @@ const PrecalentadoresOdometro = () => {
               Tamaño de filtrado de impurezas en combustible
             </p>
           </div>
+          <FillLinkButton href="#fuelPreHeaters" />
         </div>
 
-        <div className="flex flex-col items-center justify-center py-10 space-y-5">
+        <div className="flex flex-col items-center justify-center col-span-1 md:col-span-4">
           <div className="lg:w-3/5">
             <img
               src={heroImg.src}
               alt="Baghouse Odometer"
               className="rounded-lg"
             />
-          </div>
-          <div className="">
-            <a
-              href=""
-              className="group relative inline-flex items-center justify-center px-4 py-2 rounded-xl border border-black text-black font-medium overflow-hidden transition-all duration-300 ease-out hover:text-white  hover:shadow-lg"
-            >
-              <span className="absolute inset-0 bg-black translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0" />
-              <span className="relative z-10">Todos los detalles técnicos</span>
-            </a>
           </div>
         </div>
       </div>

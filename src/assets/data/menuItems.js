@@ -8,53 +8,52 @@ export const menuItems = [
         url: "/AsphaltPlant",
         children: [
           {
-            title: "MEZCLADORAS DE TAMBOR",
+            title: "TAMBORES MEZCLADORES",
             url: "/DrumMixers",
             children: [
               {
                 title: "CONTRAFLUJO",
                 children: [
                   {
-                    title: "Desamaq",
-                    url: "/TamborMezcla/Contraflujo/ContraDesamaq"
+                    title: "DESAMAQ",
+                    url: "/TamborMezcla/Contraflujo/ContraDesamaq",
                   },
                   {
-                    title: "Plus",
-                    url: "/TamborMezcla/Contraflujo/ContraPlus"
+                    title: "PLUS",
+                    url: "/TamborMezcla/Contraflujo/ContraPlus",
                   },
                   {
-                    title: "Pro+",
-                    url: "/DrumMixers"
-                  }
-                ]
+                    title: "PRO+",
+                    url: "/DrumMixers",
+                  },
+                ],
               },
               {
                 title: "FLUJO PARALELO",
                 children: [
                   {
-                    title: "Desamaq",
-                    url: "/TamborMezcla/Paralelo/ParaleloDesamaq"
+                    title: "DESAMAQ",
+                    url: "/TamborMezcla/Paralelo/ParaleloDesamaq",
                   },
                   {
-                    title: "Plus",
-                    url: "/TamborMezcla/Paralelo/ParaleloPlus"
+                    title: "PLUS",
+                    url: "/TamborMezcla/Paralelo/ParaleloPlus",
                   },
                   {
-                    title: "Pro+",
-                    url: "/TamborMezcla/Paralelo/ParaleloPro"
-                  }
-                ]
-              }
-            ]
+                    title: "PRO+",
+                    url: "/TamborMezcla/Paralelo/ParaleloPro",
+                  },
+                ],
+              },
+            ],
           },
           {
-            title: "CASAS DE BOLSAS ACOPLABLES",
+            title: "CASAS DE BOLSAS BAGHOUSES",
             url: "/BagHouses",
           },
           {
             title: "TANQUES DE ASFALTO",
             url: "/AsphaltStorage",
-
           },
           {
             title: "TOLVAS",
@@ -71,8 +70,8 @@ export const menuItems = [
               {
                 title: "ALIMENTADORES DE ADITIVOS EN POLVO",
                 url: "/PowderAd",
-              }
-            ]
+              },
+            ],
           },
           {
             title: "SISTEMAS DE CALENTAMIENTO",
@@ -89,23 +88,23 @@ export const menuItems = [
               {
                 title: "CALDERAS",
                 url: "/OilHeaters",
-              }
-            ]
+              },
+            ],
           },
           {
-            title: "HOT-MIX STORAGE SILOS",
-            url: "/HotMix"
+            title: "SILOS DE MEZCLA ASFÁLTICA",
+            url: "/HotMix",
           },
           {
-            title: "MEZCLADORAS EN FRÍO",
+            title: "PLANTAS DE MEZCLADO EN FRIÓ",
             url: "/ColdMix",
           },
           {
-            title: "PLANTAS DE ASFALTO DE 10 TPH INTEGRALES",
+            title: "PLANTAS DE ASFALTO DE 10 TPH INTEGRALES DE CONTRAFLUJO",
             url: "/IntegralAphaltPlant",
           },
           {
-            title: "CASETAS",
+            title: "CASETA DE CONTROL",
             children: [
               {
                 title: "CASETAS MONTABLES",
@@ -115,15 +114,14 @@ export const menuItems = [
                 title: "CASETAS REMOLCABLES",
                 url: "/Casetas/CasetasRemolcables",
               },
-            ]
+            ],
           },
 
           {
             title: "INCORPORADORES DE HULE",
             url: "/IncorporadoresHule",
-
           },
-        ]
+        ],
       },
       {
         title: "TRITURADORAS",
@@ -164,16 +162,16 @@ export const menuItems = [
               {
                 title: "VIBRATORY FEEDERS",
                 url: "/",
-              }
-            ]
+              },
+            ],
           },
           {
             title: "VIBRATORY SCREENS",
             url: "/VibratingScreens",
-          }
-        ]
+          },
+        ],
       },
-    ]
+    ],
   },
   {
     title: "SERVICIO",
@@ -194,8 +192,8 @@ export const menuItems = [
       {
         title: "REHABILITACIÓN",
         url: "/Rehabilitation",
-      }
-    ]
+      },
+    ],
   },
   {
     title: "ACERCA DE",
@@ -245,7 +243,7 @@ export const menuItems = [
           //   title : "ROCK CRUSHERS",
           //   url : "/",
           // }
-        ]
+        ],
       },
 
       {
@@ -255,9 +253,9 @@ export const menuItems = [
 
       {
         title: "EXPOS",
-        url: "/Expo"
+        url: "/Expo",
       },
-    ]
+    ],
   },
   {
     title: "AUTOMATIZACIÓN",
@@ -265,9 +263,9 @@ export const menuItems = [
     children: [
       {
         title: "TRIASO RELIEF",
-        url: "/Relief"
-      }
-    ]
+        url: "/Relief",
+      },
+    ],
   },
   // {
   //   title : "VIDEOS",
@@ -276,5 +274,5 @@ export const menuItems = [
   {
     title: "CONTACTO",
     url: "/Contact",
-  }
-]
+  },
+];

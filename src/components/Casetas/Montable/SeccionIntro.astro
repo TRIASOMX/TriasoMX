@@ -1,19 +1,33 @@
 ---
 import CasetaHero from "../../../assets/images/Casetas/montable.webp";
-import HeroComponentV1 from "../../unitComponents/HeroComponentV1.astro";
+import HeroComponentV2 from "../../unitComponents/HeroComponentV2.astro";
 import OdometerMontable from "./OdometerMontable.tsx";
 ---
 
 <!-- Hero -->
 <section>
-  <HeroComponentV1
+  <HeroComponentV2
     title="Caseta Montable"
+    titleColor="white"
+    textColor="white"
+    bgColor="#1e1e1e"
     text="Todos los procesos son controlados desde una consola de control montable, diseñada para reubicación y transporte ligero. Para que su personal opere el equipo, con total comodidad; de forma manual o automática con nuestro más avanzado sistema de control Traso Relief™. Por lo que garantizamos su gran productividad, calidad de mezcla y operación libre de problemas."
     heroImage={CasetaHero.src}
     btns={true}
-  />
+  >
+    <div class="flex flex-row justify-center items-center gap-10">
+      <a
+        class="font-thing underline text-white text-xl lg:text-2xl"
+        href="/Casetas/CasetaMontable">Montable</a
+      >
+      <a
+        class="font-bold text-white text-xl lg:text-2xl"
+        href="/Casetas/CasetasRemolcables">Remolcable</a
+      >
+    </div>
+  </HeroComponentV2>
 </section>
 
-<section>
+<section class="w-full flex justify-center">
   <OdometerMontable client:only />
 </section>

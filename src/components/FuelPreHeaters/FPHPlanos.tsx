@@ -836,22 +836,20 @@ const FPHPlanos = () => {
                               {unit === "metric"
                                 ? `${
                                     toggleConfig[0].length?.toFixed(1) ?? ""
-                                  } ft`
+                                  } m`
                                 : `${(
                                     (toggleConfig[0].length ?? 0) * cmToFeet
-                                  ).toFixed(1)} m`}
+                                  ).toFixed(1)} ft`}
                             </p>
                           </div>
                           <div className="flex justify-between">
                             <h1>Ancho:</h1>
                             <p>
                               {unit === "metric"
-                                ? `${
-                                    toggleConfig[0].width?.toFixed(1) ?? ""
-                                  } ft`
+                                ? `${toggleConfig[0].width?.toFixed(1) ?? ""} m`
                                 : `${(
                                     (toggleConfig[0].width ?? 0) * cmToFeet
-                                  ).toFixed(1)} m`}
+                                  ).toFixed(1)} ft`}
                             </p>
                           </div>
                           <div className="flex justify-between">
@@ -860,10 +858,10 @@ const FPHPlanos = () => {
                               {unit === "metric"
                                 ? `${
                                     toggleConfig[0].height?.toFixed(1) ?? ""
-                                  } ft`
+                                  } m`
                                 : `${(
                                     (toggleConfig[0].height ?? 0) * cmToFeet
-                                  ).toFixed(1)} m`}
+                                  ).toFixed(1)} ft`}
                             </p>
                           </div>
                         </div>

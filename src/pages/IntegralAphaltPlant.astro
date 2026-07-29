@@ -8,11 +8,9 @@ import PlanoSection from "../components/IntegralAsphalt/PlanoSection";
 import SliderHero from "../components/IntegralAsphalt/SliderHero";
 import OdometerSection from "../components/IntegralAsphalt/OdometerSection";
 import CardSectionResponsive from "../components/unitComponents/CardSectionResponsive.astro";
-
 import hero2 from "../../public/Gallery/tolva3.webp";
-
-import HeroComponentV1 from "../components/unitComponents/HeroComponentV1.astro";
 import Slider from "../components/AsphaltStorage/Slider";
+import HeroComponentV2 from "../components/unitComponents/HeroComponentV2.astro";
 
 const images2 = [
   {
@@ -60,15 +58,20 @@ const images2 = [
 ---
 
 <Layout title="Plantas de asfalto integrales">
-  <div class="mt-10">
-    <HeroComponentV1
+  <div class="">
+    <HeroComponentV2
       title="Plantas de asfalto de 10 Tph integrales de contraflujo"
+      titleColor="white"
+      textColor="white"
+      bgColor="#1e1e1e"
       text="Ofrece una solución compacta, todo en uno para una producción de mezcla asfáltica eficiente. Combina todos los componentes montados sobre un chasis. Esta planta está diseñada para ofrecer flexibilidad, facilidad de transporte y un rendimiento confiable en diversos entornos operativos. Montada sobre un chasis móvil o sobre patas estacionarias, esta planta de asfalgo está diseñada para ofrecer flexibilidad, facilidad de transporte y un desempeño confiable en distintos entornos de operación."
       heroImage={hero2.src}
     />
   </div>
 
-  <OdometerSection client:only />
+  <section class="w-full flex justify-center">
+    <OdometerSection client:only />
+  </section>
 
   <Slider slides={images2} dark={true} client:only />
 

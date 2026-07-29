@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 import single from "../../assets/images/ColdMix/CMProv4.webp";
+import FillLinkButton from "../unitComponents/FillLinkButton";
 
 const CMOdom = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -12,7 +13,6 @@ const CMOdom = () => {
   const [, setValue3] = useState(0);
   const [value4, setValue4] = useState(0);
   const [value5, setValue5] = useState(0);
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,18 +27,18 @@ const CMOdom = () => {
 
           setTimeout(() => {
             setValue(25);
-            setValue5(500)
-             setValue4(10);
+            setValue5(500);
+            setValue4(10);
             setValue1(20);
             setValue2(30);
-           
+
             setValue3(24);
           }, 300); // Pequeño retraso para asegurar reinicio
         }
       },
       {
         threshold: 0.5, // cuando el 50% sea visible
-      }
+      },
     );
 
     const current = sectionRef.current;
@@ -50,9 +50,12 @@ const CMOdom = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full max-w-7xl mx-auto px-8 py-10 lg:py-0 lg:mt-56 lg:mb-56 md:mt-56 md:mb-56">
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
-        <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
+    <div
+      ref={sectionRef}
+      className="w-full max-w-[1500px] px-8 py-6 md:py-16 min-h-[70vh]"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
+        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value} format="(,ddd)" duration={2000} />
@@ -78,41 +81,19 @@ const CMOdom = () => {
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <p className="text-7xl font-bold ml-3">''</p>
             </div>
-            <p className="text-[#4F4F4F] text-start w-full">
-            Banda colectora
-            </p>
+            <p className="text-[#4F4F4F] text-start w-full">Banda colectora</p>
           </div>
+          <FillLinkButton href="#planosCold" />
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-6">
+        <div className="flex flex-col items-center justify-center gap-6 col-span-1 md:col-span-4">
           <div>
-            <img src={single.src} alt="Back of a cold mix asphalt plant" />
+            <img
+              src={single.src}
+              alt="Back of a cold mix asphalt plant"
+              className="max-w-[600px]"
+            />
           </div>
-          <a
-  href="#planosCold"
-  className="
-    group relative inline-flex items-center justify-center
-    px-4 py-2 rounded-xl
-    border border-black
-    text-black font-medium
-    overflow-hidden
-
-    transition-all duration-300 ease-out
-    hover:text-white hover:-translate-y-0.5 hover:shadow-lg
-  "
->
-  <span
-    className="
-      absolute inset-0 bg-black
-      translate-y-full
-      transition-transform duration-300 ease-out
-      group-hover:translate-y-0
-    "
-  />
-  <span className="relative z-10">
-    Todos los detalles técnicos 
-  </span>
-</a>
         </div>
       </div>
     </div>

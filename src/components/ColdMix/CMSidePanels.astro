@@ -7,79 +7,77 @@ import OSectionBin from "../BinUnits/OSectionBin.astro";
 ---
 
 <div class="w-full flex flex-col font-bold mt-10">
-    <div class="bg-[#14427c]">
-        <div
-            class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-8 pt-10 items-center gap-5"
-        >
-            <div class="hidden lg:flex md:flex">
-                <Image src={img1} alt="Control panel" class="rounded-lg" />
-            </div>
+  <div class="bg-[#14427c] w-full flex flex-col justify-center gap-2 md:gap-10">
+    <div
+      class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-8 pt-10 items-center gap-5"
+    >
+      <div class="hidden lg:flex md:flex">
+        <Image src={img1} alt="Control panel" class="rounded-lg" />
+      </div>
 
-            <div class="w-full">
-                <h2 class="text-white text-xl md:text-2xl font-bold">
-                    Control integrado del flujo de agregados
-                </h2><br />
-                <div class="space-y-5">
-                    <p
-                        class="text-white text-sm lg:text-lg md:text-lg text-justify font-bold"
-                    >
-                        El monitoreo del flujo de agregados en tiempo real —ya
-                        sea de forma remota o en campo— brinda a los operadores
-                        control total sobre los materiales y los datos de
-                        producción mediante el sistema de control central,
-                        permitiendo ajustes rápidos y garantizando resultados
-                        uniformes en la mezcla en frío.
-                    </p>
-                    <p
-                        class="text-white text-sm lg:text-lg md:text-lg text-justify font-bold"
-                    >
-                        A la vez, ofrece a supervisores y propietarios una
-                        visibilidad completa del flujo de agregados y del
-                        desempeño operativo del equipo.
-                    </p>
-                </div>
-
-                <div
-                    class="flex flex-col items-center justify-center pt-5 lg:hidden md:hidden"
-                >
-                    <Image src={img1} alt="Control panel" class="rounded-lg" />
-                </div>
-            </div>
+      <div class="w-full">
+        <h2 class="text-white text-xl md:text-2xl font-bold">
+          Control integrado del flujo de agregados
+        </h2><br />
+        <div class="space-y-5">
+          <p
+            class="text-white text-sm lg:text-lg md:text-lg text-justify font-normal"
+          >
+            El monitoreo del flujo de agregados en tiempo real —ya sea de forma
+            remota o en campo— brinda a los operadores control total sobre los
+            materiales y los datos de producción mediante el sistema de control
+            central, permitiendo ajustes rápidos y garantizando resultados
+            uniformes en la mezcla en frío.
+          </p>
+          <p
+            class="text-white text-sm lg:text-lg md:text-lg text-justify font-normal"
+          >
+            A la vez, ofrece a supervisores y propietarios una visibilidad
+            completa del flujo de agregados y del desempeño operativo del
+            equipo.
+          </p>
         </div>
 
         <div
-            class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-8 pb-10 items-center"
+          class="flex flex-col items-center justify-center pt-5 lg:hidden md:hidden"
         >
-            <div class="w-full">
-                <h2 class="text-white text-xl md:text-2xl font-bold">
-                    Dosificación precisa para resultados confiables
-                </h2><br />
-                <p
-                    class="text-white text-sm lg:text-lg md:text-lg text-justify font-bold"
-                >
-                    Compuertas ajustables, en tolvas permitiendo un control
-                    preciso de la dosificación de agregados. Garantizando mezcla
-                    uniforme y controlada, incluso al trabajar con distintos
-                    tipos de materiales o granulometrías.
-                    <br /><br />
-                    Entendemos la importancia de tener control total de la operación,
-                    nuestro sistema incluye un modo de operación completamente manual.
-                    No dependemos de una configuración totalmente automatizada, la
-                    planta puede seguir operando manualmente sin interrumpir la producción.
-                </p>
-            </div>
-            <div class="w-full flex py-5 justify-center lg:justify-end">
-                <Image
-                    src={img2}
-                    alt="Triaso Relief System on a tablet"
-                    class="w-4/5 rounded-lg"
-                />
-            </div>
+          <Image src={img1} alt="Control panel" class="rounded-lg" />
         </div>
+      </div>
     </div>
 
-    <OSectionBin />
+    <div
+      class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-8 pb-10 items-center"
+    >
+      <div class="w-full">
+        <h2 class="text-white text-xl md:text-2xl font-bold">
+          Dosificación precisa para resultados confiables
+        </h2><br />
+        <p
+          class="text-white text-sm lg:text-lg md:text-lg text-justify font-normal"
+        >
+          Compuertas ajustables, en tolvas permitiendo un control preciso de la
+          dosificación de agregados. Garantizando mezcla uniforme y controlada,
+          incluso al trabajar con distintos tipos de materiales o
+          granulometrías.
+          <br /><br />
+          Entendemos la importancia de tener control total de la operación, nuestro
+          sistema incluye un modo de operación completamente manual. No dependemos
+          de una configuración totalmente automatizada, la planta puede seguir operando
+          manualmente sin interrumpir la producción.
+        </p>
+      </div>
+      <div class="w-full flex py-5 justify-center lg:justify-end">
+        <Image
+          src={img2}
+          alt="Triaso Relief System on a tablet"
+          class="w-4/5 rounded-lg"
+        />
+      </div>
+    </div>
+  </div>
 
-    <CustomBins />
+  <OSectionBin />
 
+  <CustomBins />
 </div>

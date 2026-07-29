@@ -410,7 +410,7 @@ export default function Slider({
                   position: "absolute",
                   inset: 0,
                   background:
-                    "linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.45) 32%, rgba(0,0,0,0) 60%)",
+                    "linear-gradient(to top, rgba(0,0,0,.97) 0%, rgba(0,0,0,.85) 25%, rgba(0,0,0,.55) 50%, rgba(0,0,0,0) 80%)",
                 }}
               />
               <div
@@ -441,7 +441,7 @@ export default function Slider({
                       fontSize: "clamp(13px,1vw,15px)",
                       lineHeight: 1.5,
                       opacity: 0.9,
-                      maxWidth: "80%",
+                      maxWidth: "100%",
                     }}
                     className="font-normal"
                   >

@@ -1,18 +1,56 @@
 ---
 import { Image } from "astro:assets";
 import img2 from "../../../../public/consola1.webp";
-import SliderCasetas from "./SliderCasetas.astro";
 import SecondWhatsBtn from "../../unitComponents/SecondWhatsBtn.astro";
 import PlanosMontable from "./PlanosMontable";
+import Slider from "../../AsphaltStorage/Slider";
+import CTASection1 from "../../unitComponents/CTASection1.astro";
+
+const slides = [
+  {
+    id: 1,
+    title: "Amperímetros ",
+    text: "Amperímetros para monitoreo de los principales motores de la planta",
+    image: "https://placehold.co/600x400/png",
+  },
+  {
+    id: 2,
+    title: "Variadores de frecuencia",
+    text: "Dosificación de asfalto y de agregados por variadores de velocidad, de trabajo pesado ",
+    image: "https://placehold.co/600x400/png",
+  },
+  {
+    id: 3,
+    title: "Botonera",
+    text: "Sistema de arranque y de paro de motores en cascada para evitar errores de operación.",
+    image: "https://placehold.co/600x400/png",
+  },
+  {
+    id: 4,
+    title: "Apagado de emergencia",
+    text: "Sistema de paro general de emergencia, con bloqueo para mantenimientos ",
+    image: "https://placehold.co/600x400/png",
+  },
+  {
+    id: 5,
+    title: "Controles",
+    text: "Control y monitoreo por instrumentación electrónica, de fácil visualización, tipo industrial para: Quemador, Damper y Apertura de bacha",
+    image: "https://placehold.co/600x400/png",
+  },
+  {
+    id: 6,
+    title: "Variadores de frecuencia",
+    text: "Dosificación de asfalto y de agregados por variadores de velocidad, de trabajo pesado ",
+    image: "https://placehold.co/600x400/png",
+  },
+];
 ---
 
 <section>
-  <div
-    class="max-w-7xl mx-auto flex flex-col px-8"
-  >
+  <div class="max-w-7xl mx-auto flex flex-col px-8">
     <div class="lg:w-1/2">
-      <h1 class="font-bold text-3xl">Operación sencilla</h1>
-      <p>
+      <h1 class="font-bold text-xl md:text-4xl">Operación sencilla</h1><br />
+      <p class="text-sm md:text-base">
         Nuestro sistema de control está diseñado para ser operado por una sola
         persona, reduciendo costos de mano de obra y simplificando la operación
         de la planta
@@ -36,11 +74,11 @@ import PlanosMontable from "./PlanosMontable";
       >
         <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
           <div class="w-full">
-            <h2 class="text-[#f9f9f9] text-lg md:text-xl">
+            <h2 class="text-[#f9f9f9] text-lg md:text-2xl">
               Operación manual cuando se requiera
-            </h2>
+            </h2><br />
             <p
-              class="text-[#f4f5f6] text-sm lg:text-lg md:text-lg text-justify"
+              class="text-[#f4f5f6] text-sm md:text-base text-justify font-normal"
             >
               Entendemos la importancia de tener control total de la operación.
               Por eso, nuestro sistema aparte del modo de operación automática,
@@ -66,7 +104,7 @@ import PlanosMontable from "./PlanosMontable";
 </section>
 
 <section>
-  <SliderCasetas />
+  <Slider slides={slides} dark={true} client:only />
   <div class="max-w-7xl mx-auto px-8 py-5">
     <div class="flex justify-center items-center">
       <div class="flex flex-col">
@@ -84,70 +122,8 @@ import PlanosMontable from "./PlanosMontable";
   </div>
 </section>
 
-<section class="">
-  <div
-    class="bg-black lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(https://placehold.co/1920x1080/png)] bg-cover bg-center bg-no-repeat relative"
-  >
-    <div class="absolute inset-0 bg-[#000000]/70"></div>
-    <div class="max-w-7xl mx-auto px-8 space-y-5 relative">
-      <div class="pt-5">
-        <h1 class="text-4xl font-bold text-white">
-          ¿Indeciso sobre el equipo ideal para su proyecto?
-        </h1>
-      </div>
-
-      <div
-        class="w-full flex flex-col justify-center pb-5 lg:justify-around md:justify-around items-center lg:flex-row relative"
-      >
-        <div class="">
-          <p class="text-white">
-            La compra de una planta de asfalto es una gran inversión, y la base
-            de un negocio de producción de mezcla asfáltica. Compre
-            inteligentemente y con criterio.
-          </p>
-          <p class="text-white">
-            Podemos asesorarlo de forma transparente en la inversión de su
-            planta de asfalto, ayudándolo a elegir la opción más adecuada.
-          </p>
-        </div>
-        <div
-          class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
-        >
-          <!-- Botón 1 -->
-          <SecondWhatsBtn />
-
-          <a
-            href="/Contact"
-            aria-label="Button to request a quote"
-            class="border-white border text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-between gap-2 shadow-md"
-          >
-            <div class="px-5 py-2">
-              <p>Solicitar una cotización</p>
-            </div>
-            <div class="px-5 py-2">
-              <svg
-                width="24px"
-                height="24px"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                color="#FFFFFF"
-              >
-                <!-- Icono del segundo botón (opcional) -->
-                <path
-                  d="M5 12H19M19 12L12 5M19 12L12 19"
-                  stroke="#FFFFFF"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="py-2 md:py-10">
+  <CTASection1 />
 
   <div class="max-w-7xl mx-auto px-8 flex items-center justify-center">
     <h1

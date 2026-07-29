@@ -1,13 +1,11 @@
 import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import caseta1 from "../../../assets/images/DrumMixers/caseta1.webp";
-import caseta2 from "../../../assets/images/DrumMixers/caseta2.webp";
-import tab3Main2 from "../../../assets/images/DrumMixers/tab3Main2.webp";
-import tab1Main from "../../../assets/images/DrumMixers/tab1Main.webp";
 import { useClipPathScrollTrigger } from "../../../components/lib/useClipPathScrollTrigger.tsx";
-import mainCaseta from "../../../assets/images/Casetas/VF.webp";
-import mainBlueP from "../../../assets/images/Casetas/BpVF.webp";
+import mainCaseta from "../../../assets/images/Casetas/VA.webp";
+import mainBlueP from "../../../assets/images/Casetas/BpVA.webp";
+import mainBlueP1 from "../../../assets/images/Casetas/BpVF.webp";
+
 import LateralCaseta from "../../../assets/images/Casetas/BpVL.webp";
 const cabinSize = [
   {
@@ -53,7 +51,7 @@ const DrumMixPlanos = () => {
     C5_1: false,
     C5_2: false,
   });
-  const modelOptions = [{ id: 3, label: "140-180 Tph" }];
+  const modelOptions = [{ id: 3, label: "Montable 6.5' x 6'" }];
 
   // Función para alternar unidades
   const toggleUnit = () => {
@@ -93,7 +91,7 @@ const DrumMixPlanos = () => {
           className="text-white font-bold
            flex items-center justify-center
             rounded will-change-transform transform-gpu
-             z-20 w-[350px] h-[450px]"
+             z-20 w-[300px] md:w-[450px] aspect-[600/509]"
         >
           <img
             src={mainBlueP.src}
@@ -559,7 +557,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="w-[272px] h-[353px] flex items-center justify-center">
                           <img
-                            src={mainBlueP.src}
+                            src={mainBlueP1.src}
                             alt=""
                             className="max-w-full max-h-full object-contain"
                           />

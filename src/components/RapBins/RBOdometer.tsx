@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 import img1 from "../../assets/images/RapBins/RAProv4.webp";
+import FillLinkButton from "../unitComponents/FillLinkButton";
 
 const RPOdometer = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -46,12 +47,9 @@ const RPOdometer = () => {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className="w-full max-w-7xl px-8 mx-auto lg:mt-36 lg:mb-36 md:mt-36 md:mb-36"
-    >
+    <div ref={sectionRef} className="w-full max-w-[1500px] px-8 py-6 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
-        <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
+        <div className="flex flex-col h-full justify-between">
           <div className="flex flex-col items-center lg:items-start justify-center">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-start items-baseline w-[6.7ch] lg:w-full md:w-full">
               <Odometer value={value3} format="(,ddd)" duration={2000} />
@@ -81,6 +79,7 @@ const RPOdometer = () => {
               banda dosificadora
             </p>
           </div>
+          <FillLinkButton href="#planosRapBins" />
         </div>
 
         <div className="flex flex-col items-center justify-center gap-6">

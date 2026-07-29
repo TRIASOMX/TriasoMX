@@ -14,9 +14,10 @@ import poster2 from "../../assets/images/Burners/preHeat.webp";
 import PlaCQuemadorLow from "../../assets/images/Burners/Low/PlaC QuemadorLow.webp";
 import flag from "../../assets/images/Burners/flag.svg";
 
-import img1 from "../../assets/images/FuelPreHeaters/FPH4.webp"
-import img2 from "../../assets/images/Burners/Filtro.webp"
-import img3 from "../../assets/images/FuelPreHeaters/Gallery/PREH1.webp"
+import img1 from "../../assets/images/FuelPreHeaters/FPH4.webp";
+import img2 from "../../assets/images/Burners/Filtro.webp";
+import img3 from "../../assets/images/FuelPreHeaters/Gallery/PREH1.webp";
+import CardTambor from "../unitComponents/CardTambor.astro";
 ---
 
 <section class="w-full flex 2 mt-6 md:mt-20 flex-col gap-4 bg-gray-100">
@@ -87,9 +88,9 @@ import img3 from "../../assets/images/FuelPreHeaters/Gallery/PREH1.webp"
           >
             <div class="w-full mt-10 md:mt-20 lg:mt-0">
               <h2 class="text-lg md:text-xl font-bold text-black">
-                Tecnología Total Air: combustión completa garantizada
+                Tecnología Total Air: <br /> combustión completa garantizada
               </h2><br />
-              <p class="text-sm lg:text-lg md:text-lg">
+              <p class="text-sm lg:text-lg md:text-lg font-normal">
                 Los quemadores Triaso® suministran el 100% del aire necesario
                 para la combustión a través de su propio soplador, sin depender
                 del escape del tambor. Esto asegura una quema eficiente del
@@ -434,182 +435,28 @@ import img3 from "../../assets/images/FuelPreHeaters/Gallery/PREH1.webp"
         </div>
       </div>
 
-
-
-
-
-
-
       <!-- slider -->
       <div class="bg-[#393939] p-10">
         <div
-          class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-7xl mx-auto px-8"
-          id="cardRow0"
+          class="flex flex-col md:flex-row items-center justify-center md:justify-start w-full gap-2 md:gap-10 max-w-7xl mx-auto px-8 overflow-x-auto"
         >
-          <!-- Card 1-A -->
-          <div
-            class="relative rounded-lg overflow-hidden group cursor-pointer"
-            data-card="0-0"
-          >
-            <div
-              class="w-full h-96 bg-black/10 flex items-center justify-center"
-            >
-              <img src={img1.src} alt="" />
-            </div>
+          <CardTambor
+            image={img1.src}
+            title="Calentamiento eléctrico en línea para máxima eficiencia"
+            description="El precalentador de combustible utiliza un sistema de resistencias eléctricas en línea capaz de elevar la temperatura del combustible en 40°C, con cualquier caudal. Este calentamiento rápido y controlado reduce de inmediato la viscosidad del combustible, asegurando una atomización óptima y una combustión limpia, sin retrasos ni fuentes externas de calor. Solución compacta y confiable para un desempeño eficiente del quemador desde el primer segundo de operación."
+          />
 
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-            >
-              <span
-                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-              >
-                Calentamiento eléctrico en línea para máxima eficiencia
-              </span>
-              <button
-                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                aria-expanded="false"
-              >
-                <svg
-                  class="chevron w-3 h-3 transition-transform duration-300"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                >
-                  <path
-                    d="M2 4l4 4 4-4"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"></path>
-                </svg>
-                mostrar más
-              </button>
-              <div
-                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-              >
-                <p class="text-white/75 text-xs leading-relaxed mt-2">
-                  El precalentador de combustible utiliza un sistema de
-                  resistencias eléctricas en línea capaz de elevar la
-                  temperatura del combustible en 40°C, con cualquier caudal.
-                  Este calentamiento rápido y controlado reduce de inmediato la
-                  viscosidad del combustible, asegurando una atomización óptima
-                  y una combustión limpia, sin retrasos ni fuentes externas de
-                  calor.
-                </p>
-                <p class="text-white/75 text-xs leading-relaxed mt-2">
-                  Solución compacta y confiable para un desempeño eficiente del
-                  quemador desde el primer segundo de operación.
-                </p>
-              </div>
-            </div>
-          </div>
+          <CardTambor
+            image={img2.src}
+            title="Filtro de combustible"
+            description="Todos los sistemas de precalentamiento Triaso incluyen un filtro calibre malla 100 para captar toda la fibra celulosa presente en combustibles alternos o impurezas adicionales que puedan dañar el sistema. Los combustibles alternos contienen mucha fibra de celulosa o impurezas adicionales, al no ser filtrada anteriormente tapan el sistema de atomización del quemador. Al llegar al quemador tapan la boquilla de atomización y más sistemas del quemador, lo que causará muchos problemas."
+          />
 
-          <!-- Card 1-B -->
-          <div
-            class="relative rounded-lg overflow-hidden group cursor-pointer"
-            data-card="0-1"
-          >
-            <div
-              class="w-full h-96 bg-black/20 flex items-center justify-center"
-            >
-              <img src={img2.src} alt="" />
-            </div>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-            >
-              <span
-                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-              >
-                Filtro de combsutible
-              </span>
-              <button
-                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                aria-expanded="false"
-              >
-                <svg
-                  class="chevron w-3 h-3 transition-transform duration-300"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                >
-                  <path
-                    d="M2 4l4 4 4-4"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"></path>
-                </svg>
-                mostrar más
-              </button>
-              <div
-                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-              >
-                <p class="text-white/75 text-xs leading-relaxed mt-2">
-                  Todos los sistemas de precalentamiento Triaso incluyen un
-                  filtro calibre malla 100 para captar toda la fibra celulosa
-                  presente en combustibles alternos o impurezas adicionales que
-                  puedan dañar el sistema.
-                </p>
-                <p class="text-white/75 text-xs leading-relaxed mt-2">
-                  Los combustibles alternos contienen mucha fibra de celulosa o
-                  impurezas adicionales, al no ser filtrada anteriormente tapan
-                  el sistema de atomización del quemador.
-                </p>
-
-                <ul class="list-disc">
-                  <li class="pl-5 text-white/75 text-xs leading-relaxed mt-2">
-                    Al llegar al quemador tapan la boquilla de atomización y más
-                    sistemas del quemador, lo que causará muchos problemas
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 1-C -->
-          <div
-            class="relative rounded-lg overflow-hidden group cursor-pointer"
-            data-card="0-2"
-          >
-            <div
-              class="w-full h-96 bg-black/10 flex items-center justify-center"
-            >
-              <img src={img3.src} alt="" />
-            </div>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3"
-            >
-              <span
-                class="font-bold text-white text-sm uppercase tracking-wide leading-tight mb-2"
-              >
-                Estándar en cada planta, no como un extra costoso
-              </span>
-              <button
-                class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                aria-expanded="false"
-              >
-                <svg
-                  class="chevron w-3 h-3 transition-transform duration-300"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                >
-                  <path
-                    d="M2 4l4 4 4-4"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"></path>
-                </svg>
-                mostrar más
-              </button>
-              <div
-                class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-              >
-                <p class="text-white/75 text-xs leading-relaxed mt-2">
-                  Otras marcas ofrecen quemadores de aire total y
-                  precalentadores como accesorios costosos. En Triaso®, vienen
-                  incluidos como parte del equipo estándar en cada configuración
-                  de planta, porque la combustión limpia no debería ser
-                  opcional.
-                </p>
-              </div>
-            </div>
-          </div>
+          <CardTambor
+            image={img3.src}
+            title="Estándar en cada planta, no como un extra costoso"
+            description="Otras marcas ofrecen quemadores de aire total y precalentadores como accesorios costosos. En Triaso®, vienen incluidos como parte del equipo estándar en cada configuración de planta, porque la combustión limpia no debería ser opcional."
+          />
         </div>
       </div>
     </div>
@@ -669,7 +516,9 @@ import img3 from "../../assets/images/FuelPreHeaters/Gallery/PREH1.webp"
     </div>
     <div class="flex justify-center w-full">
       <div class="w-3/4 bg-white rounded-2xl p-4 flex flex-col gap-4">
-        <h2 class="text-center text-xl md:text-2xl">Combustibles alternativos</h2>
+        <h2 class="text-center text-xl md:text-2xl">
+          Combustibles alternativos
+        </h2>
         <div class="w-full h-[2px] bg-blueMain"></div>
       </div>
     </div>
@@ -754,26 +603,3 @@ import img3 from "../../assets/images/FuelPreHeaters/Gallery/PREH1.webp"
   }
 </script>
 
-<script>
-  document
-    .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
-    .forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const expandible = btn.nextElementSibling as HTMLElement;
-        const chevron = btn.querySelector(".chevron") as HTMLElement;
-        const isOpen =
-          expandible.style.maxHeight && expandible.style.maxHeight !== "0px";
-
-        if (isOpen) {
-          expandible.style.maxHeight = "0px";
-          chevron.style.transform = "rotate(0deg)";
-          btn.setAttribute("aria-expanded", "false");
-        } else {
-          expandible.style.maxHeight = expandible.scrollHeight + "px";
-          chevron.style.transform = "rotate(180deg)";
-          btn.setAttribute("aria-expanded", "true");
-        }
-      });
-    });
-</script>

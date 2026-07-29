@@ -4,8 +4,11 @@ import PAOdometer from "../components/PowderAd/PAOdometer";
 import PASecondSection from "../components/PowderAd/PASecondSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
+
 <Layout title="Powder Additives Page">
-    <PAFirstSection/>
-    <PAOdometer client:only/>
-    <PASecondSection/>
+  <PAFirstSection />
+  <section class="w-full flex justify-center">
+    <PAOdometer client:only />
+  </section>
+  <PASecondSection />
 </Layout>

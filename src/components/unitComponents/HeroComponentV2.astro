@@ -50,13 +50,15 @@ const {
     </h1>
     <h2 class="text-white font-bold text-xl md:text-2xl">{subTitle}</h2>
     <br />
+    <slot />
+    <br>
     <p
       class="text-sm md:text-xl max-w-[150ch] mx-auto"
       style={{ color: textColor }}
     >
       {text}
     </p>
-    <slot />
+    
     <!--SLOT HERE -->
 
     {

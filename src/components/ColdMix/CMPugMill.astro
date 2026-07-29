@@ -129,7 +129,7 @@ const slides = [
       slot="right"
       class="flex flex-col justify-center lg:pl-3 md:pl-5 w-full"
     >
-      <h1 class="text-xl md:text-2xl">Servicio al cliente 24/7</h1>
+      <h1 class="text-xl md:text-2xl">Servicio al cliente 24/7</h1><br />
       <div class="text-sm lg:text-lg md:text-lg">
         <p>
           Sabemos que la operación de muchos equipos depende de la confiabilidad
@@ -137,7 +137,7 @@ const slides = [
           listo para ayudarte en cualquier momento, incluso fines de semana y
           días festivos.
         </p>
-      </div>
+      </div><br />
       <Whatsbtn />
     </div>
   </TwoColumnSection>
@@ -182,15 +182,16 @@ const slides = [
   <!-- cards -->
   <div class="max-w-7xl mx-auto px-8">
     <div
-      class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between items-stretch font-bold mt-6"
+      class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between items-start font-bold mt-6"
     >
-      <Card>
-        <div>
+      <Card className="p-4 rounded-2xl w-full bg-white" contentClass="w-full">
+        <div class="w-full h-[250px] overflow-hidden rounded-xl">
           <Image
             src={paletas1}
             alt="Cold mix plant with a plugmill mixer"
             width={600}
             height={400}
+            class="w-full h-full object-cover"
           />
         </div>
         <details class="group">
@@ -311,13 +312,14 @@ const slides = [
           </div>
         </details>
       </Card>
-      <Card>
-        <div>
+      <Card className="p-4 rounded-2xl w-full bg-white" contentClass="w-full">
+        <div class="w-full h-[250px] overflow-hidden rounded-xl">
           <Image
             src={paletas2}
             alt="Cold mix plant with a plugmill mixer"
             width={600}
             height={400}
+            class="w-full h-full object-cover"
           />
         </div>
         <details class="group">
@@ -430,13 +432,14 @@ const slides = [
           </div>
         </details>
       </Card>
-      <Card>
-        <div>
+      <Card className="p-4 rounded-2xl w-full bg-white" contentClass="w-full">
+        <div class="w-full h-[250px] overflow-hidden rounded-xl">
           <Image
             src={paletas3}
             alt="Cold mix plant with a plugmill mixer"
             width={600}
             height={400}
+            class="w-full h-full object-cover"
           />
         </div>
         <details class="group">

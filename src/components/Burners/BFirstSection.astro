@@ -1,20 +1,23 @@
 ---
-import HeroComponentV1 from "../unitComponents/HeroComponentV1.astro";
 import img2 from "../../assets/images/Burners/Gallery/B2.webp";
 import BurnerOdometer from "../../components/Burners/BurnerOdometer";
+import HeroComponentV2 from "../unitComponents/HeroComponentV2.astro";
 ---
 
 <section>
   <div>
-    <HeroComponentV1
+    <HeroComponentV2
       title="QUEMADORES"
+      bgColor="#1e1e1e"
+      titleColor="white"
+      textColor="white"
       text="Nuestros quemadores Triaso® de ‘aire total’ están diseñados para una combustión completa y eficiente, utilizando un sistema totalmente sellado que no depende de los gases de escape del tambor. Con estos quemadores evitamos la contaminación, atmosférica y de la mezcla y la obstrucción del filtro, mientras ahorra combustible y mantiene un desempeño constante durante toda la jornada. Su sistema de control preciso de aire garantiza una operación limpia, bajas emisiones y resultados confiables en cualquier clima y altitud."
       heroImage={img2.src}
     />
   </div>
 </section>
 
-<section>
+<section class="w-full flex justify-center">
   <BurnerOdometer client:only />
 </section>
 
@@ -65,7 +68,8 @@ import BurnerOdometer from "../../components/Burners/BurnerOdometer";
           precisa y eficiente.
         </li>
         <li>
-          La eficiencia no se ve afectada por cambios de temperatura ambiental durante el día.
+          La eficiencia no se ve afectada por cambios de temperatura ambiental
+          durante el día.
         </li>
       </ul>
     </div>

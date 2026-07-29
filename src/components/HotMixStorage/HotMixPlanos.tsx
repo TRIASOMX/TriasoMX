@@ -1097,280 +1097,281 @@ const HotMixPlanos = () => {
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-start w-full mt-10 gap-3 md:gap-10">
-                  <div className="text-white font-normal col-span-1">
-                    <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        DIMENSIONES DEL SILO
-                      </h1>
-                      <button
-                        className="block md:hidden"
-                        onClick={() =>
-                          setOpenSections((prev) => ({
-                            ...prev,
-                            C4_1: !prev.C4_1,
-                          }))
-                        }
-                      >
-                        <svg
-                          width="28px"
-                          height="28px"
-                          stroke-width="1.5"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          color="#000000"
-                          className={`transition-transform duration-300 transform ${
-                            openSections.C4_1 ? "rotate-180" : ""
-                          }`}
+                <div className="w-full flex justify-center flex-col items-center">
+                  <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-start max-w-7xl mt-10 gap-3 md:gap-10">
+                    <div className="text-white font-normal col-span-1">
+                      <div className="w-full flex justify-between border-b border-b-white">
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          DIMENSIONES DEL SILO
+                        </h1>
+                        <button
+                          className="block md:hidden"
+                          onClick={() =>
+                            setOpenSections((prev) => ({
+                              ...prev,
+                              C4_1: !prev.C4_1,
+                            }))
+                          }
                         >
-                          <path
-                            d="M6 9L12 15L18 9"
-                            stroke="#ffffff"
+                          <svg
+                            width="28px"
+                            height="28px"
                             stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <div
-                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
-                        openSections.C4_1
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                      } md:max-h-full md:opacity-100 md:block`}
-                    >
-                      <div className="flex justify-between">
-                        <h1>Longitud:</h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
-                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
-                        </p>
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            color="#000000"
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C4_1 ? "rotate-180" : ""
+                            }`}
+                          >
+                            <path
+                              d="M6 9L12 15L18 9"
+                              stroke="#ffffff"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </button>
                       </div>
-                      <div className="flex justify-between">
-                        <h1>Altura:</h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
-                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
-                        </p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Capacidad de almacenamiento:</h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.capacity ?? ""} `
-                            : `${activeData?.dimensions.capacity ?? 0}`}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-white font-normal col-span-1 md:col-span-2 w-full">
-                    <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        ESTRUCTURA Y CHASIS
-                      </h1>
-                      <button
-                        className="block md:hidden"
-                        onClick={() =>
-                          setOpenSections((prev) => ({
-                            ...prev,
-                            C4_2: !prev.C4_2,
-                          }))
-                        }
+                      <div
+                        className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                          openSections.C4_1
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
                       >
-                        <svg
-                          width="28px"
-                          height="28px"
-                          stroke-width="1.5"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          color="#000000"
-                          className={`transition-transform duration-300 transform ${
-                            openSections.C4_2 ? "rotate-180" : ""
-                          }`}
-                        >
-                          <path
-                            d="M6 9L12 15L18 9"
-                            stroke="#ffffff"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <div
-                      className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
-                        openSections.C4_2
-                          ? "max-h-96 opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                      } md:max-h-full md:opacity-100 md:block`}
-                    >
-                      <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
-                            : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
-                        </p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Longitud del chasis:</h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${((activeData?.dimensions.chasisLenght ?? 0) / 100).toFixed(2)} m`
-                            : `${((activeData?.dimensions.chasisLenght ?? 0) * cmToFeet).toFixed(1)} ft`}
-                        </p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Ancho de transporte:</h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${((activeData?.dimensions.transporWidth ?? 0) / 100).toFixed(2)} m`
-                            : `${((activeData?.dimensions.transporWidth ?? 0) * cmToFeet).toFixed(1)} ft`}
-                        </p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
-                            : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
-                        </p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Configuración de ejes: </h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.axleConfig ?? ""} `
-                            : `${activeData?.dimensions.axleConfig ?? 0}`}
-                        </p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
-                            : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
-                        </p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Sistema de soporte:</h1>
-                        <p className="text-end md:text-start">
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.support ?? ""} `
-                            : `${activeData?.dimensions.support ?? 0}`}
-                        </p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Ruedas:</h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${activeData?.dimensions.wheels ?? ""} `
-                            : `${activeData?.dimensions.wheels ?? 0} `}
-                        </p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Altura de descarga a camión:</h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} m`
-                            : `${((activeData?.dimensions.truckHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
-                        </p>
-                      </div>
-                      <div className="flex justify-between">
-                        <h1>Altura total (punto más alto):</h1>
-                        <p>
-                          {unit === "metric"
-                            ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
-                            : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-start w-full mt-3 md:mt-10 gap-0 md:gap-10">
-                  <div className="text-white font-normal col-span-1 md:col-span-3 w-full">
-                    <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
-                        ELEVADOR ALIMENTADOR DE CANGILONES
-                      </h1>
-                      <button
-                        className="block md:hidden"
-                        onClick={() =>
-                          setOpenSections((prev) => ({
-                            ...prev,
-                            C5_1: !prev.C5_1,
-                          }))
-                        }
-                      >
-                        <svg
-                          width="28px"
-                          height="28px"
-                          stroke-width="1.5"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          color="#000000"
-                          className={`transition-transform duration-300 transform ${
-                            openSections.C5_1 ? "rotate-180" : ""
-                          }`}
-                        >
-                          <path
-                            d="M6 9L12 15L18 9"
-                            stroke="#ffffff"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <div
-                      className={`text-sm lg:text-base grid grid-cols-1 md:grid-cols-3 justify-center w-full gap-3 gap-6 lg:gap-20 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
-                        openSections.C5_1
-                          ? "max-h-[600px] opacity-1 mb-4"
-                          : "max-h-0 opacity-0"
-                      } md:max-h-full md:opacity-100`}
-                    >
-                      <div className="text-white font-normal col-span-1">
                         <div className="flex justify-between">
                           <h1>Longitud:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} m`
-                              : `${((slatConveyor?.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                              ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
+                              : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Ancho:</h1>
+                          <h1>Altura:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} m`
-                              : `${((slatConveyor?.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                              ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
+                              : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura (en posición de trabajo):</h1>
+                          <h1>Capacidad de almacenamiento:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} m`
-                              : `${((slatConveyor?.heightErec ?? 0) * cmToFeet).toFixed(1)} ft`}
+                              ? `${activeData?.dimensions.capacity ?? ""} `
+                              : `${activeData?.dimensions.capacity ?? 0}`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-white font-normal col-span-1 md:col-span-3 w-full">
+                      <div className="w-full flex justify-between border-b border-b-white">
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          ESTRUCTURA Y CHASIS
+                        </h1>
+                        <button
+                          className="block md:hidden"
+                          onClick={() =>
+                            setOpenSections((prev) => ({
+                              ...prev,
+                              C4_2: !prev.C4_2,
+                            }))
+                          }
+                        >
+                          <svg
+                            width="28px"
+                            height="28px"
+                            stroke-width="1.5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            color="#000000"
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C4_2 ? "rotate-180" : ""
+                            }`}
+                          >
+                            <path
+                              d="M6 9L12 15L18 9"
+                              stroke="#ffffff"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div
+                        className={`text-sm lg:text-base ml-2 lg:ml-6 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                          openSections.C4_2
+                            ? "max-h-96 opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100 md:block`}
+                      >
+                        <div className="flex justify-between">
+                          <h1>Longitud total (incluyendo quinta rueda):</h1>
+                          <p>
+                            {unit === "metric"
+                              ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
+                              : `${((activeData?.dimensions.length ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura de descarga:</h1>
+                          <h1>Longitud del chasis:</h1>
                           <p>
                             {unit === "metric"
-                              ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} m`
-                              : `${((slatConveyor?.chain ?? 0) * cmToFeet).toFixed(1)} ft`}
+                              ? `${((activeData?.dimensions.chasisLenght ?? 0) / 100).toFixed(2)} m`
+                              : `${((activeData?.dimensions.chasisLenght ?? 0) * cmToFeet).toFixed(1)} ft`}
                           </p>
                         </div>
-                        {/* <div className="flex justify-between">
+                        <div className="flex justify-between">
+                          <h1>Ancho de transporte:</h1>
+                          <p>
+                            {unit === "metric"
+                              ? `${((activeData?.dimensions.transporWidth ?? 0) / 100).toFixed(2)} m`
+                              : `${((activeData?.dimensions.transporWidth ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          </p>
+                        </div>
+                        <div className="flex justify-between">
+                          <h1>Ancho total:</h1>
+                          <p>
+                            {unit === "metric"
+                              ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
+                              : `${((activeData?.dimensions.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          </p>
+                        </div>
+                        <div className="flex justify-between">
+                          <h1>Configuración de ejes: </h1>
+                          <p>
+                            {unit === "metric"
+                              ? `${activeData?.dimensions.axleConfig ?? ""} `
+                              : `${activeData?.dimensions.axleConfig ?? 0}`}
+                          </p>
+                        </div>
+                        <div className="flex justify-between">
+                          <h1>Altura de la quinta rueda:</h1>
+                          <p>
+                            {unit === "metric"
+                              ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
+                              : `${((activeData?.dimensions.wheel ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          </p>
+                        </div>
+                        <div className="flex justify-between">
+                          <h1>Sistema de soporte:</h1>
+                          <p className="text-end md:text-start">
+                            {unit === "metric"
+                              ? `${activeData?.dimensions.support ?? ""} `
+                              : `${activeData?.dimensions.support ?? 0}`}
+                          </p>
+                        </div>
+                        <div className="flex justify-between">
+                          <h1>Ruedas:</h1>
+                          <p>
+                            {unit === "metric"
+                              ? `${activeData?.dimensions.wheels ?? ""} `
+                              : `${activeData?.dimensions.wheels ?? 0} `}
+                          </p>
+                        </div>
+                        <div className="flex justify-between">
+                          <h1>Altura de descarga a camión:</h1>
+                          <p>
+                            {unit === "metric"
+                              ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} m`
+                              : `${((activeData?.dimensions.truckHeight ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          </p>
+                        </div>
+                        <div className="flex justify-between">
+                          <h1>Altura total (punto más alto):</h1>
+                          <p>
+                            {unit === "metric"
+                              ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
+                              : `${((activeData?.dimensions.height ?? 0) * cmToFeet).toFixed(1)} ft`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-start max-w-7xl mt-3 md:mt-10 gap-0 md:gap-10">
+                    <div className="text-white font-normal col-span-1 md:col-span-3 w-full">
+                      <div className="w-full flex justify-between border-b border-b-white">
+                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          ELEVADOR ALIMENTADOR DE CANGILONES
+                        </h1>
+                        <button
+                          className="block md:hidden"
+                          onClick={() =>
+                            setOpenSections((prev) => ({
+                              ...prev,
+                              C5_1: !prev.C5_1,
+                            }))
+                          }
+                        >
+                          <svg
+                            width="28px"
+                            height="28px"
+                            stroke-width="1.5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            color="#000000"
+                            className={`transition-transform duration-300 transform ${
+                              openSections.C5_1 ? "rotate-180" : ""
+                            }`}
+                          >
+                            <path
+                              d="M6 9L12 15L18 9"
+                              stroke="#ffffff"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div
+                        className={`text-sm lg:text-base grid grid-cols-1 md:grid-cols-3 justify-center w-full gap-3 gap-6 lg:gap-20 transition-all duration-500 md:mb-0 overflow-hidden list-inside ${
+                          openSections.C5_1
+                            ? "max-h-[600px] opacity-1 mb-4"
+                            : "max-h-0 opacity-0"
+                        } md:max-h-full md:opacity-100`}
+                      >
+                        <div className="text-white font-normal col-span-1">
+                          <div className="flex justify-between">
+                            <h1>Longitud:</h1>
+                            <p>
+                              {unit === "metric"
+                                ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} m`
+                                : `${((slatConveyor?.length ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            </p>
+                          </div>
+                          <div className="flex justify-between">
+                            <h1>Ancho:</h1>
+                            <p>
+                              {unit === "metric"
+                                ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} m`
+                                : `${((slatConveyor?.width ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            </p>
+                          </div>
+                          <div className="flex justify-between">
+                            <h1>Altura (en posición de trabajo):</h1>
+                            <p>
+                              {unit === "metric"
+                                ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} m`
+                                : `${((slatConveyor?.heightErec ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            </p>
+                          </div>
+                          <div className="flex justify-between">
+                            <h1>Altura de descarga:</h1>
+                            <p>
+                              {unit === "metric"
+                                ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} m`
+                                : `${((slatConveyor?.chain ?? 0) * cmToFeet).toFixed(1)} ft`}
+                            </p>
+                          </div>
+                          {/* <div className="flex justify-between">
                           <h1>Height (discharge height):</h1>
                           <p>
                             {unit === "metric"
@@ -1381,47 +1382,48 @@ const HotMixPlanos = () => {
                               ).toFixed(1)} ft`}
                           </p>
                         </div> */}
-                        <div className="flex justify-between">
-                          <h1>Ángulo de inclinación:</h1>
-                          <p>
-                            {unit === "metric"
-                              ? `${slatConveyor.angle ?? ""} `
-                              : `${slatConveyor.angle ?? 0}`}
-                          </p>
+                          <div className="flex justify-between">
+                            <h1>Ángulo de inclinación:</h1>
+                            <p>
+                              {unit === "metric"
+                                ? `${slatConveyor.angle ?? ""} `
+                                : `${slatConveyor.angle ?? 0}`}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="flex flex-col text-white col-span-1 md:col-span-2 w-full justify-center">
-                        <ul className="ml-2 lg:ml-6 list-disc w-full">
-                          <li>
-                            Se transporta junto con el silo sobre el mismo
-                            chasis.
-                          </li>
-                          <li>
-                            Estructura independiente, no fijada al bastidor del
-                            silo.
-                          </li>
-                          <li>Capacidad de hasta 320 TPH.</li>
-                          <li>
-                            Paletas de acero reforzadas para mayor durabilidad y
-                            desempeño uniforme.
-                          </li>
-                          <li>
-                            Compuerta de salida secundaria para cuando se
-                            requiera
-                          </li>
-                          <li>
-                            Puertas de acceso superiores para facilitar la
-                            limpieza e inspección.
-                          </li>
-                          <li>
-                            Sistema manual de tensado de cadena para una
-                            operación confiable a largo plazo.
-                          </li>
-                          <li>
-                            Alineación rápida con la entrada del silo durante la
-                            instalación.
-                          </li>
-                        </ul>
+                        <div className="flex flex-col text-white col-span-1 md:col-span-2 w-full justify-center">
+                          <ul className="ml-2 lg:ml-6 list-disc w-full">
+                            <li>
+                              Se transporta junto con el silo sobre el mismo
+                              chasis.
+                            </li>
+                            <li>
+                              Estructura independiente, no fijada al bastidor
+                              del silo.
+                            </li>
+                            <li>Capacidad de hasta 320 TPH.</li>
+                            <li>
+                              Paletas de acero reforzadas para mayor durabilidad
+                              y desempeño uniforme.
+                            </li>
+                            <li>
+                              Compuerta de salida secundaria para cuando se
+                              requiera
+                            </li>
+                            <li>
+                              Puertas de acceso superiores para facilitar la
+                              limpieza e inspección.
+                            </li>
+                            <li>
+                              Sistema manual de tensado de cadena para una
+                              operación confiable a largo plazo.
+                            </li>
+                            <li>
+                              Alineación rápida con la entrada del silo durante
+                              la instalación.
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>

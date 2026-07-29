@@ -10,6 +10,7 @@ import OSHand from "../../assets/images/OSHand.webp";
 import Slider from "../AsphaltStorage/Slider";
 import caldera3 from "../../assets/images/OilHeaters/caldera3.webp";
 import caldera4 from "../../assets/images/OilHeaters/caldera4.webp";
+import caldera5 from "../../assets/images/AsphaltStorage/hotoil.webp";
 import { Image } from "astro:assets";
 
 const gallerySlides = [{ img: img4 }, { img: img1 }, { img: img2 }];
@@ -27,7 +28,7 @@ const slides = [
   {
     text: "Dentro del calentador de aceite térmico, el serpentín —o intercambiador de calor— conduce el aceite térmico a través de una espiral compacta de tubería de acero. El serpentín se calienta de forma indirecta por el quemador, transfiriendo energía al aceite sin permitir que los gases de combustión se mezclen con él. Una vez que el aceite alcanza la temperatura deseada, circula por el sistema para calentar la aplicación requerida —como un tanque de asfalto u otro equipo industrial— proporcionando un desempeño térmico constante y eficiente.",
     title: "Serpentines de aceite térmico",
-    image: caldera4.src,
+    image: caldera5.src,
   },
 ];
 const images1 = [
@@ -93,15 +94,15 @@ const images1 = [
       alt="Asphalt storange tank with an oil heater system"
       class="bg-cover w-full"
     />
-    <div class="w-full my-10">
+    <div class="w-full my-10 space-y-10">
       <div
         class="w-full max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10"
       >
-        <div>
+        <div class="flex flex-col justify-center items-start">
           <h2 class="text-blueMain text-xl md:text-2xl font-bold">
             Diferentes aplicaciones
-          </h2>
-          <p class="text-grisT text-base md:text-lg font-bold">
+          </h2><br />
+          <p class="text-grisT text-base md:text-lg font-normal">
             Los calentadores de aceite Triaso están diseñados y fabricados
             internamente para nuestros propios proyectos, pero también son
             adecuados para una amplia variedad de aplicaciones.
@@ -119,7 +120,7 @@ const images1 = [
             <div class="text-white max-w-xl px-8">
               <h1 class="text-2xl md:text-3xl font-semibold text-black">
                 Sistemas de control inteligente que simplifican su operación
-              </h1>
+              </h1><br />
               <p class="text-black font-normal leading-relaxed">
                 Con controles automáticos de temperaturas para monitorear el
                 consumo por tonelada de mezcla producida, evitando desperdicios,

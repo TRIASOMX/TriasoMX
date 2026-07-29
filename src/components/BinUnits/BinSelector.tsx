@@ -1,15 +1,15 @@
 import { useState } from "react";
 
-import a1 from "../../assets/images/BinUnits/TlvU2CF.webp"
-import a1w from "../../assets/images/BinUnits/TlvU2SF.webp"
-import a2 from "../../assets/images/BinUnits/TlvU3CF.webp"
-import a2w from "../../assets/images/BinUnits/TlvU3SF.webp"
-import a3 from "../../assets/images/BinUnits/TlvU4CF.webp"
-import a3w from "../../assets/images/BinUnits/TlvU4SF.webp"
-import a4 from "../../assets/images/BinUnits/TlvU5CF.webp"
-import a4w from "../../assets/images/BinUnits/TlvU5SF.webp"
-import a5 from "../../assets/images/BinUnits/TlvU6CF.webp"
-import a5w from "../../assets/images/BinUnits/TlvU6SF.webp"
+import a1 from "../../assets/images/BinUnits/TlvU2CF.webp";
+import a1w from "../../assets/images/BinUnits/TlvU2SF.webp";
+import a2 from "../../assets/images/BinUnits/TlvU3CF.webp";
+import a2w from "../../assets/images/BinUnits/TlvU3SF.webp";
+import a3 from "../../assets/images/BinUnits/TlvU4CF.webp";
+import a3w from "../../assets/images/BinUnits/TlvU4SF.webp";
+import a4 from "../../assets/images/BinUnits/TlvU5CF.webp";
+import a4w from "../../assets/images/BinUnits/TlvU5SF.webp";
+import a5 from "../../assets/images/BinUnits/TlvU6CF.webp";
+import a5w from "../../assets/images/BinUnits/TlvU6SF.webp";
 
 const binOptions = [2, 3, 4, 5, 6] as const;
 const panelOptions = ["aesthetic", "without"] as const;
@@ -47,8 +47,7 @@ export default function BinSelector() {
 
   return (
     <div className="bg-gray-100 flex flex-col gap-6 text-black w-full mt-10">
-
-      <div className="w-full flex flex-col gap-10 justify-center items-center max-w-7xl px-4 sm:px-6 md:px-8 mx-auto">
+      <div className="w-full flex flex-col gap2 md:gap-4 justify-center items-center max-w-7xl px-4 sm:px-6 md:px-8 mx-auto">
         <div className="w-full flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
           <button
             onClick={() => setPanelType("aesthetic")}
@@ -77,8 +76,12 @@ export default function BinSelector() {
         </div>
         <div className="flex flex-col lg:flex-row bg-white rounded-2xl py-3 px-4 lg:px-16 justify-center items-center gap-2 lg:gap-10">
           <div>
-            <p className="hidden lg:block md:block font-bold text-sm lg:text-xl md:text-xl py-2">Tolvas:</p>
-            <p className=" lg:hidden md:hidden font-bold text-sm lg:text-xl md:text-xl py-2">Tolvas</p>
+            <p className="hidden lg:block md:block font-bold text-sm lg:text-xl md:text-xl py-2">
+              Tolvas:
+            </p>
+            <p className=" lg:hidden md:hidden font-bold text-sm lg:text-xl md:text-xl py-2">
+              Tolvas
+            </p>
           </div>
           <div>
             {binOptions.map((num) => (
@@ -93,11 +96,8 @@ export default function BinSelector() {
               </button>
             ))}
           </div>
-
         </div>
-
       </div>
     </div>
   );
 }
-

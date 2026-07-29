@@ -5,13 +5,16 @@ import img2 from "../../assets/images/OilHeaters/23.webp";
 import img3 from "../../assets/images/OilHeaters/24.webp";
 import img4 from "../../assets/images/OilHeaters/22.webp";
 import OHOdometer from "./OHOdometer";
-import HeroComponentV1AstroComponent from "../unitComponents/HeroComponentV1.astro";
 import { Image } from "astro:assets";
+import HeroComponentV2 from "../unitComponents/HeroComponentV2.astro";
 ---
 
 <section>
-  <HeroComponentV1AstroComponent
+  <HeroComponentV2
     title="Calderas de aceite térmico"
+    textColor="white"
+    titleColor="white"
+    bgColor="#1e1e1e"
     text="Diseñados para una regulación precisa de la temperatura, nuestras de aceite térmico garantizan una distribución uniforme del calor en el tanque de asfalto —o en cualquier sistema que requiera calentamiento constante. Gracias a su diseño de circulación de aceite térmico, ofrecen un desempeño óptimo, evitando puntos calientes y manteniendo la estabilidad de temperatura en todo el proceso, siendo capaces de conectarse a más sistemas de calentamiento de la planta de asfalto."
     heroImage={oil.src}
   />

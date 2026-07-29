@@ -1,12 +1,15 @@
 ---
-import HeroComponentV1 from "../unitComponents/HeroComponentV1.astro";
 import PrecalentadoresOdometro from "./PrecalentadoresOdometro";
 import heroImg from "../../assets/images/FuelPreHeaters/FPH1.webp";
+import HeroComponentV2 from "../unitComponents/HeroComponentV2.astro";
 ---
 
 <section>
-  <HeroComponentV1
+  <HeroComponentV2
     title="PRECALENTADORES"
+    textColor="white"
+    titleColor="white"
+    bgColor="#1e1e1e"
     text="En Triaso® diseñamos precalentadores de combustible para mejorar la eficiencia de combustión al reducir la viscosidad de cualquier tipo de combustible antes de la ignición. Al precalentar el combustible, se logra una atomización adecuada, eliminando microgotas sin quemar que contaminan la mezcla, obstruyen los filtros y generan humo excesivo. Los precalentadores aseguran una combustión más limpia, menores emisiones y un desempeño constante, protegiendo la calidad de la mezcla asfáltica y reduciendo el consumo de combustible en cualquier condición de trabajo."
     heroImage={heroImg.src}
   />

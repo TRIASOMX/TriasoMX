@@ -11,23 +11,28 @@ interface Props {
 }
 
 const {
-  className = 'p-4 rounded-2xl w-full bg-white',
-  contentClass = '',
-  title = '',
-  titleClass = '',
-  text = '',
-  textClass = ''
+  className = "p-4 rounded-2xl w-full bg-white h-full",
+  contentClass = "h-full justify-between w-full",
+  title = "",
+  titleClass = "",
+  text = "",
+  textClass = "",
 } = Astro.props;
 ---
 
 <div class={`${className}`}>
   <div class={`${contentClass}`}>
     <!-- Slot para contenido completamente personalizado -->
-    
-    
+
     <!-- Opción estructurada rápida -->
-    {title && <h3 class={`${titleClass || 'text-lg font-bold text-black'}`}>{title}</h3>}
+    {
+      title && (
+        <h3 class={`${titleClass || "text-lg font-bold text-black"}`}>
+          {title}
+        </h3>
+      )
+    }
     <slot />
-    {text && <p class={`${textClass || 'mt-2 text-grisP'}`}>{text}</p>}
+    {text && <p class={`${textClass || "mt-2 text-grisP"}`}>{text}</p>}
   </div>
 </div>

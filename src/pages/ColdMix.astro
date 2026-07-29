@@ -8,6 +8,7 @@ import CMSidePanels from "../components/ColdMix/CMSidePanels.astro";
 import CMPlanos from "../components/ColdMix/CMPlanos";
 import Whatsbtn from "../components/unitComponents/Whatsbtn.astro";
 import CotizacionBtn from "../components/unitComponents/cotizacionBtn.astro";
+import CTASection1 from "../components/unitComponents/CTASection1.astro";
 ---
 
 <Layout title="ColdMix Page">
@@ -28,58 +29,7 @@ import CotizacionBtn from "../components/unitComponents/cotizacionBtn.astro";
     <CMTab client:only />
   </section>
 
-  <section class="">
-    <div
-      class="bg-black lg:h-[50vh] md:h-[50vh] flex items-center bg-[url(https://placehold.co/600x400/png)] bg-cover bg-center bg-no-repeat relative"
-    >
-      <div class="absolute inset-0 bg-[#000000]/70"></div>
-      <div class="max-w-7xl mx-auto px-8 space-y-5 relative">
-        <div class="pt-5">
-          <h1 class="text-4xl font-bold text-white">
-            ¿Indeciso sobre la planta de mezclado en frío ideal para su
-            proyecto?
-          </h1>
-        </div>
-
-        <div
-          class="w-full flex flex-col justify-center pb-5 lg:justify-around md:justify-around items-center lg:flex-row relative"
-        >
-          <div class="">
-            <p class="text-white">
-              La compra de un tanque de asfalto es una gran inversión, y la base
-              de un negocio de producción de mezcla asfáltica. Compre
-              inteligentemente y con criterio.
-            </p>
-            <p class="text-white">
-              Podemos asesorarlo de forma transparente en la inversión de su
-              planta de asfalto, ayudándolo a elegir la opción más adecuada.
-            </p>
-          </div>
-          <div
-            class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
-          >
-            <!-- Botón 1 -->
-            <Whatsbtn />
-            <CotizacionBtn />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex flex-col justify-center items-center py-5">
-      <div>
-        <h1 class="font-bold text-xl lg:text-3xl">
-          Diseñada para producciones exigentes y de gran volumen.
-        </h1>
-      </div>
-      <div>
-        <h1 class="font-bold text-xl lg:text-3xl">
-          Fabricación para un rendimiento sin comparación.
-        </h1>
-      </div>
-    </div>
-  </section>
-
+  <CTASection1 />
   <CMPugMill />
   <CMPlanos client:only />
 </Layout>

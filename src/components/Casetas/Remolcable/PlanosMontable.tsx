@@ -2,8 +2,9 @@ import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useClipPathScrollTrigger } from "../../../components/lib/useClipPathScrollTrigger.tsx";
-import mainCaseta from "../../../assets/images/Casetas/VF.webp";
-import mainBlueP from "../../../assets/images/Casetas/BpVF.webp";
+import mainCaseta from "../../../assets/images/Casetas/VA.webp";
+import mainBlueP from "../../../assets/images/Casetas/BpVA.webp";
+import mainBlueP1 from "../../../assets/images/Casetas/BpVF.webp";
 import LateralCaseta from "../../../assets/images/Casetas/BpVL.webp";
 const cabinSize = [
   {
@@ -89,7 +90,7 @@ const DrumMixPlanos = () => {
           className="text-white font-bold
            flex items-center justify-center
             rounded will-change-transform transform-gpu
-             z-20 w-[350px] h-[450px]"
+             z-20 w-[300px] md:w-[450px] aspect-[600/509]"
         >
           <img
             src={mainBlueP.src}
@@ -555,7 +556,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="w-[272px] h-[353px] flex items-center justify-center">
                           <img
-                            src={mainBlueP.src}
+                            src={mainBlueP1.src}
                             alt=""
                             className="max-w-full max-h-full object-contain"
                           />

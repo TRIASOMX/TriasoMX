@@ -1,7 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
-import singleLow from "../../assets/images/IntegralAsphalt/singleLow.webp"
+import singleLow from "../../assets/images/IntegralAsphalt/singleLow.webp";
+import FillLinkButton from "../unitComponents/FillLinkButton";
 
 const OdometerSection = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -34,7 +35,7 @@ const OdometerSection = () => {
       },
       {
         threshold: 0.5, // cuando el 50% sea visible
-      }
+      },
     );
 
     const current = sectionRef.current;
@@ -46,16 +47,20 @@ const OdometerSection = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full max-w-7xl mx-auto px-8 py-10 lg:py-0 lg:mt-56 lg:mb-56 md:mt-56 md:mb-56">
-
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
-        <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
+    <div
+      ref={sectionRef}
+      className="w-full max-w-[1500px] px-8 py-6 md:py-20 min-h-[80vh]"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
+        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
           <div className="flex flex-col items-center justify-center">
             <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-[#4F4F4F]">Rango de producción de mezcla asfáltica</p>
+            <p className="text-[#4F4F4F]">
+              Rango de producción de mezcla asfáltica
+            </p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -79,37 +84,16 @@ const OdometerSection = () => {
               Capacidad del quemador
             </p>
           </div>
+          <FillLinkButton href="#planosIntegral" />
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-6">
+        <div className="flex flex-col items-center justify-center gap-6 col-span-1 md:col-span-4">
           <div>
-            <img src={singleLow.src} alt="Back of a Integral asphalt plant of 10 Tph" />
-          </div>
-          <a
-            href="#planosIntegral"
-            className="
-    group relative inline-flex items-center justify-center
-    px-4 py-2 rounded-xl
-    border border-black
-    text-black font-medium
-    overflow-hidden
-
-    transition-all duration-300 ease-out
-    hover:text-white hover:-translate-y-0.5 hover:shadow-lg
-  "
-          >
-            <span
-              className="
-      absolute inset-0 bg-black
-      translate-y-full
-      transition-transform duration-300 ease-out
-      group-hover:translate-y-0
-    "
+            <img
+              src={singleLow.src}
+              alt="Back of a Integral asphalt plant of 10 Tph"
             />
-            <span className="relative z-10">
-              Todos los detalles técnicos
-            </span>
-          </a>
+          </div>
         </div>
       </div>
     </div>
