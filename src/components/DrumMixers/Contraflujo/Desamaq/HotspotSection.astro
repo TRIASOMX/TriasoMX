@@ -53,7 +53,7 @@ const desamaqPanels = [
     items: [
       {
         label:
-          "Gracias a componentes extra-reforzados diseñados para una larga vida útil.",
+          "Gracias a componentes reforzados diseñados para una larga vida útil.",
       },
       { label: "Por ser equipos fabricados en México y no de importación." },
       { label: "Ahorro en refacciones recurrentes." },
@@ -131,7 +131,7 @@ const desamaqPanels2 = [
     items: [
       {
         label:
-          "Gracias a componentes extra-reforzados diseñados para una larga vida útil.",
+          "Gracias a componentes reforzados diseñados para una larga vida útil.",
       },
       { label: "Por ser equipos fabricados en México y no de importación." },
       { label: "Ahorro en refacciones recurrentes." },
@@ -184,16 +184,28 @@ const desamaqPanels2 = [
 
 <section class="py-12">
   <div class="max-w-7xl mx-auto px-8 mb-10">
-    <div class="flex border-b border-gray-200 justify-center">
+    <div
+      class="flex border-b border-gray-200 justify-center"
+      role="tablist"
+      aria-label="Configuración de tolvas"
+    >
       <button
+        id="tab-1-trigger"
         class="tab-button px-6 py-3 font-bold text-lg border-b-2 border-[#ca1c1c] text-black transition-all"
         data-target="tab-1"
+        role="tab"
+        aria-selected="true"
+        aria-controls="tab-1"
       >
         Con unidad de tolvas, independiente sobre chasis con llantas
       </button>
       <button
+        id="tab-2-trigger"
         class="tab-button px-6 py-3 font-bold text-lg border-b-2 border-transparent text-gray-500 transition-all"
         data-target="tab-2"
+        role="tab"
+        aria-selected="false"
+        aria-controls="tab-2"
       >
         Con unidad de tolvas montadas sobre el mismo chasis
       </button>
@@ -201,12 +213,17 @@ const desamaqPanels2 = [
   </div>
 
   <div id="tab-container">
-    <div id="tab-1" class="tab-content block">
+    <div
+      id="tab-1"
+      class="tab-content block"
+      role="tabpanel"
+      aria-labelledby="tab-1-trigger"
+    >
       <section class="max-w-7xl mx-auto px-8 mb-20">
         <div class="flex justify-center items-center mb-10">
-          <h1 class="text-black font-bold text-4xl text-center">
+          <h2 class="text-black font-bold text-4xl text-center">
             Ahorros que usted podrá lograr con la planta de asfalto
-          </h1>
+          </h2>
         </div>
         <div>
           <DropdownItem panels={desamaqPanels} />
@@ -257,7 +274,7 @@ const desamaqPanels2 = [
                   src={img2}
                   width={600}
                   height={400}
-                  alt="Baghouse cleaning system"
+                  alt="Tolvas independientes sobre chasis con llantas"
                   class="side-img rounded-2xl will-change-transform"
                 />
               </div>
@@ -267,18 +284,27 @@ const desamaqPanels2 = [
           <div
             class="relative flex max-w-7xl mx-auto px-8 items-center justify-center mt-5 lg:hidden"
           >
-            <Image src={img2} alt="Drum mixer" class="rounded-2xl" />
+            <Image
+              src={img2}
+              alt="Tolvas independientes sobre chasis con llantas"
+              class="rounded-2xl"
+            />
           </div>
         </div>
       </section>
     </div>
 
-    <div id="tab-2" class="tab-content hidden">
+    <div
+      id="tab-2"
+      class="tab-content hidden"
+      role="tabpanel"
+      aria-labelledby="tab-2-trigger"
+    >
       <section class="max-w-7xl mx-auto px-8 mb-20">
         <div class="flex justify-center items-center mb-10">
-          <h1 class="text-black font-bold text-4xl text-center">
+          <h2 class="text-black font-bold text-4xl text-center">
             Ahorros que usted podrá lograr con la planta de asfalto
-          </h1>
+          </h2>
         </div>
         <div>
           <DropdownItem panels={desamaqPanels2} />
@@ -329,7 +355,7 @@ const desamaqPanels2 = [
                   src={img2}
                   width={600}
                   height={400}
-                  alt="Baghouse cleaning system"
+                  alt="Tolvas montadas sobre el mismo chasis del tambor mezclador"
                   class="side-img rounded-2xl will-change-transform"
                 />
               </div>
@@ -339,7 +365,11 @@ const desamaqPanels2 = [
           <div
             class="relative flex justify-center max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
           >
-            <Image src={img2} alt="Drum mixer" class="rounded-2xl" />
+            <Image
+              src={img2}
+              alt="Tolvas montadas sobre el mismo chasis del tambor mezclador"
+              class="rounded-2xl"
+            />
           </div>
         </div>
       </section>
@@ -357,10 +387,10 @@ const desamaqPanels2 = [
 <!-- Otra sección  -->
 <section>
   <div class="flex justify-center items-center py-10">
-    <h1 class="font-bold text-4xl text-center text-[#393939]">
+    <h2 class="font-bold text-4xl text-center text-[#393939]">
       Las mejores plantas de asfalto <br />
       <span class="text-[#CA1C1C]"> son mexicanas </span>
-    </h1>
+    </h2>
   </div>
 
   <div class="w-full flex flex-col font-bold mt-5 lg:mt-0">
@@ -400,10 +430,10 @@ const desamaqPanels2 = [
             <p
               class="text-[#f4f5f6] font-normal text-sm md:text-base text-justify"
             >
-              Desde la fabricación, hasta materiales extra-reforzados,
-              fabricamos nuestras plantas para una operación continúa que mejora
-              la eficiencia y la seguridad del equipo, evitando paros
-              innecesarios y costos, cada componente tiene un propósito.
+              Desde la fabricación, hasta materiales reforzados, fabricamos
+              nuestras plantas para una operación continúa que mejora la
+              eficiencia y la seguridad del equipo, evitando paros innecesarios
+              y costos, cada componente tiene un propósito.
             </p>
           </div>
         </div>
@@ -412,7 +442,7 @@ const desamaqPanels2 = [
             src={obracivil2}
             width={600}
             height={400}
-            alt="Baghouse cleaning system"
+            alt="Planta de asfalto instalada en obra civil"
             class="dside-img rounded-2xl will-change-transform"
           />
         </div>
@@ -431,16 +461,20 @@ const desamaqPanels2 = [
     <div
       class="relative grid grid-cols-2 max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
     >
-      <Image src={obracivil2Low} alt="Drum mixer" class="rounded-2xl w-4/5" />
+      <Image
+        src={obracivil2Low}
+        alt="Planta de asfalto instalada en obra civil"
+        class="rounded-2xl w-4/5"
+      />
       <Image src={DMProv1} alt="Usage of a Drum mixer" class="rounded-lg" />
     </div>
   </div>
 
   <div class="max-w-7xl mx-auto px-8 mt-20">
     <div class="flex flex-col">
-      <h1 class="text-4xl">
+      <h2 class="text-4xl">
         Con <span class="italic font-bold">Triaso</span>
-      </h1>
+      </h2>
       <p class="font-bold text-[#14427c] text-3xl">
         conviértase en el proveedor preferido de mezcla asfáltica
       </p>
@@ -485,16 +519,19 @@ const desamaqPanels2 = [
     buttons.forEach((btn) => {
       btn.addEventListener("click", () => {
         const target = btn.getAttribute("data-target");
+        if (!target) return;
 
         // Resetear botones
         buttons.forEach((b) => {
           b.classList.remove("border-[blue-900]", "text-blue-900");
           b.classList.add("border-transparent", "text-gray-500");
+          b.setAttribute("aria-selected", "false");
         });
 
         // Activar botón clickeado
         btn.classList.add("border-[#ca1c1c]", "text-black");
         btn.classList.remove("border-transparent", "text-gray-500");
+        btn.setAttribute("aria-selected", "true");
 
         // Ocultar todos los contenidos
         contents.forEach((content) => {

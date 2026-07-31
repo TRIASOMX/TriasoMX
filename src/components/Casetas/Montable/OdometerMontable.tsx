@@ -52,7 +52,7 @@ const OdometerMontable = () => {
   return (
     <div
       ref={sectionRef}
-      className="max-w-[1500px] w-full px-8 py-6 md:py-20 min-h-[80vh]"
+      className="max-w-7xl w-full px-8 py-6 md:py-20 min-h-[80vh]"
     >
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
         <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">

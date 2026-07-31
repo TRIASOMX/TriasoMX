@@ -522,7 +522,7 @@ const DrumMixPlanos = () => {
                           Estructura extra reforzada para trabajo pesado a largo
                           plazo.
                         </li>
-                        <li>Flancos estéticos para una imagen profesional</li>
+                        <li>Flancos estéticos para una imagen profesional.</li>
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
@@ -1313,25 +1313,25 @@ const DrumMixPlanos = () => {
                               : "max-h-0 opacity-0"
                           }`}
                         >
-                          <li>Accionado por dos motores de 10 HP</li>
+                          <li>Accionado por dos motores de 10 HP.</li>
                           <li>
                             Sistema de accionamiento por roles de carga para
-                            operación continua y confiable
+                            operación continua y confiable.
                           </li>
                           <li>
-                            VFDs digitales para ajuste preciso de velocidad
+                            VFDs digitales para ajuste preciso de velocidad.
                           </li>
                           <li>
                             Aros y roles forjados, maquinados y tratados
-                            térmicamente para mayor durabilidad
+                            térmicamente para mayor durabilidad.
                           </li>
                           <li>
                             Componentes maquinados con precisión para un
-                            desempeño balanceado y resistente a la deformación
+                            desempeño balanceado y resistente a la deformación.
                           </li>
                           <li>
                             Montaje sobre muelles para absorber variaciones de
-                            carga y expansión térmica
+                            carga y expansión térmica.
                           </li>
                         </ul>
                       </div>
@@ -1398,8 +1398,8 @@ const DrumMixPlanos = () => {
                           </li>
 
                           <li>
-                            Montada sobre chasis de transporte estándar con tres
-                            ejes y rines de 16” para carretera.
+                            Montada sobre chasis de transporte estándar con un
+                            eje y rines de 16” para carretera.
                           </li>
                           <li>
                             Enganche tipo arrastre (pull-type) con acoplamiento
@@ -1608,7 +1608,7 @@ const DrumMixPlanos = () => {
                           Estructura extra reforzada para trabajo pesado a largo
                           plazo.
                         </li>
-                        <li>Flancos estéticos para una imagen profesional</li>
+                        <li>Flancos estéticos para una imagen profesional.</li>
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
@@ -2418,25 +2418,25 @@ const DrumMixPlanos = () => {
                               : "max-h-0 opacity-0"
                           }`}
                         >
-                          <li>Accionado por dos motores de 15 HP</li>
+                          <li>Accionado por dos motores de 15 HP.</li>
                           <li>
                             Sistema de accionamiento por roles de carga para
-                            operación continua y confiable
+                            operación continua y confiable.
                           </li>
                           <li>
-                            VFDs digitales para ajuste preciso de velocidad
+                            VFDs digitales para ajuste preciso de velocidad.
                           </li>
                           <li>
                             Aros y roles forjados, maquinados y tratados
-                            térmicamente para mayor durabilidad
+                            térmicamente para mayor durabilidad.
                           </li>
                           <li>
                             Componentes maquinados con precisión para un
-                            desempeño balanceado y resistente a la deformación
+                            desempeño balanceado y resistente a la deformación.
                           </li>
                           <li>
                             Montaje sobre muelles para absorber variaciones de
-                            carga y expansión térmica
+                            carga y expansión térmica.
                           </li>
                         </ul>
                       </div>
@@ -2502,7 +2502,7 @@ const DrumMixPlanos = () => {
                           </li>
 
                           <li>
-                            Montada sobre chasis de transporte estándar con tres
+                            Montada sobre chasis de transporte estándar con dos
                             ejes y rines de 16” para carretera.
                           </li>
                           <li>
@@ -2719,7 +2719,7 @@ const DrumMixPlanos = () => {
                           Estructura extra reforzada para trabajo pesado a largo
                           plazo.
                         </li>
-                        <li>Flancos estéticos para una imagen profesional</li>
+                        <li>Flancos estéticos para una imagen profesional.</li>
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
@@ -3527,25 +3527,25 @@ const DrumMixPlanos = () => {
                               : "max-h-0 opacity-0"
                           }`}
                         >
-                          <li>Accionado por dos motores de 20 HP</li>
+                          <li>Accionado por dos motores de 20 HP.</li>
                           <li>
                             Sistema de accionamiento por roles de carga para
-                            operación continua y confiable
+                            operación continua y confiable.
                           </li>
                           <li>
-                            VFDs digitales para ajuste preciso de velocidad
+                            VFDs digitales para ajuste preciso de velocidad.
                           </li>
                           <li>
                             Aros y roles forjados, maquinados y tratados
-                            térmicamente para mayor durabilidad
+                            térmicamente para mayor durabilidad.
                           </li>
                           <li>
                             Componentes maquinados con precisión para un
-                            desempeño balanceado y resistente a la deformación
+                            desempeño balanceado y resistente a la deformación.
                           </li>
                           <li>
                             Montaje sobre muelles para absorber variaciones de
-                            carga y expansión térmica
+                            carga y expansión térmica.
                           </li>
                         </ul>
                       </div>
@@ -3825,7 +3825,7 @@ const DrumMixPlanos = () => {
                           Estructura extra reforzada para trabajo pesado a largo
                           plazo.
                         </li>
-                        <li>Flancos estéticos para una imagen profesional</li>
+                        <li>Flancos estéticos para una imagen profesional.</li>
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
@@ -4634,25 +4634,25 @@ const DrumMixPlanos = () => {
                               : "max-h-0 opacity-0"
                           }`}
                         >
-                          <li>Accionado por dos motores de 20 HP</li>
+                          <li>Accionado por dos motores de 20 HP.</li>
                           <li>
                             Sistema de accionamiento por roles de carga para
-                            operación continua y confiable
+                            operación continua y confiable.
                           </li>
                           <li>
-                            VFDs digitales para ajuste preciso de velocidad
+                            VFDs digitales para ajuste preciso de velocidad.
                           </li>
                           <li>
                             Aros y roles forjados, maquinados y tratados
-                            térmicamente para mayor durabilidad
+                            térmicamente para mayor durabilidad.
                           </li>
                           <li>
                             Componentes maquinados con precisión para un
-                            desempeño balanceado y resistente a la deformación
+                            desempeño balanceado y resistente a la deformación.
                           </li>
                           <li>
                             Montaje sobre muelles para absorber variaciones de
-                            carga y expansión térmica
+                            carga y expansión térmica.
                           </li>
                         </ul>
                       </div>
@@ -4928,7 +4928,7 @@ const DrumMixPlanos = () => {
                           Estructura extra reforzada para trabajo pesado a largo
                           plazo.
                         </li>
-                        <li>Flancos estéticos para una imagen profesional</li>
+                        <li>Flancos estéticos para una imagen profesional.</li>
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
@@ -5711,25 +5711,25 @@ const DrumMixPlanos = () => {
                               : "max-h-0 opacity-0"
                           }`}
                         >
-                          <li>Accionado por dos motores de 20 HP</li>
+                          <li>Accionado por dos motores de 20 HP.</li>
                           <li>
                             Sistema de accionamiento por roles de carga para
-                            operación continua y confiable
+                            operación continua y confiable.
                           </li>
                           <li>
-                            VFDs digitales para ajuste preciso de velocidad
+                            VFDs digitales para ajuste preciso de velocidad.
                           </li>
                           <li>
                             Aros y roles forjados, maquinados y tratados
-                            térmicamente para mayor durabilidad
+                            térmicamente para mayor durabilidad.
                           </li>
                           <li>
                             Componentes maquinados con precisión para un
-                            desempeño balanceado y resistente a la deformación
+                            desempeño balanceado y resistente a la deformación.
                           </li>
                           <li>
                             Montaje sobre muelles para absorber variaciones de
-                            carga y expansión térmica
+                            carga y expansión térmica.
                           </li>
                         </ul>
                       </div>
@@ -6005,7 +6005,7 @@ const DrumMixPlanos = () => {
                           Estructura extra reforzada para trabajo pesado a largo
                           plazo.
                         </li>
-                        <li>Flancos estéticos para una imagen profesional</li>
+                        <li>Flancos estéticos para una imagen profesional.</li>
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
@@ -6794,25 +6794,25 @@ const DrumMixPlanos = () => {
                               : "max-h-0 opacity-0"
                           }`}
                         >
-                          <li>Accionado por dos motores de 20 HP</li>
+                          <li>Accionado por dos motores de 20 HP.</li>
                           <li>
                             Sistema de accionamiento por roles de carga para
-                            operación continua y confiable
+                            operación continua y confiable.
                           </li>
                           <li>
-                            VFDs digitales para ajuste preciso de velocidad
+                            VFDs digitales para ajuste preciso de velocidad.
                           </li>
                           <li>
                             Aros y roles forjados, maquinados y tratados
-                            térmicamente para mayor durabilidad
+                            térmicamente para mayor durabilidad.
                           </li>
                           <li>
                             Componentes maquinados con precisión para un
-                            desempeño balanceado y resistente a la deformación
+                            desempeño balanceado y resistente a la deformación.
                           </li>
                           <li>
                             Montaje sobre muelles para absorber variaciones de
-                            carga y expansión térmica
+                            carga y expansión térmica.
                           </li>
                         </ul>
                       </div>
@@ -7088,7 +7088,7 @@ const DrumMixPlanos = () => {
                           Estructura extra reforzada para trabajo pesado a largo
                           plazo.
                         </li>
-                        <li>Flancos estéticos para una imagen profesional</li>
+                        <li>Flancos estéticos para una imagen profesional.</li>
                         <li>
                           Componentes atornillados con recubrimiento
                           anticorrosivo.
@@ -7877,25 +7877,25 @@ const DrumMixPlanos = () => {
                               : "max-h-0 opacity-0"
                           }`}
                         >
-                          <li>Accionado por dos motores de 20 HP</li>
+                          <li>Accionado por dos motores de 20 HP.</li>
                           <li>
                             Sistema de accionamiento por roles de carga para
-                            operación continua y confiable
+                            operación continua y confiable.
                           </li>
                           <li>
-                            VFDs digitales para ajuste preciso de velocidad
+                            VFDs digitales para ajuste preciso de velocidad.
                           </li>
                           <li>
                             Aros y roles forjados, maquinados y tratados
-                            térmicamente para mayor durabilidad
+                            térmicamente para mayor durabilidad.
                           </li>
                           <li>
                             Componentes maquinados con precisión para un
-                            desempeño balanceado y resistente a la deformación
+                            desempeño balanceado y resistente a la deformación.
                           </li>
                           <li>
                             Montaje sobre muelles para absorber variaciones de
-                            carga y expansión térmica
+                            carga y expansión térmica.
                           </li>
                         </ul>
                       </div>

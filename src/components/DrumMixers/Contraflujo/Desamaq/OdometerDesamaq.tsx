@@ -55,20 +55,24 @@ const OdometerDesamaq = () => {
       className="max-w-[1500px] mx-auto px-8 md:px-0 py-10 md:py-20 min-h-[90vh]"
     >
       <div className="flex justify-center items-center pb-10">
-        <h1 className="text-[#4F4F4F] font-bold text-4xl">
+        <h2 className="text-[#4F4F4F] font-bold text-4xl">
           El equipo para una inversión económica y expandible
-        </h1>
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
         <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
           <div className="flex flex-col items-center justify-center lg:items-start">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
+            <div
+              className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full"
+              aria-hidden="true"
+            >
               <Odometer value={value} format="(,ddd)" duration={2000} />
-              <h1>-</h1>
+              <span>-</span>
               <Odometer value={value6} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
+            <span className="sr-only">40 a 160 Tph</span>
             <p className="text-[#4F4F4F] text-center lg:text-start">
               Rango de producción
             </p>
@@ -78,21 +82,29 @@ const OdometerDesamaq = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center md:justify-start md:items-baseline w-full">
+            <div
+              className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center md:justify-start md:items-baseline w-full"
+              aria-hidden="true"
+            >
               <Odometer value={value3} format="(,ddd)" duration={2000} />
 
               <p className="text-sm font-normal ml-3">Tons</p>
             </div>
+            <span className="sr-only">14 Tons</span>
             <p className="text-[#4F4F4F] text-center md:text-start w-full">
               Capacidad de cada tolva
             </p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center md:justify-start md:items-baseline w-full gap-1 lg:gap-0">
+            <div
+              className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center md:justify-start md:items-baseline w-full gap-1 lg:gap-0"
+              aria-hidden="true"
+            >
               <Odometer value={value2} format="(,ddd)" duration={2000} />
-              <h1 className="text-sm font-normal ml-3">%</h1>
+              <span className="text-sm font-normal ml-3">%</span>
             </div>
+            <span className="sr-only">30%</span>
             <p className="text-[#4F4F4F] text-center md:text-start w-full">
               Incorporación de RAP
             </p>

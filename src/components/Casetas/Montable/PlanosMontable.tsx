@@ -91,7 +91,7 @@ const DrumMixPlanos = () => {
           className="text-white font-bold
            flex items-center justify-center
             rounded will-change-transform transform-gpu
-             z-20 w-[300px] md:w-[450px] aspect-[600/509]"
+             z-20 w-[300px] md:w-[450px] aspect-[650/650]"
         >
           <img
             src={mainBlueP.src}

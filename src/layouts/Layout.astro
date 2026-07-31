@@ -1,51 +1,53 @@
 ---
-import "../styles/global.css"
-import Footer from "../components/Main/Footer.astro"
-import Navbar from "../components/Main/Navbar.astro"
+import "../styles/global.css";
+import Footer from "../components/Main/Footer.astro";
+import Navbar from "../components/Main/Navbar.astro";
 import CookieBanner from "../components/AboutPages/Banner/CookieBanner.astro";
-const { title = "TRIASOUS", description ="Manufacturer of high-quality asphalt plants and equipment. Durable, efficient, and built for top performance in road construction projects worldwide." } = Astro.props;
+const {
+  title = "TRIASOUS",
+  description = "Manufacturer of high-quality asphalt plants and equipment. Durable, efficient, and built for top performance in road construction projects worldwide.",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" >
-	<head class="font-sans">
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" >
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta
-			name="description"
-			content={description}>
-		<title>Astro Basics</title>
-	</head>
-	<body class="flex flex-col bg-bgMain">
-		<Navbar/>
-		<main class="flex-grow">
-			<slot /> <!-- Aquí se inyectará el contenido de las páginas -->
-			<CookieBanner/>
-		</main>
-		<Footer />
-	</body>
+<html lang="en">
+  <head class="font-sans">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="flex flex-col bg-bgMain">
+    <Navbar />
+    <main class="flex-grow">
+      <slot />
+      <!-- Aquí se inyectará el contenido de las páginas -->
+      <CookieBanner />
+    </main>
+    <Footer />
+  </body>
 
+  <script>
+    import {
+      loadConsentedScripts,
+      onConsentAccepted,
+    } from "../components/AboutPages/Banner/Consent";
+    import { trackedScripts } from "../components/AboutPages/Banner/Trackedscripts";
 
-	 <script>
-      import { loadConsentedScripts, onConsentAccepted } from '../components/AboutPages/Banner/Consent';
-      import { trackedScripts } from '../components/AboutPages/Banner/Trackedscripts';
+    loadConsentedScripts(trackedScripts);
 
-      loadConsentedScripts(trackedScripts);
-
-      onConsentAccepted(trackedScripts);
-    </script>
+    onConsentAccepted(trackedScripts);
+  </script>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		background: #f4f5f6;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #f4f5f6;
+  }
 </style>
-   
