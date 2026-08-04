@@ -77,7 +77,7 @@ const CARDS: CardData[] = [
     bg: "bg-[#f4f5f6]",
     scrollWeight: 0.8,
     content: (
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 pt-10 md:pt-20">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 pt-20">
         <h1 className="text-2xl md:text-5xl font-bold tracking-tight mb-4 lg:mb-6">
           Desde 10 hasta 600 Tph
         </h1>
@@ -296,7 +296,7 @@ export default function DominoCards() {
         {/* Render image - smaller on mobile, hidden on very small screens if needed */}
         <div
           ref={imageRef}
-          className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none w-[65vw] sm:w-[85vw] md:w-[65vw] lg:w-auto max-w-4xl"
+          className="fixed bottom-4 sm:bottom-6 left-0 sm:left-1/2 sm:-translate-x-1/2 z-50 pointer-events-none w-full px-8 sm:w-[85vw] sm:px-0 md:w-[65vw] lg:w-auto max-w-4xl"
         >
           <img
             src={render.src}
@@ -319,7 +319,7 @@ export default function DominoCards() {
               <div
                 className={`
                                     w-full h-full rounded-t-2xl shadow-xl
-                                    flex flex-col justify-start
+                                    flex flex-col justify-center md:justify-start
                                     px-4 sm:px-8 md:px-14 lg:px-20
                                     pt-6 sm:pt-8 md:pt-12 lg:pt-16
                                     pb-28 sm:pb-32 md:pb-12 lg:pb-16

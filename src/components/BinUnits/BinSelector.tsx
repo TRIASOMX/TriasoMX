@@ -46,7 +46,7 @@ export default function BinSelector() {
   const currentImage = imageMap[selectedBins][panelType];
 
   return (
-    <div className="bg-gray-100 flex flex-col gap-6 text-black w-full mt-10">
+    <div className="bg-gray-100 flex flex-col gap-6 text-black w-full py-4 md:py-10 min-h-[70vh] justify-evenly">
       <div className="w-full flex flex-col gap2 md:gap-4 justify-center items-center max-w-7xl px-4 sm:px-6 md:px-8 mx-auto">
         <div className="w-full flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
           <button
@@ -67,11 +67,11 @@ export default function BinSelector() {
             Sin flancos estéticos
           </button>
         </div>
-        <div className="flex items-center justify-center w-full md:h-[650px]">
+        <div className="flex items-center justify-center w-full h-full md:h-[650px] py-10 md:py-3">
           <img
             src={currentImage}
             alt={`Bins ${selectedBins} - ${panelType}`}
-            className="w-full max-w-[500px] sm:max-w-[700px] md:max-w-[1100px]"
+            className="w-full md:max-w-[1100px]"
           />
         </div>
         <div className="flex flex-col lg:flex-row bg-white rounded-2xl py-3 px-4 lg:px-16 justify-center items-center gap-2 lg:gap-10">

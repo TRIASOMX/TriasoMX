@@ -9,7 +9,7 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
 
 <!-- Hero con opciones -->
 <div
-  class="relative w-full bg-[url(/HeroS.webp)] bg-cover bg-bottom bg-no-repeat h-[400px] flex flex-col justify-start pt-5 items-center"
+  class="relative w-full bg-[url(/HeroS.webp)] bg-cover bg-bottom bg-no-repeat h-[200px] md:h-[400px] flex flex-col justify-start pt-5 items-center"
 >
   <div class="absolute inset-0 bg-gradient-to-b from-[#2e2e2e]/50 to-[#f4f5f6]">
   </div>
@@ -23,7 +23,7 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
     <a
       href="#Casetas"
       aria-label="Drum Mixers link"
-      class="hover:text-blueMain hover:border-b-blueMain text-center text-md py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+      class="hover:text-blueMain hover:border-b-blueMain text-center text-base py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
     >
       Casetas de control
     </a>
@@ -31,7 +31,7 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
     <a
       href="#Tanques"
       aria-label="Baghouses link"
-      class="hover:text-blueMain hover:border-b-blueMain text-center text-md py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+      class="hover:text-blueMain hover:border-b-blueMain text-center text-base py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
       data-tab="tab2"
     >
       Tanques de asfalto
@@ -40,7 +40,7 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
     <a
       href="#Bolsas"
       aria-label="Asphalt tanks link"
-      class="hover:text-blueMain hover:border-b-blueMain text-center text-md py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+      class="hover:text-blueMain hover:border-b-blueMain text-center text-base py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
       data-tab="tab3"
     >
       Casas de bolsas
@@ -49,7 +49,7 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
     <a
       href="#Tolvas"
       aria-label="Bins link"
-      class="text-center hover:text-blueMain hover:border-b-blueMain text-md py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+      class="text-center hover:text-blueMain hover:border-b-blueMain text-base py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
       data-tab="tab4"
     >
       Tolvas
@@ -57,7 +57,7 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
 
     <a
       href="#Calefaccion"
-      class="text-center hover:text-blueMain hover:border-b-blueMain text-md py-2 md:py-0 lg:py-0 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+      class="text-center hover:text-blueMain hover:border-b-blueMain text-base py-2 md:py-0 lg:py-0 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
       data-tab="tab5"
     >
       Sistemas de calefacción
@@ -65,7 +65,7 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
 
     <a
       href="#Mezcla"
-      class="text-center hover:text-blueMain hover:border-b-blueMain text-md py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
+      class="text-center hover:text-blueMain hover:border-b-blueMain text-base py-2 md:text-lg md:px-4 font-bold border-b-2 border-b-grisP focus:outline-none"
       data-tab="tab6"
     >
       Silos de mezcla asfáltica
@@ -155,25 +155,25 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
 <div>
   <section class="bg-[#1e1e1e] mt-20 overflow-visible pb-10">
     <div class="max-w-7xl mx-auto lg:px-0">
-      <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+      <div class="grid grid-cols-1 md:grid-cols-5 items-center gap-12">
         <!-- Texto -->
-        <div class="text-white max-w-xl px-8">
+        <div
+          class="text-white w-full col-span-1 md:col-span-3 px-8 justify-center items-center"
+        >
           <h1
             class="text-2xl md:text-3xl font-semibold my-6 bg-gradient-to-r from-[#f8ad00] via-[#dc363a] to-[#3992ff] bg-clip-text text-transparent"
           >
             Sistema de operación Triaso® − Relief
           </h1>
 
-          <div class="grid grid-cols-4">
-            <div
-              class="md:w-[100px] lg:w-[100px] flex flex-col justify-center items-center"
-            >
+          <div class="grid grid-cols-4 w-full py-6 gap-4">
+            <div class="flex flex-col justify-center items-center">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 color="#ffffff"
-                class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
+                class="w-[48px] h-[48px] md:w-[90px] md:h-[90px]"
               >
                 <path
                   d="M8 18L11 21L16 16"
@@ -189,17 +189,13 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
                   stroke-linejoin="round"></path>
               </svg>
 
-              <p
-                class="text-sm lg:text-base md:text-base font-bold text-white text-center"
-              >
+              <p class="text-sm md:text-lg font-bold text-white text-center">
                 Reportes históricos en la nube
               </p>
             </div>
-            <div
-              class="md:w-[100px] lg:w-[100px] flex flex-col justify-center items-center"
-            >
+            <div class="flex flex-col justify-center items-center">
               <svg
-                class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
+                class="w-[48px] h-[48px] md:w-[90px] md:h-[90px]"
                 viewBox="0 0 24 24"
                 stroke-width="2.2"
                 fill="none"
@@ -267,15 +263,13 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
                   stroke-linecap="round"
                   stroke-linejoin="round"></path></svg
               >
-              <p class="text-sm md:text-base font-bold text-white text-center">
+              <p class="text-sm md:text-lg font-bold text-white text-center">
                 Inteligencia artificial que protege tu equipo
               </p>
             </div>
-            <div
-              class="md:w-[100px] lg:w-[100px] flex flex-col justify-center items-center"
-            >
+            <div class="flex flex-col justify-center items-center">
               <svg
-                class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
+                class="w-[48px] h-[48px] md:w-[90px] md:h-[90px]"
                 stroke-width="2.2"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -306,15 +300,13 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
                   stroke="#ffffff"
                   stroke-width="2.2"></path></svg
               >
-              <p class="text-sm md:text-base font-bold text-white text-center">
+              <p class="text-sm md:text-lg font-bold text-white text-center">
                 Menos operadores, control total
               </p>
             </div>
-            <div
-              class="md:w-[100px] lg:w-[100px] flex flex-col justify-center items-center"
-            >
+            <div class="flex flex-col justify-center items-center">
               <svg
-                class="w-[48px] h-[48px] md:w-[64px] md:h-[64px]"
+                class="w-[48px] h-[48px] md:w-[90px] md:h-[90px]"
                 stroke-width="2.2"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -332,20 +324,20 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
                   stroke-linecap="round"
                   stroke-linejoin="round"></path></svg
               >
-              <p class="text-sm md:text-base font-bold text-white text-center">
+              <p class="text-sm md:text-lg font-bold text-white text-center">
                 Monitoreo remoto en la nube
               </p>
             </div>
           </div>
-
-          <h1 class="text-white font-bold text-xl py-4">
+          <br />
+          <h1 class="text-white font-bold text-xl text-center">
             Para evitar desperdicios, robos y mala operación de su planta de
             asfalto
-          </h1>
-          <p class="text-white font-semibold text-base">
+          </h1><br />
+          <p class="text-white font-semibold text-base text-center">
             Paro total con un solo botón desde su celular
           </p>
-          <div class="pt-5 flex items-center justify-center">
+          <div class="flex items-center justify-center">
             <a
               href="/Relief"
               aria-label="View page drum Mixers"
@@ -357,7 +349,7 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
         </div>
 
         <!-- Imagen -->
-        <div class="flex justify-end relative">
+        <div class="flex justify-end relative w-full col-span-1 md:col-span-2">
           <Image
             src={OSHand}
             alt="Triaso OS"
@@ -390,11 +382,9 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
 
   <div class="max-w-7xl mx-auto px-8 py-10">
     <div class="flex flex-col items-center justify-center">
-      <h1 class="font-bold text-4xl">
-        Solo el dueño de otra planta de asfalto Triaso,
-      </h1>
-      <h1 class="font-bold text-4xl">
-        igual de moderna, le puede hacer competencia.
+      <h1 class="font-bold text-xl md:text-4xl max-w-[60ch]">
+        Solo el dueño de otra planta de asfalto Triaso, igual de moderna, le
+        puede hacer competencia.
       </h1>
     </div>
   </div>

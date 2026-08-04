@@ -45,10 +45,6 @@ export default function ComparisonTable({
           tableOpen ? "rounded-t-lg" : "rounded-lg"
         }`}
       >
-        <div className="flex-1 px-4 py-3 bg-black  text-white font-semibold text-sm">
-          Características
-        </div>
-
         {modelColumns.map((col) => (
           <div
             key={col}
@@ -115,22 +111,24 @@ export default function ComparisonTable({
                   section.rows.map((row, rowIdx) => (
                     <div
                       key={row.label}
-                      className={`flex border-b border-gray-200 last:border-b-0 ${
+                      className={`border-b border-gray-200 last:border-b-0 ${
                         rowIdx % 2 === 0 ? "bg-white" : "bg-gray-50"
                       }`}
                     >
-                      <div className="flex-1 px-4 py-3 text-sm text-gray-800">
+                      <div className="px-4 pt-3 pb-1 text-sm font-semibold text-gray-800">
                         {row.label}
                       </div>
-                      {row.values.map((val, i) => (
-                        <div
-                          key={i}
-                          className="flex-1 px-4 py-3 text-sm text-gray-700 text-center"
-                        >
-                          <span>{val}</span>
-                        </div>
-                      ))}
-                      <div className="w-[52px]" />
+                      <div className="flex pb-3">
+                        {row.values.map((val, i) => (
+                          <div
+                            key={i}
+                            className="flex-1 px-4 text-sm text-gray-700 text-center"
+                          >
+                            <span>{val}</span>
+                          </div>
+                        ))}
+                        <div className="w-[52px]" />
+                      </div>
                     </div>
                   ))}
               </div>

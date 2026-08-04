@@ -917,7 +917,7 @@ export default function ProductSelector() {
   const [symbolModal, setSymbolModal] = useState<SymbolItem | null>(null);
 
   const isMobile = useIsMobile();
-  const isTableVisible = isMobile ? true : tableOpen;
+  const isTableVisible = tableOpen;
 
   const plant = data[active];
 
@@ -982,13 +982,13 @@ export default function ProductSelector() {
       style={{
         width: "100%",
         maxWidth: "72rem",
-        margin: "0 auto",
+        margin: "40px auto",
         padding: "3rem 1rem",
         fontFamily: "sans-serif",
       }}
     >
       {/* Selector Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-6 mb-6 md:mb-16">
         {(Object.keys(data) as PlantType[]).map((key) => {
           const item = data[key];
           const isActive = active === key;
@@ -1001,18 +1001,18 @@ export default function ProductSelector() {
                 setExpandedSections({});
               }}
               className={cn(
-                "relative rounded-xl p-6 pt-20 text-left transition-all duration-300 border-2 cursor-pointer group",
+                "w-full relative rounded-xl px-6 pt-10 md:pt-20 pb-4 md:pb-6 text-left transition-all duration-300 border-2 cursor-pointer group",
                 isActive
-                  ? "border-industrial bg-industrial-surface shadow-lg"
+                  ? "bg-[#14427c] border-[#14427c] text-white shadow-lg"
                   : "border-border bg-card hover:border-industrial-accent/40 hover:shadow-md",
               )}
             >
               {/* Imagen flotante */}
-              <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10">
+              <div className="absolute -top-20 left-1/2 -translate-x-1/2 z-10 w-[70%]">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className=" object-fill drop-shadow-xl transition-transform duration-300 group-hover:scale-105"
+                  className="w-full object-fill drop-shadow-xl transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
 
@@ -1021,11 +1021,11 @@ export default function ProductSelector() {
               )}
 
               {/* Contenido */}
-              <div className="flex flex-col items-center justify-start gap-6">
+              <div className="flex flex-col items-center justify-start md:gap-6">
                 <div className="flex-1 text-center">
-                  <h3 className={cn("text-xl font-bold mb-3")}>{item.title}</h3>
+                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
 
-                  <ul className="space-y-1">
+                  <ul className="hidden md:block space-y-1">
                     {item.features.map((f) => (
                       <li
                         key={f}
@@ -1037,7 +1037,7 @@ export default function ProductSelector() {
                     ))}
                   </ul>
 
-                  <div className="flex flex-col flex-wrap gap-4 mt-4 items-center">
+                  <div className="hidden md:flex flex-col flex-wrap gap-4 mt-4 items-center">
                     {item.stats.map((s) => (
                       <div key={s.label} className="text-center">
                         <span className="text-lg font-bold text-industrial">
@@ -1073,7 +1073,7 @@ export default function ProductSelector() {
             fontWeight: 700,
             color: colors.foreground,
             marginBottom: "1rem",
-            lineHeight: 1.3,
+            lineHeight: 1,
           }}
         >
           Contamos con tres modelos
@@ -1082,9 +1082,9 @@ export default function ProductSelector() {
         </h2>
         <p
           style={{
-            fontSize: "0.875rem",
+            fontSize: "clamp(0.875rem, 2vw, 1rem)",
             color: "#000000",
-            lineHeight: 1.75,
+            lineHeight: 1.45,
             margin: 0,
           }}
         >
@@ -1092,9 +1092,18 @@ export default function ProductSelector() {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-[1.5rem] mb-[4rem]">
+      <div
+        className="flex md:grid md:grid-cols-3 gap-6 md:gap-[1.5rem] mb-[4rem]
+                   overflow-x-auto md:overflow-visible
+                   snap-x snap-mandatory
+                   pt-14 md:pt-0
+                   scroll-smooth"
+      >
         {plant.models.map((model) => (
-          <div key={model.name} className="relative">
+          <div
+            key={model.name}
+            className="relative shrink-0 snap-center w-[78%] sm:w-[55%] md:w-auto"
+          >
             <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10 ">
               <img
                 src={model.image}
@@ -1131,8 +1140,8 @@ export default function ProductSelector() {
                   style={{
                     fontSize: "0.750rem",
                     color: "#5d5d5d",
-                    marginBottom: "1rem",
-                    lineHeight: 1.6,
+                    marginBottom: "0.80rem",
+                    lineHeight: 1.25,
                   }}
                 >
                   {model.description}
@@ -1144,7 +1153,7 @@ export default function ProductSelector() {
                     style={{
                       display: "flex",
                       flexDirection: "column",
-                      padding: "0.25rem 0",
+                      padding: "0.15rem 0",
                       fontSize: "0.875rem",
                     }}
                   >
@@ -1153,7 +1162,7 @@ export default function ProductSelector() {
                   </div>
                 ))}
 
-                <div className="mt-4 flex flex-col gap-1">
+                <div className="mt-2 md:mt-4 flex flex-col gap-1">
                   {model.tags.map((tag, i) => (
                     <span key={i} className="text-sm">
                       {tag}
@@ -1161,7 +1170,10 @@ export default function ProductSelector() {
                   ))}
                 </div>
 
-                <Button className="w-full mt-6" route={model.route || "#"}>
+                <Button
+                  className="w-full mt-2 md:mt-6"
+                  route={model.route || "#"}
+                >
                   Seleccionar modelo
                 </Button>
               </div>
@@ -1179,13 +1191,19 @@ export default function ProductSelector() {
             textAlign: "center",
             color: "#000000",
             marginBottom: "2rem",
+            lineHeight: 1.25,
           }}
         >
           Comparación de tambores de {plant.title.toLowerCase()}
         </h2>
 
-        <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
-          <div style={{ minWidth: "600px" }}>
+        <div
+          style={{
+            overflowX: isMobile ? "visible" : "auto",
+            WebkitOverflowScrolling: "touch",
+          }}
+        >
+          <div style={{ minWidth: isMobile ? "auto" : "600px" }}>
             <div
               style={{
                 display: "flex",
@@ -1194,18 +1212,6 @@ export default function ProductSelector() {
                 overflow: "hidden",
               }}
             >
-              <div
-                style={{
-                  flex: 1,
-                  padding: "0.75rem 1rem",
-                  backgroundColor: colors.industrial,
-                  color: colors.industrialForeground,
-                  fontWeight: 600,
-                  fontSize: "0.875rem",
-                }}
-              >
-                Características
-              </div>
               {modelColumns.map((col) => (
                 <div
                   key={col}
@@ -1222,28 +1228,26 @@ export default function ProductSelector() {
                   {col}
                 </div>
               ))}
-              {!isMobile && (
-                <button
-                  onClick={() => setTableOpen(!tableOpen)}
-                  style={{
-                    padding: "0.75rem 1rem",
-                    backgroundColor: colors.industrial,
-                    color: colors.industrialForeground,
-                    border: "none",
-                    cursor: "pointer",
-                    display: "flex",
-                    alignItems: "center",
-                    transition: "background-color 0.2s",
-                  }}
-                >
-                  <ChevronDown
-                    className={cn(
-                      "transition-transform",
-                      tableOpen ? "rotate-180" : "",
-                    )}
-                  />
-                </button>
-              )}
+              <button
+                onClick={() => setTableOpen(!tableOpen)}
+                style={{
+                  padding: "0.75rem 1rem",
+                  backgroundColor: colors.industrial,
+                  color: colors.industrialForeground,
+                  border: "none",
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  transition: "background-color 0.2s",
+                }}
+              >
+                <ChevronDown
+                  className={cn(
+                    "transition-transform",
+                    tableOpen ? "rotate-180" : "",
+                  )}
+                />
+              </button>
             </div>
 
             {/* body */}
@@ -1259,105 +1263,79 @@ export default function ProductSelector() {
                 {plant.tableData.map((section) => (
                   <div key={section.section}>
                     {/* separadores */}
-                    {isMobile ? (
-                      <div
+                    <button
+                      onClick={() => toggleSection(section.section)}
+                      style={{
+                        width: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        padding: "0.75rem 1rem",
+                        backgroundColor: colors.industrialSurface,
+                        borderBottom: `1px solid ${colors.border}`,
+                        cursor: "pointer",
+                        border: "none",
+                        borderTop: "none",
+                      }}
+                    >
+                      <span
                         style={{
-                          width: "100%",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "space-between",
-                          padding: "0.75rem 1rem",
-                          backgroundColor: colors.industrialSurface,
-                          borderBottom: `1px solid ${colors.border}`,
+                          fontWeight: 600,
+                          fontSize: "0.875rem",
+                          color: "#000000",
                         }}
                       >
-                        <span
-                          style={{
-                            fontWeight: 600,
-                            fontSize: "0.875rem",
-                            color: "#000000",
-                          }}
-                        >
-                          {section.section}
-                        </span>
-                      </div>
-                    ) : (
-                      <button
-                        onClick={() => toggleSection(section.section)}
-                        style={{
-                          width: "100%",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "space-between",
-                          padding: "0.75rem 1rem",
-                          backgroundColor: colors.industrialSurface,
-                          borderBottom: `1px solid ${colors.border}`,
-                          cursor: "pointer",
-                          border: "none",
-                          borderTop: "none",
-                        }}
-                      >
-                        <span
-                          style={{
-                            fontWeight: 600,
-                            fontSize: "0.875rem",
-                            color: "#000000",
-                          }}
-                        >
-                          {section.section}
-                        </span>
-                        <ChevronDown
-                          className={cn(
-                            "transition-transform",
-                            expandedSections[section.section]
-                              ? "rotate-180"
-                              : "",
-                          )}
-                        />
-                      </button>
-                    )}
+                        {section.section}
+                      </span>
+                      <ChevronDown
+                        className={cn(
+                          "transition-transform",
+                          expandedSections[section.section] ? "rotate-180" : "",
+                        )}
+                      />
+                    </button>
 
-                    {(isMobile || expandedSections[section.section]) &&
+                    {expandedSections[section.section] &&
                       section.rows.map((row) => (
                         <div
                           key={row.label}
                           style={{
-                            display: "flex",
                             borderBottom: `1px solid ${colors.border}`,
+                            backgroundColor: colors.cardBg,
                           }}
                         >
                           <div
                             style={{
-                              flex: 1,
-                              padding: "0.75rem 1rem",
+                              padding: "0.75rem 1rem 0.25rem",
                               fontSize: "0.875rem",
+                              fontWeight: 600,
                               color: "#000000",
-                              backgroundColor: colors.cardBg,
                             }}
                           >
                             {renderLabel(row.label)}
                           </div>
-                          {row.values.map((val, i) => (
-                            <div
-                              key={i}
-                              style={{
-                                flex: 1,
-                                padding: "0.75rem 1rem",
-                                fontSize: "0.875rem",
-                                color: colors.foreground,
-                                textAlign: "center",
-                                backgroundColor: colors.cardBg,
-                              }}
-                            >
-                              {val}
-                            </div>
-                          ))}
                           <div
                             style={{
-                              width: "52px",
-                              backgroundColor: colors.cardBg,
+                              display: "flex",
+                              paddingBottom: "0.75rem",
                             }}
-                          />
+                          >
+                            {row.values.map((val, i) => (
+                              <div
+                                key={i}
+                                style={{
+                                  flex: 1,
+                                  padding: "0 1rem",
+                                  fontSize: "0.875rem",
+                                  color: colors.foreground,
+                                  textAlign: "center",
+                                }}
+                              >
+                                {val}
+                              </div>
+                            ))}
+                            <div style={{ width: "52px" }} />
+                          </div>
                         </div>
                       ))}
                   </div>
@@ -1444,24 +1422,25 @@ export default function ProductSelector() {
       )}
 
       {/* descripción final */}
-      <div className="flex flex-col justify-center items-center py-10">
+      <div className="flex flex-col justify-center items-center py-4 md:py-10">
         <div>
-          <p>
+          <p className="text-base md:text-lg">
             ¿Necesita ayuda para decidirte? Compare ahora sus características.
           </p>
         </div>
+        <br />
         <div className="rounded-2xl border-2 border-black bg-white">
           <p className="px-5 py-2"> Comparar más modelos</p>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-8 space-y-2 flex flex-col lg:flex-row md:flex-row  justify-between items-center">
-        <div className="font-bold text-black text-2xl">
+      <div className="max-w-7xl px-0 md:px-8 space-y-2 flex flex-col lg:flex-row md:flex-row justify-between items-center">
+        <div className="font-bold text-black text-lg md:text-2xl w-full">
           <h1>Con estos equipos usted podrá</h1>
           <h1>abatir las costosas horas de</h1>
           <h1>producción:</h1>
         </div>
-        <div>
-          <ul className="list-disc">
+        <div className="w-full px-8">
+          <ul className="list-disc text-sm md:text-base">
             <li>Menores tiempos en carga de camiones.</li>
             <li>Optimización de jornadas de trabajo.</li>
             <li>Ahorro de horas hombre.</li>
