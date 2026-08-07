@@ -2410,7 +2410,7 @@ const BinPlanosSection = () => {
                             </div>
                             <div className="flex justify-between">
                               <span>Incorporación de RAP:</span>
-                              <p>40%</p>
+                              <p>30%</p>
                             </div>
                           </div>
                         </div>
@@ -3541,7 +3541,7 @@ const BinPlanosSection = () => {
                             </div>
                             <div className="flex justify-between">
                               <span>Incorporación de RAP:</span>
-                              <p>40%</p>
+                              <p>30%</p>
                             </div>
                           </div>
                         </div>
@@ -4659,7 +4659,7 @@ const BinPlanosSection = () => {
                             </div>
                             <div className="flex justify-between">
                               <span>Incorporación de RAP:</span>
-                              <p>40%</p>
+                              <p>30%</p>
                             </div>
                           </div>
                         </div>

@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Footer from "../components/Main/Footer.astro";
 import Navbar from "../components/Main/Navbar.astro";
 import CookieBanner from "../components/AboutPages/Banner/CookieBanner.astro";
+import ReadingProgressBar from "../components/ReadingProgressBar.astro";
 const {
   title = "TRIASOUS",
   description = "Manufacturer of high-quality asphalt plants and equipment. Durable, efficient, and built for top performance in road construction projects worldwide.",
@@ -20,6 +21,7 @@ const {
     <meta name="description" content={description} />
   </head>
   <body class="flex flex-col bg-bgMain">
+    <ReadingProgressBar />
     <Navbar />
     <main class="flex-grow">
       <slot />

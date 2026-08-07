@@ -3270,7 +3270,7 @@ const PDPlanos = () => {
                             </div>
                             <div className="flex justify-between">
                               <h1>5% humedad:</h1>
-                              <p>80 Tph</p>
+                              <p>90 Tph</p>
                             </div>
                           </div>
                         </div>
@@ -4289,11 +4289,11 @@ const PDPlanos = () => {
                           >
                             <div className="flex justify-between">
                               <h1>3% humedad:</h1>
-                              <p>140 Tph</p>
+                              <p>160 Tph</p>
                             </div>
                             <div className="flex justify-between">
                               <h1>5% humedad:</h1>
-                              <p>110 Tph</p>
+                              <p>120 Tph</p>
                             </div>
                           </div>
                         </div>

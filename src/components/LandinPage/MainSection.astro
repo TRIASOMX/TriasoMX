@@ -4,6 +4,7 @@ import landing2 from "../../assets/images/landing2.webp";
 import Image from "astro/components/Image.astro";
 import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 import HeroSlider from "../unitComponents/HeroSlider.tsx";
+import CotizacionBtn from "../unitComponents/cotizacionBtn.astro";
 
 const Cards = [
   {
@@ -157,47 +158,24 @@ const Cards = [
 <div
   class="flex flex-col lg:flex-row bg-gradient-to-b from-blueMain from-50% to-blueSecondary to-50% lg:bg-gradient-to-r lg:from-blueMain lg:from-50% lg:to-blueSecondary lg:to-50%"
 >
-  <div class="flex flex-col max-w-7xl mx-auto py-14 lg:flex-row">
+  <div
+    class="flex flex-col gap-10 max-w-7xl mx-auto py-6 md:py-14 px-8 lg:px-0 lg:flex-row lg:gap-0"
+  >
     <div
       class="w-full flex flex-col justify-center items-center gap-4 lg:mr-56"
     >
       <!-- Botón 1 -->
       <Whatsbtn />
 
-      <a
-        href="/Contact"
-        aria-label="Button to request a quote"
-        class="bg-blueSecondary border-white border border- text-white text-sm md:text-lg rounded-full w-full py-2 flex items-center justify-center gap-2 shadow-md hover:bg-[#0044A4]/80"
-      >
-        Solicitar una cotización
-        <svg
-          width="24px"
-          height="24px"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          color="#FFFFFF"
-        >
-          <!-- Icono del segundo botón (opcional) -->
-          <path
-            d="M5 12H19M19 12L12 5M19 12L12 19"
-            stroke="#FFFFFF"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-        </svg>
-      </a>
+      <CotizacionBtn />
     </div>
     <div
-      class="w-full h-full flex flex-col text-white justify-center items-center lg:items-end lg:justify-evenly"
+      class="w-full h-full flex flex-col text-white justify-center items-center text-center lg:items-end lg:justify-evenly lg:text-end"
     >
-      <h1 class="font-bold w-full text-sm lg:text-xl lg:text-end">
+      <h1 class="font-bold w-full text-sm lg:text-xl">
         Productividad y calidad a precios competitivos
       </h1>
-      <p
-        class="text-sm lg:text-base text-center font-bold text-grisSubP lg:text-end"
-      >
+      <p class="text-sm lg:text-base font-bold text-grisSubP">
         Nuestros clientes eligen Triaso sobre otras marcas por nuestra calidad,
         confiabilidad, precio y servicio.
       </p>

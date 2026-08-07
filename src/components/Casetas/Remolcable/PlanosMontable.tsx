@@ -643,7 +643,7 @@ const DrumMixPlanos = () => {
                           </div>
                           <p className="text-white lg:text-lg text-base w-full text-center mx-4">
                             {unit === "metric"
-                              ? `${cabinSize[0].length?.toFixed(1) ?? ""} cm`
+                              ? `${cabinSize[0].length?.toFixed(1) ?? ""} m`
                               : `${(
                                   (cabinSize[0].length ?? 0) * cmToFeet
                                 ).toFixed(1)} ft`}

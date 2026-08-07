@@ -3427,7 +3427,7 @@ const DrumMixPlanos = () => {
                             <div className="flex justify-between">
                               <h1>5% humedad:</h1>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
-                                80 Tph
+                                90 Tph
                               </p>
                             </div>
                           </div>

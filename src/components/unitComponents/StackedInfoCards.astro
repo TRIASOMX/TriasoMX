@@ -1,4 +1,11 @@
 ---
+type CardData = {
+  title: string;
+  text: string;
+  bg: string;
+  textColor: string;
+};
+
 const {
   cards = [],
   mainTitle,
@@ -9,7 +16,7 @@ const {
 ---
 
 <section
-  class="stack-section bg-neutral-100 flex flex-row justify-center items-center"
+  class="stack-section bg-neutral-100 flex flex-row justify-center items-center min-h-[calc(100vh-4rem)]"
 >
   <div
     class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center w-full"
@@ -30,7 +37,7 @@ const {
       class="cards-wrapper relative h-[700px] md:h-[600px] overflow-hidden"
     >
       {
-        cards.map((card) => (
+        cards.map((card: CardData) => (
           <div
             class="stack-card absolute w-full max-w-lg top-[10%] lg:top-[30%] md:top-[60%] right-0 rounded-xl p-10 shadow-xl"
             style={`background:${card.bg}; color:${card.textColor}`}
@@ -51,36 +58,43 @@ const {
   import ScrollTrigger from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
   document.addEventListener("DOMContentLoaded", () => {
-    const section = document.querySelector(".stack-section");
-    const wrapper = section.querySelector(".cards-wrapper");
-    const cards = gsap.utils.toArray(".stack-card");
+    const sections = document.querySelectorAll<HTMLElement>(".stack-section");
 
-    gsap.set(cards, {
-      y: (i) => (i === 0 ? 0 : wrapper.offsetHeight + 10),
-      zIndex: (i) => i,
-      transformOrigin: "top center",
+    sections.forEach((section) => {
+      const wrapper = section.querySelector<HTMLElement>(".cards-wrapper");
+      const cards = Array.from(
+        section.querySelectorAll<HTMLElement>(".stack-card"),
+      );
+
+      if (!wrapper || cards.length === 0) return;
+
+      gsap.set(cards, {
+        y: (i: number) => (i === 0 ? 0 : wrapper.offsetHeight + 10),
+        zIndex: (i: number) => i,
+        transformOrigin: "top center",
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              initAnimation(section, cards);
+              observer.disconnect();
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      observer.observe(section);
     });
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            initAnimation(section, cards);
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.1 },
-    );
-
-    observer.observe(section);
   });
 
-  function initAnimation(section, cards) {
+  function initAnimation(section: HTMLElement, cards: HTMLElement[]) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
-        start: "top top",
+        start: "top top+=64",
         end: `+=${cards.length * 400}`,
         scrub: 0.8,
         pin: true,
@@ -89,7 +103,7 @@ const {
       },
     });
 
-    cards.forEach((card, i) => {
+    cards.forEach((card: HTMLElement, i: number) => {
       if (i === 0) return;
 
       tl.to(

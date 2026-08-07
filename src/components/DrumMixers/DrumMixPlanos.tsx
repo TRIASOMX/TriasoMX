@@ -56,8 +56,8 @@ const toggleConfig = [
       drumHeight: 2.6431,
       transportationHeight: 4.2457,
       wheel: 1.4,
-      humidity3: 110,
-      humidity5: 80,
+      humidity3: 120,
+      humidity5: 90,
     },
   },
   {
@@ -71,8 +71,8 @@ const toggleConfig = [
       drumHeight: 2.6431,
       transportationHeight: 4.2457,
       wheel: 1.4,
-      humidity3: 140,
-      humidity5: 110,
+      humidity3: 160,
+      humidity5: 120,
     },
   },
   {
@@ -86,8 +86,8 @@ const toggleConfig = [
       drumHeight: 2.5908,
       transportationHeight: 4.2457,
       wheel: 1.4,
-      humidity3: 180,
-      humidity5: 140,
+      humidity3: 200,
+      humidity5: 160,
     },
   },
   {
@@ -101,7 +101,7 @@ const toggleConfig = [
       drumHeight: 2.8931,
       transportationHeight: 4.2457,
       wheel: 1.4,
-      humidity3: 250,
+      humidity3: 260,
       humidity5: 200,
     },
   },
@@ -131,8 +131,8 @@ const toggleConfig = [
       drumHeight: 2.8931,
       transportationHeight: 4.2457,
       wheel: 1.4,
-      humidity3: 360,
-      humidity5: 300,
+      humidity3: 480,
+      humidity5: 400,
     },
   },
   {
@@ -146,8 +146,8 @@ const toggleConfig = [
       drumHeight: 2.8931,
       transportationHeight: 4.2457,
       wheel: 1.4,
-      humidity3: 480,
-      humidity5: 400,
+      humidity3: 600,
+      humidity5: 500,
     },
   },
 ];
@@ -1360,11 +1360,11 @@ const DrumMixPlanos = () => {
                           >
                             <div className="flex justify-between">
                               <h1>3% humedad:</h1>
-                              <p>40 Tph</p>
+                              <p>{activeData?.dimensions.humidity3} Tph</p>
                             </div>
                             <div className="flex justify-between">
                               <h1>5% humedad:</h1>
-                              <p>30 Tph</p>
+                              <p>{activeData?.dimensions.humidity5} Tph</p>
                             </div>
                             <div className="flex justify-between">
                               <h1>Incorporación de RAP:</h1>
@@ -2583,13 +2583,13 @@ const DrumMixPlanos = () => {
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
                               >
-                                80 Tph
+                                {activeData?.dimensions.humidity3} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
                               <h1>5% humidity:</h1>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
-                                60 Tph
+                                {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
@@ -3811,13 +3811,13 @@ const DrumMixPlanos = () => {
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
                               >
-                                110 Tph
+                                {activeData?.dimensions.humidity3} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
                               <h1>5% humedad:</h1>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
-                                80 Tph
+                                {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
@@ -5037,13 +5037,13 @@ const DrumMixPlanos = () => {
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
                               >
-                                140 Tph
+                                {activeData?.dimensions.humidity3} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
                               <h1>5% humedad:</h1>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
-                                110 Tph
+                                {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
@@ -6235,11 +6235,11 @@ const DrumMixPlanos = () => {
                           >
                             <div className="flex justify-between">
                               <h1>3% humedad:</h1>
-                              <p>180 Tph</p>
+                              <p>{activeData?.dimensions.humidity3} Tph</p>
                             </div>
                             <div className="flex justify-between">
                               <h1>5% humedad:</h1>
-                              <p>140 Tph</p>
+                              <p>{activeData?.dimensions.humidity5} Tph</p>
                             </div>
                             <div className="flex justify-between">
                               <h1>Incorporación de RAP:</h1>
@@ -7435,13 +7435,13 @@ const DrumMixPlanos = () => {
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
                               >
-                                250 Tph
+                                {activeData?.dimensions.humidity3} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
                               <h1>5% humedad:</h1>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
-                                200 Tph
+                                {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
@@ -8637,13 +8637,13 @@ const DrumMixPlanos = () => {
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
                               >
-                                360 Tph
+                                {activeData?.dimensions.humidity3} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
                               <h1>5% humedad:</h1>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
-                                300 Tph
+                                {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
@@ -9839,13 +9839,13 @@ const DrumMixPlanos = () => {
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
                               >
-                                360 Tph
+                                {activeData?.dimensions.humidity3} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
                               <h1>5% humedad:</h1>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
-                                300 Tph
+                                {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
@@ -11041,13 +11041,13 @@ const DrumMixPlanos = () => {
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
                               >
-                                480 Tph
+                                {activeData?.dimensions.humidity3} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
                               <h1>5% humedad:</h1>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
-                                400 Tph
+                                {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
