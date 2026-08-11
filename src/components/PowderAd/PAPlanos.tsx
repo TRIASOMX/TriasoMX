@@ -780,7 +780,7 @@ const PAPlanos = () => {
                         </div>
                       </div>
                       <div className="my-3 flex flex-col">
-                        <p className="text-white text-lg">
+                        <p className="text-white text-base md:text-lg">
                           {unit === "metric"
                             ? `${
                                 toggleConfig?.dimensions.height.toFixed(2) ?? ""

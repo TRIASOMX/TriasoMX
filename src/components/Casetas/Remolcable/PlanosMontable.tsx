@@ -586,7 +586,7 @@ const DrumMixPlanos = () => {
                           </div>
                         </div>
                         <div className="my-3">
-                          <p className="text-white text-lg">
+                          <p className="text-white text-base md:text-lg">
                             {unit === "metric"
                               ? `${cabinSize[0].height?.toFixed(1) ?? ""} m`
                               : `${(

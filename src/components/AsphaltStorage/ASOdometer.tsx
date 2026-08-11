@@ -88,7 +88,9 @@ const ASOdometer = () => {
               de btu/hr de capacidad
             </p>
           </div>
-          <FillLinkButton href="#planos" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#planos" />
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-center col-span-1 md:col-span-4">
@@ -120,6 +122,10 @@ const ASOdometer = () => {
     All Technical Details
   </span>
 </a> */}
+
+          <div className="flex justify-center md:hidden">
+            <FillLinkButton href="#planos" />
+          </div>
         </div>
       </div>
     </div>

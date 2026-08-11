@@ -125,7 +125,7 @@ export default function SlidersCarrusel({ images }: SlidersCarruselProps) {
                 </div>
 
                 <div className="p-5 flex flex-col flex-grow">
-                  <h1 className="font-bold text-blueMain text-lg mb-3 text-start leading-tight">
+                  <h1 className="font-bold text-blueMain text-base md:text-lg mb-3 text-start leading-tight">
                     {img.title}
                   </h1>
 

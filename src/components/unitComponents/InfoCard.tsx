@@ -44,7 +44,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ sections }) => {
             className="w-full aspect-[16/9] object-cover"
           />
           <div className="p-4">
-            <h2 className="text-lg font-semibold">
+            <h2 className="text-base md:text-lg font-semibold">
               {sections[activeIndex].title}
             </h2>
             <p className="text-sm text-gray-600 mt-2">

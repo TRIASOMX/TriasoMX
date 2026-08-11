@@ -689,7 +689,7 @@ const FPHPlanos = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${toggleConfig[0].height?.toFixed(1) ?? ""} m`
                           : `${(

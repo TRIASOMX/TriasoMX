@@ -1040,7 +1040,7 @@ export default function ProductSelector() {
                   <div className="hidden md:flex flex-col flex-wrap gap-4 mt-4 items-center">
                     {item.stats.map((s) => (
                       <div key={s.label} className="text-center">
-                        <span className="text-lg font-bold text-industrial">
+                        <span className="text-base md:text-lg font-bold text-industrial">
                           {s.label}
                         </span>
                         {s.sub && (

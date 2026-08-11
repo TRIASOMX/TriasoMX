@@ -86,7 +86,9 @@ const OdometerMontable = () => {
               Aislamiento
             </p>
           </div>
-          <FillLinkButton href="#casetaPlanos" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#casetaPlanos" />
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-center col-span-1 md:col-span-4">
@@ -97,6 +99,10 @@ const OdometerMontable = () => {
               className="rounded-lg"
             />
           </div>
+        </div>
+
+        <div className="flex justify-center md:hidden">
+          <FillLinkButton href="#casetaPlanos" />
         </div>
       </div>
     </div>

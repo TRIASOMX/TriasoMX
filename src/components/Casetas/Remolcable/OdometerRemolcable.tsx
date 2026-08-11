@@ -79,7 +79,9 @@ const OdometerRemolcable = () => {
               Aislamiento
             </p>
           </div>
-          <FillLinkButton href="#planosCaseta" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#planosCaseta" />
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-center col-span-1 md:col-span-4 w-full">
@@ -89,6 +91,10 @@ const OdometerRemolcable = () => {
               alt="Caseta Odometer"
               className="rounded-lg"
             />
+          </div>
+
+          <div className="flex justify-center md:hidden">
+            <FillLinkButton href="#planosCaseta" />
           </div>
         </div>
       </div>

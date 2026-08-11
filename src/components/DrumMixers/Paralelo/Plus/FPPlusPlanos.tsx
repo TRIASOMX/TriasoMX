@@ -930,7 +930,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${
                               dim("aTransporte", "aTransporteMontada")?.toFixed(
@@ -2023,7 +2023,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${
                               dim("aTransporte", "aTransporteMontada")?.toFixed(
@@ -3126,7 +3126,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${
                               dim("aTransporte", "aTransporteMontada")?.toFixed(
@@ -4221,7 +4221,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${
                               dim("aTransporte", "aTransporteMontada")?.toFixed(
@@ -5313,7 +5313,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${
                               dim("aTransporte", "aTransporteMontada")?.toFixed(
@@ -6407,7 +6407,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${
                               dim("aTransporte", "aTransporteMontada")?.toFixed(

@@ -373,10 +373,10 @@ function MobileCardContent({
             <HighlightTitle
               title={card.title}
               highlights={(card as VideoCard).highlightWords}
-              className="text-2xl font-black tracking-tight leading-tight"
+              className="text-lg md:text-2xl font-black tracking-tight leading-tight"
             />
           ) : (
-            <h2 className="text-2xl font-black tracking-tight leading-tight">{card.title}</h2>
+            <h2 className="text-lg md:text-2xl font-black tracking-tight leading-tight">{card.title}</h2>
           )}
 
           {card.type === "feature" ? (

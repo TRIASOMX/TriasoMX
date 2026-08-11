@@ -109,7 +109,7 @@ export default function ReliefFourthSection() {
                 <div className='bg-gradient-to-r from-[#010106] to-[#2f2db7]'>
                     <div className='flex flex-col items-center justify-around md:flex-row lg:flex-row max-w-7xl mx-auto px-8 py-10 gap-4'>
                         <div className='flex flex-col gap-3'>
-                            <h2 className='font-bold text-3xl text-white'>Ejecución sencilla de diseños de mezcla</h2>
+                            <h2 className='font-bold text-xl md:text-3xl text-white'>Ejecución sencilla de diseños de mezcla</h2>
                             <p className='font-bold text-base md:text-lg text-[#d9d9d9] w-full md:w-4/5'>Nuestros sistemas de control están diseñados para simplificar la producción de mezcla asfáltica para pavimentación, desde mezclas tibias hasta mezclas en caliente, sin sacrificar el control ni la precisión.</p>
                         </div>
                         <div className="w-full flex justify-end">
@@ -179,8 +179,8 @@ export default function ReliefFourthSection() {
                         </div>
 
                         <div className='flex flex-col gap-3 order-1 md:order-2'>
-                            <h2 className='font-bold text-3xl text-white text-end'>Almacenamiento de diseño de mezcla</h2>
-                            <h2 className='font-bold text-2xl text-white text-end'>Almacenamiento de diseños de mezcla para más de 10,000 recetas.</h2>
+                            <h2 className='font-bold text-xl md:text-3xl text-white text-end'>Almacenamiento de diseño de mezcla</h2>
+                            <h2 className='font-bold text-lg md:text-2xl text-white text-end'>Almacenamiento de diseños de mezcla para más de 10,000 recetas.</h2>
                             <div className='space-y-3 w-full'>
                                 <p className='font-bold text-sm md:text-base text-[#d9d9d9] text-end w-full'>No dependemos de métodos primitivos para la aplicación de diseños de mezcla.</p>
                                 <p className='font-bold text-sm md:text-base text-[#d9d9d9] text-end'>En cambio, nos enfocamos en una ejecución moderna, rápida y sencilla para la producción de mezcla asfáltica.</p>
@@ -214,7 +214,7 @@ export default function ReliefFourthSection() {
                 <div className='bg-gradient-to-b from-[#751919] to-[#e02a2a]'>
                     <div className='flex flex-col items-center justify-around md:flex-row lg:flex-row max-w-7xl mx-auto px-8 py-10 gap-4'>
                         <div className='flex flex-col gap-3'>
-                            <h2 className='font-bold text-3xl text-white'>Operación manual</h2>
+                            <h2 className='font-bold text-xl md:text-3xl text-white'>Operación manual</h2>
                             <p className='font-bold text-base md:text-lg text-white w-full md:w-4/5'>Nuestras plantas de asfalto permiten operación manual en cualquier momento, asegurando la continuidad de producción cuando las condiciones de operación lo requieran.</p>
                         </div>
                         <div className="w-full flex justify-end">
@@ -240,7 +240,7 @@ export default function ReliefFourthSection() {
                         className="w-full max-w-7xl mx-auto px-8 lg:px-0 md:px-0 overflow-hidden transition-[max-height] duration-500 ease-in-out"
                         style={{ maxHeight: "0px" }}
                     >
-                        <div className='pl-0 lg:pl-12 md:pl-12 space-y-5 px-8 text-lg pb-5'>
+                        <div className='pl-0 lg:pl-12 md:pl-12 space-y-5 px-8 text-base md:text-lg pb-5'>
                             <p className='text-white'>A diferencia de los sistemas que restringen la intervención manual, nuestras plantas de asfalto están diseñadas para ofrecer control manual total además de automatización avanzada.</p>
                             <p className='font-bold text-white'>Mantenga produciendo mezcla asfáltica <span className=' text-white'>, incluso si algún componente electrónico necesita reemplazo.</span></p>
                             <ul className='list-disc pl-5'>
@@ -283,7 +283,7 @@ export default function ReliefFourthSection() {
                     className="flex-1 flex items-center justify-center pt-0 md:pt-10"
                 >
                     <div className=" max-w-7xl mx-auto text-center space-y-4 md:space-y-10">
-                        <h1 className="text-3xl font-bold text-black">
+                        <h1 className="text-xl md:text-3xl font-bold text-black">
                             La asistencia de inteligencia artificial más moderna
                         </h1>
                         <h2 className="text-xl font-semibold text-[#393939]">para la operación de plantas de asfalto.</h2>
@@ -321,7 +321,7 @@ export default function ReliefFourthSection() {
             <div className="max-w-7xl mx-auto flex flex-col justify-center items-center px-4 pt-14">
 
                 <div>
-                    <h1 className="font-bold text-3xl text-start text-[#393939] w-full md:w-4/6">El sistema de control utiliza tres pasos para alertar al operador y proteger el equipo:</h1>
+                    <h1 className="font-bold text-xl md:text-3xl text-start text-[#393939] w-full md:w-4/6">El sistema de control utiliza tres pasos para alertar al operador y proteger el equipo:</h1>
                     <div className="flex flex-row">
                         <div className="w-40 h-0.5 bg-[#DE3B21]"></div>
                         <div className="w-40 h-0.5 bg-[#D9D9D9]"></div>

@@ -94,7 +94,9 @@ const BHOdometer = () => {
               Gama de bolsas para plantas de asfalto
             </p>
           </div>
-          <FillLinkButton href="#planos" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#planos" />
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-center w-full col-span-1 md:col-span-4">
@@ -105,17 +107,21 @@ const BHOdometer = () => {
               className="rounded-lg"
             />
           </div>
+
+          <div className="flex justify-center md:hidden">
+            <FillLinkButton href="#planos" />
+          </div>
         </div>
       </div>
 
       <div className="flex flex-col justify-center items-center py-10">
         <div>
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-2xl md:text-4xl font-bold">
             Cumplimiento total de las normas ecológicas
           </h1>
         </div>
         <div>
-          <p className="font-thin text-[#393939] text-3xl">
+          <p className="font-thin text-[#393939] text-xl md:text-3xl">
             de México, Latinoamérica y Estados Unidos
           </p>
         </div>

@@ -84,7 +84,9 @@ const OdometerSection = () => {
               Capacidad del quemador
             </p>
           </div>
-          <FillLinkButton href="#planosIntegral" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#planosIntegral" />
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-6 col-span-1 md:col-span-4">
@@ -94,6 +96,10 @@ const OdometerSection = () => {
               alt="Back of a Integral asphalt plant of 10 Tph"
             />
           </div>
+        </div>
+
+        <div className="flex justify-center md:hidden">
+          <FillLinkButton href="#planosIntegral" />
         </div>
       </div>
     </div>

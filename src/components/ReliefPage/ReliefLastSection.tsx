@@ -7,14 +7,14 @@ export default function ReliefLastSection() {
            
             <div className='flex justify-center items-center bg-[#393939] p-4 md:p-10'>
                 <div className='max-w-7xl mx-auto px-8 text-center'>
-                    <h1 className='text-white font-bold text-3xl'>Seguridad y acceso</h1>
+                    <h1 className='text-white font-bold text-xl md:text-3xl'>Seguridad y acceso</h1>
                 </div>
             </div>
 
             <div className='flex flex-col md:flex-row lg:flex-row justify-center'>
                 <div className='bg-[#14427c] flex flex-col justify-center items-center w-full p-10'>
                     <div className='max-w-7xl mx-auto text-center'>
-                        <h1 className='text-white font-bold text-2xl'>Sistema de operación</h1>
+                        <h1 className='text-white font-bold text-lg md:text-2xl'>Sistema de operación</h1>
                         <h2 className='text-white font-semibold text-xl'>Inicio de sesión único </h2>
                         <h2 className='text-white font-semibold text-xl'>para cada operador en turno</h2>
                         <div className='pt-5'>
@@ -27,7 +27,7 @@ export default function ReliefLastSection() {
                 </div>
                 <div className='bg-redBg flex flex-col justify-center items-center w-full p-10'>
                     <div className='max-w-7xl mx-auto text-center'>
-                        <h1 className='text-white font-bold text-2xl'>Sistema de visualización</h1>
+                        <h1 className='text-white font-bold text-lg md:text-2xl'>Sistema de visualización</h1>
                         <h2 className='text-white font-semibold text-xl'>Acceso ilimitado para visualización</h2>
                         <h2 className='text-white font-semibold text-xl'>de la planta de asfalto</h2>
                         <div className='pt-5'>
@@ -50,7 +50,7 @@ export default function ReliefLastSection() {
                     <div className='max-w-7xl mx-auto px-8 space-y-8'>
                         
                         <div className='text-center'>
-                            <h1 className='font-bold text-4xl text-[#393939]'>Modernización de sistemas de control</h1>
+                            <h1 className='font-bold text-2xl md:text-4xl text-[#393939]'>Modernización de sistemas de control</h1>
                         </div>
 
                         <div className='space-y-5 text-center md:text-left'>

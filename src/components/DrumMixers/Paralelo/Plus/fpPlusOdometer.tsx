@@ -65,7 +65,7 @@ const OdometerDesamaq = () => {
       className="max-w-[1500px] mx-auto px-8 md:px-0 py-10 md:py-20 min-h-[80vh]"
     >
       <div className="flex justify-center items-center pb-10">
-        <h1 className="text-[#4F4F4F] font-bold text-4xl">
+        <h1 className="text-[#4F4F4F] font-bold text-2xl md:text-4xl">
           El equipo para arrasar con la competencia
         </h1>
       </div>
@@ -117,13 +117,19 @@ const OdometerDesamaq = () => {
               Pavimento Asfáltico Recuperado
             </p>
           </div>
-          <FillLinkButton href="#planosDrumMixers" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#planosDrumMixers" />
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-center col-span-1 md:col-span-4">
           <div>
             <img src={odoImg.src} alt="Odometer Drum" className="rounded-2xl" />
           </div>
+        </div>
+
+        <div className="flex justify-center md:hidden">
+          <FillLinkButton href="#planosDrumMixers" />
         </div>
       </div>
     </div>

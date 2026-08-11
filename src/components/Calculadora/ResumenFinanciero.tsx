@@ -99,8 +99,8 @@ export default function ResumenFinanciero({ state }: Props) {
           <div className="text-right font-medium text-red-500">- {fmt(ucostos)}</div>
 
           <div className="md:col-span-2 border-t border-black mt-2 pt-2 flex justify-between items-center">
-            <span className="text-lg font-bold text-black">NET MONTHLY INCOME</span>
-            <span className="text-2xl font-bold text-green-700">{fmt(utilidad)}</span>
+            <span className="text-base md:text-lg font-bold text-black">NET MONTHLY INCOME</span>
+            <span className="text-lg md:text-2xl font-bold text-green-700">{fmt(utilidad)}</span>
           </div>
         </div>
       </section>

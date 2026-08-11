@@ -58,15 +58,15 @@ const OdometerDesamaq = () => {
       className="max-w-[1500px] mx-auto px-8 md:px-0 py-10 md:py-20 min-h-[90vh]"
     >
       <div className="flex justify-center items-center pb-10">
-        <h1 className="text-[#4F4F4F] font-bold text-4xl">
+        <h1 className="text-[#4F4F4F] font-bold text-2xl md:text-4xl">
           El equipo para ser altamente competitivo
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
+      <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center gap-4">
         <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
           <div className="flex flex-col items-center justify-center lg:items-start">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value6} format="(,ddd)" duration={2000} />
@@ -81,7 +81,7 @@ const OdometerDesamaq = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value5} format="(,ddd)" duration={2000} />
@@ -93,7 +93,7 @@ const OdometerDesamaq = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full gap-1 lg:gap-0">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full gap-1 lg:gap-0">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <h1 className="text-sm font-normal ml-3">%</h1>
             </div>
@@ -104,13 +104,19 @@ const OdometerDesamaq = () => {
               Pavimento Asfáltico Recuperado
             </p>
           </div>
-          <FillLinkButton href="#planosDrumMixers" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#planosDrumMixers" />
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-center col-span-1 md:col-span-4">
           <div>
             <img src={odoImg.src} alt="Odometer Drum" className="rounded-2xl" />
           </div>
+        </div>
+
+        <div className="flex justify-center md:hidden">
+          <FillLinkButton href="#planosDrumMixers" />
         </div>
       </div>
     </div>

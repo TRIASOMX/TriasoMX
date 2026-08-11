@@ -6,9 +6,9 @@ import render5 from "../../assets/images/DrumMixers/Low/render5Low.webp";
 import { Image } from "astro:assets";
 ---
 
-<section class="pt-10 pb-10 w-full flex justify-center">
+<section class="pt-10 pb-10 w-full flex justify-center px-2">
   <div
-    class="flex flex-col w-full max-w-7xl px-8 items-center justify-center bg-white rounded-2xl relative font-semibold"
+    class="flex flex-col w-full max-w-7xl px-4 md:px-8 items-center justify-center bg-white rounded-2xl relative font-semibold"
   >
     <details class="group max-w-7xl w-full">
       <summary class="cursor-pointer list-none w-full">
@@ -66,11 +66,11 @@ import { Image } from "astro:assets";
               class="snap-center shrink-0 w-[80%] max-w-[320px] bg-bgMain rounded-2xl p-4 min-h-[350px] box-border"
             >
               <h1
-                class="text-2xl md:text-4xl text-black mb-10 w-full text-start"
+                class="text-xl md:text-4xl text-black mb-10 w-full text-start"
               >
                 Elevador integrado con sistema abisagrado
               </h1>
-              <p class="text-base md:text-lg font-thin text-grisT">
+              <p class="text-xs md:text-lg font-thin text-grisT">
                 El elevador está abisagrado sobre el mismo chasis del tambor
                 mezclador, lo que permite una instalación inmediata y reduce el
                 tiempo de instalación en obra. Su diseño está pensado para
@@ -82,11 +82,11 @@ import { Image } from "astro:assets";
               class="snap-center shrink-0 w-[80%] max-w-[320px] bg-bgMain rounded-2xl p-4 min-h-[350px] box-border"
             >
               <h1
-                class="text-2xl md:text-4xl text-black mb-10 w-full text-start"
+                class="text-xl md:text-4xl text-black mb-10 w-full text-start"
               >
                 Cadena con paso de 4”
               </h1>
-              <p class="text-grisT text-base md:text-lg font-thin">
+              <p class="text-grisT text-xs md:text-lg font-thin">
                 Diseñamos la cadena con paso de 4” del elevador para trabajo
                 pesado. <span style="color:black;">
                   Con una resistencia a la tensión de 50,000 lb (22,700 kg) y
@@ -100,11 +100,11 @@ import { Image } from "astro:assets";
               class="snap-center shrink-0 w-[80%] max-w-[320px] bg-bgMain rounded-2xl p-4 min-h-[350px] box-border"
             >
               <h1
-                class="text-2xl md:text-4xl text-black mb-10 w-full text-start"
+                class="text-xl md:text-4xl text-black mb-10 w-full text-start"
               >
                 Rodamientos auto-alineables
               </h1>
-              <p class="text-grisT text-base md:text-lg font-thin">
+              <p class="text-grisT text-xs md:text-lg font-thin">
                 Usamos rodamientos auto-alineables en el elevador, garantizando
                 un funcionamiento suave al compensar automáticamente cualquier
                 desalineación. Esto reduce el desgaste y prolonga la vida útil,
@@ -116,11 +116,11 @@ import { Image } from "astro:assets";
         </div>
 
         <h1
-          class="hidden lg:flex text-2xl md:text-4xl text-black mb-10 w-full text-start"
+          class="hidden lg:flex text-xl md:text-4xl text-black mb-10 w-full text-start"
         >
           Elevador integrado con sistema abisagrado
         </h1>
-        <p class="hidden lg:flex text-base md:text-lg font-thin text-grisT">
+        <p class="hidden lg:flex text-xs md:text-lg font-thin text-grisT">
           El elevador está abisagrado sobre el mismo chasis del tambor
           mezclador, lo que permite una instalación inmediata y reduce el tiempo
           de instalación en obra. Su diseño está pensado para integrarse
@@ -137,8 +137,10 @@ import { Image } from "astro:assets";
             <div
               class="bg-white rounded-2xl text-base md:text-lg flex flex-col text-start lg:p-4 md:p-4 justify-center"
             >
-              <h1 class="text-black mb-4 font-bold">Cadena con paso de 4”</h1>
-              <p class="text-grisT font-thin">
+              <h1 class="text-black mb-4 font-bold text-xl md:text-4xl">
+                Cadena con paso de 4”
+              </h1>
+              <p class="text-grisT font-thin text-xs md:text-lg">
                 Diseñamos la cadena con paso de 4” del elevador para trabajo
                 pesado. <span style="color:black;">
                   Con una resistencia a la tensión de 50,000 lb (22,700 kg) y
@@ -151,8 +153,10 @@ import { Image } from "astro:assets";
             <div
               class="bg-white rounded-2xl text-base lg:text-lg flex flex-col text-start lg:p-4 md:p-4 justify-center"
             >
-              <h1 class="text-black mb-4">Rodamientos auto-alineables</h1>
-              <p class="text-grisT text-base lg:text-lg font-thin">
+              <h1 class="text-black mb-4 text-xl md:text-4xl">
+                Rodamientos auto-alineables
+              </h1>
+              <p class="text-grisT text-xs lg:text-lg font-thin">
                 Usamos rodamientos auto-alineables en el elevador, garantizando
                 un funcionamiento suave al compensar automáticamente cualquier
                 desalineación. Esto reduce el desgaste y prolonga la vida útil,
@@ -168,7 +172,7 @@ import { Image } from "astro:assets";
         >
           <div class="gap-10 md:gap-20">
             <div
-              class="grid grid-cols-2 space-y-10 gap-5 pt-5 lg:pt-0 md:pt-0 lg:gap-0 md:gap-0 text-grisT md:text-lg text-base relative z-20"
+              class="grid grid-cols-2 space-y-2 md:space-y-10 gap-5 pt-5 lg:pt-0 md:pt-0 lg:gap-0 md:gap-0 text-grisT md:text-lg text-base relative z-20"
             >
               <div
                 class="flex flex-col justify-center lg:items-start text-grisT md:text-lg text-base"
@@ -259,7 +263,7 @@ import { Image } from "astro:assets";
         >
           <div class="w-full relative mt-10 pb-40 md:pb-60">
             <div class="w-full z-20 relative">
-              <h2 class="text-center text-2xl md:text-3xl text-blueMain">
+              <h2 class="text-center text-xl md:text-3xl text-blueMain">
                 Monitoreo remoto en tiempo real de la descarga de mezcla
                 asfáltica caliente en los camiones.
               </h2>

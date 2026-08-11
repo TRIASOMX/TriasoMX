@@ -86,7 +86,9 @@ const BOdometer = () => {
               Banda dosificadora
             </p>
           </div>
-          <FillLinkButton href="#planosBinUnits" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#planosBinUnits" />
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-center mx-auto gap-6 pt-10 col-span-1 md:col-span-4">
@@ -96,6 +98,10 @@ const BOdometer = () => {
               alt="Bin Unit Odometer"
               className=" object-cover rounded-xl"
             />
+          </div>
+
+          <div className="flex justify-center md:hidden">
+            <FillLinkButton href="#planosBinUnits" />
           </div>
         </div>
       </div>

@@ -79,7 +79,9 @@ const RPOdometer = () => {
               banda dosificadora
             </p>
           </div>
-          <FillLinkButton href="#planosRapBins" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#planosRapBins" />
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-6">
@@ -106,6 +108,10 @@ const RPOdometer = () => {
               All Technical Details
             </span>
           </a> */}
+
+          <div className="flex justify-center md:hidden">
+            <FillLinkButton href="#planosRapBins" />
+          </div>
         </div>
       </div>
     </div>

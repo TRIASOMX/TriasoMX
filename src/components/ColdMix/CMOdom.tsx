@@ -83,7 +83,9 @@ const CMOdom = () => {
             </div>
             <p className="text-[#4F4F4F] text-start w-full">Banda colectora</p>
           </div>
-          <FillLinkButton href="#planosCold" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#planosCold" />
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-6 col-span-1 md:col-span-4">
@@ -94,6 +96,10 @@ const CMOdom = () => {
               className="max-w-[600px]"
             />
           </div>
+        </div>
+
+        <div className="flex justify-center md:hidden">
+          <FillLinkButton href="#planosCold" />
         </div>
       </div>
     </div>

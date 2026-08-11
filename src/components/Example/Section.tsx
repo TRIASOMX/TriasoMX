@@ -34,7 +34,7 @@ export default function Section() {
     <div className="relative">
       {/* Elemento que marca el inicio del scroll */}
       <div ref={startRef} className="h-[100vh] bg-black flex items-center justify-center text-white">
-        <h1 className="text-3xl">Inicio del scroll 👇</h1>
+        <h1 className="text-xl md:text-3xl">Inicio del scroll 👇</h1>
       </div>
 
       {/* Sección con las imágenes, será el endTrigger */}
@@ -57,7 +57,7 @@ export default function Section() {
 
       {/* Espacio extra para scroll */}
       <div className="h-[100vh] bg-black flex items-center justify-center text-white">
-        <h1 className="text-3xl">Fin ☝️</h1>
+        <h1 className="text-xl md:text-3xl">Fin ☝️</h1>
       </div>
     </div>
   );

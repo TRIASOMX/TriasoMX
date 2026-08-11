@@ -138,7 +138,7 @@ export default function GallerySlider({
           <button
             onClick={goToPrevious}
             disabled={currentIndex === 0}
-            className="absolute left-0 z-10 p-2 text-red-600 text-3xl font-bold hover:scale-110 transition disabled:opacity-20"
+            className="absolute left-0 z-10 p-2 text-red-600 text-xl md:text-3xl font-bold hover:scale-110 transition disabled:opacity-20"
             aria-label="Slide anterior"
           >
             ‹
@@ -158,7 +158,7 @@ export default function GallerySlider({
           <button
             onClick={goToNext}
             disabled={currentIndex === slides.length - 1}
-            className="absolute right-0 z-10 p-2 text-red-600 text-3xl font-bold hover:scale-110 transition disabled:opacity-20"
+            className="absolute right-0 z-10 p-2 text-red-600 text-xl md:text-3xl font-bold hover:scale-110 transition disabled:opacity-20"
             aria-label="Slide siguiente"
           >
             ›
@@ -280,14 +280,14 @@ export default function GallerySlider({
           <button
             onClick={goToPrevious}
             disabled={currentIndex === 0}
-            className="p-2 text-red-600 text-3xl font-bold hover:scale-110 transition disabled:opacity-20"
+            className="p-2 text-red-600 text-xl md:text-3xl font-bold hover:scale-110 transition disabled:opacity-20"
             aria-label="Slide anterior"
           >
             ‹
           </button>
 
           <div className="text-center">
-            <h2 className="text-lg font-medium">
+            <h2 className="text-base md:text-lg font-medium">
               {slides[currentIndex].caption}
             </h2>
             <div className="text-sm text-gray-500">
@@ -298,7 +298,7 @@ export default function GallerySlider({
           <button
             onClick={goToNext}
             disabled={currentIndex === slides.length - 1}
-            className="p-2 text-red-600 text-3xl font-bold hover:scale-110 transition disabled:opacity-20"
+            className="p-2 text-red-600 text-xl md:text-3xl font-bold hover:scale-110 transition disabled:opacity-20"
             aria-label="Slide siguiente"
           >
             ›

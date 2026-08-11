@@ -54,7 +54,7 @@ const TimelineContent: React.FC<TimelineContentProps> = ({
                       className="group relative rounded-xl border border-border p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
                       style={{ animationDelay: `${idx * 100}ms` }}
                     >
-                      <h3 className="text-lg font-semibold font-display mb-2">
+                      <h3 className="text-base md:text-lg font-semibold font-display mb-2">
                         {event.title}
                       </h3>
 

@@ -86,7 +86,9 @@ const PrecalentadoresOdometro = () => {
               Tamaño de filtrado de impurezas en combustible
             </p>
           </div>
-          <FillLinkButton href="#fuelPreHeaters" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#fuelPreHeaters" />
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-center col-span-1 md:col-span-4">
@@ -96,6 +98,10 @@ const PrecalentadoresOdometro = () => {
               alt="Baghouse Odometer"
               className="rounded-lg"
             />
+          </div>
+
+          <div className="flex justify-center md:hidden">
+            <FillLinkButton href="#fuelPreHeaters" />
           </div>
         </div>
       </div>

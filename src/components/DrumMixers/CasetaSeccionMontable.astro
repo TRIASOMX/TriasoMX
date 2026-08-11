@@ -3,8 +3,8 @@ import caseta from "../../assets/images/Casetas/montable.webp";
 import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
 ---
 
-<section class="overflow-hidden max-w-7xl mx-auto px-8">
-  <div class="pt-10 pb-6">
+<section class="overflow-hidden max-w-7xl mx-auto">
+  <div class="pt-10 pb-6 px-8">
     <h2 class="font-bold text-black text-2xl md:text-4xl mb-1">
       CASETA DE CONTROL MONTABLE
     </h2>
@@ -24,7 +24,7 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
     />
   </div>
 
-  <div class="flex min-h-[280px] bg-gradient-to-r from-white to to-black">
+  <div class="flex min-h-[240px] bg-gradient-to-r from-white to to-black">
     <div class="basis-[52%] shrink-0 relative overflow-hidden">
       <img
         src={caseta.src}
@@ -34,13 +34,15 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
       />
     </div>
 
-    <div class="flex-1 flex flex-col justify-center px-6 py-6 overflow-hidden">
+    <div
+      class="flex-1 flex flex-col justify-center px-0 md:px-6 py-5 overflow-hidden"
+    >
       <div
         id="carruselTrack"
         class="flex gap-4 transition-transform duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
       >
         <article
-          class="max-w-[300px] shrink-0 bg-white rounded-md p-4 shadow-md
+          class="max-w-[300px] shrink-0 bg-white rounded-md p-3 shadow-md
                         transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
         >
           <div class="w-10 h-10 mb-3">
@@ -84,17 +86,17 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
                 fill="none"></circle>
             </svg>
           </div>
-          <h3 class="font-bold text-base text-black mb-1">
+          <h3 class="font-bold text-sm md:text-base text-black mb-1">
             Instalación sencilla
           </h3>
-          <p class="text-gray-500">
+          <p class="text-gray-500 text-xs md:text-sm">
             Caseta de control montable diseñada para una instalación rápida,
             segura y práctica en cualquier sitio de trabajo.
           </p>
         </article>
 
         <article
-          class="max-w-[300px] shrink-0 bg-white rounded-md p-4 shadow-md
+          class="max-w-[300px] shrink-0 bg-white rounded-md p-3 shadow-md
                         transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
         >
           <div class="w-10 h-10 mb-3">
@@ -124,10 +126,10 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
                 stroke-linecap="round"></path>
             </svg>
           </div>
-          <h3 class="font-bold text-base text-black mb-1">
+          <h3 class="font-bold text-sm md:text-base text-black mb-1">
             Fabricada con acero calibre 16 y paneles aislados
           </h3>
-          <p class="text-gray-500">
+          <p class="text-gray-500 text-xs md:text-sm">
             Ofrecemos durabilidad y aislamiento térmico, garantizando
             resistencia estructural mientras mantiene un ambiente interior
             controlado.
@@ -135,7 +137,7 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
         </article>
 
         <article
-          class="max-w-[300px] shrink-0 bg-white rounded-md p-4 shadow-md
+          class="max-w-[300px] shrink-0 bg-white rounded-md p-3 shadow-md
                         transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
         >
           <div class="w-10 h-10 mb-3">
@@ -192,17 +194,17 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
                 fill="none"></rect>
             </svg>
           </div>
-          <h3 class="font-bold text-base text-black mb-1">
+          <h3 class="font-bold text-sm md:text-base text-black mb-1">
             Aire acondicionado
           </h3>
-          <p class="text-gray-500">
+          <p class="text-gray-500 text-xs md:text-sm">
             Con aire acondicionado de 1.5 Ton. Embutible para no exceder el
             ancho de transporte.
           </p>
         </article>
 
         <article
-          class="max-w-[300px] shrink-0 bg-white rounded-md p-4 shadow-md
+          class="max-w-[300px] shrink-0 bg-white rounded-md p-3 shadow-md
                         transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
         >
           <div class="w-10 h-10 mb-3">
@@ -224,8 +226,10 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
                 stroke-linejoin="round"></path>
             </svg>
           </div>
-          <h3 class="font-bold text-base text-black mb-1">Instalación</h3>
-          <p class="text-gray-500">
+          <h3 class="font-bold text-sm md:text-base text-black mb-1">
+            Instalación
+          </h3>
+          <p class="text-gray-500 text-xs md:text-sm">
             Oreja de fijación con tolvas para transporte seguro. Puntos de
             enganche para cables de grúa o payloader. Puntos de inserción de
             horquillas de montacargas.
@@ -233,7 +237,7 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
         </article>
 
         <article
-          class="max-w-[300px] shrink-0 bg-white rounded-md p-4 shadow-md
+          class="max-w-[300px] shrink-0 bg-white rounded-md p-3 shadow-md
                         transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
         >
           <div class="w-10 h-10 mb-3">
@@ -258,10 +262,10 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
                 fill="none"></path>
             </svg>
           </div>
-          <h3 class="font-bold text-base text-black mb-1">
+          <h3 class="font-bold text-sm md:text-base text-black mb-1">
             Montable en quinta rueda
           </h3>
-          <p class="text-gray-500">
+          <p class="text-gray-500 text-xs md:text-sm">
             Diseñada para montarse sobre la quinta rueda de la unidad de tolvas,
             facilitando su transporte sin costos adicionales y de forma más
             sencilla.
@@ -296,12 +300,16 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
 
   <style>
     @media (max-width: 768px) {
-      .flex.min-h-\[280px\] {
+      .flex.min-h-\[240px\] {
         flex-direction: column;
       }
       .basis-\[52\%\] {
         flex-basis: auto;
-        height: 200px;
+        height: auto;
+      }
+      .basis-\[52\%\] img {
+        height: auto;
+        object-fit: contain;
       }
       #carruselTrack > article {
         min-width: calc(85% - 0.5rem);
@@ -326,8 +334,15 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
   const getTotalCards = () => track.children.length;
   const getMaxIndex = () => Math.max(0, getTotalCards() - getVisibleCount());
 
+  function getCardStep() {
+    const firstCard = track.children[0] as HTMLElement | undefined;
+    if (!firstCard) return 0;
+    const gap = parseFloat(getComputedStyle(track).columnGap || "0");
+    return firstCard.getBoundingClientRect().width + gap;
+  }
+
   function updateCarrusel() {
-    const offset = currentIndex * 345;
+    const offset = currentIndex * getCardStep();
     track.style.transform = `translateX(-${offset}px)`;
     btnPrev.disabled = currentIndex === 0;
     btnNext.disabled = currentIndex >= getMaxIndex();

@@ -897,7 +897,7 @@ const ASPlanos = () => {
                     </div>
                     <div className="my-3">
                       <p
-                        className="text-white text-lg"
+                        className="text-white text-base md:text-lg"
                         data-imperial="381 cm"
                         data-metric="12.75 ft"
                       >
@@ -1737,7 +1737,7 @@ const ASPlanos = () => {
                     </div>
                     <div className="my-3">
                       <p
-                        className="text-white text-lg"
+                        className="text-white text-base md:text-lg"
                         data-imperial="381 cm"
                         data-metric="12.75 ft"
                       >
@@ -2575,7 +2575,7 @@ const ASPlanos = () => {
                     </div>
                     <div className="my-3">
                       <p
-                        className="text-white text-lg"
+                        className="text-white text-base md:text-lg"
                         data-imperial="381 cm"
                         data-metric="12.75 ft"
                       >
@@ -3413,7 +3413,7 @@ const ASPlanos = () => {
                     </div>
                     <div className="my-3">
                       <p
-                        className="text-white text-lg"
+                        className="text-white text-base md:text-lg"
                         data-imperial="381 cm"
                         data-metric="12.75 ft"
                       >

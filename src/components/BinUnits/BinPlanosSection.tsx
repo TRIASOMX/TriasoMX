@@ -1118,7 +1118,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${dim("aheight", "height")?.toFixed(1) ?? ""} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(
@@ -2049,7 +2049,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -2962,7 +2962,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -3876,7 +3876,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -4779,7 +4779,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}
@@ -5682,7 +5682,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${dim("aheight", "height").toFixed(1)} m`
                           : `${(dim("aheight", "height") * cmToFeet).toFixed(1)} ft`}

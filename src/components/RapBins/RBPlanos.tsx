@@ -938,7 +938,7 @@ const RBPlanos = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${dim("aHeight", "height")?.toFixed(2) ?? ""} m`
                           : `${(dim("aHeight", "height") * cmToFeet).toFixed(
@@ -1859,7 +1859,7 @@ const RBPlanos = () => {
                       </div>
                     </div>
                     <div className="my-3">
-                      <p className="text-white text-lg">
+                      <p className="text-white text-base md:text-lg">
                         {unit === "metric"
                           ? `${dim("aHeight", "height")?.toFixed(2) ?? ""} m`
                           : `${(dim("aHeight", "height") * cmToFeet).toFixed(

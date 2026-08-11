@@ -128,7 +128,7 @@ export default function ReliefFirstSection() {
           </div>
 
 
-          <h2 className="text-2xl font-semibold text-[#393939]">
+          <h2 className="text-lg md:text-2xl font-semibold text-[#393939]">
             El sistema definitivo de control y supervisión de automatización
           </h2>
           <p className="text-xl font-semibold text-redBg ">

@@ -67,12 +67,12 @@ export default function RelifSecondSection() {
             <div className='max-w-7xl mx-auto px-8 text-white'>
                 <div className='flex flex-col md:flex-row lg:flex-row justify-around items-center gap-5'>
                     <img src={img2.src} alt="Triaso OS" className='w-full md:w-1/2 lg:w-1/2' />
-                    <p ref={text1Ref} className='text-2xl font-bold'>
+                    <p ref={text1Ref} className='text-lg md:text-2xl font-bold'>
                         Para una toma de decisiones más rápida, mejor fundamentada y completamente independiente de la ubicación física.
                     </p>
                 </div>
                 <div className='flex flex-col md:flex-row lg:flex-row justify-around items-center pt-10'>
-                    <p ref={text2Ref} className='text-2xl font-bold w-full lg:w-[35%] md:w-[35%] order-2 md:order-1 lg:order-1'>
+                    <p ref={text2Ref} className='text-lg md:text-2xl font-bold w-full lg:w-[35%] md:w-[35%] order-2 md:order-1 lg:order-1'>
                         Con múltiples puntos de acceso a través de la consola de operación, computadoras remotas, tablets y teléfonos.
                     </p>
                     <img src={img1.src} alt="Triaso OS" className='w-full md:w-1/2 lg:w-1/2 order-1 md:order-2 lg:order-2' />
@@ -93,13 +93,13 @@ export default function RelifSecondSection() {
 
             <div className='grid grid-cols-2 gap-4 max-w-7xl justify-around mx-auto px-4'>
                 <div className='w-full'>
-                <h1 className="text-3xl text-center font-bold bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
+                <h1 className="text-xl md:text-3xl text-center font-bold bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
                     Reportes históricos
                 </h1>
                 </div>
 
                 <div className='w-full'>
-                <h1 className="text-3xl font-bold text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                <h1 className="text-xl md:text-3xl font-bold text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                     Reportes de mezcla asfáltica producida.
                 </h1>
                 </div>

@@ -79,13 +79,19 @@ const HMOdometer = () => {
               Tiempo de preservación
             </p>
           </div>
-          <FillLinkButton href="#planosSilos" />
+          <div className="hidden md:block">
+            <FillLinkButton href="#planosSilos" />
+          </div>
         </div>
 
         <div className="flex flex-col items-end justify-center col-span-1 md:col-span-4">
           <div className="w-3/5">
             <img src={single.src} alt="Back of a Hot-Mix storage silo" />
           </div>
+        </div>
+
+        <div className="flex justify-center md:hidden">
+          <FillLinkButton href="#planosSilos" />
         </div>
       </div>
     </div>
