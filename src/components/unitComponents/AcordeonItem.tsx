@@ -14,9 +14,9 @@ export default function AcordeonItem({ title, content }: AccordionProps) {
   };
 
   return (
-    <div className="bg-white rounded-2xl flex flex-col justify-center p-4 w-full">
+    <div className="bg-white rounded-2xl flex flex-col justify-center p-2 md:p-4 w-full">
       <div className="flex justify-between items-center">
-        <h2 className="text-black text-lg md:text-xl font-bold">{title}</h2>
+        <h2 className="text-black text-base md:text-xl font-bold">{title}</h2>
         <button
           onClick={toggleAccordion}
           className="transition-transform duration-200"
@@ -73,7 +73,9 @@ export default function AcordeonItem({ title, content }: AccordionProps) {
         }`}
         style={{ transitionProperty: "max-height" }}
       >
-        <p className="text-base md:text-lg font-thin whitespace-pre-line">{content}</p>
+        <p className="text-sm md:text-lg font-thin whitespace-pre-line">
+          {content}
+        </p>
       </div>
     </div>
   );

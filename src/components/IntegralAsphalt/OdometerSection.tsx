@@ -54,7 +54,7 @@ const OdometerSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
         <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
@@ -64,7 +64,7 @@ const OdometerSection = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">kW</p>
             </div>
@@ -72,7 +72,7 @@ const OdometerSection = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <h1>.</h1>
               <Odometer value={value4} format="(,ddd)" duration={2000} />

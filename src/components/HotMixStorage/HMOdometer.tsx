@@ -51,7 +51,7 @@ const HMOdometer = () => {
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
         <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline">
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value1} format="(,ddd)" duration={2000} />
@@ -63,7 +63,7 @@ const HMOdometer = () => {
           </div>
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">minutos</p>
             </div>
@@ -71,11 +71,11 @@ const HMOdometer = () => {
           </div>
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">horas</p>
             </div>
-            <p className="text-[#4F4F4F] text-start w-full">
+            <p className="text-[#4F4F4F] text-center w-full">
               Tiempo de preservación
             </p>
           </div>

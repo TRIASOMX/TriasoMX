@@ -52,11 +52,11 @@ const OHOdometer = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full max-w-7xl mx-auto px-8 py-10 lg:py-0 lg:mt-32 lg:mb-32 md:mt-32 md:mb-32">
+    <div ref={sectionRef} className="w-full max-w-7xl mx-auto px-8 py-10 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
         <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
           <div className="flex flex-col items-center lg:items-start justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full gap-1">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full gap-1">
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <h1>&</h1>
               <Odometer value={value5} format="(,ddd)" duration={2000} />
@@ -68,7 +68,7 @@ const OHOdometer = () => {
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">pulgadas</p>
             </div>
@@ -76,11 +76,11 @@ const OHOdometer = () => {
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">litros</p>
             </div>
-            <p className="text-[#4F4F4F] text-start w-full">
+            <p className="text-[#4F4F4F] text-center w-full">
              Tanque de expansión de aceite térmico
             </p>
           </div>

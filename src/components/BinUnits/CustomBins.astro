@@ -2,163 +2,161 @@
 import img1 from "../../assets/images/BinUnits/TolvaConfCompl.webp";
 import Image from "astro/components/Image.astro";
 ---
+
 <div
-    class="w-full flex flex-col items-center justify-center font-bold  bg-blueMain py-10"
+  class="w-full flex flex-col items-center justify-center font-bold bg-blueMain py-10"
 >
-    <div class="w-full max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-2">
-        <div class="flex flex-col justify-center text-white">
-            <h1 class="text-2xl md:text-6xl w-full text-start lg:pb-5">
-                Unidades de tolvas  <br /> Totalmente personalizables
-            </h1>
-            <h1 class="text-xl md:text-4xl w-full text-start">
-                De 14 y 20 toneladas por tolva
-            </h1>
-        </div>
-        <div class="w-full flex flex-col justify-center items-center">
-            <div class="p-8 flex items-center justify-center">
-                <Image
-                    src={img1}
-                    alt="Customizable Bin Unit Diagram"
-                    class="w-full md:max-w-[400px]"
-                />
-            </div>
-        </div>
+  <div class="w-full max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-2">
+    <div class="flex flex-col justify-center text-white">
+      <h1 class="text-2xl md:text-6xl w-full text-start lg:pb-5">
+        Unidades de tolvas <br /> Totalmente personalizables
+      </h1>
+      <h1 class="text-xl md:text-4xl w-full text-start">
+        De 14 y 20 toneladas por tolva
+      </h1>
     </div>
-
-    <div class="">
-        <button
-            aria-label="See more information about the customizable bin units"
-            class="text-blueMain px-4 py-2 rounded-2xl text-6xl"
-            onclick="toggleDropdown()"
-            id="dropdown-button"
-        >
-            <svg
-                width="84px"
-                height="84px"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                color="#ffffff"
-                id="dropdown-arrow"
-            >
-                <path
-                    d="M6 9L12 15L18 9"
-                    stroke="#ffffff"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"></path>
-            </svg>
-        </button>
+    <div class="w-full flex flex-col justify-center items-center">
+      <div class="p-8 flex items-center justify-center">
+        <Image
+          src={img1}
+          alt="Customizable Bin Unit Diagram"
+          class="w-full md:max-w-[400px]"
+        />
+      </div>
     </div>
+  </div>
 
-    <div
-        class="w-full transition-all duration-300 overflow-hidden"
-        id="extradiv"
-        style="max-height: 0"
+  <div class="">
+    <button
+      aria-label="See more information about the customizable bin units"
+      class="text-blueMain px-4 py-2 rounded-2xl text-6xl"
+      onclick="toggleDropdown()"
+      id="dropdown-button"
     >
-        <div
-            class="text-white w-full max-w-7xl px-8 mx-auto list-inside md:mb-0 md:opacity-100"
-        >
-            <h1 class="w-full text-start text-xl md:text-3xl mb-6">Opciones</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="flex flex-col justify-start items-start">
-                    <div class="flex flex-col items-start justify-center">
-                        <h1 class="text-bgMain text-lg md:text-xl mb-6">
-                            Control y dosificación de material
-                        </h1>
-                        <div class="grid grid-cols-2 gap-6">
-                            <ul
-                                class="font-normal text-grisSubP list-disc pl-4 space-y-3"
-                            >
-                                <li>Compuertas de control de profundidad ajustables</li>
-                                <li>Vibradores para tolva</li>
-                                <li>Sondas de humedad</li>
-                            </ul>
-                            <ul
-                                class="font-normal text-grisSubP list-disc pl-4 space-y-3"
-                            >
-                                <li>Sistema de pesaje</li>
-                                <li>Cañones de aire</li>
-                                <li>Alimentadores</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-start justify-center mt-6">
-                        <h1 class="text-bgMain text-lg md:text-xl mb-6">
-                            Monitoreo y seguridad operacional
-                        </h1>
-                        <div class="grid grid-cols-2 gap-6">
-                            <ul
-                                class="font-normal text-grisSubP list-disc pl-4 space-y-3"
-                            >
-                                <li>Indicadores de nivel de tolva</li>
-                                <li>Charolas porta-cables</li>
-                            </ul>
-                            <ul
-                                class="font-normal text-grisSubP list-disc pl-4 space-y-3"
-                            >
-                                <li>Protecciones con malla metálica</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col items-start justify-start h-full">
-                    <h1 class="text-bgMain text-lg md:text-xl mb-6">
-                        Sistema general
-                    </h1>
-                    <div class="grid grid-cols-2 gap-6">
-                        <ul
-                            class="font-normal text-grisSubP list-disc pl-4 space-y-3"
-                        >
-                            <li>Pasillos</li>
-                            <li>Grizzlies vibratorios</li>
-                            <li>Divisores de tolvas</li>
-                            <li>Cubiertas para tolvas</li>
-                            <li>Cribas integradas para separación</li>
-                        </ul>
-                        <ul
-                            class="font-normal text-grisSubP list-disc pl-4 space-y-3"
-                        >
-                            <li>Flancos estéticos</li>
-                            <li>Tabiques internos</li>
-                            <li>Extensiones de tolvas</li>
-                            <li>Muros de contención integrados</li>
-                            <li>Montadas sobre llantas o patas</li>
-                        </ul>
-                    </div>
-                </div>
+      <svg
+        width="84px"
+        height="84px"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        color="#ffffff"
+        id="dropdown-arrow"
+      >
+        <path
+          d="M6 9L12 15L18 9"
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div
+    class="w-full transition-all duration-300 overflow-hidden"
+    id="extradiv"
+    style="max-height: 0"
+  >
+    <div
+      class="text-white w-full max-w-7xl px-8 mx-auto list-inside md:mb-0 md:opacity-100"
+    >
+      <h1 class="w-full text-start text-xl md:text-3xl mb-6">Opciones</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="flex flex-col justify-start items-start">
+          <div class="flex flex-col items-start justify-center">
+            <h1 class="text-bgMain text-base md:text-xl mb-6">
+              Control y dosificación de material
+            </h1>
+            <div class="grid grid-cols-2 gap-6">
+              <ul
+                class="font-normal text-grisSubP list-disc pl-4 space-y-3 text-sm md:text-base"
+              >
+                <li>Compuertas de control de profundidad ajustables</li>
+                <li>Vibradores para tolva</li>
+                <li>Sondas de humedad</li>
+              </ul>
+              <ul
+                class="font-normal text-grisSubP list-disc pl-4 space-y-3 text-sm md:text-base"
+              >
+                <li>Sistema de pesaje</li>
+                <li>Cañones de aire</li>
+                <li>Alimentadores</li>
+              </ul>
             </div>
+          </div>
+          <div class="flex flex-col items-start justify-center mt-6">
+            <h1 class="text-bgMain text-base md:text-xl mb-6">
+              Monitoreo y seguridad operacional
+            </h1>
+            <div class="grid grid-cols-2 gap-6">
+              <ul
+                class="font-normal text-grisSubP list-disc pl-4 space-y-3 text-sm md:text-base"
+              >
+                <li>Indicadores de nivel de tolva</li>
+                <li>Charolas porta-cables</li>
+              </ul>
+              <ul
+                class="font-normal text-grisSubP list-disc pl-4 space-y-3 text-sm md:text-base"
+              >
+                <li>Protecciones con malla metálica</li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <div class="flex flex-col items-start justify-start h-full">
+          <h1 class="text-bgMain text-base md:text-xl mb-6">Sistema general</h1>
+          <div class="grid grid-cols-2 gap-6">
+            <ul
+              class="font-normal text-grisSubP list-disc pl-4 space-y-3 text-sm md:text-base"
+            >
+              <li>Pasillos</li>
+              <li>Grizzlies vibratorios</li>
+              <li>Divisores de tolvas</li>
+              <li>Cubiertas para tolvas</li>
+              <li>Cribas integradas para separación</li>
+            </ul>
+            <ul
+              class="font-normal text-grisSubP list-disc pl-4 space-y-3 text-sm md:text-base"
+            >
+              <li>Flancos estéticos</li>
+              <li>Tabiques internos</li>
+              <li>Extensiones de tolvas</li>
+              <li>Muros de contención integrados</li>
+              <li>Montadas sobre llantas o patas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const dropdown = document.getElementById("extradiv");
-        const arrow = document.getElementById("dropdown-arrow");
-        const button = document.getElementById("dropdown-button");
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdown = document.getElementById("extradiv");
+    const arrow = document.getElementById("dropdown-arrow");
+    const button = document.getElementById("dropdown-button");
 
-        if (button) {
-            button.addEventListener("click", () => {
-                if (!dropdown || !arrow) return;
+    if (button) {
+      button.addEventListener("click", () => {
+        if (!dropdown || !arrow) return;
 
-                const isClosed =
-                    dropdown.style.maxHeight === "0px" ||
-                    !dropdown.style.maxHeight;
+        const isClosed =
+          dropdown.style.maxHeight === "0px" || !dropdown.style.maxHeight;
 
-                if (isClosed) {
-                    dropdown.style.maxHeight = dropdown.scrollHeight + "px";
-                    arrow.style.transform = "rotate(180deg)";
-                } else {
-                    dropdown.style.maxHeight = "0px";
-                    arrow.style.transform = "rotate(0deg)";
-                }
-            });
+        if (isClosed) {
+          dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+          arrow.style.transform = "rotate(180deg)";
+        } else {
+          dropdown.style.maxHeight = "0px";
+          arrow.style.transform = "rotate(0deg)";
         }
-    });
+      });
+    }
+  });
 </script>
 <style>
-    #dropdown-arrow {
-        transition: transform 0.3s ease;
-    }
+  #dropdown-arrow {
+    transition: transform 0.3s ease;
+  }
 </style>

@@ -57,7 +57,7 @@ const OdometerMontable = () => {
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
         <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
           <div className="flex flex-col items-start lg:items-start justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <span className="w-[1.5ch] flex flex-row">
                 <Odometer value={value} format="(,ddd)" duration={2000} />
               </span>
@@ -68,7 +68,7 @@ const OdometerMontable = () => {
           </div>
 
           <div className="flex flex-col items-start justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6ch] lg:w-[5.1ch] md:w-[5.1ch]">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6ch] lg:w-[5.1ch] md:w-[5.1ch]">
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p>.</p>
               <Odometer value={value2} format="(,ddd)" duration={2000} />
@@ -78,7 +78,7 @@ const OdometerMontable = () => {
           </div>
 
           <div className="flex flex-col items-start justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6.7ch] lg:w-[6.4ch] md:w-[6.4ch]">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6.7ch] lg:w-[6.4ch] md:w-[6.4ch]">
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">"</p>
             </div>

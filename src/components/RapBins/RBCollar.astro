@@ -267,15 +267,15 @@ const slides2 = [
           class="w-full flex flex-col justify-center pb-5 lg:justify-around md:justify-around items-center lg:flex-row relative"
         >
           <div class="">
-            <p class="text-white">
+            <p class="text-white text-sm md:text-base">
               La compra de una planta de asfalto es una gran inversión, y la
               base de un negocio de producción de mezcla asfáltica. Compre
               inteligentemente y con criterio.
             </p>
-            <p class="text-white">
+            <p class="text-white text-sm md:text-base">
               Podemos asesorarlo de forma transparente en la inversión de su
               planta de asfalto, ayudándolo a elegir la opción más adecuada.
-            </p>
+            </p><br />
           </div>
           <div
             class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
@@ -292,15 +292,17 @@ const slides2 = [
   <!-- OS sección -->
   <section class="bg-white overflow-visible">
     <div class="max-w-7xl mx-auto lg:px-0">
-      <div class="grid grid-cols-1 lg:grid-cols-3 items-center gap-12">
+      <div class="grid grid-cols-1 md:grid-cols-5 items-center gap-12">
         <!-- Texto -->
-        <div class="text-white w-full px-8 col-span-1 md:col-span-2">
+        <div class="text-white w-full px-8 col-span-1 md:col-span-3">
           <h1
-            class="text-2xl md:text-3xl font-semibold my-6 bg-gradient-to-r from-[#f8ad00] via-[#dc363a] to-[#3992ff] bg-clip-text text-transparent"
+            class="text-xl md:text-3xl font-semibold my-6 bg-gradient-to-r from-[#f8ad00] via-[#dc363a] to-[#3992ff] bg-clip-text text-transparent"
           >
             Sistema de operación Triaso® − Relief
           </h1>
-          <p class="text-[#393939] font-semibold leading-relaxed">
+          <p
+            class="text-[#393939] font-semibold leading-relaxed text-sm md:text-base"
+          >
             Ofrecemos una forma práctica y eficiente de gestionar el
             funcionamiento de nuestros equipos. Gracias a sistemas avanzados de
             monitoreo y automatización, <span class="text-black"
@@ -321,7 +323,7 @@ const slides2 = [
         </div>
 
         <!-- Imagen -->
-        <div class="flex justify-end relative col-span-1 md:col-span-1">
+        <div class="flex justify-end relative col-span-1 md:col-span-2">
           <Image
             src={OSHand}
             alt="Triaso OS"
@@ -338,7 +340,7 @@ const slides2 = [
   <section>
     <div class="bg-[#272526]">
       <div
-        class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center justify-center"
+        class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center justify-center gap-4"
       >
         <div class="pt-5">
           <Image
@@ -391,7 +393,7 @@ const slides2 = [
         <h1 class="font-bold text-2xl md:text-4xl">
           Sistemas de trituración de RAP
         </h1>
-        <p class="text-[#393939] text-base md:text-lg">
+        <p class="text-[#393939] text-sm md:text-lg">
           Como opción adicional para una operación completa, en Triaso ofrecemos
           sistemas de trituración integrados al sistema de RAP, capaces de
           reducir el material hasta la granulometría requerida para su mezcla.

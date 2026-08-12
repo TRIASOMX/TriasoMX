@@ -59,7 +59,7 @@ const BurnerOdometer = () => {
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center ">
         <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
           <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value} format="(,ddd).d" duration={2000} />
               <h1>-</h1>
               <Odometer value={value3} format="(,ddd).d" duration={2000} />
@@ -72,7 +72,7 @@ const BurnerOdometer = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value1} format="(,ddd).dd" duration={2000} />
               <h1>-</h1>
               <Odometer value={value4} format="(,ddd).dd" duration={2000} />
@@ -82,7 +82,7 @@ const BurnerOdometer = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value2} format="(,ddd).dd" duration={2000} />
               <h1>-</h1>
               <Odometer value={value5} format="(,ddd).dd" duration={2000} />
