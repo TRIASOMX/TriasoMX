@@ -57,7 +57,7 @@ const BHOdometer = () => {
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center max-w-[1500px]">
         <div className="flex flex-col justify-between col-span-1 md:col-span-2 h-full">
           <div className="flex flex-col items-center lg:items-start justify-center w-full">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <span className="flex flex-row">
                 <Odometer value={value} format="(,ddd)" duration={2000} />
 
@@ -72,25 +72,25 @@ const BHOdometer = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center w-full">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal w-full justify-center lg:justify-start items-baseline">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal w-full justify-center lg:justify-start items-baseline">
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p>.</p>
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">%</p>
             </div>
-            <p className="text-[#4F4F4F] w-full">
-              Filtración de captura de particulas finas
+            <p className="text-[#4F4F4F] w-full text-center lg:text-start">
+              Filtración de captura de partículas finas
             </p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center w-full lg:justify-start items-baseline ">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center w-full lg:justify-start items-baseline ">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">tph</p>
             </div>
-            <p className="text-[#4F4F4F] text-start w-full">
+            <p className="text-[#4F4F4F] text-center lg:text-start w-full">
               Gama de bolsas para plantas de asfalto
             </p>
           </div>

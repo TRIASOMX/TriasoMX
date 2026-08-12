@@ -108,7 +108,7 @@ El RAP se ha utilizado en mezclas asfálticas en caliente desde 1915, permitiend
         alrededor de 29,000 toneladas de CO₂. Esa cantidad equivale aproximadamente a
         6,300 automóviles de pasajeros circulando durante un año completo, 32 millones
         de litros de gasolina quemados, 3,500 hogares abastecidos de energía durante
-        un año, 12,000 vuelos redondos entre Nueva York y Los Ángeles, Aproximadamente
+        un año, 12,000 vuelos redondos entre Nueva York y Los Ángeles, aproximadamente
         480,000 árboles creciendo durante 10 años (un árbol absorbe cerca de 60 kg de
         CO₂ en 10 años). Ese mismo año, según datos de la industria, se ahorraron
         aproximadamente 1.35 mil millones de USD al incorporar un promedio de 21.9% de

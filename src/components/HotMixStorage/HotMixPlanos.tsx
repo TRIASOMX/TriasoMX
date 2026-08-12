@@ -218,7 +218,7 @@ const HotMixPlanos = () => {
   ] as const;
 
   const siloOptions = [
-    { id: 1, label: "AUTO-EREGIBLE" },
+    { id: 1, label: "AUTO-ERIGIBLE" },
     { id: 2, label: "SEMI-ESTACIONARIO" },
   ];
 

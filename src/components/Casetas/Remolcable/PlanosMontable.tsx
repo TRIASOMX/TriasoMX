@@ -315,7 +315,7 @@ const DrumMixPlanos = () => {
                           Medidas de la caseta de control
                         </h1>
                         <button
-                          aria-label="See more abour the Maintenance and Advantages"
+                          aria-label="See more about the Maintenance and Advantages"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({

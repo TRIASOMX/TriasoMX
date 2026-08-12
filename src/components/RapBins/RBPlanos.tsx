@@ -507,7 +507,7 @@ const RBPlanos = () => {
                           </ul>
                         </li>
                         <li>
-                          Tanque de aire de 120 galones para operación del cañon
+                          Tanque de aire de 120 galones para operación del cañón
                           de aire.
                         </li>
                         <li>
@@ -1294,7 +1294,7 @@ const RBPlanos = () => {
                           SISTEMA DE ALIMENTACIÓN Y DOSIFICACIÓN
                         </h1>
                         <button
-                          aria-label="See more about the feeding and dosign system"
+                          aria-label="See more about the feeding and dosing system"
                           className="block md:hidden"
                           onClick={() =>
                             setOpenSections((prev) => ({
@@ -1425,7 +1425,7 @@ const RBPlanos = () => {
                           </ul>
                         </li>
                         <li>
-                          Tanque de aire de 120 galones para operación del cañon
+                          Tanque de aire de 120 galones para operación del cañón
                           de aire.
                         </li>
                         <li>

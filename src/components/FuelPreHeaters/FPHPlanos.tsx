@@ -146,7 +146,7 @@ const FPHPlanos = () => {
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRICO
+                  MÉTRICO
                 </span>
               </div>
             </div>

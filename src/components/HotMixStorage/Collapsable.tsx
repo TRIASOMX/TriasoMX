@@ -50,7 +50,7 @@ const Collapsable = () => {
     {
       title:"Sensor sónico para indicar el nivel de mezcla dentro del silo",
       content:
-      "Visualización en tiempo real del nivel de mezcla asfáltica en la consola del operador y dispositivos moviles.",
+      "Visualización en tiempo real del nivel de mezcla asfáltica en la consola del operador y dispositivos móviles.",
     },
     {
       title:"Configuración versátil",

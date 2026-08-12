@@ -48,7 +48,7 @@ export const menuItems = [
             ],
           },
           {
-            title: "CASAS DE BOLSAS BAGHOUSES",
+            title: "CASAS DE BOLSAS ( BAGHOUSES )",
             url: "/BagHouses",
           },
           {
@@ -96,7 +96,7 @@ export const menuItems = [
             url: "/HotMix",
           },
           {
-            title: "PLANTAS DE MEZCLADO EN FRIÓ",
+            title: "PLANTAS DE MEZCLADO EN FRÍO",
             url: "/ColdMix",
           },
           {

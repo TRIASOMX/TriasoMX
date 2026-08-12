@@ -417,7 +417,7 @@ const PlanoSection = () => {
                         <li>Variador de velocidad para ajustes en la mezcla</li>
 
                         <li>
-                          Opción remoto de los parámetros de operación, con
+                          Opción remota de los parámetros de operación, con
                           supervisión en tiempo real y registro histórico de
                           datos.
                         </li>
@@ -1686,7 +1686,7 @@ const PlanoSection = () => {
                         </li>
                         <li>Variador de velocidad para ajustes en la mezcla</li>
                         <li>
-                          Opción remoto de los parámetros de operación, con
+                          Opción remota de los parámetros de operación, con
                           supervisión en tiempo real y registro histórico de
                           datos.
                         </li>
@@ -2967,7 +2967,7 @@ const PlanoSection = () => {
                         </li>
                         <li>Variador de velocidad para ajustes en la mezcla</li>
                         <li>
-                          Opción remoto de los parámetros de operación, con
+                          Opción remota de los parámetros de operación, con
                           supervisión en tiempo real y registro histórico de
                           datos.
                         </li>

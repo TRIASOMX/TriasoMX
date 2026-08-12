@@ -491,7 +491,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1119,7 +1119,7 @@ const BinPlanosSection = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Diametro:</h1>
+                              <h1>Diámetro:</h1>
                               <p>
                                 {unit === "metric"
                                   ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
@@ -1584,7 +1584,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -2682,7 +2682,7 @@ const BinPlanosSection = () => {
                       <div className="flex flex-col items-start justify-start gap-4 text-white">
                         <div className="w-full flex justify-between border-b border-b-white">
                           <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                            Control y operacióN
+                            Control y operación
                           </h1>
                           <button
                             className="block md:hidden"
@@ -3315,7 +3315,7 @@ const BinPlanosSection = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Diametro:</h1>
+                              <h1>Diámetro:</h1>
                               <p>
                                 {unit === "metric"
                                   ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
@@ -3781,7 +3781,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -4874,7 +4874,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -5501,7 +5501,7 @@ const BinPlanosSection = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Diametro:</h1>
+                              <h1>Diámetro:</h1>
                               <p>
                                 {unit === "metric"
                                   ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
@@ -5967,7 +5967,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -6580,7 +6580,7 @@ const BinPlanosSection = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Diametro:</h1>
+                              <h1>Diámetro:</h1>
                               <p>
                                 {unit === "metric"
                                   ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`

@@ -2116,7 +2116,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Diametro:</h1>
+                              <h1>Diámetro:</h1>
                               <p>
                                 {unit === "metric"
                                   ? `${

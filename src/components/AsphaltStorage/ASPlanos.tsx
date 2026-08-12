@@ -384,7 +384,7 @@ const ASPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           aria-label="See more about the control and operation of the system"
@@ -998,7 +998,7 @@ const ASPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        DImensiones del tanque
+                        Dimensiones del tanque
                       </h1>
                       <button
                         aria-label="See more about the tank dimensions"
@@ -1233,7 +1233,7 @@ const ASPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1838,7 +1838,7 @@ const ASPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        DImensiones del tanque
+                        Dimensiones del tanque
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2072,7 +2072,7 @@ const ASPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -2676,7 +2676,7 @@ const ASPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        DImensiones del tanque
+                        Dimensiones del tanque
                       </h1>
                       <button
                         className="block md:hidden"
@@ -2910,7 +2910,7 @@ const ASPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -3514,7 +3514,7 @@ const ASPlanos = () => {
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                        DImensiones del tanque
+                        Dimensiones del tanque
                       </h1>
                       <button
                         className="block md:hidden"

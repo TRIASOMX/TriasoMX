@@ -426,10 +426,11 @@ export default function Slider({
                 <h3
                   style={{
                     margin: "0 0 12px",
-                    fontSize: "clamp(22px,2.4vw,32px)",
+
                     fontWeight: 600,
                     letterSpacing: "-0.01em",
                   }}
+                  className="text-lg md:text-2xl"
                 >
                   {s.title}
                 </h3>
@@ -438,12 +439,12 @@ export default function Slider({
                   <p
                     style={{
                       margin: 0,
-                      fontSize: "clamp(13px,1vw,15px)",
+
                       lineHeight: 1.5,
                       opacity: 0.9,
                       maxWidth: "100%",
                     }}
-                    className="font-normal"
+                    className="font-normal text-xs md:text-sm"
                   >
                     {s.text}
                   </p>

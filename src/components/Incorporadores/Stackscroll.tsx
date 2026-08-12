@@ -72,7 +72,7 @@ const CARDS: CardData[] = [
       "Este calentamiento rápido y ajustable, reduce la viscosidad del combustible a menos de 70 SSU, asegurando una correcta atomización y una combustión limpia, sin retrasos ni fuentes externas de calor.",
     ],
     bullet:
-      "Se ajusta la temperatura para que el combustible reduzca su viscosidad a 70 SSU, la cuál es medida por un viscosímetro de paso integrado.",
+      "Se ajusta la temperatura para que el combustible reduzca su viscosidad a 70 SSU, la cual es medida por un viscosímetro de paso integrado.",
     footer: "Con esto usted ahorra mucho dinero",
   },
   {

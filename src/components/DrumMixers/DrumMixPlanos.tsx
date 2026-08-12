@@ -767,7 +767,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de filtrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
                           <p>704 ft2</p>
                         </div>
@@ -784,7 +784,7 @@ const DrumMixPlanos = () => {
                           <p>64</p>
                         </div>
                         <li>
-                          Alabes aerodinámicos para operación silenciosa del
+                          Álabes aerodinámicos para operación silenciosa del
                           extractor.
                         </li>
                         <li>
@@ -804,7 +804,7 @@ const DrumMixPlanos = () => {
                             before:w-2 before:rounded-full before:border before:border-white 
                             before:bg-transparent"
                           >
-                            Material patriculado (PM)
+                            Material particulado (PM)
                           </li>
                           <li
                             className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
@@ -1973,7 +1973,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de filtrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
                           <p>1,100 ft2</p>
                         </div>
@@ -1990,7 +1990,7 @@ const DrumMixPlanos = () => {
                           <p>112</p>
                         </div>
                         <li>
-                          Alabes aerodinámicos para operación silenciosa del
+                          Álabes aerodinámicos para operación silenciosa del
                           extractor.
                         </li>
                         <li>
@@ -2010,7 +2010,7 @@ const DrumMixPlanos = () => {
                             before:w-2 before:rounded-full before:border before:border-white 
                             before:bg-transparent"
                           >
-                            Material patriculado (PM)
+                            Material particulado (PM)
                           </li>
                           <li
                             className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
@@ -2386,7 +2386,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Diametro:</h1>
+                              <h1>Diámetro:</h1>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3203,7 +3203,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de filtrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
                           <p>1,692 ft2</p>
                         </div>
@@ -3220,7 +3220,7 @@ const DrumMixPlanos = () => {
                           <p>169</p>
                         </div>
                         <li>
-                          Alabes aerodinámicos para operación silenciosa del
+                          Álabes aerodinámicos para operación silenciosa del
                           extractor.
                         </li>
                         <li>
@@ -3240,7 +3240,7 @@ const DrumMixPlanos = () => {
                             before:w-2 before:rounded-full before:border before:border-white 
                             before:bg-transparent"
                           >
-                            Material patriculado (PM)
+                            Material particulado (PM)
                           </li>
                           <li
                             className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
@@ -4433,7 +4433,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de filtrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
                           <p>2,463 ft2</p>
                         </div>
@@ -4450,7 +4450,7 @@ const DrumMixPlanos = () => {
                           <p>224</p>
                         </div>
                         <li>
-                          Alabes aerodinámicos para operación silenciosa del
+                          Álabes aerodinámicos para operación silenciosa del
                           extractor.
                         </li>
                         <li>
@@ -4470,7 +4470,7 @@ const DrumMixPlanos = () => {
                             before:w-2 before:rounded-full before:border before:border-white 
                             before:bg-transparent"
                           >
-                            Material patriculado (PM)
+                            Material particulado (PM)
                           </li>
                           <li
                             className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
@@ -5650,7 +5650,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de filtrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
                           <p>3,079 ft2</p>
                         </div>
@@ -5667,7 +5667,7 @@ const DrumMixPlanos = () => {
                           <p>280</p>
                         </div>
                         <li>
-                          Alabes aerodinámicos para operación silenciosa del
+                          Álabes aerodinámicos para operación silenciosa del
                           extractor.
                         </li>
                         <li>
@@ -5687,7 +5687,7 @@ const DrumMixPlanos = () => {
                             before:w-2 before:rounded-full before:border before:border-white 
                             before:bg-transparent"
                           >
-                            Material patriculado (PM)
+                            Material particulado (PM)
                           </li>
                           <li
                             className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
@@ -6846,7 +6846,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de filtrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
                           <p>4,310 ft2</p>
                         </div>
@@ -6863,7 +6863,7 @@ const DrumMixPlanos = () => {
                           <p>382</p>
                         </div>
                         <li>
-                          Alabes aerodinámicos para operación silenciosa del
+                          Álabes aerodinámicos para operación silenciosa del
                           extractor.
                         </li>
                         <li>
@@ -6883,7 +6883,7 @@ const DrumMixPlanos = () => {
                             before:w-2 before:rounded-full before:border before:border-white 
                             before:bg-transparent"
                           >
-                            Material patriculado (PM)
+                            Material particulado (PM)
                           </li>
                           <li
                             className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
@@ -8048,7 +8048,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de filtrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
                           <p>6,384 ft2</p>
                         </div>
@@ -8065,7 +8065,7 @@ const DrumMixPlanos = () => {
                           <p>336</p>
                         </div>
                         <li>
-                          Alabes aerodinámicos para operación silenciosa del
+                          Álabes aerodinámicos para operación silenciosa del
                           extractor.
                         </li>
                         <li>
@@ -8085,7 +8085,7 @@ const DrumMixPlanos = () => {
                             before:w-2 before:rounded-full before:border before:border-white 
                             before:bg-transparent"
                           >
-                            Material patriculado (PM)
+                            Material particulado (PM)
                           </li>
                           <li
                             className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
@@ -9250,7 +9250,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de filtrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
                           <p>6,384 ft2</p>
                         </div>
@@ -9267,7 +9267,7 @@ const DrumMixPlanos = () => {
                           <p>336</p>
                         </div>
                         <li>
-                          Alabes aerodinámicos para operación silenciosa del
+                          Álabes aerodinámicos para operación silenciosa del
                           extractor.
                         </li>
                         <li>
@@ -9287,7 +9287,7 @@ const DrumMixPlanos = () => {
                             before:w-2 before:rounded-full before:border before:border-white 
                             before:bg-transparent"
                           >
-                            Material patriculado (PM)
+                            Material particulado (PM)
                           </li>
                           <li
                             className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2
@@ -10452,7 +10452,7 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de filtrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
                           <p>9,044 ft2</p>
                         </div>
@@ -10469,7 +10469,7 @@ const DrumMixPlanos = () => {
                           <p>476</p>
                         </div>
                         <li>
-                          Alabes aerodinámicos para operación silenciosa del
+                          Álabes aerodinámicos para operación silenciosa del
                           extractor.
                         </li>
                         <li>
@@ -10489,7 +10489,7 @@ const DrumMixPlanos = () => {
                             before:w-2 before:rounded-full before:border before:border-white 
                             before:bg-transparent"
                           >
-                            Material patriculado (PM)
+                            Material particulado (PM)
                           </li>
                           <li
                             className="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2

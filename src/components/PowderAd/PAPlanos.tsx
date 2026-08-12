@@ -158,7 +158,7 @@ const PAPlanos = () => {
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRICO
+                  MÉTRICO
                 </span>
               </div>
             </div>
@@ -1022,7 +1022,7 @@ const PAPlanos = () => {
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Diametro de tornillo: </h1>
+                            <h1>Diámetro de tornillo: </h1>
                             <p>
                               {unit === "metric"
                                 ? `${
@@ -1051,7 +1051,7 @@ const PAPlanos = () => {
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Capacitdad de tolva:</h1>
+                            <h1>Capacidad de tolva:</h1>
                             <p>2.6 m³ (level filled)</p>
                           </div>
                         </div>

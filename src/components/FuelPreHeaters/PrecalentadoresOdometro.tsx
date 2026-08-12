@@ -64,7 +64,7 @@ const PrecalentadoresOdometro = () => {
 
               <p className="text-sm font-normal">°C</p>
             </div>
-            <p className="text-[#4F4F4F]">Calentamiento de cualquier cadual</p>
+            <p className="text-[#4F4F4F]">Calentamiento de cualquier caudal</p>
           </div>
 
           <div className="flex flex-col items-start justify-center w-full">

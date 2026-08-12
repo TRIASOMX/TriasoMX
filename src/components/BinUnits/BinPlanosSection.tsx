@@ -403,7 +403,7 @@ const BinPlanosSection = () => {
                 <span
                   className={unit === "metric" ? "text-black" : "text-white"}
                 >
-                  METRICO
+                  MÉTRICO
                 </span>
               </div>
             </div>
@@ -541,7 +541,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Sistema de alimentación y dosificacióN
+                          Sistema de alimentación y dosificación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -701,7 +701,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1468,7 +1468,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Sistema de alimentación y dosificacióN
+                          Sistema de alimentación y dosificación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -1627,7 +1627,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -2384,7 +2384,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Sistema de alimentación y dosificacióN
+                          Sistema de alimentación y dosificación
                         </h1>
                         <button
                           aria-label="See more about the feeding and dosign system"
@@ -2543,7 +2543,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           aria-label="See more about the control and the operation of the system"
@@ -3296,7 +3296,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Sistema de alimentación y dosificacióN
+                          Sistema de alimentación y dosificación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -3454,7 +3454,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -4207,7 +4207,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Sistema de alimentación y dosificacióN
+                          Sistema de alimentación y dosificación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -4365,7 +4365,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -5110,7 +5110,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Sistema de alimentación y dosificacióN
+                          Sistema de alimentación y dosificación
                         </h1>
                         <button
                           className="block md:hidden"
@@ -5268,7 +5268,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h1>
                         <button
                           className="block md:hidden"

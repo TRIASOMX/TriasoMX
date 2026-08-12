@@ -455,7 +455,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h3>
                         <button
                           className="block md:hidden"
@@ -747,7 +747,7 @@ const BinPlanosSection = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de filtrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
                           <p>704 ft2</p>
                         </div>
@@ -1111,7 +1111,7 @@ const BinPlanosSection = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <span>Diametro:</span>
+                              <span>Diámetro:</span>
                               <p>
                                 {unit === "metric"
                                   ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
@@ -1578,7 +1578,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h3>
                         <button
                           className="block md:hidden"
@@ -1868,7 +1868,7 @@ const BinPlanosSection = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de flitrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
 
                           <p>1,100 ft2</p>
@@ -2704,7 +2704,7 @@ const BinPlanosSection = () => {
                       <div className="flex flex-col items-start justify-start gap-4 text-white">
                         <div className="w-full flex justify-between border-b border-b-white">
                           <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                            Control y operacióN
+                            Control y operación
                           </h3>
                           <button
                             className="block md:hidden"
@@ -2998,7 +2998,7 @@ const BinPlanosSection = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de flitrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
 
                           <p>1,692 ft2</p>
@@ -3828,7 +3828,7 @@ const BinPlanosSection = () => {
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
                         <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
-                          Control y operacióN
+                          Control y operación
                         </h3>
                         <button
                           className="block md:hidden"
@@ -4117,7 +4117,7 @@ const BinPlanosSection = () => {
                         </div>
                         <div className="flex justify-between">
                           <div>
-                            <li>Area de flitrado:</li>
+                            <li>Área de filtrado:</li>
                           </div>
 
                           <p>2,463 ft2</p>

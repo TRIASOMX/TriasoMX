@@ -52,7 +52,7 @@ const ManufactureGallery = () => {
     { title: "Soldadura interna del tambor del mezclador", image: img7, altTitle:"Internal welding of the mixer drum" },
     { title: "Fabricación de casas de bolsa", image: img8, altTitle:"Baghouse manufacture" },
     { title: "Fabricación de ascensores curvos", image: img9, altTitle:"Curved elevator manufacturing" },
-    { title: "Fabricación de secadores de tambor: los inicios", image: img10, altTitle:"Drum dryer manufacturing, beginings" },
+    { title: "Fabricación de secadores de tambor: los inicios", image: img10, altTitle:"Drum dryer manufacturing, beginnings" },
     { title: "Fabricación de chasis", image: img11, altTitle:"Chassis manufacture" },
     { title: "Fabricación de silos", image: img12, altTitle:"Silo manufacture" },
     {title: "Fabricación de casa de bolsa", image: img13, altTitle:"Baghouse manufacture"},
@@ -80,7 +80,7 @@ const ManufactureGallery = () => {
     {title:"Unión de banda vulcanizada", image: img35, altTitle:"Vulcanized band joint"},
     {title:"Fabricación de alas de tambor", image: img36, altTitle:"Drum flights manufacture"},
     {title:"Aplicación de soldadura con carro robótico", image: img37, altTitle:"Welding application with robotic trolley"},
-    {title:"Fabricación de plantas de mezcla en frío: los comienzos", image: img38, altTitle:"Cold mixing plant manufacturing, beginings"},
+    {title:"Fabricación de plantas de mezcla en frío: los comienzos", image: img38, altTitle:"Cold mixing plant manufacturing, beginnings"},
     
   ];
   return (
