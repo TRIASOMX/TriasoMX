@@ -2826,7 +2826,7 @@ const BinPlanosSection = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
+                  <div className="col-span-2 flex items-start justify-center w-full order-1 md:order-2 h-[560px]">
                     {panelOption === "withoutPanels" ? (
                       <img
                         src={tolva1Main.src}

@@ -2,6 +2,28 @@
 import SmartVideo from "../../../unitComponents/SmartVideo";
 import poster1 from "../../../../assets/images/Burners/Gallery/B1.webp";
 import img4 from "../../../../assets/images/Burners/preHeat.webp";
+import QuemadorSlider from "../../QuemadorSlider";
+
+const slides = [
+  {
+    title: "Precalentador de combustible",
+    description:
+      "Con los precalentadores reducimos la viscosidad del combustible, garantizando una atomización adecuada y una combustión limpia, sin demoras ni fuentes de calor externas.",
+    image: img4.src,
+    bgColor: "#fffaea",
+    titleColor: "#000000",
+    descriptionColor: "#000000",
+    extraContent: `
+      <h3 class="font-bold text-sm">Problemas causados por no precalentar los combustibles de bajo costo:</h3>
+      <ul class="list-disc pl-5">
+        <li class="text-sm">Las microgotas sin quemar provocan una pérdida considerable de combustible.</li>
+        <li class="text-sm">La mezcla asfáltica se contamina con combustible sin quemar.</li>
+        <li class="text-sm">Esta contaminación reduce significativamente la vida útil del pavimento asfáltico.</li>
+        <li class="text-sm">La atmósfera se ve afectada por los gases generados por una combustión incompleta.</li>
+      </ul>
+    `,
+  },
+];
 ---
 
 <section class="min-h-[70vh] md:mt-14 flex justify-center">
@@ -86,69 +108,9 @@ import img4 from "../../../../assets/images/Burners/preHeat.webp";
     </div>
   </div>
 
-  <section class="py-5">
-    <div
-      class="bg-black lg:h-[55vh] md:h-[50vh] flex items-center bg-[url(/drumBanner.webp)] bg-cover bg-center bg-no-repeat relative"
-    >
-      <div class="absolute inset-0 bg-[#3e3e3e]/80"></div>
-      <div
-        class="max-w-7xl mx-auto px-8 space-y-5 flex flex-col lg:flex-row md:flex-row relative"
-      >
-        <div class="space-y-5">
-          <div class="pt-5">
-            <h1 class="text-xl md:text-3xl font-bold text-white uppercase">
-              Precalentador de combustible
-            </h1>
-          </div>
-
-          <div
-            class="w-full flex flex-col justify-center pb-5 lg:justify-around md:justify-around items-center relative"
-          >
-            <div class="">
-              <p class="text-white text-sm md:text-base">
-                Con los precalentadores reducimos la viscosidad del combustible,
-                garantizando una atomización adecuada y una combustión limpia,
-                sin demoras ni fuentes de calor externas.
-              </p>
-            </div>
-            <br />
-            <div class="space-y-5">
-              <h1
-                class="text-xl md:text-3xl font-bold text-[#fffaea] uppercase"
-              >
-                Problemas causados por no precalentar los combustibles de bajo
-                costo:
-              </h1>
-
-              <ul class="list-disc pl-5 text-white text-sm md:text-base">
-                <li>
-                  Las microgotas sin quemar provocan una pérdida considerable de
-                  combustible.
-                </li>
-                <li>
-                  La mezcla asfáltica se contamina con combustible sin quemar.
-                </li>
-                <li>
-                  Esta contaminación reduce significativamente la vida útil del
-                  pavimento asfáltico.
-                </li>
-                <li>
-                  La atmósfera se ve afectada por los gases generados por una
-                  combustión incompleta.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full flex flex-col justify-center items-center gap-4 mb-5 lg:ml-28"
-        >
-          <img src={img4.src} alt="" class="w-4/5" />
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="max-w-7xl mx-auto px-8 py-5">
+    <QuemadorSlider slides={slides} client:visible />
+  </div>
 </section>
 
 <!-- Sección 3 -->

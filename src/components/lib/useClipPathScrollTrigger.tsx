@@ -7,15 +7,15 @@ gsap.registerPlugin(ScrollTrigger);
 interface Params {
   enabled: boolean;
 
-  boxRef: React.RefObject<HTMLDivElement>;
-  nextSectionRef: React.RefObject<HTMLDivElement>;
-  clipTargetRef: React.RefObject<HTMLDivElement>;
-  imgRef: React.RefObject<HTMLImageElement>;
-  otroElementoRef: React.RefObject<HTMLDivElement>;
-  optionsRef: React.RefObject<HTMLDivElement>;
-  columnGrid1Ref: React.RefObject<HTMLDivElement>;
-  columnGrid2Ref: React.RefObject<HTMLDivElement>;
-  containerRef: React.RefObject<HTMLDivElement>;
+  boxRef: React.RefObject<HTMLDivElement | null>;
+  nextSectionRef: React.RefObject<HTMLDivElement | null>;
+  clipTargetRef: React.RefObject<HTMLDivElement | null>;
+  imgRef: React.RefObject<HTMLImageElement | null>;
+  otroElementoRef: React.RefObject<HTMLDivElement | null>;
+  optionsRef: React.RefObject<HTMLDivElement | null>;
+  columnGrid1Ref: React.RefObject<HTMLDivElement | null>;
+  columnGrid2Ref: React.RefObject<HTMLDivElement | null>;
+  containerRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export function useClipPathScrollTrigger({

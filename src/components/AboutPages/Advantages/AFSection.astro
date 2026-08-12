@@ -286,7 +286,8 @@ import { Image } from "astro:assets";
   let isDragging = false;
   let dragOffset = 0;
 
-  function goToSlide(index) {
+  function goToSlide(index: number) {
+    if (!slider) return;
     currentSlide = Math.max(0, Math.min(index, totalSlides - 1));
     slider.style.transition = "transform 500ms ease-in-out";
     slider.style.transform = `translateX(-${currentSlide * 100}%)`;
@@ -297,23 +298,24 @@ import { Image } from "astro:assets";
     });
   }
 
-  function getClientX(e) {
-    return e.touches ? e.touches[0].clientX : e.clientX;
+  function getClientX(e: MouseEvent | TouchEvent) {
+    return "touches" in e ? e.touches[0].clientX : e.clientX;
   }
 
-  function onDragStart(e) {
-    if (e.target.classList.contains("indicator")) return;
+  function onDragStart(e: MouseEvent | TouchEvent) {
+    if (!slider) return;
+    if (e.target instanceof Element && e.target.classList.contains("indicator")) return;
 
     isDragging = true;
     startX = getClientX(e);
     dragOffset = 0;
 
-    slider.style.transition = "none"; 
+    slider.style.transition = "none";
     slider.style.cursor = "grabbing";
   }
 
-  function onDragMove(e) {
-    if (!isDragging) return;
+  function onDragMove(e: MouseEvent | TouchEvent) {
+    if (!isDragging || !slider || !slider.parentElement) return;
 
     dragOffset = getClientX(e) - startX;
     const baseTranslate = -(currentSlide * 100);
@@ -324,34 +326,35 @@ import { Image } from "astro:assets";
   }
 
   function onDragEnd() {
-    if (!isDragging) return;
+    if (!isDragging || !slider || !slider.parentElement) return;
     isDragging = false;
     slider.style.cursor = "grab";
 
-    const threshold = slider.parentElement.offsetWidth * 0.2; 
+    const threshold = slider.parentElement.offsetWidth * 0.2;
 
     if (dragOffset < -threshold) {
-      goToSlide(currentSlide + 1); 
+      goToSlide(currentSlide + 1);
     } else if (dragOffset > threshold) {
-      goToSlide(currentSlide - 1); 
+      goToSlide(currentSlide - 1);
     } else {
-      goToSlide(currentSlide); 
+      goToSlide(currentSlide);
     }
   }
 
-  slider.addEventListener("mousedown", onDragStart);
+  if (slider) {
+    slider.addEventListener("mousedown", onDragStart);
+    slider.addEventListener("touchstart", onDragStart, { passive: true });
+    slider.style.cursor = "grab";
+  }
+
   window.addEventListener("mousemove", onDragMove);
   window.addEventListener("mouseup", onDragEnd);
-
-  slider.addEventListener("touchstart", onDragStart, { passive: true });
   window.addEventListener("touchmove", onDragMove, { passive: true });
   window.addEventListener("touchend", onDragEnd);
 
   indicators.forEach((dot, index) => {
     dot.addEventListener("click", () => goToSlide(index));
   });
-
-  slider.style.cursor = "grab";
 
   goToSlide(0);
 </script>
