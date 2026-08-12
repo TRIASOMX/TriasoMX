@@ -7,6 +7,7 @@ import img2 from "../../assets/images/BagHouses/14.webp";
 import SmartVideo from "../unitComponents/SmartVideo";
 import poster from "../../../public/Videos/Webm/Posters/landing1.webp";
 import LavadoraImg from "../../assets/images/DrumMixers/FlujoParalelo/Pro/LAVADORA1.webp";
+import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
 ---
 
 <!--Seccoón T -->
@@ -173,7 +174,7 @@ import LavadoraImg from "../../assets/images/DrumMixers/FlujoParalelo/Pro/LAVADO
 
 <section>
   <div
-    class="relative bg-gradient-to-r from-[#f961e7] to-[#ffd929] text-center py-20 px-6
+    class="relative bg-gradient-to-r from-[#f961e7] to-[#ffd929] text-center py-10 md:py-20 px-6
               rounded-b-[60%]"
   >
     <h2 class="text-2xl md:text-4xl font-bold mb-4">Agende una reunión</h2>
@@ -183,10 +184,6 @@ import LavadoraImg from "../../assets/images/DrumMixers/FlujoParalelo/Pro/LAVADO
       que mejor se ajuste a sus necesidades.
     </p>
 
-    <button
-      class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
-    >
-      Ver horarios disponibles
-    </button>
+    <ScheduleBtn />
   </div>
 </section>

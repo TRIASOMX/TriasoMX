@@ -9,6 +9,7 @@ import img4 from "../../assets/images/BinUnits/1.webp";
 import img5 from "../../assets/images/BinUnits/2.webp";
 import img6 from "../../assets/images/BinUnits/3.webp";
 import Whatsbtn from "../unitComponents/Whatsbtn.astro";
+import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
 ---
 
 <div class="w-full flex flex-col">
@@ -41,7 +42,7 @@ import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 
   <section>
     <div
-      class="relative bg-gradient-to-b from-[#f1eeb8] to-white text-center py-20 px-6
+      class="relative bg-gradient-to-b from-[#f1eeb8] to-white text-center py-10 md:py-20 px-6
                 rounded-b-[60%]"
     >
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Agende una reunión</h2>
@@ -51,11 +52,7 @@ import Whatsbtn from "../unitComponents/Whatsbtn.astro";
         que mejor se ajuste a sus necesidades.
       </p>
 
-      <button
-        class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
-      >
-        Ver horarios disponibles
-      </button>
+      <ScheduleBtn />
     </div>
   </section>
 

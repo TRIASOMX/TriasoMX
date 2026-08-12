@@ -10,6 +10,7 @@ import Slider from "../IntegralAsphalt/SliderOsIntegral";
 import SliderVentajas from "./SliderVentajas.astro";
 import logo2 from "../../assets/logos/triasoLogo.png";
 import Spare from "../../assets/images/Boxes.webp";
+import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
 ---
 
 <section class="w-full flex mt-6 md:mt-20 flex-col gap-4 bg-gray-100">
@@ -147,7 +148,9 @@ import Spare from "../../assets/images/Boxes.webp";
               <Slider client:only />
               <div class="flex flex-col justify-center items-center px-8">
                 <div>
-                  <h1 class="font-bold text-xl md:text-3xl text-center text-black">
+                  <h1
+                    class="font-bold text-xl md:text-3xl text-center text-black"
+                  >
                     Para evitar desperdicios, robos y mala operación de su
                     planta de asfalto
                   </h1>
@@ -660,7 +663,7 @@ import Spare from "../../assets/images/Boxes.webp";
           </div>
 
           <div
-            class="relative bg-gradient-to-b from-[#f0eeb8] to-white text-center py-20 px-6
+            class="relative bg-gradient-to-b from-[#f0eeb8] to-white text-center py-10 md:py-20 px-6
               rounded-b-[60%]"
           >
             <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -672,11 +675,7 @@ import Spare from "../../assets/images/Boxes.webp";
               industrial que mejor se ajuste a sus necesidades.
             </p>
 
-            <button
-              class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
-            >
-              Ver horarios disponibles
-            </button>
+            <ScheduleBtn />
           </div>
         </div>
       </div>

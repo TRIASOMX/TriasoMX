@@ -11,6 +11,7 @@ import ATimage from "../../../../assets/images/DrumMixers/ATHero.webp";
 import CardTambor from "../../../unitComponents/CardTambor.astro";
 import semarnat1 from "../../../../assets/images/DrumMixers/semarnat1.webp";
 import semarnat2 from "../../../../assets/images/DrumMixers/semarnat2.webp";
+import ScheduleBtn from "../../../unitComponents/ScheduleBtn.astro";
 ---
 
 <!--Seccoón T -->
@@ -203,7 +204,7 @@ import semarnat2 from "../../../../assets/images/DrumMixers/semarnat2.webp";
 </section>
 <section>
   <div
-    class="relative bg-gradient-to-r from-[#57D6E2] to-[#0755B1] text-center py-20 px-6
+    class="relative bg-gradient-to-r from-[#57D6E2] to-[#0755B1] text-center py-10 md:py-20 px-6
               rounded-b-[60%]"
   >
     <h2 class="text-3xl md:text-4xl font-bold mb-4">Agende una reunión</h2>
@@ -213,10 +214,6 @@ import semarnat2 from "../../../../assets/images/DrumMixers/semarnat2.webp";
       que mejor se ajuste a sus necesidades.
     </p>
 
-    <button
-      class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
-    >
-      Ver horarios disponibles
-    </button>
+    <ScheduleBtn />
   </div>
 </section>

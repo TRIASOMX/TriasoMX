@@ -5,6 +5,7 @@ import { casetasData, casetasColumns } from "./Datos/caseta";
 import OSHand from "../../assets/images/OSHand.webp";
 import montable from "../../assets/images/AsphaltPlant/montable.webp";
 import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
+import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
 ---
 
 <!-- Hero con opciones -->
@@ -362,7 +363,7 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
 
   <section>
     <div
-      class="relative bg-[#e6a98a] text-center py-20 px-6
+      class="relative bg-[#e6a98a] text-center py-10 md:py-20 px-6
                   rounded-b-[60%]"
     >
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Agende una reunión</h2>
@@ -372,11 +373,7 @@ import remolcable from "../../assets/images/AsphaltPlant/remolcable.webp";
         que mejor se ajuste a sus necesidades.
       </p>
 
-      <button
-        class="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
-      >
-        Ver horarios disponibles
-      </button>
+      <ScheduleBtn />
     </div>
   </section>
 
