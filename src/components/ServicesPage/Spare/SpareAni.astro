@@ -3,7 +3,7 @@ import SpareCabin from "../../../assets/images/Service/Spare/SpareCabine.webp";
 import Aro from "../../../assets/images/Service/Spare/aro.webp";
 import bandas from "../../../assets/images/Service/Spare/bandas.webp";
 import business from "../../../assets/images/Service/Spare/business.webp";
-import rodillos from "../../../assets/images/BinUnits/3.webp"
+import rodillos from "../../../assets/images/BinUnits/3.webp";
 import { Image } from "astro:assets";
 import TwoColumnSection from "../../unitComponents/TwoColumnSection.astro";
 import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
@@ -16,14 +16,14 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
         class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 justify-between items-center mx-auto"
       >
         <div class="flex flex-col space-y-3">
-          <h1 class="font-bold text-2xl lg:text-4xl">
+          <h1 class="font-bold text-xl lg:text-3xl">
             Conocemos este negocio <br />
             de principio a fin
           </h1>
 
           <div class="w-72 h-0.5 bg-[#CA1C1C]"></div>
 
-          <p>
+          <p class="text-sm md:text-base">
             Con más de 30 años de experiencia, entendemos <br />
             exactamente lo que nuestros clientes necesitan.
           </p>
@@ -40,13 +40,13 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
         <div
           class="flex flex-col justify-start items-center lg:justify-end lg:items-end space-y-3 order-1 lg:order-2"
         >
-          <h1 class="font-bold text-2xl lg:text-4xl text-start lg:text-end">
+          <h1 class="font-bold text-xl lg:text-3xl text-start lg:text-end">
             Somos mexicanos
           </h1>
 
           <div class="w-72 h-0.5 bg-[#00840D]"></div>
 
-          <p class="text-start lg:text-end lg:w-4/5">
+          <p class="text-start lg:text-end lg:w-4/5 text-sm md:text-base">
             Con Triaso usted tiene la ventaja que somos mexicanos, a unas horas
             de distancia, lo que significa refacciones de menor costo y de
             entrega inmediata, evitando costosos retrasos.
@@ -70,7 +70,7 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
         class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 justify-between items-center mx-auto"
       >
         <div class="flex flex-col space-y-3">
-          <h1 class="font-bold text-2xl lg:text-4xl">
+          <h1 class="font-bold text-xl lg:text-3xl">
             En cualquier momento, <br />
             en cualquier lugar.
           </h1>
@@ -78,7 +78,7 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
           <div class="w-72 h-0.5 bg-[#CA1C1C]"></div>
 
           <div class="lg:w-[90%]">
-            <p>
+            <p class="text-sm md:text-base">
               Garantizamos la respuesta más rápida en refacciones. Nuestro
               equipo especializado siempre está listo para apoyar a los usuarios
               de nuestros equipos en cualquier lugar y en cualquier momento. Con
@@ -114,7 +114,10 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
           inmediata, evitando costosos retrasos.
         </p>
       </div>
-      <div slot="right" class="flex flex-col justify-center items-center gap-3">
+      <div
+        slot="right"
+        class="flex flex-col justify-center items-center gap-3 text-sm md:text-base"
+      >
         <ul class="list-disc space-y-3">
           <li>Atención técnica inmediata de fábrica.</li>
           <li>Técnicos de fábrica para asistencia inmediata.</li>
@@ -135,12 +138,12 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
             En plantas de asfalto el tiempo muerto causa mayores costos que el
             precio del equipo
           </h1>
-          <p class="text-white font-normal text-lg lg:text-xl">
+          <p class="text-white font-normal text-base lg:text-xl">
             Tome en cuenta todos los equipos y costos detrás de su operación que
             se detienen
           </p>
           <div class="lg:pl-5">
-            <ul class="list-disc space-y-3 text-white">
+            <ul class="list-disc space-y-3 text-white text-sm md:text-base">
               <li>Camiones</li>
               <li>Payloaders</li>
               <li>Jornales de trabajo</li>
@@ -160,10 +163,10 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
   <div
     class="bg-[#383838] w-full text-center flex flex-col pt-5 gap-2 md:gap-4"
   >
-    <h2 class="text-[#fffaea] font-bold text-2xl md:text-3xl">
+    <h2 class="text-[#fffaea] font-bold text-lg md:text-3xl">
       Refacciones de terceros de fácil compra con proveedores en México.
     </h2>
-    <h2 class="text-[#fffaea] font-normal text-2xl md:text-3xl">
+    <h2 class="text-[#fffaea] font-normal text-lg md:text-3xl">
       Una broma muy usada por sobre Triaso es que "se pueden comprar en un
       Oxxo".
     </h2>
@@ -175,27 +178,23 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
       class="w-full grid grid-cols-1 md:grid-cols-2 md:gap-10 py-10 max-w-7xl items-center space-y-3"
     >
       <div class="w-full">
-        <Image
-          src={bandas}
-          alt="TRIASO Bandas"
-          class="w-full rounded-2xl"
-        />
+        <Image src={bandas} alt="TRIASO Bandas" class="w-full rounded-2xl" />
       </div>
       <div
         class="w-full text-base md:text-lg font-bold text-white h-full flex flex-col space-y-5 justify-center"
       >
-        <h1 class="font-bold lg:text-start">
+        <h1 class="font-bold lg:text-start text-lg md:text-2xl">
           Refacciones propias fabricadas en México
         </h1>
-        <p>
+        <p class="text-sm md:text-lg">
           Ningún otro fabricante de plantas de asfalto en el mundo produce
           tantos de sus propios componentes como Triaso.
         </p>
-        <p>
+        <p class="text-sm md:text-lg">
           Esta fabricación interna nos permite ofrecer un mejor servicio,
           garantías incomparables y soporte directo tanto desde nuestra fábrica.
         </p>
-        <p>
+        <p class="text-sm md:text-lg">
           Enviamos refacciones a todo el mundo para mantener sus operaciones
           funcionando sin interrupciones. Cada pieza cuenta con calidad
           certificada, precios bajos y tiempos de entrega rápidos.
@@ -206,17 +205,16 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
   <div class="w-full flex flex-col justify-center items-center">
     <div class="w-full grid grid-cols-1 md:grid-cols-2 max-w-[2400px]">
       <div class="w-full pl-4 md:pl-8 lg:pl-52 font-bold py-10 space-y-5">
-        <h1 class="text-2xl md:text-3xl text-blueMain">
-          Inventario Triaso®
-        </h1><br />
-        <p class="text-base md:text-lg text-grisT">
+        <h1 class="text-xl md:text-3xl text-blueMain">Inventario Triaso®</h1><br
+        />
+        <p class="text-sm md:text-lg text-grisT">
           En Triaso, damos prioridad a la confiabilidad y desempeño de sus
           equipos ofreciendo refacciones de alta calidad. Nuestro almacén
           completamente abastecido en Durango, México, nos permite brindar
           tiempos de respuesta rápidos y eficientes cuando necesita piezas con
           urgencia.
         </p>
-        <p class="text-base md:text-lg text-grisT">
+        <p class="text-sm md:text-lg text-grisT">
           Con un avanzado sistema de catalogación, podemos identificar y
           suministrar con precisión los componentes exactos que necesita. Ya sea
           que busque piezas estándar o soluciones personalizadas, Triaso está
@@ -225,7 +223,7 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
       </div>
       <div class="w-full flex flex-col">
         <div class="w-full rounded-bl-2xl bg-redBg font-bold">
-          <h1 class="text-2xl md:text-3xl text-white py-6 pl-6">
+          <h1 class="text-xl md:text-3xl text-white py-6 pl-6">
             100% fabricado internamente
           </h1>
         </div>

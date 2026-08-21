@@ -282,7 +282,7 @@ const BHPlanos = () => {
             </div>
           </div>
         </header>
-        <div className="w-full px-8 lg:px-8 mt-14">
+        <div className="w-full px-2 lg:px-8 mt-14">
           {/* Contenedor de los botones */}
           <div id="options" ref={optionsRef} className="w-full">
             {/* móvil */}
@@ -703,7 +703,7 @@ const BHPlanos = () => {
                 </div>
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
                       </h1>
@@ -833,7 +833,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
                       </h1>
@@ -1347,7 +1347,7 @@ const BHPlanos = () => {
                 </div>
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
                       </h1>
@@ -1477,7 +1477,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
                       </h1>
@@ -1990,7 +1990,7 @@ const BHPlanos = () => {
                 </div>
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
                       </h1>
@@ -2120,7 +2120,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
                       </h1>
@@ -2634,7 +2634,7 @@ const BHPlanos = () => {
                 </div>
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
                       </h1>
@@ -2764,7 +2764,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
                       </h1>
@@ -3277,7 +3277,7 @@ const BHPlanos = () => {
                 </div>
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
                       </h1>
@@ -3407,7 +3407,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
                       </h1>
@@ -3920,7 +3920,7 @@ const BHPlanos = () => {
                 </div>
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
                       </h1>
@@ -4050,7 +4050,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
                       </h1>
@@ -4563,7 +4563,7 @@ const BHPlanos = () => {
                 </div>
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
                       </h1>
@@ -4693,7 +4693,7 @@ const BHPlanos = () => {
                     </div>
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
-                    <div className="w-[44vh] lg:w-full md:w-full flex justify-between border-b border-b-white">
+                    <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
                       <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
                       </h1>

@@ -20,7 +20,7 @@ import CotizacionBtn from "../unitComponents/cotizacionBtn.astro";
 import consola from "../../assets/images/RapBins/Consola.webp";
 import quijada from "../../assets/images/RapBins/quijada.webp";
 import criba from "../../assets/images/RapBins/criba.webp";
-import transportador from "../../assets/images/RapBins/transportador.webp";
+import transportador from "../../assets/images/RapBins/transport-slider.webp";
 
 const slides = [
   {
@@ -39,7 +39,7 @@ const slides = [
     id: 3,
     title: "Transportador",
     text: "El transportador está diseñado para integrar la carpeta asfáltica recuperada directamente en el collar de RAP. Garantizando un flujo constante al tambor mezclador.",
-    image: rap.src,
+    image: transportador.src,
   },
 ];
 const slides2 = [
@@ -140,7 +140,7 @@ const slides2 = [
               Sabemos la importancia de que su equipo no pare de trabajar.
             </h2>
             <p
-              class="text-[#d9d9d9] pt-2 text-sm lg:text-lg md:text-lg text-justify"
+              class="text-[#d9d9d9] pt-2 text-sm lg:text-lg md:text-lg text-justify font-normal"
             >
               Equipado con tolvas de RAP de gran capacidad, este proceso de
               alimentación maneja altos volúmenes de material manteniendo una
@@ -189,23 +189,23 @@ const slides2 = [
 
   <!-- ---- -->
   <div
-    class="w-full grid grid-cols-1 md:grid-cols-5 gap-10 items-start justify-center"
+    class="w-full max-w-7xl px-0 md:px-8 mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 items-start justify-center"
   >
-    <div class="col-span-2 flex lg:justify-center md:justify-center">
+    <div class="col-span-2 flex lg:justify-center md:justify-center w-full">
       <Image
         src={binUnit1}
         alt="Precision Dosing System in action"
-        class="w-1/2 md:w-full"
+        class="w-3/4 md:w-full"
       />
     </div>
     <div
-      class="col-span-3 flex flex-col items-start h-full justify-center lg:pr-52 pr-8 lg:pl-0 pl-8"
+      class="col-span-3 flex flex-col items-start h-full justify-center w-full px-2 md:px-0"
     >
       <h1 class="text-2xl md:text-5xl font-bold">
         Sistemas de dosificación de precisión en los alimentadores de RAP
       </h1><br />
 
-      <div class="w-full flex flex-col gap-6">
+      <div class="w-full flex flex-col gap-3 md:gap-6">
         <AcordeonItem
           client:only
           title="Sensores de alta precisión"
@@ -238,7 +238,7 @@ const slides2 = [
         />
       </div>
       <div
-        class="text-base lg:text-xl md:text-xl font-thin text-grisT text-justify py-10"
+        class="px-2 text-sm lg:text-xl md:text-xl font-thin text-grisT text-justify py-10"
       >
         <p>
           Estas características convierten nuestros sistemas de dosificación de
@@ -331,8 +331,6 @@ const slides2 = [
           />
         </div>
       </div>
-
-      <Slider client:only />
     </div>
   </section>
 
@@ -340,7 +338,7 @@ const slides2 = [
   <section>
     <div class="bg-[#272526]">
       <div
-        class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center justify-center gap-4"
+        class="max-w-7xl mx-auto px-8 py-4 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center justify-center gap-4"
       >
         <div class="pt-5">
           <Image
@@ -362,8 +360,8 @@ const slides2 = [
           <div class="flex justify-center items-center"><LearnBtnBlue /></div>
         </div>
 
-        <div class="flex flex-col justify-center mx-auto">
-          <div>
+        <div class="w-full order-1 md:order-0">
+          <div class="w-full flex justify-center">
             <h1
               class="text-center text-white text-2xl md:text-4xl max-w-[20ch]"
             >
@@ -372,8 +370,7 @@ const slides2 = [
           </div>
           <div class="flex justify-center items-center"><LearnBtnBlue /></div>
         </div>
-
-        <div class="pb-5">
+        <div class="pb-5 order-0 md:order-1">
           <Image
             src="https://placehold.co/600x400/png"
             alt="Placeholder"

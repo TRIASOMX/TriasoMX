@@ -63,742 +63,605 @@ import bigSlider3 from "../../assets/images/RapBins/Low/alabe.png";
     Tambor Mezclador
   </h2>
 
-  <div class="overflow-hidden" id="sliderViewport">
-    <div
-      id="sliderTrack"
-      class="flex transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
-    >
-      <div class="w-full shrink-0 space-y-4">
-        <div class="card-row-wrapper relative">
-          <div
-            class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3"
-            id="cardRow0"
-          >
-            <!-- Card 1-A -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="0-0"
-            >
-              <div
-                class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden"
-              >
-                <img
-                  src={slider1.src}
-                  alt="Roles de carga"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div
-                class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
-              >
-              </div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
-              >
-                <span
-                  class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
-                >
-                  Roles de carga
-                </span>
-
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p
-                    class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2"
-                  >
-                    Roles de carga extra reforzados fabricados en acero forjado,
-                    maquinado con precisión y equipados con rodamientos
-                    industriales para una rotación del tambor suave y estable.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 1-B -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="0-1"
-            >
-              <div
-                class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden"
-              >
-                <img
-                  src={slider2.src}
-                  alt="Variadores de velocidad de giro"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div
-                class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
-              >
-              </div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
-              >
-                <span
-                  class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
-                >
-                  Variadores de<br />velocidad de giro
-                </span>
-
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p
-                    class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2"
-                  >
-                    Nuestra más reciente innovación para altos porcentajes de
-                    incorporación de RAP es el uso de variadores de velocidad de
-                    rotación en los sistemas de giro del tambor.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 1-C -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="0-2"
-            >
-              <div
-                class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden"
-              >
-                <img
-                  src={slider3.src}
-                  alt="Aros"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div
-                class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
-              >
-              </div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
-              >
-                <span
-                  class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
-                >
-                  Aros
-                </span>
-
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p
-                    class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2"
-                  >
-                    Forjados en acero aleado de alta resistencia y maquinados
-                    con precisión para garantizar un soporte confiable y una
-                    operación silenciosa y uniforme.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- MÓVIL INDICADORES -->
-          <div
-            class="card-dots flex justify-center gap-1.5 mt-2 sm:hidden"
-            data-row="0"
-          >
-            <span class="card-dot w-2 h-2 rounded-full bg-gray-800"></span>
-            <span class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
-            ></span>
-            <span class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
-            ></span>
-          </div>
+  <div class="card-row-wrapper relative overflow-hidden">
+    <div class="card-row flex gap-3" id="cardTrack">
+      <!-- Card 0-0 -->
+      <div
+        class="relative rounded-lg overflow-hidden group cursor-pointer shrink-0 sm:basis-[calc((100%-1.5rem)/3)]"
+        data-card="0-0"
+      >
+        <div class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden">
+          <img
+            src={slider1.src}
+            alt="Roles de carga"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
         </div>
 
-        <!-- Bloque RAP slide 1 -->
         <div
-          class="rounded-xl bg-[#727272] p-6 flex flex-col sm:flex-row items-center gap-6 min-h-56 sm:min-h-80 lg:min-h-80"
+          class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
         >
-          <div class="flex-1 min-w-0">
-            <h3
-              class="font-extrabold text-white text-2xl md:text-3xl uppercase tracking-wide mb-2"
-            >
-              Collar de RAP
-            </h3>
-            <p class="text-white/80 text-sm mb-1">
-              Nuestro sistema de RAP puede incorporar
-            </p>
-            <p class="text-white font-bold text-base md:text-lg mb-3">
-              hasta 50% <span class="font-normal text-sm text-white/80"
-                >de carpeta asfáltica reciclada</span
-              >
-            </p>
-            <p class="text-white/80 text-sm mb-1">
-              Por cada 10% de RAP,<br />el costo de la mezcla asfáltica se
-            </p>
-            <p class="text-white font-bold text-xl mb-4">reduce 7%</p>
-            <a
-              href="#"
-              class="inline-block px-5 py-2 border border-white/60 rounded-full text-white text-sm
-                               hover:bg-white hover:text-gray-700 transition-all duration-200"
-            >
-              Saber más
-            </a>
-          </div>
-          <!-- Imagen 3D placeholder collar -->
-          <div class="shrink-0 w-44 flex items-center justify-start">
-            <img src={bigSlider1.src} alt="" />
-          </div>
-        </div>
-      </div><!-- /SLIDE 1 -->
-
-      <div class="w-full shrink-0 space-y-4">
-        <div class="card-row-wrapper relative">
-          <div class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <!-- Card 2-A -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="1-0"
-            >
-              <div
-                class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden"
-              >
-                <img
-                  src={slider4.src}
-                  alt="Aislamiento para eficiencia energética"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div
-                class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
-              >
-              </div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
-              >
-                <span
-                  class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
-                >
-                  Aislamiento para eficiencia energética
-                </span>
-
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p
-                    class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2"
-                  >
-                    Aislamiento de lana mineral minimizando la pérdida de calor,
-                    reduciendo el consumo de combustible y asegura que la mezcla
-                    asfáltica se mantenga a la temperatura óptima.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 2-B -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="1-1"
-            >
-              <div
-                class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden"
-              >
-                <img
-                  src={slider5.src}
-                  alt="Platos axiales"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div
-                class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
-              >
-              </div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
-              >
-                <span
-                  class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
-                >
-                  Platos axiales
-                </span>
-
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p
-                    class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2"
-                  >
-                    Para mantener una alineación precisa y estabilidad durante
-                    la rotación, el sistema incorpora platos axiales
-                    individuales en cada aro.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 2-C -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="1-2"
-            >
-              <div
-                class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden"
-              >
-                <img
-                  src={slider6.src}
-                  alt="Escudo frontal extra-reforzado"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div
-                class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
-              >
-              </div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
-              >
-                <span
-                  class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
-                >
-                  Escudo frontal extra-reforzado
-                </span>
-
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p
-                    class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2"
-                  >
-                    Escudo frontal con refuerzo adicional y sellado con acero
-                    extra reforzado y hule EPDM para evitar la entrada de aire
-                    frío no deseado, manteniendo temperaturas internas óptimas y
-                    una alta eficiencia de combustión.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="card-dots flex justify-center gap-1.5 mt-2 sm:hidden"
-            data-row="1"
-          >
-            <span class="card-dot w-2 h-2 rounded-full bg-gray-800"></span>
-            <span class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
-            ></span>
-            <span class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
-            ></span>
-          </div>
         </div>
 
-        <!-- Bloque RAP slide 2 -->
         <div
-          class="rounded-xl bg-[#727272] p-6 flex flex-col sm:flex-row items-center gap-6 overflow-hidden min-h-56 sm:min-h-80 lg:min-h-80"
+          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
         >
-          <div class="flex-1 min-w-0 text-center sm:text-left">
-            <h3
-              class="font-extrabold text-white text-2xl md:text-3xl uppercase tracking-wide mb-2"
+          <span
+            class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
+          >
+            Roles de carga
+          </span>
+
+          <button
+            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+            aria-expanded="false"
+          >
+            <svg
+              class="chevron w-3 h-3 transition-transform duration-300"
+              viewBox="0 0 12 12"
+              fill="none"
             >
-              TOLVAS DE RAP
-            </h3>
-
-            <p class="text-white/80 text-sm mb-1">
-              Nuestro sistema de RAP puede incorporar
-            </p>
-
-            <p class="text-white font-bold text-base md:text-lg mb-3">
-              hasta 50%
-              <span class="font-normal text-sm text-white/80">
-                de carpeta asfáltica reciclada
-              </span>
-            </p>
-
-            <p class="text-white/80 text-sm mb-1">
-              Por cada 10% de RAP, <br />
-              el costo de la mezcla asfáltica se
-            </p>
-
-            <p class="text-white font-bold text-xl mb-4">reduce 7%</p>
-
-            <a
-              href="#"
-              class="inline-block px-5 py-2 border border-white/60 rounded-full text-white text-sm hover:bg-white hover:text-gray-700 transition-all duration-200"
-            >
-              Saber más
-            </a>
-          </div>
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+            mostrar más
+          </button>
 
           <div
-            class="w-full sm:w-48 md:w-56 lg:w-64 h-40 sm:h-48 md:h-56 flex items-center justify-center shrink-0"
+            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
           >
-            <img
-              src={bigSlider2.src}
-              alt="Tolvas de RAP"
-              class="max-w-full max-h-full object-contain"
-            />
+            <p class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2">
+              Roles de carga extra reforzados fabricados en acero forjado,
+              maquinado con precisión y equipados con rodamientos
+              industriales para una rotación del tambor suave y estable.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="w-full shrink-0 space-y-4">
-        <div class="card-row-wrapper relative">
-          <div class="card-row grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <!-- Card 3-A -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="2-0"
-            >
-              <div
-                class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden"
-              >
-                <img
-                  src={slider7.src}
-                  alt="Chasis con alta distancia al suelo"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div
-                class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
-              >
-              </div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
-              >
-                <span
-                  class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
-                >
-                  Chasis con alta distancia al suelo
-                </span>
-
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p
-                    class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2"
-                  >
-                    Permite el transporte seguro del equipo en terrenos, calles
-                    y carreteras con baches y desniveles muy comunes en México,
-                    evitando daños a los componentes inferiores.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 3-B -->
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="2-1"
-            >
-              <div
-                class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden"
-              >
-                <img
-                  src={slider8.src}
-                  alt="Flancos estéticos"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div
-                class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
-              >
-              </div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
-              >
-                <span
-                  class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
-                >
-                  Flancos estéticos
-                </span>
-
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p
-                    class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2"
-                  >
-                    Los paneles estéticos están diseñados no solo para ofrecer
-                    una mejor apariencia visual, sino también para reforzar la
-                    imagen profesional de tu equipo y de tu empresa.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 3-C 
-            <div
-              class="relative rounded-lg overflow-hidden group cursor-pointer"
-              data-card="2-2"
-            >
-              <div
-                class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden"
-              >
-                <img
-                  src={slider9.src}
-                  alt="Sistema de ajuste centralizado"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div
-                class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
-              >
-              </div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
-              >
-                <span
-                  class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
-                >
-                  Sistema de ajuste centralizado
-                </span>
-
-                <button
-                  class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
-                  aria-expanded="false"
-                >
-                  <svg
-                    class="chevron w-3 h-3 transition-transform duration-300"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"></path>
-                  </svg>
-                  mostrar más
-                </button>
-
-                <div
-                  class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
-                >
-                  <p
-                    class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2"
-                  >
-                    placeholder
-                  </p>
-                </div>
-              </div>
-            </div>-->
-          </div>
-
-          <div
-            class="card-dots flex justify-center gap-1.5 mt-2 sm:hidden"
-            data-row="2"
-          >
-            <span class="card-dot w-2 h-2 rounded-full bg-gray-800"></span>
-            <span class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
-            ></span>
-            <span class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"
-            ></span>
-          </div>
+      <!-- Card 0-1 -->
+      <div
+        class="relative rounded-lg overflow-hidden group cursor-pointer shrink-0 sm:basis-[calc((100%-1.5rem)/3)]"
+        data-card="0-1"
+      >
+        <div class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden">
+          <img
+            src={slider2.src}
+            alt="Variadores de velocidad de giro"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
         </div>
 
         <div
-          class="rounded-xl bg-[#727272] p-6 flex flex-col sm:flex-row items-center gap-6 overflow-hidden min-h-56 sm:min-h-80 lg:min-h-80"
+          class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
         >
-          <div class="flex-1 min-w-0 text-center sm:text-left">
-            <h3
-              class="font-extrabold text-white text-2xl md:text-3xl uppercase tracking-wide mb-2"
+        </div>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
+        >
+          <span
+            class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
+          >
+            Variadores de<br />velocidad de giro
+          </span>
+
+          <button
+            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+            aria-expanded="false"
+          >
+            <svg
+              class="chevron w-3 h-3 transition-transform duration-300"
+              viewBox="0 0 12 12"
+              fill="none"
             >
-              ÁLABES DE RAP
-            </h3>
-
-            <p class="text-white/80 text-sm mb-1">
-              Nuestro sistema de RAP puede incorporar
-            </p>
-
-            <p class="text-white font-bold text-base md:text-lg mb-3">
-              hasta 50%
-              <span class="font-normal text-sm text-white/80">
-                de carpeta asfáltica reciclada
-              </span>
-            </p>
-
-            <p class="text-white/80 text-sm mb-1">
-              Por cada 10% de RAP, <br />
-              el costo de la mezcla asfáltica se
-            </p>
-
-            <p class="text-white font-bold text-xl mb-4">reduce 7%</p>
-
-            <a
-              href="#"
-              class="inline-block px-5 py-2 border border-white/60 rounded-full text-white text-sm hover:bg-white hover:text-gray-700 transition-all duration-200"
-            >
-              Saber más
-            </a>
-          </div>
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+            mostrar más
+          </button>
 
           <div
-            class="w-full sm:w-48 md:w-56 lg:w-64 h-40 sm:h-48 md:h-56 flex items-center justify-center shrink-0"
+            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
           >
-            <img
-              src={bigSlider3.src}
-              alt="Álabes de RAP"
-              class="max-w-full max-h-full object-contain"
-            />
+            <p class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2">
+              Nuestra más reciente innovación para altos porcentajes de
+              incorporación de RAP es el uso de variadores de velocidad de
+              rotación en los sistemas de giro del tambor.
+            </p>
           </div>
+        </div>
+      </div>
+
+      <!-- Card 0-2 -->
+      <div
+        class="relative rounded-lg overflow-hidden group cursor-pointer shrink-0 sm:basis-[calc((100%-1.5rem)/3)]"
+        data-card="0-2"
+      >
+        <div class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden">
+          <img
+            src={slider3.src}
+            alt="Aros"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
+        >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
+        >
+          <span
+            class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
+          >
+            Aros
+          </span>
+
+          <button
+            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+            aria-expanded="false"
+          >
+            <svg
+              class="chevron w-3 h-3 transition-transform duration-300"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+            mostrar más
+          </button>
+
+          <div
+            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+          >
+            <p class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2">
+              Forjados en acero aleado de alta resistencia y maquinados con
+              precisión para garantizar un soporte confiable y una operación
+              silenciosa y uniforme.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 1-0 -->
+      <div
+        class="relative rounded-lg overflow-hidden group cursor-pointer shrink-0 sm:basis-[calc((100%-1.5rem)/3)]"
+        data-card="1-0"
+      >
+        <div class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden">
+          <img
+            src={slider4.src}
+            alt="Aislamiento para eficiencia energética"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
+        >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
+        >
+          <span
+            class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
+          >
+            Aislamiento para eficiencia energética
+          </span>
+
+          <button
+            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+            aria-expanded="false"
+          >
+            <svg
+              class="chevron w-3 h-3 transition-transform duration-300"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+            mostrar más
+          </button>
+
+          <div
+            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+          >
+            <p class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2">
+              Aislamiento de lana mineral minimizando la pérdida de calor,
+              reduciendo el consumo de combustible y asegura que la mezcla
+              asfáltica se mantenga a la temperatura óptima.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 1-1 -->
+      <div
+        class="relative rounded-lg overflow-hidden group cursor-pointer shrink-0 sm:basis-[calc((100%-1.5rem)/3)]"
+        data-card="1-1"
+      >
+        <div class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden">
+          <img
+            src={slider5.src}
+            alt="Platos axiales"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
+        >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
+        >
+          <span
+            class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
+          >
+            Platos axiales
+          </span>
+
+          <button
+            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+            aria-expanded="false"
+          >
+            <svg
+              class="chevron w-3 h-3 transition-transform duration-300"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+            mostrar más
+          </button>
+
+          <div
+            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+          >
+            <p class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2">
+              Para mantener una alineación precisa y estabilidad durante la
+              rotación, el sistema incorpora platos axiales individuales en
+              cada aro.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 1-2 -->
+      <div
+        class="relative rounded-lg overflow-hidden group cursor-pointer shrink-0 sm:basis-[calc((100%-1.5rem)/3)]"
+        data-card="1-2"
+      >
+        <div class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden">
+          <img
+            src={slider6.src}
+            alt="Escudo frontal extra-reforzado"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
+        >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
+        >
+          <span
+            class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
+          >
+            Escudo frontal extra-reforzado
+          </span>
+
+          <button
+            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+            aria-expanded="false"
+          >
+            <svg
+              class="chevron w-3 h-3 transition-transform duration-300"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+            mostrar más
+          </button>
+
+          <div
+            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+          >
+            <p class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2">
+              Escudo frontal con refuerzo adicional y sellado con acero extra
+              reforzado y hule EPDM para evitar la entrada de aire frío no
+              deseado, manteniendo temperaturas internas óptimas y una alta
+              eficiencia de combustión.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2-0 -->
+      <div
+        class="relative rounded-lg overflow-hidden group cursor-pointer shrink-0 sm:basis-[calc((100%-1.5rem)/3)]"
+        data-card="2-0"
+      >
+        <div class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden">
+          <img
+            src={slider7.src}
+            alt="Chasis con alta distancia al suelo"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
+        >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
+        >
+          <span
+            class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
+          >
+            Chasis con alta distancia al suelo
+          </span>
+
+          <button
+            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+            aria-expanded="false"
+          >
+            <svg
+              class="chevron w-3 h-3 transition-transform duration-300"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+            mostrar más
+          </button>
+
+          <div
+            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+          >
+            <p class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2">
+              Permite el transporte seguro del equipo en terrenos, calles y
+              carreteras con baches y desniveles muy comunes en México,
+              evitando daños a los componentes inferiores.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2-1 -->
+      <div
+        class="relative rounded-lg overflow-hidden group cursor-pointer shrink-0 sm:basis-[calc((100%-1.5rem)/3)]"
+        data-card="2-1"
+      >
+        <div class="w-full h-56 sm:h-80 lg:h-96 bg-black/10 overflow-hidden">
+          <img
+            src={slider8.src}
+            alt="Flancos estéticos"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="card-darken absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 to-transparent opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none"
+        >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4"
+        >
+          <span
+            class="font-bold text-white text-sm sm:text-base uppercase tracking-wide leading-tight mb-2"
+          >
+            Flancos estéticos
+          </span>
+
+          <button
+            class="mostrar-mas flex items-center gap-1 text-white/80 text-xs hover:text-white transition-colors"
+            aria-expanded="false"
+          >
+            <svg
+              class="chevron w-3 h-3 transition-transform duration-300"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+            mostrar más
+          </button>
+
+          <div
+            class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
+          >
+            <p class="text-white/75 text-xs sm:text-sm leading-relaxed mt-2">
+              Los paneles estéticos están diseñados no solo para ofrecer una
+              mejor apariencia visual, sino también para reforzar la imagen
+              profesional de tu equipo y de tu empresa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MÓVIL INDICADORES (una card real = un dot) -->
+  <div class="card-dots flex justify-center gap-1.5 mt-2 sm:hidden" id="cardDots">
+  </div>
+
+  <div class="overflow-hidden mt-4" id="infoViewport">
+    <div
+      id="infoTrack"
+      class="flex transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
+    >
+      <!-- Bloque RAP slide 1 -->
+      <div
+        class="w-full shrink-0 rounded-xl bg-[#727272] p-6 flex flex-col sm:flex-row items-center gap-6 min-h-56 sm:min-h-80 lg:min-h-80"
+      >
+        <div class="flex-1 min-w-0">
+          <h3
+            class="font-extrabold text-white text-2xl md:text-3xl uppercase tracking-wide mb-2"
+          >
+            Collar de RAP
+          </h3>
+          <p class="text-white/80 text-sm mb-1">
+            Nuestro sistema de RAP puede incorporar
+          </p>
+          <p class="text-white font-bold text-base md:text-lg mb-3">
+            hasta 50% <span class="font-normal text-sm text-white/80"
+              >de carpeta asfáltica reciclada</span
+            >
+          </p>
+          <p class="text-white/80 text-sm mb-1">
+            Por cada 10% de RAP,<br />el costo de la mezcla asfáltica se
+          </p>
+          <p class="text-white font-bold text-xl mb-4">reduce 7%</p>
+          <a
+            href="#"
+            class="inline-block px-5 py-2 border border-white/60 rounded-full text-white text-sm
+                             hover:bg-white hover:text-gray-700 transition-all duration-200"
+          >
+            Saber más
+          </a>
+        </div>
+        <!-- Imagen 3D placeholder collar -->
+        <div class="shrink-0 w-44 flex items-center justify-start">
+          <img src={bigSlider1.src} alt="" />
+        </div>
+      </div>
+
+      <!-- Bloque RAP slide 2 -->
+      <div
+        class="w-full shrink-0 rounded-xl bg-[#727272] p-6 flex flex-col sm:flex-row items-center gap-6 overflow-hidden min-h-56 sm:min-h-80 lg:min-h-80"
+      >
+        <div class="flex-1 min-w-0 text-center sm:text-left">
+          <h3
+            class="font-extrabold text-white text-2xl md:text-3xl uppercase tracking-wide mb-2"
+          >
+            TOLVAS DE RAP
+          </h3>
+
+          <p class="text-white/80 text-sm mb-1">
+            Nuestro sistema de RAP puede incorporar
+          </p>
+
+          <p class="text-white font-bold text-base md:text-lg mb-3">
+            hasta 50%
+            <span class="font-normal text-sm text-white/80">
+              de carpeta asfáltica reciclada
+            </span>
+          </p>
+
+          <p class="text-white/80 text-sm mb-1">
+            Por cada 10% de RAP, <br />
+            el costo de la mezcla asfáltica se
+          </p>
+
+          <p class="text-white font-bold text-xl mb-4">reduce 7%</p>
+
+          <a
+            href="#"
+            class="inline-block px-5 py-2 border border-white/60 rounded-full text-white text-sm hover:bg-white hover:text-gray-700 transition-all duration-200"
+          >
+            Saber más
+          </a>
+        </div>
+
+        <div
+          class="w-full sm:w-48 md:w-56 lg:w-64 h-40 sm:h-48 md:h-56 flex items-center justify-center shrink-0"
+        >
+          <img
+            src={bigSlider2.src}
+            alt="Tolvas de RAP"
+            class="max-w-full max-h-full object-contain"
+          />
+        </div>
+      </div>
+
+      <!-- Bloque RAP slide 3 -->
+      <div
+        class="w-full shrink-0 rounded-xl bg-[#727272] p-6 flex flex-col sm:flex-row items-center gap-6 overflow-hidden min-h-56 sm:min-h-80 lg:min-h-80"
+      >
+        <div class="flex-1 min-w-0 text-center sm:text-left">
+          <h3
+            class="font-extrabold text-white text-2xl md:text-3xl uppercase tracking-wide mb-2"
+          >
+            ÁLABES DE RAP
+          </h3>
+
+          <p class="text-white/80 text-sm mb-1">
+            Nuestro sistema de RAP puede incorporar
+          </p>
+
+          <p class="text-white font-bold text-base md:text-lg mb-3">
+            hasta 50%
+            <span class="font-normal text-sm text-white/80">
+              de carpeta asfáltica reciclada
+            </span>
+          </p>
+
+          <p class="text-white/80 text-sm mb-1">
+            Por cada 10% de RAP, <br />
+            el costo de la mezcla asfáltica se
+          </p>
+
+          <p class="text-white font-bold text-xl mb-4">reduce 7%</p>
+
+          <a
+            href="#"
+            class="inline-block px-5 py-2 border border-white/60 rounded-full text-white text-sm hover:bg-white hover:text-gray-700 transition-all duration-200"
+          >
+            Saber más
+          </a>
+        </div>
+
+        <div
+          class="w-full sm:w-48 md:w-56 lg:w-64 h-40 sm:h-48 md:h-56 flex items-center justify-center shrink-0"
+        >
+          <img
+            src={bigSlider3.src}
+            alt="Álabes de RAP"
+            class="max-w-full max-h-full object-contain"
+          />
         </div>
       </div>
     </div>
@@ -835,16 +698,10 @@ import bigSlider3 from "../../assets/images/RapBins/Low/alabe.png";
 
 <style>
   @media (max-width: 639px) {
-    .card-row-wrapper {
-      overflow: hidden;
-    }
-
     .card-row {
-      display: flex !important;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      gap: 0.75rem;
       padding-bottom: 0.5rem;
       scrollbar-width: none;
     }
@@ -860,29 +717,100 @@ import bigSlider3 from "../../assets/images/RapBins/Low/alabe.png";
 </style>
 
 <script>
-  const TOTAL_SLIDES = 3;
   const AUTO_INTERVAL = 10000;
 
-  const track = document.getElementById("sliderTrack") as HTMLElement;
-  const viewport = document.getElementById("sliderViewport") as HTMLElement;
+  const cardTrack = document.getElementById("cardTrack") as HTMLElement;
+  const cards = Array.from(
+    cardTrack.querySelectorAll<HTMLElement>("[data-card]"),
+  );
+  const cardDotsContainer = document.getElementById("cardDots");
+
+  const infoViewport = document.getElementById("infoViewport");
+  const infoTrack = document.getElementById("infoTrack") as HTMLElement | null;
+
   const dots = Array.from(
     document.querySelectorAll<HTMLButtonElement>("[data-dot]"),
   );
 
+  const groupStartIndex: number[] = [];
+  cards.forEach((card, i) => {
+    const group = Number(card.dataset.card!.split("-")[0]);
+    if (groupStartIndex[group] === undefined) groupStartIndex[group] = i;
+  });
+
+  const TOTAL_SLIDES = infoTrack ? infoTrack.children.length : dots.length;
+
+  function cardGroup(cardIndex: number): number {
+    return Number(cards[cardIndex].dataset.card!.split("-")[0]);
+  }
+
+  function isMobile() {
+    return window.innerWidth < 640;
+  }
+
   let current = 0;
   let timer: ReturnType<typeof setInterval>;
+  let isProgrammaticScroll = false;
 
-  function goTo(index: number) {
-    current = (index + TOTAL_SLIDES) % TOTAL_SLIDES;
-    track.style.transform = `translateX(-${current * 100}%)`;
-
+  function setActiveDots(index: number) {
     dots.forEach((dot, i) => {
-      const active = i === current;
+      const active = i === index;
       dot.setAttribute("aria-selected", String(active));
       dot.className = active
         ? "dot w-3 h-3 rounded-full bg-gray-800 transition-all duration-300"
         : "dot w-2 h-2 mt-0.5 rounded-full bg-gray-300 transition-all duration-300 hover:bg-gray-500";
     });
+  }
+
+  function updateCardDots(activeIndex: number) {
+    if (!cardDotsContainer) return;
+    const dotEls = Array.from(
+      cardDotsContainer.querySelectorAll<HTMLElement>(".card-dot"),
+    );
+    dotEls.forEach((dot, i) => {
+      dot.className =
+        i === activeIndex
+          ? "card-dot w-2 h-2 rounded-full bg-gray-800 transition-all duration-300"
+          : "card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300 transition-all duration-300";
+    });
+  }
+
+  function buildCardDots() {
+    if (!cardDotsContainer) return;
+    cardDotsContainer.innerHTML = cards
+      .map((_, i) =>
+        i === 0
+          ? '<span class="card-dot w-2 h-2 rounded-full bg-gray-800"></span>'
+          : '<span class="card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300"></span>',
+      )
+      .join("");
+  }
+
+  function positionCardTrack(index: number) {
+    const startIndex = groupStartIndex[index] ?? 0;
+    const targetCard = cards[startIndex];
+    if (!targetCard) return;
+
+    if (isMobile()) {
+      isProgrammaticScroll = true;
+      cardTrack.scrollTo({ left: targetCard.offsetLeft, behavior: "smooth" });
+      window.setTimeout(() => {
+        isProgrammaticScroll = false;
+      }, 600);
+    } else {
+      cardTrack.style.transform = `translateX(-${targetCard.offsetLeft}px)`;
+    }
+    updateCardDots(startIndex);
+  }
+
+  function goTo(index: number, moveCards = true) {
+    current = (index + TOTAL_SLIDES) % TOTAL_SLIDES;
+
+    if (infoTrack) {
+      infoTrack.style.transform = `translateX(-${current * 100}%)`;
+    }
+    setActiveDots(current);
+    if (moveCards) positionCardTrack(current);
   }
 
   function startAuto() {
@@ -899,6 +827,32 @@ import bigSlider3 from "../../assets/images/RapBins/Low/alabe.png";
       resetAuto();
     });
   });
+
+  cardTrack.addEventListener(
+    "scroll",
+    () => {
+      if (!isMobile() || isProgrammaticScroll) return;
+
+      let nearest = 0;
+      let nearestDist = Infinity;
+      cards.forEach((card, i) => {
+        const dist = Math.abs(card.offsetLeft - cardTrack.scrollLeft);
+        if (dist < nearestDist) {
+          nearestDist = dist;
+          nearest = i;
+        }
+      });
+
+      updateCardDots(nearest);
+
+      const group = cardGroup(nearest);
+      if (group !== current) {
+        goTo(group, false);
+        resetAuto();
+      }
+    },
+    { passive: true },
+  );
 
   document
     .querySelectorAll<HTMLButtonElement>(".mostrar-mas")
@@ -928,69 +882,31 @@ import bigSlider3 from "../../assets/images/RapBins/Low/alabe.png";
       });
     });
 
-  let touchStartX = 0;
-  let touchStartY = 0;
-  let swipeBlockedByCardRow = false;
+  if (infoViewport) {
+    let touchStartX = 0;
+    let touchStartY = 0;
 
-  viewport.addEventListener(
-    "touchstart",
-    (e) => {
-      touchStartX = e.touches[0].clientX;
-      touchStartY = e.touches[0].clientY;
-      const target = e.target as Element;
-      swipeBlockedByCardRow =
-        window.innerWidth < 640 && target.closest(".card-row-wrapper") !== null;
-    },
-    { passive: true },
-  );
+    infoViewport.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      },
+      { passive: true },
+    );
 
-  viewport.addEventListener("touchend", (e) => {
-    if (swipeBlockedByCardRow) return;
-
-    const deltaX = touchStartX - e.changedTouches[0].clientX;
-    const deltaY = Math.abs(touchStartY - e.changedTouches[0].clientY);
-    if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > deltaY) {
-      goTo(deltaX > 0 ? current + 1 : current - 1);
-      resetAuto();
-    }
-  });
-
-  function initCardRowDots() {
-    document
-      .querySelectorAll<HTMLElement>(".card-row")
-      .forEach((row, rowIndex) => {
-        const dotsContainer = document.querySelector<HTMLElement>(
-          `.card-dots[data-row="${rowIndex}"]`,
-        );
-        if (!dotsContainer) return;
-
-        const dotEls = Array.from(
-          dotsContainer.querySelectorAll<HTMLElement>(".card-dot"),
-        );
-
-        row.addEventListener(
-          "scroll",
-          () => {
-            if (window.innerWidth >= 640) return;
-            const cardWidth =
-              (row.firstElementChild as HTMLElement)?.offsetWidth ?? 1;
-            const activeIndex = Math.round(row.scrollLeft / cardWidth);
-            dotEls.forEach((dot, i) => {
-              if (i === activeIndex) {
-                dot.className =
-                  "card-dot w-2 h-2 rounded-full bg-gray-800 transition-all duration-300";
-              } else {
-                dot.className =
-                  "card-dot w-1.5 h-1.5 mt-0.5 rounded-full bg-gray-300 transition-all duration-300";
-              }
-            });
-          },
-          { passive: true },
-        );
-      });
+    infoViewport.addEventListener("touchend", (e) => {
+      const deltaX = touchStartX - e.changedTouches[0].clientX;
+      const deltaY = Math.abs(touchStartY - e.changedTouches[0].clientY);
+      if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > deltaY) {
+        goTo(deltaX > 0 ? current + 1 : current - 1);
+        resetAuto();
+      }
+    });
   }
 
-  initCardRowDots();
-  goTo(0);
+  buildCardDots();
+  goTo(0, false);
+  updateCardDots(0);
   startAuto();
 </script>

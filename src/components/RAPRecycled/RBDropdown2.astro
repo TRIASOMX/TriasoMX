@@ -25,7 +25,8 @@ const items = [
   },
   {
     id: 3,
-    title: "Probar distintos rejuvenecedores de RAP según el porcentaje de RAP.",
+    title:
+      "Probar distintos rejuvenecedores de RAP según el porcentaje de RAP.",
     text: "En numerosos estudios se ha encontrado que:",
     list: [
       "Hasta aproximadamente 15% de RAP, normalmente no se requiere modificar el grado PG del ligante virgen.",
@@ -47,7 +48,8 @@ const items = [
   },
   {
     id: 6,
-    title: "Garantizar una alimentación uniforme y controlada del RAP al proceso de mezclado.",
+    title:
+      "Garantizar una alimentación uniforme y controlada del RAP al proceso de mezclado.",
     text: "La consistencia en la dosificación del RAP es crítica para lograr una calidad de mezcla uniforme. Una introducción controlada minimiza la variabilidad en el contenido de ligante, la granulometría y la temperatura, dando como resultado un desempeño más consistente de la mezcla asfáltica.",
   },
   {
@@ -1514,124 +1516,123 @@ const items = [
       rechazándolo.
     </p>
   </div>
-
-  <div class="max-w-7xl mx-auto pb-5">
-    <div class="bg-[#e6e7e8] rounded-[3rem] p-10 md:p-16 relative">
-      <div
-        class="flex flex-col md:flex-row justify-between items-start gap-8 mb-12"
-      >
-        <div class="max-w-2xl">
-          <h1
-            class="font-bold text-xl lg:text-4xl md:text-4xl text-black leading-tight"
-          >
-            <span class="border-b-4 pb-1">
-              Cómo ganar dinero siendo un gran RAPero — RAP bien incorporado
-            </span>
-          </h1>
-          <p
-            class="font-bold text-[#14427c] mt-4 text-sm lg:text-lg md:text-lg"
-          >
-            Lineamientos generales para la incorporación de RAP
-en el diseño y la producción de mezclas asfálticas
-          </p>
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between gap-4 md:gap-12">
-        <button
-          aria-label="See previous item"
-          id="prev"
-          class="hidden md:flex flex-shrink-0 w-16 h-16 rounded-full border-[3px] border-black items-center justify-center hover:bg-gray-300 transition group"
+</div>
+<div class="max-w-7xl mx-auto pb-5 px-2 md:px-8">
+  <div class="bg-[#e6e7e8] rounded-2xl px-2 py-4 md:px-10 md:py-10 relative">
+    <div
+      class="flex flex-col md:flex-row justify-between items-start gap-8 mb-12"
+    >
+      <div class="max-w-2xl">
+        <h1
+          class="font-bold text-xl lg:text-4xl md:text-4xl text-black leading-tight"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2.5"
-            stroke="currentColor"
-            class="w-8 h-8 text-black group-hover:scale-110 transition-transform"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
-          </svg>
-        </button>
+          <span class="border-b-4 pb-1">
+            Cómo ganar dinero siendo un gran RAPero — RAP bien incorporado
+          </span>
+        </h1>
+        <p class="font-bold text-[#14427c] mt-4 text-sm lg:text-lg md:text-lg">
+          Lineamientos generales para la incorporación de RAP en el diseño y la
+          producción de mezclas asfálticas
+        </p>
+      </div>
+    </div>
 
-        <div class="w-full overflow-hidden relative">
-          <div
-            id="slider"
-            class="flex transition-transform duration-500 ease-in-out items-stretch"
-            style={`width: ${items.length * 100}%`}
-          >
-            {
-              items.map((item) => (
-                <div
-                  class="w-full flex-shrink-0 px-4 md:px-12"
-                  style={`width: ${100 / items.length}%`}
-                >
-                  <div class="h-[420px] md:h-[320px] overflow-y-auto overscroll-contain pr-2">
-                    <div class="flex flex-col gap-6">
-                      <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
-                        <div class="flex-shrink-0 bg-[#14427c] text-white w-10 h-12 lg:w-12 lg:h-14 md:w-12 md:h-14 flex items-center justify-center text-xl md:text-3xl font-medium rounded-md">
-                          {item.id}
-                        </div>
-                        <h1 class="text-[#14427c] text-lg lg:text-2xl md:text-2xl font-bold leading-snug">
-                          {item.title}
-                        </h1>
+    <div class="flex items-center justify-between gap-4 md:gap-12">
+      <button
+        aria-label="See previous item"
+        id="prev"
+        class="hidden md:flex flex-shrink-0 w-16 h-16 rounded-full border-[3px] border-black items-center justify-center hover:bg-gray-300 transition group"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+          class="w-8 h-8 text-black group-hover:scale-110 transition-transform"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
+        </svg>
+      </button>
+
+      <div class="w-full overflow-hidden relative">
+        <div
+          id="slider"
+          class="flex transition-transform duration-500 ease-in-out items-stretch"
+          style={`width: ${items.length * 100}%`}
+        >
+          {
+            items.map((item) => (
+              <div
+                class="w-full flex-shrink-0 px-4 md:px-12"
+                style={`width: ${100 / items.length}%`}
+              >
+                <div class="h-[420px] md:h-[320px] overflow-y-auto overscroll-contain pr-2">
+                  <div class="flex flex-col gap-6">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+                      <div class="flex-shrink-0 bg-[#14427c] text-white w-10 h-12 lg:w-12 lg:h-14 md:w-12 md:h-14 flex items-center justify-center text-xl md:text-3xl font-medium rounded-md">
+                        {item.id}
                       </div>
+                      <h1 class="text-[#14427c] text-lg lg:text-2xl md:text-2xl font-bold leading-snug">
+                        {item.title}
+                      </h1>
+                    </div>
 
-                      <div class="text-black text-sm md:text-lg lg:text-lg leading-relaxed md:pl-16 min-h-[180px]">
-                        <p>{item.text}</p>
+                    <div class="text-black text-xs md:text-base lg:text-lg leading-relaxed md:pl-16 min-h-[180px]">
+                      <p>{item.text}</p>
 
-                        {item.list && (
-                          <ul class="list-disc pl-5 mt-4 space-y-2">
-                            {item.list.map((li) => (
-                              <li class="text-black">{li}</li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
+                      {item.list && (
+                        <ul class="list-disc pl-5 mt-4 space-y-2">
+                          {item.list.map((li) => (
+                            <li class="text-black text-xs md:text-base">
+                              {li}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
                 </div>
-              ))
-            }
-          </div>
+              </div>
+            ))
+          }
         </div>
-        <button
-          aria-label="See next item"
-          id="next"
-          class="hidden md:flex flex-shrink-0 w-16 h-16 rounded-full border-[3px] border-black items-center justify-center hover:bg-gray-300 transition group"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2.5"
-            stroke="currentColor"
-            class="w-8 h-8 text-black group-hover:scale-110 transition-transform"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
-          </svg>
-        </button>
       </div>
+      <button
+        aria-label="See next item"
+        id="next"
+        class="hidden md:flex flex-shrink-0 w-16 h-16 rounded-full border-[3px] border-black items-center justify-center hover:bg-gray-300 transition group"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+          class="w-8 h-8 text-black group-hover:scale-110 transition-transform"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+        </svg>
+      </button>
+    </div>
 
-      <div class="flex justify-center gap-4 mt-8 md:hidden lg:hidden">
-        <button
-          id="prev-mobile"
-          aria-label="See next item"
-          class="px-4 py-2 bg-gray-300 rounded">←</button
-        >
-        <button
-          id="next-mobile"
-          aria-label="See previous item"
-          class="px-4 py-2 bg-gray-300 rounded">→</button
-        >
-      </div>
+    <div class="flex justify-center gap-4 mt-8 md:hidden lg:hidden">
+      <button
+        id="prev-mobile"
+        aria-label="See next item"
+        class="px-4 py-2 bg-gray-300 rounded">←</button
+      >
+      <button
+        id="next-mobile"
+        aria-label="See previous item"
+        class="px-4 py-2 bg-gray-300 rounded">→</button
+      >
     </div>
   </div>
 </div>

@@ -55,10 +55,10 @@ const PrecalentadoresOdometro = () => {
       className="max-w-[1500px] px-8 mx-auto my-10 md:my-20"
     >
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
-        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
+        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2 gap-6">
           <div className="flex flex-col items-center lg:items-start justify-center w-full">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
-              <span className="w-[3ch] flex flex-row">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+              <span className="w-[3ch] flex flex-row self-center">
                 <Odometer value={value} format="(,ddd)" duration={2000} />
               </span>
 
@@ -68,17 +68,17 @@ const PrecalentadoresOdometro = () => {
           </div>
 
           <div className="flex flex-col items-start justify-center w-full">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value1} format="(,ddd).dd" duration={2000} />
               <p className="text-sm font-normal ml-3">Litros</p>
             </div>
-            <p className="text-[#4F4F4F]">
+            <p className="text-[#4F4F4F] self-center md:self-start">
               Capacidad de calentamiento de caudal
             </p>
           </div>
 
           <div className="flex flex-col items-start justify-center w-full">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Calibre malla</p>
             </div>

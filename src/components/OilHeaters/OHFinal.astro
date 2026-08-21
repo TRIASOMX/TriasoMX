@@ -99,10 +99,10 @@ const images1 = [
         class="w-full max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10"
       >
         <div class="flex flex-col justify-center items-start">
-          <h2 class="text-blueMain text-xl md:text-2xl font-bold">
+          <h2 class="text-blueMain text-lg md:text-2xl font-bold">
             Diferentes aplicaciones
           </h2><br />
-          <p class="text-grisT text-base md:text-lg font-normal">
+          <p class="text-grisT text-sm md:text-lg font-normal">
             Los calentadores de aceite Triaso están diseñados y fabricados
             internamente para nuestros propios proyectos, pero también son
             adecuados para una amplia variedad de aplicaciones.
@@ -118,10 +118,12 @@ const images1 = [
           <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
             <!-- Texto -->
             <div class="text-white max-w-xl px-8">
-              <h1 class="text-2xl md:text-3xl font-semibold text-black">
+              <h1 class="text-xl md:text-3xl font-semibold text-black">
                 Sistemas de control inteligente que simplifican su operación
               </h1><br />
-              <p class="text-black font-normal leading-relaxed">
+              <p
+                class="text-black font-normal leading-relaxed text-sm md:text-base"
+              >
                 Con controles automáticos de temperaturas para monitorear el
                 consumo por tonelada de mezcla producida, evitando desperdicios,
                 pérdidas, robo de asfalto durante la recepción del autotanque y
@@ -152,7 +154,7 @@ const images1 = [
 
       <div class="bg-[#14427c] py-20">
         <div class="flex justify-center items-center">
-          <p class="text-white font-bold text-2xl md:text-4xl max-w-[60ch]">
+          <p class="text-white font-bold text-xl md:text-4xl max-w-[60ch] px-8">
             Opción de calentador de aceite disponible en lugar del sistema de
             calentamiento por combustión directa en los tanques de
             almacenamiento de asfalto.
@@ -160,7 +162,7 @@ const images1 = [
         </div>
       </div>
 
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-7xl mx-auto">
         <ItemsSlider images={images1} client:only />
       </div>
 

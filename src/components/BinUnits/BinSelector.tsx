@@ -69,11 +69,28 @@ export default function BinSelector() {
         </div>
         <div className="flex items-center justify-center w-full h-full md:h-[650px] py-10 md:py-3">
           <img
+            key={currentImage}
             src={currentImage}
             alt={`Bins ${selectedBins} - ${panelType}`}
-            className="w-full md:max-w-[1100px]"
+            className="w-full md:max-w-[1100px] bin-image-fade"
           />
         </div>
+
+        <style>{`
+          @keyframes binImageFade {
+            from {
+              opacity: 0;
+              transform: scale(0.98);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+          .bin-image-fade {
+            animation: binImageFade 0.4s ease-out;
+          }
+        `}</style>
         <div className="flex flex-col lg:flex-row bg-white rounded-2xl py-3 px-4 lg:px-16 justify-center items-center gap-2 lg:gap-10">
           <div>
             <p className="hidden lg:block md:block font-bold text-sm lg:text-xl md:text-xl py-2">

@@ -18,31 +18,32 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
 ---
 
 <section
-  class="py-16 bg-[#f0f4f8] min-h-screen flex flex-col items-center justify-start"
+  class="py-10 sm:py-16 bg-[#f0f4f8] min-h-screen flex flex-col items-center justify-start"
 >
   <div class="w-full">
-    <div class="grid grid-cols-2 gap-6 mb-0 max-w-7xl mx-auto">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-0 max-w-7xl mx-auto px-4 sm:px-8"
+    >
       <!-- Card Estacionario -->
       <div
         id="card-estacionario"
-        class="silo-card selected relative cursor-pointer rounded-2xl pt-0 pb-8 px-8 shadow-lg transition-all duration-400"
+        class="silo-card selected relative cursor-pointer rounded-2xl pt-0 pb-6 sm:pb-8 px-5 sm:px-8 shadow-lg transition-all duration-400"
         onclick="selectOption('estacionario')"
       >
         <!-- Imagen sobrepuesta arriba -->
-        <div
-          class="flex justify-center"
-          style="margin-top: -60px; margin-bottom: -20px;"
-        >
+        <div class="flex justify-center -mt-9 sm:-mt-14 -mb-3 sm:-mb-5">
           <img
             src={HM6.src}
             alt="Silo Estacionario"
-            class="h-64 object-contain drop-shadow-2xl select-none pointer-events-none"
+            class="h-40 sm:h-52 md:h-64 object-contain drop-shadow-2xl select-none pointer-events-none"
           />
         </div>
 
         <!-- Texto de la card -->
         <div class="mt-6">
-          <h2 class="card-title text-base md:text-lg font-bold mb-3">Estacionario</h2>
+          <h2 class="card-title text-base md:text-lg font-bold mb-3">
+            Estacionario
+          </h2>
           <ul class="card-list space-y-1.5 mb-4">
             <li class="flex items-start gap-2 text-sm">
               <span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bullet"
@@ -69,24 +70,23 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
       <!-- Card Autoeregible -->
       <div
         id="card-autoeregible"
-        class="silo-card relative cursor-pointer rounded-2xl pt-0 pb-8 px-8 shadow-lg transition-all duration-400"
+        class="silo-card relative cursor-pointer rounded-2xl pt-0 pb-6 sm:pb-8 px-5 sm:px-8 shadow-lg transition-all duration-400"
         onclick="selectOption('autoeregible')"
       >
         <!-- Imagen sobrepuesta arriba -->
-        <div
-          class="flex justify-center"
-          style="margin-top: -60px; margin-bottom: -20px;"
-        >
+        <div class="flex justify-center -mt-9 sm:-mt-14 -mb-3 sm:-mb-5">
           <img
             src={poster1.src}
             alt="Silo Autoerigible"
-            class="h-64 object-contain drop-shadow-2xl select-none pointer-events-none"
+            class="h-40 sm:h-52 md:h-64 object-contain drop-shadow-2xl select-none pointer-events-none"
           />
         </div>
 
         <!-- Texto de la card -->
         <div class="mt-6">
-          <h2 class="card-title text-base md:text-lg font-bold mb-3">Autoerigible</h2>
+          <h2 class="card-title text-base md:text-lg font-bold mb-3">
+            Autoerigible
+          </h2>
           <ul class="card-list space-y-1.5 mb-4">
             <li class="flex items-start gap-2 text-sm">
               <span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bullet"
@@ -127,7 +127,9 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
           class="w-full flex flex-col gap-4 mt-4 tab-content text-base md:text-lg text-grisT font-bold"
           data-tab-content="tab1"
         >
-          <div class="w-full max-w-7xl mx-auto px-8 flex justify-center">
+          <div
+            class="w-full max-w-7xl mx-auto px-4 sm:px-8 flex justify-center"
+          >
             <SmartVideo
               client:visible
               src="/Videos/Webm/HMSilo.webm"
@@ -137,7 +139,7 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
               autoplayOnMobile={false}
             />
           </div>
-          <div class="w-full text-center px-8 max-w-7xl mx-auto py-10">
+          <div class="w-full text-center px-4 sm:px-8 max-w-7xl mx-auto py-10">
             <h1 class="text-blueMain text-2xl md:text-3xl font-bold">
               Capacidad de 45, 95 y 135 toneladas
             </h1>
@@ -145,15 +147,15 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
 
           <div class="w-full flex flex-col bg-[#2b2b2b]">
             <div class="text-white py-10 w-full">
-              <details class="group max-w-7xl mx-auto px-8">
+              <details class="group max-w-7xl mx-auto px-4 sm:px-8">
                 <summary
-                  class="flex flex-row items-center justify-between cursor-pointer list-none"
+                  class="flex flex-row items-center justify-between gap-4 cursor-pointer list-none"
                 >
-                  <h1 class="font-bold text-2xl md:text-3xl">
+                  <h1 class="font-bold text-lg sm:text-2xl md:text-3xl">
                     Opción de portabilidad
                   </h1>
                   <svg
-                    class="transition-transform duration-300 group-open:rotate-180 w-[64px]"
+                    class="transition-transform duration-300 group-open:rotate-180 w-10 sm:w-[64px] shrink-0"
                     id="dropdown-arrow"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -168,7 +170,7 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
                       fill="#ca1c1c"></path>
                   </svg>
                 </summary>
-                <p class="text-base md:text-lg">
+                <p class="text-sm md:text-lg font-normal">
                   El silo semi-estacionario ofrece una opción de portabilidad,
                   permitiendo transportar fácilmente el elevador de cangilones
                   junto con el silo en un solo viaje. Equipado con quinta rueda,
@@ -179,7 +181,7 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
                 </p>
               </details>
 
-              <div class="w-full max-w-7xl mx-auto px-8">
+              <div class="w-full max-w-7xl mx-auto px-4 sm:px-8">
                 <Image
                   src={semiSilo}
                   alt="Silo system with a worker next to it"
@@ -187,11 +189,13 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
               </div>
 
               <div
-                class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-x-10 gap-y-4 my-10 px-8"
+                class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-10 md:gap-y-4 my-10 px-4 sm:px-8"
               >
-                <div class="w-full p-8 border-white rounded-2xl border-2">
-                  <h2 class="text-2xl md:text-3xl">Montable en cama baja</h2>
-                  <ul class="list-disc ml-6 font-thin text-base md:text-lg">
+                <div
+                  class="w-full p-5 sm:p-8 border-white rounded-2xl border-2"
+                >
+                  <h2 class="text-xl md:text-3xl">Montable en cama baja</h2>
+                  <ul class="list-disc ml-6 font-thin text-sm md:text-lg">
                     <li>Con protecciones para ser transportado sin daños.</li>
                     <li>
                       Con puntos de izaje para maniobras de levantamiento con
@@ -200,26 +204,32 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
                   </ul>
                 </div>
 
-                <div class="w-full p-8 border-white rounded-2xl border-2">
-                  <h2 class="text-2xl md:text-3xl">
+                <div
+                  class="w-full p-5 sm:p-8 border-white rounded-2xl border-2"
+                >
+                  <h2 class="text-xl md:text-3xl">
                     Compuerta con sistema neumático para descargar la mezcla
                     asfáltica a los camiones.
                   </h2>
-                  <p class="text-base md:text-lg font-thin">
+                  <p class="text-sm md:text-lg font-thin">
                     No incluye compresor ni tanque de aire; utiliza el sistema
                     de aire de la planta de asfalto.
                   </p>
                 </div>
 
-                <div class="w-full p-8 border-white rounded-2xl border-2">
-                  <h2 class="text-2xl md:text-3xl">
+                <div
+                  class="w-full p-5 sm:p-8 border-white rounded-2xl border-2"
+                >
+                  <h2 class="text-xl md:text-3xl">
                     Con estructura de soporte, lo suficientemente alta para
                     recibir camiones de volteo.
                   </h2>
                 </div>
 
-                <div class="w-full p-8 border-white rounded-2xl border-2">
-                  <h2 class="text-2xl md:text-3xl">
+                <div
+                  class="w-full p-5 sm:p-8 border-white rounded-2xl border-2"
+                >
+                  <h2 class="text-xl md:text-3xl">
                     Con control de apertura y cierre para integrarse al panel de
                     la planta de asfalto.
                   </h2>
@@ -228,7 +238,7 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
             </div>
           </div>
 
-          <div class="w-full max-w-7xl mx-auto px-8">
+          <div class="w-full max-w-7xl mx-auto px-4 sm:px-8">
             <SmartVideo
               client:visible
               src="/Videos/Webm/HMSilo2.webm"
@@ -241,7 +251,7 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
       </div>
 
       <div id="content-autoeregible" class="content-block hidden">
-        <div class="w-full max-w-7xl mx-auto px-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-8">
           <SmartVideo
             client:visible
             src="/Videos/Webm/HMSilo2.webm"
@@ -251,7 +261,7 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
           />
         </div>
 
-        <div class="flex flex-col justify-center items-center">
+        <div class="flex flex-col justify-center items-center px-4 sm:px-8">
           <h1 class="text-[#14427c] text-center text-lg md:text-2xl font-bold">
             En Triaso entendemos que el manejo adecuado de materiales y el
             almacenamiento de
@@ -262,7 +272,7 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
           </h1>
         </div>
         <div
-          class="w-full flex flex-col items-center justify-center gap-10 mt-4 tab-content text-base md:text-lg text-grisT font-bold"
+          class="w-full flex flex-col items-center justify-center gap-6 sm:gap-10 mt-4 tab-content text-base md:text-lg text-grisT font-bold"
         >
           <div class="w-full flex flex-col">
             <div class="w-full rounded-2xl overflow-hidden mx-auto">
@@ -274,14 +284,14 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
             </div>
             <div class="bg-[#393939]">
               <div
-                class="w-full grid grid-cols-1 items-center justify-center md:grid-cols-2 max-w-7xl mx-auto px-8"
+                class="w-full grid grid-cols-1 items-center justify-center md:grid-cols-2 gap-6 md:gap-0 max-w-7xl mx-auto px-4 sm:px-8 py-8 md:py-0"
               >
                 <div class="lg:pl-5">
-                  <h2 class="text-white text-xl md:text-2xl font-bold">
+                  <h2 class="text-white text-lg md:text-2xl font-bold">
                     Sistema autoerigible
                   </h2>
                   <br />
-                  <p class="font-thin text-base md:text-lg text-[#d9d9d9]">
+                  <p class="font-thin text-sm md:text-lg text-[#d9d9d9]">
                     El silo autoerigible está equipado con cilindros hidráulicos
                     telescópicos, lo que permite una elevación rápida y
                     eficiente. Con un tiempo de instalación de solo 10 minutos,
@@ -291,11 +301,11 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
                     durante la operación.
                   </p>
                 </div>
-                <div class="max-w-7xl mx-auto px-8">
+                <div class="max-w-7xl mx-auto">
                   <Image
                     src={SiloSAE}
                     alt="Self-erecting system Silo"
-                    class="lg:w-4/5 rounded-lg"
+                    class="w-full lg:w-4/5 rounded-lg"
                   />
                 </div>
               </div>
@@ -305,56 +315,72 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
               <Image
                 src={SiloAEVL}
                 alt="Self-erecting system Silo"
-                class="w-1/2"
+                class="w-2/3 sm:w-1/2"
               />
             </div>
           </div>
           <div
-            class="w-full max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-10"
+            class="w-full max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10"
           >
             <Card>
               <div class="w-full flex justify-center">
-                <Image src={icon1} alt="Arrow icon" class="w-1/2 self-center" />
+                <Image
+                  src={icon1}
+                  alt="Arrow icon"
+                  class="w-1/3 md:w-1/2 self-center"
+                />
               </div>
-              <h2 class="text-center text-xl md:text-2xl">
+              <h2 class="text-center text-lg md:text-2xl">
                 Cilindros hidráulicos telescópicos para elevación.
               </h2>
             </Card>
             <Card>
               <div class="w-full flex justify-center">
-                <Image src={icon2} alt="Watch icon" class="w-1/2 self-center" />
+                <Image
+                  src={icon2}
+                  alt="Watch icon"
+                  class="w-1/3 md:w-1/2 self-center"
+                />
               </div>
-              <h2 class="text-center text-xl md:text-2xl">
+              <h2 class="text-center text-lg md:text-2xl">
                 Tiempo de elevación de 10 minutos.
               </h2>
             </Card>
             <Card>
               <div class="w-full flex justify-center">
-                <Image src={icon3} alt="Lock icon" class="w-1/2 self-center" />
+                <Image
+                  src={icon3}
+                  alt="Lock icon"
+                  class="w-1/3 md:w-1/2 self-center"
+                />
               </div>
-              <h2 class="text-center text-xl md:text-2xl">
+              <h2 class="text-center text-lg md:text-2xl">
                 Posicionamiento vertical y horizontal con pernos de bloqueo
                 hidráulico.
               </h2>
             </Card>
           </div>
-          <div class="w-full px-8 max-w-7xl mx-auto py-10 flex justify-center">
-            <h1 class="text-blueMain text-2xl md:text-3xl text-center">
+          <div
+            class="w-full px-4 sm:px-8 max-w-7xl mx-auto py-10 flex justify-center"
+          >
+            <h1 class="text-blueMain text-xl md:text-3xl text-center">
               Capacidad de 45 y 95 toneladas
             </h1>
           </div>
           <div
             class="w-full bg-[#2b2b2b] text-white flex flex-col pt-10 h-full"
           >
-            <div class="w-full max-w-7xl mx-auto px-8 relative h-[250px]">
+            <div
+              class="w-full max-w-7xl mx-auto px-4 sm:px-8 relative min-h-[220px] sm:h-[250px] overflow-hidden"
+            >
               <div class="w-full flex justify-between items-center">
-                <h2 class="text-xl md:text-2xl relative z-20 font-bold">
+                <h2 class="text-lg md:text-2xl relative z-20 font-bold">
                   Diferencia entre autoerigible y estacionario:
                 </h2>
               </div>
               <br />
 
-              <p class="font-thin text-base md:text-lg relative z-20">
+              <p class="font-thin text-sm md:text-lg relative z-20">
                 Tanto los silos autoerigibles como los estacionarios comparten
                 las mismas características y ventajas clave, ofreciendo
                 eficiencia, durabilidad y flexibilidad. La principal diferencia
@@ -370,21 +396,21 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
             <!-- Otro contenido -->
             <div class="w-full flex flex-col gap-6 justify-center my-10">
               <div
-                class="w-full max-w-7xl mx-auto px-8 flex justify-between items-center gap-10"
+                class="w-full max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-10 text-center sm:text-left"
               >
-                <div class="max-w-[150px]">
+                <div class="max-w-[110px] sm:max-w-[150px] shrink-0">
                   <Image src={icon4} alt="No crane icon" class="" />
                 </div>
                 <div class="w-full items-center">
                   <details class="group">
                     <summary
-                      class="flex items-center gap-5 cursor-pointer list-none"
+                      class="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 cursor-pointer list-none"
                     >
-                      <h1 class="text-2xl md:text-3xl">
+                      <h1 class="text-lg sm:text-2xl md:text-3xl">
                         No se requieren grúas para la instalación
                       </h1>
                       <svg
-                        class="transition-transform duration-300 group-open:rotate-180 w-[64px]"
+                        class="transition-transform duration-300 group-open:rotate-180 w-10 sm:w-[64px] shrink-0"
                         id="dropdown-arrow"
                         viewBox="0 0 24 24"
                         fill="none"
@@ -399,7 +425,7 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
                           fill="#ca1c1c"></path>
                       </svg>
                     </summary>
-                    <p class="text-base md:text-lg">
+                    <p class="text-sm md:text-lg">
                       El silo autoerigible de Triaso está diseñado para
                       facilitar su transporte y una instalación rápida,
                       permitiendo su montaje sin necesidad de grúas.
@@ -408,21 +434,19 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
                 </div>
               </div>
               <div
-                class="w-full max-w-7xl mx-auto px-8 flex flex-row justify-between items-center gap-10"
+                class="w-full max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-10"
               >
                 <details class="group w-full">
                   <summary
-                    class="flex w-full justify-between items-center gap-5 cursor-pointer list-none"
+                    class="flex flex-col sm:flex-row w-full justify-between items-center gap-4 sm:gap-5 cursor-pointer list-none text-center sm:text-left"
                   >
-                    <div class="flex flex-row items-center gap-5">
-                      <h1 class="text-2xl md:text-3xl">
+                    <div class="flex flex-row items-center gap-3 sm:gap-5">
+                      <h1 class="text-lg sm:text-2xl md:text-3xl">
                         El silo más versátil y móvil del mercado.
                       </h1>
                       <svg
-                        class="transition-transform duration-300 group-open:rotate-180"
+                        class="transition-transform duration-300 group-open:rotate-180 w-10 h-10 sm:w-16 sm:h-16 shrink-0"
                         id="dropdown-arrow"
-                        width="64"
-                        height="64"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -437,12 +461,12 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
                       </svg>
                     </div>
 
-                    <div class="w-[150px]">
+                    <div class="w-24 sm:w-[150px] shrink-0">
                       <Image src={icon5} alt="Silo icon" class="" />
                     </div>
                   </summary>
                   <div class="w-full">
-                    <p class="font-thin text-base md:text-lg">
+                    <p class="font-thin text-sm md:text-lg">
                       Este silo autoerigible revoluciona la movilidad y la
                       instalación con su innovador sistema hidráulico. Diseñado
                       para una reubicación sencilla, puede instalarse

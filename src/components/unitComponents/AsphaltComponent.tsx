@@ -6,8 +6,6 @@ type Item = {
 };
 
 type DataSet = {
-  title: string;
-  subtitle: string;
   items: Item[];
   image: any;
 };
@@ -27,20 +25,12 @@ export default function AsphaltComponent({ data }: Props) {
     setActiveIndex((prev) => (prev === data.length - 1 ? 0 : prev + 1));
   };
 
-  const { title, subtitle, items, image } = data[activeIndex];
+  const { items, image } = data[activeIndex];
 
   return (
     <section className="w-full bg-blueMain text-white py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-2 items-start">
-        <div className="w-full lg:w-[42%]">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
-            {title}
-          </h1>
-
-          <p className="text-sm lg:text-lg md:text-lg font-light opacity-80 mb-6">
-            {subtitle}
-          </p>
-
+        <div className="w-full lg:w-[42%] order-1 md:order-0">
           <ul className="space-y-3 text-sm font-base sm:text-base lg:text-lg">
             {items.map((item, i) => (
               <li key={i} className="font-normal">
@@ -57,12 +47,21 @@ export default function AsphaltComponent({ data }: Props) {
           </ul>
         </div>
 
-        <div className="w-full lg:w-[58%] flex flex-col items-center  lg:min-h-[520px]">
-          <div className="w-full  flex-1 flex items-center">
+        <div className="w-full lg:w-[58%] flex flex-col items-center  lg:min-h-[520px] order-0 md:order-1">
+          <div className="w-full text-center lg:text-left mb-4">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">
+              Totalmente personalizables
+            </h1>
+            <p className="text-sm lg:text-lg md:text-lg font-light opacity-80">
+              Tanques de asfalto desde lo más básico hasta los más equipados.
+            </p>
+          </div>
+
+          <div className="w-full flex items-center justify-center h-[220px] sm:h-[340px] lg:h-[420px]">
             <img
               src={image?.src ?? image}
               alt="Asphalt Storage Tank"
-              className="max-w-full w-full h-auto object-contain"
+              className="max-w-full max-h-full w-auto h-full object-contain"
             />
           </div>
 

@@ -116,8 +116,8 @@ const toggleConfig = [
       drumHeight: 2.8931,
       transportationHeight: 4.2457,
       wheel: 1.4,
-      humidity3: 360,
-      humidity5: 300,
+      humidity3: 480,
+      humidity5: 400,
     },
   },
   {
@@ -131,8 +131,8 @@ const toggleConfig = [
       drumHeight: 2.8931,
       transportationHeight: 4.2457,
       wheel: 1.4,
-      humidity3: 480,
-      humidity5: 400,
+      humidity3: 360,
+      humidity5: 300,
     },
   },
   {
@@ -827,7 +827,7 @@ const DrumMixPlanos = () => {
                             before:bg-transparent"
                           >
                             Oxígeno (O₂) para verificación de combustión y
-                            exceso de aire
+                            exceso de aire.
                           </li>
                         </ul>
                       </div>
@@ -2033,7 +2033,7 @@ const DrumMixPlanos = () => {
                             before:bg-transparent"
                           >
                             Oxígeno (O₂) para verificación de combustión y
-                            exceso de aire
+                            exceso de aire.
                           </li>
                         </ul>
                       </div>
@@ -3263,7 +3263,7 @@ const DrumMixPlanos = () => {
                             before:bg-transparent"
                           >
                             Oxígeno (O₂) para verificación de combustión y
-                            exceso de aire
+                            exceso de aire.
                           </li>
                         </ul>
                       </div>
@@ -4493,7 +4493,7 @@ const DrumMixPlanos = () => {
                             before:bg-transparent"
                           >
                             Oxígeno (O₂) para verificación de combustión y
-                            exceso de aire
+                            exceso de aire.
                           </li>
                         </ul>
                       </div>
@@ -5710,7 +5710,7 @@ const DrumMixPlanos = () => {
                             before:bg-transparent"
                           >
                             Oxígeno (O₂) para verificación de combustión y
-                            exceso de aire
+                            exceso de aire.
                           </li>
                         </ul>
                       </div>
@@ -6906,7 +6906,7 @@ const DrumMixPlanos = () => {
                             before:bg-transparent"
                           >
                             Oxígeno (O₂) para verificación de combustión y
-                            exceso de aire
+                            exceso de aire.
                           </li>
                         </ul>
                       </div>
@@ -8108,7 +8108,7 @@ const DrumMixPlanos = () => {
                             before:bg-transparent"
                           >
                             Oxígeno (O₂) para verificación de combustión y
-                            exceso de aire
+                            exceso de aire.
                           </li>
                         </ul>
                       </div>
@@ -9310,7 +9310,7 @@ const DrumMixPlanos = () => {
                             before:bg-transparent"
                           >
                             Oxígeno (O₂) para verificación de combustión y
-                            exceso de aire
+                            exceso de aire.
                           </li>
                         </ul>
                       </div>
@@ -10512,7 +10512,7 @@ const DrumMixPlanos = () => {
                             before:bg-transparent"
                           >
                             Oxígeno (O₂) para verificación de combustión y
-                            exceso de aire
+                            exceso de aire.
                           </li>
                         </ul>
                       </div>

@@ -2,62 +2,73 @@
 import CDFirstSection from "../components/ServicesPage/CustomDesign/CDFirstSection.astro";
 import GallerySlider from "../components/unitComponents/GallerySlider";
 import Layout from "../layouts/Layout.astro";
-import g1 from "../assets/images/Service/CustomDesign/Gallery/CDG1.webp"
-import g2 from "../assets/images/Service/CustomDesign/Gallery/CDG2.webp"
-import g3 from "../assets/images/Service/CustomDesign/Gallery/CDG3.webp"
-import g4 from "../assets/images/Service/CustomDesign/Gallery/CDG4.webp"
-import g5 from "../assets/images/Service/CustomDesign/Gallery/CDG5.webp"
-import g6 from "../assets/images/Service/CustomDesign/Gallery/CDG6.webp"
-import g7 from "../assets/images/Service/CustomDesign/Gallery/CDG7.webp"
-import g8 from "../assets/images/Service/CustomDesign/Gallery/CDG8.webp"
-const Slides= [
-    {
-        image:g1.src,
-        caption:'Incorporador de caucho de neumáticos para asfalto con una capacidad de 60 tph'
-    },
-    {
-        image:g2.src,
-        caption:'Incorporador de caucho de neumáticos para asfalto con una capacidad de 60 tph'
-    },
-    {
-        image:g3.src,
-        caption:'Incorporador de caucho de neumáticos para asfalto con una capacidad de 60 tph'
-    },
-    {
-        image:g4.src,
-        caption:'Incorporador de caucho de neumáticos para asfalto con una capacidad de 60 tph'
-    },
-    {
-        image:g5.src,
-        caption:'Tanque de reacción de caucho de neumáticos de 30 000 galones (114 m³) con asfalto'
-    },
-    {
-        image:g6.src,
-        caption:'Tanque de reacción de caucho de neumáticos de 30 000 galones (114 m³) con asfalto'
-    },
-    {
-        image:g7.src,
-        caption:'Tanque de reacción de caucho de neumáticos de 30 000 galones (114 m³) con asfalto'
-    },
-    {
-        image:g8.src,
-        caption:'Tanque de reacción de caucho de neumáticos de 30 000 galones (114 m³) con asfalto'
-    }
-]
+import g1 from "../assets/images/Service/CustomDesign/Gallery/CDG1.webp";
+import g2 from "../assets/images/Service/CustomDesign/Gallery/CDG2.webp";
+import g3 from "../assets/images/Service/CustomDesign/Gallery/CDG3.webp";
+import g4 from "../assets/images/Service/CustomDesign/Gallery/CDG4.webp";
+import g5 from "../assets/images/Service/CustomDesign/Gallery/CDG5.webp";
+import g6 from "../assets/images/Service/CustomDesign/Gallery/CDG6.webp";
+import g7 from "../assets/images/Service/CustomDesign/Gallery/CDG7.webp";
+import g8 from "../assets/images/Service/CustomDesign/Gallery/CDG8.webp";
+const Slides = [
+  {
+    image: g1.src,
+    caption:
+      "Incorporador de caucho de neumáticos para asfalto con una capacidad de 60 tph",
+  },
+  {
+    image: g2.src,
+    caption:
+      "Incorporador de caucho de neumáticos para asfalto con una capacidad de 60 tph",
+  },
+  {
+    image: g3.src,
+    caption:
+      "Incorporador de caucho de neumáticos para asfalto con una capacidad de 60 tph",
+  },
+  {
+    image: g4.src,
+    caption:
+      "Incorporador de caucho de neumáticos para asfalto con una capacidad de 60 tph",
+  },
+  {
+    image: g5.src,
+    caption:
+      "Tanque de reacción de caucho de neumáticos de 30 000 galones (114 m³) con asfalto",
+  },
+  {
+    image: g6.src,
+    caption:
+      "Tanque de reacción de caucho de neumáticos de 30 000 galones (114 m³) con asfalto",
+  },
+  {
+    image: g7.src,
+    caption:
+      "Tanque de reacción de caucho de neumáticos de 30 000 galones (114 m³) con asfalto",
+  },
+  {
+    image: g8.src,
+    caption:
+      "Tanque de reacción de caucho de neumáticos de 30 000 galones (114 m³) con asfalto",
+  },
+];
 ---
-<Layout title="Diseño y fabricación">
-    <CDFirstSection/>
 
-    <div class="max-w-7xl mx-auto px-8 flex flex-col justify-center items-center py-10">
-        <h1 class="font-bold text-center">
-            Antes de fabricar una sola pieza, trabajamos directamente con usted y su personal para entender su <br> operación, sus necesidades y su presupuesto. 
-        </h1>
-        <p class="text-[#14427C]">
-            El equipo que recibe es diseñado específicamente para usted.
-        </p>
-    </div>
-    <div class="max-w-7xl mx-auto px-8">
-        <GallerySlider client:only slides={Slides} visibleThumbs={4}></GallerySlider>
-    </div>
-    
+<Layout title="Diseño y fabricación">
+  <CDFirstSection />
+
+  <div
+    class="max-w-7xl mx-auto px-8 flex flex-col justify-center items-center py-10"
+  >
+    <h1 class="font-bold text-center text-base md:text-2xl">
+      Antes de fabricar una sola pieza, trabajamos directamente con usted y su
+      personal para entender su <br /> operación, sus necesidades y su presupuesto.
+    </h1>
+    <p class="text-[#14427C] text-center text-sm md:text-xl">
+      El equipo que recibe es diseñado específicamente para usted.
+    </p>
+  </div>
+  <div class="max-w-7xl mx-auto px-2 md:px-8">
+    <GallerySlider client:only slides={Slides} visibleThumbs={4} />
+  </div>
 </Layout>

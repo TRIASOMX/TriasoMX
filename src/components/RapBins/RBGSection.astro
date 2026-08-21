@@ -1,40 +1,40 @@
 ---
 import GallerySlider from "../unitComponents/GallerySlider";
-import g1 from "../../assets/images/RapBins/Gallery/RBG1.webp"
-import g2 from "../../assets/images/RapBins/Gallery/RBG2.webp"
-import g3 from "../../assets/images/RapBins/Gallery/RBG3.webp"
-import g4 from "../../assets/images/RapBins/Gallery/RBG4.webp"
-import g5 from "../../assets/images/RapBins/Gallery/RBG5.webp"
-
+import g1 from "../../assets/images/RapBins/Gallery/RBG1.webp";
+import g2 from "../../assets/images/RapBins/Gallery/RBG2.webp";
+import g3 from "../../assets/images/RapBins/Gallery/RBG3.webp";
+import g4 from "../../assets/images/RapBins/Gallery/RBG4.webp";
+import g5 from "../../assets/images/RapBins/Gallery/RBG5.webp";
 
 const RBImages = [
   {
     image: g1.src,
-    caption: 'RAP single Bin',
+    caption: "RAP single Bin",
   },
   {
     image: g2.src,
-    caption: 'RAP single Bin',
+    caption: "RAP single Bin",
   },
   {
     image: g3.src,
-    caption: 'RAP single Bin',
+    caption: "RAP single Bin",
   },
   {
     image: g5.src,
-    caption: 'RAP single Bin'
+    caption: "RAP single Bin",
   },
   {
     image: g4.src,
-    caption: 'Drum mixer, 110-150 Tph, counter-flow, with pugmill, in working position with RAP Bin',
-  }
+    caption:
+      "Drum mixer, 110-150 Tph, counter-flow, with pugmill, in working position with RAP Bin",
+  },
 ];
 ---
 
 <section class="w-full font-bold text-grisT">
-    <div class="w-full mt-10 pb-10 px-8">
-        <div class="z-50">
-            <GallerySlider client:only slides={RBImages} visibleThumbs={3}/>
-        </div>        
+  <div class="w-full mt-10 pb-10 px-2 md:px-8">
+    <div class="z-50">
+      <GallerySlider client:only slides={RBImages} visibleThumbs={3} />
     </div>
+  </div>
 </section>

@@ -55,7 +55,7 @@ const BHOdometer = () => {
       className="w-full max-w-7xl flex flex-col justify-center items-center py-10 md:py-20 px-8 md:px-0"
     >
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center max-w-[1500px]">
-        <div className="flex flex-col justify-between col-span-1 md:col-span-2 h-full">
+        <div className="flex flex-col justify-between col-span-1 md:col-span-2 h-full gap-6">
           <div className="flex flex-col items-center lg:items-start justify-center w-full">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <span className="flex flex-row">

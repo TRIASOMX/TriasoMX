@@ -122,13 +122,13 @@ export default function GallerySlider({
     <div className="w-full">
       {/* Vista normal */}
       <div
-        className={`w-full mx-auto my-16 bg-white p-4 rounded shadow max-w-5xl ${
+        className={`w-full mx-auto my-16 bg-white p-2 rounded shadow max-w-5xl ${
           isFullscreen ? "hidden" : "block"
         }`}
         ref={sliderRef}
       >
         {/* Título */}
-        <h2 className="text-center text-base font-thin text-grisPPP mb-4">
+        <h2 className="text-center text-sm md:text-base font-thin text-grisPPP mb-4">
           {slides[currentIndex].caption}
         </h2>
 

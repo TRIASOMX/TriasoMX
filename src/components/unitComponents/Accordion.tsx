@@ -35,7 +35,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content }) => {
         style={{ maxHeight: height }}
         className="overflow-hidden transition-all duration-500 ease-in-out"
       >
-        <div className="p-4 text-black font-thin text-base md:text-lg">
+        <div className="p-2 md:p-4 text-black font-thin text-sm md:text-lg">
           {content}
         </div>
       </div>
@@ -49,7 +49,7 @@ type AccordionProps = {
 
 const Accordion: React.FC<AccordionProps> = ({ items }) => {
   return (
-    <div className="w-[50vw] mx-auto border rounded-lg shadow flex flex-col justify-start items-start">
+    <div className="w-full md:w-[50vw] mx-auto border rounded-lg shadow flex flex-col justify-start items-start">
       {items.map((item, index) => (
         <AccordionItem key={index} {...item} />
       ))}

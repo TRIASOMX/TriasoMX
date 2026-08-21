@@ -55,33 +55,41 @@ const CMOdom = () => {
       className="w-full max-w-[1500px] px-8 py-6 md:py-16 min-h-[70vh]"
     >
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
-        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
+        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2 gap-6">
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value5} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
-            <p className="text-[#4F4F4F]">Rango de capacidades de producción</p>
+            <p className="text-[#4F4F4F] text-sm md:text-base font-normal">
+              Rango de capacidades de producción
+            </p>
           </div>
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <h1>-</h1>
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">tons</p>
             </div>
-            <p className="text-[#4F4F4F]">Capacidad de unidad de tolvas</p>
+            <p className="text-[#4F4F4F] text-sm md:text-base font-normal">
+              Capacidad de unidad de tolvas
+            </p>
           </div>
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
-            <div className="flex text-6xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
-              <p className="text-7xl font-bold ml-3">''</p>
+              <p className="text-5xl lg:text-[5rem] md:text-[5rem] font-bold ml-3">
+                ''
+              </p>
             </div>
-            <p className="text-[#4F4F4F] text-start w-full">Banda colectora</p>
+            <p className="text-[#4F4F4F] text-sm md:text-base font-normal">
+              Banda colectora
+            </p>
           </div>
           <div className="hidden md:block">
             <FillLinkButton href="#planosCold" />
@@ -93,7 +101,7 @@ const CMOdom = () => {
             <img
               src={single.src}
               alt="Back of a cold mix asphalt plant"
-              className="max-w-[600px]"
+              className="w-full max-w-[600px]"
             />
           </div>
         </div>

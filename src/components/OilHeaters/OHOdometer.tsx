@@ -40,7 +40,7 @@ const OHOdometer = () => {
       },
       {
         threshold: 0.5, // cuando el 50% sea visible
-      }
+      },
     );
 
     const current = sectionRef.current;
@@ -52,11 +52,14 @@ const OHOdometer = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full max-w-7xl mx-auto px-8 py-10 md:py-20">
+    <div
+      ref={sectionRef}
+      className="w-full max-w-7xl mx-auto px-8 py-10 md:py-20"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
         <div className="flex flex-col items-center lg:items-start justify-center gap-10 md:gap-20">
           <div className="flex flex-col items-center lg:items-start justify-center">
-            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full gap-1">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full gap-1 text-black">
               <Odometer value={value} format="(,ddd)" duration={2000} />
               <h1>&</h1>
               <Odometer value={value5} format="(,ddd)" duration={2000} />
@@ -64,24 +67,28 @@ const OHOdometer = () => {
               <Odometer value={value6} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">millones de Btu/Hr</p>
             </div>
-            <p className="text-[#4F4F4F]">Capacidad de calentamiento</p>
+            <p className="text-[#4F4F4F] font-normal text-sm md:text-base">
+              Capacidad de calentamiento
+            </p>
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
-            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full text-black">
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">pulgadas</p>
             </div>
-            <p className="text-[#4F4F4F]">Sistema de serpentín de alta eficiencia</p>
+            <p className="text-[#4F4F4F] font-normal text-sm md:text-base">
+              Sistema de serpentín de alta eficiencia
+            </p>
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">
-            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
+            <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full text-black">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">litros</p>
             </div>
-            <p className="text-[#4F4F4F] text-center w-full">
-             Tanque de expansión de aceite térmico
+            <p className="text-[#4F4F4F] font-normal text-sm md:text-base">
+              Tanque de expansión de aceite térmico
             </p>
           </div>
         </div>

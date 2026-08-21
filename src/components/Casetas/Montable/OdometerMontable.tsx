@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
-import montable from "../../../assets/images/Casetas/montable1.webp";
+import montable from "../../../assets/images/Casetas/mont.webp";
 import FillLinkButton from "../../unitComponents/FillLinkButton";
 
 const OdometerMontable = () => {
@@ -55,8 +55,8 @@ const OdometerMontable = () => {
       className="max-w-7xl w-full px-8 py-6 md:py-20 min-h-[80vh]"
     >
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
-        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
-          <div className="flex flex-col items-start lg:items-start justify-center">
+        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2 gap-6">
+          <div className="flex flex-col items-center justify-center lg:items-start">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <span className="w-[1.5ch] flex flex-row">
                 <Odometer value={value} format="(,ddd)" duration={2000} />
@@ -67,7 +67,7 @@ const OdometerMontable = () => {
             <p className="text-[#4F4F4F]">De izaje</p>
           </div>
 
-          <div className="flex flex-col items-start justify-center">
+          <div className="flex flex-col items-center justify-center lg:items-start">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6ch] lg:w-[5.1ch] md:w-[5.1ch]">
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p>.</p>
@@ -77,7 +77,7 @@ const OdometerMontable = () => {
             <p className="text-[#4F4F4F]">Capacidad de aire acondicionado</p>
           </div>
 
-          <div className="flex flex-col items-start justify-center">
+          <div className="flex flex-col items-center justify-center lg:items-start">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6.7ch] lg:w-[6.4ch] md:w-[6.4ch]">
               <Odometer value={value4} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">"</p>

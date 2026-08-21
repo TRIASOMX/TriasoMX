@@ -86,31 +86,69 @@ const iconos = [
         <h2 class="font-bold text-lg md:text-2xl text-redBg uppercase">
           Seguridad y cumplimiento en <br />diseño y transporte
         </h2>
-        <h1 class="font-bold text-base md:text-xl">
-          Diseño conforme a DOT para un transporte seguro
-        </h1>
-        <p class="font-normal text-sm md:text-base">
-          Los tanques de asfalto Triaso® —en sus versiones verticales y
-          horizontales portátiles— están diseñados con características conformes
-          al DOT para cumplir con las regulaciones de transporte. Los tanques
-          portátiles incluyen enganches seguros, sistemas de iluminación, ejes
-          de trabajo pesado y componentes de frenos alineados con los estándares
-          del Department of Transportation (DOT) de EUA , asegurando un
-          transporte vial seguro y legal.
-        </p>
+        <div class="dropdown-item">
+          <button
+            type="button"
+            class="dropdown-toggle flex items-center justify-between gap-3 w-full text-left cursor-pointer md:cursor-default md:pointer-events-none"
+            aria-expanded="false"
+          >
+            <h1 class="font-bold text-base md:text-xl">
+              Diseño conforme a DOT para un transporte seguro
+            </h1>
+            <svg
+              class="dropdown-chevron w-4 h-4 shrink-0 transition-transform duration-300 md:hidden"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+          </button>
+          <p class="dropdown-content font-normal text-sm md:text-base md:mt-2">
+            Los tanques de asfalto Triaso® —en sus versiones verticales y
+            horizontales portátiles— están diseñados con características conformes
+            al DOT para cumplir con las regulaciones de transporte. Los tanques
+            portátiles incluyen enganches seguros, sistemas de iluminación, ejes
+            de trabajo pesado y componentes de frenos alineados con los estándares
+            del Department of Transportation (DOT) de EUA , asegurando un
+            transporte vial seguro y legal.
+          </p>
+        </div>
 
-        <h1 class="font-bold text-base md:text-xl">
-          Barandales conforme a OSHA para tanques de asfalto verticales y
-          horizontales
-        </h1>
-        <p class="font-normal text-sm md:text-base">
-          Todos los tanques de asfalto Triaso®, tanto verticales como
-          horizontales, están equipados con barandales conforme a OSHA para
-          garantizar la seguridad del operador durante el acceso y el
-          mantenimiento. Cada tanque incluye pasamanos de seguridad, rodapiés y
-          plataformas seguras diseñadas para cumplir con normas estrictas de
-          seguridad.
-        </p>
+        <div class="dropdown-item">
+          <button
+            type="button"
+            class="dropdown-toggle flex items-center justify-between gap-3 w-full text-left cursor-pointer md:cursor-default md:pointer-events-none"
+            aria-expanded="false"
+          >
+            <h1 class="font-bold text-base md:text-xl">
+              Barandales conforme a OSHA para tanques de asfalto verticales y
+              horizontales
+            </h1>
+            <svg
+              class="dropdown-chevron w-4 h-4 shrink-0 transition-transform duration-300 md:hidden"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+          </button>
+          <p class="dropdown-content font-normal text-sm md:text-base md:mt-2">
+            Todos los tanques de asfalto Triaso®, tanto verticales como
+            horizontales, están equipados con barandales conforme a OSHA para
+            garantizar la seguridad del operador durante el acceso y el
+            mantenimiento. Cada tanque incluye pasamanos de seguridad, rodapiés y
+            plataformas seguras diseñadas para cumplir con normas estrictas de
+            seguridad.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -247,6 +285,45 @@ const iconos = [
 <section>
   <ItemsSlider client:only images={iconos} />
 </section>
+
+<style>
+  @media (max-width: 767px) {
+    .dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin-top: 0;
+      transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        margin-top 0.35s ease;
+    }
+    .dropdown-content.is-open {
+      max-height: 600px;
+      opacity: 1;
+      margin-top: 0.5rem;
+    }
+    .dropdown-toggle[aria-expanded="true"] .dropdown-chevron {
+      transform: rotate(180deg);
+    }
+  }
+</style>
+
+<script>
+  document
+    .querySelectorAll<HTMLButtonElement>(".dropdown-toggle")
+    .forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const isOpen = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!isOpen));
+
+        const content = btn.parentElement?.querySelector<HTMLElement>(
+          ".dropdown-content",
+        );
+        content?.classList.toggle("is-open", !isOpen);
+      });
+    });
+</script>
 
 <script>
   import { initScrollAnimations } from "../../components/DrumMixers/scrollAnimations";

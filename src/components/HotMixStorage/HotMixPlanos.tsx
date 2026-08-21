@@ -328,7 +328,7 @@ const HotMixPlanos = () => {
             </div>
           </div>
         </header>
-        <div className="w-full px-8 lg:px-8 mt-14">
+        <div className="w-full px-2 lg:px-8 mt-14">
           {/* Contenedor de los botones */}
           <div id="options" ref={optionsRef} className="w-full">
             {/* mobile primer select */}
@@ -671,7 +671,7 @@ const HotMixPlanos = () => {
                       </ul>
                     </div>
                   </div>
-                  <div className="col-span-1 md:col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
+                  <div className="col-span-1 md:col-span-2 flex items-start justify-center w-full order-1 md:order-2 h-[600px]">
                     {activeVersion === "50tons" ? (
                       <div className="w-full"></div>
                     ) : (

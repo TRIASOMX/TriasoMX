@@ -6,30 +6,34 @@ import { Image } from "astro:assets";
 import StackedInfoCards from "../unitComponents/StackedInfoCards.astro";
 
 const cards = [
-    {
-        title: "Producción de mezcla en frío bajo demanda según se requiera en el sitio, reduciendo la dependencia de proveedores externos. Minimizando retrasos y permitiendo preparar y aplicar la mezcla de inmediato.",
-        text: "",
-        bg: "#d13c3c",
-        textColor: "#ffffff",
-    },
-    {
-        title: "Costos de operación bajos sin quemadores ni sistemas de aceite térmico, las plantas de mezclado en frío reducen significativamente el consumo de combustible y los costos de mantenimiento.",
-        text: "",
-        bg: "#14427c",
-        textColor: "#ffffff",
-    },
-    {
-        title: "Soluciones de asfalto ecológicas las plantas de mezclado en frío operan a temperaturas bajas. Esto la convierte en una solución práctica y ambientalmente responsable.",
-        text: "",
-        bg: "#00840d",
-        textColor: "#ffffff",
-    },
-    {
-        title: "Diseñadas para movilidad e instalación sencilla, configuraciones compactas y móviles permitiendo su transporte e instalación sencilla en cualquier sitio. Con requisitos mínimos de instalación, son ideales para proyectos de corta duración o para reubicaciones rápidas de manera eficiente.",
-        text: "",
-        bg: "#6b97c6",
-        textColor: "#ffffff",
-    },
+  {
+    title:
+      "Producción de mezcla en frío bajo demanda según se requiera en el sitio, reduciendo la dependencia de proveedores externos. Minimizando retrasos y permitiendo preparar y aplicar la mezcla de inmediato.",
+    text: "",
+    bg: "#d13c3c",
+    textColor: "#ffffff",
+  },
+  {
+    title:
+      "Costos de operación bajos sin quemadores ni sistemas de aceite térmico, las plantas de mezclado en frío reducen significativamente el consumo de combustible y los costos de mantenimiento.",
+    text: "",
+    bg: "#14427c",
+    textColor: "#ffffff",
+  },
+  {
+    title:
+      "Soluciones de asfalto ecológicas las plantas de mezclado en frío operan a temperaturas bajas. Esto la convierte en una solución práctica y ambientalmente responsable.",
+    text: "",
+    bg: "#00840d",
+    textColor: "#ffffff",
+  },
+  {
+    title:
+      "Diseñadas para movilidad e instalación sencilla, configuraciones compactas y móviles permitiendo su transporte e instalación sencilla en cualquier sitio. Con requisitos mínimos de instalación, son ideales para proyectos de corta duración o para reubicaciones rápidas de manera eficiente.",
+    text: "",
+    bg: "#6b97c6",
+    textColor: "#ffffff",
+  },
 ];
 ---
 
@@ -47,7 +51,7 @@ const cards = [
         <summary
           class="flex flex-row items-center justify-between cursor-pointer list-none"
         >
-          <h2 class="text-lg md:text-xl">
+          <h2 class="text-base md:text-xl">
             ¿Qué es una planta de mezclado en frío?
           </h2>
           <svg
@@ -159,7 +163,7 @@ const cards = [
         <summary
           class="flex flex-row items-center justify-between cursor-pointer list-none"
         >
-          <h2 class="text-lg md:text-xl">Nivel de descarga versátil</h2><br />
+          <h2 class="text-base md:text-xl">Nivel de descarga versátil</h2><br />
           <svg
             class="group-open:hidden transition h-[40px] w-[40px] lg:h-[64px] lg:w-[64px]"
             viewBox="0 0 24 24"
@@ -282,9 +286,9 @@ const cards = [
 <section>
   <div class="">
     <StackedInfoCards
-    cards={cards}
-    mainTitle="Operación estable, continua, intensiva y prolongada"
-    mainDescription="Sin paros, a gran escala, con una configuración ideal para trabajo pesado y condiciones variables, la planta está completamente equipada."
-/>
-</div>
+      cards={cards}
+      mainTitle="Operación estable, continua, intensiva y prolongada"
+      mainDescription="Sin paros, a gran escala, con una configuración ideal para trabajo pesado y condiciones variables, la planta está completamente equipada."
+    />
+  </div>
 </section>

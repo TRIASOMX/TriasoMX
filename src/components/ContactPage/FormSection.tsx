@@ -1,8 +1,10 @@
 export default function FormSection() {
   return (
-    <div className="max-w-7xl px-8 mx-auto" style={{ marginTop: "100px" }}>
-      <div className="w-full flex justify-center my-10">
-        <h1 className="font-bold text-5xl text-[#14427c]">Contáctanos</h1>
+    <div className="max-w-7xl mx-auto" style={{ marginTop: "100px" }}>
+      <div className="w-full flex justify-center px-8">
+        <h1 className="font-bold text-2xl md:text-4xl text-[#14427c] uppercase py-4">
+          Contáctanos
+        </h1>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center w-full">
         <div className="w-full h-full flex justify-center items-center">
@@ -142,7 +144,9 @@ export default function FormSection() {
                     ></path>{" "}
                   </g>
                 </svg>
-                <p className="text-[#004aad] font-semibold">+52 (618) 170 3580</p>
+                <p className="text-[#004aad] font-semibold">
+                  +52 (618) 170 3580
+                </p>
               </div>
             </div>
 

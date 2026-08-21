@@ -305,6 +305,15 @@ export default function Slider({
           }
         }
 
+        .card-darken{
+          position:absolute;
+          inset:0;
+          background:rgba(0,0,0,.55);
+          opacity:0;
+          transition:opacity .3s ease;
+          pointer-events:none;
+        }
+
         @media (max-width: 1023px){
           .card-text{
             max-height:0;
@@ -324,6 +333,9 @@ export default function Slider({
           }
           .modal-open-btn.is-expanded{
             display:inline-flex;
+          }
+          .card-darken.is-expanded{
+            opacity:1;
           }
         }
       `}</style>
@@ -412,6 +424,9 @@ export default function Slider({
                   background:
                     "linear-gradient(to top, rgba(0,0,0,.97) 0%, rgba(0,0,0,.85) 25%, rgba(0,0,0,.55) 50%, rgba(0,0,0,0) 80%)",
                 }}
+              />
+              <div
+                className={`card-darken${isExpanded ? " is-expanded" : ""}`}
               />
               <div
                 style={{

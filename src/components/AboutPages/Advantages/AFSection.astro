@@ -8,21 +8,19 @@ import { Image } from "astro:assets";
     class="w-full max-w-7xl mx-auto px-8 lg:px-52 flex items-center justify-center"
   >
     <h1
-      class="text-grisT font-bold text-3xl lg:text-4xl text-center pt-5 lg:pt-0 md:pt-0 uppercase"
+      class="text-grisT font-bold text-2xl lg:text-4xl text-center pt-5 lg:pt-0 md:pt-0 uppercase"
     >
       Ventajas
     </h1>
   </div>
   <div class="w-full max-w-7xl px-8 mx-auto">
-    <h2
-      class="text-blueMain text-center font-bold text-xl lg:text-3xl md:text-3xl"
-    >
+    <h2 class="text-blueMain text-center font-bold text-base md:text-xl">
       Diseño y fabricación bajo los más altos estándares de calidad para
       asegurar producción continua de mezcla asfáltica con mínimas fallas.
     </h2>
   </div>
   <div
-    class="w-full max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-10"
+    class="w-full max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-10"
   >
     <div>
       <p class="text-center text-sm lg:text-xl md:text-xl">
@@ -43,17 +41,17 @@ import { Image } from "astro:assets";
     <Image src={render} alt="Drum mixer with bin units system" />
   </div>
   <div
-    class="relative w-full flex flex-col justify-center items-center min-h-[50vh] px-8 py-10 bg-[url(/hero2.webp)] bg-cover bg-[center_bottom] bg-no-repeat"
+    class="relative w-full flex flex-col justify-center items-center min-h-[35vh] md:min-h-[50vh] px-8 py-10 bg-[url(/hero2.webp)] bg-cover bg-[center_bottom] bg-no-repeat"
   >
     <div class="absolute inset-0 bg-[#1f3c66]/70"></div>
 
     <h1
-      class="relative font-bold text-2xl lg:text-3xl md:text-3xl text-center text-white"
+      class="relative font-bold text-lg lg:text-4xl md:text-3xl text-center text-white"
     >
       Movilidad e Instalación
     </h1><br />
     <div
-      class="relative w-full max-w-7xl mx-auto text-white grid grid-cols-1 lg:grid-cols-2 gap-10 py-10"
+      class="relative w-full max-w-7xl mx-auto text-white grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-10 py-10"
     >
       <div>
         <p class="text-center text-sm lg:text-xl md:text-xl">
@@ -76,9 +74,9 @@ import { Image } from "astro:assets";
       id="slider"
       class="flex transition-transform duration-500 ease-in-out items-center"
     >
-      <div class="w-full flex-shrink-0 px-8">
+      <div class="w-full flex-shrink-0 px-2 md:px-8">
         <div
-          class="max-w-7xl mx-auto px-8 bg-white rounded-2xl py-10 space-y-5"
+          class="max-w-7xl mx-auto px-4 md:px-8 bg-white rounded-2xl py-10 space-y-5"
         >
           <div class="flex justify-center items-center">
             <h1 class="font-bold text-lg md:text-2xl text-center lg:text-start">
@@ -89,7 +87,9 @@ import { Image } from "astro:assets";
             class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center"
           >
             <div>
-              <p class="font-bold text-[#14427C] text-center lg:text-start">
+              <p
+                class="font-bold text-[#14427C] text-center lg:text-start text-sm md:text-base"
+              >
                 Bomba de inyección de asfalto sumergida dentro del tanque de
                 asfalto, eliminando la necesidad de purgar y precalentar el
                 sistema de chaqueta; arranque inmediato incluso en los climas
@@ -98,14 +98,18 @@ import { Image } from "astro:assets";
             </div>
 
             <div class="flex flex-col space-y-5">
-              <div class="font-bold text-[#14427C] text-center lg:text-start">
+              <div
+                class="font-bold text-[#14427C] text-center lg:text-start text-sm md:text-base"
+              >
                 <p>
                   Sistema de filtrado de combustible diseñado para la quema de
                   aceites usados, evitando obstrucciones en las líneas de
                   combustible.
                 </p>
               </div>
-              <div class="font-bold text-[#14427C] text-center lg:text-start">
+              <div
+                class="font-bold text-[#14427C] text-center lg:text-start text-sm md:text-base"
+              >
                 <p>
                   Sistema de filtrado de combustible, precalentador y bomba de
                   combustible montados sobre una base abatible y deslizable,
@@ -118,9 +122,9 @@ import { Image } from "astro:assets";
         </div>
       </div>
 
-      <div class="w-full flex-shrink-0 px-8">
+      <div class="w-full flex-shrink-0 px-2 md:px-8">
         <div
-          class="max-w-7xl mx-auto px-8 bg-white rounded-2xl py-10 space-y-5"
+          class="max-w-7xl mx-auto px-4 md:px-8 bg-white rounded-2xl py-10 space-y-5"
         >
           <div class="flex justify-center items-center">
             <h1 class="font-bold text-lg md:text-2xl text-center lg:text-start">
@@ -131,14 +135,18 @@ import { Image } from "astro:assets";
             class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center space-y-5 lg:space-y-0"
           >
             <div>
-              <p class="font-bold text-[#CA1C1C] text-center">
+              <p
+                class="font-bold text-[#CA1C1C] text-center text-sm md:text-base"
+              >
                 Sistemas de dosificación y alimentación fabricados bajo normas
                 CEMA.
               </p>
             </div>
 
             <div class="flex flex-col space-y-5">
-              <div class="font-bold text-[#CA1C1C] text-center">
+              <div
+                class="font-bold text-[#CA1C1C] text-center text-sm md:text-base"
+              >
                 <p>
                   Tolvas de alta capacidad que reducen la dependencia del
                   cargador frontal.
@@ -149,9 +157,9 @@ import { Image } from "astro:assets";
         </div>
       </div>
 
-      <div class="w-full flex-shrink-0 px-8">
+      <div class="w-full flex-shrink-0 px-2 md:px-8">
         <div
-          class="max-w-7xl mx-auto px-8 bg-white rounded-2xl py-10 space-y-10"
+          class="max-w-7xl mx-auto px-4 md:px-8 bg-white rounded-2xl py-10 space-y-10"
         >
           <div class="flex justify-center items-center">
             <h1 class="font-bold text-lg md:text-2xl text-center lg:text-start">
@@ -162,7 +170,9 @@ import { Image } from "astro:assets";
             class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center"
           >
             <div>
-              <p class="font-bold text-[#14427C] text-center">
+              <p
+                class="font-bold text-[#14427C] text-center text-sm md:text-base"
+              >
                 Bandas transportadoras certificadas bajo normas CEMA y
                 construcción para trabajo pesado que aseguran una larga vida
                 útil.
@@ -170,7 +180,9 @@ import { Image } from "astro:assets";
             </div>
 
             <div>
-              <div class="font-bold text-[#14427C] text-center">
+              <div
+                class="font-bold text-[#14427C] text-center text-sm md:text-base"
+              >
                 <p>
                   Mantenimiento mínimo gracias a componentes de alta calidad
                   fabricados bajo estrictos estándares.
@@ -179,16 +191,18 @@ import { Image } from "astro:assets";
             </div>
           </div>
           <div class="flex justify-center items-center">
-            <h1 class="text-center font-bold text-[#393939]">
+            <h1
+              class="text-center font-bold text-[#393939] text-sm md:text-base"
+            >
               Refacciones disponibles localmente para reducir tiempos muertos.
             </h1>
           </div>
         </div>
       </div>
 
-      <div class="w-full flex-shrink-0 px-8">
+      <div class="w-full flex-shrink-0 px-2 md:px-8">
         <div
-          class="max-w-7xl mx-auto px-8 bg-white rounded-2xl py-10 space-y-10"
+          class="max-w-7xl mx-auto px-4 md:px-8 bg-white rounded-2xl py-10 space-y-10"
         >
           <div class="flex justify-center items-center">
             <h1 class="font-bold text-lg md:text-2xl text-center lg:text-start">
@@ -199,7 +213,9 @@ import { Image } from "astro:assets";
             class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center space-y-5 lg:space-y-0"
           >
             <div>
-              <p class="font-bold text-[#CA1C1C] text-center">
+              <p
+                class="font-bold text-[#CA1C1C] text-center text-sm md:text-base"
+              >
                 Mayor capacidad de producción que la mayoría de las marcas con
                 el mismo tamaño de tambor, especialmente en condiciones adversas
                 (alta humedad en agregados, altitud y clima frío).
@@ -207,7 +223,9 @@ import { Image } from "astro:assets";
             </div>
 
             <div>
-              <div class="font-bold text-[#CA1C1C] text-center">
+              <div
+                class="font-bold text-[#CA1C1C] text-center text-sm md:text-base"
+              >
                 <p>
                   La eficiente transferencia de calor maximiza el
                   aprovechamiento de energía y minimiza el desperdicio de
@@ -304,7 +322,8 @@ import { Image } from "astro:assets";
 
   function onDragStart(e: MouseEvent | TouchEvent) {
     if (!slider) return;
-    if (e.target instanceof Element && e.target.classList.contains("indicator")) return;
+    if (e.target instanceof Element && e.target.classList.contains("indicator"))
+      return;
 
     isDragging = true;
     startX = getClientX(e);

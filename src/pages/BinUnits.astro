@@ -19,7 +19,7 @@ import CTASection1 from "../components/unitComponents/CTASection1.astro";
   <!-- Dropdowns -->
   <section>
     <div
-      class="w-full max-w-7xl px-8 mx-auto grid grid-cols-1 md:grid-cols-5 md:gap-10 items-start justify-center mb-5"
+      class="w-full max-w-7xl px-0 md:px-8 mx-auto grid grid-cols-1 md:grid-cols-5 md:gap-10 items-start justify-center mb-5"
     >
       <div class="col-span-2 flex justify-start md:justify-center">
         <Image
@@ -28,7 +28,9 @@ import CTASection1 from "../components/unitComponents/CTASection1.astro";
           class="w-3/4 md:w-full"
         />
       </div>
-      <div class="col-span-3 flex flex-col items-start h-full justify-center">
+      <div
+        class="col-span-3 flex flex-col items-start h-full justify-center px-2"
+      >
         <div class="w-full flex flex-col gap-3 md:gap-6">
           <AcordeonItem
             client:only
@@ -67,9 +69,9 @@ import CTASection1 from "../components/unitComponents/CTASection1.astro";
 
   <!-- OS -->
   <div
-    class="w-full bg-[#1e1e1e] text-grisSubP text-base md:text-lg my-10 md:my-20 max-w-7xl px-4 md:px-8 rounded-2xl"
+    class="bg-[#1e1e1e] text-grisSubP text-base md:text-lg my-10 md:my-20 max-w-7xl py-4 px-8 md:px-8 rounded-2xl mx-2"
   >
-    <details class="mx-auto group">
+    <details class="mx-auto group w-full">
       <summary
         class="relative flex justify-between items-center cursor-pointer list-none"
       >

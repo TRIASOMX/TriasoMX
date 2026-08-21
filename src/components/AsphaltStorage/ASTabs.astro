@@ -27,18 +27,18 @@ import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
       class="flex items-stretch w-full gap-2 sm:gap-4 bg-[#1e1e1e] lg:h-[10vh] rounded-t-2xl"
     >
       <button
-        class="flex-1 text-center text-base sm:text-xl md:text-4xl tab-button py-2 px-2 md:px-4 font-bold focus:outline-none"
+        class="flex-1 text-center text-base sm:text-xl md:text-4xl tab-button rounded-t-xl py-2 px-2 md:px-4 font-bold focus:outline-none"
         data-tab="tab1"
         aria-selected="true"
       >
-        <p class="text-white">Caldera</p>
+        <p>Caldera</p>
       </button>
       <button
-        class="flex-1 text-center tab-button py-2 px-2 md:px-4 font-bold text-base sm:text-xl md:text-4xl focus:outline-none"
+        class="flex-1 text-center tab-button rounded-t-xl py-2 px-2 md:px-4 font-bold text-base sm:text-xl md:text-4xl focus:outline-none"
         data-tab="tab2"
         aria-selected="false"
       >
-        <p class="text-white">Calentamiento directo</p>
+        <p>Calentamiento directo</p>
       </button>
     </div>
     <div class="py-4 flex justify-center items-center">
@@ -436,20 +436,29 @@ import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
 
   <style is:global>
     /* Estilos para los tabs activos */
+    .tab-button {
+      transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+      border-bottom: 4px solid transparent;
+    }
+
     .tab-button[aria-selected="true"] {
+      background-color: #ffffff;
       color: black;
-      border-bottom: 2px solid var(--rojo-btn);
+      border-bottom: 4px solid var(--rojo-btn);
     }
 
     .tab-button[aria-selected="false"] {
-      color: var(--gris-titulos);
+      background-color: transparent;
+      color: rgba(255, 255, 255, 0.55);
       font-weight: normal;
-      border-bottom: 2px solid var(--gris-titulos);
     }
 
     .tab-button:hover:not([aria-selected="true"]) {
-      color: black;
-      border-bottom: 2px solid var(--rojo-btn);
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
     }
   </style>
   <script is:inline>

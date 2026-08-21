@@ -56,7 +56,7 @@ const BOdometer = () => {
       className="w-full max-w-7xl px-8 mx-auto py-10 md:py-20"
     >
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center ">
-        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2">
+        <div className="flex flex-col h-full justify-between col-span-1 md:col-span-2 gap-6">
           <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value} format="(,ddd)" duration={2000} />

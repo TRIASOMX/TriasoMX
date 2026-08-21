@@ -32,7 +32,7 @@ export default function GallerySlider2({ images }: Props) {
   const nextSlide = () => {
     if (windowWidth >= 768) {
       setCurrentIndex((prev) =>
-        prev + 1 > images.length - itemsPerPage ? 0 : prev + 1
+        prev + 1 > images.length - itemsPerPage ? 0 : prev + 1,
       );
     } else if (sliderRef.current) {
       sliderRef.current.scrollBy({
@@ -45,7 +45,7 @@ export default function GallerySlider2({ images }: Props) {
   const prevSlide = () => {
     if (windowWidth >= 768) {
       setCurrentIndex((prev) =>
-        prev - 1 < 0 ? images.length - itemsPerPage : prev - 1
+        prev - 1 < 0 ? images.length - itemsPerPage : prev - 1,
       );
     } else if (sliderRef.current) {
       sliderRef.current.scrollBy({
@@ -80,7 +80,7 @@ export default function GallerySlider2({ images }: Props) {
   const offset = windowWidth < 768 ? 0 : -(currentIndex * (100 / itemsPerPage));
 
   return (
-    <div className="w-full mx-auto pt-8 pb-2 mt-10 md:mt-20 md:border md:border-grisSubP">
+    <div className="w-full mx-auto pt-8 pb-2 mb-6 md:mb-28 md:border md:border-grisSubP">
       <div
         ref={sliderRef}
         className={`relative w-full ${

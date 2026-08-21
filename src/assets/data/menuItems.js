@@ -48,7 +48,7 @@ export const menuItems = [
             ],
           },
           {
-            title: "CASAS DE BOLSAS ( BAGHOUSES )",
+            title: "CASAS DE BOLSAS (BAGHOUSES)",
             url: "/BagHouses",
           },
           {

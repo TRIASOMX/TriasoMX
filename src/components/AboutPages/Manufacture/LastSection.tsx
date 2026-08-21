@@ -1,12 +1,12 @@
 import InfoCard from "../../../components/unitComponents/InfoCard";
-import img1 from "../../../assets/images/AsphaltPlant/Gallery/Fabricación de pugmill.webp"
-import img2 from "../../../assets/images/AsphaltPlant/Gallery/Fabricación de tanque con caldera.webp"
-import img3 from "../../../assets/images/AsphaltPlant/Gallery/Quemadores en fabricación.webp"
-import img4 from "../../../assets/images/AsphaltPlant/Gallery/Soldadura interna de tambor mezclador.webp"
+import img1 from "../../../assets/images/AsphaltPlant/Gallery/Fabricación de pugmill.webp";
+import img2 from "../../../assets/images/AsphaltPlant/Gallery/Fabricación de tanque con caldera.webp";
+import img3 from "../../../assets/images/AsphaltPlant/Gallery/Quemadores en fabricación.webp";
+import img4 from "../../../assets/images/AsphaltPlant/Gallery/Soldadura interna de tambor mezclador.webp";
 
 export default function App() {
   return (
-    <div className="p-8">
+    <div className="p-2 md:p-8">
       <InfoCard
         sections={[
           {
@@ -30,7 +30,8 @@ export default function App() {
             id: "C",
             label: "C",
             image: img4.src,
-            title: "Personalización para adaptarse a las necesidades específicas del cliente",
+            title:
+              "Personalización para adaptarse a las necesidades específicas del cliente",
             description:
               "Hemos suministrado e instalado equipos en todo el mundo con resultados probados.",
           },

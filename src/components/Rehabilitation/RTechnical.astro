@@ -12,23 +12,27 @@ import { Image } from "astro:assets";
 ---
 
 <section class="w-full flex flex-col justify-center items-center">
-  <div class="w-full px-4">
-    <h2 class="text-center font-bold text-redBg text-2xl md:text-3xl">
+  <div class="w-full px-4 pt-4">
+    <h2 class="text-center font-bold text-redBg text-xl md:text-3xl">
       Enfoque técnico y profesional
     </h2>
   </div>
   <div
-    class="w-full  grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-10 my-20 justify-center items-center max-w-[2400px]"
+    class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-10 my-10 md:my-20 justify-center items-center max-w-[2400px]"
   >
     <div
-      class="rounded-r-2xl bg-redBg py-8  md:pl-52 col-span-1 flex justify-center items-center"
+      class="rounded-r-2xl bg-redBg py-8 md:pl-52 col-span-1 flex justify-center items-center"
     >
       <h2 class="font-bold text-white text-xl md:text-2xl">
         100% fabricado en <br /> México
       </h2>
     </div>
     <div class="w-full col-span-1 flex justify-center px-4">
-      <Image src={SpareCabin} alt="Control Cabins" class="w-full md:w-3/5 rounded-2xl" />
+      <Image
+        src={SpareCabin}
+        alt="Control Cabins"
+        class="w-full md:w-3/5 rounded-2xl"
+      />
     </div>
   </div>
   <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 px-8 max-w-7xl">
@@ -36,33 +40,38 @@ import { Image } from "astro:assets";
       <Image src={rodillo2} alt="TRIASO Roller" class="max-h-[300px]" />
     </div>
     <div class="w-full flex flex-col justify-center px-4">
-      <h2 class="font-bold text-blueMain text-lg md:text-xl">
+      <h2 class="font-bold text-blueMain text-base md:text-xl">
         Actualizaciones a la medida
       </h2><br />
-      <p class="font-thin text-grisT text-base md:text-lg">
-        Evaluamos su configuración actual y sugerimos únicamente las actualizaciones que realmente mejorarán el desempeño, la seguridad y el cumplimiento de su equipo.
+      <p class="font-thin text-grisT text-sm md:text-lg">
+        Evaluamos su configuración actual y sugerimos únicamente las
+        actualizaciones que realmente mejorarán el desempeño, la seguridad y el
+        cumplimiento de su equipo.
       </p>
     </div>
     <div class="w-full flex justify-center">
       <Image src={rodillo3} alt="TRIASO Roller" class="max-h-[300px]" />
     </div>
     <div class="w-full flex flex-col justify-center px-4">
-      <h2 class="font-bold text-grisT text-lg md:text-xl">
+      <h2 class="font-bold text-grisT text-base md:text-xl">
         Compatibilidad garantizada
       </h2><br />
-      <p class="font-thin text-grisT text-base md:text-lg">
-       Adaptamos nuestras soluciones para integrarse con sus sistemas existentes, sin importar la marca original o la antigüedad del equipo.
+      <p class="font-thin text-grisT text-sm md:text-lg">
+        Adaptamos nuestras soluciones para integrarse con sus sistemas
+        existentes, sin importar la marca original o la antigüedad del equipo.
       </p>
     </div>
     <div class="w-full flex justify-center">
-      <Image src={rodillo1} alt="TRIASO Roller" class="max-h-[300px] " />
+      <Image src={rodillo1} alt="TRIASO Roller" class="max-h-[300px]" />
     </div>
     <div class="w-full flex flex-col justify-center px-4">
-      <h2 class="font-bold text-redBg text-lg md:text-xl">
+      <h2 class="font-bold text-redBg text-base md:text-xl">
         Refuerzos estructurales y mecánicos
       </h2><br />
-      <p class="font-thin text-grisT text-base md:text-lg">
-        Reconstruimos partes desgastadas, reforzamos componentes críticos e instalamos sistemas actualizados para extender la vida útil de sus equipos.
+      <p class="font-thin text-grisT text-sm md:text-lg">
+        Reconstruimos partes desgastadas, reforzamos componentes críticos e
+        instalamos sistemas actualizados para extender la vida útil de sus
+        equipos.
       </p>
     </div>
   </div>
@@ -70,40 +79,47 @@ import { Image } from "astro:assets";
     class="w-full px-8 md:px-52 flex justify-center bg-gradient-to-b from-bgMain to-grisT"
   >
     <div class="w-full max-w-7xl flex justify-center mt-10 mb-10">
-      <Image src={Rehab3} alt="Asphalt Storage Tank" class="rounded-2xl w-full " />
+      <Image
+        src={Rehab3}
+        alt="Asphalt Storage Tank"
+        class="rounded-2xl w-full"
+      />
     </div>
   </div>
   <div class="w-full flex flex-col justify-center items-center bg-grisT">
-    <h2 class="text-center font-bold text-bgBeige text-2xl md:text-3xl py-10">
+    <h2 class="text-center font-bold text-bgBeige text-xl md:text-3xl py-10">
       Enfoque en beneficios y productividad.
     </h2><br />
     <div class="w-full flex flex-col gap-2 px-8 items-start max-w-7xl">
       <div class="w-full flex gap-2 items-center">
         <Image src={icono1} alt="Arrows icon" class="w-[80px] h-[80px]" />
-        <h3 class="font-bold text-white text-xl md:text-2xl">
+        <h3 class="font-bold text-white text-lg md:text-2xl">
           Aumente la eficiencia y reduzca el consumo de combustible
         </h3>
       </div>
       <div class="w-full">
-        <p class="font-thin text-white text-base md:text-lg">
-          Nuestras actualizaciones están diseñadas para reducir costos de operación y aumentar la productividad, sin necesidad de reemplazar todo su sistema.
+        <p class="font-thin text-white text-sm md:text-lg">
+          Nuestras actualizaciones están diseñadas para reducir costos de
+          operación y aumentar la productividad, sin necesidad de reemplazar
+          todo su sistema.
         </p>
       </div>
     </div>
     <div
-      class="w-full grid grid-cols-2 gap-0 md:gap-10 justify-center items-center max-w-7xl"
+      class="w-full grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-10 justify-center items-center max-w-7xl"
     >
       <div class="w-[150px] h-[10px] bg-redBg"></div>
       <div class="w-full flex flex-col gap-2 px-8 items-start">
         <div class="w-full flex gap-2 justify-center items-center">
-          <h3 class="w-full font-bold text-white text-xl md:text-2xl text-end">
+          <h3 class="w-full font-bold text-white text-lg md:text-2xl text-end">
             Mínimos tiempos muertos
           </h3>
           <Image src={icono3} alt="Watch icon" class="w-[80px] h-[80px]" />
         </div>
         <div class="w-full">
-          <p class="font-thin text-white text-base md:text-lg text-end">
-            Programamos las intervenciones de acuerdo con sus necesidades de producción para asegurar una operación continua.
+          <p class="font-thin text-white text-sm md:text-lg text-end">
+            Programamos las intervenciones de acuerdo con sus necesidades de
+            producción para asegurar una operación continua.
           </p>
         </div>
       </div>
@@ -111,13 +127,14 @@ import { Image } from "astro:assets";
     <div class="w-full flex flex-col gap-2 px-8 max-w-7xl items-start">
       <div class="w-full flex gap-2 items-center">
         <Image src={icono2} alt="Investment icon" class="w-[80px] h-[80px]" />
-        <h3 class="font-bold text-white text-xl md:text-2xl">
+        <h3 class="font-bold text-white text-lg md:text-2xl">
           Retorno de inversión
         </h3>
       </div>
       <div class="w-full">
-        <p class="font-thin text-white text-base md:text-lg">
-          En algunos casos la rehabilitación suele ser la manera más económica de recuperar el desempeño y la confiabilidad de los equipos.
+        <p class="font-thin text-white text-sm md:text-lg">
+          En algunos casos la rehabilitación suele ser la manera más económica
+          de recuperar el desempeño y la confiabilidad de los equipos.
         </p>
       </div>
     </div>

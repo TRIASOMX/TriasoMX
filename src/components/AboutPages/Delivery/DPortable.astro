@@ -5,52 +5,52 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
 ---
 
 <section class="w-full max-w-7xl mx-auto py-10">
-    <div class="w-full grid grid-cols-1 md:grid-cols-3 bg-white">
-        <div class="w-full col-span-1 p-8">
-            <h1 class="text-2xl md:text-3xl font-bold text-black">
-                Completamente portátil
-            </h1>
-            <Separator />
-            <p class="text-base md:text-lg font-thin">
-                Entendemos la importancia de poner su equipo en operación lo más
-                rápido posible. Nuestros equipos Triaso están diseñados para una
-                instalación y puesta en marcha rápidas.
-            </p>
-        </div>
-        <div class="w-full flex items-end justify-end  col-span-2">
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/wXrv16fg3vk?si=4C1BNgij4jyw3ewC"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-        </div>
+  <div class="w-full grid grid-cols-1 md:grid-cols-5 bg-white">
+    <div class="w-full col-span-1 md:col-span-3 p-8">
+      <h1 class="text-2xl md:text-3xl font-bold text-black">
+        Completamente portátil
+      </h1>
+      <Separator />
+      <p class="text-sm md:text-lg font-thin">
+        Entendemos la importancia de poner su equipo en operación lo más rápido
+        posible. Nuestros equipos Triaso están diseñados para una instalación y
+        puesta en marcha rápidas.
+      </p>
     </div>
-    <TwoColumnSection
-        leftBg="bg-redBg"
-        rightBg="bg-blueMain"
-        imageSrc={Tred.src}
-        imageAlt="Red T icon"
-        imageWidth="150px"
-    >
-        <div slot="left" class="flex flex-col justify-center gap-3">
-            <p class="text-base md:text-lg">
-                Todos los componentes de nuestros equipos están diseñados para
-                transporte integral, asegurando una instalación eficiente y
-                rápida. Integramos una quinta rueda a todos nuestros equipos y
-                llantas para transportarlo sin necesidad de una caja baja, solo
-                llega el camión se conecta y transporta.
-            </p>
-        </div>
-        <div slot="right" class="flex flex-col justify-center gap-3">
-            <p class="text-base md:text-lg">
-                Los equipos Triaso ofrecen la gran ventaja de ser totalmente
-                portátiles, con la flexibilidad de instalarse también como
-                estacionarios, reduciendo costos de operación y mantenimiento.
-            </p>
-        </div>
-    </TwoColumnSection>
+    <div class="w-full flex items-end justify-end col-span-1 md:col-span-2">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/wXrv16fg3vk?si=4C1BNgij4jyw3ewC"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <TwoColumnSection
+    leftBg="bg-redBg"
+    rightBg="bg-blueMain"
+    imageSrc={Tred.src}
+    imageAlt="Red T icon"
+    imageWidth="150px"
+  >
+    <div slot="left" class="flex flex-col justify-center gap-3">
+      <p class="text-sm md:text-base">
+        Todos los componentes de nuestros equipos están diseñados para
+        transporte integral, asegurando una instalación eficiente y rápida.
+        Integramos una quinta rueda a todos nuestros equipos y llantas para
+        transportarlo sin necesidad de una caja baja, solo llega el camión se
+        conecta y transporta.
+      </p>
+    </div>
+    <div slot="right" class="flex flex-col justify-center gap-3">
+      <p class="text-sm md:text-base">
+        Los equipos Triaso ofrecen la gran ventaja de ser totalmente portátiles,
+        con la flexibilidad de instalarse también como estacionarios, reduciendo
+        costos de operación y mantenimiento.
+      </p>
+    </div>
+  </TwoColumnSection>
 </section>

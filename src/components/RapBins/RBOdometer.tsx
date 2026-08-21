@@ -49,7 +49,7 @@ const RPOdometer = () => {
   return (
     <div ref={sectionRef} className="w-full max-w-[1500px] px-8 py-6 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
-        <div className="flex flex-col h-full justify-between">
+        <div className="flex flex-col h-full justify-between gap-6">
           <div className="flex flex-col items-center lg:items-start justify-center">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-[6.7ch] lg:w-full md:w-full">
               <Odometer value={value3} format="(,ddd)" duration={2000} />

@@ -7,17 +7,17 @@ export const news = [
 
     content: `
       <div>
-      <p>
+      <p style="font-size: 0.9rem;">
         El RAP (Pavimento Asfáltico Recuperado) es el pavimento asfáltico recuperado mediante fresado. Es totalmente apto para su reciclaje al incorporarse en nuevas mezclas asfálticas, aprovechando tanto sus agregados como el ligante asfáltico que contiene. El reciclaje de este material, que normalmente se desperdicia en grandes cantidades, reduce significativamente los costos de producción al disminuir el consumo de materiales y ligante, minimizar los costos de transporte, ahorrar energía y —lo más importante— lograr importantes beneficios económicos mediante la reducción de los costos del ciclo de vida.
 El RAP se ha utilizado en mezclas asfálticas en caliente desde 1915, permitiendo ahorros significativos en los costos de las mezclas donde se incorpora. Una mezcla asfáltica con RAP tiene un costo de producción mucho menor en comparación con una mezcla sin RAP, principalmente debido a la reutilización del ligante asfáltico ya presente en el RAP. Por esta razón, el uso de RAP ha crecido rápidamente en los últimos años a nivel mundial. Ofrecemos todo lo que necesita para trabajar con RAP, desde modificaciones para su planta de asfalto existente hasta una nueva planta especializada en la producción rentable de RAP.
 
       </p>
       <br />
-      <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 1rem;">
+      <h2 style="font-size: 1.1rem; font-weight: bold; margin-top: 1rem;">
         ¿Por qué reciclar el RAP es la medida más ecológica en la producción de pavimentos asfálticos?
       </h2>
       <br />
-      <p>
+      <p style="font-size: 0.9rem;">
         Según Santos et al. (2015), la extracción de materias primas representa el
         mayor contribuyente al impacto ambiental total asociado con la producción de
         mezclas asfálticas en caliente. Liu et al. reportaron en su evaluación de
@@ -62,11 +62,11 @@ El RAP se ha utilizado en mezclas asfálticas en caliente desde 1915, permitiend
         combinado.
       </p>
       <br />
-      <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 1rem;">
+      <h2 style="font-size: 1.1rem; font-weight: bold; margin-top: 1rem;">
         El RAP, el material reciclable más abundante del mundo.
       </h2>
       <br />
-      <p>
+      <p style="font-size: 0.9rem;">
         El pavimento asfáltico recuperado (RAP) es el material reciclable más
         abundante del mundo, con casi 2.010 millones de toneladas generadas
         anualmente. Sin embargo, se estima que el 33 % sigue gestionándose de forma
@@ -91,7 +91,7 @@ El RAP se ha utilizado en mezclas asfálticas en caliente desde 1915, permitiend
         combinados de reciclaje de plástico, vidrio, aluminio y papel.
       </p>
       <br />
-      <p>
+      <p style="font-size: 0.9rem;">
         Según Oruç et al. y Simge Group (2022), entre 2018 y 2022 se produjeron
         anualmente alrededor de 1.5 mil millones de toneladas de pavimento asfáltico
         en todo el mundo, consumiendo aproximadamente 1.425 mil millones de toneladas
@@ -119,11 +119,11 @@ El RAP se ha utilizado en mezclas asfálticas en caliente desde 1915, permitiend
         asfálticas en caliente— generando ahorros sustanciales en toda la industria.
       </p>
       <br />
-      <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 1rem;">
+      <h2 style="font-size: 1.1rem; font-weight: bold; margin-top: 1rem;">
         La popularidad del asfalto templado
       </h2>
       <br />
-    <p>
+    <p style="font-size: 0.9rem;">
 Según 37 estudios recopilados, por cada 10% de incorporación de RAP en nuevas mezclas asfálticas en caliente, el impacto ambiental disminuye aproximadamente un 28% en comparación con mezclas convencionales elaboradas con agregados vírgenes.
 
 La Mezcla Asfáltica Tibia (WMA, por sus siglas en inglés) ha adquirido rápidamente gran importancia a medida que la industria de pavimentos avanza hacia tecnologías más limpias y sostenibles. Este método se originó en Europa durante la década de 1990 y posteriormente fue adoptado en los Estados Unidos a principios de los años 2000, donde comenzó a reemplazar al tradicional Hot Mix Asphalt (HMA) en muchas aplicaciones.
@@ -179,7 +179,7 @@ El uso de WMA debe alinearse correctamente con las prácticas del HMA: las tempe
     image: "/images/News/PlaC Quemador.webp",
     content: `
       <div>
-      <p>
+      <p style="font-size: 0.9rem;">
         Las opciones económicas pueden parecer atractivas al principio. Sin embargo,
         en muchos casos —y, de hecho, en la mayoría— el consumo de combustible acaba
         contrarrestando el ahorro obtenido con la compra en cuestión de meses. El
@@ -188,11 +188,11 @@ El uso de WMA debe alinearse correctamente con las prácticas del HMA: las tempe
         elevados a lo largo del tiempo.
       </p>
       <br />
-      <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 1rem;">
+      <h2 style="font-size: 1.1rem; font-weight: bold; margin-top: 1rem;">
        Pre-calentador                                                             
       </h2>
       <br />
-      <p>
+      <p style="font-size: 0.9rem;">
         Los precalentadores se utilizan para reducir la viscosidad de los
         combustibles. En México, el diésel y la gasolina no suelen utilizarse para la
         combustión en el secado de agregados; en su lugar, se emplean combustibles
@@ -212,11 +212,11 @@ El uso de WMA debe alinearse correctamente con las prácticas del HMA: las tempe
         nuestras plantas sin costo adicional.
       </p>
       <br />
-      <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 1rem;">
+      <h2 style="font-size: 1.1rem; font-weight: bold; margin-top: 1rem;">
        Quemador asistido por plasma
       </h2>
       <br />
-      <p>
+      <p style="font-size: 0.9rem;">
       La asistencia por plasma permite una mayor eficiencia en el consumo de
       combustible. Para lograr una mejor atomización, las partículas de combustible
       se ionizan, lo que da lugar a una combustión molecular. La asistencia por
@@ -225,11 +225,11 @@ El uso de WMA debe alinearse correctamente con las prácticas del HMA: las tempe
       viscosidad. Reduce la formación de humo y las emisiones contaminantes.
       </p>
       <br />
-      <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 1rem;">
+      <h2 style="font-size: 1.1rem; font-weight: bold; margin-top: 1rem;">
         Tambor sellado
       </h2>
       <br />
-      <p>
+      <p style="font-size: 0.9rem;">
         El sellado completo de las entradas de aire frío en el tambor de mezcla reduce
         el consumo de combustible. Las entradas de aire frío disminuyen la eficiencia
         interna del quemador dentro del tambor de mezcla, lo que requiere más
@@ -242,11 +242,11 @@ El uso de WMA debe alinearse correctamente con las prácticas del HMA: las tempe
         el consumo de combustible para secar los agregados es bajo.
       </p>
       <br />
-      <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 1rem;">
+      <h2 style="font-size: 1.1rem; font-weight: bold; margin-top: 1rem;">
        Quemador de aire total
       </h2>
       <br />
-      <p>
+      <p style="font-size: 0.9rem;">
         Los quemadores de aire total suministran todo el aire que entra en el tambor.
         Nuestros quemadores son de aire total; no cuentan con entradas de aire
         secundarias, lo que los hace totalmente eficientes. Regulan el 100 % del aire
@@ -257,11 +257,11 @@ El uso de WMA debe alinearse correctamente con las prácticas del HMA: las tempe
         Esto ocurre porque no hay exceso de oxígeno dentro del tambor.
       </p>
       <br />
-      <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 1rem;">
+      <h2 style="font-size: 1.1rem; font-weight: bold; margin-top: 1rem;">
        Diseño de la vela
       </h2>
       <br />
-      <p>
+      <p style="font-size: 0.9rem;">
       Diseño eficiente de las paletas dentro del tambor Las paletas dentro del
       tambor deben diseñarse para secar los agregados de manera eficiente. Este es
       uno de los factores más importantes para la eficiencia energética del tambor e

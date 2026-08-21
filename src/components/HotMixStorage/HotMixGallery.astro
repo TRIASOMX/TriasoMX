@@ -12,53 +12,60 @@ import g9 from "../../assets/images/HotMix/Gallery/HM9.webp";
 import g10 from "../../assets/images/HotMix/Gallery/HM10.webp";
 
 const HMGallery = [
-    {
-        image: g1.src,
-        caption: "Self-erecting Hot Mix storage Silo, 100 Tons capacity, in working position",
-    },
-    {
-        image: g2.src,
-        caption: "Self-erecting Hot Mix storage Silo, 100 Tons capacity, in transporting position",
-    },
-    {
-        image: g3.src,
-        caption: "Self-erecting Hot Mix storage Silo, 100 Tons capacity, in transporting position",
-    },
-    {
-        image: g4.src,
-        caption: "Self-erecting Hot Mix storage Silo, 100 Tons capacity, in raising",
-    },
-    {
-        image: g5.src,
-        caption: "Self-erecting Hot Mix storage Silo, 100 Tons capacity, in raising",
-    },
-    {
-        image: g6.src,
-        caption: "Hot Mix storage Silo, 100 Tons capacity, in working position",
-    },
-    {
-        image: g7.src,
-        caption: "Hot Mix storage Silo, 100 Tons capacity, in working position",
-    },
-    {
-        image: g8.src,
-        caption: "Hot Mix storage Silo, 100 Tons capacity, in transporting position",
-    },
-    {
-        image: g9.src,
-        caption: "Hot Mix storage Silo, 130 Tons capacity, in working position",
-    },
-    {
-        image: g10.src,
-        caption: "Hot Mix storage Silo, 130 Tons capacity, in transporting position",
-    },
+  {
+    image: g1.src,
+    caption:
+      "Self-erecting Hot Mix storage Silo, 100 Tons capacity, in working position",
+  },
+  {
+    image: g2.src,
+    caption:
+      "Self-erecting Hot Mix storage Silo, 100 Tons capacity, in transporting position",
+  },
+  {
+    image: g3.src,
+    caption:
+      "Self-erecting Hot Mix storage Silo, 100 Tons capacity, in transporting position",
+  },
+  {
+    image: g4.src,
+    caption:
+      "Self-erecting Hot Mix storage Silo, 100 Tons capacity, in raising",
+  },
+  {
+    image: g5.src,
+    caption:
+      "Self-erecting Hot Mix storage Silo, 100 Tons capacity, in raising",
+  },
+  {
+    image: g6.src,
+    caption: "Hot Mix storage Silo, 100 Tons capacity, in working position",
+  },
+  {
+    image: g7.src,
+    caption: "Hot Mix storage Silo, 100 Tons capacity, in working position",
+  },
+  {
+    image: g8.src,
+    caption:
+      "Hot Mix storage Silo, 100 Tons capacity, in transporting position",
+  },
+  {
+    image: g9.src,
+    caption: "Hot Mix storage Silo, 130 Tons capacity, in working position",
+  },
+  {
+    image: g10.src,
+    caption:
+      "Hot Mix storage Silo, 130 Tons capacity, in transporting position",
+  },
 ];
 ---
 
 <section class="w-full font-bold text-grisT">
-    <div class="w-full mt-10 pb-10 px-8">
-        <div class="z-50">
-            <GallerySlider client:only slides={HMGallery} visibleThumbs={3} />
-        </div>
+  <div class="w-full mt-10 pb-10 px-2 md:px-8">
+    <div class="z-50">
+      <GallerySlider client:only slides={HMGallery} visibleThumbs={3} />
     </div>
+  </div>
 </section>

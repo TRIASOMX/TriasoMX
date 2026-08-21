@@ -160,7 +160,7 @@ const OHPlanos = () => {
             </div>
           </div>
         </header>
-        <div className="w-full px-8 lg:px-8 mt-14">
+        <div className="w-full px-2 lg:px-8 mt-14">
           <div id="options" ref={optionsRef} className="w-full">
             {/* móvil */}
             <div className="flex flex-row justify-between items-center px-4 md:hidden w-full max-w-7xl mx-auto">
