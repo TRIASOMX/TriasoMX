@@ -6,6 +6,14 @@ type CardData = {
   textColor: string;
 };
 
+export interface Props {
+  cards: CardData[];
+  mainTitle: string | string[];
+  mainDescription: string;
+  imageSrc?: string;
+  imageAlt?: string;
+}
+
 const {
   cards = [],
   mainTitle,
@@ -13,6 +21,8 @@ const {
   imageSrc: _imageSrc,
   imageAlt: _imageAlt = "Persistent image",
 } = Astro.props;
+
+const titleLines = Array.isArray(mainTitle) ? mainTitle : [mainTitle];
 ---
 
 <section
@@ -25,7 +35,7 @@ const {
       <h2
         class="text-3xl md:text-[60px] font-extrabold leading-tight tracking-tighter"
       >
-        {mainTitle}
+        {titleLines.map((line) => <span class="block">{line}</span>)}
       </h2>
       <div class="w-1/2 h-1 bg-[#ca1c1c] my-5"></div>
       <p class="text-black w-full text-base md:text-2xl">

@@ -2908,7 +2908,7 @@ const BinPlanosSection = () => {
                           Alimentado con sistema de control de aire total.
                         </li>
                         <li>
-                          Disponibilidad de uso de todo tipo de combustibles
+                          Disponibilidad de uso de todo tipo de combustibles.
                         </li>
                         <li className="list-none">
                           <ul className="ml-2 lg:ml-6">
@@ -4027,7 +4027,7 @@ const BinPlanosSection = () => {
                         </div>
                         <li>Alimentado con sistema de control de aire total</li>
                         <li>
-                          Disponibilidad de uso de todo tipo de combustibles
+                          Disponibilidad de uso de todo tipo de combustibles.
                         </li>
                         <li className="list-none">
                           <ul className="ml-2 lg:ml-6">

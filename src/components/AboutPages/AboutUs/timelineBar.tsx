@@ -80,7 +80,7 @@ const TimelineBar: React.FC<TimelineBarProps> = ({ dates, activeIndex, onSelect 
     <div className="w-full">
       <div className="flex items-center gap-2 px-3 py-5 sm:px-6">
 
-        <button onClick={goPrev} className="timeline-nav-btn shrink-0" aria-label="Previous date">
+        <button onClick={goPrev} className="timeline-nav-btn shrink-0" aria-label="Fecha anterior">
           <ChevronLeft size={18} />
         </button>
         
@@ -148,7 +148,7 @@ const TimelineBar: React.FC<TimelineBarProps> = ({ dates, activeIndex, onSelect 
             </div>
           </div>
         </div>
-        <button onClick={goNext} className="timeline-nav-btn shrink-0" aria-label="Next date">
+        <button onClick={goNext} className="timeline-nav-btn shrink-0" aria-label="Fecha siguiente">
           <ChevronRight size={18} />
         </button>
       </div>

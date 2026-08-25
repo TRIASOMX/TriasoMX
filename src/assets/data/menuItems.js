@@ -216,7 +216,7 @@ export const menuItems = [
       //   url : "/",
       // },
       {
-        title: "PANELES ESTÉTICOS",
+        title: "FLANCOS ESTÉTICOS",
         url: "/AestheticSide",
       },
       {

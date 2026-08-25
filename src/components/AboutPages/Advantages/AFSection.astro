@@ -69,7 +69,8 @@ import { Image } from "astro:assets";
     </div>
   </div>
 
-  <div class="relative overflow-hidden">
+  <div class="relative">
+    <div class="overflow-hidden">
     <div
       id="slider"
       class="flex transition-transform duration-500 ease-in-out items-center"
@@ -237,13 +238,54 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </div>
-
-    <div class="flex justify-center gap-2 py-5">
-      <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
-      <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
-      <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
-      <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
     </div>
+
+    <button
+      id="prev-slide-btn"
+      class="absolute left-1 md:left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-white border border-gray-200 shadow-md transition-colors hover:bg-gray-50 disabled:opacity-40 disabled:hover:bg-white disabled:cursor-not-allowed"
+      aria-label="Anterior"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <button
+      id="next-slide-btn"
+      class="absolute right-1 md:right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-white border border-gray-200 shadow-md transition-colors hover:bg-gray-50 disabled:opacity-40 disabled:hover:bg-white disabled:cursor-not-allowed"
+      aria-label="Siguiente"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="flex justify-center gap-2 py-5">
+    <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
+    <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
+    <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
+    <button class="indicator w-3 h-3 rounded-full bg-gray-800"></button>
   </div>
 
   <!-- <div class="w-full max-w-7xl mx-auto py-5">
@@ -298,6 +340,12 @@ import { Image } from "astro:assets";
   const slider = document.getElementById("slider");
   const indicators = document.querySelectorAll(".indicator");
   const totalSlides = indicators.length;
+  const prevBtn = document.getElementById(
+    "prev-slide-btn",
+  ) as HTMLButtonElement | null;
+  const nextBtn = document.getElementById(
+    "next-slide-btn",
+  ) as HTMLButtonElement | null;
 
   let currentSlide = 0;
   let startX = 0;
@@ -314,6 +362,9 @@ import { Image } from "astro:assets";
       dot.classList.toggle("bg-blue-950", i === currentSlide);
       dot.classList.toggle("bg-gray-800", i !== currentSlide);
     });
+
+    if (prevBtn) prevBtn.disabled = currentSlide === 0;
+    if (nextBtn) nextBtn.disabled = currentSlide === totalSlides - 1;
   }
 
   function getClientX(e: MouseEvent | TouchEvent) {
@@ -374,6 +425,9 @@ import { Image } from "astro:assets";
   indicators.forEach((dot, index) => {
     dot.addEventListener("click", () => goToSlide(index));
   });
+
+  prevBtn?.addEventListener("click", () => goToSlide(currentSlide - 1));
+  nextBtn?.addEventListener("click", () => goToSlide(currentSlide + 1));
 
   goToSlide(0);
 </script>

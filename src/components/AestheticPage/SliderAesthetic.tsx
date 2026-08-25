@@ -1,13 +1,13 @@
 import { useState } from "react";
-import g1 from "../../assets/images/SidePanels/FEPlaC_1.webp"
-import g2 from "../../assets/images/SidePanels/TqesFeChasis_1.webp"
-import g3 from "../../assets/images/SidePanels/TolvasFE.webp"
-import g4 from "../../assets/images/SidePanels/FEPlaC1_1.webp"
+import g1 from "../../assets/images/SidePanels/FEPlaC_1.webp";
+import g2 from "../../assets/images/SidePanels/TqesFeChasis_1.webp";
+import g3 from "../../assets/images/SidePanels/TolvasFE.webp";
+import g4 from "../../assets/images/SidePanels/FEPlaC1_1.webp";
 
 const SliderAesthetic = () => {
   const sidePanels = [
     {
-      nombre: "Mezcladoras de tambor",
+      nombre: "Tambores mezcladores",
       imagen: g1.src,
     },
     {
@@ -28,13 +28,13 @@ const SliderAesthetic = () => {
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === sidePanels.length - 1 ? 0 : prevIndex + 1
+      prevIndex === sidePanels.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? sidePanels.length - 1 : prevIndex - 1
+      prevIndex === 0 ? sidePanels.length - 1 : prevIndex - 1,
     );
   };
 

@@ -49,7 +49,7 @@ export const timelineData: TimelineDate[] = [
         date:"1997",
         label:"1997",
         events:[{
-            id:"e30", description:"Company's first asphalt plant produced", image: img1.src
+            id:"e30", description:"Se produjo la primera planta de asfalto de la compañía.", image: img1.src
         }]
     },
 
@@ -58,7 +58,7 @@ export const timelineData: TimelineDate[] = [
         date: "2006",
         label: "2006",
         events: [
-            { id: "e1", description: "We introduced our open-flame burner design." , image: img2.src },
+            { id: "e1", description: "Presentamos nuestro diseño de quemador de llama abierta." , image: img2.src },
             {id: "e31", image:img3.src}
         ],
     },
@@ -67,7 +67,7 @@ export const timelineData: TimelineDate[] = [
         date: "2011",
         label: "2011",
         events: [
-            { id: "e2", description: "We introduced our counterflow drum paired with a pulse-jet baghouse.", image: img4.src },
+            { id: "e2", description: "Presentamos nuestro tambor de contraflujo combinado con una casa de bolsas tipo pulse-jet.", image: img4.src },
         ],
     },
     {
@@ -75,7 +75,7 @@ export const timelineData: TimelineDate[] = [
         date: "2012",
         label: "2012",
         events: [
-            { id: "e4", description: "We introduced our curved elevator, a distinctive design that reduced truck unloading height and provided clear operational advantages. However, due to higher maintenance requirements, the design was later discontinued.", image: img5.src },
+            { id: "e4", description: "Presentamos nuestro elevador curvo, un diseño distintivo que reducía la altura de descarga de los camiones y ofrecía claras ventajas operativas. Sin embargo, debido a sus mayores requerimientos de mantenimiento, el diseño fue descontinuado posteriormente.", image: img5.src },
         ],
     },
     {
@@ -83,8 +83,8 @@ export const timelineData: TimelineDate[] = [
         date: "2013",
         label: "2013",
         events: [
-            { id: "e5", description: "We launched our cold-mix plant for applications in construction, industrial, and mining sectors.", image:img6.src },
-            { id: "e6", description: "We implemented an adjustable flight system in our counterflow drum.", image:img7.src },
+            { id: "e5", description: "Lanzamos nuestra planta de mezcla en frío para aplicaciones en los sectores de construcción, industrial y minero.", image:img6.src },
+            { id: "e6", description: "Implementamos un sistema de paletas ajustables en nuestro tambor de contraflujo.", image:img7.src },
         ],
     },
     {
@@ -92,8 +92,8 @@ export const timelineData: TimelineDate[] = [
         date: "2014",
         label: "2014",
         events: [
-            { id: "e8", description: "We implemented an optional computerized control system in our asphalt tanks for inventory monitoring and loss prevention.", image: img9.src },
-            { id: "e9", description: "We incorporated emission sampling ports on the exhaust stack to enable verification of emissions in accordance with environmental regulations.", image: img8.src },
+            { id: "e8", description: "Implementamos un sistema de control computarizado opcional en nuestros tanques de asfalto para el monitoreo de inventario y la prevención de pérdidas.", image: img9.src },
+            { id: "e9", description: "Incorporamos puertos de muestreo de emisiones en la chimenea de escape para permitir la verificación de emisiones conforme a la normativa ambiental.", image: img8.src },
         ],
     },
     {
@@ -101,9 +101,9 @@ export const timelineData: TimelineDate[] = [
         date: "2015",
         label: "2015",
         events: [
-            { id: "e10", description: "We transitioned the baghouses of our counterflow plants in Mexico from pulse-jet systems to reverse-air systems. Today, we offer both configurations based on client preference.", image: img11.src },
-            { id: "e11", description: "We introduced two parallel-flow asphalt plant models—Basic and Plus—to address different performance requirements and budget levels.", image: img10.src },
-            { id: "e12", description: "We built our first hot-mix storage silo, starting with the most complex configuration: a self-erecting design.", image: img12.src }
+            { id: "e10", description: "Cambiamos las casas de bolsas de nuestras plantas de contraflujo en México de sistemas pulse-jet a sistemas de aire reverso. Actualmente ofrecemos ambas configuraciones según la preferencia del cliente.", image: img11.src },
+            { id: "e11", description: "Presentamos dos modelos de plantas de asfalto de flujo paralelo —Basic y Plus— para atender distintos requerimientos de desempeño y niveles de presupuesto.", image: img10.src },
+            { id: "e12", description: "Construimos nuestro primer silo de almacenamiento de mezcla caliente, comenzando con la configuración más compleja: un diseño autoerigible.", image: img12.src }
         ],
     },
     {
@@ -111,9 +111,9 @@ export const timelineData: TimelineDate[] = [
         date: "2016",
         label: "2016",
         events: [
-            { id: "e10", description: "We upgraded the exhaust fan to reduce noise, improve efficiency, and use direct drive for lower maintenance.", image: img14.src },
-            { id: "e11", description: "We changed the color of our plants from yellow to sand and fully insulated all drums, finishing them with stainless steel cladding.", image: img13.src },
-            { id: "e12", description: "We completely re-designed our cold-mix plant with a very modern appearance.", image: img15.src }
+            { id: "e10", description: "Actualizamos el extractor de gases para reducir el ruido, mejorar la eficiencia y utilizar transmisión directa para un menor mantenimiento.", image: img14.src },
+            { id: "e11", description: "Cambiamos el color de nuestras plantas de amarillo a arena y aislamos completamente todos los tambores, recubriéndolos con lámina de acero inoxidable.", image: img13.src },
+            { id: "e12", description: "Rediseñamos por completo nuestra planta de mezcla en frío, dándole una apariencia mucho más moderna.", image: img15.src }
         ],
     },
     {
@@ -121,8 +121,8 @@ export const timelineData: TimelineDate[] = [
         date: "2017",
         label: "2017",
         events: [
-            { id: "e13", description: "We introduced an external pugmill (paddle mixer) as an optional configuration for counterflow drum plants.", image: img17.src },
-            { id: "e14", description: "We introduced our current “Total Air” burner, equipped with a fuel preheater to efficiently burn higher-viscosity fuels.", image: img16.src },
+            { id: "e13", description: "Presentamos un mezclador pugmill externo (mezclador de paletas) como configuración opcional para plantas con tambor de contraflujo.", image: img17.src },
+            { id: "e14", description: "Presentamos nuestro quemador actual “Total Air”, equipado con un precalentador de combustible para quemar de forma eficiente combustibles de mayor viscosidad.", image: img16.src },
         ],
     },
     {
@@ -130,40 +130,40 @@ export const timelineData: TimelineDate[] = [
         date: "2018",
         label: "2018",
         events: [
-            { id: "e15", description: "We built our first powdered tire rubber incorporation system for asphalt, enabling the production of rubberized asphalt mixes. This technology supports tire recycling and waste reduction, although market adoption remains limited.", image: img18.src },
-            { id: "e16", description: "To reduce fuel consumption, we fully sealed unwanted air inlets along the drum.", image: img19.src },
+            { id: "e15", description: "Construimos nuestro primer sistema de incorporación de hule de neumático en polvo para asfalto, permitiendo la producción de mezclas asfálticas con hule. Esta tecnología apoya el reciclaje de neumáticos y la reducción de residuos, aunque su adopción en el mercado sigue siendo limitada.", image: img18.src },
+            { id: "e16", description: "Para reducir el consumo de combustible, sellamos por completo las entradas de aire no deseadas a lo largo del tambor.", image: img19.src },
         ],
     },
     {
         id: "d10",
         date: "2019",
         label: "2019",
-        events: [{ id: "e17", description: "We developed in-house control software for optimized plant operation, programmed using Siemens TIA Portal with a LabVIEW-based operator interface.", image: img20.src }]
+        events: [{ id: "e17", description: "Desarrollamos internamente un software de control para la operación optimizada de la planta, programado con Siemens TIA Portal y una interfaz de operador basada en LabVIEW.", image: img20.src }]
     },
     {
         id: "d11",
         date: "2021",
         label: "2021",
-        events: [{ id: "e18", description: "We discontinued the Basic and Plus models and shifted to a modular, menu-based configuration system with individually priced components, allowing clients to define their plant according to budget and requirements.", image: img21.src }]
+        events: [{ id: "e18", description: "Descontinuamos los modelos Basic y Plus y migramos a un sistema de configuración modular por menú, con componentes cotizados de forma individual, lo que permite a los clientes definir su planta de acuerdo con su presupuesto y requerimientos.", image: img21.src }]
     },
     {
         id: "d12",
         date: "2022",
         label: "2022",
-        events: [{ id: "e19", description: "We continued expanding this options menu to address specific applications, including galvanized plants for coastal installations, variable-speed drum rotation, and asphalt tanks with auxiliary supply directly to the drum.", image: img22.src }]
+        events: [{ id: "e19", description: "Continuamos ampliando este menú de opciones para atender aplicaciones específicas, incluyendo plantas galvanizadas para instalaciones costeras, rotación de tambor a velocidad variable y tanques de asfalto con suministro auxiliar directo al tambor.", image: img22.src }]
     },
     {
         id: "d13",
         date: "2023",
         label: "2023",
-        events: [{ id: "e20", description: "We upsized key components to maintain production capacity when aggregate moisture is 3% instead of 5%.", image: img23.src }]
-    }, 
+        events: [{ id: "e20", description: "Aumentamos el tamaño de componentes clave para mantener la capacidad de producción con una humedad de agregado del 3 % en lugar del 5 %.", image: img23.src }]
+    },
     {
         id: "d14",
         date: "2024",
         label: "2024",
-        events: [{ id: "e21", description: "We increased baghouse sizing to meet U.S. standards of 175 ACFM per ton of production.", image: img24.src }]
-    },    
+        events: [{ id: "e21", description: "Aumentamos el dimensionamiento de la casa de bolsas para cumplir con el estándar estadounidense de 175 ACFM por tonelada de producción.", image: img24.src }]
+    },
 
     {
         id: "d15",
@@ -171,34 +171,34 @@ export const timelineData: TimelineDate[] = [
         label: "2025",
         events:[{
             id:"e22",
-            title:"We introduced our newest burner:",
-            description: "Plasma-assisted fuel ionization for more efficient and cleaner combustion, self regulating excess oxygen, for no manual fuel carburization adjustment, burner muffler for silent operation for strict low-noise, reducing burner noise.",
+            title:"Presentamos nuestro quemador más reciente:",
+            description: "Ionización de combustible asistida por plasma para una combustión más eficiente y limpia, con autorregulación del exceso de oxígeno que elimina el ajuste manual de la carburación del combustible, y silenciador de quemador para una operación silenciosa que cumple con estrictos requerimientos de bajo ruido.",
             image: img25.src
         },
         {
-         id: "e23", description: "Supersonic nozzles in the baghouse enable a high air-to-cloth ratio of 8:1.", image: img29.src
+         id: "e23", description: "Boquillas supersónicas en la casa de bolsas que permiten una alta relación aire-tela de 8:1.", image: img29.src
         },
         {
-            id:"e24", description:"We upgraded the exhaust fan to reduce noise by implementing a more aerodynamic blade design for strict low-noise requirements.", image: img26.src
+            id:"e24", description:"Actualizamos el extractor de gases para reducir el ruido mediante un diseño de aspas más aerodinámico, cumpliendo con estrictos requerimientos de bajo ruido.", image: img26.src
         },
         {
-            id:"e25", description:"RAP system modifications for up to 50% incorporation capacity.", image: img27.src
+            id:"e25", description:"Modificaciones al sistema de RAP para una capacidad de incorporación de hasta el 50 %.", image: img27.src
         },
         {
-            id:"e26", description:"Incorporation of aerodynamic blades that reduce exhaust system noise, allowing the asphalt plant to operate in urban areas or locations with strict noise regulations."
+            id:"e26", description:"Incorporación de aspas aerodinámicas que reducen el ruido del sistema de escape, permitiendo que la planta de asfalto opere en zonas urbanas o en sitios con normativas estrictas de ruido."
         },
         {
-            id:"e27", description:"Variable-Speed Rotation Drives for Drum Rotation Systems for total control of heat exposure time inside the drum, for higher RAP incorporation or other mix design compliance.", image: img28.src
+            id:"e27", description:"Variadores de velocidad para los sistemas de rotación del tambor, que permiten un control total del tiempo de exposición al calor dentro del tambor, favoreciendo una mayor incorporación de RAP u otros requerimientos del diseño de mezcla.", image: img28.src
         },
         {
             id:"e28",
-            title:"Triaso Relief, new control & supervision system.",
-            description:"Offering a practical and efficient way to manage industrial equipment operations. With advanced monitoring and automation, it simplifies the control of key processes like temperature, material dosing, and production rates. Built to adapt to different setups, it ensures reliable performance while prioritizing safety and ease of use.",
+            title:"Triaso Relief, nuevo sistema de control y supervisión.",
+            description:"Ofrece una forma práctica y eficiente de gestionar la operación del equipo industrial. Con monitoreo y automatización avanzados, simplifica el control de procesos clave como la temperatura, la dosificación de materiales y las tasas de producción. Diseñado para adaptarse a distintas configuraciones, garantiza un desempeño confiable mientras prioriza la seguridad y la facilidad de uso.",
             image: img30.src
         },
         {
             id:"e29",
-            description:"Currently, our plants consume less fuel than the best plants in the competition. The quality of our asphaltic mix is also among the best, and it is homogeneous throughout the day, no matter the production rate (tph). Additionally, we comply with environmental regulations against pollution. Our counterflow plant with baghouses can work in zones with the highest environmental regulations."
+            description:"Actualmente, nuestras plantas consumen menos combustible que las mejores plantas de la competencia. La calidad de nuestra mezcla asfáltica también está entre las mejores del mercado, y se mantiene homogénea durante todo el día, sin importar la tasa de producción (tph). Además, cumplimos con la normativa ambiental contra la contaminación. Nuestra planta de contraflujo con casa de bolsas puede operar en zonas con las regulaciones ambientales más estrictas."
         }
     ]
     }
