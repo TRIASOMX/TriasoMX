@@ -29,27 +29,27 @@ const titleLines = Array.isArray(mainTitle) ? mainTitle : [mainTitle];
   class="stack-section bg-neutral-100 flex flex-row justify-center items-center min-h-[calc(100vh-4rem)]"
 >
   <div
-    class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center w-full"
+    class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center w-full"
   >
-    <div class="left-content">
+    <div class="left-content text-center lg:text-left">
       <h2
         class="text-3xl md:text-[60px] font-extrabold leading-tight tracking-tighter"
       >
         {titleLines.map((line) => <span class="block">{line}</span>)}
       </h2>
-      <div class="w-1/2 h-1 bg-[#ca1c1c] my-5"></div>
+      <div class="w-1/2 h-1 bg-[#ca1c1c] my-5 mx-auto lg:mx-0"></div>
       <p class="text-black w-full text-base md:text-2xl">
         {mainDescription}
       </p>
     </div>
 
     <div
-      class="cards-wrapper relative h-[700px] md:h-[600px] overflow-hidden"
+      class="cards-wrapper relative h-[460px] sm:h-[500px] md:h-[520px] lg:h-[600px] overflow-hidden"
     >
       {
         cards.map((card: CardData) => (
           <div
-            class="stack-card absolute w-full max-w-lg top-[10%] lg:top-[30%] md:top-[60%] right-0 rounded-xl p-10 shadow-xl"
+            class="stack-card absolute w-full max-w-lg mx-auto left-0 right-0 top-0 md:top-[4%] lg:top-[30%] lg:left-auto rounded-xl p-8 md:p-10 shadow-xl"
             style={`background:${card.bg}; color:${card.textColor}`}
           >
             <h3 class="text-2xl md:text-3xl font-semibold mb-4">

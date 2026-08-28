@@ -378,17 +378,19 @@ const desamaqPanels2 = [
         class="dhero-img lg:w-[80%] rounded-lg"
       />
     </div>
-    <div class="flex max-w-7xl px-8 mx-auto lg:hidden md:flex justify-center">
+    <div
+      class="relative z-10 flex max-w-7xl px-8 mx-auto -mb-6 lg:hidden md:flex justify-center"
+    >
       <Image
         src={obracivil}
         alt="Drum mixer on a construction zone"
-        class="lg:w-4/5 rounded-lg"
+        class="dhero-img lg:w-4/5 rounded-lg will-change-transform"
       />
     </div>
 
     <div class="bg-[#14427C]">
       <div
-        class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-2"
+        class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-12 lg:py-2"
       >
         <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
           <div class="w-full space-y-5">
@@ -432,10 +434,18 @@ const desamaqPanels2 = [
     </div>
 
     <div
-      class="relative grid grid-cols-2 max-w-7xl mx-auto px-8 items-center mt-5 lg:hidden"
+      class="relative flex flex-col max-w-7xl mx-auto px-8 -mt-8 mb-4 lg:hidden"
     >
-      <Image src={obracivil2Low} alt="Drum mixer" class="rounded-2xl w-4/5" />
-      <Image src={DMProv1} alt="Usage of a Drum mixer" class="rounded-lg" />
+      <Image
+        src={obracivil2Low}
+        alt="Drum mixer"
+        class="rounded-2xl w-[72%] self-end object-contain shadow-xl relative z-10"
+      />
+      <Image
+        src={DMProv1}
+        alt="Usage of a Drum mixer"
+        class="rounded-lg w-[72%] self-start -mt-8 object-contain shadow-xl"
+      />
     </div>
   </div>
 

@@ -40,7 +40,9 @@ const tanksSlides = [
 
 <div class="w-full flex flex-col font-bold md:mt-20">
   <div class="w-full flex flex-col font-bold mt-10">
-    <div class="max-w-7xl px-8 mx-auto flex justify-start">
+    <div
+      class="relative z-10 max-w-7xl px-8 mx-auto flex justify-start -mb-6 lg:mb-0"
+    >
       <Image
         src={img2}
         alt="Baghouse"
@@ -51,7 +53,7 @@ const tanksSlides = [
     </div>
     <div class="bg-[#393939]">
       <div
-        class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-2"
+        class="max-w-7xl px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-12 lg:py-2"
       >
         <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
           <div class="w-full">
@@ -93,17 +95,17 @@ const tanksSlides = [
       />
     </div>
 
-    <div class="relative flex flex-row px-8 gap-2 lg:hidden">
+    <div class="relative flex flex-col px-8 -mt-8 mb-4 lg:hidden">
       <Image
         src={img7Low}
         alt="Baghouse cleaning system"
-        class="rounded-2xl w-1/2 object-contain"
+        class="rounded-2xl w-[72%] self-end object-contain shadow-xl relative z-10"
       />
 
       <Image
         src={img3}
         alt="Baghouse"
-        class="rounded-lg w-1/2 object-contain"
+        class="rounded-lg w-[72%] self-start -mt-8 object-contain shadow-xl"
       />
     </div>
   </div>

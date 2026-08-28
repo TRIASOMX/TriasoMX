@@ -9,89 +9,82 @@ import TwoColumnSection from "../../unitComponents/TwoColumnSection.astro";
 import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
 ---
 
-<section>
-  <div class="max-w-7xl mx-auto px-8">
-    <div class="flex flex-col space-y-5 pt-5">
-      <div
-        class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 justify-between items-center mx-auto"
-      >
-        <div class="flex flex-col space-y-3">
-          <h1 class="font-bold text-xl lg:text-3xl">
-            Conocemos este negocio <br />
-            de principio a fin
-          </h1>
+<section class="w-full px-8 py-10 md:py-16">
+  <div class="max-w-7xl mx-auto flex flex-col gap-16 md:gap-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div class="flex flex-col gap-4">
+        <h2 class="font-bold text-2xl lg:text-3xl text-grisT">
+          Conocemos este negocio<br class="hidden lg:block" /> de principio a fin
+        </h2>
 
-          <div class="w-72 h-0.5 bg-[#CA1C1C]"></div>
+        <div class="w-28 lg:w-72 h-0.5 bg-redBg"></div>
 
-          <p class="text-sm md:text-base">
-            Con más de 30 años de experiencia, entendemos <br />
-            exactamente lo que nuestros clientes necesitan.
-          </p>
-        </div>
-
-        <div>
-          <Image src={SpareCabin} alt="Spare cabin" class="rounded-2xl" />
-        </div>
+        <p class="text-sm md:text-base text-black leading-relaxed">
+          Con más de 30 años de experiencia, entendemos exactamente lo que
+          nuestros clientes necesitan.
+        </p>
       </div>
 
-      <div
-        class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 justify-between items-center mx-auto"
-      >
-        <div
-          class="flex flex-col justify-start items-center lg:justify-end lg:items-end space-y-3 order-1 lg:order-2"
-        >
-          <h1 class="font-bold text-xl lg:text-3xl text-start lg:text-end">
-            Somos mexicanos
-          </h1>
+      <div class="w-full overflow-hidden rounded-2xl">
+        <Image
+          src={SpareCabin}
+          alt="Cabina de operación de planta de asfalto Triaso"
+          class="w-full h-full object-cover aspect-[4/3]"
+        />
+      </div>
+    </div>
 
-          <div class="w-72 h-0.5 bg-[#00840D]"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div class="flex flex-col gap-4 md:order-2 md:items-end md:text-end">
+        <h2 class="font-bold text-2xl lg:text-3xl text-grisT">
+          Somos mexicanos
+        </h2>
 
-          <p class="text-start lg:text-end lg:w-4/5 text-sm md:text-base">
-            Con Triaso usted tiene la ventaja que somos mexicanos, a unas horas
-            de distancia, lo que significa refacciones de menor costo y de
-            entrega inmediata, evitando costosos retrasos.
-            <br />
-            <span class="font-bold text-black"
-              >Stock cercano, soporte técnico el mismo día.</span
-            >
-          </p>
-        </div>
+        <div class="w-28 lg:w-72 h-0.5 bg-[#00840D]"></div>
 
-        <div class="order-1 mx-auto">
-          <Image
-            src={Aro}
-            alt="Spare cabin"
-            class="rounded-2xl aspect-square object-cover"
-          />
-        </div>
+        <p class="text-sm md:text-base text-black leading-relaxed">
+          Con Triaso usted tiene la ventaja que somos mexicanos, a unas horas de
+          distancia, lo que significa refacciones de menor costo y de entrega
+          inmediata, evitando costosos retrasos.
+          <span class="block mt-2 font-bold text-grisT">
+            Stock cercano, soporte técnico el mismo día.
+          </span>
+        </p>
       </div>
 
-      <div
-        class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 justify-between items-center mx-auto"
-      >
-        <div class="flex flex-col space-y-3">
-          <h1 class="font-bold text-xl lg:text-3xl">
-            En cualquier momento, <br />
-            en cualquier lugar.
-          </h1>
+      <div class="w-full overflow-hidden rounded-2xl md:order-1">
+        <Image
+          src={Aro}
+          alt="Aro y componentes de refacción fabricados por Triaso"
+          class="w-full h-full object-cover aspect-[4/3]"
+        />
+      </div>
+    </div>
 
-          <div class="w-72 h-0.5 bg-[#CA1C1C]"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div class="flex flex-col gap-4">
+        <h2 class="font-bold text-2xl lg:text-3xl text-grisT">
+          En cualquier momento,<br class="hidden lg:block" /> en cualquier lugar.
+        </h2>
 
-          <div class="lg:w-[90%]">
-            <p class="text-sm md:text-base">
-              Garantizamos la respuesta más rápida en refacciones. Nuestro
-              equipo especializado siempre está listo para apoyar a los usuarios
-              de nuestros equipos en cualquier lugar y en cualquier momento. Con
-              una línea directa especializada en refacciones y un eficiente
-              sistema logístico, aseguramos entregas en tiempo récord para que
-              su equipo siga operando sin retrasos.
-            </p>
-          </div>
-        </div>
+        <div class="w-28 lg:w-72 h-0.5 bg-redBg"></div>
 
-        <div>
-          <Image src={business} alt="Spare cabin" class="rounded-2xl" />
-        </div>
+        <p class="text-sm md:text-base text-black leading-relaxed">
+          Garantizamos la respuesta más rápida en refacciones. Nuestro equipo
+          especializado siempre está listo para apoyar a los usuarios de
+          nuestros equipos en cualquier lugar y en cualquier momento. Con una
+          línea directa especializada en refacciones y un eficiente sistema
+          logístico, aseguramos entregas en tiempo récord para que su equipo
+          siga operando sin retrasos.
+        </p>
+      </div>
+
+      <div class="w-full overflow-hidden rounded-2xl">
+        <Image
+          src={business}
+          alt="Equipo Triaso operando en planta de asfalto"
+          class="w-full h-full object-cover aspect-[4/3]"
+        />
       </div>
     </div>
   </div>
@@ -118,7 +111,7 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
         slot="right"
         class="flex flex-col justify-center items-center gap-3 text-sm md:text-base"
       >
-        <ul class="list-disc space-y-3">
+        <ul class="list-disc space-y-3 pl-5">
           <li>Atención técnica inmediata de fábrica.</li>
           <li>Técnicos de fábrica para asistencia inmediata.</li>
           <li>Refacciones de entrega inmediata.</li>
@@ -142,7 +135,7 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
             Tome en cuenta todos los equipos y costos detrás de su operación que
             se detienen
           </p>
-          <div class="lg:pl-5">
+          <div class="pl-5">
             <ul class="list-disc space-y-3 text-white text-sm md:text-base">
               <li>Camiones</li>
               <li>Payloaders</li>
@@ -161,12 +154,12 @@ import Tred from "../../../assets/images/AsphaltStorage/redT.webp";
   </div>
 
   <div
-    class="bg-[#383838] w-full text-center flex flex-col pt-5 gap-2 md:gap-4"
+    class="bg-[#383838] w-full text-center flex flex-col pt-5 gap-2 md:gap-4 px-8"
   >
-    <h2 class="text-[#fffaea] font-bold text-lg md:text-3xl">
+    <h2 class="text-[#fffaea] font-bold text-xl md:text-3xl">
       Refacciones de terceros de fácil compra con proveedores en México.
     </h2>
-    <h2 class="text-[#fffaea] font-normal text-lg md:text-3xl">
+    <h2 class="text-[#fffaea] font-normal text-lg md:text-2xl">
       Una broma muy usada por sobre Triaso es que "se pueden comprar en un
       Oxxo".
     </h2>

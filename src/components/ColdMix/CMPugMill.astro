@@ -10,7 +10,6 @@ import PlaMFDscC1 from "../../assets/images/ColdMix/PlaMFDscC1.webp";
 import SmartVideo from "../unitComponents/SmartVideo";
 import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 import DropdownComponent from "../unitComponents/DropdownComponent.astro";
-import Card from "../unitComponents/Card.astro";
 import Slider from "../AsphaltStorage/Slider";
 import ProvBU2 from "../../assets/images/BinUnits/ProvBU2.webp";
 import ProvBU4 from "../../assets/images/BinUnits/ProvBU4.webp";
@@ -19,6 +18,32 @@ import sidePanels from "../../assets/images/SidePanels/TolvasFE.webp";
 import paletas1 from "../../assets/images/ColdMix/pugmill2.webp";
 import paletas2 from "../../assets/images/ColdMix/pugmill3.webp";
 import paletas3 from "../../assets/images/ColdMix/CMG8.webp";
+
+const pugmillCards = [
+  {
+    image: paletas1,
+    title: "Paletas mezcladoras",
+    paragraphs: [
+      "Las paletas de mezclado del pugmill aseguran una mezcla asfáltica uniforme y de alta calidad. Sus paletas de mezcla de hierro fundido son totalmente intercambiables y están diseñadas para una larga durabilidad.",
+      "Fabricadas en materiales de alta resistencia al desgaste, como acero Hardox o hierro fundido, son totalmente intercambiables y aptas para trabajo pesado con agregados abrasivos. Durante la operación se forma una capa protectora interna que reduce el desgaste y prolonga la vida útil del equipo.",
+    ],
+  },
+  {
+    image: paletas2,
+    title: "Ejes sincronizados",
+    paragraphs: [
+      "El pugmill cuenta con dos ejes sincronizados accionados por un sistema de engranes para lograr un mezclado equilibrado y eficiente. Lo que garantiza la correcta incorporación de los materiales y una distribución homogénea de la emulsión asfáltica, evitando acumulaciones.",
+    ],
+  },
+  {
+    image: paletas3,
+    title: "Mantenimiento sencillo",
+    paragraphs: [
+      "Con un mantenimiento sencillo y una construcción robusta, el pugmill ofrece un desempeño de mezclado confiable incluso en condiciones de trabajo exigentes.",
+    ],
+  },
+];
+
 const slides = [
   {
     id: 1,
@@ -98,7 +123,7 @@ const slides = [
           content="Diseñado para optimizar el consumo de energía, reduciendo los costos operativos sin comprometer el rendimiento."
         />
       </div><br />
-      <p class="text-sm md:text-lg font-thin text-grisT text-justify">
+      <p class="text-sm md:text-lg font-thin text-grisT text-justify px-4">
         Estas características convierten nuestros sistemas de dosificación en un
         componente esencial para proyectos que requieren un manejo de materiales
         preciso y eficiente.
@@ -179,379 +204,85 @@ const slides = [
     </div>
   </div>
 
-  <!-- cards -->
-  <div class="max-w-7xl mx-auto px-8">
-    <div
-      class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between items-start font-bold mt-6"
-    >
-      <Card className="p-4 rounded-2xl w-full bg-white" contentClass="w-full">
-        <div class="w-full h-[250px] overflow-hidden rounded-xl">
-          <Image
-            src={paletas1}
-            alt="Cold mix plant with a plugmill mixer"
-            width={600}
-            height={400}
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <details class="group">
-          <summary
-            class="flex flex-row items-center justify-between cursor-pointer list-none"
-          >
-            <h2 class="text-lg md:text-xl">Paletas mezcladoras</h2>
-            <svg
-              class="group-open:hidden transition h-[40px] w-[40px] lg:h-[64px] lg:w-[64px]"
-              viewBox="0 0 24 24"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              fill="#000000"
-              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
-                <title>add_circle_fill</title>
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  <g
-                    id="System"
-                    transform="translate(0.000000, -48.000000)"
-                    fill-rule="nonzero"
-                  >
-                    <g
-                      id="add_circle_fill"
-                      transform="translate(0.000000, 48.000000)"
-                    >
-                      <path
-                        d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z"
-                        id="MingCute"
-                        fill-rule="nonzero"
-                      >
-                      </path>
-                      <path
-                        d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M12,7 C11.48715,7 11.0644908,7.38603566 11.0067275,7.8833779 L11,8 L11,11 L8,11 C7.44772,11 7,11.4477 7,12 C7,12.51285 7.38604429,12.9355092 7.88337975,12.9932725 L8,13 L11,13 L11,16 C11,16.5523 11.4477,17 12,17 C12.51285,17 12.9355092,16.613973 12.9932725,16.1166239 L13,16 L13,13 L16,13 C16.5523,13 17,12.5523 17,12 C17,11.48715 16.613973,11.0644908 16.1166239,11.0067275 L16,11 L13,11 L13,8 C13,7.44771 12.5523,7 12,7 Z"
-                        id="形状"
-                        fill="#14437d"
-                      >
-                      </path>
-                    </g>
-                  </g>
-                </g>
-              </g></svg
-            >
-
-            <svg
-              class="hidden group-open:block transition h-[40px] w-[40px] lg:h-[64px] lg:w-[64px]"
-              viewBox="0 0 24 24"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              fill="#000000"
-              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
-                <title>minus_circle_fill</title>
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  <g
-                    id="System"
-                    transform="translate(-864.000000, -48.000000)"
-                    fill-rule="nonzero"
-                  >
-                    <g
-                      id="minus_circle_fill"
-                      transform="translate(864.000000, 48.000000)"
-                    >
-                      <path
-                        d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z"
-                        id="MingCute"
-                        fill-rule="nonzero"
-                      >
-                      </path>
-                      <path
-                        d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M16,11 L8,11 C7.44772,11 7,11.4477 7,12 C7,12.5523 7.44772,13 8,13 L16,13 C16.5523,13 17,12.5523 17,12 C17,11.4477 16.5523,11 16,11 Z"
-                        id="形状"
-                        fill="#14437d"
-                      >
-                      </path>
-                    </g>
-                  </g>
-                </g>
-              </g></svg
-            >
-          </summary>
-          <div class="space-y-5">
-            <p
-              class="text-grisP text-sm font-medium lg:font-semibold lg:text-base md:text-base"
-            >
-              Las paletas de mezclado del pugmill aseguran una mezcla asfáltica
-              uniforme y de alta calidad. Sus paletas de mezcla de hierro
-              fundido son totalmente intercambiables y están diseñadas para una
-              larga durabilidad.
-            </p>
-            <p
-              class="text-grisP text-sm font-medium lg:font-semibold lg:text-base md:text-base"
-            >
-              Fabricadas en materiales de alta resistencia al desgaste, como
-              acero Hardox o hierro fundido, son totalmente intercambiables y
-              aptas para trabajo pesado con agregados abrasivos. Durante la
-              operación se forma una capa protectora interna que reduce el
-              desgaste y prolonga la vida útil del equipo.
-            </p>
-          </div>
-        </details>
-      </Card>
-      <Card className="p-4 rounded-2xl w-full bg-white" contentClass="w-full">
-        <div class="w-full h-[250px] overflow-hidden rounded-xl">
-          <Image
-            src={paletas2}
-            alt="Cold mix plant with a plugmill mixer"
-            width={600}
-            height={400}
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <details class="group">
-          <summary
-            class="flex flex-row items-center justify-between cursor-pointer list-none"
-          >
-            <h2 class="text-lg md:text-xl">Ejes sincronizados</h2>
-            <svg
-              class="group-open:hidden transition h-[40px] w-[40px] lg:h-[64px] lg:w-[64px]"
-              viewBox="0 0 24 24"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              fill="#000000"
-              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
-                <title>add_circle_fill</title>
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  <g
-                    id="System"
-                    transform="translate(0.000000, -48.000000)"
-                    fill-rule="nonzero"
-                  >
-                    <g
-                      id="add_circle_fill"
-                      transform="translate(0.000000, 48.000000)"
-                    >
-                      <path
-                        d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z"
-                        id="MingCute"
-                        fill-rule="nonzero"
-                      >
-                      </path>
-                      <path
-                        d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M12,7 C11.48715,7 11.0644908,7.38603566 11.0067275,7.8833779 L11,8 L11,11 L8,11 C7.44772,11 7,11.4477 7,12 C7,12.51285 7.38604429,12.9355092 7.88337975,12.9932725 L8,13 L11,13 L11,16 C11,16.5523 11.4477,17 12,17 C12.51285,17 12.9355092,16.613973 12.9932725,16.1166239 L13,16 L13,13 L16,13 C16.5523,13 17,12.5523 17,12 C17,11.48715 16.613973,11.0644908 16.1166239,11.0067275 L16,11 L13,11 L13,8 C13,7.44771 12.5523,7 12,7 Z"
-                        id="形状"
-                        fill="#14437d"
-                      >
-                      </path>
-                    </g>
-                  </g>
-                </g>
-              </g></svg
-            >
-
-            <svg
-              class="hidden group-open:block transition h-[40px] w-[40px] lg:h-[64px] lg:w-[64px]"
-              viewBox="0 0 24 24"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              fill="#000000"
-              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
-                <title>minus_circle_fill</title>
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  <g
-                    id="System"
-                    transform="translate(-864.000000, -48.000000)"
-                    fill-rule="nonzero"
-                  >
-                    <g
-                      id="minus_circle_fill"
-                      transform="translate(864.000000, 48.000000)"
-                    >
-                      <path
-                        d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z"
-                        id="MingCute"
-                        fill-rule="nonzero"
-                      >
-                      </path>
-                      <path
-                        d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M16,11 L8,11 C7.44772,11 7,11.4477 7,12 C7,12.5523 7.44772,13 8,13 L16,13 C16.5523,13 17,12.5523 17,12 C17,11.4477 16.5523,11 16,11 Z"
-                        id="形状"
-                        fill="#14437d"
-                      >
-                      </path>
-                    </g>
-                  </g>
-                </g>
-              </g></svg
-            >
-          </summary>
-          <div>
-            <p
-              class="text-grisP text-sm font-medium lg:font-semibold lg:text-base md:text-base"
-            >
-              El pugmill cuenta con dos ejes sincronizados accionados por un
-              sistema de engranes para lograr un mezclado equilibrado y
-              eficiente. Lo que garantiza la correcta incorporación de los
-              materiales y una distribución homogénea de la emulsión asfáltica,
-              evitando acumulaciones.
-            </p>
-          </div>
-        </details>
-      </Card>
-      <Card className="p-4 rounded-2xl w-full bg-white" contentClass="w-full">
-        <div class="w-full h-[250px] overflow-hidden rounded-xl">
-          <Image
-            src={paletas3}
-            alt="Cold mix plant with a plugmill mixer"
-            width={600}
-            height={400}
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <details class="group">
-          <summary
-            class="flex flex-row items-center justify-between cursor-pointer list-none"
-          >
-            <h2 class="text-lg md:text-xl">Mantenimiento sencillo</h2>
-            <svg
-              class="group-open:hidden transition h-[40px] w-[40px] lg:h-[64px] lg:w-[64px]"
-              viewBox="0 0 24 24"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              fill="#000000"
-              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
-                <title>add_circle_fill</title>
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  <g
-                    id="System"
-                    transform="translate(0.000000, -48.000000)"
-                    fill-rule="nonzero"
-                  >
-                    <g
-                      id="add_circle_fill"
-                      transform="translate(0.000000, 48.000000)"
-                    >
-                      <path
-                        d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z"
-                        id="MingCute"
-                        fill-rule="nonzero"
-                      >
-                      </path>
-                      <path
-                        d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M12,7 C11.48715,7 11.0644908,7.38603566 11.0067275,7.8833779 L11,8 L11,11 L8,11 C7.44772,11 7,11.4477 7,12 C7,12.51285 7.38604429,12.9355092 7.88337975,12.9932725 L8,13 L11,13 L11,16 C11,16.5523 11.4477,17 12,17 C12.51285,17 12.9355092,16.613973 12.9932725,16.1166239 L13,16 L13,13 L16,13 C16.5523,13 17,12.5523 17,12 C17,11.48715 16.613973,11.0644908 16.1166239,11.0067275 L16,11 L13,11 L13,8 C13,7.44771 12.5523,7 12,7 Z"
-                        id="形状"
-                        fill="#14437d"
-                      >
-                      </path>
-                    </g>
-                  </g>
-                </g>
-              </g></svg
-            >
-
-            <svg
-              class="hidden group-open:block transition h-[40px] w-[40px] lg:h-[64px] lg:w-[64px]"
-              viewBox="0 0 24 24"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              fill="#000000"
-              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
-                <title>minus_circle_fill</title>
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  <g
-                    id="System"
-                    transform="translate(-864.000000, -48.000000)"
-                    fill-rule="nonzero"
-                  >
-                    <g
-                      id="minus_circle_fill"
-                      transform="translate(864.000000, 48.000000)"
-                    >
-                      <path
-                        d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z"
-                        id="MingCute"
-                        fill-rule="nonzero"
-                      >
-                      </path>
-                      <path
-                        d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M16,11 L8,11 C7.44772,11 7,11.4477 7,12 C7,12.5523 7.44772,13 8,13 L16,13 C16.5523,13 17,12.5523 17,12 C17,11.4477 16.5523,11 16,11 Z"
-                        id="形状"
-                        fill="#14437d"
-                      >
-                      </path>
-                    </g>
-                  </g>
-                </g>
-              </g></svg
-            >
-          </summary>
-          <div>
-            <p
-              class="text-grisP text-sm font-medium lg:font-semibold lg:text-base md:text-base"
-            >
-              Con un mantenimiento sencillo y una construcción robusta, el
-              pugmill ofrece un desempeño de mezclado confiable incluso en
-              condiciones de trabajo exigentes.
-            </p>
-          </div>
-        </details>
-      </Card>
+  <!-- cards: componentes clave del pugmill -->
+  <section class="w-full max-w-7xl mx-auto px-4 md:px-8 mt-6 md:mt-12">
+    <div class="mb-6 md:mb-10">
+      <h2 class="text-xl md:text-3xl text-grisT">
+        Componentes clave del pugmill
+      </h2>
+      <div class="mt-2 h-1 w-16 rounded-full bg-redBg"></div>
     </div>
-  </div>
+
+    <ul
+      class="pugmill-cards flex md:grid md:grid-cols-3 gap-5
+             overflow-x-auto md:overflow-visible
+             snap-x snap-mandatory scroll-smooth
+             -mx-4 px-4 md:mx-0 md:px-0 pb-4 md:pb-0"
+    >
+      {
+        pugmillCards.map((card) => (
+          <li class="snap-center shrink-0 w-[82%] sm:w-[60%] md:w-full list-none">
+            <details class="pugmill-card group h-full bg-white rounded-2xl border border-black/5 shadow-sm transition-shadow duration-300 hover:shadow-lg open:shadow-lg overflow-hidden">
+              <summary class="relative list-none cursor-pointer select-none [&::-webkit-details-marker]:hidden">
+                <div class="relative w-full h-[300px] md:h-[340px] overflow-hidden bg-gray-100">
+                  <Image
+                    src={card.image}
+                    alt={`Pugmill de planta de mezcla en frío — ${card.title}`}
+                    width={600}
+                    height={400}
+                    class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 group-open:scale-105"
+                  />
+
+                  {/* Degradado base (card cerrada) */}
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent transition-opacity duration-300 group-open:opacity-0" />
+
+                  {/* Panel de contenido revelado (dentro de la imagen) */}
+                  <div class="pugmill-panel absolute inset-0 flex flex-col justify-end gap-2 p-4 md:p-5 overflow-y-auto bg-black/80 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-300 group-open:opacity-100 group-open:pointer-events-auto">
+                    <p class="text-sm md:text-base font-bold text-white">
+                      {card.title}
+                    </p>
+                    {card.paragraphs.map((text) => (
+                      <p class="text-xs md:text-sm leading-relaxed text-gray-100">
+                        {text}
+                      </p>
+                    ))}
+                  </div>
+
+                  {/* Barra de título (card cerrada) */}
+                  <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 p-4 md:p-5 transition-opacity duration-300 group-open:opacity-0 group-open:pointer-events-none">
+                    <h3 class="text-base md:text-lg font-bold text-white drop-shadow-md">
+                      {card.title}
+                    </h3>
+                  </div>
+
+                  {/* Botón +/x */}
+                  <span
+                    class="absolute top-3 right-3 shrink-0 grid place-items-center w-9 h-9 rounded-full bg-blueMain text-white shadow-md transition-transform duration-300 group-open:rotate-45"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                    >
+                      <path d="M12 5v14M5 12h14" />
+                    </svg>
+                  </span>
+                </div>
+              </summary>
+            </details>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="md:hidden mt-3 text-center text-xs font-medium text-grisP">
+      Desliza para ver más componentes →
+    </p>
+  </section>
 
   <div
     class="max-w-[2400px] grid grid-cols-1 md:grid-cols-3 justify-center items-center gap-4 mt-10 mb-5 h-full"
@@ -637,3 +368,19 @@ const slides = [
     </div>
   </div>
 </div>
+
+<style>
+  .pugmill-cards,
+  .pugmill-panel {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .pugmill-cards::-webkit-scrollbar,
+  .pugmill-panel::-webkit-scrollbar {
+    display: none;
+  }
+  .pugmill-card > summary::marker,
+  .pugmill-card > summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
