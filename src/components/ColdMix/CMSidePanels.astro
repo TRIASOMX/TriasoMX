@@ -16,26 +16,45 @@ import OSectionBin from "../BinUnits/OSectionBin.astro";
       </div>
 
       <div class="w-full">
-        <h2 class="text-white text-xl md:text-2xl font-bold">
-          Control integrado del flujo de agregados
-        </h2><br />
-        <div class="space-y-5">
-          <p
-            class="text-white text-sm lg:text-lg md:text-lg text-justify font-normal"
+        <div class="dropdown-item">
+          <button
+            type="button"
+            class="dropdown-toggle flex items-center justify-between gap-3 w-full text-left cursor-pointer md:cursor-default md:pointer-events-none"
+            aria-expanded="false"
           >
-            El monitoreo del flujo de agregados en tiempo real —ya sea de forma
-            remota o en campo— brinda a los operadores control total sobre los
-            materiales y los datos de producción mediante el sistema de control
-            central, permitiendo ajustes rápidos y garantizando resultados
-            uniformes en la mezcla en frío.
-          </p>
-          <p
-            class="text-white text-sm lg:text-lg md:text-lg text-justify font-normal"
-          >
-            A la vez, ofrece a supervisores y propietarios una visibilidad
-            completa del flujo de agregados y del desempeño operativo del
-            equipo.
-          </p>
+            <h2 class="text-white text-xl md:text-2xl font-bold">
+              Control integrado del flujo de agregados
+            </h2>
+            <svg
+              class="dropdown-chevron w-4 h-4 shrink-0 text-white transition-transform duration-300 md:hidden"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+          </button>
+          <div class="dropdown-content space-y-5 md:mt-4">
+            <p
+              class="text-white text-sm lg:text-lg md:text-lg text-justify font-normal"
+            >
+              El monitoreo del flujo de agregados en tiempo real —ya sea de forma
+              remota o en campo— brinda a los operadores control total sobre los
+              materiales y los datos de producción mediante el sistema de control
+              central, permitiendo ajustes rápidos y garantizando resultados
+              uniformes en la mezcla en frío.
+            </p>
+            <p
+              class="text-white text-sm lg:text-lg md:text-lg text-justify font-normal"
+            >
+              A la vez, ofrece a supervisores y propietarios una visibilidad
+              completa del flujo de agregados y del desempeño operativo del
+              equipo.
+            </p>
+          </div>
         </div>
 
         <div
@@ -50,22 +69,41 @@ import OSectionBin from "../BinUnits/OSectionBin.astro";
       class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-8 pb-10 items-center"
     >
       <div class="w-full">
-        <h2 class="text-white text-xl md:text-2xl font-bold">
-          Dosificación precisa para resultados confiables
-        </h2><br />
-        <p
-          class="text-white text-sm lg:text-lg md:text-lg text-justify font-normal"
-        >
-          Compuertas ajustables, en tolvas permitiendo un control preciso de la
-          dosificación de agregados. Garantizando mezcla uniforme y controlada,
-          incluso al trabajar con distintos tipos de materiales o
-          granulometrías.
-          <br /><br />
-          Entendemos la importancia de tener control total de la operación, nuestro
-          sistema incluye un modo de operación completamente manual. No dependemos
-          de una configuración totalmente automatizada, la planta puede seguir operando
-          manualmente sin interrumpir la producción.
-        </p>
+        <div class="dropdown-item">
+          <button
+            type="button"
+            class="dropdown-toggle flex items-center justify-between gap-3 w-full text-left cursor-pointer md:cursor-default md:pointer-events-none"
+            aria-expanded="false"
+          >
+            <h2 class="text-white text-xl md:text-2xl font-bold">
+              Dosificación precisa para resultados confiables
+            </h2>
+            <svg
+              class="dropdown-chevron w-4 h-4 shrink-0 text-white transition-transform duration-300 md:hidden"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+          </button>
+          <p
+            class="dropdown-content text-white text-sm lg:text-lg md:text-lg text-justify font-normal md:mt-4"
+          >
+            Compuertas ajustables, en tolvas permitiendo un control preciso de la
+            dosificación de agregados. Garantizando mezcla uniforme y controlada,
+            incluso al trabajar con distintos tipos de materiales o
+            granulometrías.
+            <br /><br />
+            Entendemos la importancia de tener control total de la operación, nuestro
+            sistema incluye un modo de operación completamente manual. No dependemos
+            de una configuración totalmente automatizada, la planta puede seguir operando
+            manualmente sin interrumpir la producción.
+          </p>
+        </div>
       </div>
       <div class="w-full flex py-5 justify-center lg:justify-end">
         <Image
@@ -81,3 +119,42 @@ import OSectionBin from "../BinUnits/OSectionBin.astro";
 
   <CustomBins />
 </div>
+
+<style>
+  @media (max-width: 767px) {
+    .dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin-top: 0;
+      transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        margin-top 0.35s ease;
+    }
+    .dropdown-content.is-open {
+      max-height: 1200px;
+      opacity: 1;
+      margin-top: 0.75rem;
+    }
+    .dropdown-toggle[aria-expanded="true"] .dropdown-chevron {
+      transform: rotate(180deg);
+    }
+  }
+</style>
+
+<script>
+  document
+    .querySelectorAll<HTMLButtonElement>(".dropdown-toggle")
+    .forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const isOpen = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!isOpen));
+
+        const content = btn.parentElement?.querySelector<HTMLElement>(
+          ".dropdown-content",
+        );
+        content?.classList.toggle("is-open", !isOpen);
+      });
+    });
+</script>

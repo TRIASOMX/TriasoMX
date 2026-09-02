@@ -82,19 +82,17 @@ import { Image } from "astro:assets";
   </div>
 
   <!-- Móvil -->
-  <div
-    class="relative flex flex-col px-8 mt-6 mb-4 lg:hidden"
-  >
-    <Image
-      src={Deliver2}
-      alt="Oil heater on a truck"
-      class="rounded-2xl w-[72%] self-end object-contain shadow-xl relative z-10"
-    />
-
+  <div class="relative flex flex-col px-2 mt-6 mb-4 lg:hidden">
     <Image
       src={Deliver3}
       alt="Drum mixer on a truck"
-      class="rounded-2xl w-[72%] self-start -mt-8 object-contain shadow-xl"
+      class="rounded-2xl w-[100%] self-start object-contain shadow-xl relative z-10"
+    />
+
+    <Image
+      src={Deliver2}
+      alt="Oil heater on a truck"
+      class="rounded-2xl w-[72%] self-end -mt-8 object-contain shadow-xl"
     />
   </div>
 </section>

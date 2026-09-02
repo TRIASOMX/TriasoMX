@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import VideoGallery from "../components/unitComponents/VideoGallery.tsx";
+import { videos } from "../assets/data/videosAsphaltData.js";
+---
+
+<Layout title="Asphalt Plant Videos">
+  <section class="w-full flex justify-center">
+    <div class="w-full max-w-7xl pt-24 px-6 md:px-8">
+      <h1 class="text-2xl md:text-4xl font-bold text-grisT">
+        PLANTAS DE ASFALTO — VIDEOS
+      </h1>
+      <p class="mt-4 max-w-3xl text-base md:text-lg text-grisPPP">
+        Recorre nuestra galería de plantas de asfalto en operación: plantas de
+        contraflujo, plantas básicas, plantas de mezclado en frío, silos de
+        almacenamiento y equipos especiales fabricados a lo largo de los años.
+        Cada video muestra un modelo real instalado en obra. Haz clic en
+        cualquier miniatura para reproducirlo.
+      </p>
+    </div>
+  </section>
+  <VideoGallery videos={videos} client:load />
+</Layout>

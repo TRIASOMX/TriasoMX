@@ -1,0 +1,2288 @@
+---
+/**
+ * ConsejosGuide.astro
+ * Guía de compra: "Algunos consejos para comprar una planta de asfalto".
+ * Contenido estático + scrollspy / menú móvil / reveal (vanilla JS).
+ * Tipografía y colores alineados al proyecto (font-sans + variables de marca).
+ */
+
+type Node = string | { t: string; sub?: Node[] };
+
+interface TechCol {
+  h: string;
+  items: string[];
+}
+
+interface Section {
+  id: string;
+  pid: string;
+  part: string;
+  short: string;
+  title: string;
+  icon: string;
+  intros: string[];
+  evaluarH: string;
+  evaluarTag?: string;
+  evaluarBlue?: boolean;
+  checks: Node[];
+  note?: { h: string; checks: Node[] };
+  riskTitle?: string;
+  riskSub?: string;
+  risk?: Node[];
+  okLead?: string;
+  ok?: Node[];
+  quote?: { text: string; cite: string };
+  tech?: { tag: string; cols: TechCol[] };
+}
+
+const ICO = {
+  tag: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>',
+  warn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.7 17.5A1.8 1.8 0 0 0 4.3 20h15.4a1.8 1.8 0 0 0 1.6-2.5L13.7 3.8a1.9 1.9 0 0 0-3.4 0z"/><path d="M12 9v4M12 16.3v.2"/></svg>',
+  shield:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+  x: '<svg class="tg-mk tg-mk-x" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10" cy="10" r="8"/><path d="M7 7l6 6M13 7l-6 6"/></svg>',
+  c: '<svg class="tg-mk tg-mk-c" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><path d="M6.4 10.2l2.3 2.3 4.9-5.1"/></svg>',
+};
+
+function esc(s: string): string {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function renderPlain(nodes: Node[]): string {
+  return (
+    "<ul>" +
+    nodes
+      .map((n) =>
+        typeof n === "string"
+          ? `<li>${esc(n)}</li>`
+          : `<li>${esc(n.t)}${n.sub ? renderPlain(n.sub) : ""}</li>`,
+      )
+      .join("") +
+    "</ul>"
+  );
+}
+
+function renderChecks(nodes: Node[]): string {
+  return (
+    '<ul class="tg-checks">' +
+    nodes
+      .map((n) =>
+        typeof n === "string"
+          ? `<li>${esc(n)}</li>`
+          : `<li>${esc(n.t)}${n.sub ? renderPlain(n.sub) : ""}</li>`,
+      )
+      .join("") +
+    "</ul>"
+  );
+}
+
+function renderItems(nodes: Node[], kind: "x" | "c"): string {
+  const mk = kind === "x" ? ICO.x : ICO.c;
+  return (
+    '<ul class="tg-items">' +
+    nodes
+      .map((n) => {
+        const t = typeof n === "string" ? n : n.t;
+        const sub = typeof n !== "string" && n.sub ? renderPlain(n.sub) : "";
+        return `<li>${mk}${esc(t)}${sub}</li>`;
+      })
+      .join("") +
+    "</ul>"
+  );
+}
+
+function card(
+  kind: "risk" | "ok",
+  title: string,
+  sub: string,
+  lead: string | undefined,
+  nodes: Node[],
+): string {
+  const badge = kind === "risk" ? ICO.warn : ICO.shield;
+  return `<div class="tg-card tg-card--${kind}">
+    <div class="tg-card__head"><span class="tg-badge">${badge}</span>
+      <div><h4>${esc(title)}</h4><span class="tg-sub">${esc(sub)}</span></div></div>
+    <div class="tg-card__body">${lead ? `<p class="tg-card__lead">${esc(lead)}</p>` : ""}${renderItems(nodes, kind === "risk" ? "x" : "c")}</div>
+  </div>`;
+}
+
+const parts = [
+  {
+    id: "part-1",
+    num: "PARTE 01",
+    title: "Tiempos muertos",
+    blurb: [
+      "La operación de muchos equipos depende de la confiabilidad de su planta de asfalto.",
+      "En plantas de asfalto el tiempo muerto causa mayores costos que el precio del equipo.",
+    ],
+  },
+  {
+    id: "part-2",
+    num: "PARTE 02",
+    title: "Costos a largo plazo",
+    blurb: [] as string[],
+  },
+  {
+    id: "part-3",
+    num: "PARTE 03",
+    title: "Antes de cerrar la compra",
+    blurb: [
+      "Una decisión de esta magnitud no debe tomarse solo con base en lo que dice el vendedor.",
+      "Antes de firmar, verifique cada afirmación y respáldese de criterio técnico independiente.",
+    ],
+  },
+];
+
+const RISK_TITLE = "Considere si le están ofreciendo";
+const RISK_SUB = "Lo que ofrecen otros";
+const OK_TITLE = "Nuestro respaldo";
+const OK_SUB = "La diferencia Triaso";
+
+const sections: Section[] = [
+  {
+    id: "s11",
+    pid: "part-1",
+    part: "Tiempos muertos",
+    short: "Soporte de fábrica",
+    title: "Soporte y atención directa de fábrica",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><path d="M4 13a2 2 0 0 1 2-2h1v6H6a2 2 0 0 1-2-2zM20 13a2 2 0 0 0-2-2h-1v6h1a2 2 0 0 0 2-2z"/><path d="M18 17v1a3 3 0 0 1-3 3h-3"/></svg>',
+    intros: [
+      "Contar con respaldo directo del fabricante marca la diferencia en la operación diaria y en la solución de cualquier situación técnica. La cercanía y la atención directa reducen los costosos tiempos muertos y dan mayor seguridad en la inversión.",
+    ],
+    evaluarH:
+      "Considerar el personal del cual dependerá para la asistencia de su mantenimiento o servicio.",
+    checks: [
+      {
+        t: "Disponibilidad inmediata de técnicos de fábrica para mantenimientos y servicios directamente de fábrica.",
+        sub: [
+          "La atención técnica inmediata de fábrica es uno de los aspectos más importantes al momento de elegir un equipo.",
+        ],
+      },
+      {
+        t: "Conocimiento real del técnico sobre el equipo que le dará servicio.",
+        sub: [
+          "La presencia de un técnico en la fabricación del equipo es primordial para un buen servicio y capacitación.",
+        ],
+      },
+      {
+        t: "El idioma de los técnicos",
+        sub: [
+          "La capacidad para comunicarse claramente con su personal y operadores es un factor clave.",
+        ],
+      },
+      "Soporte postventa de fábrica continuo, cercano e inmediato.",
+      "Nivel de automatización y facilidad del sistema de control.",
+    ],
+    risk: [
+      {
+        t: "Dependencia de técnicos, distribuidores intermediarios y demoras por agenda.",
+        sub: [
+          "Personal “capacitado” de un distribuidor que no conocen bien los equipos, no estuvieron en su fabricación; se basan directamente en el manual.",
+        ],
+      },
+    ],
+    ok: [
+      "Soporte postventa de fábrica continuo, cercano e inmediato de nuestros técnicos que estuvieron presentes durante la fabricación de los equipos y conocen perfectamente cada componente.",
+      "Todos nuestros operadores y técnicos están completamente capacitados y participaron directamente en la producción de la planta de asfalto.",
+    ],
+  },
+  {
+    id: "s12",
+    pid: "part-1",
+    part: "Tiempos muertos",
+    short: "Refacciones",
+    title: "Refacciones de entrega inmediata.",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9"/></svg>',
+    intros: [
+      "Contar con refacciones disponibles directamente de fábrica es fundamental para mantener la continuidad de operación de una planta de asfalto.",
+      "La disponibilidad inmediata de componentes reduce tiempos muertos y evita paros prolongados que pueden generar pérdidas importantes.",
+      "La operación de muchos otros equipos depende de la confiabilidad de su planta de asfalto.",
+    ],
+    evaluarH: "Considerar la disponibilidad inmediata de refacciones",
+    checks: [
+      "Disponibilidad inmediata de refacciones de mantenimiento o reparación",
+      "De dónde provendrán las refacciones.",
+      "Cuánto tiempo tardarán en estar disponibles.",
+      "Costo de envío o de importación.",
+      "Tenga en cuenta el tiempo de fabricación y envío de refacciones especiales que generalmente no se tienen en stock.",
+      "Inventario de refacciones para disponibilidad inmediata.",
+      "Refacciones que solo se consiguen a través de terceros o subcontratistas, sin acceso directo al fabricante.",
+      "Disponibilidad local de refacciones y componentes críticos.",
+    ],
+    risk: [
+      "Refacciones importadas con tiempos de entrega largos, de hasta varias semanas.",
+      "Componentes que deben pedirse al extranjero cada vez que se requiere un reemplazo.",
+      "Distribuidores que no cuentan con inventario real y dependen de pedidos a terceros.",
+    ],
+    ok: [
+      "En Triaso, muchas de las refacciones son fabricadas en México, lo que permite mantener inventario disponible y responder con rapidez.",
+      "Contamos con stock cercano y soporte técnico inmediato, lo que reduce los tiempos de espera y permite mantener la planta operando con mayor continuidad.",
+      "Refacciones propias fabricadas en México.",
+      "Refacciones de terceros de fácil compra con proveedores en México.",
+    ],
+  },
+  {
+    id: "s13",
+    pid: "part-1",
+    part: "Tiempos muertos",
+    short: "Independencia operativa",
+    title: "Independencia operativa",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>',
+    intros: [
+      "La independencia operativa es un factor importante para asegurar la continuidad de producción de una planta de asfalto. Cuando los equipos dependen de componentes propietarios o refacciones difíciles de conseguir, cualquier falla puede detener la operación durante largos periodos.",
+    ],
+    evaluarH:
+      "Considerar la Independencia operativa y la disponibilidad de componentes industriales",
+    checks: [
+      "Corrobore siempre si los motores, componentes eléctricos y refacciones pueden conseguirse fácilmente en el mercado o si dependen exclusivamente del fabricante.",
+      "Si la programación es abierta y modificable localmente.",
+      "Si las tarjetas y componentes son universales o propietarios.",
+    ],
+    risk: [
+      "Motores y componentes que solo pueden adquirirse directamente con el fabricante.",
+      {
+        t: "Sistemas con programación cerrada que solo el proveedor puede modificar.",
+        sub: ["Tarjetas propias, cerradas y únicamente soportadas por ellos."],
+      },
+      {
+        t: "Refacciones y componentes propietarios difíciles de conseguir localmente.",
+        sub: [
+          "Los equipos dependen completamente de refacciones y mantenimiento del fabricante.",
+        ],
+      },
+      "Dependencia total de un distribuidor o fabricante para cualquier reparación.",
+    ],
+    ok: [
+      {
+        t: "En Triaso diseñamos nuestros equipos con componentes industriales ampliamente disponibles, lo que permite que los motores, refacciones y componentes eléctricos puedan conseguirse en muchas ciudades.",
+        sub: [
+          "Esto permite que el cliente pueda adquirir componentes por su cuenta, mantener su equipo operando con mayor autonomía y reducir el riesgo de detener la producción por falta de refacciones.",
+        ],
+      },
+      {
+        t: "Tarjetas y componentes universales",
+        sub: [
+          "PLC, contactores, disyuntores, botoneras, sobrecargas de control; marca Siemens.",
+          "Botoneras, conexiones de borne; marca Eaton.",
+          "Arneses, conexiones rápidas; marca Weidmüller.",
+          "Motores eléctricos; marca WEG",
+        ],
+      },
+      "Programación abierta y modificable localmente.",
+      "El cliente no queda encadenado al proveedor de una marca extranjera.",
+      {
+        t: "Sistema redundante para operación manual y automática cuando se requiera.",
+        sub: [
+          "Operación manual siempre disponible en caso de la falla de cualquier componente eléctrico.",
+        ],
+      },
+    ],
+    quote: {
+      text: "Una broma muy usada sobre Triaso es que “se pueden comprar en un Oxxo”.",
+      cite: "Componentes universales, fáciles de conseguir",
+    },
+  },
+  {
+    id: "s14",
+    pid: "part-1",
+    part: "Tiempos muertos",
+    short: "Mantenimientos",
+    title: "Mantenimientos",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5a3.5 3.5 0 0 0-4.6 4.4l-6 6 1.8 1.8 6-6a3.5 3.5 0 0 0 4.4-4.6l-2 2-1.8-1.8z"/></svg>',
+    intros: [
+      "Contar con servicio directo de fábrica, que ofrece diagnósticos correctos y procesos administrativos sencillos para tiempos de respuesta rápidos.",
+    ],
+    evaluarH:
+      "Considerar la disponibilidad real de mantenimientos por fábrica y facilidad de mantenimientos independientes",
+    checks: [
+      {
+        t: "Técnicos desde fábrica",
+        sub: [
+          "Disponibilidad inmediata de técnicos desde fábrica",
+          "Trato directo con ingenieros y técnicos, sin intermediarios.",
+          "Depender de intermediarios, diagnósticos incorrectos o procesos administrativos complejos, los tiempos de reparación pueden prolongarse innecesariamente.",
+        ],
+      },
+      {
+        t: "Mantenimientos fáciles de realizar por su personal",
+        sub: [
+          "Accesos seguros a rodillos de carga, aros, quemador y casa de bolsas.",
+          "Tiempo corto de mantenimiento",
+        ],
+      },
+      {
+        t: "Técnicos independientes que estén familiarizados con el mantenimiento del equipo",
+        sub: [
+          "Dependencia de técnicos, distribuidores intermediarios y demoras por agenda",
+          "Soporte postventa de fábrica continuo, cercano e inmediato.",
+        ],
+      },
+    ],
+    risk: [
+      "Técnicos desde fábrica, no de distribuidores que no participaron en la fabricación del equipo y dependen únicamente del manual.",
+      "Si dependerá de técnicos extranjeros para diagnósticos o reparaciones complejas.",
+      "Procesos de servicio lentos por estructuras corporativas con muchos departamentos.",
+      "Periodos prolongados con la planta detenida mientras se determina la causa del problema o se espera asistencia especializada.",
+      "Técnicos independientes en México que realmente conozcan a fondo los equipos extranjeros.",
+      {
+        t: "El idioma de los técnicos",
+        sub: [
+          "Técnicos extranjeros, que están a días de distancia, es raro que hablen español y desconozcan la forma local de trabajar.",
+        ],
+      },
+    ],
+    okLead:
+      "En Triaso el mantenimiento se realiza con personal que conoce a fondo el equipo y sus condiciones reales de trabajo.",
+    ok: [
+      "Trato directo con ingenieros y técnicos, sin intermediarios.",
+      "Diagnóstico más rápido y preciso gracias al conocimiento del equipo.",
+      "Procesos de servicio ágiles, sin burocracia ni cadenas largas de autorización.",
+      "Amplia red de técnicos y especialistas familiarizados con estas plantas en México.",
+    ],
+  },
+  {
+    id: "s21",
+    pid: "part-2",
+    part: "Costos a largo plazo",
+    short: "Producción continua",
+    title: "Producción continua sin costosas fallas imprevistas",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l2.5-7 4 14 3-9 1.5 2H21"/></svg>',
+    intros: [
+      "En plantas de asfalto el tiempo muerto causa mayores costos que el precio del equipo, por eso debe analizar la producción continua sin fallas y/o paros imprevistos costosos.",
+    ],
+    evaluarH:
+      "Considerar los costos, retrasos y la logística detrás de la dependencia de su planta de asfalto.",
+    checks: [
+      {
+        t: "Todos los equipos y costos detrás de su operación que se detienen",
+        sub: [
+          "Camiones",
+          "Payloaders",
+          "Penalizaciones por incumplimiento de obra o entregas",
+          "Arranques y paros",
+        ],
+      },
+      {
+        t: "Costosas horas hombre ineficaces por incumplimiento",
+        sub: ["Jornales de trabajo", "Personal indirecto"],
+      },
+      {
+        t: "Insatisfacción de su cliente por retrasos en la producción",
+        sub: [
+          "Clientes molestos por incumplimiento en la producción acordada para su proyecto",
+        ],
+      },
+    ],
+    risk: [
+      "Equipos diseñados para jornadas largas ni producción continua.",
+      "Respuesta técnica rápida para no prolongar cada paro.",
+      {
+        t: "Equipos operando en México en condiciones reales que pueda ir a ver, con años de operación.",
+        sub: [
+          "¿La planta que le ofrecen tiene plantas trabajando en México que usted pueda visitar y lleva muchos años en operación, o solo referencias de otros países?",
+        ],
+      },
+      "No depender totalmente de componentes electrónicos sin posibilidad de operación manual.",
+    ],
+    ok: [
+      {
+        t: "Plantas diseñadas para trabajo pesado y producción continua.",
+        sub: [
+          "Componentes de alta resistencia para largas jornadas de operación.",
+          "Diseños enfocados en durabilidad, simplicidad y fácil mantenimiento.",
+          "Menor riesgo de detener camiones, personal y producción por fallas inesperadas.",
+        ],
+      },
+      {
+        t: "Técnicos de fábrica disponibles de forma inmediata; por eso nuestros técnicos viajan el mismo día.",
+        sub: ["Refacciones y asistencia técnica directa de fábrica."],
+      },
+      {
+        t: "Decenas de plantas Triaso tienen hasta más de 20 años trabajando muy productivamente.",
+        sub: [
+          "Una frase muy usada por los clientes de Triaso es “son burritos de trabajo”.",
+          "Equipos Triaso operando en México en condiciones reales que puede ir a ver, con años de operación comprobada.",
+        ],
+      },
+      {
+        t: "Operación manual inmediata en cualquier momento",
+        sub: [
+          "Asegurando la continuidad de producción cuando las condiciones de operación lo requieran.",
+          "Produciendo mezcla asfáltica, incluso si algún componente electrónico necesita reemplazo.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "s22",
+    pid: "part-2",
+    part: "Costos a largo plazo",
+    short: "Producción a largo plazo",
+    title: "Producción a largo plazo",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>',
+    intros: [
+      "En un lapso de 5 años, las plantas Triaso resultan 30–40% más económicas de operar que cualquier otra marca, y en 10 años aún más.",
+    ],
+    evaluarH:
+      "Considere los costos de producción por el tiempo mensual que su equipo producirá",
+    checks: [
+      "Costo total de operación por tonelada, más allá del precio de compra.",
+      {
+        t: "Capacidad real de producción (no solo nominal).",
+        sub: [
+          "Producción garantizada a determinada humedad de agregados.",
+          "Producción continua sin paros por temperatura o saturación del filtro.",
+        ],
+      },
+      {
+        t: "Consumos",
+        sub: [
+          "Consumo eléctrico total instalado (kW).",
+          "Costo por tonelada considerando diésel o gas más electricidad.",
+          "Costo de combustible por tonelada",
+        ],
+      },
+    ],
+    risk: [
+      "Equipos limitados a un solo combustible, sin opción de usar alternos.",
+      "Sistemas sin precalentador, o sin filtros en él, que provocan obstrucciones en tuberías y boquillas de atomización",
+      {
+        t: "Diseñados para alto rendimiento",
+        sub: [
+          "Tambores con aislante de baja eficiencia que pierden calor durante la operación.",
+          "Tambores sin sellado adecuado, con entradas de aire frío que incrementan el consumo de combustible.",
+          "Quemadores ineficientes que elevan el costo por tonelada.",
+          "Diseño genérico de álabes, sin optimización por sección del tambor.",
+        ],
+      },
+      {
+        t: "Consumos eléctricos",
+        sub: [
+          "Motores extra-dimensionados que elevan el consumo eléctrico innecesariamente.",
+          "Sistemas sin variadores de frecuencia, que operan a potencia fija incluso en producciones de menor demanda.",
+        ],
+      },
+    ],
+    ok: [
+      {
+        t: "Plantas diseñadas para producir con cualquier combustible.",
+        sub: [
+          "Combustibles alternos, diésel y gas",
+          "Precalentador incluido para incorporar cualquier tipo de combustible.",
+          "Filtros en precalentadores para prevenir obstrucciones de sistema de tuberías y boquilla de atomización",
+        ],
+      },
+      {
+        t: "Diseñadas para máximo rendimiento de combustible",
+        sub: [
+          "Aislante de alta eficiencia en tambor mezclador",
+          "Tambor completamente sellado para evitar entradas de aire frío que aumentan el consumo.",
+          "Quemadores de aire total",
+          "Álabes de volteo con diseño optimizado para cada sección del tambor.",
+        ],
+      },
+      {
+        t: "Motores y componentes seleccionados para cada función:",
+        sub: [
+          "Potencia ajustada para economizar energía sin comprometer el rendimiento.",
+          "Variadores de frecuencia para ajuste de potencia para producciones de menor demanda.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "s23",
+    pid: "part-2",
+    part: "Costos a largo plazo",
+    short: "Calidad de componentes",
+    title: "Calidad de los componentes",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+    intros: [
+      "La calidad de los componentes es un factor clave en el desempeño y la durabilidad de la planta.",
+    ],
+    evaluarH: "Analizar los componentes eléctricos que ofrece la planta",
+    checks: [
+      "Es fundamental analizar los componentes eléctricos que integra el equipo, así como la marca y su nivel de confiabilidad.",
+      "Esto permite estimar con mayor precisión la frecuencia de reemplazo, la disponibilidad de refacciones y el costo real de mantenimiento a lo largo del tiempo.",
+    ],
+    note: {
+      h: "Robustez de los materiales",
+      checks: [
+        {
+          t: "La calidad de los materiales marca la diferencia entre una planta eficiente y duradera o una marca ineficiente y desechable.",
+          sub: [
+            {
+              t: "Certificación de aceros:",
+              sub: [
+                "Muchos fabricantes compran su acero en China o localmente sin certificaciones.",
+                "Nuestro acero tiene grabado del fabricante mexicano y de la calidad de la colada y rolados en frío.",
+              ],
+            },
+            "Espesor del tambor",
+            {
+              t: "Un tambor más grueso no solo dura más, sino que retiene mejor el calor.",
+              sub: [
+                "Para economizar la producción algunos fabricantes reducen el espesor del acero.",
+                "Un tambor más grueso no solo dura más, sino que retiene mejor el calor.",
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    id: "s24",
+    pid: "part-2",
+    part: "Costos a largo plazo",
+    short: "Ecología del equipo",
+    title: "Ecología del equipo",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4s-9-1-13 6c-2 3.5-1 8-1 8s4.5 1 8-1c7-4 6-13 6-13z"/><path d="M5 19c4-5 8-8 12-9"/></svg>',
+    intros: [
+      "Una planta de asfalto contaminante no solo afecta al medio ambiente, limita dónde puede operar, eleva sus costos y la expone a sanciones. La eficiencia ecológica del equipo es un factor que impacta directamente la viabilidad y rentabilidad de su operación.",
+    ],
+    evaluarH:
+      "Considere si su equipo será ecológico y la contaminación que puede generar:",
+    checks: [
+      {
+        t: "Zonas en las que el equipo podrá legalmente operar.",
+        sub: ["No podrá trabajar cerca de zonas urbanas o de pueblos rurales."],
+      },
+      "Riesgo de multas de la SEMARNAT por operar una planta contaminante.",
+      {
+        t: "Consumos y costos de operación extremadamente altos:",
+        sub: [
+          "Un equipo que contamina mucho tiende a consumir combustible en exceso.",
+          "Altos costos de operación de la fosa de lodos.",
+          "Eficiencia del sistema de filtrado (casa de bolsas) y captura de finos.",
+        ],
+      },
+    ],
+    risk: [
+      {
+        t: "Una planta de flujo paralelo presentada como apta para cualquier zona, cuando por sus emisiones está pensada para zonas rurales.",
+        sub: [
+          "Una planta sin orientación clara sobre el modelo adecuado para el entorno de su obra.",
+          "Plantas que solo pueden operar en zonas rurales, lejos de su mercado o de la obra.",
+        ],
+      },
+      {
+        t: "Sistemas de filtrado deficientes, con captura de finos limitada.",
+        sub: [
+          "Bolsas de baja resistencia a temperatura, que se deterioran rápido y reducen la eficiencia del filtro.",
+        ],
+      },
+      "Equipos sin precalentador ni quemador eficiente, que aumentan el consumo de combustible y las emisiones.",
+      "Diseños que dependen de fosas de lodos costosas de operar y mantener.",
+    ],
+    ok: [
+      {
+        t: "Asesoría honesta para elegir el modelo correcto según el entorno de su obra:",
+        sub: [
+          "Flujo paralelo para zonas rurales, donde se aprovecha su eficiencia productiva.",
+          "Contraflujo para zonas urbanas o cercanas a poblaciones, donde se requieren menores emisiones.",
+        ],
+      },
+      "Sistema de filtrado de casa de bolsas con alta eficiencia de 8:1 en la captura de finos.",
+      "Quemador y precalentador diseñados para combustión eficiente y bajo consumo.",
+      {
+        t: "Plantas de contraflujo que cumplen con las normativas ambientales para reducir el riesgo de sanciones.",
+        sub: ["NOM-043-SEMARNAT-1993", "NOM-085-SEMARNAT-2011"],
+      },
+      "Operación más limpia que protege su inversión y la relación con su entorno.",
+      {
+        t: "Equipos adicionales para cualquier requerimiento del tipo de obra. Los requerimientos de la obra determinarán qué tipo de equipo necesita para poder satisfacer las necesidades de su cliente o contrato.",
+        sub: [
+          "Carpeta asfáltica recuperada (RAP).",
+          "Hule de llanta.",
+          "Polímeros.",
+        ],
+      },
+    ],
+    tech: {
+      tag: "Tecnologías a considerar según su zona de operación",
+      cols: [
+        {
+          h: "Flujo paralelo",
+          items: [
+            "Fosa de lodos.",
+            "Posibles multas por la SEMARNAT.",
+            "Operación exclusivamente en zonas rurales; no se puede operar cerca de zonas urbanas o pueblos.",
+          ],
+        },
+        {
+          h: "Contraflujo",
+          items: [
+            "Sistema de filtrado (casa de bolsas) y eficiencia de captura de finos.",
+            "Tipo de bolsas y capacidad de temperatura.",
+            "Uniformidad en el retorno de finos.",
+            "Incorporación de carpeta asfáltica recuperada (RAP) en su mezcla, hasta 50%.",
+            "Operación en donde sea, incluso en un parque.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    id: "s25",
+    pid: "part-2",
+    part: "Costos a largo plazo",
+    short: "Movilidad e instalación",
+    title: "Movilidad, portabilidad e instalación",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg>',
+    intros: [
+      "El tiempo para echar a andar una planta de asfalto es indispensable para determinar qué tanto se moverá por año y su rapidez de instalación. Una planta lenta de mover o instalar limita la cantidad de obras que puede atender y eleva sus costos logísticos.",
+    ],
+    evaluarH: "Considere la movilidad y facilidad de instalación de su equipo:",
+    checks: [
+      "Facilidad de transporte.",
+      "Tiempo de instalación.",
+      "Equipos necesarios para la instalación.",
+      "Cantidad de obras que podrá atender al año según los tiempos de traslado y montaje.",
+    ],
+    risk: [
+      "Plantas con diseños complejos que requieren tiempos prolongados de montaje y desmontaje.",
+      "Equipos que dependen de grúas especiales o maquinaria costosa para su instalación.",
+      "Configuraciones poco prácticas para el traslado, con muchas piezas sueltas o de difícil manejo.",
+      "Sistemas que exigen personal altamente especializado solo para el montaje.",
+      "Tiempos de instalación que retrasan el inicio de obra y reducen la rentabilidad por proyecto.",
+    ],
+    ok: [
+      {
+        t: "Plantas diseñadas para facilitar el transporte y el montaje en obra.",
+        sub: [
+          "Quinta rueda integrada a los equipos",
+          "Muelles de suspensión para transporte sin problema",
+          "Chasis con alta distancia sobre el suelo",
+          "Patines de ajuste de altura para acoplar el tractocamión",
+          "Patas para fijación estacionaria del equipo",
+        ],
+      },
+      "Transporte seguro del equipo en terrenos, calles y carreteras con baches y desniveles, muy comunes en México, evitando daños a los componentes inferiores.",
+      "Tiempos de instalación pensados para que la planta entre en producción cuanto antes.",
+      "Configuraciones que permiten mover el equipo con los recursos comunes de obra, sin maquinaria especializada.",
+      "Soporte directo de fábrica durante el montaje y la puesta en marcha.",
+      "Mayor capacidad de atender más obras al año gracias a una movilidad eficiente.",
+    ],
+  },
+  {
+    id: "s26",
+    pid: "part-2",
+    part: "Costos a largo plazo",
+    short: "Requerimientos de laboratorio",
+    title: "Requerimientos de laboratorio",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/></svg>',
+    intros: [
+      "Una planta debe poder replicar fielmente el diseño de mezcla definido en laboratorio y sostener esa misma calidad durante toda la jornada. Si la dosificación es imprecisa o variable, la mezcla no cumplirá con las especificaciones de su cliente y la calidad de la obra se verá comprometida.",
+    ],
+    evaluarH:
+      "Considere la facilidad de replicar el diseño de mezcla y mantener una producción homogénea:",
+    checks: [
+      "Cumplimiento con las normas de dosificación.",
+      "Precisión en la dosificación de asfalto desde el tanque.",
+      "Precisión en la dosificación de agregados desde las tolvas.",
+      "Repetibilidad de la mezcla a lo largo de toda la jornada de producción.",
+    ],
+    risk: [
+      "Sistemas de dosificación imprecisos que dificultan replicar el diseño de mezcla de laboratorio.",
+      "Equipos con variaciones de dosificación a lo largo de la jornada, que comprometen la homogeneidad del producto.",
+      "Controles poco confiables, que obligan a ajustes manuales constantes.",
+      "Plantas sin trazabilidad de la mezcla producida, lo que dificulta cumplir con normativas y auditorías.",
+      "Sistemas cerrados que no permiten ajustar el diseño de mezcla según los requerimientos de cada obra.",
+    ],
+    ok: [
+      "Sistemas de dosificación diseñados para replicar fielmente el diseño de mezcla de laboratorio.",
+      "Control preciso de asfalto desde el tanque y de agregados desde las tolvas.",
+      "Producción homogénea sostenida durante toda la jornada.",
+      "Reportes automáticos por sistema de control Relief TM y por jornada para trazabilidad y cumplimiento de normativas.",
+      {
+        t: "Flexibilidad para ajustar el diseño de mezcla según los requerimientos de cada proyecto",
+        sub: ["Historial de diseños de mezcla para replicarla en clientes."],
+      },
+    ],
+  },
+  {
+    id: "s27",
+    pid: "part-2",
+    part: "Costos a largo plazo",
+    short: "Valor de reventa",
+    title: "Valor de reventa del equipo",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5V4h7.5L21 14.5 14.5 21z"/><circle cx="7.5" cy="7.5" r="1.4"/></svg>',
+    intros: [
+      "La liquidez de un equipo es muy importante. El valor de reventa de una planta después de ciertas horas de producción es un punto importante a revisar antes de comprar, porque define cuánto recupera de su inversión cuando decida renovar o vender.",
+    ],
+    evaluarH:
+      "Considere el valor de reventa que tendrá su equipo en el futuro:",
+    checks: [
+      "Valor de reventa estimado tras determinadas horas de producción.",
+      "Demanda del equipo en el mercado de segunda mano.",
+      "Durabilidad y vida útil real del equipo.",
+      "Disponibilidad de refacciones a largo plazo para sostener el valor del equipo.",
+      "Reputación de la marca entre operadores y compradores como equipo usado.",
+    ],
+    risk: [
+      "Equipos que pierden rápidamente su valor por baja durabilidad o reputación.",
+      "Marcas con poca presencia en el mercado nacional, difíciles de revender localmente.",
+      "Plantas que dependen de refacciones discontinuadas (de temporadas y modelos específicos) o de difícil acceso, lo que reduce su valor de reventa.",
+      "Equipos sin historial comprobable de operación en condiciones reales de trabajo.",
+      "Diseños propietarios que solo conservan valor si el fabricante sigue dando soporte.",
+    ],
+    ok: [
+      "Decenas de plantas Triaso tienen más de 20 años trabajando muy productivamente, lo que sostiene su valor en el mercado de segunda mano.",
+      "Equipos reconocidos en el sector: una frase muy usada por los clientes de Triaso es que “son burritos de trabajo”.",
+      "Durabilidad comprobada y refacciones disponibles a largo plazo, factores que protegen el valor de reventa.",
+      "Componentes industriales universales (Siemens, Eaton, Weidmüller, WEG) que conservan valor y facilitan el mantenimiento al siguiente dueño.",
+      "Equipos operando en México que puede ir a ver, con años de operación que respaldan la inversión.",
+    ],
+  },
+  {
+    id: "s31",
+    pid: "part-3",
+    part: "Antes de cerrar la compra",
+    short: "Antes de cerrar la compra",
+    title: "Recomendaciones para el comprador",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 11l1.5 1.5 3-3M8.5 16l1.5 1.5 3-3"/></svg>',
+    intros: [],
+    evaluarBlue: true,
+    evaluarTag: "Recomendaciones",
+    evaluarH: "Recomendaciones para el comprador:",
+    checks: [
+      "Sea cauteloso con los vendedores: pueden decir cualquier cosa con tal de cerrar una venta.",
+      "Investigue a fondo todo lo que no le respondan de inmediato o que no le parezca lógico.",
+      "Compare las ofertas de cada proveedor que esté considerando.",
+      "Visite al fabricante o proveedor y verifique cada afirmación que le hagan.",
+      "Inclúyanos en su proceso de visita y verificación.",
+      "Asigne estas tareas a un ingeniero con experiencia o a un consultor externo.",
+      "Pida suficientes referencias y verifique que sean legítimas.",
+    ],
+    risk: [
+      "Atención exclusiva a través de un vendedor o distribuidor, sin acceso directo al fabricante.",
+      "Respuestas evasivas o incompletas a preguntas técnicas concretas.",
+      "Resistencia a recibir visitas a la fábrica o a mostrar equipos operando en condiciones reales.",
+      "Referencias difíciles de contactar o de verificar.",
+      "Información comercial sin respaldo técnico ni documental.",
+    ],
+    ok: [
+      "Trato directo con los ingenieros y técnicos, no con el vendedor o distribuidor.",
+      "Apertura total para visitas a fábrica y a plantas operando en México, donde podrá verificar cada afirmación.",
+      "Respuestas técnicas claras y verificables, respaldadas por el personal que fabrica los equipos.",
+      "Referencias reales de clientes con plantas operando, muchas con más de 20 años de producción continua.",
+      "Acompañamiento durante todo su proceso de evaluación, sin presión comercial.",
+    ],
+  },
+];
+---
+
+<div class="tips-guide">
+  <!-- ===== Hero ===== -->
+  <header class="tg-hero">
+    <span class="tg-hero__grid rlf-grid rlf-grid-dark" aria-hidden="true"></span>
+    <span class="tg-hero__glow" aria-hidden="true"></span>
+    <div class="tg-hero__inner">
+      <span class="tg-hero__kicker">Guía de compra · Triaso</span>
+      <h1>Algunos consejos para comprar una planta de asfalto</h1>
+      <p class="tg-hero__lead">
+        La compra de una planta de asfalto es una inversión significativa y
+        constituye la base de un negocio de producción de mezcla asfáltica.
+      </p>
+      <p class="tg-hero__criterio">Compre con criterio.</p>
+      <nav class="tg-hero__meta">
+        {
+          parts.map((pt, i) => (
+            <a href={`#${pt.id}`} class="tg-partbtn">
+              <span class="tg-partbtn__n">{String(i + 1).padStart(2, "0")}</span>
+              <span class="tg-partbtn__t">{pt.title}</span>
+              <svg
+                class="tg-partbtn__a"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Barra móvil ===== -->
+  <div class="tg-mobilebar">
+    <div class="tg-mobilebar__row">
+      <div class="tg-mobilebar__cur">
+        <span class="tg-k">Guía de compra</span>
+        <span class="tg-t">Algunos consejos</span>
+      </div>
+      <button class="tg-mobilebar__btn" type="button" aria-label="Abrir índice">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg
+        >
+        Secciones
+      </button>
+    </div>
+  </div>
+
+  <div class="tg-shell">
+    <!-- ===== TOC escritorio ===== -->
+    <aside class="tg-toc">
+      <div class="tg-toc__label">En esta guía</div>
+      <nav>
+        {
+          parts.map((pt) => (
+            <>
+              <a class="tg-toc__part" href={`#${pt.id}`}>
+                {pt.title}
+              </a>
+              {sections
+                .filter((s) => s.pid === pt.id)
+                .map((s) => (
+                  <a class="tg-toc__link" href={`#${s.id}`}>
+                    {s.title}
+                  </a>
+                ))}
+            </>
+          ))
+        }
+      </nav>
+    </aside>
+
+    <!-- ===== Contenido ===== -->
+    <main class="tg-content">
+      {
+        parts.map((pt) => (
+          <div class="tg-part" id={pt.id}>
+            <div class="tg-part__head">
+              <span class="tg-part__num">{pt.num}</span>
+              <h2 class="tg-part__title">{pt.title}</h2>
+              {pt.blurb.length > 0 && (
+                <p class="tg-part__blurb">
+                  {pt.blurb.map((b) => (
+                    <span>{b}</span>
+                  ))}
+                </p>
+              )}
+            </div>
+
+            {sections
+              .filter((s) => s.pid === pt.id)
+              .map((s) => (
+                <section
+                  class="tg-sec"
+                  id={s.id}
+                  data-part={s.part}
+                  data-short={s.short}
+                  data-title={s.title}
+                >
+                  <div class="tg-sec__head">
+                    <div class="tg-sec__icon" set:html={s.icon} />
+                    <div class="tg-sec__titles">
+                      <div class="tg-sec__kicker">{s.part}</div>
+                      <h2 class="tg-sec__title">{s.title}</h2>
+                    </div>
+                  </div>
+
+                  {s.intros.map((p) => (
+                    <p class="tg-sec__intro">{p}</p>
+                  ))}
+
+                  <div
+                    class={`tg-evaluar tg-reveal${s.evaluarBlue ? " tg-evaluar--blue" : ""}`}
+                  >
+                    <div
+                      class="tg-evaluar__tag"
+                      set:html={ICO.tag + esc(s.evaluarTag ?? "Qué evaluar")}
+                    />
+                    <div class="tg-evaluar__h">{s.evaluarH}</div>
+                    <Fragment set:html={renderChecks(s.checks)} />
+                  </div>
+
+                  {s.note && (
+                    <div class="tg-noteblock tg-reveal">
+                      <h4>{s.note.h}</h4>
+                      <Fragment set:html={renderChecks(s.note.checks)} />
+                    </div>
+                  )}
+
+                  {(s.risk || s.ok) && (
+                    <div
+                      class="tg-cmp tg-reveal"
+                      set:html={
+                        (s.risk
+                          ? card(
+                              "risk",
+                              s.riskTitle ?? RISK_TITLE,
+                              s.riskSub ?? RISK_SUB,
+                              undefined,
+                              s.risk,
+                            )
+                          : "") +
+                        (s.ok
+                          ? card("ok", OK_TITLE, OK_SUB, s.okLead, s.ok)
+                          : "")
+                      }
+                    />
+                  )}
+
+                  {s.tech && (
+                    <div class="tg-tech tg-reveal">
+                      <div class="tg-tech__tag">{s.tech.tag}</div>
+                      <div class="tg-tech__grid">
+                        {s.tech.cols.map((c) => (
+                          <div class="tg-tech__col">
+                            <h5>{c.h}</h5>
+                            <ul>
+                              {c.items.map((i) => (
+                                <li>{i}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {s.quote && (
+                    <div class="tg-quote tg-reveal">
+                      <p>{s.quote.text}</p>
+                      <span class="tg-cite">{s.quote.cite}</span>
+                    </div>
+                  )}
+                </section>
+              ))}
+          </div>
+        ))
+      }
+
+      <!-- ===== CTA ===== -->
+      <section class="tg-cta tg-reveal">
+        <div class="tg-cta__ph"></div>
+        <div class="tg-cta__inner">
+          <h3>Inclúyanos en su proceso de evaluación</h3>
+          <p>
+            Visite nuestras plantas operando en México y verifique cada
+            afirmación directamente con nuestros ingenieros y técnicos, sin
+            intermediarios.
+          </p>
+          <div class="tg-cta__btns">
+            <a class="tg-btn tg-btn--primary" href="/Contact">
+              Visita nuestras plantas
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path d="M5 12h14M13 6l6 6-6 6"></path></svg
+              >
+            </a>
+            <a class="tg-btn tg-btn--ghost" href="/Contact">Contáctanos</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <p class="tg-endnote">
+    Triaso — Algunos consejos para comprar una planta de asfalto · Compre con
+    criterio.
+  </p>
+
+  <!-- ===== Hoja móvil (índice) ===== -->
+  <div class="tg-msheet">
+    <div class="tg-msheet__panel">
+      <div class="tg-msheet__top">
+        <span>Índice</span>
+        <button class="tg-msheet__x" type="button" aria-label="Cerrar"
+          >&times;</button
+        >
+      </div>
+      {
+        parts.map((pt) => (
+          <>
+            <div class="tg-msheet__part">{pt.title}</div>
+            {sections
+              .filter((s) => s.pid === pt.id)
+              .map((s) => (
+                <a class="tg-msheet__link" href={`#${s.id}`}>
+                  {s.title}
+                </a>
+              ))}
+          </>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  /* ============ Guía "Algunos consejos" — alineada a la marca ============ */
+  .tips-guide {
+    --tg-font: "Helvetica", "Arial", sans-serif;
+
+    --tg-azul: var(--azul-bg1);
+    --tg-azul-2: var(--azul-bg2);
+    --tg-azul-deep: var(--azul-bg1Hover);
+    --tg-rojo: var(--rojo-btn);
+    --tg-rojo-hover: var(--rojo-btnHover);
+
+    --tg-titulo: var(--gris-titulos);
+    --tg-texto: var(--gris-textos5);
+    --tg-texto-2: var(--gris-textos4);
+    --tg-mute: var(--gris-textos);
+
+    --tg-bg: var(--bg-main);
+    --tg-beige: var(--bg-beige);
+    --tg-blanco: #ffffff;
+
+    --tg-linea: color-mix(in srgb, var(--gris-titulos) 12%, #fff);
+    --tg-linea-2: color-mix(in srgb, var(--gris-titulos) 8%, #fff);
+    --tg-azul-tint: color-mix(in srgb, var(--azul-bg1) 8%, #fff);
+    --tg-azul-line: color-mix(in srgb, var(--azul-bg1) 22%, #fff);
+    --tg-rojo-tint: color-mix(in srgb, var(--rojo-btn) 7%, #fff);
+    --tg-rojo-line: color-mix(in srgb, var(--rojo-btn) 25%, #fff);
+
+    --tg-maxw: 1240px;
+    --tg-shadow-md:
+      0 4px 18px -6px rgba(20, 40, 75, 0.16),
+      0 2px 6px -2px rgba(20, 40, 75, 0.08);
+    --tg-r: 14px;
+    --tg-r-sm: 10px;
+
+    background: var(--tg-bg);
+    color: var(--tg-texto);
+    font-family: var(--tg-font);
+    font-size: 16px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  .tips-guide h1,
+  .tips-guide h2,
+  .tips-guide h3,
+  .tips-guide h4,
+  .tips-guide h5 {
+    font-family: var(--tg-font);
+    color: var(--tg-titulo);
+    margin: 0;
+    line-height: 1.14;
+  }
+  .tips-guide p {
+    margin: 0;
+  }
+  .tips-guide a {
+    color: inherit;
+  }
+  .tips-guide *,
+  .tg-mobilebar *,
+  .tg-msheet * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  .tg-sec,
+  .tg-part {
+    scroll-margin-top: 96px;
+  }
+
+  /* ---------- Hero ---------- */
+  .tg-hero {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--tg-azul-deep);
+    color: #fff;
+  }
+  .tg-hero__grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+    -webkit-mask-image: linear-gradient(
+      180deg,
+      #000 0%,
+      #000 42%,
+      transparent 92%
+    );
+    mask-image: linear-gradient(180deg, #000 0%, #000 42%, transparent 92%);
+  }
+  .tg-hero__glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        58% 52% at 88% -6%,
+        rgba(202, 28, 28, 0.3),
+        transparent 70%
+      ),
+      radial-gradient(
+        52% 60% at -8% 108%,
+        rgba(0, 68, 164, 0.4),
+        transparent 72%
+      );
+  }
+  .tg-hero__inner {
+    position: relative;
+    max-width: var(--tg-maxw);
+    margin: 0 auto;
+    padding: 112px 32px 66px;
+  }
+  .tg-hero__kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.72);
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .tg-hero__kicker::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 16px;
+    height: 2px;
+    background: var(--tg-rojo);
+  }
+  .tg-hero h1 {
+    position: relative;
+    font-weight: 800;
+    font-size: clamp(31px, 5vw, 54px);
+    letter-spacing: -0.018em;
+    max-width: 20ch;
+    text-transform: uppercase;
+    color: #fff;
+    padding-left: 24px;
+  }
+  .tg-hero h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.14em;
+    bottom: 0.14em;
+    width: 5px;
+    border-radius: 3px;
+    background: var(--tg-rojo);
+  }
+  .tg-hero__lead {
+    margin: 22px 0 0 24px;
+    max-width: 56ch;
+    font-size: clamp(16px, 1.6vw, 20px);
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .tg-hero__criterio {
+    margin: 22px 0 0 24px;
+    display: inline-block;
+    font-weight: 800;
+    color: #fff;
+    font-size: clamp(14px, 1.6vw, 18px);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background: var(--tg-rojo);
+    padding: 9px 18px;
+    border-radius: 8px;
+  }
+  .tg-hero__meta {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .tg-partbtn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 22px 22px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    text-decoration: none;
+    overflow: hidden;
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+  .tg-partbtn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: var(--tg-rojo);
+    transition: width 0.3s ease;
+  }
+  .tg-partbtn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.34);
+    transform: translateY(-4px);
+  }
+  .tg-partbtn:hover::after {
+    width: 100%;
+  }
+  .tg-partbtn__n {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--tg-rojo);
+    border: 1.5px solid var(--tg-rojo);
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+  .tg-partbtn:hover .tg-partbtn__n {
+    background: var(--tg-rojo);
+    color: #fff;
+  }
+  .tg-partbtn__t {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: #fff;
+    max-width: 18ch;
+  }
+  .tg-partbtn__a {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    width: 18px;
+    height: 18px;
+    color: rgba(255, 255, 255, 0.55);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+  .tg-partbtn:hover .tg-partbtn__a {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ---------- Shell ---------- */
+  .tg-shell {
+    max-width: var(--tg-maxw);
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 268px minmax(0, 1fr);
+    gap: 56px;
+    align-items: start;
+  }
+
+  /* ---------- TOC ---------- */
+  .tg-toc {
+    position: sticky;
+    top: 84px;
+    align-self: start;
+    padding-top: 46px;
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+  }
+  .tg-toc__label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--tg-mute);
+    margin-bottom: 16px;
+    padding-left: 2px;
+  }
+  .tg-toc nav {
+    border-left: 2px solid var(--tg-linea);
+  }
+  .tg-toc__part {
+    display: block;
+    font-weight: 700;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--tg-rojo);
+    padding: 16px 0 8px 16px;
+    margin-left: -2px;
+    text-decoration: none;
+  }
+  .tg-toc__part:first-child {
+    padding-top: 2px;
+  }
+  .tg-toc__link {
+    display: block;
+    text-decoration: none;
+    color: var(--tg-texto-2);
+    font-size: 14.5px;
+    line-height: 1.35;
+    padding: 7px 0 7px 16px;
+    margin-left: -2px;
+    border-left: 2px solid transparent;
+    transition:
+      color 0.15s,
+      border-color 0.15s,
+      background 0.15s;
+  }
+  .tg-toc__link:hover {
+    color: var(--tg-azul);
+  }
+  .tg-toc__link.is-active {
+    color: var(--tg-azul);
+    font-weight: 600;
+    border-left-color: var(--tg-azul);
+    background: linear-gradient(90deg, var(--tg-azul-tint), transparent);
+  }
+
+  /* ---------- Contenido ---------- */
+  .tg-content {
+    padding: 46px 0 40px;
+    min-width: 0;
+  }
+
+  .tg-part {
+    margin: 0 0 8px;
+    padding-top: 18px;
+  }
+  .tg-part:not(:first-of-type) {
+    margin-top: 30px;
+  }
+  .tg-part__head {
+    padding: 34px 0 30px;
+    text-align: center;
+  }
+  .tg-part__num {
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.22em;
+    color: var(--tg-azul);
+    opacity: 0.65;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .tg-part__title {
+    font-weight: 800;
+    color: var(--tg-rojo);
+    font-size: clamp(26px, 4vw, 42px);
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  .tg-part__title::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    background: var(--tg-rojo);
+    margin: 18px auto 0;
+    border-radius: 2px;
+  }
+  .tg-part__blurb {
+    margin: 20px auto 0;
+    max-width: 62ch;
+    color: var(--tg-texto-2);
+    font-size: 16px;
+  }
+  .tg-part__blurb span {
+    display: block;
+  }
+  .tg-part__blurb span + span {
+    margin-top: 4px;
+  }
+
+  /* Sección */
+  .tg-sec {
+    padding: 30px 0;
+    border-top: 1px solid var(--tg-linea);
+  }
+  .tg-sec:first-of-type {
+    border-top: 0;
+  }
+  .tg-sec__head {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+  .tg-sec__icon {
+    flex: 0 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    background: var(--tg-azul-tint);
+    color: var(--tg-azul);
+    border: 1px solid var(--tg-azul-line);
+  }
+  .tg-sec__icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  .tg-sec__titles {
+    padding-top: 3px;
+  }
+  .tg-sec__kicker {
+    font-size: 11.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--tg-mute);
+    margin-bottom: 5px;
+  }
+  .tg-sec__title {
+    font-weight: 700;
+    font-size: clamp(21px, 2.6vw, 28px);
+    color: var(--tg-azul);
+    letter-spacing: -0.01em;
+  }
+  .tg-sec__intro {
+    color: var(--tg-texto);
+    font-size: 16.5px;
+    max-width: 70ch;
+    margin-top: 6px;
+  }
+  .tg-sec__intro + .tg-sec__intro {
+    margin-top: 10px;
+  }
+
+  /* "Qué evaluar" */
+  .tg-evaluar {
+    margin-top: 24px;
+    background: var(--tg-azul-tint);
+    border: 1px solid var(--tg-azul-line);
+    border-left: 3px solid var(--tg-azul);
+    border-radius: var(--tg-r);
+    padding: 22px 26px;
+  }
+  .tg-evaluar__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--tg-azul-deep);
+    margin-bottom: 6px;
+  }
+  .tg-evaluar__tag svg {
+    width: 14px;
+    height: 14px;
+  }
+  .tg-evaluar__h {
+    font-weight: 700;
+    font-size: 17.5px;
+    color: var(--tg-titulo);
+    margin-bottom: 14px;
+    line-height: 1.3;
+  }
+  .tg-checks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+  }
+  .tg-checks > li {
+    position: relative;
+    padding-left: 30px;
+    color: var(--tg-texto);
+  }
+  .tg-checks > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 19px;
+    height: 19px;
+    border-radius: 5px;
+    background: #fff;
+    border: 1.5px solid var(--tg-azul);
+  }
+  .tg-checks > li::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 7px;
+    height: 4px;
+    border-left: 2px solid var(--tg-azul);
+    border-bottom: 2px solid var(--tg-azul);
+    transform: rotate(-45deg);
+  }
+  .tg-checks ul {
+    list-style: none;
+    margin: 8px 0 0;
+    padding-left: 4px;
+    display: grid;
+    gap: 6px;
+  }
+  .tg-checks ul li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--tg-texto-2);
+    font-size: 15px;
+  }
+  .tg-checks ul li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--tg-azul);
+    opacity: 0.5;
+  }
+
+  .tg-evaluar--blue {
+    background: color-mix(in srgb, var(--azul-bg1) 14%, #fff);
+    border-left-color: var(--tg-azul-deep);
+  }
+
+  /* Comparación */
+  .tg-cmp {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .tg-card {
+    border-radius: var(--tg-r);
+    background: #fff;
+    border: 1px solid var(--tg-linea);
+    overflow: hidden;
+  }
+  .tg-card__head {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 16px 22px;
+    border-bottom: 1px solid var(--tg-linea-2);
+  }
+  .tg-card__head .tg-badge {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+  }
+  .tg-card__head .tg-badge svg {
+    width: 17px;
+    height: 17px;
+  }
+  .tg-card__head h4 {
+    font-size: 16.5px;
+    font-weight: 700;
+  }
+  .tg-card__head .tg-sub {
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 2px;
+  }
+  .tg-card__body {
+    padding: 18px 22px 22px;
+  }
+  .tg-card__lead {
+    font-size: 15px;
+    color: var(--tg-texto-2);
+    margin-bottom: 12px;
+  }
+
+  .tg-card--risk {
+    border-color: var(--tg-rojo-line);
+  }
+  .tg-card--risk .tg-card__head {
+    background: var(--tg-rojo-tint);
+  }
+  .tg-card--risk .tg-badge {
+    background: var(--tg-rojo);
+    color: #fff;
+  }
+  .tg-card--risk .tg-card__head h4 {
+    color: var(--tg-rojo-hover);
+  }
+  .tg-card--risk .tg-card__head .tg-sub {
+    color: rgba(184, 26, 26, 0.7);
+  }
+
+  .tg-card--ok {
+    border-color: var(--tg-azul);
+    box-shadow: var(--tg-shadow-md);
+    position: relative;
+  }
+  .tg-card--ok::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--tg-azul);
+  }
+  .tg-card--ok .tg-card__head {
+    background: var(--tg-azul-tint);
+    border-bottom-color: var(--tg-azul-line);
+  }
+  .tg-card--ok .tg-badge {
+    background: var(--tg-azul);
+    color: #fff;
+  }
+  .tg-card--ok .tg-card__head h4 {
+    color: var(--tg-azul);
+  }
+  .tg-card--ok .tg-card__head .tg-sub {
+    color: var(--tg-azul-deep);
+  }
+
+  .tg-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 11px;
+  }
+  .tg-items > li {
+    position: relative;
+    padding-left: 27px;
+    color: var(--tg-texto);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .tg-items > li > .tg-mk {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 17px;
+    height: 17px;
+    flex: 0 0 auto;
+  }
+  .tg-items ul {
+    list-style: none;
+    margin: 7px 0 1px;
+    padding-left: 3px;
+    display: grid;
+    gap: 6px;
+  }
+  .tg-items ul li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--tg-texto-2);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .tg-items ul li::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.4;
+  }
+  .tg-items ul ul li {
+    font-size: 13.5px;
+  }
+  .tg-card--risk .tg-items ul li {
+    color: #8a6a6a;
+  }
+  .tg-mk-x {
+    color: var(--tg-rojo);
+  }
+  .tg-mk-c {
+    color: var(--tg-azul);
+  }
+
+  /* tech (Ecología) */
+  .tg-tech {
+    margin-top: 22px;
+    border: 1px dashed var(--tg-linea);
+    border-radius: var(--tg-r);
+    padding: 8px 0 4px;
+    background: #fbfcfd;
+  }
+  .tg-tech__tag {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--tg-mute);
+    padding: 14px 16px 6px;
+  }
+  .tg-tech__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .tg-tech__col {
+    padding: 18px 26px 22px;
+  }
+  .tg-tech__col + .tg-tech__col {
+    border-left: 1px solid var(--tg-linea);
+  }
+  .tg-tech__col h5 {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--tg-azul);
+    text-align: center;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--tg-azul-tint);
+  }
+  .tg-tech__col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 9px;
+  }
+  .tg-tech__col li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 14.5px;
+    color: var(--tg-texto);
+  }
+  .tg-tech__col li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--tg-azul);
+    opacity: 0.55;
+  }
+
+  /* pull quote */
+  .tg-quote {
+    margin: 24px 0 4px;
+    background: var(--tg-azul);
+    color: #fff;
+    border-radius: var(--tg-r);
+    padding: 26px 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  .tg-quote::before {
+    content: "\201C";
+    position: absolute;
+    left: 14px;
+    top: -14px;
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.13);
+    line-height: 1;
+  }
+  .tg-quote p {
+    position: relative;
+    font-weight: 600;
+    font-size: clamp(18px, 2.2vw, 23px);
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+  .tg-quote .tg-cite {
+    position: relative;
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+  }
+
+  /* note block */
+  .tg-noteblock {
+    margin-top: 22px;
+    background: #fff;
+    border: 1px solid var(--tg-linea);
+    border-left: 3px solid var(--tg-azul);
+    border-radius: var(--tg-r-sm);
+    padding: 20px 24px;
+  }
+  .tg-noteblock h4 {
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--tg-azul);
+    margin-bottom: 14px;
+  }
+
+  /* CTA */
+  .tg-cta {
+    margin-top: 40px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--tg-azul-deep);
+    color: #fff;
+    position: relative;
+  }
+  .tg-cta__ph {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(100deg, rgba(15, 42, 80, 0.96), rgba(15, 42, 80, 0.55)),
+      repeating-linear-gradient(135deg, #1c3f6e 0 22px, #193a64 22px 44px);
+  }
+  .tg-cta__inner {
+    position: relative;
+    padding: 48px 44px;
+  }
+  .tg-cta h3 {
+    color: #fff;
+    font-weight: 800;
+    font-size: clamp(24px, 3vw, 34px);
+    max-width: 20ch;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  .tg-cta p {
+    margin-top: 14px;
+    max-width: 52ch;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 16.5px;
+  }
+  .tg-cta__btns {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .tg-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 15.5px;
+    text-decoration: none;
+    padding: 14px 26px;
+    border-radius: 10px;
+    transition:
+      transform 0.12s,
+      background 0.15s,
+      box-shadow 0.15s;
+  }
+  .tg-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  .tg-btn--primary {
+    background: var(--tg-rojo);
+    color: #fff;
+    box-shadow: 0 8px 22px -8px rgba(202, 28, 28, 0.7);
+  }
+  .tg-btn--primary:hover {
+    background: var(--tg-rojo-hover);
+    transform: translateY(-2px);
+  }
+  .tg-btn--ghost {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .tg-btn--ghost:hover {
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-2px);
+  }
+
+  /* Reveal */
+  .tg-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .tg-reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tg-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Endnote */
+  .tg-endnote {
+    max-width: var(--tg-maxw);
+    margin: 0 auto;
+    padding: 34px 32px 70px;
+    color: var(--tg-mute);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+
+  /* Menú móvil */
+  .tg-mobilebar {
+    display: none;
+  }
+  .tg-msheet {
+    display: none;
+  }
+
+  /* ============ Responsive ============ */
+  @media (max-width: 980px) {
+    .tg-shell {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding: 0;
+    }
+    .tg-toc {
+      display: none;
+    }
+    .tg-content {
+      padding: 24px 20px 40px;
+    }
+    .tg-hero__inner {
+      padding: 96px 22px 48px;
+    }
+    .tg-hero__meta {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .tg-partbtn {
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+    }
+    .tg-partbtn__n {
+      flex: 0 0 auto;
+    }
+    .tg-partbtn__t {
+      max-width: none;
+    }
+    .tg-partbtn__a {
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.5;
+    }
+    .tg-partbtn:hover .tg-partbtn__a {
+      transform: translateY(-50%);
+    }
+    .tg-cmp {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .tg-tech__grid {
+      grid-template-columns: 1fr;
+    }
+    .tg-tech__col + .tg-tech__col {
+      border-left: 0;
+      border-top: 1px solid var(--tg-linea);
+    }
+    .tg-sec,
+    .tg-part {
+      scroll-margin-top: 128px;
+    }
+
+    .tg-mobilebar {
+      display: block;
+      position: sticky;
+      top: 64px;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.93);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--tg-linea);
+    }
+    .tg-mobilebar__row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 18px;
+    }
+    .tg-mobilebar__cur {
+      flex: 1;
+      min-width: 0;
+    }
+    .tg-mobilebar__cur .tg-k {
+      font-size: 9.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--tg-rojo);
+      display: block;
+    }
+    .tg-mobilebar__cur .tg-t {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--tg-azul);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+    .tg-mobilebar__btn {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--tg-azul);
+      color: #fff;
+      border: 0;
+      border-radius: 9px;
+      padding: 9px 14px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .tg-mobilebar__btn svg {
+      width: 15px;
+      height: 15px;
+    }
+    .tg-msheet {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(15, 30, 55, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s;
+    }
+    .tg-msheet.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .tg-msheet__panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(86vw, 360px);
+      background: #fff;
+      transform: translateX(100%);
+      transition: transform 0.26s cubic-bezier(0.22, 0.7, 0.3, 1);
+      overflow-y: auto;
+      padding: 22px 0 40px;
+      box-shadow: -20px 0 50px -20px rgba(0, 0, 0, 0.4);
+    }
+    .tg-msheet.open .tg-msheet__panel {
+      transform: none;
+    }
+    .tg-msheet__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 22px 16px;
+      border-bottom: 1px solid var(--tg-linea);
+      margin-bottom: 8px;
+    }
+    .tg-msheet__top span {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--tg-mute);
+    }
+    .tg-msheet__x {
+      background: none;
+      border: 0;
+      font-size: 24px;
+      line-height: 1;
+      color: var(--tg-titulo);
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+    .tg-msheet__part {
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--tg-rojo);
+      padding: 16px 22px 6px;
+    }
+    .tg-msheet__link {
+      display: block;
+      text-decoration: none;
+      color: var(--tg-texto);
+      font-size: 15px;
+      padding: 9px 22px;
+      border-left: 3px solid transparent;
+    }
+    .tg-msheet__link.is-active {
+      color: var(--tg-azul);
+      font-weight: 600;
+      background: var(--tg-azul-tint);
+      border-left-color: var(--tg-azul);
+    }
+  }
+  @media (max-width: 560px) {
+    .tg-hero__inner {
+      padding: 92px 18px 40px;
+    }
+    .tg-content {
+      padding: 22px 16px 36px;
+    }
+    .tg-sec__icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+    }
+    .tg-sec__icon svg {
+      width: 21px;
+      height: 21px;
+    }
+    .tg-sec__head {
+      gap: 13px;
+    }
+    .tg-evaluar,
+    .tg-card__body {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+    .tg-card__head {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+    .tg-cta__inner {
+      padding: 34px 24px;
+    }
+    .tg-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    "use strict";
+
+    var sections = Array.prototype.slice.call(
+      document.querySelectorAll(".tg-sec[id]"),
+    );
+    var tocLinks = Array.prototype.slice.call(
+      document.querySelectorAll(".tg-toc__link"),
+    );
+    var mLinks = Array.prototype.slice.call(
+      document.querySelectorAll(".tg-msheet__link"),
+    );
+    var curK = document.querySelector(".tg-mobilebar__cur .tg-k");
+    var curT = document.querySelector(".tg-mobilebar__cur .tg-t");
+
+    function setActive(id: string) {
+      tocLinks.concat(mLinks).forEach(function (a) {
+        a.classList.toggle("is-active", a.getAttribute("href") === "#" + id);
+      });
+      var sec = document.getElementById(id);
+      if (sec && curT && curK) {
+        curK.textContent = sec.getAttribute("data-part") || "";
+        curT.textContent =
+          sec.getAttribute("data-short") ||
+          sec.getAttribute("data-title") ||
+          "";
+      }
+    }
+
+    if ("IntersectionObserver" in window && sections.length) {
+      var visible: Record<string, number> = {};
+      var io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (e) {
+            visible[e.target.id] = e.isIntersecting ? e.intersectionRatio : 0;
+          });
+          var bestId = null,
+            best = -1;
+          sections.forEach(function (s) {
+            var r = visible[s.id] || 0;
+            if (r > best) {
+              best = r;
+              bestId = s.id;
+            }
+          });
+          if (best <= 0) {
+            var mid = window.innerHeight * 0.35,
+              pick = null;
+            sections.forEach(function (s) {
+              if (s.getBoundingClientRect().top - mid < 0) pick = s.id;
+            });
+            bestId = pick || sections[0].id;
+          }
+          if (bestId) setActive(bestId);
+        },
+        { rootMargin: "-15% 0px -55% 0px", threshold: [0, 0.15, 0.4, 0.75, 1] },
+      );
+      sections.forEach(function (s) {
+        io.observe(s);
+      });
+    }
+
+    var sheet = document.querySelector(".tg-msheet");
+    var openBtn = document.querySelector(".tg-mobilebar__btn");
+    var closeBtn = document.querySelector(".tg-msheet__x");
+    function openSheet() {
+      if (sheet) {
+        sheet.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+    }
+    function closeSheet() {
+      if (sheet) {
+        sheet.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+    }
+    if (openBtn) openBtn.addEventListener("click", openSheet);
+    if (closeBtn) closeBtn.addEventListener("click", closeSheet);
+    if (sheet)
+      sheet.addEventListener("click", function (e) {
+        if (e.target === sheet) closeSheet();
+      });
+    mLinks.forEach(function (a) {
+      a.addEventListener("click", function () {
+        setTimeout(closeSheet, 120);
+      });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeSheet();
+    });
+
+    var revs = Array.prototype.slice.call(
+      document.querySelectorAll(".tg-reveal"),
+    );
+    if ("IntersectionObserver" in window) {
+      var ro = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              ro.unobserve(e.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -8% 0px", threshold: 0.06 },
+      );
+      revs.forEach(function (el) {
+        ro.observe(el);
+      });
+    } else {
+      revs.forEach(function (el) {
+        el.classList.add("in");
+      });
+    }
+  })();
+</script>

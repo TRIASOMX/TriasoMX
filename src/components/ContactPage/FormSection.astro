@@ -1,0 +1,153 @@
+---
+const iconClass = "w-[22px] h-[22px] text-redBg shrink-0";
+---
+
+<section class="max-w-7xl mx-auto px-8 mt-16 md:mt-24">
+  <!-- Encabezado -->
+  <div class="flex flex-col">
+    <h1 class="font-bold text-2xl md:text-4xl text-blueMain uppercase">
+      Contáctanos
+    </h1>
+    <div class="flex flex-row mt-2">
+      <div class="w-20 h-0.5 bg-redBg"></div>
+      <div class="w-20 h-0.5 bg-gray-300"></div>
+    </div>
+    <p class="mt-4 max-w-2xl text-sm md:text-base text-grisP">
+      Estamos para ayudarte. Escríbenos por el formulario o contáctanos
+      directamente.
+    </p>
+  </div>
+
+  <div
+    class="mt-10 grid grid-cols-1 lg:grid-cols-2 items-start gap-8 lg:gap-12"
+  >
+    <!-- Formulario -->
+    <div class="w-full overflow-hidden rounded-2xl bg-white shadow-lg">
+      <iframe
+        aria-label="Formulario de contacto TRIASO"
+        class="w-full border-0 min-h-[720px] md:min-h-[800px]"
+        src="https://forms.zohopublic.com/soporteonsosh1/form/TriasoMxForm/formperma/JUx6gQqg8X_waMRgt9JNyhUPmR6JeIYzMFlGld0qtkI"
+        sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-modals"
+        loading="lazy"
+        title="Formulario de contacto TRIASO"></iframe>
+    </div>
+
+    <!-- Mapa + datos -->
+    <div class="flex flex-col gap-8">
+      <div
+        class="w-full overflow-hidden rounded-xl shadow-md aspect-[4/3]"
+      >
+        <iframe
+          class="w-full h-full border-0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2939.729113871134!2d-83.20525970000001!3d42.539808699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824c65376ffbe87%3A0xad972dfb84215e22!2s1011%20S%20Adams%20Rd%20b%2C%20Birmingham%2C%20MI%2048009%2C%20EE.%20UU.!5e0!3m2!1ses!2smx!4v1767900201570!5m2!1ses!2smx"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de TRIASO"
+          allowfullscreen></iframe>
+      </div>
+
+      <!-- Datos de contacto -->
+      <div class="flex flex-col gap-5">
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=1011+S+Adams+Rd+b+Birmingham+MI+48009"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex flex-row items-start gap-4 font-semibold text-blueSecondary hover:underline"
+        >
+          <svg
+            class={iconClass + " mt-0.5"}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+            ></path>
+          </svg>
+          1011 S. Adams Rd., Suite B — Birmingham, MI, 48009, United States
+        </a>
+
+        <a
+          href="mailto:triaso.informes@gmail.com"
+          class="flex flex-row items-center gap-4 font-semibold text-blueSecondary hover:underline"
+        >
+          <svg
+            class={iconClass}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25h15a2.25 2.25 0 0 0 2.25-2.25V6.75m-19.5 0A2.25 2.25 0 0 1 4.5 4.5h15a2.25 2.25 0 0 1 2.25 2.25m-19.5 0v.243a2.25 2.25 0 0 0 1.07 1.916l7.5 4.615a2.25 2.25 0 0 0 2.36 0l7.5-4.615a2.25 2.25 0 0 0 1.07-1.916V6.75"
+            ></path>
+          </svg>
+          triaso.informes@gmail.com
+        </a>
+
+        <a
+          href="tel:+526181703580"
+          class="flex flex-row items-center gap-4 font-semibold text-blueSecondary hover:underline"
+        >
+          <svg
+            class={iconClass}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+            ></path>
+          </svg>
+          +52 (618) 170 3580
+        </a>
+      </div>
+
+      <!-- Sitio de Estados Unidos -->
+      <div
+        class="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm"
+      >
+        <p class="font-semibold italic text-grisT">
+          ¿Buscas el sitio de Estados Unidos?
+        </p>
+        <a
+          href="https://www.triaso.com.mx/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex flex-row items-center gap-4 font-semibold text-blueMain hover:underline"
+        >
+          <svg
+            class={iconClass}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m-9 9h18"
+            ></path>
+          </svg>
+          www.triaso.com.mx
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

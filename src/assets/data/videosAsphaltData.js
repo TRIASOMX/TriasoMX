@@ -1,0 +1,111 @@
+export const videos = [
+  {
+    id: 1,
+    videoId: "F3U0faz6IzQ",
+    title: "110-160Tmph counterflow plant",
+    description: "2018 model",
+  },
+  {
+    id: 2,
+    videoId: "54XbvbEH9wI",
+    title: "Basic 110Tmph plant",
+    description: "2018 model",
+  },
+  {
+    id: 3,
+    videoId: "SjNbeBVJY2Y",
+    title: "200 Tmph cold mixing plant",
+    description: "2017 model",
+  },
+  {
+    id: 4,
+    videoId: "1GWggQ_W6ZY",
+    title:
+      "90 TonM silo, with delivery control with truck scanning, tickets and database",
+    description: "2017 model, installed in Maine, USA.",
+  },
+  {
+    id: 5,
+    videoId: "srVbBK7TVBE",
+    title: "Counterflow plant, with pugmill, 110-160Tmph",
+    description: "2017 model, with control version 7.1",
+  },
+  {
+    id: 6,
+    videoId: "GFYfCjqnOvM",
+    title: "Counterflow plant, with pugmill, 110-160 Tmph",
+    description: "2017 model, with control version 7.0",
+  },
+  {
+    id: 7,
+    videoId: "nQfHoig4fN8",
+    title: "110Tph basic plant",
+    description: "2016 model",
+  },
+  {
+    id: 8,
+    videoId: "fyBvuS4Ti64",
+    title: "80 Ton Self-Erecting Silo",
+    description: "80 Ton Self-Erecting Silo",
+  },
+  {
+    id: 9,
+    videoId: "goHrS8nxWsU",
+    title: "Tank for modifying asphalt with Elvaloy",
+    description: "2015 model",
+  },
+  {
+    id: 10,
+    videoId: "NkdtHPPzmzs",
+    title: "110 Tph Plant",
+    description: "2014-C model",
+  },
+  {
+    id: 11,
+    videoId: "CvEOsC3-pBw",
+    title: "110 Tph Plant",
+    description: "2014-B model",
+  },
+  {
+    id: 12,
+    videoId: "UkKmUVytBtk",
+    title: "110 Tph plant",
+    description: "2014 model",
+  },
+  {
+    id: 13,
+    videoId: "nHjb5cVjCEQ",
+    title: "110 Tph counterflow asphalt plant",
+    description: "2013 model",
+  },
+  {
+    id: 14,
+    videoId: "9sDWBwhwR2s",
+    title: "110 Tph counterflow asphalt plant",
+    description: "2012 model",
+  },
+  {
+    id: 15,
+    videoId: "kk7WaKduhDQ",
+    title: "Counterflow asphalt plant",
+    description: "Digitized for better understanding",
+  },
+  {
+    id: 16,
+    videoId: "SAEUSuIurvw",
+    title: "Asphalt plant",
+    description: "Digitized for better understanding",
+  },
+  {
+    id: 17,
+    videoId: "_FQhLaYDxbk",
+    title: "110 Tph asphalt plant",
+    description: "2012 model",
+  },
+  {
+    id: 18,
+    videoId: "RsMzAuO27ME",
+    title: "110 Tph asphalt plant",
+    description: "2011 model",
+  },
+];

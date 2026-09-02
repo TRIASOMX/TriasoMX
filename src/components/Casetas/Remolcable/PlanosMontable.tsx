@@ -386,7 +386,7 @@ const DrumMixPlanos = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-span-2 flex items-start justify-center w-full min-h-[600px] order-1 md:order-2"></div>
+                  <div className="col-span-2 flex items-start justify-center w-full min-h-[400px] order-1 md:order-2"></div>
                   <div
                     className="flex flex-col items-start justify-start h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10"
                     id="column2"

@@ -1,158 +1,181 @@
-import { useState, useRef, useEffect } from 'react';
-import FeatureCards from './CardsComponent';
-import gsap from "gsap"; // Importar GSAP
-import { ScrollTrigger } from "gsap/ScrollTrigger"; // Importar ScrollTrigger
+import { useEffect, useRef, useState } from "react";
+import FeatureCards from "./CardsComponent";
 import img1 from "../../assets/images/Relief/TriasoOS6.webp";
 import img2 from "../../assets/images/Relief/TriasoOS5.webp";
+import { useGsapReveal } from "./reliefMotion";
 
-// Registrar el plugin
-gsap.registerPlugin(ScrollTrigger);
+const REPORT_A = [
+  "Producción acumulada.",
+  "Consumo de combustible por tonelada producida.",
+  "Tiempos en que la planta está encendida y cuando la planta está produciendo.",
+  "Promedios de producción y temperaturas.",
+  "Valores mínimos y máximos de producción y temperaturas.",
+  "Promedios de consumo de asfalto y combustible.",
+  "Velocidades de cambio en la producción para detectar robos.",
+  "Velocidades de cambio en niveles de asfalto y combustible para detectar robos.",
+  "Alarmas y eventos ocurridos.",
+];
+
+const REPORT_B = [
+  "Reportes históricos para un periodo seleccionado.",
+  "Mezcla total entregada",
+  "Número de camión, operador y placas.",
+  "Operador en turno de salida de mezcla.",
+  "Hora de inicio y fin de cada carga.",
+  "Toneladas cargadas.",
+  "Temperatura promedio de la mezcla asfáltica entregada.",
+  "Receta de la mezcla asfáltica entregada.",
+];
 
 export default function RelifSecondSection() {
-    const sectionRef = useRef<HTMLDivElement>(null);
-    const text1Ref = useRef<HTMLParagraphElement>(null);
-    const text2Ref = useRef<HTMLParagraphElement>(null);
+  const scopeRef = useRef<HTMLDivElement>(null);
+  const [open, setOpen] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
 
-    const [open, setOpen] = useState(false);
-    const contentRef = useRef<HTMLDivElement>(null);
+  useGsapReveal(scopeRef);
 
-    // Lógica del Dropdown (existente)
-    useEffect(() => {
-        if (!contentRef.current) return;
+  useEffect(() => {
+    if (!contentRef.current) return;
+    contentRef.current.style.maxHeight = open
+      ? contentRef.current.scrollHeight + "px"
+      : "0px";
+  }, [open]);
 
-        if (open) {
-            contentRef.current.style.maxHeight =
-                contentRef.current.scrollHeight + "px";
-        } else {
-            contentRef.current.style.maxHeight = "0px";
-        }
-    }, [open]);
-
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            if (text1Ref.current) {
-                gsap.from(text1Ref.current, {
-                    x: 100,
-                    opacity: 0,
-                    duration: 1,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: text1Ref.current,
-                        start: "top 75%", 
-                        toggleActions: "play none none reverse",
-                    }
-                });
-            }
-            if (text2Ref.current) {
-                gsap.from(text2Ref.current, {
-                    x: -100,
-                    opacity: 0,
-                    duration: 1,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: text2Ref.current,
-                        start: "top 85%",
-                        toggleActions: "play none none reverse",
-                    }
-                });
-            }
-
-        }, sectionRef);
-
-        return () => ctx.revert();
-    }, []);
-
-    return (
-        <div ref={sectionRef} className='bg-[#1e1e1e] space-y-5 md:space-y-10 overflow-hidden'>
-            <div className='max-w-7xl mx-auto px-8 text-white'>
-                <div className='flex flex-col md:flex-row lg:flex-row justify-around items-center gap-5'>
-                    <img src={img2.src} alt="Triaso OS" className='w-full md:w-1/2 lg:w-1/2' />
-                    <p ref={text1Ref} className='text-lg md:text-2xl font-bold'>
-                        Para una toma de decisiones más rápida, mejor fundamentada y completamente independiente de la ubicación física.
-                    </p>
-                </div>
-                <div className='flex flex-col md:flex-row lg:flex-row justify-around items-center pt-10'>
-                    <p ref={text2Ref} className='text-lg md:text-2xl font-bold w-full lg:w-[35%] md:w-[35%] order-2 md:order-1 lg:order-1'>
-                        Con múltiples puntos de acceso a través de la consola de operación, computadoras remotas, tablets y teléfonos.
-                    </p>
-                    <img src={img1.src} alt="Triaso OS" className='w-full md:w-1/2 lg:w-1/2 order-1 md:order-2 lg:order-2' />
-                </div>
-            </div>
-
-            <div>
-                <div className='flex justify-center max-w-7xl mx-auto px-4 pt-10'>
-                    <p className='text-white text-base font-medium w-full lg:w-[40%] md:w-[40%]'>
-                        Toda la información también se almacena de forma segura en la nube, permitiendo un acceso rápido y multiusuario para operadores, supervisores y propietarios, desde computadoras remotas, tablets y teléfonos móviles.
-                    </p>
-                </div>
-            </div>
-
-            <div>
-                <FeatureCards />
-            </div>
-
-            <div className='grid grid-cols-2 gap-4 max-w-7xl justify-around mx-auto px-4'>
-                <div className='w-full'>
-                <h1 className="text-xl md:text-3xl text-center font-bold bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
-                    Reportes históricos
-                </h1>
-                </div>
-
-                <div className='w-full'>
-                <h1 className="text-xl md:text-3xl font-bold text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    Reportes de mezcla asfáltica producida.
-                </h1>
-                </div>
-            </div>
-
-            <div className="w-full flex flex-col items-center justify-center">
-                <button
-                    onClick={() => setOpen(!open)}
-                    className="flex items-center gap-2 text-white transition-transform duration-300"
-                >
-                    <span
-                        className={`transform transition-transform duration-300 ${open ? "rotate-180" : "rotate-0"
-                            }`}
-                    >
-                        <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z" fill="#ffffff"></path> </g></svg>
-                    </span>
-                </button>
-                <div
-                    ref={contentRef}
-                    className="w-full overflow-hidden transition-[max-height] duration-500 ease-in-out"
-                    style={{ maxHeight: "0px" }}
-                >
-                    <div className="w-full bg-gradient-to-b from-[#05256d] to-[#5a85e8] py-12">
-                        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:gap-[34rem] ">
-                            <ul className="text-white list-disc space-y-2 pl-6">
-                                <li>Producción acumulada.</li>
-                                <li>Consumo de combustible por tonelada producida.</li>
-                                <li>Tiempos en que la planta está encendida y cuando la planta está produciendo.</li>
-                                <li>Promedios de producción y temperaturas.</li>
-                                <li>Valores mínimos y máximos de producción y temperaturas.</li>
-                                <li>Promedios de consumo de asfalto y combustible.</li>
-                                <li>Velocidades de cambio en la producción para detectar robos.</li>
-                                <li>Velocidades de cambio en niveles de asfalto y combustible para detectar robos.</li>
-                                <li>Alarmas y eventos ocurridos.</li>
-                            </ul>
-                            <ul className="text-white list-disc space-y-2 pl-6">
-                                <li>Reportes históricos para un periodo seleccionado.</li>
-                                <li>Mezcla total entregada</li>
-                                <li>Número de camión, operador y placas.</li>
-                                <li>Operador en turno de salida de mezcla.</li>
-                                <li>Hora de inicio y fin de cada carga.</li>
-                                <li>Toneladas cargadas.</li>
-                                <li>Temperatura promedio de la mezcla asfáltica entregada.</li>
-                                <li>Receta de la mezcla asfáltica entregada.</li>
-                                <ul className='list-disc pl-5'>
-                                    <li>Porcentajes, granulometría y humedad</li>
-                                </ul>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div
+      ref={scopeRef}
+      className="rlf-grid rlf-grid-dark space-y-16 overflow-hidden bg-[#1e1e1e] py-20 text-white"
+    >
+      {/* Bloques de datos */}
+      <div className="mx-auto max-w-7xl space-y-16 px-6 lg:px-8">
+        <div
+          data-reveal="right"
+          className="grid items-center gap-8 md:grid-cols-2"
+        >
+          <div className="rlf-hud overflow-hidden rounded-xl border border-white/10">
+            <img
+              src={img2.src}
+              alt="Panel de decisiones del sistema Triaso Relief"
+              width={img2.width}
+              height={img2.height}
+              loading="lazy"
+              decoding="async"
+              className="w-full"
+            />
+          </div>
+          <div>
+            <span className="mb-3 block text-[11px] font-semibold uppercase tracking-[0.22em] text-[#89adff]">
+              // Decisión en tiempo real
+            </span>
+            <p className="text-lg font-bold md:text-2xl">
+              Para una toma de decisiones más rápida, mejor fundamentada y
+              completamente independiente de la ubicación física.
+            </p>
+          </div>
         </div>
-    )
+
+        <div
+          data-reveal="left"
+          className="grid items-center gap-8 md:grid-cols-2"
+        >
+          <div className="order-2 md:order-1">
+            <span className="mb-3 block text-[11px] font-semibold uppercase tracking-[0.22em] text-[#89adff]">
+              // Multi-acceso
+            </span>
+            <p className="text-lg font-bold md:text-2xl">
+              Con múltiples puntos de acceso a través de la consola de operación,
+              computadoras remotas, tablets y teléfonos.
+            </p>
+          </div>
+          <div className="rlf-hud order-1 overflow-hidden rounded-xl border border-white/10 md:order-2">
+            <img
+              src={img1.src}
+              alt="Puntos de acceso del sistema Triaso Relief"
+              width={img1.width}
+              height={img1.height}
+              loading="lazy"
+              decoding="async"
+              className="w-full"
+            />
+          </div>
+        </div>
+
+        <p
+          data-reveal="up"
+          className="mx-auto max-w-2xl border-l-2 border-[#ca1c1c] pl-5 text-base font-medium text-[#d9d9d9]"
+        >
+          Toda la información también se almacena de forma segura en la nube,
+          permitiendo un acceso rápido y multiusuario para operadores, supervisores
+          y propietarios, desde computadoras remotas, tablets y teléfonos móviles.
+        </p>
+      </div>
+
+      <FeatureCards />
+
+      {/* Consola de reportes */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid gap-4 md:grid-cols-2">
+          <div data-reveal="scale-rot" className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
+            <h3 className="bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-center text-xl font-bold text-transparent md:text-3xl">
+              Reportes históricos
+            </h3>
+          </div>
+          <div data-reveal="scale-rot" data-reveal-delay="0.1" className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
+            <h3 className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-center text-xl font-bold text-transparent md:text-3xl">
+              Reportes de mezcla asfáltica producida.
+            </h3>
+          </div>
+        </div>
+
+        <div className="mt-6 flex flex-col items-center">
+          <button
+            onClick={() => setOpen(!open)}
+            aria-expanded={open}
+            className="rlf-btn flex items-center gap-3 rounded-full border border-[#89adff]/40 bg-[#14427c]/30 px-6 py-3 text-sm font-semibold uppercase tracking-widest text-white"
+          >
+            {open ? "Ocultar detalle" : "Ver detalle del reporte"}
+            <span className={`transition-transform duration-500 ${open ? "rotate-180" : ""}`}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="#ffffff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+          </button>
+
+          <div
+            ref={contentRef}
+            className="w-full overflow-hidden transition-[max-height] duration-700"
+            style={{ maxHeight: "0px", transitionTimingFunction: "cubic-bezier(0.83,0,0.17,1)" }}
+          >
+            <div
+              className="mt-6 rounded-xl border border-[#89adff]/20 p-6 md:p-10"
+              style={{ background: "linear-gradient(180deg, #05256d 0%, #14427c 100%)" }}
+            >
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <ul className="space-y-2 text-sm leading-relaxed text-white/90">
+                  {REPORT_A.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span className="text-[#89adff]">›</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <ul className="space-y-2 text-sm leading-relaxed text-white/90">
+                  {REPORT_B.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span className="text-[#89adff]">›</span>
+                      {item}
+                    </li>
+                  ))}
+                  <li className="flex gap-2 pl-5 text-white/70">
+                    <span className="text-[#89adff]">–</span>
+                    Porcentajes, granulometría y humedad
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

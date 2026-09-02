@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import img1 from "../../assets/images/FuelPreHeaters/Gallery/PREH1.webp";
 import img2 from "../../assets/images/FuelPreHeaters/FPH1.webp";
-import img3 from "../../assets/images/FuelPreHeaters/FPH4.webp";
+import img4 from "../../assets/images/FuelPreHeaters/FPH5.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,7 +81,7 @@ const CARDS: CardData[] = [
   {
     id: 4,
     type: "protection",
-    imageSrc: img3.src,
+    imageSrc: img4.src,
     title: "Protege los componentes de su planta",
     body: "La combustión incompleta genera acumulación de hollín en el quemador, obstrucciones en los filtros de mangas e incluso posibles daños en el tambor mezclador. El precalentador asegura una combustión completa, manteniendo el sistema limpio y reduciendo significativamente las necesidades de mantenimiento.",
   },
@@ -257,20 +257,20 @@ function FeatureCardContent({ card }: { card: FeatureCard }) {
 function ProtectionCardContent({ card }: { card: ProtectionCard }) {
   return (
     <SplitLayout
-      bg="bg-[#f5f5f3]"
+      bg="bg-bgMain"
       reverse
       media={
         <div className="flex-shrink-0 w-full sm:w-64 md:w-80 lg:w-96">
           <img
             src={card.imageSrc}
             alt={card.title}
-            className="w-full h-48 sm:h-64 md:h-72 lg:h-[55%] rounded-xl object-cover shadow-2xl"
+            className="w-full h-48 sm:h-64 md:h-72 lg:h-[55%] rounded-xl object-cover"
           />
         </div>
       }
     >
-      <h2 className={`${TITLE_CLASS} font-black`}>{card.title}</h2>
-      <p className={`${BODY_CLASS} text-gray-600`}>{card.body}</p>
+      <h2 className={`${TITLE_CLASS} font-black text-black`}>{card.title}</h2>
+      <p className={`${BODY_CLASS} text-black`}>{card.body}</p>
     </SplitLayout>
   );
 }
@@ -291,7 +291,7 @@ const MOBILE_BG: Record<CardData["type"], string> = {
   video: "bg-black",
   product: "bg-[#f2f2f0]",
   feature: "bg-[#eeecea]",
-  protection: "bg-[#f5f5f3]",
+  protection: "bg-bgMain",
 };
 
 function MobileCardContent({
@@ -304,8 +304,19 @@ function MobileCardContent({
   textRef: (el: HTMLDivElement | null) => void;
 }) {
   const isVideo = card.type === "video";
-  const textColor = isVideo ? "text-white" : "text-gray-900";
-  const bodyColor = isVideo ? "text-white/80" : "text-gray-900";
+  const isProtection = card.type === "protection";
+  // El card 4 (protection) ahora va sobre fondo claro (#f4f5f6): texto negro
+  const lightText = isVideo;
+  const textColor = lightText
+    ? "text-white"
+    : isProtection
+      ? "text-black"
+      : "text-gray-900";
+  const bodyColor = lightText
+    ? "text-white/80"
+    : isProtection
+      ? "text-black"
+      : "text-gray-900";
 
   return (
     <div

@@ -9,6 +9,7 @@ import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
 import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
 import bin2 from "../../assets/images/AsphaltPlant/bin2.webp";
 import Tred from "../../assets/images/AsphaltStorage/redT.webp";
+import img1 from "../../assets/images/RapBins/rapbincustom.webp";
 ---
 
 <div id="Bolsas" class="flex flex-col max-w-7xl mx-auto px-8 min-h-[70vh]">
@@ -185,7 +186,7 @@ import Tred from "../../assets/images/AsphaltStorage/redT.webp";
     <h2 class="font-bold text-grisT text-lg md:text-2xl">
       Alimentadores de aditivos en polvo
     </h2><br />
-    <p class="font-semibold text-grisP text-xs lg:text-lg md:text-lg">
+    <p class="font-semibold text-grisP text-xs md:text-base">
       Los alimentadores de aditivos en polvo Triaso® proporcionan un
       almacenamiento y dispensado eficiente y confiable de materiales en polvo.
       Diseñados para integrarse fácilmente con tus sistemas existentes, aseguran
@@ -201,26 +202,19 @@ import Tred from "../../assets/images/AsphaltStorage/redT.webp";
   </div>
 </div>
 
-<div
-  class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2"
->
-  <div></div>
-  <div class="font-bold text-grisT text-lg md:text-2xl">
-    <p class="font-bold">Tolva de RAP</p>
-  </div>
-</div>
-<div class="bg-[#393939] w-full">
+<div class="bg-[#393939] w-full relative">
   <div
-    class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center max-w-7xl mx-auto px-8"
+    class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center max-w-7xl mx-auto px-8 gap-8 md:gap-6 py-6 md:py-12"
   >
-    <div class="py-2">
-      <Image src={bin2} alt="Powder Additives Feeder" />
-      <div class="justify-center items-center hidden lg:flex md:flex py-4">
-        <LearnBtnBlue href="/PowderAd" label="Go to page Powder Additives" />
-      </div>
+    <div
+      class="my-0 md:-my-24 relative z-10 flex justify-center order-1 md:order-0"
+    >
+      <Image src={img1} alt="Powder Additives Feeder" class="w-full" />
     </div>
-    <div>
-      <p class="font-semibold text-white text-xs lg:text-lg md:text-lg">
+    <div class="order-0 md:order-1">
+      <p class="font-bold text-lg md:text-2xl text-white">Tolva de RAP</p>
+      <br />
+      <p class="font-semibold text-white text-xs md:text-base">
         Las tolvas RAP Triaso® están diseñadas para manejar y transportar de
         manera eficiente la carpeta asfáltica reciclada (RAP) en plantas de
         asfalto. Fabricadas para ofrecer durabilidad, garantizan un flujo de
@@ -230,6 +224,9 @@ import Tred from "../../assets/images/AsphaltStorage/redT.webp";
         abrasiva del RAP, reduciendo tiempos de inactividad y asegurando una
         alta eficiencia operativa.
       </p><br />
+      <div class="justify-center items-center hidden lg:flex md:flex py-4">
+        <LearnBtnBlue href="/PowderAd" label="Go to page Powder Additives" />
+      </div>
     </div>
 
     <div class="justify-center items-center flex lg:hidden md:hidden py-4">

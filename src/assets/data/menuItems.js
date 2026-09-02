@@ -121,6 +121,10 @@ export const menuItems = [
             title: "INCORPORADORES DE HULE",
             url: "/IncorporadoresHule",
           },
+          {
+            title: "PLANTAS DE ASFALTO VIDEOS",
+            url: "/AsphaltPlantVideos",
+          },
         ],
       },
       {
@@ -168,6 +172,10 @@ export const menuItems = [
           {
             title: "VIBRATORY SCREENS",
             url: "/VibratingScreens",
+          },
+          {
+            title: "TRITURADORAS VIDEOS",
+            url: "/Trituradoras",
           },
         ],
       },

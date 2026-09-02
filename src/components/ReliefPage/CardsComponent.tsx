@@ -1,46 +1,77 @@
+import { useRef } from "react";
 import img1 from "../../assets/images/Relief/Iconos/1.webp";
 import img2 from "../../assets/images/Relief/Iconos/2.webp";
 import img3 from "../../assets/images/Relief/Iconos/3.webp";
-export default function FeatureCards() {
+import {
+  useGsapReveal,
+  useMagnetic,
+  usePointerGlow,
+} from "./reliefMotion";
+
+const CARDS = [
+  {
+    icon: img1.src,
+    title: "Visualización en tiempo real",
+    text: "Todas las variables clave disponibles al instante, desde consumos hasta temperaturas.",
+  },
+  {
+    icon: img2.src,
+    title: "Control automatizado",
+    text: "Acciones correctivas inmediatas para mantener la operación dentro de rangos seguros y eficientes.",
+  },
+  {
+    icon: img3.src,
+    title: "Monitoreo remoto en la nube",
+    text: "Acceso desde cualquier dispositivo, con reportes y alertas siempre disponibles.",
+  },
+];
+
+function Card({ icon, title, text }: (typeof CARDS)[number]) {
+  const glowRef = usePointerGlow<HTMLDivElement>();
+  const magnetRef = useMagnetic<HTMLDivElement>(0.12);
+
   return (
-    <section className="w-full bg-[#1e1e1e] py-24">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8">
-          <div className="relative rounded-2xl p-8 text-white shadow-xl overflow-hidden
-                bg-gradient-to-br from-[#0a0a0a] via-[#14145a] to-[#3b3bdc]">
+    <div
+      ref={glowRef}
+      data-reveal="scale-rot"
+      className="rlf-glow group relative overflow-hidden rounded-2xl border border-white/10 p-8 text-white shadow-xl"
+      style={{ background: "linear-gradient(140deg, #0a0a0a 0%, #14145a 55%, #14427c 100%)" }}
+    >
+      <img
+        src={icon}
+        width={144}
+        height={144}
+        loading="lazy"
+        decoding="async"
+        className="pointer-events-none absolute -right-2 bottom-0 h-36 w-36 opacity-60 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-80"
+        style={{ transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)" }}
+        alt=""
+        aria-hidden="true"
+      />
+      <div ref={magnetRef} className="relative">
+        <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#89adff]">
+          Módulo
+        </span>
+        <h3 className="mt-2 text-lg font-bold md:text-2xl">{title}</h3>
+        <p className="mt-3 max-w-[22ch] font-medium leading-relaxed text-[#fffaea]">
+          {text}
+        </p>
+      </div>
+    </div>
+  );
+}
 
-            {/* SVG de fondo */}
-            <img src={img1.src} className="absolute right-28 bottom-0 w-40 h-40 pointer-events-none opacity-70" alt="Icono1" />
+export default function FeatureCards() {
+  const scopeRef = useRef<HTMLElement>(null);
+  useGsapReveal(scopeRef);
 
-
-            {/* Contenido */}
-            <h3 className="relative text-lg md:text-2xl mb-4 font-bold">
-              Visualización en tiempo real
-            </h3>
-
-            <p className="relative text-[#fffaea] font-medium leading-relaxed">
-              Todas las variables clave disponibles al instante, desde consumos hasta temperaturas.
-            </p>
-          </div>
-
-          <div className="relative rounded-2xl p-8 text-white overflow-hidden shadow-xl bg-gradient-to-br from-[#2b2be0] via-[#3b3bdc] to-[#1a1a1a]">
-            <img src={img2.src} className="absolute right-28 bottom-0 w-40 h-40 pointer-events-none opacity-70" alt="Icono1" />
-            <h3 className="text-lg md:text-2xl font-bold mb-4">
-              Control automatizado
-            </h3>
-            <p className="text-[#fffaea] font-medium leading-relaxed">
-              Acciones correctivas inmediatas para mantener la operación dentro de rangos seguros y eficientes.
-            </p>
-          </div>
-          <div className="relative rounded-2xl p-8 text-white overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#14145a] to-[#3b3bdc] shadow-xl">
-            <img src={img3.src} className="absolute right-28 bottom-0 w-40 h-40 pointer-events-none opacity-80" alt="Icono1"/>
-            <h3 className="text-lg md:text-2xl font-bold mb-4">
-              Monitoreo remoto en la nube
-            </h3>
-            <p className="text-[#fffaea] font-medium leading-relaxed">
-              Acceso desde cualquier dispositivo, con reportes y alertas siempre disponibles.
-            </p>
-          </div>
+  return (
+    <section ref={scopeRef} className="w-full bg-[#1e1e1e]">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {CARDS.map((c) => (
+            <Card key={c.title} {...c} />
+          ))}
         </div>
       </div>
     </section>
