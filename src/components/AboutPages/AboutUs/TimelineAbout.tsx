@@ -47,66 +47,52 @@ const Index = () => {
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col space-y-5 text-sm md:text-base">
           <p>
-            Como es común en empresas innovadoras con fuertes ventas, han
-            surgido periódicamente competidores más pequeños, que captan ventas
-            limitadas con equipos de apariencia estándar pero que carecen de
-            calidad y desempeño a largo plazo. Nos enteramos de esto a través de
-            sus propios clientes, quienes con frecuencia buscan correcciones o
-            mejoras al adquirir equipo adicional, y suelen recurrir a nosotros
-            para esas soluciones.
+            Como toda empresa innovadora y con altas ventas, hemos sufrido la
+            aparición y reaparición de pequeños competidores que han logrado
+            ganarnos algunas pocas ventas con equipos de mediana y engañosa
+            apariencia, pero de baja calidad, baja productividad y altos costos
+            de operación. Esto lo sabemos por sus mismos clientes, que cuando
+            vuelven a comprar otro equipo corrigen y generalmente lo compran con
+            nosotros.
           </p>
           <p>
-            A medida que la innovación avanza en la industria, marcas
-            internacionales han entrado al mercado mexicano y captado parte de
-            la demanda. En respuesta, nos hemos mantenido consistentemente a la
-            vanguardia, desarrollando equipos de mayor calidad y desempeño. La
-            inversión continua en ingeniería y manufactura nos ha permitido
-            entregar plantas de asfalto que superan las soluciones estándar del
-            mercado y mantener nuestro liderazgo tecnológico.
+            Los clientes que han comprado nuestros equipos siempre se mantienen
+            satisfechos. Tenemos algunos que tienen hasta cinco plantas de
+            asfalto y/o trituradoras Triaso.
           </p>
           <p>
-            Los clientes que adquieren nuestro equipo se mantienen
-            consistentemente satisfechos. Muchos operan múltiples unidades;
-            algunos llegan a operar hasta cinco plantas de asfalto o
-            trituradoras de Triaso.
+            Nuestros equipos están diseñados de forma sobrada y para un régimen
+            de trabajo de 20 hrs diarias. En las plantas de asfalto es muy raro
+            el doble turno, pero sí es muy común en las trituradoras de piedra.
+            Nuestras trituradoras cumplen perfectamente con el demandante doble
+            turno que acostumbran nuestros clientes de la industria minera.
           </p>
           <p>
-            Nuestro equipo está diseñado para regímenes de operación exigentes
-            de hasta 20 horas al día. Si bien la operación en doble turno no es
-            común en plantas de asfalto, sí es estándar en aplicaciones de
-            trituración. Nuestras trituradoras están construidas para soportar
-            de manera confiable la operación continua en doble turno,
-            cumpliendo con las expectativas de los clientes mineros.
+            Hemos desarrollado con gran prioridad nuestra área de mantenimiento
+            y refacciones para atender a nuestros clientes de forma inmediata,
+            incluyendo a los que se encuentran en otros países.
           </p>
           <p>
-            Hemos desarrollado nuestro departamento de servicio y mantenimiento
-            como una prioridad, garantizando tiempos de respuesta rápidos para
-            nuestros clientes, incluyendo operaciones internacionales.
+            Sabemos que las trituradoras y las plantas de asfalto son equipos
+            críticos en una construcción. De ellos depende la producción de
+            muchos otros equipos y de todo el personal. Cumplimos con esta gran
+            responsabilidad para evitar los paros al mínimo.
           </p>
           <p>
-            Entendemos que las trituradoras y las plantas de asfalto son activos
-            críticos en la construcción y la minería. La productividad de
-            múltiples cuadrillas y procesos posteriores depende de su
-            confiabilidad. Por esta razón, asumimos la plena responsabilidad de
-            minimizar el tiempo de inactividad.
+            Como prestación adicional de nuestros equipos, les colocamos muchos
+            componentes de marcas conocidas y de fácil suministro por vendedores
+            locales, con lo que su mantenimiento es aún más sencillo.
           </p>
           <p>
-            Como ventaja adicional, nuestro equipo integra componentes de
-            marcas reconocidas con suministro fácilmente disponible a través de
-            proveedores norteamericanos, lo que simplifica el mantenimiento y
-            reduce los tiempos de entrega.
+            Sabemos que todo esto mantiene a los clientes leales a nuestra
+            marca, y que contamos con su recomendación para lograr otras ventas.
+            Por sobre todo, nuestra empresa depende de clientes contentos.
           </p>
           <p>
-            Este enfoque se ha traducido en la lealtad a largo plazo de
-            nuestros clientes y en compras recurrentes. Nuestro crecimiento
-            depende principalmente de clientes satisfechos y de sus
-            recomendaciones.
-          </p>
-          <p>
-            Aunque México sigue siendo nuestro mercado principal, hemos
-            entregado equipo en todo el mundo, incluyendo Centroamérica,
-            Sudamérica, Canadá, Estados Unidos, el norte de África, el Caribe,
-            Mauricio, Hawái, Australia, Pakistán y otras regiones.
+            A la fecha nuestro mercado principal sigue siendo México, pero hemos
+            vendido equipos en todo el mundo; Centroamérica, Sudamérica, Canada,
+            Estados Unidos, el norte de África, el Caribe, Islas Mauricio,
+            Hawaii, Australia, Pakistán, etc.
           </p>
         </div>
       </div>
@@ -132,59 +118,57 @@ const Index = () => {
 
         <div className="max-w-7xl mx-auto px-8 space-y-5 pt-5 text-sm md:text-base">
           <p>
-            Gracias a un esfuerzo sostenido y a un crecimiento continuo, nuestra
-            planta de manufactura se ha expandido hasta un área total de 18,600
-            m², completamente bardeada y pavimentada, con 5,000 m² de
-            construcción. La planta está ubicada al suroeste de la ciudad de
-            Durango, en una de las zonas industriales de más rápido crecimiento
-            de la región, con acceso directo desde un bulevar de cuatro
-            carriles con alumbrado público completo.
+            Gracias a tanto trabajo hemos crecido, y actualmente nuestra fábrica
+            cuenta con 18,600 M2 de terreno bardeado y pavimentado y 5,000 M2 de
+            construcciones. Ubicada al suroeste de la ciudad de Durango en la
+            zona de mayor crecimiento de la ciudad, con frente a uno de los
+            bulevares con más desarrollo, de cuatro carriles y buen alumbrado
+            público.
           </p>
           <p>
-            Nuestras oficinas están totalmente integradas dentro de la planta
-            de manufactura principal. Esta disposición permite una interacción
-            directa y constante entre el personal de producción y los equipos
-            administrativo, de ingeniería, diseño y ventas, lo que facilita una
-            comunicación rápida y procesos de desarrollo eficientes.
+            Nuestras oficinas están totalmente integradas a la nave principal de
+            fabricación, con lo que hay un contacto directo del personal de
+            producción con el personal administrativo, de ingeniería y diseño, y
+            de ventas. Lo que permite una comunicación y desarrollos muy ágiles.
           </p>
           <p>
-            Nuestro personal de oficina está conformado por aproximadamente
-            veinte profesionales, incluyendo directivos, ingenieros,
-            diseñadores, personal de ventas y personal administrativo.
+            En las oficinas trabajamos 20 personas, entre directivos,
+            diseñadores, vendedores y administrativos.
           </p>
           <p>
-            Dependiendo de la carga de trabajo, la planta de manufactura emplea
-            un mínimo de cincuenta personas, cifra que puede llegar hasta 250
-            durante los periodos de mayor producción. Este equipo incluye
-            ingenieros, técnicos especializados, soldadores, ayudantes y
-            personal de apoyo. Nuestros técnicos de instalación e instructores
-            de operadores también tienen su base aquí mientras esperan
-            asignaciones en campo.
+            En el resto de la fábrica trabaja un mínimo de 50 personas cuando la
+            carga de trabajo es baja, llegando hasta 250 personas cuando tenemos
+            mucho que fabricar. Este personal se compone de ingenieros, técnicos
+            especializados, soldadores, ayudantes y personal de apoyo. Aquí
+            también permanecen en espera de ser llamados a campo nuestros
+            técnicos instaladores y operadores capacitadores.
           </p>
           <p>
-            La planta principal está equipada para manufactura industrial
-            pesada, e incluye áreas de corte y soldadura, corte por plasma,
-            centros de maquinado CNC, ensamble eléctrico y electrónico, pintura
-            electrostática y procesos relacionados.
+            En la nave principal tenemos corte y soldadura general, corte con
+            plasma, centro de maquinado CNC, montaje eléctrico-electrónico,
+            pintura electrostática, etc.
           </p>
           <p>
-            Otras áreas incluyen almacenes, una pequeña fundidora de hierro,
-            zonas de almacenamiento y patios de maniobras.
+            Tenemos todo el equipo necesario para realizar la manufactura con
+            los estándares de calidad más altos: Tornos y máquinas herramientas
+            CNC, mesas de corte por plasma, soldadoras de microalambre, equipos
+            de corte, cabina de pintura electrostática, equipo de fundición,
+            roladoras, dobladoras, cizallas, sierra-cintas, taladros de
+            pedestal, punzonadoras, herramienta, montacargas, grúas, etc.
           </p>
           <p>
-            Contamos con una amplia gama de equipo industrial necesario para
-            cumplir con altos estándares de manufactura, incluyendo centros de
-            maquinado CNC, mesas de corte por plasma, sistemas de soldadura por
-            microalambre, equipo de corte, cabinas de pintura electrostática,
-            equipo de fundición de hierro, roladoras, dobladoras, cizallas,
-            sierras de cinta, taladros de banco, punzonadoras, herramientas de
-            manejo de materiales, montacargas y grúas.
+            Contamos con un avanzado y ágil departamento de ingeniería y diseño,
+            único en México en plantas de asfalto y trituradoras, y a la altura
+            de los mejores a nivel mundial. Está integrado por ingenieros
+            especializados y experimentados, además de equipo de cómputo y
+            software avanzado para diseño y simulaciones de trabajo en
+            condiciones reales. Con ésto y una fase de pruebas propia evitamos
+            la muy común práctica en la industria de experimentar con los
+            clientes.
           </p>
           <p>
-            Este nivel de integración, experiencia y capacidad de manufactura
-            nos ha posicionado como el fabricante de plantas de asfalto y
-            trituradoras de roca con mayor conocimiento y experiencia en
-            México.
+            Nadie sabe más de plantas de asfalto y de trituradoras de roca en
+            México que nosotros.
           </p>
         </div>
         <div></div>

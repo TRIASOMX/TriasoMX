@@ -1,4 +1,16 @@
 import { useState, useEffect } from "react";
+import {
+  Truck,
+  CalendarClock,
+  Clock,
+  PackageCheck,
+  Workflow,
+} from "lucide-react";
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(SplitText);
+
 //Contraflujo
 import p1 from "../../assets/images/DrumMixers/Contraflujo/CDesamac.webp";
 import p2 from "../../assets/images/DrumMixers/Contraflujo/Cplus.webp";
@@ -96,7 +108,7 @@ type PlantType = "contraflujo" | "flujo-paralelo";
 interface ProductModel {
   name: string;
   image: any;
-  description: string;
+  description: React.ReactNode;
   specs: { label: string; value: string }[];
   tags: any[];
   route?: string;
@@ -128,7 +140,8 @@ const data: Record<PlantType, PlantData> = {
     title: "Contraflujo",
     image: hero1.src,
     features: [
-      "Calentamiento ecológico",
+      "Casa de bolsas",
+      "Completamente ecológica",
       "Recuperación total de finos",
       "Producción continua",
     ],
@@ -148,8 +161,12 @@ const data: Record<PlantType, PlantData> = {
         name: "Desamaq",
         image: p1.src,
         route: "/TamborMezcla/Contraflujo/ContraDesamaq",
-        description:
-          "Una opción más económica con configuraciones esenciales, sin comprometer la calidad de la mezcla.",
+        description: (
+          <>
+            Una <span className="text-black">opción más económica</span> con
+            configuraciones esenciales, sin comprometer la calidad de la mezcla.
+          </>
+        ),
         specs: [
           { label: "Capacidad", value: "10 ton" },
           { label: "Garantía", value: "12 meses" },
@@ -157,22 +174,27 @@ const data: Record<PlantType, PlantData> = {
         tags: [
           <>
             {" "}
-            <span className="font-bold"> El mejor precio</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">
+            <span className="font-bold text-base">
+              {" "}
+              El mejor precio
+            </span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">
               en el mercado de plantas de asfalto de contraflujo
             </span>{" "}
           </>,
           <>
             {" "}
-            <span className="font-bold">Economía</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">de operación</span>{" "}
+            <span className="font-bold text-base">Economía</span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">de operación</span>{" "}
           </>,
           <>
             {" "}
-            <span className="text-xs text-[#5d5d5d]">
+            <span className="text-sm text-[#5d5d5d]">
               Desempeño
             </span> <br />{" "}
-            <span className="font-bold">libre de problemas </span>{" "}
+            <span className="font-bold text-base">
+              libre de problemas{" "}
+            </span>{" "}
           </>,
         ],
       },
@@ -180,8 +202,13 @@ const data: Record<PlantType, PlantData> = {
         name: "Plus",
         image: p2.src,
         route: "/TamborMezcla/Contraflujo/ContraPlus",
-        description:
-          "Diseñada para un rendimiento superior con equipamiento avanzado.",
+        description: (
+          <>
+            Diseñada para un
+            <span className="text-black"> rendimiento superior </span>con
+            equipamiento avanzado.
+          </>
+        ),
         specs: [
           { label: "Capacidad", value: "10 ton" },
           { label: "Garantía", value: "18 meses" },
@@ -189,26 +216,36 @@ const data: Record<PlantType, PlantData> = {
         tags: [
           <>
             {" "}
-            <span className="font-bold"> Gran economía</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">de compra</span>{" "}
+            <span className="font-bold text-base">
+              {" "}
+              Gran economía
+            </span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">de compra</span>{" "}
           </>,
           <>
             {" "}
-            <span className="font-bold">Gran economía</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">de operación</span>{" "}
+            <span className="font-bold text-base">
+              Gran economía
+            </span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">de operación</span>{" "}
           </>,
           <>
             {" "}
-            <span className="font-bold">Alto</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">desempeño</span>{" "}
+            <span className="font-bold text-base">Alto</span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">desempeño</span>{" "}
           </>,
         ],
       },
       {
         name: "Pro+",
         image: p3.src,
-        description:
-          "Nuestro modelo más equipado y moderno, para una operación sin comparación.",
+        description: (
+          <>
+            Nuestro modelo más
+            <span className="text-black"> equipado y moderno</span>, para una
+            operación sin comparación.
+          </>
+        ),
         route: "/DrumMixers",
         specs: [
           { label: "Capacidad", value: "20 ton" },
@@ -217,18 +254,20 @@ const data: Record<PlantType, PlantData> = {
         tags: [
           <>
             {" "}
-            <span className="font-bold"> Economía</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">de compra</span>{" "}
+            <span className="font-bold text-base"> Economía</span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">de compra</span>{" "}
           </>,
           <>
             {" "}
-            <span className="font-bold">Máxima economía</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">de operación</span>{" "}
+            <span className="font-bold text-base">
+              Máxima economía
+            </span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">de operación</span>{" "}
           </>,
           <>
             {" "}
-            <span className="font-bold">El mejor</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">desempeño</span>{" "}
+            <span className="font-bold text-base">El mejor</span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">desempeño</span>{" "}
           </>,
         ],
       },
@@ -446,8 +485,13 @@ const data: Record<PlantType, PlantData> = {
         name: "Desamaq",
         image: p4.src,
         route: "/TamborMezcla/Paralelo/ParaleloDesamaq",
-        description:
-          "Una opción más económica con configuraciones esenciales, sin comprometer la calidad de la mezcla.",
+        description: (
+          <>
+            Una opción
+            <span className="text-black"> más económica </span>con
+            configuraciones esenciales, sin comprometer la calidad de la mezcla.
+          </>
+        ),
         specs: [
           { label: "Capacidad", value: "10 ton" },
           { label: "Garantía", value: "12 meses" },
@@ -455,22 +499,27 @@ const data: Record<PlantType, PlantData> = {
         tags: [
           <>
             {" "}
-            <span className="font-bold"> El mejor precio</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">
+            <span className="font-bold text-base">
+              {" "}
+              El mejor precio
+            </span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">
               en el mercado de plantas de asfalto de flujo paralelo
             </span>{" "}
           </>,
           <>
             {" "}
-            <span className="font-bold">Economía</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">de operación</span>{" "}
+            <span className="font-bold text-base">Economía</span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">de operación</span>{" "}
           </>,
           <>
             {" "}
-            <span className="text-xs text-[#5d5d5d]">
+            <span className="text-sm text-[#5d5d5d]">
               Desempeño
             </span> <br />{" "}
-            <span className="font-bold">libre de problemas </span>{" "}
+            <span className="font-bold text-base">
+              libre de problemas{" "}
+            </span>{" "}
           </>,
         ],
       },
@@ -478,8 +527,13 @@ const data: Record<PlantType, PlantData> = {
         name: "Plus",
         image: p5.src,
         route: "/TamborMezcla/Paralelo/ParaleloPlus",
-        description:
-          "Diseñada para un rendimiento superior con equipamiento avanzado.",
+        description: (
+          <>
+            Diseñada para un
+            <span className="text-black"> rendimiento superior </span>con
+            equipamiento avanzado.
+          </>
+        ),
         specs: [
           { label: "Capacidad", value: "10 ton" },
           { label: "Garantía", value: "18 meses" },
@@ -487,18 +541,23 @@ const data: Record<PlantType, PlantData> = {
         tags: [
           <>
             {" "}
-            <span className="font-bold"> Gran economía</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">de compra</span>{" "}
+            <span className="font-bold text-base">
+              {" "}
+              Gran economía
+            </span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">de compra</span>{" "}
           </>,
           <>
             {" "}
-            <span className="font-bold">Gran economía</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">de operación</span>{" "}
+            <span className="font-bold text-base">
+              Gran economía
+            </span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">de operación</span>{" "}
           </>,
           <>
             {" "}
-            <span className="font-bold">Alto</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">desempeño</span>{" "}
+            <span className="font-bold text-base">Alto</span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">desempeño</span>{" "}
           </>,
         ],
       },
@@ -506,8 +565,13 @@ const data: Record<PlantType, PlantData> = {
         name: "Pro+",
         image: p6.src,
         route: "/TamborMezcla/Paralelo/ParaleloPro",
-        description:
-          "Nuestro modelo más equipado y moderno, para una operación sin comparación.",
+        description: (
+          <>
+            Nuestro modelo más
+            <span className="text-black"> equipado y moderno </span>, para una
+            operación sin comparación.
+          </>
+        ),
         specs: [
           { label: "Capacidad", value: "20 ton" },
           { label: "Garantía", value: "24 meses" },
@@ -515,18 +579,20 @@ const data: Record<PlantType, PlantData> = {
         tags: [
           <>
             {" "}
-            <span className="font-bold"> Economía</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">de compra</span>{" "}
+            <span className="font-bold text-base"> Economía</span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">de compra</span>{" "}
           </>,
           <>
             {" "}
-            <span className="font-bold">Máxima economía</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">de operación</span>{" "}
+            <span className="font-bold text-base">
+              Máxima economía
+            </span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">de operación</span>{" "}
           </>,
           <>
             {" "}
-            <span className="font-bold">El mejor</span> <br />{" "}
-            <span className="text-xs text-[#5d5d5d]">desempeño</span>{" "}
+            <span className="font-bold text-base">El mejor</span> <br />{" "}
+            <span className="text-sm text-[#5d5d5d]">desempeño</span>{" "}
           </>,
         ],
       },
@@ -896,6 +962,39 @@ export const symbols: Record<PlantType, Record<number, SymbolItem>> = {
 
 const modelColumns = ["Desamaq", "Plus", "Pro+"];
 
+const beneficios = [
+  {
+    Icon: Truck,
+    title: "Menores tiempos en carga de camiones",
+    description:
+      "Descarga rápida de la planta al camión, con la mezcla lista en el momento, con control total del sistema de apertura, cierre y automatización.",
+  },
+  {
+    Icon: CalendarClock,
+    title: "Optimización de jornadas de trabajo",
+    description:
+      "Arranques a tiempo, sin paros por fallas imprevistas, le permite planear turnos, entregas y avance de obra con certeza. La jornada se aprovecha por completo.",
+  },
+  {
+    Icon: Clock,
+    title: "Ahorro de horas hombre",
+    description:
+      "La planta reduce personal necesario para operar y el tiempo para tareas manuales. Reflejandose directamente en el costo por tonelada.",
+  },
+  {
+    Icon: PackageCheck,
+    title: "Menos paros por maniobras logísticas",
+    description:
+      "Menos esperas en patio, menos tiempos muertos y menos horas hombre por turno.",
+  },
+  {
+    Icon: Workflow,
+    title: "Mejor control de flujos de material",
+    description:
+      "Control total del flujo de material desde la alimentación hasta la descarga en camión. Menos desperdicio, menos retrabajo, más margen.",
+  },
+];
+
 // REEMPLAZAR A VALORES
 const colors = {
   industrial: "#000000",
@@ -920,6 +1019,64 @@ export default function ProductSelector() {
   const isTableVisible = tableOpen;
 
   const plant = data[active];
+
+  // Animación línea por línea (escalera, de abajo a arriba) en la descripción
+  // de los cards de beneficios al hacer hover — solo desktop.
+  useEffect(() => {
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 768px)", () => {
+      const cards = gsap.utils.toArray<HTMLElement>(".beneficio-card");
+      const cleanups: Array<() => void> = [];
+
+      cards.forEach((card) => {
+        const wrap = card.querySelector<HTMLElement>(".beneficio-desc-wrap");
+        const p = card.querySelector<HTMLElement>(".beneficio-desc");
+        if (!wrap || !p) return;
+
+        const split = SplitText.create(p, {
+          type: "lines",
+          mask: "lines",
+          linesClass: "beneficio-line",
+        });
+
+        gsap.set(p, { opacity: 1 });
+        gsap.set(wrap, { height: 0 });
+        gsap.set(split.lines, { yPercent: 120, autoAlpha: 0 });
+
+        const tl = gsap.timeline({ paused: true });
+        tl.to(wrap, { height: "auto", duration: 0.45, ease: "power2.out" }, 0);
+        tl.to(
+          split.lines,
+          {
+            yPercent: 0,
+            autoAlpha: 1,
+            duration: 0.5,
+            ease: "power3.out",
+            stagger: 0.09,
+          },
+          0.1,
+        );
+
+        const enter = () => tl.play();
+        const leave = () => tl.reverse();
+        card.addEventListener("mouseenter", enter);
+        card.addEventListener("mouseleave", leave);
+
+        cleanups.push(() => {
+          card.removeEventListener("mouseenter", enter);
+          card.removeEventListener("mouseleave", leave);
+          tl.kill();
+          split.revert();
+          gsap.set(wrap, { clearProps: "height" });
+        });
+      });
+
+      return () => cleanups.forEach((fn) => fn());
+    });
+
+    return () => mm.revert();
+  }, []);
 
   const getSymbol = (number: string) => {
     return symbols[active][Number(number)] || null;
@@ -981,14 +1138,13 @@ export default function ProductSelector() {
     <section
       style={{
         width: "100%",
-        maxWidth: "72rem",
         margin: "40px auto",
         padding: "3rem 1rem",
         fontFamily: "sans-serif",
       }}
     >
       {/* Selector Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-6 mb-6 md:mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-6 mb-6 md:mb-16 max-w-[90rem] mx-auto">
         {(Object.keys(data) as PlantType[]).map((key) => {
           const item = data[key];
           const isActive = active === key;
@@ -1008,7 +1164,7 @@ export default function ProductSelector() {
               )}
             >
               {/* Imagen flotante */}
-              <div className="absolute -top-20 left-1/2 -translate-x-1/2 z-10 w-[70%]">
+              <div className="absolute -top-36 left-1/2 -translate-x-1/2 z-10 w-[70%]">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -1022,14 +1178,16 @@ export default function ProductSelector() {
 
               {/* Contenido */}
               <div className="flex flex-col items-center justify-start md:gap-6">
-                <div className="flex-1 text-center">
-                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                <div className="flex-1 text-start">
+                  <h3 className="text-xl md:text-2xl font-bold mb-3">
+                    {item.title}
+                  </h3>
 
-                  <ul className="hidden md:block space-y-1">
+                  <ul className="hidden md:block space-y-1 w-full justify-start">
                     {item.features.map((f) => (
                       <li
                         key={f}
-                        className="text-sm text-muted-foreground flex items-start gap-2 justify-center"
+                        className="text-xs md:text-sm text-muted-foreground flex items-start gap-2 justify-start w-full text-left"
                       >
                         <span className=" mt-0.5">•</span>
                         {f}
@@ -1037,14 +1195,14 @@ export default function ProductSelector() {
                     ))}
                   </ul>
 
-                  <div className="hidden md:flex flex-col flex-wrap gap-4 mt-4 items-center">
+                  <div className="hidden md:flex flex-col flex-wrap gap-4 mt-4 items-start">
                     {item.stats.map((s) => (
-                      <div key={s.label} className="text-center">
-                        <span className="text-base md:text-lg font-bold text-industrial">
+                      <div key={s.label} className="text-start">
+                        <span className="text-base md:text-xl font-bold text-industrial">
                           {s.label}
                         </span>
                         {s.sub && (
-                          <p className="text-xs text-muted-foreground max-w-[140px]">
+                          <p className="text-xs md:text-sm text-muted-foreground w-full">
                             {s.sub}
                           </p>
                         )}
@@ -1057,14 +1215,13 @@ export default function ProductSelector() {
           );
         })}
       </div>
-
       {/* ── desc ── */}
       <div
         style={{
           textAlign: "center",
-          marginBottom: "3rem",
-          maxWidth: "48rem",
-          margin: "0 auto 3rem",
+          width: "100%",
+          margin: "0 auto 4rem",
+          maxWidth: "90rem",
         }}
       >
         <h2
@@ -1091,8 +1248,11 @@ export default function ProductSelector() {
           {plant.description}
         </p>
       </div>
-
       <div
+        style={{
+          maxWidth: "90rem",
+          margin: "0 auto",
+        }}
         className="flex md:grid md:grid-cols-3 gap-6 md:gap-[1.5rem] mb-[4rem]
                    overflow-x-auto md:overflow-visible
                    snap-x snap-mandatory
@@ -1124,10 +1284,10 @@ export default function ProductSelector() {
                 paddingTop: "3rem",
               }}
             >
-              <div style={{ padding: "1.5rem" }}>
+              <div className="p-3 md:p-6">
                 <h4
+                  className="text-xl md:text-3xl"
                   style={{
-                    fontSize: "1.125rem",
                     fontWeight: 700,
                     color: colors.foreground,
                     marginBottom: "0.5rem",
@@ -1137,8 +1297,8 @@ export default function ProductSelector() {
                 </h4>
 
                 <p
+                  className="text-sm font-bold text-grisPPP"
                   style={{
-                    fontSize: "0.750rem",
                     color: "#5d5d5d",
                     marginBottom: "0.80rem",
                     lineHeight: 1.25,
@@ -1154,19 +1314,21 @@ export default function ProductSelector() {
                       display: "flex",
                       flexDirection: "column",
                       padding: "0.15rem 0",
-                      fontSize: "0.875rem",
                     }}
                   >
-                    <span style={{ fontWeight: 600 }}>{s.value}</span>
-                    <span className="text-xs text-[#5d5d5d]">{s.label}</span>
+                    <span
+                      className="text-base md:text-lg"
+                      style={{ fontWeight: 600 }}
+                    >
+                      {s.value}
+                    </span>
+                    <span className="text-sm text-[#5d5d5d]">{s.label}</span>
                   </div>
                 ))}
 
-                <div className="mt-2 md:mt-4 flex flex-col gap-1">
+                <div className="mt-2 md:mt-4 flex flex-col gap-2">
                   {model.tags.map((tag, i) => (
-                    <span key={i} className="text-sm">
-                      {tag}
-                    </span>
+                    <span key={i}>{tag}</span>
                   ))}
                 </div>
 
@@ -1181,9 +1343,11 @@ export default function ProductSelector() {
           </div>
         ))}
       </div>
-
       {/* tabla */}
-      <div style={{ marginBottom: "2rem" }}>
+      <div
+        className="py-10 md:py-20"
+        style={{ marginBottom: "2rem", maxWidth: "90rem", margin: "0 auto" }}
+      >
         <h2
           style={{
             fontSize: "clamp(1.5rem, 3vw, 1.875rem)",
@@ -1345,7 +1509,6 @@ export default function ProductSelector() {
           </div>
         </div>
       </div>
-
       {/* modal */}
       {symbolModal && (
         <div
@@ -1420,7 +1583,6 @@ export default function ProductSelector() {
           </div>
         </div>
       )}
-
       {/* descripción final */}
       <div className="flex flex-col justify-center items-center py-4 md:py-10">
         <div>
@@ -1433,23 +1595,45 @@ export default function ProductSelector() {
           <p className="px-5 py-2"> Comparar más modelos</p>
         </div>
       </div>
-      <div className="max-w-7xl px-0 md:px-8 space-y-2 flex flex-col lg:flex-row md:flex-row justify-between items-center">
-        <div className="font-bold text-black text-lg md:text-2xl w-full">
-          <h1>Con estos equipos usted podrá</h1>
-          <h1>abatir las costosas horas de</h1>
-          <h1>producción:</h1>
-        </div>
-        <div className="w-full px-8">
-          <ul className="list-disc text-sm md:text-base">
-            <li>Menores tiempos en carga de camiones.</li>
-            <li>Optimización de jornadas de trabajo.</li>
-            <li>Ahorro de horas hombre.</li>
-            <li>Menos paros por maniobras logísticas.</li>
-            <li>Mejor control de flujos de material.</li>
-          </ul>
+      <div className="max-w-7xl px-0 md:px-8 space-y-2 flex flex-col justify-between items-center py-10 md:py-20">
+        <div className="font-bold text-black w-full">
+          <h1 className="text-lg md:text-5xl">
+            Con estos equipos usted podrá abatir las costosas horas de
+            producción:
+          </h1>
         </div>
       </div>
+      <div
+        className="flex md:grid md:grid-cols-3 gap-6 px-4 md:px-8 pb-4
+                   overflow-x-auto md:overflow-visible
+                   snap-x snap-mandatory scroll-smooth w-full"
+      >
+        {beneficios.map((b, i) => (
+          <div
+            key={i}
+            className="beneficio-card group shrink-0 snap-center w-[80%] sm:w-[55%] md:w-auto
+                       md:h-[65vh] flex flex-col overflow-hidden
+                       rounded-2xl bg-white p-6 md:p-8
+                       transition-colors duration-500 hover:bg-redBg"
+          >
+            <b.Icon className="w-10 md:w-16 h-10 md:h-16 shrink-0 text-black group-hover:text-white transition-colors duration-500" />
 
+            <div className="mt-auto">
+              <h3 className="text-lg md:text-4xl font-bold text-black group-hover:text-white transition-colors duration-500">
+                {b.title}
+              </h3>
+              <div className="beneficio-desc-wrap overflow-hidden h-auto md:h-0">
+                <p
+                  className="beneficio-desc text-xs md:text-xl font-bold text-black group-hover:text-white
+                             pt-2 opacity-100 md:opacity-0"
+                >
+                  {b.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
       {/* animación indicador */}
       <style>{`
         @keyframes pulse {

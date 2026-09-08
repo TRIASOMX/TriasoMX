@@ -102,7 +102,7 @@ const OdometerFlujo = () => {
               <h1>.</h1>
               <Odometer value={value7} format="(,ddd)" duration={2000} />
               <Odometer value={value8} format="(,ddd)" duration={2000} />
-              <h1 className="text-sm font-normal ml-3">m3</h1>
+              <h1 className="text-sm font-normal ml-3">M3</h1>
             </div>
             <p className="text-[#4F4F4F] text-center lg:text-start w-full">
               Capacidad de bacha

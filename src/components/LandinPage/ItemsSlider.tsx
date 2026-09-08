@@ -17,7 +17,7 @@ export default function ItemsSlider({ images }: Props) {
     if (!scrollRef.current) return;
 
     const card = scrollRef.current.querySelector(
-      "[data-card]"
+      "[data-card]",
     ) as HTMLDivElement;
 
     if (!card) return;
@@ -32,7 +32,7 @@ export default function ItemsSlider({ images }: Props) {
   };
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 mt-12 md:mt-20">
+    <section className="w-full max-w-7xl mx-auto px-4 mt-2">
       <div className="relative">
         <div
           ref={scrollRef}

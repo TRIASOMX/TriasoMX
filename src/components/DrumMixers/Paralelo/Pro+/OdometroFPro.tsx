@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
-import odoImg from "../../../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFpPro.webp";
+import odoImg from "../../../../assets/images/DrumMixers/Low/odometerImgLow.webp";
 import "odometer/themes/odometer-theme-default.css";
 import FillLinkButton from "../../../unitComponents/FillLinkButton";
 
@@ -14,6 +14,7 @@ const OdometerDesamaq = () => {
   const [, setValue4] = useState(0);
   const [value5, setValue5] = useState(0);
   const [value6, setValue6] = useState(0);
+  const [value7, setValue7] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,7 +28,7 @@ const OdometerDesamaq = () => {
           setValue4(0);
           setValue5(0);
           setValue6(0);
-
+          setValue7(0);
           setTimeout(() => {
             setValue(40);
             setValue5(14);
@@ -37,6 +38,7 @@ const OdometerDesamaq = () => {
             setValue1(0);
 
             setValue2(2);
+            setValue7(3);
           }, 300); // Pequeño retraso para asegurar reinicio
         }
       },
@@ -103,13 +105,10 @@ const OdometerDesamaq = () => {
               <Odometer value={value2} format="(,ddd)" duration={2000} />
               <h1>.</h1>
               <Odometer value={value1} format="(,ddd)" duration={2000} />
-              <h1 className="text-sm font-normal ml-3">%</h1>
+              <h1 className="text-sm font-normal ml-3">M3</h1>
             </div>
             <p className="text-[#4F4F4F] text-center lg:text-start w-full">
-              Incorporación de RAP
-            </p>
-            <p className="text-[#4F4F4F] text-center lg:text-start text-xs w-full">
-              Pavimento Asfáltico Recuperado
+              Capacidad de bacha
             </p>
           </div>
           <div className="hidden md:block">

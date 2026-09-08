@@ -1,0 +1,207 @@
+---
+import DFAT3 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT3.webp";
+import caseta from "../../assets/images/Casetas/remol.webp";
+import baghouse from "../../assets/images/BagHouses/bagHouses1.webp";
+import tolvasAgregados from "../../assets/images/PowderA/binLids.webp";
+import tolvasAditivos from "../../assets/images/BinUnits/TlvU2CF.webp";
+import rapBin from "../../assets/images/RapBins/rapbincustom.webp";
+import silo from "../../assets/images/HotMix/siloBG.webp";
+
+import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
+
+import OSistem from "../unitComponents/SistemaOBlack.astro";
+
+interface ConfigItem {
+  title: string;
+  description: string;
+  image: string;
+  route: string;
+}
+
+const configuraciones: ConfigItem[] = [
+  {
+    title: "Tanques de almacenamiento de asfalto",
+    description:
+      "Los tanques de asfalto Triaso® están diseñados para almacenar y mantener el asfalto en condiciones óptimas, asegurando una calidad y un desempeño constantes.",
+    image: DFAT3.src,
+    route: "/AsphaltStorage",
+  },
+  {
+    title: "Casetas de control",
+    description:
+      "Todos los procesos son controlados desde una consola de control remolcable, ideal para reubicaciones rápidas y transporte sencillo.",
+    image: caseta.src,
+    route: "/Casetas/CasetaMontable",
+  },
+  {
+    title: "Casas de bolsas",
+    description:
+      "Las casas de bolsas Triaso® están diseñadas para una captura total de finos y control total de humos contaminantes.",
+    image: baghouse.src,
+    route: "/BagHouses",
+  },
+  {
+    title: "Tolvas de agregados",
+    description:
+      "La unidad de tolvas Triaso® es un equipo esencial en la producción de mezcla asfáltica, garantizamos un almacenamiento preciso y un flujo constante de agregados hacia el sistema de mezclado.",
+    image: tolvasAgregados.src,
+    route: "/BinUnits",
+  },
+  {
+    title: "Tolvas alimentadora de aditivos",
+    description:
+      "Los alimentadores de aditivos en polvo con tolva Triaso® están diseñados para el almacenamiento y manejo eficiente de materiales secos y pulverizados.",
+    image: tolvasAditivos.src,
+    route: "/PowderAd",
+  },
+  {
+    title: "Tolvas de RAP",
+    description:
+      "Las unidades de tolvas de RAP Triaso® están diseñadas para almacenamiento preciso y la dosificación controlada de pavimento asfáltico recuperado (RAP) en la producción del tambor mezclador. ",
+    image: rapBin.src,
+    route: "/RapBins",
+  },
+  {
+    title: "Silos de mezcla asfáltica",
+    description:
+      "Los silos de almacenamiento de mezcla asfáltica Triaso® están diseñados para optimizar el almacenamiento, manejo y despacho de la mezcla asfáltica, asegurando un desempeño de alta calidad y cumpliendo con las exigencias de los proyectos de construcción modernos. ",
+    image: silo.src,
+    route: "/HotMix",
+  },
+];
+---
+
+<section class="w-full py-10 md:py-20">
+  <div class="w-full max-w-3xl mx-auto text-center px-4 mb-10 md:mb-16">
+    <h2 class="text-2xl md:text-5xl font-semibold text-black">
+      Configuración completa de una planta de asfalto
+    </h2>
+  </div>
+
+  <div
+    class="group/grid flex md:grid md:grid-cols-3 gap-6 px-4 md:px-8 pb-4 overflow-x-auto md:overflow-visible snap-x snap-mandatory scroll-smooth w-full"
+  >
+    {
+      configuraciones.map((item) => (
+        <a
+          href={item.route}
+          class="config-card group/card shrink-0 snap-center w-[80%] sm:w-[55%] md:w-auto flex flex-col gap-3"
+        >
+          <div class="relative h-[50vh] md:h-[65vh] flex flex-col overflow-hidden rounded-2xl bg-black p-6 md:p-8 opacity-100 transition-opacity duration-500 md:group-has-[a:hover]/grid:opacity-40 md:group-hover/card:!opacity-100">
+            {/* Indicador "navegar" — esquina superior derecha */}
+            <span class="absolute top-4 right-4 md:top-6 md:right-6 z-20 flex items-center gap-1 text-[11px] md:text-xs font-semibold uppercase tracking-wide text-white/80 transition-colors duration-500 md:group-hover/card:text-white">
+              Navegar
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-3.5 h-3.5 transition-transform duration-500 md:group-hover/card:translate-x-0.5 md:group-hover/card:-translate-y-0.5"
+              >
+                <path d="M7 7h10v10" />
+                <path d="M7 17 17 7" />
+              </svg>
+            </span>
+
+            {/* Imagen centrada en toda la card, independiente del texto */}
+            <div class="pointer-events-none absolute inset-0 flex items-center justify-center p-6 md:p-8">
+              <img
+                src={item.image}
+                alt={item.title}
+                loading="lazy"
+                class="max-h-[55%] md:max-h-[60%] w-auto max-w-full object-contain"
+              />
+            </div>
+
+            {/* Espacio reservado para el texto, alineado al fondo de la card */}
+            <div class="relative z-10 shrink-0 h-40 md:h-48 mt-auto flex items-end overflow-hidden">
+              <p class="config-desc text-sm md:text-xl font-semibold text-white/90 opacity-100 md:opacity-0">
+                {item.description}
+              </p>
+            </div>
+          </div>
+
+          <h3 class="font-bold text-black text-lg md:text-2xl">{item.title}</h3>
+        </a>
+      ))
+    }
+  </div>
+  <OSistem />
+  <div class="w-full">
+    <section>
+      <div
+        class="relative bg-[#e6a98a] text-center py-10 md:py-20 px-6 rounded-b-[60%]"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Agende una reunión</h2>
+
+        <p class="text-sm md:text-base mb-8 max-w-2xl mx-auto">
+          Cuéntenos más sobre su proyecto para identificar la solución
+          industrial que mejor se ajuste a sus necesidades.
+        </p>
+
+        <ScheduleBtn />
+      </div>
+    </section>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { SplitText } from "gsap/SplitText";
+
+  gsap.registerPlugin(SplitText);
+
+  let ctx: gsap.Context | null = null;
+
+  function initConfigLines() {
+    ctx?.revert();
+    ctx = gsap.context(() => {
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 768px)", () => {
+        const cards = gsap.utils.toArray<HTMLElement>(".config-card");
+
+        cards.forEach((card) => {
+          const p = card.querySelector<HTMLElement>(".config-desc");
+          if (!p) return;
+
+          const split = SplitText.create(p, {
+            type: "lines",
+            mask: "lines",
+            linesClass: "config-line",
+          });
+
+          gsap.set(p, { opacity: 1 });
+          gsap.set(split.lines, { yPercent: 120, autoAlpha: 0 });
+
+          const tl = gsap.timeline({ paused: true });
+          tl.to(split.lines, {
+            yPercent: 0,
+            autoAlpha: 1,
+            duration: 0.5,
+            ease: "power3.out",
+            stagger: 0.09,
+          });
+
+          const enter = () => tl.play();
+          const leave = () => tl.reverse();
+          card.addEventListener("mouseenter", enter);
+          card.addEventListener("mouseleave", leave);
+
+          return () => {
+            card.removeEventListener("mouseenter", enter);
+            card.removeEventListener("mouseleave", leave);
+            tl.kill();
+            split.revert();
+          };
+        });
+      });
+    });
+  }
+
+  initConfigLines();
+  document.addEventListener("astro:page-load", initConfigLines);
+</script>
