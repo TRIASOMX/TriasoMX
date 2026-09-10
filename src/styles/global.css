@@ -138,32 +138,6 @@ video {
   --rlf-grid: rgba(137, 173, 255, 0.12);
 }
 
-/* Corchetes HUD en esquinas */
-.rlf-hud {
-  position: relative;
-}
-.rlf-hud::before,
-.rlf-hud::after {
-  content: "";
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border: 2px solid #ca1c1c;
-  pointer-events: none;
-}
-.rlf-hud::before {
-  top: 0;
-  left: 0;
-  border-right: 0;
-  border-bottom: 0;
-}
-.rlf-hud::after {
-  bottom: 0;
-  right: 0;
-  border-left: 0;
-  border-top: 0;
-}
-
 /* Tarjeta con glow que sigue al cursor */
 .rlf-glow {
   position: relative;
@@ -225,3 +199,16 @@ video {
 /* Sin animaciones CSS infinitas: se retiraron scanline/pulse/ticker/spin
    por costo de compositor y batería. Las micro-interacciones viven en
    .rlf-glow y .rlf-btn (solo en hover). */
+
+/* ================================================================== *
+ *  Relief — "Un informe, toda la operación" (ReliefReport)             *
+ * ================================================================== */
+.rmr ::selection {
+  background: rgba(20, 66, 124, 0.16);
+}
+.rmr-grid {
+  background-image:
+    linear-gradient(rgba(20, 66, 124, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 66, 124, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}

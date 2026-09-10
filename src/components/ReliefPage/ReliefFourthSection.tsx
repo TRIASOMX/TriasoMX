@@ -1,12 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import img2 from "../../assets/images/Relief/TriasoOS4.webp";
+import img2 from "../../assets/images/Relief/TriasoOS8.webp";
 import img3 from "../../assets/images/Relief/TriasoOS3.webp";
-import {
-  CountUp,
-  refreshTriggers,
-  useGsapReveal,
-  useMagnetic,
-} from "./reliefMotion";
+import { CountUp, refreshTriggers, useGsapReveal } from "./reliefMotion";
 
 /* ------------------------------------------------------------------ *
  *  Acordeón tech con revelado por clip-path                           *
@@ -46,15 +41,26 @@ function Panel({
           aria-expanded={isOpen}
           className="flex w-full items-start gap-5 text-left text-white"
         >
-          <span className="mt-1 flex h-9 w-9 flex-none items-center justify-center rounded-md border border-white/40 text-xl font-light leading-none">
-            <span
-              className={`transition-transform duration-500 ${isOpen ? "rotate-45" : ""}`}
+          <span className="mt-1 flex h-9 w-9 flex-none items-center justify-center rounded-md bg-white/10">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+              className={`transition-transform duration-500 ${isOpen ? "rotate-180" : ""}`}
               style={{
                 transitionTimingFunction: "cubic-bezier(0.34,1.56,0.64,1)",
               }}
             >
-              +
-            </span>
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </span>
           <span className="flex-1">{header}</span>
         </button>
@@ -108,7 +114,6 @@ const STEPS = [
 export default function ReliefFourthSection() {
   const scopeRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState<number | null>(null);
-  const iaMagnet = useMagnetic<HTMLDivElement>(0.06);
 
   useGsapReveal(scopeRef);
 
@@ -121,7 +126,7 @@ export default function ReliefFourthSection() {
   return (
     <div ref={scopeRef} className="bg-[#111111] text-white">
       {/* ===================== ACORDEONES ===================== */}
-      <div className="border-y border-white/10">
+      <div>
         <Panel
           index={0}
           open={open}
@@ -162,10 +167,9 @@ export default function ReliefFourthSection() {
               intensidad del quemador y la dosificación de materiales.
             </p>
             <p className="pb-2">
-              Reducimos la intervención manual, minimizamos la dependencia del
-              operador y garantizamos resultados consistentes y repetibles en
-              una amplia variedad de diseños de mezcla, incluidas aplicaciones
-              con alto contenido de RAP.
+              El resultado son mezclas consistentes y repetibles en una amplia
+              variedad de diseños, incluidas aplicaciones con alto contenido de
+              RAP.
             </p>
           </div>
         </Panel>
@@ -181,20 +185,13 @@ export default function ReliefFourthSection() {
                 Almacenamiento de diseño de mezcla
               </h2>
               <h3 className="mt-1 text-lg font-bold md:text-2xl">
-                Almacenamiento de diseños de mezcla para más de 10,000 recetas.
+                Más de 10,000 recetas guardadas y listas para usar.
               </h3>
               <div className="mt-2 space-y-1 text-sm font-bold text-[#d9d9d9] md:text-base">
                 <p>
-                  No dependemos de métodos primitivos para la aplicación de
-                  diseños de mezcla.
-                </p>
-                <p>
-                  En cambio, nos enfocamos en una ejecución moderna, rápida y
-                  sencilla para la producción de mezcla asfáltica.
-                </p>
-                <p>
-                  Los diseños de mezcla son fáciles de ejecutar y administrar
-                  para cada uno de sus clientes.
+                  Cada receta queda versionada y puede asignarse a un cliente o
+                  proyecto. Administrar el catálogo de mezclas deja de depender
+                  de hojas de cálculo y de la memoria del operador.
                 </p>
               </div>
             </>
@@ -211,10 +208,6 @@ export default function ReliefFourthSection() {
             <li>
               Los diseños de mezcla pueden asignarse a clientes o proyectos
               específicos.
-            </li>
-            <li>
-              El sistema garantiza resultados consistentes y repetibles entre
-              distintos operadores y turnos.
             </li>
             <li>
               La ejecución de la mezcla es asistida por el operador o
@@ -275,23 +268,21 @@ export default function ReliefFourthSection() {
       <div className="bg-[#1e1e1e] py-16">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-5 px-6 text-center lg:px-8">
           <h2 data-reveal="up" className="text-2xl font-bold md:text-4xl">
-            El funcionamiento de la planta depende de un número menor de
-            operarios, sin que ello afecte al control ni a la calidad de la
-            producción.
+            Tu planta deja de depender de unos pocos operadores indispensables
           </h2>
           <p
             data-reveal="up"
             data-reveal-delay="0.08"
             className="max-w-4xl text-base font-semibold text-[#d9d9d9] md:text-xl"
           >
-            No dependa tanto de operadores especializados que se consideran
-            indispensables; ahora cualquier operador no especializado puede
-            aprender rápidamente a manejar su planta y será supervisado.
+            Con una sola interfaz para todo el proceso, cualquier operador
+            aprende a manejar la planta en poco tiempo, sin que el control ni la
+            calidad de la producción se resientan.
           </p>
         </div>
       </div>
 
-      {/* ============ Asistencia IA (transición clip-path) ============ */}
+      {/* ============ Asistencia IA ============ */}
       <section
         className="relative overflow-hidden py-24"
         style={{
@@ -311,7 +302,7 @@ export default function ReliefFourthSection() {
           <div className="text-center">
             <span
               data-reveal="up"
-              className="inline-block text-[12px] font-semibold uppercase tracking-[0.25em] text-[#86aaff]"
+              className="inline-block text-sm font-semibold text-[#86aaff]"
             >
               Asistencia Triaso® Relief
             </span>
@@ -319,23 +310,21 @@ export default function ReliefFourthSection() {
               data-reveal="up"
               className="mx-auto mt-4 max-w-3xl text-3xl font-bold md:text-5xl"
             >
-              La asistencia de inteligencia artificial más moderna
+              Haz cualquier pregunta sobre la operación de tu planta
             </h2>
-            <h3
+            <p
               data-reveal="up"
               data-reveal-delay="0.08"
-              className="mt-2 text-xl font-semibold text-[#d9d9d9]"
+              className="mx-auto mt-4 max-w-2xl text-base font-semibold text-[#d9d9d9] md:text-lg"
             >
-              para la operación de plantas de asfalto.
-            </h3>
+              Incluida en todas nuestras plantas de asfalto. El asistente de
+              inteligencia artificial da orientación clara con solo escribir,
+              sin necesidad de dominar el sistema.
+            </p>
           </div>
 
           {/* Mockup del asistente */}
-          <div
-            ref={iaMagnet}
-            data-reveal="scale"
-            className="mx-auto mt-12 max-w-4xl"
-          >
+          <div data-reveal="scale" className="mx-auto mt-12 max-w-4xl">
             <img
               src={img3.src}
               alt="Asistente de inteligencia artificial de Triaso Relief respondiendo consultas de operación"
@@ -343,47 +332,20 @@ export default function ReliefFourthSection() {
               height={img3.height}
               loading="lazy"
               decoding="async"
-              className="w-full rounded-xl shadow-[0_30px_90px_rgba(0,0,0,0.5)]"
+              className="w-full rounded-xl"
             />
           </div>
-        </div>
-      </section>
-
-      {/* ============ Haga cualquier pregunta + capacidades ============ */}
-      <section className="bg-[#111111] py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2
-            data-reveal="left"
-            className="text-4xl font-bold uppercase md:text-5xl"
-          >
-            Haga cualquier pregunta
-          </h2>
-          <p
-            data-reveal="left"
-            data-reveal-delay="0.08"
-            className="mt-3 max-w-4xl"
-          >
-            <span className="text-3xl font-semibold text-[#89adff] md:text-4xl">
-              sobre la operación de su planta de asfalto y{" "}
-            </span>
-            <span className="text-4xl font-bold text-white md:text-5xl">
-              reciba asistencia práctica inmediata.
-            </span>
-          </p>
 
           <p
             data-reveal="up"
-            className="mt-8 max-w-4xl text-base font-semibold text-[#d9d9d9] md:text-xl"
+            className="mt-12 text-sm font-semibold text-[#86aaff]"
           >
-            Incluido en todas nuestras plantas de asfalto, este sistema
-            proporciona asistencia rápida y moderna para la operación de la
-            planta, permitiendo a los operadores obtener orientación clara con
-            solo escribir sus preguntas.
+            El asistente puede:
           </p>
 
           {/* Mobile: slider horizontal con snap · sm+: grid */}
           <div
-            className="mt-10 -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:grid sm:snap-none sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3 [&::-webkit-scrollbar]:hidden"
+            className="mt-4 -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:grid sm:snap-none sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3 [&::-webkit-scrollbar]:hidden"
             role="list"
           >
             {IA_CAPABILITIES.map((cap, i) => (
@@ -392,9 +354,9 @@ export default function ReliefFourthSection() {
                 role="listitem"
                 data-reveal="scale-rot"
                 data-reveal-delay={(i % 3) * 0.06}
-                className="w-[78%] flex-none snap-start rounded-xl border border-white/10 bg-white/[0.03] p-5 sm:w-auto sm:flex-auto"
+                className="w-[78%] flex-none snap-start rounded-xl bg-white/[0.06] p-5 sm:w-auto sm:flex-auto"
               >
-                <span className="text-xs font-bold tabular-nums tracking-[0.15em] text-[#ca1c1c]">
+                <span className="text-xs font-extrabold tabular-nums text-[#ff7a7a]">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <p className="mt-2 text-sm font-medium leading-snug text-white">
@@ -403,8 +365,8 @@ export default function ReliefFourthSection() {
               </div>
             ))}
           </div>
-          <p className="mt-3 text-[11px] font-semibold uppercase tracking-widest text-white/40 sm:hidden">
-            Desliza →
+          <p className="mt-3 text-[11px] font-semibold text-white/50 sm:hidden">
+            Desliza para ver más →
           </p>
         </div>
       </section>
@@ -424,10 +386,7 @@ export default function ReliefFourthSection() {
           </div>
 
           <div className="mt-12 grid items-center gap-10 lg:grid-cols-2">
-            <div
-              data-reveal="left"
-              className="rlf-hud overflow-hidden rounded-2xl border border-white/10"
-            >
+            <div data-reveal="left" className="overflow-hidden rounded-2xl">
               <img
                 src={img2.src}
                 alt="Interfaz del sistema de control mostrando alertas de parámetros fuera de rango"
@@ -439,7 +398,7 @@ export default function ReliefFourthSection() {
               />
             </div>
 
-            <ol className="relative space-y-6 border-l border-white/15 pl-8">
+            <ol className="relative space-y-6 pl-8">
               {STEPS.map((step) => (
                 <li
                   key={step.n}
@@ -450,7 +409,7 @@ export default function ReliefFourthSection() {
                   <span className="absolute -left-[41px] flex h-8 w-8 items-center justify-center rounded-full border border-[#ca1c1c] bg-[#111111] text-sm font-bold tabular-nums text-[#ca1c1c]">
                     <CountUp to={step.n} duration={1200} />
                   </span>
-                  <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5">
+                  <div className="rounded-xl bg-white/[0.03] p-5">
                     <h3 className="text-lg font-semibold text-white">
                       {step.title}
                     </h3>

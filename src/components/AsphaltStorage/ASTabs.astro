@@ -14,6 +14,47 @@ import t1 from "../../assets/images/AsphaltStorage/SliderStorage/P-3a.webp";
 
 import g2 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT2.webp";
 import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
+import GallerySlider from "../unitComponents/GallerySlider";
+
+import s1 from "../../assets/images/AsphaltStorage/SliderStorage/P-3a.webp";
+import s2 from "../../assets/images/AsphaltStorage/SliderStorage/P-3b.webp";
+import s3 from "../../assets/images/AsphaltStorage/SliderStorage/P-3c.webp";
+import s4 from "../../assets/images/AsphaltStorage/SliderStorage/P-3d.webp";
+import s5 from "../../assets/images/AsphaltStorage/SliderStorage/P-3e.webp";
+import s6 from "../../assets/images/AsphaltStorage/SliderStorage/P-3f.webp";
+
+const storageSlides = [
+  {
+    image: s1.src,
+    caption:
+      "Tanque de almacenamiento de asfalto Triaso® con aislamiento térmico de alta densidad",
+  },
+  {
+    image: s2.src,
+    caption:
+      "Sistema de calentamiento por aceite térmico para una distribución uniforme de la temperatura",
+  },
+  {
+    image: s3.src,
+    caption:
+      "Serpentines internos de acero al carbón para transferencia de calor eficiente",
+  },
+  {
+    image: s4.src,
+    caption:
+      "Configuración de tanques horizontales para proyectos de alta capacidad de almacenamiento",
+  },
+  {
+    image: s5.src,
+    caption:
+      "Quemador ecológico de bajas emisiones NOx integrado al tanque de asfalto",
+  },
+  {
+    image: s6.src,
+    caption:
+      "Plataforma de operación y escalera de acceso con barandal de seguridad certificado",
+  },
+];
 ---
 
 <section
@@ -370,6 +411,10 @@ import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
   </div>
 
   <section class="w-full flex flex-col justify-center">
+    <div class="w-full px-2 md:px-8">
+      <GallerySlider client:only slides={storageSlides} visibleThumbs={4} />
+    </div>
+
     <div
       class="flex flex-col justify-center items-center space-y-5 py-5 md:py-20 px-8"
     >

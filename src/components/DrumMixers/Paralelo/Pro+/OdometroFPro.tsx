@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
-import odoImg from "../../../../assets/images/DrumMixers/Low/odometerImgLow.webp";
+import odoImg from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/PlaFpPlus.webp";
 import "odometer/themes/odometer-theme-default.css";
 import FillLinkButton from "../../../unitComponents/FillLinkButton";
 

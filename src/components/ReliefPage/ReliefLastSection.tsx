@@ -11,12 +11,9 @@ export default function ReliefLastSection() {
   return (
     <div ref={scopeRef} className="w-full bg-[#111111] text-white">
       {/* Encabezado */}
-      <div className="border-y border-white/10 bg-[#393939] py-10">
+      <div className="bg-[#393939] py-10">
         <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-          <span className="text-[12px] font-semibold uppercase tracking-[0.25em] text-[#ca1c1c]">
-            // Módulo de seguridad
-          </span>
-          <h2 className="mt-2 text-2xl font-bold md:text-3xl">Seguridad y acceso</h2>
+          <h2 className="text-2xl font-bold md:text-3xl">Seguridad y acceso</h2>
         </div>
       </div>
 
@@ -109,10 +106,7 @@ export default function ReliefLastSection() {
           </div>
 
           <p data-reveal="up" className="text-center text-lg font-semibold text-[#d9d9d9] md:text-left md:text-2xl">
-            Brindamos la libertad de acceder a análisis detallados en tiempo real
-            desde cualquier lugar y en cualquier dispositivo. La toma de decisiones se
-            vuelve más rápida, mejor fundamentada y completamente independiente de la
-            ubicación física.
+            Menos tiempo administrando la planta, más tiempo para el negocio.
           </p>
         </div>
       </section>

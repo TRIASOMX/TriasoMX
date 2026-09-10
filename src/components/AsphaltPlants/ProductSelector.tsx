@@ -123,7 +123,7 @@ interface PlantData {
   title: string;
   image: any;
   features: string[];
-  stats: { label: string; sub?: string }[];
+  stats: { label: string; sub?: string; note?: string }[];
   description: string;
   models: ProductModel[];
   tableData: TableSection[];
@@ -141,18 +141,22 @@ const data: Record<PlantType, PlantData> = {
     image: hero1.src,
     features: [
       "Casa de bolsas",
-      "Completamente ecológica",
+      "- Completamente ecológica",
       "Recuperación total de finos",
       "Producción continua",
     ],
     stats: [
-      { label: "50%", sub: "Recuperación de RAP" },
+      {
+        label: "50%",
+        sub: "Incorporación de RAP",
+        note: "con lo que se ahorra 35% de costo por M3",
+      },
       {
         label: "40 – 600 Tph",
         sub: "Modelos para diferentes rangos de producción",
       },
-      { label: "25%", sub: "Ahorro en combustibles" },
-      { label: "5 – 20 RPM", sub: "Velocidad variable del tambor" },
+      { label: "25%", sub: "de ahorros en combustibles" },
+      { label: "5 – 20 RPM", sub: "Velocidad de rotación variable del tambor" },
     ],
     description:
       "Todas las plantas de contraflujo utilizan el mismo principio de diseño robusto, sistema de mezcla eficiente, lavadora para captura de finos, preparación para cajas de bolsas asfálticas para cumplir con las normas ecológicas y retorno uniforme de finos, con una estructura reforzada que asegura larga vida útil y bajo mantenimiento.",
@@ -466,17 +470,17 @@ const data: Record<PlantType, PlantData> = {
     title: "Flujo Paralelo",
     image: hero2.src,
     features: [
-      "Productividad superior de secadores",
+      "Lavadora para control de emisiones",
       "Producción continua",
-      "Fácil configuración modular",
-      "Menor costo de componentes",
+      "Menor complejidad mecánica",
+      "Menor numero de componentes",
     ],
     stats: [
       {
-        label: "40 – 300 Tph",
+        label: "40 – 360 Tph",
         sub: "Modelos para diferentes rangos de producción",
       },
-      { label: "20%", sub: "Ahorro en combustibles" },
+      { label: "20%", sub: "de ahorro en combustibles" },
     ],
     description:
       "Todas las plantas de flujo paralelo utilizan el mismo principio de diseño robusto, sistema de mezcla eficiente, lavadora para captura de finos, preparación para cajas de bolsas asfálticas para cumplir con las normas ecológicas y retorno uniforme de finos, con una estructura reforzada que asegura larga vida útil y bajo mantenimiento.",
@@ -967,25 +971,13 @@ const beneficios = [
     Icon: Truck,
     title: "Menores tiempos en carga de camiones",
     description:
-      "Descarga rápida de la planta al camión, con la mezcla lista en el momento, con control total del sistema de apertura, cierre y automatización.",
+      "Descarga rápida de la planta al camión, con la mezcla lista en el momento y control total del sistema de apertura, cierre y automatización. Menos esperas en patio y menos camiones formados por turno.",
   },
   {
     Icon: CalendarClock,
     title: "Optimización de jornadas de trabajo",
     description:
-      "Arranques a tiempo, sin paros por fallas imprevistas, le permite planear turnos, entregas y avance de obra con certeza. La jornada se aprovecha por completo.",
-  },
-  {
-    Icon: Clock,
-    title: "Ahorro de horas hombre",
-    description:
-      "La planta reduce personal necesario para operar y el tiempo para tareas manuales. Reflejandose directamente en el costo por tonelada.",
-  },
-  {
-    Icon: PackageCheck,
-    title: "Menos paros por maniobras logísticas",
-    description:
-      "Menos esperas en patio, menos tiempos muertos y menos horas hombre por turno.",
+      "Arranques a tiempo, sin paros por fallas imprevistas, permitiendo planear turnos, entregas y avance de obra con certeza. La jornada se aprovecha por completo, reduce personal necesario y el tiempo para tareas manuales, reflejándose directamente en el costo por tonelada.",
   },
   {
     Icon: Workflow,
@@ -1144,7 +1136,7 @@ export default function ProductSelector() {
       }}
     >
       {/* Selector Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-6 mb-6 md:mb-16 max-w-[90rem] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-6 mb-6 md:mb-16 max-w-[72rem] mx-auto">
         {(Object.keys(data) as PlantType[]).map((key) => {
           const item = data[key];
           const isActive = active === key;
@@ -1164,7 +1156,7 @@ export default function ProductSelector() {
               )}
             >
               {/* Imagen flotante */}
-              <div className="absolute -top-36 left-1/2 -translate-x-1/2 z-10 w-[70%]">
+              <div className="absolute -top-36 left-1/2 -translate-x-1/2 z-10 w-[70%] md:w-[88%]">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -1179,31 +1171,43 @@ export default function ProductSelector() {
               {/* Contenido */}
               <div className="flex flex-col items-center justify-start md:gap-6">
                 <div className="flex-1 text-start">
-                  <h3 className="text-xl md:text-2xl font-bold mb-3">
+                  <h3 className="text-xl md:text-3xl font-bold mb-3">
                     {item.title}
                   </h3>
 
                   <ul className="hidden md:block space-y-1 w-full justify-start">
-                    {item.features.map((f) => (
-                      <li
-                        key={f}
-                        className="text-xs md:text-sm text-muted-foreground flex items-start gap-2 justify-start w-full text-left"
-                      >
-                        <span className=" mt-0.5">•</span>
-                        {f}
-                      </li>
-                    ))}
+                    {item.features.map((f) => {
+                      const isSub = f.startsWith("- ");
+                      const text = isSub ? f.slice(2) : f;
+                      return (
+                        <li
+                          key={f}
+                          className={cn(
+                            "text-xs md:text-base text-muted-foreground flex items-start gap-2 justify-start w-full text-left",
+                            isSub && "ml-5 md:text-sm opacity-90",
+                          )}
+                        >
+                          <span className="mt-0.5">{isSub ? "◦" : "•"}</span>
+                          {text}
+                        </li>
+                      );
+                    })}
                   </ul>
 
                   <div className="hidden md:flex flex-col flex-wrap gap-4 mt-4 items-start">
                     {item.stats.map((s) => (
                       <div key={s.label} className="text-start">
-                        <span className="text-base md:text-xl font-bold text-industrial">
+                        <span className="text-base md:text-2xl font-bold text-industrial">
                           {s.label}
                         </span>
                         {s.sub && (
-                          <p className="text-xs md:text-sm text-muted-foreground w-full">
+                          <p className="text-xs md:text-base text-muted-foreground w-full">
                             {s.sub}
+                          </p>
+                        )}
+                        {s.note && (
+                          <p className="text-[0.65rem] md:text-sm italic text-muted-foreground w-full">
+                            {s.note}
                           </p>
                         )}
                       </div>
@@ -1264,11 +1268,11 @@ export default function ProductSelector() {
             key={model.name}
             className="relative shrink-0 snap-center w-[78%] sm:w-[55%] md:w-auto"
           >
-            <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10 ">
+            <div className="absolute -top-12 left-0 w-full h-24 z-10">
               <img
                 src={model.image}
                 alt={model.name}
-                className="w-full h-20 object-cover overflow-visible"
+                className="w-full h-full object-contain object-top"
                 loading="lazy"
               />
             </div>

@@ -1,5 +1,6 @@
 ---
 import ReliefFirstSection from "../components/ReliefPage/ReliefFirstSection";
+import ReliefModules from "../components/ReliefPage/ReliefModules";
 import RelifSecondSection from "../components/ReliefPage/RelifSecondSection";
 import ReliefFourthSection from "../components/ReliefPage/ReliefFourthSection";
 import ReliefLastSection from "../components/ReliefPage/ReliefLastSection";
@@ -11,6 +12,7 @@ import Layout from "../layouts/Layout.astro";
   description="Triaso Relief System: software de control, automatización y supervisión para plantas de asfalto. Monitoreo remoto en la nube, asistencia con IA y más de 10,000 recetas de mezcla."
 >
   <ReliefFirstSection client:visible />
+  <ReliefModules client:visible />
   <RelifSecondSection client:visible />
   <!-- <ReliefThirdSection client:only/> -->
   <ReliefFourthSection client:visible />

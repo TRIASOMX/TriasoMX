@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -43,6 +43,55 @@ export function isTouch(): boolean {
   return (
     typeof window !== "undefined" && window.matchMedia("(hover: none)").matches
   );
+}
+
+/* ------------------------------------------------------------------ *
+ *  Carrusel scroll-snap (móvil): índice visible + salto a una tarjeta *
+ * ------------------------------------------------------------------ */
+export function useSnapCarousel<T extends HTMLElement>() {
+  const ref = useRef<T>(null);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let raf = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const kids = el.children;
+        const mid = el.scrollLeft + el.clientWidth / 2;
+        let best = 0;
+        let bestDist = Infinity;
+        for (let i = 0; i < kids.length; i++) {
+          const c = kids[i] as HTMLElement;
+          const center = c.offsetLeft + c.clientWidth / 2;
+          const d = Math.abs(center - mid);
+          if (d < bestDist) {
+            bestDist = d;
+            best = i;
+          }
+        }
+        setIndex(best);
+      });
+    };
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      el.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  const goTo = (i: number) => {
+    const child = ref.current?.children[i] as HTMLElement | undefined;
+    child?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  };
+
+  return { ref, index, goTo };
 }
 
 /* ------------------------------------------------------------------ *
@@ -100,7 +149,7 @@ export function CountUp({
         };
         raf = requestAnimationFrame(step);
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
     io.observe(el);
     return () => {
@@ -178,7 +227,8 @@ export function usePointerGlow<T extends HTMLElement>() {
  *  Reveal con movimiento real (escala / rotación / ejes) al scrollear *
  *  Se aplica a los hijos con [data-reveal] dentro del scope.          *
  * ------------------------------------------------------------------ */
-type RevealKind = "up" | "down" | "left" | "right" | "scale" | "scale-rot" | "clip";
+type RevealKind =
+  "up" | "down" | "left" | "right" | "scale" | "scale-rot" | "clip";
 
 const REVEAL_FROM: Record<RevealKind, gsap.TweenVars> = {
   up: { y: 70, opacity: 0 },
@@ -192,7 +242,7 @@ const REVEAL_FROM: Record<RevealKind, gsap.TweenVars> = {
 
 export function useGsapReveal(
   scopeRef: React.RefObject<HTMLElement | null>,
-  deps: unknown[] = []
+  deps: unknown[] = [],
 ) {
   useEffect(() => {
     // Sin animaciones de scroll en móvil/tablet ni con reduced-motion:
@@ -205,26 +255,22 @@ export function useGsapReveal(
       els.forEach((el) => {
         const kind = (el.dataset.reveal || "up") as RevealKind;
         const delay = parseFloat(el.dataset.revealDelay || "0");
-        gsap.fromTo(
-          el,
-          REVEAL_FROM[kind] ?? REVEAL_FROM.up,
-          {
-            x: 0,
-            y: 0,
-            scale: 1,
-            rotate: 0,
-            opacity: 1,
-            clipPath: "inset(0 0 0% 0)",
-            duration: 1.15,
-            delay,
-            ease: kind === "scale-rot" ? "back.out(1.4)" : "expo.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 86%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
+        gsap.fromTo(el, REVEAL_FROM[kind] ?? REVEAL_FROM.up, {
+          x: 0,
+          y: 0,
+          scale: 1,
+          rotate: 0,
+          opacity: 1,
+          clipPath: "inset(0 0 0% 0)",
+          duration: 1.15,
+          delay,
+          ease: kind === "scale-rot" ? "back.out(1.4)" : "expo.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 86%",
+            toggleActions: "play none none reverse",
+          },
+        });
       });
     }, scopeRef);
 

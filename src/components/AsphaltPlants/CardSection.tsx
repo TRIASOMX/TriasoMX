@@ -148,7 +148,7 @@ const CARDS: CardData[] = [
           </h1>
           <p className="text-white text-sm md:text-2xl">
             Con la experiencia que tenemos con más de{" "}
-            <span className="font-bold text-base md:text-3xl">300</span> plantas
+            <span className="font-bold text-base md:text-3xl">320</span> plantas
             de
           </p>
           <p className="text-white text-sm md:text-2xl">
@@ -191,14 +191,14 @@ const CARDS: CardData[] = [
         <div className="space-y-2 lg:space-y-4 text-white mt-2 md:mt-4 text-sm sm:text-base">
           <p className="font-bold text-xs md:text-xl">
             Producimos la mayoría de los componentes directamente — no
-            dependemos de subcontratistas, con lo que obtenemos ventajas
+            dependemos de subcontratistas, con lo que usted obtiene ventajas
             significativas:
           </p>
           <ul className="list-disc pl-5 text-xs md:text-xl space-y-1">
-            <li>Precios competitivos sin intermediarios</li>
+            <li>Precios directo de fábrica</li>
             <li>
-              Conocimiento técnico amplio y al detalle, que asegura un servicio
-              excepcional al cliente.
+              Técnicos que estuvieron presentes en la fabricación del equipo y
+              lo conocen perfectamente.
             </li>
             <li>
               Personalización para adaptarse a las necesidades específicas de

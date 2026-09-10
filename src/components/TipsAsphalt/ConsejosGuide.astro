@@ -5,6 +5,8 @@
  * Contenido estático + scrollspy / menú móvil / reveal (vanilla JS).
  * Tipografía y colores alineados al proyecto (font-sans + variables de marca).
  */
+import { Image } from "astro:assets";
+import ctaBg from "../../assets/images/AsphaltPlant/NewBanner.webp";
 
 type Node = string | { t: string; sub?: Node[] };
 
@@ -48,14 +50,16 @@ function esc(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
+const SUB_LI = "text-sm text-grisPPP";
+
 function renderPlain(nodes: Node[]): string {
   return (
     "<ul>" +
     nodes
       .map((n) =>
         typeof n === "string"
-          ? `<li>${esc(n)}</li>`
-          : `<li>${esc(n.t)}${n.sub ? renderPlain(n.sub) : ""}</li>`,
+          ? `<li class="${SUB_LI}">${esc(n)}</li>`
+          : `<li class="${SUB_LI}">${esc(n.t)}${n.sub ? renderPlain(n.sub) : ""}</li>`,
       )
       .join("") +
     "</ul>"
@@ -68,8 +72,8 @@ function renderChecks(nodes: Node[]): string {
     nodes
       .map((n) =>
         typeof n === "string"
-          ? `<li>${esc(n)}</li>`
-          : `<li>${esc(n.t)}${n.sub ? renderPlain(n.sub) : ""}</li>`,
+          ? `<li class="text-base text-gris5">${esc(n)}</li>`
+          : `<li class="text-base text-gris5">${esc(n.t)}${n.sub ? renderPlain(n.sub) : ""}</li>`,
       )
       .join("") +
     "</ul>"
@@ -84,7 +88,7 @@ function renderItems(nodes: Node[], kind: "x" | "c"): string {
       .map((n) => {
         const t = typeof n === "string" ? n : n.t;
         const sub = typeof n !== "string" && n.sub ? renderPlain(n.sub) : "";
-        return `<li>${mk}${esc(t)}${sub}</li>`;
+        return `<li class="text-sm leading-relaxed text-gris5">${mk}${esc(t)}${sub}</li>`;
       })
       .join("") +
     "</ul>"
@@ -101,8 +105,8 @@ function card(
   const badge = kind === "risk" ? ICO.warn : ICO.shield;
   return `<div class="tg-card tg-card--${kind}">
     <div class="tg-card__head"><span class="tg-badge">${badge}</span>
-      <div><h4>${esc(title)}</h4><span class="tg-sub">${esc(sub)}</span></div></div>
-    <div class="tg-card__body">${lead ? `<p class="tg-card__lead">${esc(lead)}</p>` : ""}${renderItems(nodes, kind === "risk" ? "x" : "c")}</div>
+      <div><h4 class="text-base font-bold">${esc(title)}</h4><span class="tg-sub text-[10px] uppercase tracking-wide">${esc(sub)}</span></div></div>
+    <div class="tg-card__body">${lead ? `<p class="tg-card__lead text-sm text-grisPPP">${esc(lead)}</p>` : ""}${renderItems(nodes, kind === "risk" ? "x" : "c")}</div>
   </div>`;
 }
 
@@ -120,7 +124,9 @@ const parts = [
     id: "part-2",
     num: "PARTE 02",
     title: "Costos a largo plazo",
-    blurb: [] as string[],
+    blurb: [
+      "Una planta no es una inversión para una sola obra, es para 20 años de obras.",
+    ] as string[],
   },
   {
     id: "part-3",
@@ -734,6 +740,10 @@ const sections: Section[] = [
       "Componentes industriales universales (Siemens, Eaton, Weidmüller, WEG) que conservan valor y facilitan el mantenimiento al siguiente dueño.",
       "Equipos operando en México que puede ir a ver, con años de operación que respaldan la inversión.",
     ],
+    quote: {
+      text: "Muchos de nuestros clientes actuales son hijos de clientes de hace 20 años que necesitan una segunda o tercer planta.",
+      cite: "Plantas que trabajan por generaciones",
+    },
   },
   {
     id: "s31",
@@ -742,7 +752,9 @@ const sections: Section[] = [
     short: "Antes de cerrar la compra",
     title: "Recomendaciones para el comprador",
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 11l1.5 1.5 3-3M8.5 16l1.5 1.5 3-3"/></svg>',
-    intros: [],
+    intros: [
+      "¿Ya ha comprado una máquina que no era lo que esperaba? Porque muchas personas lo han hecho, y es más común de lo que parece.",
+    ],
     evaluarBlue: true,
     evaluarTag: "Recomendaciones",
     evaluarH: "Recomendaciones para el comprador:",
@@ -776,33 +788,37 @@ const sections: Section[] = [
 <div class="tips-guide">
   <!-- ===== Hero ===== -->
   <header class="tg-hero">
-    <span class="tg-hero__grid rlf-grid rlf-grid-dark" aria-hidden="true"></span>
-    <span class="tg-hero__glow" aria-hidden="true"></span>
     <div class="tg-hero__inner">
-      <span class="tg-hero__kicker">Guía de compra · Triaso</span>
-      <h1>Algunos consejos para comprar una planta de asfalto</h1>
-      <p class="tg-hero__lead">
+      <span class="tg-hero__kicker text-sm font-semibold text-blueMain"
+        >Guía de compra · Triaso</span
+      >
+      <h1
+        class="max-w-[34ch] text-3xl font-bold text-grisT sm:text-4xl md:text-5xl uppercase"
+      >
+        Algunos consejos para comprar una planta de asfalto
+      </h1>
+      <div class="tg-hero__rule" aria-hidden="true">
+        <span></span><span></span>
+      </div>
+      <p
+        class="tg-hero__lead max-w-2xl text-base leading-relaxed text-grisP md:text-lg"
+      >
         La compra de una planta de asfalto es una inversión significativa y
         constituye la base de un negocio de producción de mezcla asfáltica.
       </p>
-      <p class="tg-hero__criterio">Compre con criterio.</p>
+      <p class="tg-hero__criterio text-base font-bold text-grisT">
+        Compre con criterio.
+      </p>
       <nav class="tg-hero__meta">
         {
           parts.map((pt, i) => (
-            <a href={`#${pt.id}`} class="tg-partbtn">
-              <span class="tg-partbtn__n">{String(i + 1).padStart(2, "0")}</span>
-              <span class="tg-partbtn__t">{pt.title}</span>
-              <svg
-                class="tg-partbtn__a"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
+            <a href={`#${pt.id}`} class="tg-partbtn text-grisPPP">
+              <span class="tg-partbtn__n text-xs font-extrabold text-blueMain">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span class="tg-partbtn__t text-sm font-semibold">
+                {pt.title}
+              </span>
             </a>
           ))
         }
@@ -814,10 +830,18 @@ const sections: Section[] = [
   <div class="tg-mobilebar">
     <div class="tg-mobilebar__row">
       <div class="tg-mobilebar__cur">
-        <span class="tg-k">Guía de compra</span>
-        <span class="tg-t">Algunos consejos</span>
+        <span class="tg-k block text-[10px] uppercase tracking-wide text-grisP"
+          >Guía de compra</span
+        >
+        <span class="tg-t block truncate text-sm font-bold text-blueMain"
+          >Algunos consejos</span
+        >
       </div>
-      <button class="tg-mobilebar__btn" type="button" aria-label="Abrir índice">
+      <button
+        class="tg-mobilebar__btn text-[13px] font-bold"
+        type="button"
+        aria-label="Abrir índice"
+      >
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -833,18 +857,26 @@ const sections: Section[] = [
   <div class="tg-shell">
     <!-- ===== TOC escritorio ===== -->
     <aside class="tg-toc">
-      <div class="tg-toc__label">En esta guía</div>
+      <div class="tg-toc__label text-[11px] uppercase tracking-wide text-grisP">
+        En esta guía
+      </div>
       <nav>
         {
           parts.map((pt) => (
             <>
-              <a class="tg-toc__part" href={`#${pt.id}`}>
+              <a
+                class="tg-toc__part text-xs font-bold uppercase text-blueMain"
+                href={`#${pt.id}`}
+              >
                 {pt.title}
               </a>
               {sections
                 .filter((s) => s.pid === pt.id)
                 .map((s) => (
-                  <a class="tg-toc__link" href={`#${s.id}`}>
+                  <a
+                    class="tg-toc__link text-sm leading-snug text-grisPPP"
+                    href={`#${s.id}`}
+                  >
                     {s.title}
                   </a>
                 ))}
@@ -860,10 +892,14 @@ const sections: Section[] = [
         parts.map((pt) => (
           <div class="tg-part" id={pt.id}>
             <div class="tg-part__head">
-              <span class="tg-part__num">{pt.num}</span>
-              <h2 class="tg-part__title">{pt.title}</h2>
+              <span class="tg-part__num block text-[13px] font-semibold uppercase tracking-wide text-grisP">
+                {pt.num}
+              </span>
+              <h2 class="tg-part__title text-2xl font-bold uppercase tracking-tight text-grisT md:text-4xl">
+                {pt.title}
+              </h2>
               {pt.blurb.length > 0 && (
-                <p class="tg-part__blurb">
+                <p class="tg-part__blurb max-w-[62ch] text-base text-grisPPP">
                   {pt.blurb.map((b) => (
                     <span>{b}</span>
                   ))}
@@ -884,29 +920,39 @@ const sections: Section[] = [
                   <div class="tg-sec__head">
                     <div class="tg-sec__icon" set:html={s.icon} />
                     <div class="tg-sec__titles">
-                      <div class="tg-sec__kicker">{s.part}</div>
-                      <h2 class="tg-sec__title">{s.title}</h2>
+                      <div class="tg-sec__kicker text-[11px] uppercase tracking-wide text-grisP">
+                        {s.part}
+                      </div>
+                      <h2 class="tg-sec__title text-xl font-bold tracking-tight text-blueMain md:text-2xl">
+                        {s.title}
+                      </h2>
                     </div>
                   </div>
 
                   {s.intros.map((p) => (
-                    <p class="tg-sec__intro">{p}</p>
+                    <p class="tg-sec__intro mt-1.5 max-w-[70ch] text-base leading-relaxed text-gris5 md:text-lg">
+                      {p}
+                    </p>
                   ))}
 
                   <div
                     class={`tg-evaluar tg-reveal${s.evaluarBlue ? " tg-evaluar--blue" : ""}`}
                   >
                     <div
-                      class="tg-evaluar__tag"
+                      class="tg-evaluar__tag text-[11px] uppercase tracking-wide text-blueMainHover"
                       set:html={ICO.tag + esc(s.evaluarTag ?? "Qué evaluar")}
                     />
-                    <div class="tg-evaluar__h">{s.evaluarH}</div>
+                    <div class="tg-evaluar__h mb-3.5 text-lg font-bold leading-snug text-grisT">
+                      {s.evaluarH}
+                    </div>
                     <Fragment set:html={renderChecks(s.checks)} />
                   </div>
 
                   {s.note && (
                     <div class="tg-noteblock tg-reveal">
-                      <h4>{s.note.h}</h4>
+                      <h4 class="mb-3.5 text-lg font-bold text-blueMain">
+                        {s.note.h}
+                      </h4>
                       <Fragment set:html={renderChecks(s.note.checks)} />
                     </div>
                   )}
@@ -933,14 +979,18 @@ const sections: Section[] = [
 
                   {s.tech && (
                     <div class="tg-tech tg-reveal">
-                      <div class="tg-tech__tag">{s.tech.tag}</div>
+                      <div class="tg-tech__tag text-[11px] uppercase tracking-wide text-grisP">
+                        {s.tech.tag}
+                      </div>
                       <div class="tg-tech__grid">
                         {s.tech.cols.map((c) => (
                           <div class="tg-tech__col">
-                            <h5>{c.h}</h5>
+                            <h5 class="text-base font-bold text-blueMain">
+                              {c.h}
+                            </h5>
                             <ul>
                               {c.items.map((i) => (
-                                <li>{i}</li>
+                                <li class="text-sm text-gris5">{i}</li>
                               ))}
                             </ul>
                           </div>
@@ -951,8 +1001,12 @@ const sections: Section[] = [
 
                   {s.quote && (
                     <div class="tg-quote tg-reveal">
-                      <p>{s.quote.text}</p>
-                      <span class="tg-cite">{s.quote.cite}</span>
+                      <p class="text-lg font-semibold leading-snug md:text-xl">
+                        {s.quote.text}
+                      </p>
+                      <span class="tg-cite mt-3 block text-xs uppercase tracking-wide">
+                        {s.quote.cite}
+                      </span>
                     </div>
                   )}
                 </section>
@@ -963,18 +1017,34 @@ const sections: Section[] = [
 
       <!-- ===== CTA ===== -->
       <section class="tg-cta tg-reveal">
-        <div class="tg-cta__ph"></div>
+        <Image
+          src={ctaBg}
+          alt=""
+          widths={[640, 1024, 1600]}
+          sizes="(min-width: 1024px) 1024px, 100vw"
+          class="tg-cta__bg"
+          aria-hidden="true"
+        />
+        <div class="tg-cta__scrim" aria-hidden="true"></div>
         <div class="tg-cta__inner">
-          <h3>Inclúyanos en su proceso de evaluación</h3>
-          <p>
+          <h3
+            class="max-w-[20ch] text-2xl font-bold uppercase tracking-tight text-white md:text-3xl"
+          >
+            Inclúyanos en su proceso de evaluación
+          </h3>
+          <p class="mt-3.5 max-w-[52ch] text-base leading-relaxed text-white/90">
             Visite nuestras plantas operando en México y verifique cada
             afirmación directamente con nuestros ingenieros y técnicos, sin
             intermediarios.
           </p>
           <div class="tg-cta__btns">
-            <a class="tg-btn tg-btn--primary" href="/Contact">
+            <a
+              class="group inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-redBg bg-redBg px-7 py-2.5 text-sm font-semibold text-white transition-all duration-300 ease-out hover:scale-[1.03] hover:border-white hover:bg-white hover:text-redBg hover:shadow-lg sm:w-auto"
+              href="/Contact"
+            >
               Visita nuestras plantas
               <svg
+                class="h-[18px] w-[18px] transition-transform duration-300 group-hover:translate-x-1"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -984,14 +1054,17 @@ const sections: Section[] = [
                 ><path d="M5 12h14M13 6l6 6-6 6"></path></svg
               >
             </a>
-            <a class="tg-btn tg-btn--ghost" href="/Contact">Contáctanos</a>
+            <a
+              class="inline-flex w-full items-center justify-center rounded-full border-2 border-white/80 px-7 py-2.5 text-sm font-semibold text-white transition-all duration-300 ease-out hover:scale-[1.03] hover:bg-white hover:text-grisT hover:shadow-lg sm:w-auto"
+              href="/Contact">Contáctanos</a
+            >
           </div>
         </div>
       </section>
     </main>
   </div>
 
-  <p class="tg-endnote">
+  <p class="tg-endnote mx-auto max-w-[1240px] text-center text-xs text-grisP">
     Triaso — Algunos consejos para comprar una planta de asfalto · Compre con
     criterio.
   </p>
@@ -1000,7 +1073,9 @@ const sections: Section[] = [
   <div class="tg-msheet">
     <div class="tg-msheet__panel">
       <div class="tg-msheet__top">
-        <span>Índice</span>
+        <span class="text-[11px] uppercase tracking-wide text-grisP"
+          >Índice</span
+        >
         <button class="tg-msheet__x" type="button" aria-label="Cerrar"
           >&times;</button
         >
@@ -1008,11 +1083,16 @@ const sections: Section[] = [
       {
         parts.map((pt) => (
           <>
-            <div class="tg-msheet__part">{pt.title}</div>
+            <div class="tg-msheet__part text-xs font-bold uppercase text-blueMain">
+              {pt.title}
+            </div>
             {sections
               .filter((s) => s.pid === pt.id)
               .map((s) => (
-                <a class="tg-msheet__link" href={`#${s.id}`}>
+                <a
+                  class="tg-msheet__link block text-[15px] text-gris5"
+                  href={`#${s.id}`}
+                >
                   {s.title}
                 </a>
               ))}
@@ -1026,8 +1106,6 @@ const sections: Section[] = [
 <style is:global>
   /* ============ Guía "Algunos consejos" — alineada a la marca ============ */
   .tips-guide {
-    --tg-font: "Helvetica", "Arial", sans-serif;
-
     --tg-azul: var(--azul-bg1);
     --tg-azul-2: var(--azul-bg2);
     --tg-azul-deep: var(--azul-bg1Hover);
@@ -1059,20 +1137,15 @@ const sections: Section[] = [
 
     background: var(--tg-bg);
     color: var(--tg-texto);
-    font-family: var(--tg-font);
     font-size: 16px;
     line-height: 1.62;
-    -webkit-font-smoothing: antialiased;
   }
   .tips-guide h1,
   .tips-guide h2,
   .tips-guide h3,
   .tips-guide h4,
   .tips-guide h5 {
-    font-family: var(--tg-font);
-    color: var(--tg-titulo);
     margin: 0;
-    line-height: 1.14;
   }
   .tips-guide p {
     margin: 0;
@@ -1101,188 +1174,60 @@ const sections: Section[] = [
 
   /* ---------- Hero ---------- */
   .tg-hero {
-    position: relative;
-    overflow: hidden;
-    background-color: var(--tg-azul-deep);
-    color: #fff;
-  }
-  .tg-hero__grid {
-    position: absolute;
-    inset: 0;
-    opacity: 0.5;
-    -webkit-mask-image: linear-gradient(
-      180deg,
-      #000 0%,
-      #000 42%,
-      transparent 92%
-    );
-    mask-image: linear-gradient(180deg, #000 0%, #000 42%, transparent 92%);
-  }
-  .tg-hero__glow {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-      radial-gradient(
-        58% 52% at 88% -6%,
-        rgba(202, 28, 28, 0.3),
-        transparent 70%
-      ),
-      radial-gradient(
-        52% 60% at -8% 108%,
-        rgba(0, 68, 164, 0.4),
-        transparent 72%
-      );
+    background: var(--tg-blanco);
+    border-bottom: 1px solid var(--tg-linea);
   }
   .tg-hero__inner {
-    position: relative;
     max-width: var(--tg-maxw);
     margin: 0 auto;
-    padding: 112px 32px 66px;
+    padding: 124px 32px 56px;
   }
   .tg-hero__kicker {
     display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.72);
-    padding-left: 24px;
-    position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
-  .tg-hero__kicker::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 16px;
-    height: 2px;
+  .tg-hero__rule {
+    display: flex;
+    margin: 22px 0;
+  }
+  .tg-hero__rule span {
+    height: 3px;
+    width: 88px;
+  }
+  .tg-hero__rule span:first-child {
     background: var(--tg-rojo);
   }
-  .tg-hero h1 {
-    position: relative;
-    font-weight: 800;
-    font-size: clamp(31px, 5vw, 54px);
-    letter-spacing: -0.018em;
-    max-width: 20ch;
-    text-transform: uppercase;
-    color: #fff;
-    padding-left: 24px;
-  }
-  .tg-hero h1::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.14em;
-    bottom: 0.14em;
-    width: 5px;
-    border-radius: 3px;
-    background: var(--tg-rojo);
+  .tg-hero__rule span:last-child {
+    background: color-mix(in srgb, var(--gris-titulos) 18%, #fff);
   }
   .tg-hero__lead {
-    margin: 22px 0 0 24px;
-    max-width: 56ch;
-    font-size: clamp(16px, 1.6vw, 20px);
-    line-height: 1.55;
-    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0;
   }
   .tg-hero__criterio {
-    margin: 22px 0 0 24px;
-    display: inline-block;
-    font-weight: 800;
-    color: #fff;
-    font-size: clamp(14px, 1.6vw, 18px);
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    background: var(--tg-rojo);
-    padding: 9px 18px;
-    border-radius: 8px;
+    margin-top: 14px;
   }
   .tg-hero__meta {
-    margin-top: 44px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    margin-top: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
   }
   .tg-partbtn {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    padding: 22px 22px 24px;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.04);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border: 1px solid var(--tg-linea);
+    border-radius: 10px;
+    background: var(--tg-bg);
     text-decoration: none;
-    overflow: hidden;
     transition:
-      background 0.2s ease,
-      border-color 0.2s ease,
-      transform 0.2s ease;
-  }
-  .tg-partbtn::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 0;
-    background: var(--tg-rojo);
-    transition: width 0.3s ease;
+      border-color 0.18s ease,
+      color 0.18s ease;
   }
   .tg-partbtn:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.34);
-    transform: translateY(-4px);
-  }
-  .tg-partbtn:hover::after {
-    width: 100%;
-  }
-  .tg-partbtn__n {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    display: grid;
-    place-items: center;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    color: var(--tg-rojo);
-    border: 1.5px solid var(--tg-rojo);
-    transition:
-      background 0.2s ease,
-      color 0.2s ease;
-  }
-  .tg-partbtn:hover .tg-partbtn__n {
-    background: var(--tg-rojo);
-    color: #fff;
-  }
-  .tg-partbtn__t {
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 1.25;
-    text-transform: uppercase;
-    letter-spacing: 0.01em;
-    color: #fff;
-    max-width: 18ch;
-  }
-  .tg-partbtn__a {
-    position: absolute;
-    top: 24px;
-    right: 20px;
-    width: 18px;
-    height: 18px;
-    color: rgba(255, 255, 255, 0.55);
-    opacity: 0;
-    transform: translateX(-6px);
-    transition:
-      opacity 0.2s ease,
-      transform 0.2s ease;
-  }
-  .tg-partbtn:hover .tg-partbtn__a {
-    opacity: 1;
-    transform: none;
+    border-color: var(--tg-azul);
+    color: var(--tg-azul);
   }
 
   /* ---------- Shell ---------- */
@@ -1306,10 +1251,6 @@ const sections: Section[] = [
     overflow-y: auto;
   }
   .tg-toc__label {
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--tg-mute);
     margin-bottom: 16px;
     padding-left: 2px;
   }
@@ -1318,11 +1259,6 @@ const sections: Section[] = [
   }
   .tg-toc__part {
     display: block;
-    font-weight: 700;
-    font-size: 12.5px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--tg-rojo);
     padding: 16px 0 8px 16px;
     margin-left: -2px;
     text-decoration: none;
@@ -1333,9 +1269,6 @@ const sections: Section[] = [
   .tg-toc__link {
     display: block;
     text-decoration: none;
-    color: var(--tg-texto-2);
-    font-size: 14.5px;
-    line-height: 1.35;
     padding: 7px 0 7px 16px;
     margin-left: -2px;
     border-left: 2px solid transparent;
@@ -1372,35 +1305,21 @@ const sections: Section[] = [
     text-align: center;
   }
   .tg-part__num {
-    font-weight: 800;
-    font-size: 15px;
-    letter-spacing: 0.22em;
-    color: var(--tg-azul);
-    opacity: 0.65;
     display: block;
     margin-bottom: 12px;
-  }
-  .tg-part__title {
-    font-weight: 800;
-    color: var(--tg-rojo);
-    font-size: clamp(26px, 4vw, 42px);
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
   }
   .tg-part__title::after {
     content: "";
     display: block;
     width: 64px;
     height: 4px;
-    background: var(--tg-rojo);
+    background: var(--tg-azul);
     margin: 18px auto 0;
     border-radius: 2px;
   }
-  .tg-part__blurb {
+  /* gana a `.tips-guide p { margin: 0 }` para poder centrar el bloque */
+  .tips-guide .tg-part__blurb {
     margin: 20px auto 0;
-    max-width: 62ch;
-    color: var(--tg-texto-2);
-    font-size: 16px;
   }
   .tg-part__blurb span {
     display: block;
@@ -1442,21 +1361,9 @@ const sections: Section[] = [
     padding-top: 3px;
   }
   .tg-sec__kicker {
-    font-size: 11.5px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--tg-mute);
     margin-bottom: 5px;
   }
-  .tg-sec__title {
-    font-weight: 700;
-    font-size: clamp(21px, 2.6vw, 28px);
-    color: var(--tg-azul);
-    letter-spacing: -0.01em;
-  }
   .tg-sec__intro {
-    color: var(--tg-texto);
-    font-size: 16.5px;
     max-width: 70ch;
     margin-top: 6px;
   }
@@ -1477,22 +1384,11 @@ const sections: Section[] = [
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--tg-azul-deep);
     margin-bottom: 6px;
   }
   .tg-evaluar__tag svg {
     width: 14px;
     height: 14px;
-  }
-  .tg-evaluar__h {
-    font-weight: 700;
-    font-size: 17.5px;
-    color: var(--tg-titulo);
-    margin-bottom: 14px;
-    line-height: 1.3;
   }
   .tg-checks {
     list-style: none;
@@ -1504,7 +1400,6 @@ const sections: Section[] = [
   .tg-checks > li {
     position: relative;
     padding-left: 30px;
-    color: var(--tg-texto);
   }
   .tg-checks > li::before {
     content: "";
@@ -1538,8 +1433,6 @@ const sections: Section[] = [
   .tg-checks ul li {
     position: relative;
     padding-left: 18px;
-    color: var(--tg-texto-2);
-    font-size: 15px;
   }
   .tg-checks ul li::before {
     content: "";
@@ -1591,14 +1484,7 @@ const sections: Section[] = [
     width: 17px;
     height: 17px;
   }
-  .tg-card__head h4 {
-    font-size: 16.5px;
-    font-weight: 700;
-  }
   .tg-card__head .tg-sub {
-    font-size: 10.5px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
     display: block;
     margin-top: 2px;
   }
@@ -1606,8 +1492,6 @@ const sections: Section[] = [
     padding: 18px 22px 22px;
   }
   .tg-card__lead {
-    font-size: 15px;
-    color: var(--tg-texto-2);
     margin-bottom: 12px;
   }
 
@@ -1667,9 +1551,6 @@ const sections: Section[] = [
   .tg-items > li {
     position: relative;
     padding-left: 27px;
-    color: var(--tg-texto);
-    font-size: 15px;
-    line-height: 1.5;
   }
   .tg-items > li > .tg-mk {
     position: absolute;
@@ -1689,9 +1570,6 @@ const sections: Section[] = [
   .tg-items ul li {
     position: relative;
     padding-left: 18px;
-    color: var(--tg-texto-2);
-    font-size: 14px;
-    line-height: 1.45;
   }
   .tg-items ul li::before {
     content: "";
@@ -1703,9 +1581,6 @@ const sections: Section[] = [
     border-radius: 50%;
     background: currentColor;
     opacity: 0.4;
-  }
-  .tg-items ul ul li {
-    font-size: 13.5px;
   }
   .tg-card--risk .tg-items ul li {
     color: #8a6a6a;
@@ -1727,10 +1602,6 @@ const sections: Section[] = [
   }
   .tg-tech__tag {
     text-align: center;
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--tg-mute);
     padding: 14px 16px 6px;
   }
   .tg-tech__grid {
@@ -1744,9 +1615,6 @@ const sections: Section[] = [
     border-left: 1px solid var(--tg-linea);
   }
   .tg-tech__col h5 {
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--tg-azul);
     text-align: center;
     margin-bottom: 14px;
     padding-bottom: 10px;
@@ -1762,8 +1630,6 @@ const sections: Section[] = [
   .tg-tech__col li {
     position: relative;
     padding-left: 18px;
-    font-size: 14.5px;
-    color: var(--tg-texto);
   }
   .tg-tech__col li::before {
     content: "";
@@ -1798,19 +1664,12 @@ const sections: Section[] = [
   }
   .tg-quote p {
     position: relative;
-    font-weight: 600;
-    font-size: clamp(18px, 2.2vw, 23px);
-    line-height: 1.4;
-    letter-spacing: -0.01em;
   }
   .tg-quote .tg-cite {
     position: relative;
     display: block;
     margin-top: 12px;
-    font-size: 12px;
-    letter-spacing: 0.1em;
     color: rgba(255, 255, 255, 0.7);
-    text-transform: uppercase;
   }
 
   /* note block */
@@ -1822,12 +1681,6 @@ const sections: Section[] = [
     border-radius: var(--tg-r-sm);
     padding: 20px 24px;
   }
-  .tg-noteblock h4 {
-    font-weight: 700;
-    font-size: 17px;
-    color: var(--tg-azul);
-    margin-bottom: 14px;
-  }
 
   /* CTA */
   .tg-cta {
@@ -1837,73 +1690,39 @@ const sections: Section[] = [
     background: var(--tg-azul-deep);
     color: #fff;
     position: relative;
+    isolation: isolate;
+    box-shadow:
+      0 32px 70px -24px rgba(15, 30, 55, 0.6),
+      0 12px 28px -14px rgba(15, 30, 55, 0.45);
   }
-  .tg-cta__ph {
+  .tg-cta__bg {
     position: absolute;
     inset: 0;
-    background:
-      linear-gradient(100deg, rgba(15, 42, 80, 0.96), rgba(15, 42, 80, 0.55)),
-      repeating-linear-gradient(135deg, #1c3f6e 0 22px, #193a64 22px 44px);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .tg-cta__scrim {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      105deg,
+      rgba(10, 28, 56, 0.95) 0%,
+      rgba(10, 28, 56, 0.78) 52%,
+      rgba(10, 28, 56, 0.55) 100%
+    );
   }
   .tg-cta__inner {
     position: relative;
     padding: 48px 44px;
-  }
-  .tg-cta h3 {
-    color: #fff;
-    font-weight: 800;
-    font-size: clamp(24px, 3vw, 34px);
-    max-width: 20ch;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-  }
-  .tg-cta p {
-    margin-top: 14px;
-    max-width: 52ch;
-    color: rgba(255, 255, 255, 0.88);
-    font-size: 16.5px;
   }
   .tg-cta__btns {
     margin-top: 28px;
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-  }
-  .tg-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 15.5px;
-    text-decoration: none;
-    padding: 14px 26px;
-    border-radius: 10px;
-    transition:
-      transform 0.12s,
-      background 0.15s,
-      box-shadow 0.15s;
-  }
-  .tg-btn svg {
-    width: 18px;
-    height: 18px;
-  }
-  .tg-btn--primary {
-    background: var(--tg-rojo);
-    color: #fff;
-    box-shadow: 0 8px 22px -8px rgba(202, 28, 28, 0.7);
-  }
-  .tg-btn--primary:hover {
-    background: var(--tg-rojo-hover);
-    transform: translateY(-2px);
-  }
-  .tg-btn--ghost {
-    background: rgba(255, 255, 255, 0.08);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-  }
-  .tg-btn--ghost:hover {
-    background: rgba(255, 255, 255, 0.16);
-    transform: translateY(-2px);
   }
 
   /* Reveal */
@@ -1926,15 +1745,10 @@ const sections: Section[] = [
     }
   }
 
-  /* Endnote */
-  .tg-endnote {
-    max-width: var(--tg-maxw);
+  /* Endnote — scope extra para ganar a `.tips-guide p { margin: 0 }` */
+  .tips-guide .tg-endnote {
     margin: 0 auto;
     padding: 34px 32px 70px;
-    color: var(--tg-mute);
-    font-size: 13px;
-    letter-spacing: 0.04em;
-    text-align: center;
   }
 
   /* Menú móvil */
@@ -1959,31 +1773,13 @@ const sections: Section[] = [
       padding: 24px 20px 40px;
     }
     .tg-hero__inner {
-      padding: 96px 22px 48px;
+      padding: 92px 22px 44px;
     }
     .tg-hero__meta {
-      grid-template-columns: 1fr;
-      gap: 12px;
+      gap: 10px;
     }
     .tg-partbtn {
-      flex-direction: row;
-      align-items: center;
-      gap: 16px;
-      padding: 16px 20px;
-    }
-    .tg-partbtn__n {
-      flex: 0 0 auto;
-    }
-    .tg-partbtn__t {
-      max-width: none;
-    }
-    .tg-partbtn__a {
-      top: 50%;
-      transform: translateY(-50%);
-      opacity: 0.5;
-    }
-    .tg-partbtn:hover .tg-partbtn__a {
-      transform: translateY(-50%);
+      flex: 1 1 100%;
     }
     .tg-cmp {
       grid-template-columns: 1fr;
@@ -2021,16 +1817,9 @@ const sections: Section[] = [
       min-width: 0;
     }
     .tg-mobilebar__cur .tg-k {
-      font-size: 9.5px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--tg-rojo);
       display: block;
     }
     .tg-mobilebar__cur .tg-t {
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--tg-azul);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -2046,8 +1835,6 @@ const sections: Section[] = [
       border: 0;
       border-radius: 9px;
       padding: 9px 14px;
-      font-weight: 700;
-      font-size: 13px;
       cursor: pointer;
     }
     .tg-mobilebar__btn svg {
@@ -2092,12 +1879,6 @@ const sections: Section[] = [
       border-bottom: 1px solid var(--tg-linea);
       margin-bottom: 8px;
     }
-    .tg-msheet__top span {
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--tg-mute);
-    }
     .tg-msheet__x {
       background: none;
       border: 0;
@@ -2108,18 +1889,11 @@ const sections: Section[] = [
       padding: 4px 8px;
     }
     .tg-msheet__part {
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--tg-rojo);
       padding: 16px 22px 6px;
     }
     .tg-msheet__link {
       display: block;
       text-decoration: none;
-      color: var(--tg-texto);
-      font-size: 15px;
       padding: 9px 22px;
       border-left: 3px solid transparent;
     }
@@ -2160,10 +1934,6 @@ const sections: Section[] = [
     }
     .tg-cta__inner {
       padding: 34px 24px;
-    }
-    .tg-btn {
-      width: 100%;
-      justify-content: center;
     }
   }
 </style>
