@@ -268,7 +268,7 @@ export default function ReliefFourthSection() {
       <div className="bg-[#1e1e1e] py-16">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-5 px-6 text-center lg:px-8">
           <h2 data-reveal="up" className="text-2xl font-bold md:text-4xl">
-            Tu planta deja de depender de unos pocos operadores indispensables
+            Su planta deja de depender de unos pocos operadores indispensables
           </h2>
           <p
             data-reveal="up"
@@ -310,7 +310,7 @@ export default function ReliefFourthSection() {
               data-reveal="up"
               className="mx-auto mt-4 max-w-3xl text-3xl font-bold md:text-5xl"
             >
-              Haz cualquier pregunta sobre la operación de tu planta
+              Haga cualquier pregunta sobre la operación de su planta
             </h2>
             <p
               data-reveal="up"
@@ -366,7 +366,7 @@ export default function ReliefFourthSection() {
             ))}
           </div>
           <p className="mt-3 text-[11px] font-semibold text-white/50 sm:hidden">
-            Desliza para ver más →
+            Deslice para ver más →
           </p>
         </div>
       </section>

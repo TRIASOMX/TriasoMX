@@ -28,7 +28,7 @@ const iconProps = {
 const FEATURES: Feature[] = [
   {
     title: "Decisión en tiempo real",
-    text: "Toma decisiones más rápidas y mejor fundamentadas, sin depender de estar en sitio.",
+    text: "Tome decisiones más rápidas y mejor fundamentadas, sin depender de estar en sitio.",
     icon: (
       <svg {...iconProps}>
         <path d="M4 19h16" />
@@ -38,7 +38,7 @@ const FEATURES: Feature[] = [
     ),
   },
   {
-    title: "Acceso para todo tu equipo",
+    title: "Acceso para todo su equipo",
     text: "Consola, computadoras remotas, tablets y teléfonos para operadores, supervisores y propietarios.",
     icon: (
       <svg {...iconProps}>

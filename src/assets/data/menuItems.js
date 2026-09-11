@@ -219,10 +219,6 @@ export const menuItems = [
         title: "VENTAJAS",
         url: "/Advantages",
       },
-      // {
-      //   title : "HIGH QUALITY",
-      //   url : "/",
-      // },
       {
         title: "FLANCOS ESTÉTICOS",
         url: "/AestheticSide",
@@ -247,10 +243,6 @@ export const menuItems = [
             title: "ASPHALT PLANTS",
             url: "/TipsAsphalt",
           },
-          // {
-          //   title : "ROCK CRUSHERS",
-          //   url : "/",
-          // }
         ],
       },
 
@@ -275,10 +267,6 @@ export const menuItems = [
       },
     ],
   },
-  // {
-  //   title : "VIDEOS",
-  //   url : "/",
-  // },
   {
     title: "CONTACTO",
     url: "/Contact",

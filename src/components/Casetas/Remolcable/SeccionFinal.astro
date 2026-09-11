@@ -1,10 +1,19 @@
 ---
 import { Image } from "astro:assets";
 import img2 from "../../../../public/consola1.webp";
-import SecondWhatsBtn from "../../unitComponents/SecondWhatsBtn.astro";
 import PlanosMontable from "./PlanosMontable";
 import Slider from "../../AsphaltStorage/Slider";
 import CTASection1 from "../../unitComponents/CTASection1.astro";
+import GallerySlider from "../../unitComponents/GallerySlider";
+import casetaG1 from "../../../assets/images/Casetas/CasetaG1.webp";
+import casetaG2 from "../../../assets/images/Casetas/CasetaG2.webp";
+import casetaRemolcable from "../../../assets/images/Casetas/remolcable.webp";
+
+const casetaSlides = [
+  { image: casetaG1.src, caption: "Caseta de control remolcable" },
+  { image: casetaG2.src, caption: "Caseta de control remolcable" },
+  { image: casetaRemolcable.src, caption: "Caseta de control remolcable" },
+];
 
 const slides = [
   {
@@ -136,6 +145,9 @@ const slides = [
   </div>
 </section>
 
+<section>
+  <GallerySlider client:visible slides={casetaSlides} />
+</section>
 <section>
   <PlanosMontable client:only />
 </section>

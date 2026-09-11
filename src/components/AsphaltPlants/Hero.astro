@@ -11,7 +11,7 @@ export interface Props {
 const { heroImage, title, altText } = Astro.props;
 ---
 
-<div class="w-full relative mt-16 overflow-hidden">
+<div class="w-full relative mt-16">
   <Image
     src={heroImage}
     widths={[400, 600, 800, 1000, 1200, 1400, 1600, 1920]}
@@ -26,8 +26,10 @@ const { heroImage, title, altText } = Astro.props;
   />
 
   <div
-    class="absolute bottom-[-15px] lg:bottom-5 md:bottom-5 right-0 z-40 p-4 lg:pr-56 overflow-hidden"
+    class="absolute bottom-[-35px] lg:bottom-5 md:bottom-5 right-0 z-40 p-4 lg:pr-56"
   >
-    <h1 class="text-grisT text-lg lg:text-5xl md:text-3xl font-bold ">{title}</h1>
+    <h1 class="text-grisT text-lg lg:text-5xl md:text-3xl font-bold">
+      {title}
+    </h1>
   </div>
 </div>

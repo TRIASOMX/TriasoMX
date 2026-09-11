@@ -172,7 +172,7 @@ const data: Record<PlantType, PlantData> = {
           </>
         ),
         specs: [
-          { label: "Capacidad", value: "10 ton" },
+          { label: "Capacidad", value: "14 ton" },
           { label: "Garantía", value: "12 meses" },
         ],
         tags: [
@@ -214,7 +214,7 @@ const data: Record<PlantType, PlantData> = {
           </>
         ),
         specs: [
-          { label: "Capacidad", value: "10 ton" },
+          { label: "Capacidad", value: "14 ton" },
           { label: "Garantía", value: "18 meses" },
         ],
         tags: [
@@ -497,7 +497,7 @@ const data: Record<PlantType, PlantData> = {
           </>
         ),
         specs: [
-          { label: "Capacidad", value: "10 ton" },
+          { label: "Capacidad", value: "14 ton" },
           { label: "Garantía", value: "12 meses" },
         ],
         tags: [
@@ -539,7 +539,7 @@ const data: Record<PlantType, PlantData> = {
           </>
         ),
         specs: [
-          { label: "Capacidad", value: "10 ton" },
+          { label: "Capacidad", value: "14 ton" },
           { label: "Garantía", value: "18 meses" },
         ],
         tags: [
@@ -1156,7 +1156,7 @@ export default function ProductSelector() {
               )}
             >
               {/* Imagen flotante */}
-              <div className="absolute -top-36 left-1/2 -translate-x-1/2 z-10 w-[70%] md:w-[88%]">
+              <div className="absolute -top-16 md:-top-36 left-1/2 -translate-x-1/2 z-10 w-[70%] md:w-[88%]">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -1221,6 +1221,7 @@ export default function ProductSelector() {
       </div>
       {/* ── desc ── */}
       <div
+        className="pt-6 md:pt-16"
         style={{
           textAlign: "center",
           width: "100%",
@@ -1229,8 +1230,8 @@ export default function ProductSelector() {
         }}
       >
         <h2
+          className="text-2xl md:text-5xl"
           style={{
-            fontSize: "clamp(1.5rem, 3vw, 1.875rem)",
             fontWeight: 700,
             color: colors.foreground,
             marginBottom: "1rem",
@@ -1241,7 +1242,9 @@ export default function ProductSelector() {
           <br />
           de plantas de asfalto de {plant.title.toLowerCase()}:
         </h2>
+        <br />
         <p
+          className="pb-0 md:pb-16"
           style={{
             fontSize: "clamp(0.875rem, 2vw, 1rem)",
             color: "#000000",
@@ -1286,9 +1289,12 @@ export default function ProductSelector() {
                 boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
                 transition: "box-shadow 0.2s",
                 paddingTop: "3rem",
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
               }}
             >
-              <div className="p-3 md:p-6">
+              <div className="p-3 md:p-6 flex-1 flex flex-col">
                 <h4
                   className="text-xl md:text-3xl"
                   style={{
@@ -1336,10 +1342,7 @@ export default function ProductSelector() {
                   ))}
                 </div>
 
-                <Button
-                  className="w-full mt-2 md:mt-6"
-                  route={model.route || "#"}
-                >
+                <Button className="w-full mt-auto" route={model.route || "#"}>
                   Seleccionar modelo
                 </Button>
               </div>
@@ -1353,8 +1356,8 @@ export default function ProductSelector() {
         style={{ marginBottom: "2rem", maxWidth: "90rem", margin: "0 auto" }}
       >
         <h2
+          className="text-2xl md:text-5xl"
           style={{
-            fontSize: "clamp(1.5rem, 3vw, 1.875rem)",
             fontWeight: 700,
             textAlign: "center",
             color: "#000000",
@@ -1601,7 +1604,7 @@ export default function ProductSelector() {
       </div>
       <div className="max-w-7xl px-0 md:px-8 space-y-2 flex flex-col justify-between items-center py-10 md:py-20">
         <div className="font-bold text-black w-full">
-          <h1 className="text-lg md:text-5xl">
+          <h1 className="text-lg md:text-5xl/[4rem]">
             Con estos equipos usted podrá abatir las costosas horas de
             producción:
           </h1>

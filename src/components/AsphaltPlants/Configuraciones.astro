@@ -1,13 +1,14 @@
 ---
 import DFAT3 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT3.webp";
-import caseta from "../../assets/images/Casetas/remol.webp";
-import baghouse from "../../assets/images/BagHouses/bagHouses1.webp";
-import tolvasAgregados from "../../assets/images/PowderA/binLids.webp";
-import tolvasAditivos from "../../assets/images/BinUnits/TlvU2CF.webp";
-import rapBin from "../../assets/images/RapBins/rapbincustom.webp";
-import silo from "../../assets/images/HotMix/siloBG.webp";
+import caseta from "../../assets/images/Casetas/montable1.webp";
+import baghouse from "../../assets/images/BagHouses/heroImage2.webp";
+import tolvasAditivos from "../../assets/images/PowderA/Gallery/PAF1.webp";
+import tolvasAgregados from "../../assets/images/BinUnits/Tolv.webp";
+import rapBin from "../../assets/images/RapBins/Gallery/RBG1.webp";
+import silo from "../../assets/images/HotMix/Gallery/HM1.webp";
 
-import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
+import CTASection from "../unitComponents/CTASection.astro";
+import ctaBg from "../../assets/images/AsphaltPlant/NewBanner.webp";
 
 import OSistem from "../unitComponents/SistemaOBlack.astro";
 
@@ -64,7 +65,7 @@ const configuraciones: ConfigItem[] = [
   {
     title: "Silos de mezcla asfáltica",
     description:
-      "Los silos de almacenamiento de mezcla asfáltica Triaso® están diseñados para optimizar el almacenamiento, manejo y despacho de la mezcla asfáltica, asegurando un desempeño de alta calidad y cumpliendo con las exigencias de los proyectos de construcción modernos. ",
+      "Los silos de almacenamiento de mezcla asfáltica Triaso® están diseñados para optimizar el almacenamiento, manejo y despacho de la mezcla asfáltica.",
     image: silo.src,
     route: "/HotMix",
   },
@@ -74,7 +75,7 @@ const configuraciones: ConfigItem[] = [
 <section class="w-full py-10 md:py-20">
   <div class="w-full max-w-3xl mx-auto text-center px-4 mb-10 md:mb-16">
     <h2 class="text-2xl md:text-5xl font-semibold text-black">
-      Configuración completa de una planta de asfalto
+      Configuración completa de su planta de asfalto
     </h2>
   </div>
 
@@ -107,7 +108,7 @@ const configuraciones: ConfigItem[] = [
             </span>
 
             {/* Imagen centrada en toda la card, independiente del texto */}
-            <div class="pointer-events-none absolute inset-0 flex items-center justify-center p-6 md:p-8">
+            <div class="pointer-events-none absolute inset-0 flex items-start md:items-center justify-center px-6 pb-6 pt-14 md:p-8">
               <img
                 src={item.image}
                 alt={item.title}
@@ -130,22 +131,11 @@ const configuraciones: ConfigItem[] = [
     }
   </div>
   <OSistem />
-  <div class="w-full">
-    <section>
-      <div
-        class="relative bg-[#e6a98a] text-center py-10 md:py-20 px-6 rounded-b-[60%]"
-      >
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Agende una reunión</h2>
-
-        <p class="text-sm md:text-base mb-8 max-w-2xl mx-auto">
-          Cuéntenos más sobre su proyecto para identificar la solución
-          industrial que mejor se ajuste a sus necesidades.
-        </p>
-
-        <ScheduleBtn />
-      </div>
-    </section>
-  </div>
+  <CTASection
+    title="Agende una reunión"
+    text="Cuéntenos más sobre su proyecto para identificar la solución industrial que mejor se ajuste a sus necesidades."
+    bgImage={ctaBg.src}
+  />
 </section>
 
 <script>

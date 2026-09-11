@@ -7,6 +7,29 @@ import CMPugMill from "../components/ColdMix/CMPugMill.astro";
 import CMSidePanels from "../components/ColdMix/CMSidePanels.astro";
 import CMPlanos from "../components/ColdMix/CMPlanos";
 import CTASection1 from "../components/unitComponents/CTASection1.astro";
+import GallerySlider from "../components/unitComponents/GallerySlider";
+import cmg1 from "../assets/images/ColdMix/GallerySlider/CMG1.webp";
+import cmg2 from "../assets/images/ColdMix/GallerySlider/CMG2.webp";
+import cmg3 from "../assets/images/ColdMix/GallerySlider/CMG3.webp";
+import cmg4 from "../assets/images/ColdMix/GallerySlider/CMG4.webp";
+import cmg5 from "../assets/images/ColdMix/GallerySlider/CMG5.webp";
+import cmg6 from "../assets/images/ColdMix/GallerySlider/CMG6.webp";
+import cmg7 from "../assets/images/ColdMix/GallerySlider/CMG7.webp";
+import cmg8 from "../assets/images/ColdMix/GallerySlider/CMG8.webp";
+
+const coldMixCaption =
+  "Planta mezcladora en frío, estabilizadora, de hasta 200 Tmph, con descarga en piso";
+
+const coldMixSlides = [
+  { image: cmg1.src, caption: coldMixCaption },
+  { image: cmg2.src, caption: coldMixCaption },
+  { image: cmg3.src, caption: coldMixCaption },
+  { image: cmg4.src, caption: coldMixCaption },
+  { image: cmg5.src, caption: coldMixCaption },
+  { image: cmg6.src, caption: coldMixCaption },
+  { image: cmg7.src, caption: coldMixCaption },
+  { image: cmg8.src, caption: coldMixCaption },
+];
 ---
 
 <Layout title="ColdMix Page">
@@ -29,5 +52,8 @@ import CTASection1 from "../components/unitComponents/CTASection1.astro";
 
   <CTASection1 />
   <CMPugMill />
+  <section>
+    <GallerySlider client:visible slides={coldMixSlides} />
+  </section>
   <CMPlanos client:only />
 </Layout>

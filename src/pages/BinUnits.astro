@@ -11,6 +11,18 @@ import binUnit1 from "../assets/images/BinUnits/binUnit1.webp";
 import OSectionBin from "../components/BinUnits/OSectionBin.astro";
 import { Image } from "astro:assets";
 import CTASection1 from "../components/unitComponents/CTASection1.astro";
+import GallerySlider from "../components/unitComponents/GallerySlider";
+import tlvA from "../assets/images/BinUnits/GallerySlider/Big/TlvP317P268A.webp";
+import tlvB from "../assets/images/BinUnits/GallerySlider/Big/TlvP317P268B.webp";
+import tlvC from "../assets/images/BinUnits/GallerySlider/Big/TlvP317P268C.webp";
+import tlvD from "../assets/images/BinUnits/GallerySlider/Big/TlvP317P268D.webp";
+
+const binSlides = [
+  { image: tlvA.src, caption: "Unidad de tolvas triple plus" },
+  { image: tlvB.src, caption: "Unidad de tolvas triple plus" },
+  { image: tlvC.src, caption: "Unidad de tolvas triple plus" },
+  { image: tlvD.src, caption: "Unidad de tolvas triple plus" },
+];
 ---
 
 <Layout title="Bin Units">
@@ -178,6 +190,9 @@ import CTASection1 from "../components/unitComponents/CTASection1.astro";
   <BinGallery />
   <CTASection1 />
 
+  <section>
+    <GallerySlider client:visible slides={binSlides} />
+  </section>
   <BinPlanosSection client:only />
   <!-- <CardSection /> -->
   <CardSectionResponsive />

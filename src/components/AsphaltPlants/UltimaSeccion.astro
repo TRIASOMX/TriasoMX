@@ -22,26 +22,6 @@ const images1 = [
 ---
 
 <div class="w-full flex flex-col items-center justify-center font-bold">
-  <section
-    class="w-full flex flex-col items-center justify-center bg-[url(/Boxes.webp)] bg-cover bg-no-repeat bg-center"
-  >
-    <div class="w-full bg-black/50 py-10">
-      <div
-        class="flex flex-col items-start justify-center w-full mt-10 max-w-7xl mx-auto px-8"
-      >
-        <h1 class="text-xl md:text-4xl text-white font-semibold mb-10">
-          Repuestos disponibles las 24 horas del día, los 7 días de la semana
-        </h1>
-        <p class="text-white font-thin text-sm md:text-lg">
-          Sabemos lo importante que es mantener su equipo en funcionamiento. Por
-          eso, nuestro equipo está siempre disponible para brindarle asistencia
-          inmediata y suministrarle las piezas de repuesto que necesite.
-        </p><br />
-
-        <LearnBtnBlue href="/Spare" />
-      </div>
-    </div>
-  </section>
   <div class="w-full max-w-7xl mx-auto">
     <h1 class="text-black lg:text-4xl text-2xl mt-20 w-full text-start px-8">
       Algunos tips antes de comprar <br />
@@ -69,5 +49,25 @@ const images1 = [
       <Image src={img1} alt="Asphalt plant" class="hidden md:block" />
     </div>
   </div>
+  <section
+    class="w-full flex flex-col items-center justify-center bg-[url(/Boxes.webp)] bg-cover bg-no-repeat bg-center"
+  >
+    <div class="w-full bg-black/50 py-10">
+      <div
+        class="flex flex-col items-start justify-center w-full mt-10 max-w-7xl mx-auto px-8"
+      >
+        <h1 class="text-xl md:text-4xl text-white font-semibold mb-10">
+          Repuestos disponibles las 24 horas del día, los 7 días de la semana
+        </h1>
+        <p class="text-white font-thin text-sm md:text-lg">
+          Sabemos lo importante que es mantener su equipo en funcionamiento. Por
+          eso, nuestro equipo está siempre disponible para brindarle asistencia
+          inmediata y suministrarle las piezas de repuesto que necesite.
+        </p><br />
+
+        <LearnBtnBlue href="/Spare" />
+      </div>
+    </div>
+  </section>
 </div>
 <GallerySlider2 client:load images={images1} />

@@ -1,4 +1,7 @@
 ---
+import atomizacion from "../../assets/images/Burners/Low/PlasmaAsistido.webp";
+import emisiones from "../../assets/images/IntegralAsphalt/Hero31.webp";
+import seguridad from "../../assets/images/FuelPreHeaters/seguridad.webp";
 import FPH2 from "../../assets/images/FuelPreHeaters/FPH2.webp";
 import FPH2Low from "../../assets/images/FuelPreHeaters/Low/FPH2Low.webp";
 import FPHPlanos from "./FPHPlanos";
@@ -8,22 +11,36 @@ import DropdownComponent from "../unitComponents/DropdownComponent.astro";
 import StackedInfoCards from "../unitComponents/StackedInfoCards.astro";
 import UltimaSeccion from "../DrumMixers/UltimaSeccion.astro";
 import Slider from "../AsphaltStorage/Slider";
+import GallerySlider from "../unitComponents/GallerySlider";
+import g1 from "../../assets/images/FuelPreHeaters/Gallery/PREH1.webp";
+import g2 from "../../assets/images/FuelPreHeaters/Gallery/PREH2.webp";
+
+const fphSlides = [
+  {
+    image: g1.src,
+    caption: "Precalentadores de combustibles con sistema de filtrado",
+  },
+  {
+    image: g2.src,
+    caption: "Precalentadores de combustibles con sistema de filtrado",
+  },
+];
 
 const cards = [
   {
     title: "Mejor atomización del combustible",
     text: "El precalentador reduce la viscosidad del combustible, permitiendo que se atomice correctamente en gotas finas que se queman por completo. Esto asegura una combustión más limpia, mejor transferencia de calor y sin partículas de combustible en la mezcla.",
-    image: FPH2.src,
+    image: atomizacion.src,
   },
   {
     title: "Menores emisiones, operación más limpia",
     text: "La correcta atomización mediante el precalentamiento reduce emisiones como CO₂, hidrocarburos no quemados y NOx. Es una forma más limpia y responsable de operar, especialmente importante en regiones con regulaciones ambientales estrictas.",
-    image: FPH2.src,
+    image: emisiones.src,
   },
   {
     title: "Sistema de seguridad automático para operación confiable",
     text: "El precalentador de combustible incluye un sistema de seguridad integrado que evita que la resistencia se active si no hay combustible en la línea. Esto protege al sistema contra sobrecalentamiento, previene daños en los componentes y asegura una operación segura y eficiente en todo momento.",
-    image: FPH2.src,
+    image: seguridad.src,
   },
 ];
 
@@ -111,6 +128,10 @@ const cards2 = [
       mainTitle="Problemas causados por no precalentar los combustibles de bajo costo"
       mainDescription="Los combustibles de bajo costo que no se precalientan provocan y agravan los siguientes problemas"
     />
+  </div>
+
+  <div class="w-full px-2 md:px-8">
+    <GallerySlider client:only slides={fphSlides} visibleThumbs={2} />
   </div>
 
   <FPHPlanos client:only />

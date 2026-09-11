@@ -1,9 +1,9 @@
 ---
-import MiniGallery from "../unitComponents/MiniGallery";
+import GallerySlider from "../unitComponents/GallerySlider";
 import heroIMG from "../../assets/images/AsphaltStorage/bannerStorage.webp";
-import img1 from "../../../public/Gallery/oil-heater.webp";
-import img2 from "../../../public/Gallery/oilsetup.webp";
-import img4 from "../../assets/images/AsphaltStorage/SliderGalleryStorage/ATS4.webp";
+import gOH1 from "../../assets/images/OilHeaters/Gallery/OH1.webp";
+import gOH2 from "../../assets/images/OilHeaters/Gallery/OH2.webp";
+import gOH3 from "../../assets/images/OilHeaters/Gallery/OH3.webp";
 import OHProv2 from "../../assets/images/OilHeaters/OHProv2.webp";
 import ItemsSlider from "../LandinPage/ItemsSlider";
 import OSHand from "../../assets/images/OSHand.webp";
@@ -13,7 +13,20 @@ import caldera4 from "../../assets/images/OilHeaters/caldera4.webp";
 import caldera5 from "../../assets/images/AsphaltStorage/hotoil.webp";
 import { Image } from "astro:assets";
 
-const gallerySlides = [{ img: img4 }, { img: img1 }, { img: img2 }];
+const ohSlides = [
+  {
+    image: gOH1.src,
+    caption: "Caldera de 1,000,000 Btu's/Hr",
+  },
+  {
+    image: gOH2.src,
+    caption: "Caldera de 1,000,000 Btu's/Hr",
+  },
+  {
+    image: gOH3.src,
+    caption: "Caldera de 1,000,000 Btu's/Hr",
+  },
+];
 const slides = [
   {
     text: "La caldera de aceite térmico garantiza una distribución uniforme del calor mediante un sistema avanzado de circulación de aceite térmico. Cuenta con un tanque de expansión integrado que absorbe los cambios de volumen del aceite debido a la temperatura, estabilizando la presión y protegiendo el sistema para una operación más prolongada y con mínimo mantenimiento.",
@@ -166,16 +179,8 @@ const images1 = [
         <ItemsSlider images={images1} client:only />
       </div>
 
-      <div class="w-full bg-bgBeige py-10">
-        <div class="w-full max-w-7xl mx-auto px-8">
-          <h2 class="text-black text-2xl md:text-3xl font-bold">Galería</h2>
-        </div>
-        <MiniGallery
-          slides={gallerySlides}
-          autoSlide={false}
-          showText={false}
-          client:only
-        />
+      <div class="w-full max-w-7xl mx-auto px-2 md:px-8">
+        <GallerySlider client:only slides={ohSlides} visibleThumbs={3} />
       </div>
     </div>
   </div>

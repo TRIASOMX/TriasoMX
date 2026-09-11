@@ -143,6 +143,17 @@ const CARDS: CardData[] = [
     content: (
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 w-full">
         <div className="flex flex-col justify-start items-start">
+          <h1 className="text-2xl md:text-6xl italic mb-4 lg:mb-6 text-white">
+            Con <span className="font-bold">Triaso</span>
+          </h1>
+          <p className="text-white text-sm md:text-2xl text-right">
+            conviértase en el proveedor preferido de mezcla asfáltica
+          </p>
+          <p className="text-white text-sm md:text-2xl text-right">
+            para todos los proyectos de pavimentación en su región
+          </p>
+        </div>
+        <div className="flex flex-col justify-end items-end mt-6 lg:mt-10">
           <h1 className="text-2xl md:text-5xl font-bold tracking-tight mb-4 lg:mb-6 text-white">
             Somos expertos en lo que hacemos
           </h1>
@@ -152,20 +163,8 @@ const CARDS: CardData[] = [
             de
           </p>
           <p className="text-white text-sm md:text-2xl">
-            de asfalto fabricadas, hasta inicios de este{" "}
-            <span className="font-bold text-base md:text-3xl">2026</span>
-          </p>
-        </div>
-
-        <div className="flex flex-col justify-end items-end mt-6 lg:mt-10">
-          <h1 className="text-2xl md:text-6xl italic mb-4 lg:mb-6 text-white">
-            Con <span className="font-bold">Triaso</span>
-          </h1>
-          <p className="text-white text-sm md:text-2xl text-right">
-            conviértase en el proveedor preferido de mezcla asfáltica
-          </p>
-          <p className="text-white text-sm md:text-2xl text-right">
-            para todos los proyectos de pavimentación en su región
+            de asfalto fabricadas, desde{" "}
+            <span className="font-bold text-base md:text-3xl">1997</span>
           </p>
         </div>
 

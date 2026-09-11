@@ -39,7 +39,7 @@ const MODULES: Module[] = [
   {
     name: "Inteligencia artificial",
     title: "Un asistente que anticipa y explica",
-    text: "Detecta desviaciones antes de que escalen y responde en lenguaje claro cualquier duda sobre la operación de tu planta.",
+    text: "Detecta desviaciones antes de que escalen y responde en lenguaje claro cualquier duda sobre la operación de su planta.",
   },
   {
     name: "Control con menos personal",
@@ -49,12 +49,12 @@ const MODULES: Module[] = [
   {
     name: "Acceso por rol",
     title: "Cada quien entra con su propia cuenta",
-    text: "Inicio de sesión por operador y por turno: sabes quién hizo cada ajuste, con trazabilidad lista para auditoría.",
+    text: "Inicio de sesión por operador y por turno: sabe quién hizo cada ajuste, con trazabilidad lista para auditoría.",
   },
   {
     name: "Monitoreo remoto",
-    title: "Supervisa la planta sin estar en la planta",
-    text: "Tú y tus supervisores ven la producción en vivo desde computadora, tablet o teléfono, con alertas cuando algo se sale de rango.",
+    title: "Supervise la planta sin estar en la planta",
+    text: "Usted y sus supervisores ven la producción en vivo desde computadora, tablet o teléfono, con alertas cuando algo se sale de rango.",
   },
 ];
 

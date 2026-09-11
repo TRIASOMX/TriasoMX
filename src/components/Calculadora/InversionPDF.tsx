@@ -104,18 +104,6 @@ export const InversionPDF = ({ state }: Props) => {
             <Text style={[styles.tableCol, styles.colUnit]}>USD</Text>
           </View>
 
-          {/* <View style={styles.tableRow}>
-            <Text style={[styles.tableCol, styles.colLabel]}>Paridad</Text>
-            <Text style={[styles.tableCol, styles.colValue]}>{paridad}</Text>
-            <Text style={[styles.tableCol, styles.colUnit]}>MXN / USD</Text>
-          </View>
-
-          <View style={[styles.tableRow, styles.totalRow]}>
-            <Text style={[styles.tableCol, styles.colLabel]}>Valor del equipo (MXN)</Text>
-            <Text style={[styles.tableCol, styles.colValue]}>{fmt(pesos)}</Text>
-            <Text style={[styles.tableCol, styles.colUnit]}>pesos</Text>
-          </View> */}
-
         </View>
 
         {/* rentabilidad inversionista */}

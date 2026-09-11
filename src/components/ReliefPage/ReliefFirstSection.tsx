@@ -38,8 +38,8 @@ export default function ReliefFirstSection() {
                 data-reveal-delay="0.1"
                 className="max-w-xl text-base leading-relaxed text-grisP md:text-lg"
               >
-                El sistema de control y supervisión que te da el control total
-                de la operación de tu planta de asfalto —producción, consumos y
+                El sistema de control y supervisión que le da el control total
+                de la operación de su planta de asfalto —producción, consumos y
                 seguridad— desde cualquier lugar y en cualquier dispositivo.
               </p>
 

@@ -4,6 +4,23 @@ import BFirstSection from '../components/Burners/BFirstSection.astro';
 import BDiferences from "../components/Burners/BDiferences.astro";
 import BTabSection from "../components/Burners/BTabSection.astro";
 import BBurner from "../components/Burners/BBurner.astro";
+import GallerySlider from "../components/unitComponents/GallerySlider";
+import b1 from "../assets/images/Burners/Gallery/B1.webp";
+import b2 from "../assets/images/Burners/Gallery/B2.webp";
+
+const burnerCaption =
+  "Quemador tipo 'Aire total' y 'Potencia variable', de 33 Mill-Btu's/Hr, con su filtro y precalentador. Utilizado en plantas de asfalto Triaso modelo 2015 y siguientes";
+
+const burnerSlides = [
+  {
+    image: b1.src,
+    caption: burnerCaption,
+  },
+  {
+    image: b2.src,
+    caption: burnerCaption,
+  },
+];
 ---
 <Layout title="Burners Page">
     <BFirstSection></BFirstSection>
@@ -11,4 +28,7 @@ import BBurner from "../components/Burners/BBurner.astro";
     <BTabSection/>
     <BBurner/>
     <BDiferences></BDiferences>
-</Layout>   
+    <section class="w-full max-w-7xl mx-auto px-2 md:px-8">
+        <GallerySlider client:only slides={burnerSlides} visibleThumbs={2} />
+    </section>
+</Layout>
