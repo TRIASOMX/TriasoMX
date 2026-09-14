@@ -10,9 +10,7 @@ import img6 from "../../assets/images/AsphaltStorage/DirectFire.webp";
 import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
 import Tred from "../../assets/images/AsphaltStorage/redT.webp";
-import t1 from "../../assets/images/AsphaltStorage/SliderStorage/P-3a.webp";
 
-import g2 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT2.webp";
 import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
 import GallerySlider from "../unitComponents/GallerySlider";
 
@@ -23,36 +21,29 @@ import s4 from "../../assets/images/AsphaltStorage/SliderStorage/P-3d.webp";
 import s5 from "../../assets/images/AsphaltStorage/SliderStorage/P-3e.webp";
 import s6 from "../../assets/images/AsphaltStorage/SliderStorage/P-3f.webp";
 
-const storageSlides = [
-  {
-    image: s1.src,
-    caption:
-      "Tanque de asfalto de 60,000 lts, plus, con caldera, con normas para Estados Unidos, en posición de trabajo",
-  },
-  {
-    image: s2.src,
-    caption:
-      "Tanque de asfalto de 60,000 lts, plus, con caldera, con normas para Estados Unidos, en posición de trabajo",
-  },
-  {
-    image: s3.src,
-    caption:
-      "Tanque de asfalto de 60,000 lts, plus, con caldera, con normas para Estados Unidos, en posición de trabajo",
-  },
-  {
-    image: s4.src,
-    caption:
-      "Tanque de asfalto de 60,000 lts, plus, con caldera, con normas para Estados Unidos, en posición de trabajo",
-  },
-  {
-    image: s5.src,
-    caption: "Tanque de asfalto de 60,000 lts, plus",
-  },
-  {
-    image: s6.src,
-    caption:
-      "Plataforma de operación y escalera de acceso con barandal de seguridad certificado",
-  },
+import d1 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT1.webp";
+import d2 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT2.webp";
+import d3 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT3.webp";
+import d4 from "../../assets/images/AsphaltStorage/SliderStorage2/DFAT4.webp";
+
+const tab1Caption =
+  "Tanque de asfalto de 60,000 lts, plus, con caldera, con normas para Estados Unidos, en posición de trabajo";
+const tab2Caption = "Tanque de asfalto de 60,000 lts, plus";
+
+const tab1Slides = [
+  { image: s1.src, caption: tab1Caption },
+  { image: s2.src, caption: tab1Caption },
+  { image: s3.src, caption: tab1Caption },
+  { image: s4.src, caption: tab1Caption },
+];
+
+const tab2Slides = [
+  { image: d1.src, caption: tab2Caption },
+  { image: d2.src, caption: tab2Caption },
+  { image: d3.src, caption: tab2Caption },
+  { image: d4.src, caption: tab2Caption },
+  { image: s5.src, caption: tab2Caption },
+  { image: s6.src, caption: tab2Caption },
 ];
 ---
 
@@ -88,7 +79,7 @@ const storageSlides = [
         data-tab-content="tab1"
       >
         <div class="w-full flex justify-center px-2">
-          <img src={t1.src} alt="t1" class="w-full h-auto max-w-[600px]" />
+          <GallerySlider client:only slides={tab1Slides} visibleThumbs={4} />
         </div>
         <div class="w-full px-4 md:px-10">
           <p class="text-justify text-sm lg:text-lg md:text-lg font-normal">
@@ -249,8 +240,8 @@ const storageSlides = [
         class="w-full flex flex-col items-center justify-center gap-3 tab-content text-base md:text-lg text-grisT font-bold"
         data-tab-content="tab2"
       >
-        <div class="w-full flex justify-center">
-          <img src={g2.src} alt="t1" class="w-full h-auto max-w-[600px] px-2" />
+        <div class="w-full flex justify-center px-2">
+          <GallerySlider client:only slides={tab2Slides} visibleThumbs={4} />
         </div>
         <div class="w-full px-4 md:px-10">
           <p class="text-sm lg:text-lg md:text-lg font-normal">
@@ -410,10 +401,6 @@ const storageSlides = [
   </div>
 
   <section class="w-full flex flex-col justify-center">
-    <div class="w-full px-2 md:px-8">
-      <GallerySlider client:only slides={storageSlides} visibleThumbs={4} />
-    </div>
-
     <div
       class="flex flex-col justify-center items-center space-y-5 py-5 md:py-20 px-8"
     >
