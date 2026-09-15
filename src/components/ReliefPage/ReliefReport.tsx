@@ -437,7 +437,7 @@ export default function ReliefReport() {
                       Planta en operación
                     </span>
                     <span className="text-sm tabular-nums text-grisPPP">
-                      33 / 41 h · 80 %
+                      8 / 14 h · 80 %
                     </span>
                   </div>
                   <div className="mt-2 h-3 w-full overflow-hidden rounded-full bg-[#e7e1d0]">
@@ -621,7 +621,7 @@ export default function ReliefReport() {
                   </ul>
                 </div>
                 <p className="rmr-mark mt-4 text-base font-semibold tabular-nums md:text-lg">
-                  Mezcla total entregada · 1 262 t
+                  Mezcla total entregada: 1 262 T
                 </p>
               </section>
 
@@ -637,7 +637,7 @@ export default function ReliefReport() {
                 <div className="rmr-mark mt-5 flex flex-wrap items-baseline gap-x-6 gap-y-1 text-base tabular-nums md:text-lg">
                   <span className="font-semibold">Receta OFAI-19</span>
                   <span className="text-grisPPP">Temperatura 152 °C</span>
-                  <span className="text-grisPPP">Humedad 4.1 %</span>
+                  <span className="text-grisPPP">Humedad 0 %</span>
                 </div>
                 <div className="mt-5 flex h-4 w-full overflow-hidden rounded-full">
                   {GRADATION.map((g, i) => (
@@ -649,7 +649,7 @@ export default function ReliefReport() {
                   ))}
                 </div>
                 <p className="rmr-mark mt-2.5 text-sm text-grisPPP">
-                  Distribución granulométrica de la carga
+                  Valores de granulometría: 22 / 18 / 15 / 14 / 15 / 11 / 8 %
                 </p>
               </section>
             </div>
