@@ -3,6 +3,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 export interface SlideItem {
   title: string;
   description: string;
+  descriptionMobile?: string;
   image: string;
   bgColor: string;
   accentColor?: string;
@@ -168,10 +169,16 @@ export default function ProductSlider({ slides }: ProductSliderProps) {
                   }}
                 >
                   <p
-                    className="text-sm leading-relaxed"
+                    className="hidden md:block text-sm leading-relaxed"
                     style={{ color: slide.descriptionColor ?? "#000000" }}
                   >
                     {slide.description}
+                  </p>
+                  <p
+                    className="md:hidden text-sm leading-relaxed"
+                    style={{ color: slide.descriptionColor ?? "#000000" }}
+                  >
+                    {slide.descriptionMobile ?? slide.description}
                   </p>
                   {slide.extraContent && (
                     <div

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export interface GridItem {
   title: string;
-  description: string;
+  description: string | { full: string; mobile: string };
   image: string;
   imageFit?: "cover" | "contain";
 }
@@ -79,7 +79,14 @@ function GridCard({
         }}
       >
         <p className="text-white/85 text-xs leading-relaxed pb-2 pt-1">
-          {item.description}
+          {typeof item.description === "string" ? (
+            item.description
+          ) : (
+            <>
+              <span className="md:hidden">{item.description.mobile}</span>
+              <span className="hidden md:inline">{item.description.full}</span>
+            </>
+          )}
         </p>
       </div>
 

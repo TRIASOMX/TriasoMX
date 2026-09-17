@@ -3,6 +3,7 @@ import img1 from "../../assets/logos/triasoLogo.webp";
 import triple1 from "../../assets/images/IntegralAsphalt/triple1.webp";
 import triple2 from "../../assets/images/IntegralAsphalt/triple2.webp";
 import { Image } from "astro:assets";
+import ResponsiveText from "../unitComponents/ResponsiveText.astro";
 ---
 
 <div class="w-full flex flex-col items-center justify-center font-bold mt-20">
@@ -66,14 +67,10 @@ import { Image } from "astro:assets";
         </h1>
         <br />
         <p class="text-sm lg:text-lg font-normal text-bgMain">
-          La Planta de Asfalto Integral Triaso® de 10 TPH no es un equipo
-          simplificado ni limitado, sino una versión a escala de nuestros
-          tambores mezcladores, tanques de asfalto y tolvas, construida con los
-          mismos componentes industriales y principios de diseño, todo en uno,
-          adaptado a una estructura compacta. Esto garantiza que, incluso en
-          operaciones de menor escala, se mantenga la misma calidad de
-          producción, durabilidad y eficiencia que se encuentran en las plantas
-          de asfalto de gran capacidad.
+          <ResponsiveText
+            full="La Planta de Asfalto Integral Triaso® de 10 TPH no es un equipo simplificado ni limitado, sino una versión a escala de nuestros tambores mezcladores, tanques de asfalto y tolvas, construida con los mismos componentes industriales y principios de diseño, todo en uno, adaptado a una estructura compacta. Esto garantiza que, incluso en operaciones de menor escala, se mantenga la misma calidad de producción, durabilidad y eficiencia que se encuentran en las plantas de asfalto de gran capacidad."
+            mobile="La planta integral Triaso®, no es un equipo simplificado ni limitado, es una versión a escala de nuestros tambores mezcladores, fabricada con los mismos componentes y principios de diseño, todo en uno. Garantizando la misma calidad de producción, durabilidad y eficiencia que se encuentran en las plantas de asfalto de mayor capacidad."
+          />
         </p>
       </div>
     </div>

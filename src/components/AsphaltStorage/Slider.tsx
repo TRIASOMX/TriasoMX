@@ -7,7 +7,7 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 export interface Slide {
   image: string;
   title: string;
-  text: string;
+  text: string | { full: string; mobile: string };
   alt?: string;
 }
 
@@ -461,7 +461,14 @@ export default function Slider({
                     }}
                     className="font-normal text-xs md:text-sm"
                   >
-                    {s.text}
+                    {typeof s.text === "string" ? (
+                      s.text
+                    ) : (
+                      <>
+                        <span className="md:hidden">{s.text.mobile}</span>
+                        <span className="hidden md:inline">{s.text.full}</span>
+                      </>
+                    )}
                   </p>
                 </div>
 

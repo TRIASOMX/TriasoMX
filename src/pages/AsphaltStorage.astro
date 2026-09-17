@@ -49,7 +49,11 @@ const slides = [
   {
     id: 6,
     title: "Fabricación resistente",
-    text: "Nuestros tanques de almacenamiento de asfalto están fabricados con materiales resistentes al desgaste, diseñados para soportar condiciones abrasivas y de trabajo pesado. Esta construcción robusta garantiza un desempeño confiable incluso en los entornos más exigentes. Al reducir significativamente el desgaste, el diseño disminuye las necesidades de mantenimiento y extiende la vida útil del sistema, ofreciendo una solución confiable a largo plazo.",
+    text: {
+      full: "Nuestros tanques de almacenamiento de asfalto están fabricados con materiales resistentes al desgaste, diseñados para soportar condiciones abrasivas y de trabajo pesado. Esta construcción robusta garantiza un desempeño confiable incluso en los entornos más exigentes. Al reducir significativamente el desgaste, el diseño disminuye las necesidades de mantenimiento y extiende la vida útil del sistema, ofreciendo una solución confiable a largo plazo.",
+      mobile:
+        "Fabricados con materiales resistentes al desgaste, diseñados para soportar condiciones abrasivas y de trabajo pesado. Garantizamos un desempeño confiable incluso en los entornos más exigentes. Al reducir el desgaste, el diseño disminuye las necesidades de mantenimiento, extendiendo la vida útil del equipo, ofreciendo una solución confiable a largo plazo.",
+    },
     image: img6.src,
   },
 ];
@@ -69,13 +73,22 @@ const slides = [
     <p
       class="text-sm md:text-base font-normal text-white max-w-[160ch] self-center"
     >
-      Los tanques de asfalto Triaso® están diseñados para almacenar y mantener
-      el asfalto en condiciones óptimas, asegurando una calidad y un desempeño
-      constantes. Fabricados con materiales de alta resistencia y aislamiento de
-      alta eficiencia, mantienen el asfalto listo para usarse en cualquier
-      aplicación. <br /> Ideales para la producción de asfalto modificado con polímeros,
-      estos tanques ofrecen la durabilidad y funcionalidad necesarias tanto para proyectos
-      pequeños como para operaciones de gran escala.
+      <span class="md:hidden">
+        Tanques de asfalto Triaso®, diseñados para almacenar y mantener el
+        asfalto en condiciones óptimas, asegurando una calidad y un desempeño
+        constantes. <br /> Aislamiento de alta eficiencia, para mantener el asfalto
+        caliente. Ofrecemos durabilidad y funcionalidad necesarias tanto para
+        proyectos pequeños como para operaciones de gran escala.
+      </span>
+      <span class="hidden md:inline">
+        Los tanques de asfalto Triaso® están diseñados para almacenar y mantener
+        el asfalto en condiciones óptimas, asegurando una calidad y un desempeño
+        constantes. Fabricados con materiales de alta resistencia y aislamiento de
+        alta eficiencia, mantienen el asfalto listo para usarse en cualquier
+        aplicación. <br /> Ideales para la producción de asfalto modificado con polímeros,
+        estos tanques ofrecen la durabilidad y funcionalidad necesarias tanto para proyectos
+        pequeños como para operaciones de gran escala.
+      </span>
     </p>
   </HeroComponentV2>
 

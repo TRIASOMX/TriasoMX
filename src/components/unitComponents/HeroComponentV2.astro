@@ -1,8 +1,10 @@
 ---
 import CotizarCompararBtns from "./CotizarCompararBtns.astro";
+import ResponsiveText from "./ResponsiveText.astro";
 interface Props {
   title: string;
   text?: string;
+  textMobile?: string;
   heroImage: string;
   btns?: boolean;
   titleColor?: string;
@@ -13,6 +15,7 @@ interface Props {
 const {
   title,
   text,
+  textMobile = text,
   heroImage,
   btns,
   titleColor = "black",
@@ -56,7 +59,7 @@ const {
       class="text-sm md:text-xl max-w-[150ch] mx-auto"
       style={{ color: textColor }}
     >
-      {text}
+      {text && <ResponsiveText full={text} mobile={textMobile ?? text} />}
     </p>
     
     <!--SLOT HERE -->

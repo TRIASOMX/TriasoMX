@@ -18,14 +18,23 @@ import sidePanels from "../../assets/images/SidePanels/TolvasFE.webp";
 import paletas1 from "../../assets/images/ColdMix/pugmill2.webp";
 import paletas2 from "../../assets/images/ColdMix/pugmill3.webp";
 import paletas3 from "../../assets/images/ColdMix/CMG8.webp";
+import ResponsiveText from "../unitComponents/ResponsiveText.astro";
 
 const pugmillCards = [
   {
     image: paletas1,
     title: "Paletas mezcladoras",
     paragraphs: [
-      "Las paletas de mezclado del pugmill aseguran una mezcla asfáltica uniforme y de alta calidad. Sus paletas de mezcla de hierro fundido son totalmente intercambiables y están diseñadas para una larga durabilidad.",
-      "Fabricadas en materiales de alta resistencia al desgaste, como acero Hardox o hierro fundido, son totalmente intercambiables y aptas para trabajo pesado con agregados abrasivos. Durante la operación se forma una capa protectora interna que reduce el desgaste y prolonga la vida útil del equipo.",
+      {
+        full: "Las paletas de mezclado del pugmill aseguran una mezcla asfáltica uniforme y de alta calidad. Sus paletas de mezcla de hierro fundido son totalmente intercambiables y están diseñadas para una larga durabilidad.",
+        mobile:
+          "Aseguran una mezcla asfáltica uniforme y de alta calidad. Las paletas de mezcla de hierro fundido son totalmente intercambiables y están diseñadas para una larga durabilidad.",
+      },
+      {
+        full: "Fabricadas en materiales de alta resistencia al desgaste, como acero Hardox o hierro fundido, son totalmente intercambiables y aptas para trabajo pesado con agregados abrasivos. Durante la operación se forma una capa protectora interna que reduce el desgaste y prolonga la vida útil del equipo.",
+        mobile:
+          "Fabricadas en acero Hardox de alta resistencia al desgaste, son totalmente intercambiables y para trabajo pesado con agregados abrasivos.",
+      },
     ],
   },
   {
@@ -54,13 +63,21 @@ const slides = [
   {
     id: 2,
     title: "Sistemas de dosificación de precisión en unidades de tolvas",
-    text: "Desde nuestros inicios como fabricantes de plantas de asfalto, identificamos un problema en la mayoría de las plantas del mercado: la dosificación de agregados basada únicamente en peso y no en volumen. Este enfoque limita la precisión del diseño de mezcla, ya que el peso de los agregados varía con la humedad, mientras que el volumen se mantiene constante.",
+    text: {
+      full: "Desde nuestros inicios como fabricantes de plantas de asfalto, identificamos un problema en la mayoría de las plantas del mercado: la dosificación de agregados basada únicamente en peso y no en volumen. Este enfoque limita la precisión del diseño de mezcla, ya que el peso de los agregados varía con la humedad, mientras que el volumen se mantiene constante.",
+      mobile:
+        "Desde nuestros inicios como fabricantes identificamos un problema: la dosificación de agregados basada únicamente en peso y no en volumen. Limitando la precisión del diseño de mezcla, ya que el peso de los agregados varía con la humedad, mientras que el volumen se mantiene constante.",
+    },
     image: ProvBU2.src,
   },
   {
     id: 3,
     title: "Sistemas de dosificación por volumen preciso",
-    text: "Nuestras tolvas están equipadas con sistemas de dosificación avanzados, diseñados para ofrecer la máxima precisión y confiabilidad. Garantizamos un flujo y una distribución exacta del material, cumpliendo con las necesidad de proyectos con especificaciones de exactitud.",
+    text: {
+      full: "Nuestras tolvas están equipadas con sistemas de dosificación avanzados, diseñados para ofrecer la máxima precisión y confiabilidad. Garantizamos un flujo y una distribución exacta del material, cumpliendo con las necesidad de proyectos con especificaciones de exactitud.",
+      mobile:
+        "Sistemas de dosificación avanzados, ofreciendo la máxima precisión y confiabilidad. Garantizamos un flujo y distribución exacta del material, cumpliendo con las necesidades de proyectos con especificaciones de exactitud.",
+    },
     image: ProvBU4.src,
   },
   {
@@ -184,20 +201,16 @@ const slides = [
       >
         <div class="flex flex-col space-y-5">
           <p>
-            El pugmill es un componente fundamental en las plantas de mezcla en
-            frío, diseñado eficientemente para hacer una variedad de
-            mezclas—incluyendo agregados y emulsión asfáltica. Su fabricación
-            extra-reforzada, de trabajo pesado garantiza una operación estable y
-            un rendimiento confiable con el paso del tiempo.
+            <ResponsiveText
+              full="El pugmill es un componente fundamental en las plantas de mezcla en frío, diseñado eficientemente para hacer una variedad de mezclas—incluyendo agregados y emulsión asfáltica. Su fabricación extra-reforzada, de trabajo pesado garantiza una operación estable y un rendimiento confiable con el paso del tiempo."
+              mobile="Diseñado eficientemente para hacer una variedad de mezclas. Su fabricación extra-reforzada, de trabajo pesado garantiza una operación estable y un rendimiento confiable con el paso del tiempo."
+            />
           </p>
           <p>
-            El proceso de mezclado del pugmill permite una homogeneización
-            precisa de los agregados, siendo perfecto para una amplia gama de
-            aplicaciones que requieren una mezcla en frío de alta calidad. Con
-            un mantenimiento sencillo y un diseño fácil de operar, nuestro
-            pugmill ofrece una vida prolongada y económica incluso en entornos
-            de trabajo exigentes, no es solo una promesa, lo respaldamos con dos
-            años de garantía, la más alta en el mercado.
+            <ResponsiveText
+              full="El proceso de mezclado del pugmill permite una homogeneización precisa de los agregados, siendo perfecto para una amplia gama de aplicaciones que requieren una mezcla en frío de alta calidad. Con un mantenimiento sencillo y un diseño fácil de operar, nuestro pugmill ofrece una vida prolongada y económica incluso en entornos de trabajo exigentes, no es solo una promesa, lo respaldamos con dos años de garantía, la más alta en el mercado."
+              mobile="El proceso de mezclado del pugmill permite una homogeneización precisa de los agregados, para una amplia gama de aplicaciones que requieren una mezcla en frío. Mantenimiento sencillo y fácil de operar, nuestro pugmill ofrece una vida prolongada y económica, no es solo una promesa, lo respaldamos con dos años de garantía, la más alta en el mercado."
+            />
           </p>
         </div>
       </DropdownComponent>
@@ -243,7 +256,11 @@ const slides = [
                     </p>
                     {card.paragraphs.map((text) => (
                       <p class="text-xs md:text-sm leading-relaxed text-gray-100">
-                        {text}
+                        {typeof text === "string" ? (
+                          text
+                        ) : (
+                          <ResponsiveText full={text.full} mobile={text.mobile} />
+                        )}
                       </p>
                     ))}
                   </div>

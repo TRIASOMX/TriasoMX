@@ -4,6 +4,7 @@ import SmartVideo from "./SmartVideo";
 import poster1 from "../../../public/Videos/Webm/Posters/drummixers2.webp";
 import render5 from "../../assets/images/DrumMixers/Low/render5Low.webp";
 import { Image } from "astro:assets";
+import ResponsiveText from "./ResponsiveText.astro";
 ---
 
 <section class="pt-10 pb-10 w-full flex justify-center px-2">
@@ -49,11 +50,10 @@ import { Image } from "astro:assets";
         class="w-full max-w-7xl flex flex-col items-center justify-center mt-20 z-20"
       >
         <p class="text-grisT text-justify text-sm lg:text-lg md:text-lg pb-5">
-          Elevador completamente retráctil, cumpliendo con los límites de altura
-          establecidos por la SCT para transporte, garantizando un traslado
-          seguro y legal por carretera. Ya en sitio, el elevador se extiende a
-          la altura de operación completa, descargando el material hacia los
-          camiones con un tiempo mínimo de preparación.
+          <ResponsiveText
+            full="El elevador es completamente retráctil, cumpliendo con los límites de altura establecidos por la SCT para transporte, garantizando un traslado seguro y legal por carretera. Una vez que el tambor se instala en el sitio, el elevador se extiende a su altura de operación completa, permitiendo una descarga eficiente del material hacia los camiones con un tiempo mínimo de preparación. Mejorando la logística sin comprometer el tiempo de operaciones de instalación."
+            mobile="Elevador completamente retráctil, cumpliendo con los límites de altura establecidos por la SCT para transporte, garantizando un traslado seguro y legal por carretera. Ya en sitio, el elevador se extiende a la altura de operación completa, descargando el material hacia los camiones con un tiempo mínimo de preparación."
+          />
         </p>
 
         <div class="w-full max-w-[calc(100vw-4rem)] overflow-hidden lg:hidden">
@@ -115,11 +115,10 @@ import { Image } from "astro:assets";
           Elevador integrado con sistema abisagrado
         </h1>
         <p class="hidden lg:flex text-xs md:text-lg font-thin text-grisT">
-          El elevador está abisagrado sobre el mismo chasis del tambor
-          mezclador, lo que permite una instalación inmediata y reduce el tiempo
-          de instalación en obra. Su diseño está pensado para integrarse
-          directamente con el sistema de descarga de la mezcla, sin necesidad de
-          ajustes adicionales.
+          <ResponsiveText
+            full="El elevador está abisagrado sobre el mismo chasis del tambor mezclador, lo que permite una instalación inmediata y reduce el tiempo de instalación en obra. Su diseño está pensado para integrarse directamente con el sistema de descarga de la mezcla, sin necesidad de ajustes adicionales."
+            mobile="Elevador abisagrado sobre el mismo chasis del tambor, instalación inmediata y reducción de tiempo de instalación. Integrándose con el sistema de descarga de la mezcla, sin ajustes adicionales."
+          />
         </p>
         <div
           class="w-full hidden lg:grid grid-cols-2 lg:grid-cols-5 md:gap-8 items-center"
@@ -135,13 +134,21 @@ import { Image } from "astro:assets";
                 Cadena con paso de 4”
               </h1>
               <p class="text-grisT font-thin text-xs md:text-lg">
-                Diseñamos la cadena con paso de 4” del elevador para trabajo
-                pesado. <span style="color:black;">
-                  Con una resistencia a la tensión de 50,000 lb (22,700 kg) y
-                  guías flotantes que evitan atascos</span
-                >
-                garantizando un funcionamiento suave y confiable, con alta durabilidad,
-                eficiencia y un mantenimiento mínimo.
+                <span class="md:hidden">
+                  Cadena con paso de 4”, resistente a tensión de 50,000 lb
+                  (22,700 kg) y guías flotantes evitando atascos, garantizando
+                  un funcionamiento suave y confiable, alta durabilidad,
+                  eficiencia y mantenimiento mínimo.
+                </span>
+                <span class="hidden md:inline">
+                  Diseñamos la cadena con paso de 4” del elevador para trabajo
+                  pesado. <span style="color:black;">
+                    Con una resistencia a la tensión de 50,000 lb (22,700 kg) y
+                    guías flotantes que evitan atascos</span
+                  >
+                  garantizando un funcionamiento suave y confiable, con alta durabilidad,
+                  eficiencia y un mantenimiento mínimo.
+                </span>
               </p>
             </div>
             <div
@@ -151,11 +158,10 @@ import { Image } from "astro:assets";
                 Rodamientos auto-alineables
               </h1>
               <p class="text-grisT text-xs lg:text-lg font-thin">
-                Usamos rodamientos auto-alineables en el elevador, garantizando
-                un funcionamiento suave al compensar automáticamente cualquier
-                desalineación. Esto reduce el desgaste y prolonga la vida útil,
-                reduciendo paros inesperados, mantenimientos y refacciones
-                costosas.
+                <ResponsiveText
+                  full="Usamos rodamientos auto-alineables en el elevador, garantizando un funcionamiento suave al compensar automáticamente cualquier desalineación. Esto reduce el desgaste y prolonga la vida útil, reduciendo paros inesperados, mantenimientos y refacciones costosas."
+                  mobile="Rodamientos auto-alineables, para funcionamiento suave compensando automáticamente cualquier desalineación. Reduce el desgaste, prolonga la vida útil, reduce paros inesperados, mantenimientos y refacciones costosas."
+                />
               </p>
             </div>
           </div>

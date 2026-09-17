@@ -1,10 +1,13 @@
 ---
 import WhatsbtnAstroComponent from "./Whatsbtn.astro";
 import CotizacionBtnAstroComponent from "./cotizacionBtn.astro";
+import ResponsiveText from "./ResponsiveText.astro";
+
+type Paragraph = string | { full: string; mobile: string };
 
 export interface Props {
   title: string;
-  text: string | string[];
+  text: Paragraph | Paragraph[];
   bgImage: string;
   quoteHref?: string;
 }
@@ -31,7 +34,13 @@ const paragraphs = Array.isArray(text) ? text : [text];
         <div>
           {
             paragraphs.map((paragraph) => (
-              <p class="text-white text-sm md:text-base">{paragraph}</p>
+              <p class="text-white text-sm md:text-base">
+                {typeof paragraph === "string" ? (
+                  paragraph
+                ) : (
+                  <ResponsiveText full={paragraph.full} mobile={paragraph.mobile} />
+                )}
+              </p>
             ))
           }
         </div>

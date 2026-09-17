@@ -1,4 +1,13 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import {
+  AlertTriangle,
+  Compass,
+  FlaskConical,
+  ListChecks,
+  MapPin,
+  TimerReset,
+  ToggleLeft,
+} from "lucide-react";
 import img2 from "../../assets/images/Relief/TriasoOS8.webp";
 import img3 from "../../assets/images/Relief/TriasoOS3.webp";
 import { CountUp, refreshTriggers, useGsapReveal } from "./reliefMotion";
@@ -81,16 +90,46 @@ function Panel({
 }
 
 const IA_CAPABILITIES = [
-  "Identifica de inmediato la ubicación de las fallas en los equipos.",
-  "Identifica automáticamente el sistema o componente afectado.",
-  "Explique la causa de las alarmas y las condiciones de funcionamiento.",
-  "Guíe a los operadores paso a paso a través de las medidas correctivas.",
-  "Proporcionar recomendaciones operativas basadas en el estado de la planta.",
-  "Colaborar en la ejecución del diseño de la mezcla y la puesta a punto de la producción.",
-  "Ayuda a tomar decisiones sobre el funcionamiento manual y automático.",
-  "Ayude a reducir el tiempo de inactividad agilizando la resolución de problemas.",
-  "Proporcione explicaciones claras sobre el funcionamiento de la planta y las alertas.",
-  "Ayudar a los operadores sin necesidad de tener un profundo conocimiento del sistema.",
+  {
+    icon: MapPin,
+    text: "Identifica de inmediato la ubicación de las fallas en los equipos.",
+  },
+  {
+    icon: AlertTriangle,
+    text: "Explique la causa de las alarmas y las condiciones de funcionamiento.",
+  },
+  {
+    icon: ListChecks,
+    text: "Guíe a los operadores paso a paso a través de las medidas correctivas.",
+  },
+  {
+    icon: Compass,
+    text: "Proporcionar recomendaciones operativas basadas en el estado de la planta.",
+  },
+  {
+    icon: FlaskConical,
+    text: "Colaborar en la ejecución del diseño de la mezcla y la puesta a punto de la producción.",
+  },
+  {
+    icon: ToggleLeft,
+    text: "Ayuda a tomar decisiones sobre el funcionamiento manual y automático.",
+  },
+  {
+    icon: TimerReset,
+    text: "Ayude a reducir el tiempo de inactividad agilizando la resolución de problemas.",
+  },
+];
+
+// Spans del bento: la primera tarjeta queda destacada (alta), la última corre
+// a lo ancho; el resto se reparte en tercios/mitades sobre 6 columnas en lg.
+const BENTO_SPANS = [
+  "sm:col-span-2 lg:col-span-3 lg:row-span-2",
+  "lg:col-span-3",
+  "lg:col-span-3",
+  "lg:col-span-2",
+  "lg:col-span-2",
+  "lg:col-span-2",
+  "sm:col-span-2 lg:col-span-6",
 ];
 
 const STEPS = [
@@ -343,24 +382,28 @@ export default function ReliefFourthSection() {
             El asistente puede:
           </p>
 
-          {/* Mobile: slider horizontal con snap · sm+: grid */}
+          {/* Mobile: slider horizontal con snap · sm+: bento grid */}
           <div
-            className="mt-4 -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:grid sm:snap-none sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3 [&::-webkit-scrollbar]:hidden"
+            className="mt-4 -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:grid sm:snap-none sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-6 [&::-webkit-scrollbar]:hidden"
             role="list"
           >
-            {IA_CAPABILITIES.map((cap, i) => (
+            {IA_CAPABILITIES.map(({ icon: Icon, text }, i) => (
               <div
-                key={cap}
+                key={text}
                 role="listitem"
                 data-reveal="scale-rot"
                 data-reveal-delay={(i % 3) * 0.06}
-                className="w-[78%] flex-none snap-start rounded-xl bg-white/[0.06] p-5 sm:w-auto sm:flex-auto"
+                className={`group flex w-[78%] flex-none snap-start flex-col justify-between gap-5 rounded-2xl border p-6 transition-colors duration-300 sm:w-auto sm:flex-auto ${
+                  i === 0
+                    ? "border-[#86aaff]/25 bg-white/[0.07] hover:border-[#86aaff]/40"
+                    : "border-white/10 bg-white/[0.04] hover:border-white/20"
+                } ${BENTO_SPANS[i]}`}
               >
-                <span className="text-xs font-extrabold tabular-nums text-[#ff7a7a]">
-                  {String(i + 1).padStart(2, "0")}
+                <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-white/10 text-[#86aaff] transition-colors duration-300 group-hover:bg-white/15">
+                  <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
                 </span>
-                <p className="mt-2 text-sm font-medium leading-snug text-white">
-                  {cap}
+                <p className="text-sm font-medium leading-snug text-white/90 md:text-base">
+                  {text}
                 </p>
               </div>
             ))}

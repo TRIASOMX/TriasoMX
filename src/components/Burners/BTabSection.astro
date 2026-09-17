@@ -18,6 +18,7 @@ import img1 from "../../assets/images/FuelPreHeaters/FPH4.webp";
 import img2 from "../../assets/images/Burners/Filtro.webp";
 import img3 from "../../assets/images/FuelPreHeaters/Gallery/PREH1.webp";
 import CardTambor from "../unitComponents/CardTambor.astro";
+import ResponsiveText from "../unitComponents/ResponsiveText.astro";
 ---
 
 <section class="w-full flex 2 mt-6 md:mt-20 flex-col gap-4 bg-gray-100">
@@ -44,8 +45,7 @@ import CardTambor from "../unitComponents/CardTambor.astro";
         role="tab"
         aria-selected="false"
       >
-        Calidad de la mezcla asfáltica y
-        <span class="hidden md:block"></span>
+        Calidad de la mezcla <span class="hidden md:block">asfáltica</span>y
         protección del equipo
       </button>
 
@@ -55,9 +55,7 @@ import CardTambor from "../unitComponents/CardTambor.astro";
         role="tab"
         aria-selected="false"
       >
-        Personalización para adaptarse a
-        <span class="hidden md:block"></span>
-        necesidades específicas del cliente
+        Personalización para adaptación
       </button>
     </div>
 
@@ -282,13 +280,10 @@ import CardTambor from "../unitComponents/CardTambor.astro";
                 </div>
                 <div>
                   <p class="text-sm lg:text-lg md:text-lg">
-                    Las fluctuaciones en el desempeño del quemador generan un
-                    calentamiento inConsistente, lo que afecta directamente la
-                    mezcla asfáltica. Los quemadores Triaso® mantienen una flama
-                    estable y uniforme que asegura que cada lote se mezcle a la
-                    temperatura correcta, protegiendo tanto la durabilidad del
-                    pavimento como los componentes de la planta del estrés
-                    térmico.
+                    <ResponsiveText
+                      full="Las fluctuaciones en el desempeño del quemador generan un calentamiento inConsistente, lo que afecta directamente la mezcla asfáltica. Los quemadores Triaso® mantienen una flama estable y uniforme que asegura que cada lote se mezcle a la temperatura correcta, protegiendo tanto la durabilidad del pavimento como los componentes de la planta del estrés térmico."
+                      mobile="Las fluctuaciones generan un calentamiento inconsistente, afectando la mezcla asfáltica. Los quemadores Triaso® mantienen una flama estable y uniforme asegurando la temperatura correcta de cada lote, protegiendo la durabilidad del pavimento como los componentes de la planta del estrés térmico."
+                    />
                   </p>
                 </div>
                 <div class="w-full text-black pt-10">
@@ -443,13 +438,21 @@ import CardTambor from "../unitComponents/CardTambor.astro";
           <CardTambor
             image={img1.src}
             title="Calentamiento eléctrico en línea para máxima eficiencia"
-            description="El precalentador de combustible utiliza un sistema de resistencias eléctricas en línea capaz de elevar la temperatura del combustible en 40°C, con cualquier caudal. Este calentamiento rápido y controlado reduce de inmediato la viscosidad del combustible, asegurando una atomización óptima y una combustión limpia, sin retrasos ni fuentes externas de calor. Solución compacta y confiable para un desempeño eficiente del quemador desde el primer segundo de operación."
+            description={{
+              full: "El precalentador de combustible utiliza un sistema de resistencias eléctricas en línea capaz de elevar la temperatura del combustible en 40°C, con cualquier caudal. Este calentamiento rápido y controlado reduce de inmediato la viscosidad del combustible, asegurando una atomización óptima y una combustión limpia, sin retrasos ni fuentes externas de calor. Solución compacta y confiable para un desempeño eficiente del quemador desde el primer segundo de operación.",
+              mobile:
+                "El precalentador de combustible usa un sistema de resistencias eléctricas capaz de elevar la temperatura del combustible en 40°C, con cualquier caudal. Reduciendo de inmediato la viscosidad del combustible, asegurando una atomización óptima y una combustión limpia, sin retrasos ni fuentes externas de calor.",
+            }}
           />
 
           <CardTambor
             image={img2.src}
             title="Filtro de combustible"
-            description="Todos los sistemas de precalentamiento Triaso incluyen un filtro calibre malla 100 para captar toda la fibra celulosa presente en combustibles alternos o impurezas adicionales que puedan dañar el sistema. Los combustibles alternos contienen mucha fibra de celulosa o impurezas adicionales, al no ser filtrada anteriormente tapan el sistema de atomización del quemador. Al llegar al quemador tapan la boquilla de atomización y más sistemas del quemador, lo que causará muchos problemas."
+            description={{
+              full: "Todos los sistemas de precalentamiento Triaso incluyen un filtro calibre malla 100 para captar toda la fibra celulosa presente en combustibles alternos o impurezas adicionales que puedan dañar el sistema. Los combustibles alternos contienen mucha fibra de celulosa o impurezas adicionales, al no ser filtrada anteriormente tapan el sistema de atomización del quemador. Al llegar al quemador tapan la boquilla de atomización y más sistemas del quemador, lo que causará muchos problemas.",
+              mobile:
+                "Incluimos un filtro calibre malla 100 para captar toda la fibra celulosa en combustibles alternos o impurezas adicionales que puedan dañar el sistema. Los combustibles alternos contienen mucha fibra de celulosa o impurezas adicionales, al no filtrarse tapan el sistema de atomización del quemador. Tapando la boquilla de atomización y más sistemas del quemador.",
+            }}
           />
 
           <CardTambor

@@ -10,6 +10,7 @@ import img4 from "../../assets/images/SidePanels/TolvasFE.webp";
 import img5 from "../../assets/images/BinUnits/BUFeeders.webp";
 import img6 from "../../assets/images/BinUnits/FineVibrator.webp";
 import HeroComponentV2 from "../unitComponents/HeroComponentV2.astro";
+import ResponsiveText from "../unitComponents/ResponsiveText.astro";
 
 const slides = [
   {
@@ -21,25 +22,41 @@ const slides = [
   {
     id: 2,
     title: "Sistemas de dosificación de precisión en unidades de tolvas",
-    text: "Desde nuestros inicios como fabricantes de plantas de asfalto, identificamos un problema en la mayoría de las plantas del mercado: la dosificación de agregados basada únicamente en peso y no en volumen. Este enfoque limita la precisión del diseño de mezcla, ya que el peso de los agregados varía con la humedad, mientras que el volumen se mantiene constante.",
+    text: {
+      full: "Desde nuestros inicios como fabricantes de plantas de asfalto, identificamos un problema en la mayoría de las plantas del mercado: la dosificación de agregados basada únicamente en peso y no en volumen. Este enfoque limita la precisión del diseño de mezcla, ya que el peso de los agregados varía con la humedad, mientras que el volumen se mantiene constante.",
+      mobile:
+        "Desde nuestros inicios como fabricantes identificamos un problema: la dosificación de agregados basada únicamente en peso y no en volumen. Limitando la precisión del diseño de mezcla, ya que el peso de los agregados varía con la humedad, mientras que el volumen se mantiene constante.",
+    },
     image: img2.src,
   },
   {
     id: 3,
     title: "Sistemas de dosificación por volumen preciso",
-    text: "Nuestras tolvas están equipadas con sistemas de dosificación avanzados, diseñados para ofrecer la máxima precisión y confiabilidad. Garantizamos un flujo y una distribución exacta del material, cumpliendo con las necesidad de proyectos con especificaciones de exactitud.",
+    text: {
+      full: "Nuestras tolvas están equipadas con sistemas de dosificación avanzados, diseñados para ofrecer la máxima precisión y confiabilidad. Garantizamos un flujo y una distribución exacta del material, cumpliendo con las necesidad de proyectos con especificaciones de exactitud.",
+      mobile:
+        "Sistemas de dosificación avanzados, ofreciendo la máxima precisión y confiabilidad. Garantizamos un flujo y distribución exacta del material, cumpliendo con las necesidades de proyectos con especificaciones de exactitud.",
+    },
     image: img3.src,
   },
   {
     id: 4,
     title: "Flancos estéticos",
-    text: "Estos paneles que destacan originalidad brindan un aspecto limpio, moderno y estético que refleja calidad y atención al detalle, dejando una fuerte impresión en clientes, inspectores y en el público. Ideales para proyectos en zonas urbanas o de alta visibilidad, refuerzan el compromiso de su marca con la excelencia y mejoran la presentación general de su planta de asfalto.",
+    text: {
+      full: "Estos paneles que destacan originalidad brindan un aspecto limpio, moderno y estético que refleja calidad y atención al detalle, dejando una fuerte impresión en clientes, inspectores y en el público. Ideales para proyectos en zonas urbanas o de alta visibilidad, refuerzan el compromiso de su marca con la excelencia y mejoran la presentación general de su planta de asfalto.",
+      mobile:
+        "Estos paneles que destacan originalidad brindan un aspecto limpio, moderno y estético que refleja calidad y atención al detalle, dejando una fuerte impresión en clientes, inspectores y en el público, reforzando y mejorando la presentación general de su planta de asfalto.",
+    },
     image: img4.src,
   },
   {
     id: 5,
     title: "Alimentadores de banda ",
-    text: "Nuestros alimentadores de banda están equipados con poleas de cabeza y cola recubiertas de hule, lo que proporciona una tracción firme y minimiza el deslizamiento durante la operación. Este diseño aumenta la resistencia al desgaste, reduce el deterioro de la banda y garantiza un desempeño confiable incluso bajo cargas pesadas y en condiciones de trabajo exigentes.",
+    text: {
+      full: "Nuestros alimentadores de banda están equipados con poleas de cabeza y cola recubiertas de hule, lo que proporciona una tracción firme y minimiza el deslizamiento durante la operación. Este diseño aumenta la resistencia al desgaste, reduce el deterioro de la banda y garantiza un desempeño confiable incluso bajo cargas pesadas y en condiciones de trabajo exigentes.",
+      mobile:
+        "Equipados con poleas de cabeza y cola recubiertas de hule, proporcionando una tracción firme y minimizando el deslizamiento. Aumentando la resistencia al desgaste, reduce el deterioro de la banda y garantiza desempeño confiable incluso bajo cargas pesadas y en condiciones de trabajo exigentes.",
+    },
     image: img5.src,
   },
 ];
@@ -86,11 +103,10 @@ const slides = [
             Fabricación robusta
           </h1><br />
           <p class="text-sm md:text-lg">
-            Nuestras unidades de tolvas están fabricadas con materiales
-            resistentes al desgaste y extra-reforzados, para manejar cargas
-            abrasivas y de alto peso. Asegura un confiabilidad en todo momento,
-            para el cumplimiento de operación, sin paros imprvistos incluso en
-            las condiciones de trabajo más exigentes.
+            <ResponsiveText
+              full="Nuestras unidades de tolvas están fabricadas con materiales resistentes al desgaste y extra-reforzados, para manejar cargas abrasivas y de alto peso. Asegura un confiabilidad en todo momento, para el cumplimiento de operación, sin paros imprvistos incluso en las condiciones de trabajo más exigentes."
+              mobile="Unidades de tolvas fabricadas con materiales resistentes al desgaste y extra-reforzados, ideales para manejar cargas abrasivas y de alto peso. Asegurando una operación confiable incluso en las condiciones de trabajo más exigentes."
+            />
           </p>
         </div>
         <div class="w-full text-center text-black">
@@ -98,9 +114,10 @@ const slides = [
             Características personalizables
           </h1><br />
           <p class="text-sm md:text-lg">
-            El sistema de dosificación se ajusta a cada proyecto, con opción
-            manual o automática. El flujo de material se mantiene igual carga
-            tras carga, sin depender de quién esté operando ese turno.
+            <ResponsiveText
+              full="El sistema de dosificación se ajusta a cada proyecto, con opción manual o automática. El flujo de material se mantiene igual carga tras carga, sin depender de quién esté operando ese turno."
+              mobile="Sistema de dosificación flexible para adaptarse a las recetas específicas de cada proyecto. Con opciones de ajuste manual o automático, garantiza un control preciso del flujo de material"
+            />
           </p>
         </div>
       </div>

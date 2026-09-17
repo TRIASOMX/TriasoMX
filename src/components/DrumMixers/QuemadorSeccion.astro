@@ -17,7 +17,16 @@ const slides = [
     titleColor: "#000000",
     descriptionColor: "#000000",
     extraContent: `
-      <a href="/FuelPreHeaters" class="inline-block text-white text-xs md:text-sm font-normal border-2 border-black rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-black hover:bg-transparent hover:text-black">
+      <div class="hidden md:block">
+        <h3 class="font-bold text-sm">Problemas causados por no precalentar los combustibles de bajo costo:</h3>
+        <ul class="list-disc pl-5">
+          <li class="text-sm">Las microgotas sin quemar provocan una pérdida considerable de combustible.</li>
+          <li class="text-sm">La mezcla asfáltica se contamina con combustible sin quemar.</li>
+          <li class="text-sm">Esta contaminación reduce significativamente la vida útil del pavimento asfáltico.</li>
+          <li class="text-sm">La atmósfera se ve afectada por los gases generados por una combustión incompleta.</li>
+        </ul>
+      </div>
+      <a href="/FuelPreHeaters" class="md:hidden inline-block text-white text-xs md:text-sm font-normal border-2 border-black rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-black hover:bg-transparent hover:text-black">
         Problemas por no precalentar el combustible
       </a>
     `,
@@ -26,11 +35,34 @@ const slides = [
     title:
       "Sistema de ionización para asistencia de plasma que asiste la combustión.",
     description:
-      "Mejoramos la combustión fragmentando el combustible antes de entrar a la llama. Al aplicar energía eléctrica mediante asistencia de plasma, las moléculas no se queman, pero se energizan y se rompen parcialmente, reduciendo su complejidad molecular.",
+      "La combustión mejora cuando el combustible se fragmenta en componentes más pequeños y reactivos antes de entrar a la llama. Al aplicar energía eléctrica mediante ionización y asistencia de plasma, las moléculas del combustible no se queman, pero se energizan y se rompen parcialmente, reduciendo su complejidad molecular.",
+    descriptionMobile:
+      "La combustión mejora cuando el combustible se fragmenta en componentes más pequeños y reactivos antes de entrar a la llama.",
     image: slide3.src,
     bgColor: "#14427c",
     titleColor: "#ffffff",
     descriptionColor: "#ffffff",
+    extraContent: `
+      <div class="hidden md:block space-y-3">
+        <ul class="list-disc pl-5 text-white">
+          <li class="text-sm">Evita apagados o inestabilidad del quemador.</li>
+          <li class="text-sm">Reduce picos localizados de temperatura.</li>
+          <li class="text-sm">Contribuye a una combustión más uniforme.</li>
+          <li class="list-none text-sm">
+            <ul class="ml-2 lg:ml-6">
+              <li class="text-sm relative pl-5 before:absolute before:left-0 before:top-2 before:h-2 before:w-2 before:rounded-full before:border before:border-white before:bg-transparent">
+                Se logra un gran ahorro de combustible
+              </li>
+            </ul>
+          </li>
+          <li class="text-sm">Disminuye la formación de contaminantes como NOx, al evitar zonas de sobrecalentamiento.</li>
+        </ul>
+        <p class="text-sm text-white">Mejoramos la combustión fragmentando el combustible antes de entrar a la llama. Al aplicar energía eléctrica mediante asistencia de plasma, las moléculas no se queman, pero se energizan y se rompen parcialmente, reduciendo su complejidad molecular.</p>
+      </div>
+      <a href="/Burners" class="md:hidden inline-block text-white text-xs md:text-sm font-normal border-2 border-white rounded-full py-2 px-6 transition-all duration-300 ease-out transform hover:scale-110 hover:shadow-lg bg-transparent hover:bg-white hover:text-black">
+        Ventajas de combustión de plasma
+      </a>
+    `,
   },
   {
     title: "Autocarburación del quemador por sensores en la chimenea",

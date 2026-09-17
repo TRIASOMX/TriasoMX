@@ -159,7 +159,7 @@ const data: Record<PlantType, PlantData> = {
       { label: "5 – 20 RPM", sub: "Velocidad de rotación variable del tambor" },
     ],
     description:
-      "Todas las plantas de contraflujo utilizan el mismo principio de diseño robusto, sistema de mezcla eficiente, lavadora para captura de finos, preparación para cajas de bolsas asfálticas para cumplir con las normas ecológicas y retorno uniforme de finos, con una estructura reforzada que asegura larga vida útil y bajo mantenimiento.",
+      "Todas las plantas de contraflujo utilizan el mismo principio de diseño robusto, sistema de mezcla eficiente, casa de bolsas para cumplir con las normas ecológicas y retorno uniforme de finos, con una estructura reforzada que asegura larga vida útil y bajo mantenimiento.",
     models: [
       {
         name: "Desamaq",
@@ -483,7 +483,8 @@ const data: Record<PlantType, PlantData> = {
       { label: "20%", sub: "de ahorro en combustibles" },
     ],
     description:
-      "Todas las plantas de flujo paralelo utilizan el mismo principio de diseño robusto, sistema de mezcla eficiente, lavadora para captura de finos, preparación para cajas de bolsas asfálticas para cumplir con las normas ecológicas y retorno uniforme de finos, con una estructura reforzada que asegura larga vida útil y bajo mantenimiento.",
+      "Todas las plantas de flujo paralelo utilizan el mismo principio de diseño robusto, sistema de mezcla eficiente, lavadora para captura de finos, preparación para casa de bolsas acoplable para cumplir con las normas ecológicas y retorno uniforme de finos, con una estructura reforzada que asegura larga vida útil y bajo mantenimiento.",
+
     models: [
       {
         name: "Desamaq",
@@ -1336,7 +1337,7 @@ export default function ProductSelector() {
                   </div>
                 ))}
 
-                <div className="mt-2 md:mt-4 flex flex-col gap-2">
+                <div className="mt-2 md:mt-4 flex flex-col gap-2 mb-1 md:mb-4">
                   {model.tags.map((tag, i) => (
                     <span key={i}>{tag}</span>
                   ))}

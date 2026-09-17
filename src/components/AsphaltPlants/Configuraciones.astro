@@ -6,10 +6,9 @@ import tolvasAditivos from "../../assets/images/PowderA/Gallery/PAF1.webp";
 import tolvasAgregados from "../../assets/images/BinUnits/Tolv.webp";
 import rapBin from "../../assets/images/RapBins/Gallery/RBG1.webp";
 import silo from "../../assets/images/HotMix/Gallery/HM1.webp";
-
-import CTASection from "../unitComponents/CTASection.astro";
-import ctaBg from "../../assets/images/AsphaltPlant/NewBanner.webp";
-
+import neg1 from "../../assets/images/AsphaltPlant/neg1.webp";
+import neg2 from "../../assets/images/AsphaltPlant/neg2.webp";
+import neg3 from "../../assets/images/AsphaltPlant/neg3.webp";
 import OSistem from "../unitComponents/SistemaOBlack.astro";
 
 interface ConfigItem {
@@ -131,11 +130,44 @@ const configuraciones: ConfigItem[] = [
     }
   </div>
   <OSistem />
-  <CTASection
-    title="Agende una reunión"
-    text="Cuéntenos más sobre su proyecto para identificar la solución industrial que mejor se ajuste a sus necesidades."
-    bgImage={ctaBg.src}
-  />
+  <section
+    class="w-full bg-[url('/fondopatron.webp')] bg-repeat bg-top bg-black py-16"
+  >
+    <div
+      class="max-w-screen-2xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+    >
+      <div class="text-white">
+        <h2 class="text-3xl md:text-5xl leading-tight">
+          Su mejor negocio empieza con una<br />
+          <span class="font-bold">planta de asfalto</span>
+        </h2>
+
+        <p class="mt-6 text-lg md:text-xl font-semibold">
+          Su forma de trabajar define su margen.
+        </p>
+        <ul class="mt-3 space-y-1 text-base md:text-lg list-disc list-inside">
+          <li>Comprar la mezcla a otro productor.</li>
+          <li>Producirla con una planta vieja.</li>
+          <li>Producirla con una planta nueva.</li>
+        </ul>
+        <p class="mt-4 text-base md:text-lg">
+          Ninguna de las tres deja lo mismo al cierre de la obra.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 grid-rows-2 gap-3 h-[400px] md:h-[550px]">
+        <div class="rounded-lg overflow-hidden">
+          <img src={neg2.src} alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="row-span-2 rounded-lg overflow-hidden">
+          <img src={neg1.src} alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-lg overflow-hidden">
+          <img src={neg3.src} alt="" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
 </section>
 
 <script>

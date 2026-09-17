@@ -4,6 +4,7 @@ import SmartVideo from "../unitComponents/SmartVideo";
 import CMOdom from "./CMOdom";
 import CMG5 from "../../assets/images/ColdMix/GallerySlider/CMG5.webp";
 import HeroComponentV2 from "../unitComponents/HeroComponentV2.astro";
+import ResponsiveText from "../unitComponents/ResponsiveText.astro";
 ---
 
 <section>
@@ -13,6 +14,7 @@ import HeroComponentV2 from "../unitComponents/HeroComponentV2.astro";
     titleColor="white"
     bgColor="#1e1e1e"
     text="Las plantas Triaso® de mezcla en frío están diseñadas específicamente para producir mezclas de agregados sin aplicar calor. Mediante un pugmill de doble eje, estas plantas combinan agregados sin calentar con emulsión asfáltica u otros ligantes líquidos para obtener una mezcla uniforme y resistente, adecuada para una amplia variedad de aplicaciones. Equipadas con tolvas de dosificación precisa, aseguran un control exacto de las proporciones de los materiales, ofreciendo un desempeño consistente en cada lote. Su capacidad para manejar distintos tipos de agregados las hace ideales para bacheo, mantenimiento de carreteras y trabajos de pavimentación a pequeña escala."
+    textMobile="Las plantas Triaso® de mezcla en frío están diseñadas para producir mezclas de agregados sin aplicar calor. Mediante un pugmill de doble eje, combinan agregados sin calentar con emulsión asfáltica u otros ligantes líquidos. Equipadas con tolvas de dosificación, asegurando un control exacto, ofreciendo consistencia en cada lote."
     heroImage={CMG5.src}
   />
 </section>
@@ -35,12 +37,10 @@ import HeroComponentV2 from "../unitComponents/HeroComponentV2.astro";
           </h1>
           <div class="w-full h-0.5 bg-white"></div>
           <p class="text-sm md:text-lg">
-            Diseñadas para ofrecer eficiencia y adaptabilidad—con una
-            instalación rápida y un mantenimiento mínimo— las plantas de mezcla
-            en frío Triaso® brindan una solución confiable para contratistas,
-            municipios y proyectos en zonas urbanas y remotas. Proporcionan una
-            producción constante de mezcla de agregados cuando se requiera, sin
-            las emisiones ni complejidad de calentar los agregados.
+            <ResponsiveText
+              full="Diseñadas para ofrecer eficiencia y adaptabilidad—con una instalación rápida y un mantenimiento mínimo— las plantas de mezcla en frío Triaso® brindan una solución confiable para contratistas, municipios y proyectos en zonas urbanas y remotas. Proporcionan una producción constante de mezcla de agregados cuando se requiera, sin las emisiones ni complejidad de calentar los agregados."
+              mobile="Las plantas de mezcla en frío Triaso® brindan una solución confiable para contratistas, municipios y proyectos en zonas urbanas y remotas. Producción constante de mezcla de agregados cuando se requiera, sin las emisiones ni complejidad de calentar los agregados."
+            />
           </p>
         </div>
         <div

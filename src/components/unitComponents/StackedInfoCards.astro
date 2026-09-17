@@ -1,6 +1,8 @@
 ---
+import ResponsiveText from "./ResponsiveText.astro";
+
 type CardData = {
-  title: string;
+  title: string | { full: string; mobile: string };
   text: string;
   bg: string;
   textColor: string;
@@ -53,7 +55,11 @@ const titleLines = Array.isArray(mainTitle) ? mainTitle : [mainTitle];
             style={`background:${card.bg}; color:${card.textColor}`}
           >
             <h3 class="text-2xl md:text-3xl font-semibold mb-4">
-              {card.title}
+              {typeof card.title === "string" ? (
+                card.title
+              ) : (
+                <ResponsiveText full={card.title.full} mobile={card.title.mobile} />
+              )}
             </h3>
             <p class="text-base opacity-90 leading-relaxed">{card.text}</p>
           </div>

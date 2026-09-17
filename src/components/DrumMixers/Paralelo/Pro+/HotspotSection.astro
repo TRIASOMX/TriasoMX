@@ -12,6 +12,7 @@ import obracivil2Low from "../../../../assets/images/DrumMixers/Low/obracivil2Lo
 import CasetaSeccion from "../../../DrumMixers/CasetaSeccion.astro";
 import AlabeSection from "../../AlabeSection.astro";
 import LearnBtnBlueAstroComponent from "../../../unitComponents/LearnBtnBlue.astro";
+import ResponsiveText from "../../../unitComponents/ResponsiveText.astro";
 import sidePanel from "../../../../assets/images/SidePanels/FEPlaC_1.webp";
 
 const ParaleloPro = [
@@ -101,10 +102,15 @@ const ParaleloPro = [
 
 <!-- Sección dropdowns -->
 <section class="max-w-7xl mx-auto px-8">
-  <div class="flex justify-center items-center">
+  <div class="flex flex-col justify-center items-center">
     <h1 class="text-black font-bold text-2xl md:text-4xl">
       Ahorros que usted podrá lograr con la planta de asfalto
-    </h1>
+    </h1><br />
+    <p class="text-black font-semibold text-lg md:text-2xl text-center">
+      Los equipos Triaso tienen muchas ventajas, que el operador apreciará todos
+      los días. Usted como propietario las verá en la gran productividad,
+      control y en el costo por tonelada.
+    </p>
   </div>
 
   <div>
@@ -167,18 +173,18 @@ const ParaleloPro = [
         <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
           <div class="w-full">
             <h2 class="text-white text-lg md:text-2xl">
-              Diseñada para producciones exigentes y de gran volumen fabricación
-              para un rendimiento sin comparación
+              <ResponsiveText
+                full="Diseñada para producciones exigentes y de gran volumen fabricación para un rendimiento sin comparación"
+                mobile="Diseñada para producciones exigentes, de gran volumen, rendimiento sin comparación"
+              />
             </h2><br />
             <p
               class="text-[#f3f3f5] text-sm font-normal md:text-base text-justify"
             >
-              Fabricados con materiales de alta resistencia y componentes de
-              larga vida útil, estos tambores garantizan eficiencia energética
-              superior y una mezcla asfáltica de calidad consistente. Ideales
-              para operaciones exigentes, donde la confiabilidad de la planta es
-              clave, sabiendo que el desempeño de toda la operación depende
-              directamente de la confiabilidad del equipo.
+              <ResponsiveText
+                full="Fabricados con materiales de alta resistencia y componentes de larga vida útil, estos tambores garantizan eficiencia energética superior y una mezcla asfáltica de calidad consistente. Ideales para operaciones exigentes, donde la confiabilidad de la planta es clave, sabiendo que el desempeño de toda la operación depende directamente de la confiabilidad del equipo."
+                mobile="Materiales de alta resistencia y componentes de larga vida útil, garantizamos eficiencia energética superior y una mezcla asfáltica de calidad consistente. Para operaciones exigentes, sabiendo que el desempeño de toda la operación depende de la confiabilidad del equipo."
+              />
             </p>
           </div>
         </div>

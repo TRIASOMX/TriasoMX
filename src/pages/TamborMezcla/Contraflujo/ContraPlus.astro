@@ -12,6 +12,7 @@ import PlanosPlusCf from "../../../components/DrumMixers/Contraflujo/Plus/Planos
 import HeroComponentV1 from "../../../components/unitComponents/HeroComponentV1.astro";
 import OsDrumSection from "../../../components/DrumMixers/OsDrumSection.astro";
 import SliderTamborPlusAstroComponent from "../../../components/DrumMixers/Contraflujo/Plus/SliderTamborPlus.astro";
+import ResponsiveText from "../../../components/unitComponents/ResponsiveText.astro";
 
 const cards = [
   {
@@ -29,15 +30,21 @@ const cards = [
     textColor: "#ffffff",
   },
   {
-    title:
-      "Operación total manual o automática para un control eficiente y sencillo del equipo, con menor necesidad de intervención del operador.",
+    title: {
+      full: "Operación total manual o automática para un control eficiente y sencillo del equipo, con menor necesidad de intervención del operador.",
+      mobile:
+        "Operación manual o automática para un control eficiente y sencillo del equipo.",
+    },
     text: "",
     bg: "#00840d",
     textColor: "#ffffff",
   },
   {
-    title:
-      "Operación estable, continua, intensiva y prolongada sin paros, a gran escala, con una configuración ideal para trabajo pesado y condiciones variables, la planta está completamente equipada.",
+    title: {
+      full: "Operación estable, continua, intensiva y prolongada sin paros, a gran escala, con una configuración ideal para trabajo pesado y condiciones variables, la planta está completamente equipada.",
+      mobile:
+        "Operación estable, continua, intensiva y prolongada sin paros, a gran escala, la planta está completamente equipada.",
+    },
     text: "",
     bg: "#6b97c6",
     textColor: "#ffffff",
@@ -50,6 +57,7 @@ const cards = [
     <HeroComponentV1
       title="Tambor de Contraflujo Plus"
       text="Para contratistas experimentados que buscan una planta con producción y nivel de exigencias técnicas superiores, capaz de adaptarse a cualquier proyecto, incluso con diferentes tipos de mezcla. Ideal para una operación ecológica evitando multas y paros costosos por contaminación, con bajo consumo de combustible ofreciendo una excelente relación costo-beneficio en su categoría, con alto porcentaje de incorporación de RAP de hasta 40%."
+      textMobile="Para contratistas que buscan una planta con producción y nivel de exigencias técnicas superiores, capaz de adaptarse a cualquier proyecto. Para una operación ecológica sin multas y paros costosos por contaminación, con bajo consumo de combustible, con alto porcentaje de incorporación de RAP de hasta 40%."
       heroImage={hero2.src}
       btns={true}
     >
@@ -77,14 +85,10 @@ const cards = [
     >
       <div class="space-y-5 text-[#f3f3f5]">
         <p>
-          Ofrecemos la solución ideal para la producción continua de mezcla
-          asfáltica, integrando secado, mezclado, incorporación de RAP, captura
-          de finos en la casa de bolsas y su reincorporación en un solo chasis
-          diseñado para trabajo pesado, con opción de tolvas montadas o
-          independientes. Nuestro diseño está orientado a una operación
-          continua, eficiente y con mayor control del proceso, garantizando
-          eficiencia operativa, tranquilidad de su cliente y durabilidad del
-          pavimento en cualquier proyecto.
+          <ResponsiveText
+            full="Ofrecemos la solución ideal para la producción continua de mezcla asfáltica, integrando secado, mezclado, incorporación de RAP, captura de finos en la casa de bolsas y su reincorporación en un solo chasis diseñado para trabajo pesado, con opción de tolvas montadas o independientes. Nuestro diseño está orientado a una operación continua, eficiente y con mayor control del proceso, garantizando eficiencia operativa, tranquilidad de su cliente y durabilidad del pavimento en cualquier proyecto."
+            mobile="La solución para producción continua de mezcla asfáltica, secado, mezclado, incorporación de RAP, captura de finos y reincorporación de finos, diseñado para trabajo pesado, con opción de tolvas montadas o independientes. Operación continua, eficiente y económica, garantizando eficiencia operativa, tranquilidad de su cliente y durabilidad del pavimento."
+          />
         </p>
       </div>
     </DropdownComponent>

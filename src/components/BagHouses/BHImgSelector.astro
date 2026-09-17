@@ -17,6 +17,7 @@ import g2 from "../../assets/images/BagHouses/GallerySlider/BHG2.webp";
 import g3 from "../../assets/images/BagHouses/GallerySlider/BHG4.webp";
 import g4 from "../../assets/images/BagHouses/GallerySlider/BHG4.webp";
 import SmartVideo from "../unitComponents/SmartVideo";
+import ResponsiveText from "../unitComponents/ResponsiveText.astro";
 
 const tanksSlides = [
   {
@@ -63,13 +64,10 @@ const tanksSlides = [
             <p
               class="text-[#f4f5f6] text-sm md:text-base text-justify font-normal"
             >
-              Un sistema que mantiene las mangas filtrantes en operación en todo
-              momento. Descargas de aire comprimido se liberan a través de una
-              boquilla supersónica, generando una onda de presión que expande
-              rápidamente cada manga y desprende la capa de polvo adherida a su
-              superficie. Las partículas liberadas caen a la tolva inferior,
-              asegurando una filtración sin interrupciones y un rendimiento
-              óptimo de las mangas.
+              <ResponsiveText
+                full="Un sistema que mantiene las mangas filtrantes en operación en todo momento. Descargas de aire comprimido se liberan a través de una boquilla supersónica, generando una onda de presión que expande rápidamente cada manga y desprende la capa de polvo adherida a su superficie. Las partículas liberadas caen a la tolva inferior, asegurando una filtración sin interrupciones y un rendimiento óptimo de las mangas."
+                mobile="Descargas de aire comprimido liberadas a través de boquillas supersónicas, generando una onda de presión que desprende la capa de polvo adherida a su superficie. Cayendo a la tolva inferior, asegurando una filtración sin interrupciones."
+              />
             </p>
           </div>
         </div>
@@ -207,13 +205,10 @@ const tanksSlides = [
       />
     </div>
     <p class="text-sm pt-5 lg:pt-0 md:pt-0 lg:text-lg md:text-lg font-thin">
-      Después de pasar por el colector primario de polvo, la corriente de gas
-      entra a la cámara de entrada del filtro de mangas. Al reducir su
-      velocidad, fluye por debajo de una barrera protectora que resguarda las
-      mangas filtrantes. En el plenum de aire limpio, el sistema succiona el gas
-      hacia arriba a través de las mangas, haciendo que las partículas finas se
-      acumulen en su superficie exterior, mientras el aire limpio pasa al plenum
-      y sale por la chimenea de escape.
+      <ResponsiveText
+        full="Después de pasar por el colector primario de polvo, la corriente de gas entra a la cámara de entrada del filtro de mangas. Al reducir su velocidad, fluye por debajo de una barrera protectora que resguarda las mangas filtrantes. En el plenum de aire limpio, el sistema succiona el gas hacia arriba a través de las mangas, haciendo que las partículas finas se acumulen en su superficie exterior, mientras el aire limpio pasa al plenum y sale por la chimenea de escape."
+        mobile="Después de pasar por el colector primario de polvo, la corriente de gas entra a la entrada del filtro de mangas. Al reducir su velocidad, fluye por debajo de una barrera protectora con las mangas filtrantes. El sistema succiona el gas hacia arriba a través de las mangas, haciendo que las partículas se acumulen en su superficie exterior, mientras el aire limpio sale por la chimenea de escape."
+      />
     </p>
   </div>
 
