@@ -6,6 +6,7 @@ import modulesImg from "../../assets/images/Relief/TriasoOS9.webp";
 import {
   isSmallScreen,
   prefersReducedMotion,
+  useMobileReveal,
   useSnapCarousel,
 } from "./reliefMotion";
 
@@ -66,6 +67,8 @@ export default function ReliefModules() {
   const stRef = useRef<ScrollTrigger | null>(null);
   const [active, setActive] = useState(0);
   const slider = useSnapCarousel<HTMLOListElement>();
+
+  useMobileReveal(sectionRef);
 
   useEffect(() => {
     // Móvil/tablet y reduced-motion: sin anclaje ni split; el contenido se apila y queda visible.
@@ -216,7 +219,10 @@ export default function ReliefModules() {
           </nav>
 
           {/* Encabezado — solo móvil */}
-          <p className="order-1 px-6 text-2xl font-semibold text-[#89adff] lg:hidden">
+          <p
+            data-mreveal
+            className="order-1 px-6 text-2xl font-semibold text-[#89adff] lg:hidden"
+          >
             Módulos del sistema
           </p>
 

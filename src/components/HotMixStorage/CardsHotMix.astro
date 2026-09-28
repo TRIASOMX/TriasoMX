@@ -275,47 +275,73 @@ import HM6 from "../../assets/images/HotMix/Gallery/HM6.webp";
           class="w-full flex flex-col items-center justify-center gap-6 sm:gap-10 mt-4 tab-content text-base md:text-lg text-grisT font-bold"
         >
           <div class="w-full flex flex-col">
-            <div class="w-full rounded-2xl overflow-hidden mx-auto">
+            <div
+              class="relative z-10 flex max-w-7xl w-full px-4 sm:px-8 mx-auto -mb-6 lg:mb-0 justify-center lg:justify-start"
+            >
               <Image
                 src={suspension}
                 alt="Self-erecting system Silo"
-                class="max-w-[650px] bg-white rounded-2xl"
+                class="w-full lg:w-[80%] max-w-[650px] lg:max-w-none bg-white rounded-2xl"
               />
             </div>
+
             <div class="bg-[#393939]">
               <div
-                class="w-full grid grid-cols-1 items-center justify-center md:grid-cols-2 gap-6 md:gap-0 max-w-7xl mx-auto px-4 sm:px-8 py-8 md:py-0"
+                class="max-w-7xl px-4 sm:px-8 mx-auto flex flex-col lg:flex-row justify-between items-center py-12 lg:py-2"
               >
-                <div class="lg:pl-5">
-                  <h2 class="text-white text-lg md:text-2xl font-bold">
-                    Sistema autoerigible
-                  </h2>
-                  <br />
-                  <p class="font-thin text-sm md:text-lg text-[#d9d9d9]">
-                    El silo autoerigible está equipado con cilindros hidráulicos
-                    telescópicos, lo que permite una elevación rápida y
-                    eficiente. Con un tiempo de instalación de solo 10 minutos,
-                    asegura una puesta en marcha ágil. Los pernos de bloqueo
-                    hidráulico garantizan una fijación segura en posición
-                    vertical y horizontal, brindando estabilidad y precisión
-                    durante la operación.
-                  </p>
+                <div class="flex flex-col md:flex-row gap-6 lg:w-[40%]">
+                  <div class="w-full">
+                    <h2 class="text-white text-lg md:text-3xl font-bold">
+                      Sistema autoerigible
+                    </h2>
+                    <br />
+                    <p
+                      class="text-[#f3f3f5] text-sm lg:text-base md:text-base text-justify font-normal"
+                    >
+                      El silo autoerigible está equipado con cilindros
+                      hidráulicos telescópicos, lo que permite una elevación
+                      rápida y eficiente. Con un tiempo de instalación de solo 10
+                      minutos, asegura una puesta en marcha ágil. Los pernos de
+                      bloqueo hidráulico garantizan una fijación segura en
+                      posición vertical y horizontal, brindando estabilidad y
+                      precisión durante la operación.
+                    </p>
+                  </div>
                 </div>
-                <div class="max-w-7xl mx-auto">
+                <div class="w-full hidden lg:flex md:w-auto">
                   <Image
                     src={SiloSAE}
+                    width={600}
+                    height={400}
                     alt="Self-erecting system Silo"
-                    class="w-full lg:w-4/5 rounded-lg"
+                    class="rounded-2xl"
                   />
                 </div>
               </div>
             </div>
 
-            <div class="flex items-center justify-center">
+            <div
+              class="max-w-7xl w-full hidden px-4 sm:px-8 mx-auto lg:flex justify-center lg:justify-start"
+            >
               <Image
                 src={SiloAEVL}
                 alt="Self-erecting system Silo"
-                class="w-2/3 sm:w-1/2"
+                class="rounded-lg lg:w-3/5"
+              />
+            </div>
+
+            <div
+              class="relative flex flex-col max-w-7xl w-full mx-auto px-4 sm:px-8 -mt-8 mb-4 lg:hidden"
+            >
+              <Image
+                src={SiloSAE}
+                alt="Self-erecting system Silo"
+                class="rounded-2xl w-[72%] self-end object-contain shadow-xl relative z-10"
+              />
+              <Image
+                src={SiloAEVL}
+                alt="Self-erecting system Silo"
+                class="rounded-lg w-[72%] self-start -mt-8 object-contain shadow-xl"
               />
             </div>
           </div>

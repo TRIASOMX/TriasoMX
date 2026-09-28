@@ -433,7 +433,7 @@ import ResponsiveText from "../unitComponents/ResponsiveText.astro";
       <!-- slider -->
       <div class="bg-[#393939] p-10">
         <div
-          class="flex flex-col md:flex-row items-center justify-center md:justify-start w-full gap-2 md:gap-10 max-w-7xl mx-auto overflow-x-auto"
+          class="drag-scroll flex flex-col md:flex-row items-center justify-center md:justify-start w-full gap-2 md:gap-10 max-w-7xl mx-auto overflow-x-auto snap-x snap-mandatory overscroll-x-contain select-none md:cursor-grab [-webkit-overflow-scrolling:touch] [&>*]:snap-start [&>*]:shrink-0 [&>*]:w-full md:[&>*]:w-[450px] [&_img]:pointer-events-none [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           <CardTambor
             image={img1.src}
@@ -604,4 +604,56 @@ import ResponsiveText from "../unitComponents/ResponsiveText.astro";
       initScrollAnimations();
     });
   }
+
+  // Click & drag para los sliders horizontales (solo mouse; touch usa scroll nativo)
+  document.querySelectorAll<HTMLElement>(".drag-scroll").forEach((track) => {
+    let startX = 0;
+    let startScroll = 0;
+    let dragging = false;
+    let moved = false;
+
+    track.addEventListener("pointerdown", (e) => {
+      if (e.pointerType !== "mouse" || e.button !== 0) return;
+      dragging = true;
+      moved = false;
+      startX = e.clientX;
+      startScroll = track.scrollLeft;
+    });
+
+    track.addEventListener("pointermove", (e) => {
+      if (!dragging) return;
+      const dx = e.clientX - startX;
+      if (!moved && Math.abs(dx) > 5) {
+        moved = true;
+        // Desactivar snap mientras se arrastra para que el movimiento sea fluido
+        track.style.scrollSnapType = "none";
+        track.style.cursor = "grabbing";
+        track.setPointerCapture(e.pointerId);
+      }
+      if (moved) track.scrollLeft = startScroll - dx;
+    });
+
+    const endDrag = () => {
+      if (!dragging) return;
+      dragging = false;
+      track.style.cursor = "";
+      // Reactivar snap: el navegador acomoda la card más cercana
+      track.style.scrollSnapType = "";
+    };
+    track.addEventListener("pointerup", endDrag);
+    track.addEventListener("pointercancel", endDrag);
+
+    // Evitar que el "mostrar más" se active al soltar después de arrastrar
+    track.addEventListener(
+      "click",
+      (e) => {
+        if (moved) {
+          e.stopPropagation();
+          e.preventDefault();
+          moved = false;
+        }
+      },
+      true,
+    );
+  });
 </script>

@@ -1,7 +1,11 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { isSmallScreen, prefersReducedMotion } from "./reliefMotion";
+import {
+  isSmallScreen,
+  prefersReducedMotion,
+  useMobileReveal,
+} from "./reliefMotion";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -48,6 +52,8 @@ export default function ReliefReport() {
   const topFadeRef = useRef<HTMLDivElement>(null);
   const botFadeRef = useRef<HTMLDivElement>(null);
   const payoffRef = useRef<HTMLElement>(null);
+
+  useMobileReveal(sectionRef);
 
   /* ---------- Cine anclado (solo desktop) ---------- */
   useEffect(() => {
@@ -300,7 +306,10 @@ export default function ReliefReport() {
         className="relative mx-auto flex min-h-screen w-full max-w-5xl flex-col px-6 py-16 lg:h-screen lg:py-0"
       >
         <div className="shrink-0 lg:pt-[10vh]">
-          <h2 className="text-4xl font-bold leading-[1.03] tracking-tight md:text-5xl lg:text-6xl">
+          <h2
+            data-mreveal
+            className="text-4xl font-bold leading-[1.03] tracking-tight md:text-5xl lg:text-6xl"
+          >
             Un informe, toda la operación
           </h2>
           <p className="mt-4 max-w-lg text-base text-grisP md:text-xl">

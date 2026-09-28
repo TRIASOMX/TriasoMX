@@ -73,6 +73,22 @@ const titleLines = Array.isArray(mainTitle) ? mainTitle : [mainTitle];
   import gsap from "gsap";
   import ScrollTrigger from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
+
+  // Recalcular posiciones del pin cuando cambia la altura de la página
+  // (islas que montan tarde, imágenes lazy, tabs que cambian de tamaño)
+  window.addEventListener("load", () => ScrollTrigger.refresh());
+  let lastHeight = document.body.scrollHeight;
+  let resizeTimer: number | undefined;
+  new ResizeObserver(() => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => {
+      const h = document.body.scrollHeight;
+      if (h === lastHeight) return;
+      lastHeight = h;
+      ScrollTrigger.refresh();
+    }, 150);
+  }).observe(document.body);
+
   document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll<HTMLElement>(".stack-section");
 

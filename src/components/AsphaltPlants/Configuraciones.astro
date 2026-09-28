@@ -10,6 +10,7 @@ import neg1 from "../../assets/images/AsphaltPlant/neg1.webp";
 import neg2 from "../../assets/images/AsphaltPlant/neg2.webp";
 import neg3 from "../../assets/images/AsphaltPlant/neg3.webp";
 import OSistem from "../unitComponents/SistemaOBlack.astro";
+import Whatsbtn from "../unitComponents/Whatsbtn.astro";
 
 interface ConfigItem {
   title: string;
@@ -137,8 +138,8 @@ const configuraciones: ConfigItem[] = [
       class="max-w-screen-2xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
     >
       <div class="text-white">
-        <h2 class="text-3xl md:text-5xl leading-tight">
-          Su mejor negocio empieza con una<br />
+        <h2 class="text-3xl md:text-5xl leading-loose">
+          Su mejor negocio empieza con una
           <span class="font-bold">planta de asfalto</span>
         </h2>
 
@@ -153,6 +154,9 @@ const configuraciones: ConfigItem[] = [
         <p class="mt-4 text-base md:text-lg">
           Ninguna de las tres deja lo mismo al cierre de la obra.
         </p>
+        <div class="w-full mt-8 flex items-center lg:items-start">
+          <Whatsbtn />
+        </div>
       </div>
 
       <div class="grid grid-cols-2 grid-rows-2 gap-3 h-[400px] md:h-[550px]">

@@ -306,7 +306,11 @@ export default function ReliefFourthSection() {
       {/* ============ Bloque "menos operarios" ============ */}
       <div className="bg-[#1e1e1e] py-16">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-5 px-6 text-center lg:px-8">
-          <h2 data-reveal="up" className="text-2xl font-bold md:text-4xl">
+          <h2
+            data-reveal="up"
+            data-mreveal
+            className="text-2xl font-bold md:text-4xl"
+          >
             Su planta deja de depender de unos pocos operadores indispensables
           </h2>
           <p
@@ -341,12 +345,14 @@ export default function ReliefFourthSection() {
           <div className="text-center">
             <span
               data-reveal="up"
+              data-mreveal
               className="inline-block text-sm font-semibold text-[#86aaff]"
             >
               Asistencia Triaso® Relief
             </span>
             <h2
               data-reveal="up"
+              data-mreveal="0.1"
               className="mx-auto mt-4 max-w-3xl text-3xl font-bold md:text-5xl"
             >
               Haga cualquier pregunta sobre la operación de su planta
@@ -418,7 +424,10 @@ export default function ReliefFourthSection() {
       <section className="bg-[#1e1e1e] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div data-reveal="up">
-            <h2 className="max-w-3xl text-xl font-bold text-white md:text-3xl">
+            <h2
+              data-mreveal
+              className="max-w-3xl text-xl font-bold text-white md:text-3xl"
+            >
               El sistema de control utiliza tres pasos para alertar al operador
               y proteger el equipo:
             </h2>

@@ -18,14 +18,15 @@ export default function ReliefFirstSection() {
               <span
                 data-reveal="up"
                 data-reveal-delay="0.05"
-                className="text-base font-bold text-blueMain sm:text-lg md:text-xl"
+                className="rlf-m-hero text-base font-bold text-blueMain sm:text-lg md:text-xl"
               >
                 Triaso Relief
               </span>
               <h1
                 data-reveal="up"
                 data-reveal-delay="0.05"
-                className="text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+                style={{ "--rlf-m-delay": "0.1s" } as React.CSSProperties}
+                className="rlf-m-hero text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
               >
                 Control, automatización y supervisión de plantas de asfalto
               </h1>
@@ -36,7 +37,8 @@ export default function ReliefFirstSection() {
               <p
                 data-reveal="up"
                 data-reveal-delay="0.1"
-                className="max-w-xl text-base leading-relaxed text-grisP md:text-lg"
+                style={{ "--rlf-m-delay": "0.25s" } as React.CSSProperties}
+                className="rlf-m-hero max-w-xl text-base leading-relaxed text-grisP md:text-lg"
               >
                 El sistema de control y supervisión que le da el control total
                 de la operación de su planta de asfalto —producción, consumos y

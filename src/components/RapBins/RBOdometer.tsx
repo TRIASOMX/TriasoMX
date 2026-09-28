@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
-import img1 from "../../assets/images/RapBins/RAProv4.webp";
+import img1 from "../../assets/images/RapBins/Tlv.webp";
 import FillLinkButton from "../unitComponents/FillLinkButton";
 
 const RPOdometer = () => {
@@ -67,7 +67,9 @@ const RPOdometer = () => {
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tons</p>
             </div>
-            <p className="text-center lg:text-start text-[#4F4F4F]">capacidad de RAP</p>
+            <p className="text-center lg:text-start text-[#4F4F4F]">
+              capacidad de RAP
+            </p>
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center">

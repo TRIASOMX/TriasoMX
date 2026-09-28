@@ -1374,11 +1374,6 @@ const sections: Section[] = [
   /* "Qué evaluar" */
   .tg-evaluar {
     margin-top: 24px;
-    background: var(--tg-azul-tint);
-    border: 1px solid var(--tg-azul-line);
-    border-left: 3px solid var(--tg-azul);
-    border-radius: var(--tg-r);
-    padding: 22px 26px;
   }
   .tg-evaluar__tag {
     display: inline-flex;
@@ -1446,9 +1441,21 @@ const sections: Section[] = [
     opacity: 0.5;
   }
 
-  .tg-evaluar--blue {
-    background: color-mix(in srgb, var(--azul-bg1) 14%, #fff);
-    border-left-color: var(--tg-azul-deep);
+  /* "Qué evaluar": bullet simple en lugar de casilla con palomita */
+  .tg-evaluar .tg-checks > li {
+    padding-left: 18px;
+  }
+  .tg-evaluar .tg-checks > li::before {
+    left: 2px;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--tg-azul);
+  }
+  .tg-evaluar .tg-checks > li::after {
+    content: none;
   }
 
   /* Comparación */
@@ -1923,7 +1930,6 @@ const sections: Section[] = [
     .tg-sec__head {
       gap: 13px;
     }
-    .tg-evaluar,
     .tg-card__body {
       padding-left: 18px;
       padding-right: 18px;

@@ -13,7 +13,9 @@ export default function ReliefLastSection() {
       {/* Encabezado */}
       <div className="bg-[#393939] py-10">
         <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-          <h2 className="text-2xl font-bold md:text-3xl">Seguridad y acceso</h2>
+          <h2 data-mreveal className="text-2xl font-bold md:text-3xl">
+            Seguridad y acceso
+          </h2>
         </div>
       </div>
 
@@ -69,7 +71,7 @@ export default function ReliefLastSection() {
 
         <div className="relative mx-auto max-w-7xl space-y-10 px-6 lg:px-8">
           <div data-reveal="up" className="text-center">
-            <h2 className="text-2xl font-bold md:text-4xl">
+            <h2 data-mreveal className="text-2xl font-bold md:text-4xl">
               Modernización de sistemas de control
             </h2>
           </div>
@@ -88,7 +90,7 @@ export default function ReliefLastSection() {
           </div>
 
           <div data-reveal="scale" className="flex items-center justify-center">
-            <h3 className="w-full text-center text-3xl font-bold leading-tight text-white md:w-3/4 md:text-4xl">
+            <h3 data-mreveal className="w-full text-center text-3xl font-bold leading-tight text-white md:w-3/4 md:text-4xl">
               Disponible para monitoreo de todos los equipos Triaso®
             </h3>
           </div>

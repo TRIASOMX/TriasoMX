@@ -240,10 +240,54 @@ const REVEAL_FROM: Record<RevealKind, gsap.TweenVars> = {
   clip: { clipPath: "inset(0 0 100% 0)", y: 40, opacity: 0 },
 };
 
+/* ------------------------------------------------------------------ *
+ *  Reveal ligero para móvil/tablet: solo en los hijos [data-mreveal]  *
+ *  (títulos clave). IntersectionObserver + transición CSS (.rlf-m),   *
+ *  una sola vez. El valor del atributo es un delay opcional en seg.   *
+ * ------------------------------------------------------------------ */
+export function useMobileReveal(scopeRef: React.RefObject<HTMLElement | null>) {
+  useEffect(() => {
+    if (!isSmallScreen() || prefersReducedMotion()) return;
+    const scope = scopeRef.current;
+    if (!scope || !("IntersectionObserver" in window)) return;
+
+    const vh = window.innerHeight;
+    // Lo que ya está en pantalla al hidratar se deja quieto (evita parpadeo).
+    const els = Array.from(
+      scope.querySelectorAll<HTMLElement>("[data-mreveal]"),
+    ).filter((el) => el.getBoundingClientRect().top > vh * 0.9);
+    if (els.length === 0) return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          e.target.classList.add("rlf-m-in");
+          io.unobserve(e.target);
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" },
+    );
+    els.forEach((el) => {
+      const delay = parseFloat(el.dataset.mreveal || "0");
+      if (delay) el.style.setProperty("--rlf-m-delay", `${delay}s`);
+      el.classList.add("rlf-m");
+      io.observe(el);
+    });
+
+    return () => {
+      io.disconnect();
+      els.forEach((el) => el.classList.remove("rlf-m", "rlf-m-in"));
+    };
+  }, [scopeRef]);
+}
+
 export function useGsapReveal(
   scopeRef: React.RefObject<HTMLElement | null>,
   deps: unknown[] = [],
 ) {
+  useMobileReveal(scopeRef);
+
   useEffect(() => {
     // Sin animaciones de scroll en móvil/tablet ni con reduced-motion:
     // los elementos [data-reveal] quedan visibles tal cual (no hay CSS que los oculte).
