@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import img2 from "../../assets/images/Relief/TriasoOS8.webp";
 import img3 from "../../assets/images/Relief/TriasoOS3.webp";
+import img1 from "../../../public/consola1.webp";
 import { CountUp, refreshTriggers, useGsapReveal } from "./reliefMotion";
 
 /* ------------------------------------------------------------------ *
@@ -284,10 +285,10 @@ export default function ReliefFourthSection() {
               control manual total además de automatización avanzada.
             </p>
             <p className="font-bold">
-              Mantenga produciendo mezcla asfáltica
+              Mantenga produciendo mezcla asfáltica,
               <span>
                 {" "}
-                , incluso si algún componente electrónico necesita reemplazo.
+                incluso si algún componente electrónico necesita reemplazo.
               </span>
             </p>
             <ul className="list-disc pl-5">
@@ -304,24 +305,39 @@ export default function ReliefFourthSection() {
       </div>
 
       {/* ============ Bloque "menos operarios" ============ */}
-      <div className="bg-[#1e1e1e] py-16">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-5 px-6 text-center lg:px-8">
-          <h2
-            data-reveal="up"
-            data-mreveal
-            className="text-2xl font-bold md:text-4xl"
-          >
-            Su planta deja de depender de unos pocos operadores indispensables
-          </h2>
-          <p
-            data-reveal="up"
-            data-reveal-delay="0.08"
-            className="max-w-4xl text-base font-semibold text-[#d9d9d9] md:text-xl"
-          >
-            Con una sola interfaz para todo el proceso, cualquier operador
-            aprende a manejar la planta en poco tiempo, sin que el control ni la
-            calidad de la producción se resientan.
-          </p>
+      <div className="w-full bg-bgMain">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 bg-[#f4f5f6] px-6 py-16 md:grid-cols-2 lg:px-8">
+          <div className="flex flex-col items-center justify-center gap-5 text-center">
+            <h2
+              data-reveal="up"
+              data-mreveal
+              className="text-2xl font-bold md:text-4xl text-grisT text-start leading-loose"
+            >
+              Con nuestro sistema, su planta no depende de operadores
+              "indispensables"
+            </h2>
+            <span className="w-full h-1 bg-grisT"></span>
+            <p
+              data-reveal="up"
+              data-reveal-delay="0.08"
+              className="max-w-4xl text-base font-normal text-grisP md:text-xl text-start"
+            >
+              Con una sola interfaz para todo el proceso, cualquier operador
+              aprende a manejar la planta en poco tiempo, sin que el control ni
+              la calidad de la producción se resientan.
+            </p>
+          </div>
+          <div className="flex items-center justify-center">
+            <img
+              src={img1.src}
+              alt="Planta de asfalto con sistema Triaso® Relief"
+              width={img1.width}
+              height={img1.height}
+              loading="lazy"
+              decoding="async"
+              className="h-auto w-full max-w-xl object-contain rounded-lg"
+            />
+          </div>
         </div>
       </div>
 

@@ -270,13 +270,13 @@ const DrumMixPlanos = () => {
         className="bg-[url('/fondopatron.webp')] bg-repeat bg-top w-full flex flex-col items-center justify-start relative bg-black overflow-hidden z-10 min-h-screen"
       >
         <header className="mt-10 text-white" ref={otroElemento}>
-          <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
+          <h2 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Specifications
-          </h1>
+          </h2>
           <div className="flex items-center justify-center mt-10">
-            <h1 className="mr-3" id="measure">
+            <p className="mr-3" id="measure">
               MEASURE:
-            </h1>
+            </p>
             <div
               onClick={toggleUnit}
               className="relative w-48 h-10 rounded-full border border-white cursor-pointer select-none"
@@ -376,9 +376,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           ÁLABES
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the flights section"
                           className="block md:hidden"
@@ -428,9 +428,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
@@ -509,9 +509,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
@@ -603,9 +603,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           QUEMADORES
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the burner system"
                           className="block md:hidden"
@@ -717,9 +717,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CASA DE BOLSAS
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the baghouse capacity"
                           className="block md:hidden"
@@ -834,9 +834,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMAS ELÉCTRICOS
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the durability and safety of the system"
                           className="block md:hidden"
@@ -1095,9 +1095,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               DIMENSIONES DEL TAMBOR
-                            </h1>
+                            </h3>
                             <button
                               aria-label="See more about the drum dimensions"
                               className="block md:hidden"
@@ -1138,7 +1138,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1153,7 +1153,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho:</h1>
+                              <p>Ancho:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1169,7 +1169,7 @@ const DrumMixPlanos = () => {
                             </div>
 
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p
                                 data-imperial="264.31 cm"
                                 data-metric="8.67 ft"
@@ -1190,9 +1190,9 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               CHASIS Y ESTRUCTURA
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -1232,7 +1232,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1247,11 +1247,11 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración de ejes:</h1>
+                              <p>Configuración de ejes:</p>
                               <p>Dos ejes</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1266,7 +1266,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1281,7 +1281,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura total:</h1>
+                              <p>Altura total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1296,7 +1296,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura para transporte:</h1>
+                              <p>Altura para transporte:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1316,9 +1316,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               RANGO DE PRODUCCIÓN
-                            </h1>
+                            </h3>
                             <button
                               aria-label="See more about the production rate"
                               className="block md:hidden"
@@ -1359,24 +1359,24 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p>{activeData?.dimensions.humidity3} Tph</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p>{activeData?.dimensions.humidity5} Tph</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Incorporación de RAP:</h1>
+                              <p>Incorporación de RAP:</p>
                               <p>50%</p>
                             </div>
                           </div>
                         </div>
                         <div className="items-start justify-start text-white flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               CUMPLIMIENTO CON NORMAS INDUSTRIALES
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -1426,9 +1426,9 @@ const DrumMixPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             SISTEMA DE GIRO
-                          </h1>
+                          </h3>
                           <button
                             aria-label="See more information about the Drum Drive System"
                             className="block"
@@ -1492,9 +1492,9 @@ const DrumMixPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             PORTABILIDAD
-                          </h1>
+                          </h3>
                           <button
                             aria-label="See more about the portability"
                             className="block"
@@ -1587,9 +1587,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           ÁLABES
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1638,9 +1638,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1718,9 +1718,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1811,9 +1811,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           QUEMADOR
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1924,9 +1924,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CASA DE BOLSAS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2040,9 +2040,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMAS ELÉCTRICOS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2299,9 +2299,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               DIMENSIONES DEL TAMBOR
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -2341,7 +2341,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2356,7 +2356,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho:</h1>
+                              <p>Ancho:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2371,7 +2371,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura:</h1>
+                              <p>Altura:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2386,7 +2386,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2404,9 +2404,9 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               CHASIS Y ESTRUCTURA
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -2446,7 +2446,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2461,11 +2461,11 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración de ejes:</h1>
+                              <p>Configuración de ejes:</p>
                               <p>Dos ejes</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2480,7 +2480,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2495,7 +2495,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura total:</h1>
+                              <p>Altura total:</p>
                               <p
                                 data-imperial="731.29 cm"
                                 data-metric="23.99 ft"
@@ -2513,7 +2513,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura para transporte:</h1>
+                              <p>Altura para transporte:</p>
                               <p
                                 data-imperial="427.57 cm"
                                 data-metric="14.02 ft"
@@ -2536,9 +2536,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               RANGO DE PRODUCCIÓN
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -2578,7 +2578,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
@@ -2587,22 +2587,22 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humidity:</h1>
+                              <p>5% humidity:</p>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
                                 {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Incorporación de RAP:</h1>
+                              <p>Incorporación de RAP:</p>
                               <p>50%</p>
                             </div>
                           </div>
                         </div>
                         <div className="items-start justify-start text-white flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               CUMPLIMIENTO CON NORMAS INDUSTRIALES
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -2652,9 +2652,9 @@ const DrumMixPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             SISTEMA DE GIRO
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -2717,9 +2717,9 @@ const DrumMixPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             PORTABILIDAD
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -2814,9 +2814,9 @@ const DrumMixPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           ÁLABES
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the flights"
                           className="block md:hidden"
@@ -2866,9 +2866,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and operation of the drum mixer"
                           className="block md:hidden"
@@ -2947,9 +2947,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the components and electrical composition of the system"
                           className="block md:hidden"
@@ -3039,9 +3039,9 @@ const DrumMixPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           QUEMADOR
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the burner system"
                           className="block md:hidden"
@@ -3153,9 +3153,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CASA DE BOLSAS
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the capacity of the integrated baghouse"
                           className="block md:hidden"
@@ -3270,9 +3270,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMAS ELÉCTRICOS
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the durability and safety of the system"
                           className="block md:hidden"
@@ -3530,9 +3530,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               DIMENSIONES DEL TAMBOR
-                            </h1>
+                            </h3>
                             <button
                               aria-label="See more about the drum dimensions"
                               className="block md:hidden"
@@ -3573,7 +3573,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3588,7 +3588,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho:</h1>
+                              <p>Ancho:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3603,7 +3603,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             {/* <div className="flex justify-between">
-                            <h1>Altura:</h1>
+                            <p>Altura:</p>
                             <p>
                               {unit === "metric"
                                 ? `${
@@ -3618,7 +3618,7 @@ const DrumMixPlanos = () => {
                             </p>
                           </div> */}
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3636,9 +3636,9 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               CHASIS Y ESTRUCTURA
-                            </h1>
+                            </h3>
                             <button
                               aria-label="See more about the chassis and the structure"
                               className="block md:hidden"
@@ -3679,7 +3679,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3694,11 +3694,11 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración de ejes:</h1>
+                              <p>Configuración de ejes:</p>
                               <p>Tres ejes</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3713,7 +3713,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3728,7 +3728,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura total:</h1>
+                              <p>Altura total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3743,7 +3743,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de transporte:</h1>
+                              <p>Altura de transporte:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3763,9 +3763,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               RANGO DE PRODUCCIÓN
-                            </h1>
+                            </h3>
                             <button
                               aria-label="See more about the production rate"
                               className="block md:hidden"
@@ -3806,7 +3806,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
@@ -3815,22 +3815,22 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
                                 {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Incorporación de RAP:</h1>
+                              <p>Incorporación de RAP:</p>
                               <p>50%</p>
                             </div>
                           </div>
                         </div>
                         <div className="items-start justify-start text-white flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               CUMPLIMIENTO CON NORMAS INDUSTRIALES
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -3880,9 +3880,9 @@ const DrumMixPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             SISTEMA DE GIRO
-                          </h1>
+                          </h3>
                           <button
                             aria-label="See more about the drum drive system"
                             className="block"
@@ -3946,9 +3946,9 @@ const DrumMixPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             PORTABILIDAD
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -4043,9 +4043,9 @@ const DrumMixPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           ÁLABES
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -4094,9 +4094,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -4174,9 +4174,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -4271,9 +4271,9 @@ const DrumMixPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           QUEMADOR
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -4384,9 +4384,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CASA DE BOLSAS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -4500,9 +4500,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMAS ELÉCTRICOS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -4759,9 +4759,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               DIMENSIONES DEL TAMBOR
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -4801,7 +4801,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4816,7 +4816,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho:</h1>
+                              <p>Ancho:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4831,7 +4831,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             {/*<div className="flex justify-between">
-                            <h1>Height:</h1>
+                            <p>Height:</p>
                             <p>
                               {unit === "metric"
                                 ? `${
@@ -4846,7 +4846,7 @@ const DrumMixPlanos = () => {
                             </p>
                           </div>*/}
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4864,9 +4864,9 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               CHASIS Y ESTRUCTURA
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -4906,7 +4906,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4921,11 +4921,11 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración de ejes:</h1>
+                              <p>Configuración de ejes:</p>
                               <p>Tres ejes</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4940,7 +4940,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4955,7 +4955,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura total:</h1>
+                              <p>Altura total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4970,7 +4970,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura para transporte:</h1>
+                              <p>Altura para transporte:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4990,9 +4990,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               RANGO DE PRODUCCIÓN
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -5032,7 +5032,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
@@ -5041,22 +5041,22 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
                                 {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Incorporación de RAP:</h1>
+                              <p>Incorporación de RAP:</p>
                               <p>50%</p>
                             </div>
                           </div>
                         </div>
                         <div className="items-start justify-start text-white flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               CUMPLIMIENTO CON NORMAS INDUSTRIALES
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -5106,9 +5106,9 @@ const DrumMixPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             SISTEMA DE GIRO
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -5171,9 +5171,9 @@ const DrumMixPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             PORTABILIDAD
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -5264,9 +5264,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           ÁLABES
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -5315,9 +5315,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -5395,9 +5395,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -5488,9 +5488,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           QUEMADOR
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -5601,9 +5601,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CASA DE BOLSAS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -5717,9 +5717,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMA ELÉCTRICO
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -5976,9 +5976,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               DIMENSIONES DEL TAMBOR
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -6018,7 +6018,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -6033,7 +6033,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho:</h1>
+                              <p>Ancho:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -6048,7 +6048,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             {/*<div className="flex justify-between">
-                            <h1>Altura:</h1>
+                            <p>Altura:</p>
                             <p>
                               {unit === "metric"
                                 ? `${
@@ -6063,7 +6063,7 @@ const DrumMixPlanos = () => {
                             </p>
                           </div>*/}
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -6081,9 +6081,9 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               CHASIS Y ESTRUCTURA
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -6123,7 +6123,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Total length (including hitch):</h1>
+                              <p>Total length (including hitch):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -6138,11 +6138,11 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración de ejes:</h1>
+                              <p>Configuración de ejes:</p>
                               <p>Tres ejes</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -6157,7 +6157,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -6172,7 +6172,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura total:</h1>
+                              <p>Altura total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -6192,9 +6192,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               RANGO DE PRODUCCIÓN
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -6234,15 +6234,15 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p>{activeData?.dimensions.humidity3} Tph</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p>{activeData?.dimensions.humidity5} Tph</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Incorporación de RAP:</h1>
+                              <p>Incorporación de RAP:</p>
                               <p>50%</p>
                             </div>
                           </div>
@@ -6250,9 +6250,9 @@ const DrumMixPlanos = () => {
 
                         <div className="items-start justify-start text-white flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               CUMPLIMIENTO CON NORMAS INDUSTRIALES
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -6302,9 +6302,9 @@ const DrumMixPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             SISTEMA DE GIRO
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -6367,9 +6367,9 @@ const DrumMixPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             PORTABILIDAD
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -6460,9 +6460,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           ÁLABES
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -6511,9 +6511,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -6591,9 +6591,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -6684,9 +6684,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           QUEMADOR
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -6797,9 +6797,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CASA DE BOLSAS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -6913,9 +6913,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMAS ELÉCTRICOS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -7172,9 +7172,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               DIMENSIONES DEL TAMBOR
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -7214,7 +7214,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -7229,7 +7229,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho:</h1>
+                              <p>Ancho:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -7244,7 +7244,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             {/*<div className="flex justify-between">
-                            <h1>Altura:</h1>
+                            <p>Altura:</p>
                             <p>
                               {unit === "metric"
                                 ? `${
@@ -7259,7 +7259,7 @@ const DrumMixPlanos = () => {
                             </p>
                           </div>*/}
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -7277,9 +7277,9 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               CHASIS Y ESTRUCTURA
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -7319,7 +7319,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -7334,11 +7334,11 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración de ejes:</h1>
+                              <p>Configuración de ejes:</p>
                               <p>Tres ejes</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -7353,7 +7353,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -7368,7 +7368,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura total:</h1>
+                              <p>Altura total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -7388,9 +7388,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               RANGO DE PRODUCCIÓN
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -7430,7 +7430,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
@@ -7439,22 +7439,22 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
                                 {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Incorporación de RAP:</h1>
+                              <p>Incorporación de RAP:</p>
                               <p>50%</p>
                             </div>
                           </div>
                         </div>
                         <div className="items-start justify-start text-white flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
                               Cumplimiento con normas industriales
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -7504,9 +7504,9 @@ const DrumMixPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             SISTEMA DE GIRO
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -7569,9 +7569,9 @@ const DrumMixPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             PORTABILIDAD
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -7662,9 +7662,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           ÁLABES
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -7713,9 +7713,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -7793,9 +7793,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -7886,9 +7886,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           QUEMADOR
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -7999,9 +7999,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CASA DE BOLSAS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -8115,9 +8115,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMAS ELÉCTRICOS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -8374,9 +8374,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               DIMENSIONES DEL TAMBOR
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -8416,7 +8416,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -8431,7 +8431,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho:</h1>
+                              <p>Ancho:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -8446,7 +8446,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             {/* <div className="flex justify-between">
-                            <h1>Altura:</h1>
+                            <p>Altura:</p>
                             <p>
                               {unit === "metric"
                                 ? `${
@@ -8461,7 +8461,7 @@ const DrumMixPlanos = () => {
                             </p>
                           </div>*/}
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -8479,9 +8479,9 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
                               Chasis y estructura
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -8521,7 +8521,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -8536,11 +8536,11 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración de ejes:</h1>
+                              <p>Configuración de ejes:</p>
                               <p>Tres ejes</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -8555,7 +8555,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -8570,7 +8570,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura total:</h1>
+                              <p>Altura total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -8590,9 +8590,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               RANGO DE PRODUCCIÓN
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -8632,7 +8632,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
@@ -8641,22 +8641,22 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
                                 {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Incorporación de RAP:</h1>
+                              <p>Incorporación de RAP:</p>
                               <p>50%</p>
                             </div>
                           </div>
                         </div>
                         <div className="items-start justify-start text-white flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
                               Cumplimiento con normas industriales
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -8706,9 +8706,9 @@ const DrumMixPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             SISTEMA DE GIRO
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -8771,9 +8771,9 @@ const DrumMixPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             PORTABILIDAD
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -8864,9 +8864,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           ÁLABES
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -8915,9 +8915,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -8995,9 +8995,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -9088,9 +9088,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           QUEMADOR
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -9201,9 +9201,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CASA DE BOLSAS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -9317,9 +9317,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMAS ELÉCTRICOS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -9576,9 +9576,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               DIMENSIONES DEL TAMBOR
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -9618,7 +9618,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -9633,7 +9633,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho:</h1>
+                              <p>Ancho:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -9648,7 +9648,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             {/* <div className="flex justify-between">
-                            <h1>Altura:</h1>
+                            <p>Altura:</p>
                             <p>
                               {unit === "metric"
                                 ? `${
@@ -9663,7 +9663,7 @@ const DrumMixPlanos = () => {
                             </p>
                           </div>*/}
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -9681,9 +9681,9 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
                               Chasis y estructura
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -9723,7 +9723,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -9738,11 +9738,11 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración de ejes:</h1>
+                              <p>Configuración de ejes:</p>
                               <p>Tres ejes</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -9757,7 +9757,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -9772,7 +9772,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura total:</h1>
+                              <p>Altura total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -9792,9 +9792,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               RANGO DE PRODUCCIÓN
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -9834,7 +9834,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
@@ -9843,22 +9843,22 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
                                 {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Incorporación de RAP:</h1>
+                              <p>Incorporación de RAP:</p>
                               <p>50%</p>
                             </div>
                           </div>
                         </div>
                         <div className="items-start justify-start text-white flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
                               Cumplimiento con normas industriales
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -9908,9 +9908,9 @@ const DrumMixPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             SISTEMA DE GIRO
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -9973,9 +9973,9 @@ const DrumMixPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             PORTABILIDAD
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -10066,9 +10066,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           ÁLABES
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -10117,9 +10117,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -10197,9 +10197,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -10290,9 +10290,9 @@ const DrumMixPlanos = () => {
                   <div className="flex flex-col items-start justify-start h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           QUEMADOR
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -10403,9 +10403,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CASA DE BOLSAS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -10519,9 +10519,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMAS ELÉCTRICOS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -10778,9 +10778,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               DIMENSIONES DEL TAMBOR
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -10820,7 +10820,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -10835,7 +10835,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho:</h1>
+                              <p>Ancho:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -10850,7 +10850,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             {/*<div className="flex justify-between">
-                            <h1>Altura:</h1>
+                            <p>Altura:</p>
                             <p>
                               {unit === "metric"
                                 ? `${
@@ -10865,7 +10865,7 @@ const DrumMixPlanos = () => {
                             </p>
                           </div>*/}
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -10883,9 +10883,9 @@ const DrumMixPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
                               Chasis y estructura
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -10925,7 +10925,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -10940,11 +10940,11 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración de ejes:</h1>
+                              <p>Configuración de ejes:</p>
                               <p>Tres ejes</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -10959,7 +10959,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -10974,7 +10974,7 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura total:</h1>
+                              <p>Altura total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -10994,9 +10994,9 @@ const DrumMixPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                               RANGO DE PRODUCCIÓN
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -11036,7 +11036,7 @@ const DrumMixPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p
                                 data-imperial="389.2 cm"
                                 data-metric="12.94 ft"
@@ -11045,22 +11045,22 @@ const DrumMixPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p data-imperial="128 cm" data-metric="4.2 ft">
                                 {activeData?.dimensions.humidity5} Tph
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Incorporación de RAP:</h1>
+                              <p>Incorporación de RAP:</p>
                               <p>50%</p>
                             </div>
                           </div>
                         </div>
                         <div className="items-start justify-start text-white flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-base w-full pb-3 uppercase">
                               Cumplimiento con normas industriales
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -11110,9 +11110,9 @@ const DrumMixPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             SISTEMA DE GIRO
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -11175,9 +11175,9 @@ const DrumMixPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             PORTABILIDAD
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>

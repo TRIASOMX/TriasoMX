@@ -7,13 +7,12 @@ import CostosFijos from "./CostosFijos";
 import ProduccionIngresos from "./ProduccionIngresos";
 import ResumenFinanciero from "./ResumenFinanciero";
 
-import { pdf } from '@react-pdf/renderer';
-import { InversionPDF } from "./InversionPDF";
 
 import { pmt } from "../lib/utils";
 
 export default function AnalisisInversion() {
   const [isClient, setIsClient] = useState(false);
+  const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
 
   const [state, setState] = useState({
     dlls: 650000,
@@ -69,11 +68,14 @@ export default function AnalisisInversion() {
   };
 
   const handleDownloadPdf = async () => {
+    setIsGeneratingPdf(true);
     try {
-      const doc = <InversionPDF state={state} />;
-      const asPdf = pdf([]);
-      asPdf.updateContainer(doc);
-      const blob = await asPdf.toBlob();
+      // Carga diferida: @react-pdf/renderer pesa ~1.5 MB y solo se necesita al descargar
+      const [{ pdf }, { InversionPDF }] = await Promise.all([
+        import('@react-pdf/renderer'),
+        import('./InversionPDF'),
+      ]);
+      const blob = await pdf(<InversionPDF state={state} />).toBlob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -85,6 +87,8 @@ export default function AnalisisInversion() {
     } catch (err) {
       console.error('Error generando PDF:', err);
       alert('Ocurrió un error al generar el PDF');
+    } finally {
+      setIsGeneratingPdf(false);
     }
   };
 
@@ -182,11 +186,11 @@ export default function AnalisisInversion() {
     <div className="w-full bg-[url(/fondopatron.webp)]">
       <div className="max-w-7xl mx-auto space-y-10 px-5 md:px-0 lg:px-0">
 
-        <h1 className="text-xl md:text-3xl font-bold text-white pt-10">
-          Investment Analysis — Asphalt Plant
-        </h1>
+        <h2 className="text-xl md:text-3xl font-bold text-white pt-10">
+          Análisis de inversión — Planta de asfalto
+        </h2>
 
-        <p className="text-white text-md">The values in the white boxes are suggestions; please enter the data that you find appropriate. The gray boxes are calculations.</p>
+        <p className="text-white text-md">Los valores en los recuadros blancos son sugerencias; ingrese los datos que considere adecuados. Los recuadros grises son cálculos.</p>
         <ValorPlanta
           dlls={state.dlls}
           pesos={state.pesos}
@@ -216,18 +220,18 @@ export default function AnalisisInversion() {
         {/* botón */}
 
         <div className="flex justify-center items-center">
-          {isClient ? (
+          {isClient && !isGeneratingPdf ? (
             <button
               onClick={handleDownloadPdf}
               className="mt-4 mb-4 md:mt-0 bg-[#14427c] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg"
           
               type="button"
             >
-              Download PDF
+              Descargar PDF
             </button>
           ) : (
             <button className="mt-4 md:mt-0 bg-gray-400 text-white font-bold py-2 px-4 rounded cursor-not-allowed">
-              Loading PDF...
+              Generando PDF...
             </button>
           )}
         </div>

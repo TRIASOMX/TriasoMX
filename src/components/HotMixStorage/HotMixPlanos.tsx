@@ -294,13 +294,13 @@ const HotMixPlanos = () => {
           className="mt-10 text-white"
           ref={otroElemento}
         >
-          <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
+          <h2 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
-          </h1>
+          </h2>
           <div className="flex items-center justify-center mt-10">
-            <h1 className="mr-3" id="measure">
+            <p className="mr-3" id="measure">
               UNIDAD:
-            </h1>
+            </p>
             <div
               onClick={toggleUnit}
               className="relative w-48 h-10 rounded-full border border-white cursor-pointer select-none"
@@ -470,9 +470,9 @@ const HotMixPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -549,9 +549,9 @@ const HotMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           SISTEMA DE ALIMENTACIÓN Y DESCARGA
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -607,9 +607,9 @@ const HotMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMA ELÉCTRICO
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -689,9 +689,9 @@ const HotMixPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -787,9 +787,9 @@ const HotMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           PORTABILIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -857,9 +857,9 @@ const HotMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CUMPLIMIENTO CON NORMAS INDUSTRIALES
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1101,9 +1101,9 @@ const HotMixPlanos = () => {
                   <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-start max-w-7xl mt-10 gap-3 md:gap-10">
                     <div className="text-white font-normal col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           DIMENSIONES DEL SILO
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1143,7 +1143,7 @@ const HotMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <div className="flex justify-between">
-                          <h1>Longitud:</h1>
+                          <p>Longitud:</p>
                           <p>
                             {unit === "metric"
                               ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
@@ -1151,7 +1151,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura:</h1>
+                          <p>Altura:</p>
                           <p>
                             {unit === "metric"
                               ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
@@ -1159,7 +1159,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Capacidad de almacenamiento:</h1>
+                          <p>Capacidad de almacenamiento:</p>
                           <p>
                             {unit === "metric"
                               ? `${activeData?.dimensions.capacity ?? ""} `
@@ -1170,9 +1170,9 @@ const HotMixPlanos = () => {
                     </div>
                     <div className="text-white font-normal col-span-1 md:col-span-3 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           ESTRUCTURA Y CHASIS
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1212,7 +1212,7 @@ const HotMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <div className="flex justify-between">
-                          <h1>Longitud total (incluyendo quinta rueda):</h1>
+                          <p>Longitud total (incluyendo quinta rueda):</p>
                           <p>
                             {unit === "metric"
                               ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
@@ -1220,7 +1220,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Longitud del chasis:</h1>
+                          <p>Longitud del chasis:</p>
                           <p>
                             {unit === "metric"
                               ? `${((activeData?.dimensions.chasisLenght ?? 0) / 100).toFixed(2)} m`
@@ -1228,7 +1228,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Ancho de transporte:</h1>
+                          <p>Ancho de transporte:</p>
                           <p>
                             {unit === "metric"
                               ? `${((activeData?.dimensions.transporWidth ?? 0) / 100).toFixed(2)} m`
@@ -1236,7 +1236,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Ancho total:</h1>
+                          <p>Ancho total:</p>
                           <p>
                             {unit === "metric"
                               ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
@@ -1244,7 +1244,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Configuración de ejes: </h1>
+                          <p>Configuración de ejes: </p>
                           <p>
                             {unit === "metric"
                               ? `${activeData?.dimensions.axleConfig ?? ""} `
@@ -1252,7 +1252,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura de la quinta rueda:</h1>
+                          <p>Altura de la quinta rueda:</p>
                           <p>
                             {unit === "metric"
                               ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
@@ -1260,7 +1260,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Sistema de soporte:</h1>
+                          <p>Sistema de soporte:</p>
                           <p className="text-end md:text-start">
                             {unit === "metric"
                               ? `${activeData?.dimensions.support ?? ""} `
@@ -1268,7 +1268,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Ruedas:</h1>
+                          <p>Ruedas:</p>
                           <p>
                             {unit === "metric"
                               ? `${activeData?.dimensions.wheels ?? ""} `
@@ -1276,7 +1276,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura de descarga a camión:</h1>
+                          <p>Altura de descarga a camión:</p>
                           <p>
                             {unit === "metric"
                               ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} m`
@@ -1284,7 +1284,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura total (punto más alto):</h1>
+                          <p>Altura total (punto más alto):</p>
                           <p>
                             {unit === "metric"
                               ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
@@ -1297,9 +1297,9 @@ const HotMixPlanos = () => {
                   <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-start max-w-7xl mt-3 md:mt-10 gap-0 md:gap-10">
                     <div className="text-white font-normal col-span-1 md:col-span-3 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           ELEVADOR ALIMENTADOR DE CANGILONES
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1340,7 +1340,7 @@ const HotMixPlanos = () => {
                       >
                         <div className="text-white font-normal col-span-1">
                           <div className="flex justify-between">
-                            <h1>Longitud:</h1>
+                            <p>Longitud:</p>
                             <p>
                               {unit === "metric"
                                 ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} m`
@@ -1348,7 +1348,7 @@ const HotMixPlanos = () => {
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Ancho:</h1>
+                            <p>Ancho:</p>
                             <p>
                               {unit === "metric"
                                 ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} m`
@@ -1356,7 +1356,7 @@ const HotMixPlanos = () => {
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Altura (en posición de trabajo):</h1>
+                            <p>Altura (en posición de trabajo):</p>
                             <p>
                               {unit === "metric"
                                 ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} m`
@@ -1364,7 +1364,7 @@ const HotMixPlanos = () => {
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Altura de descarga:</h1>
+                            <p>Altura de descarga:</p>
                             <p>
                               {unit === "metric"
                                 ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} m`
@@ -1372,7 +1372,7 @@ const HotMixPlanos = () => {
                             </p>
                           </div>
                           {/* <div className="flex justify-between">
-                          <h1>Height (discharge height):</h1>
+                          <p>Height (discharge height):</p>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.heightDischarge?.toFixed(1) ?? ""
@@ -1383,7 +1383,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div> */}
                           <div className="flex justify-between">
-                            <h1>Ángulo de inclinación:</h1>
+                            <p>Ángulo de inclinación:</p>
                             <p>
                               {unit === "metric"
                                 ? `${slatConveyor.angle ?? ""} `
@@ -1440,9 +1440,9 @@ const HotMixPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1519,9 +1519,9 @@ const HotMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           SISTEMA DE ALIMENTACIÓN Y DESCARGA
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1577,9 +1577,9 @@ const HotMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMA ELÉCTRICO
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1655,9 +1655,9 @@ const HotMixPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1752,9 +1752,9 @@ const HotMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           PORTABILIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1822,9 +1822,9 @@ const HotMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CUMPLIMIENTO CON NORMAS INDUSTRIALES
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2049,9 +2049,9 @@ const HotMixPlanos = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-start w-full mt-10 gap-3 md:gap-10">
                   <div className="text-white font-normal col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         DIMENSIONES DEL SILO
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2091,7 +2091,7 @@ const HotMixPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
@@ -2099,7 +2099,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
@@ -2107,7 +2107,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad de almacenamiento:</h1>
+                        <p>Capacidad de almacenamiento:</p>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.capacity ?? ""} `
@@ -2118,9 +2118,9 @@ const HotMixPlanos = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         ESTRUCTURA Y CHASIS
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2160,7 +2160,7 @@ const HotMixPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
+                        <p>Longitud total (incluyendo quinta rueda):</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
@@ -2168,7 +2168,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       {/* <div className="flex justify-between">
-                        <h1>Chassis length:</h1>
+                        <p>Chassis length:</p>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.chasisLenght?.toFixed(
@@ -2182,7 +2182,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Transportation width:</h1>
+                        <p>Transportation width:</p>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.transporWidth?.toFixed(
@@ -2196,7 +2196,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total width:</h1>
+                        <p>Total width:</p>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.width?.toFixed(1) ?? ""
@@ -2207,7 +2207,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div> */}
                       <div className="flex justify-between">
-                        <h1>Configuración de ejes: </h1>
+                        <p>Configuración de ejes: </p>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.axleConfig ?? ""} `
@@ -2215,10 +2215,10 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>
+                        <p>
                           Altura de la quinta rueda (si se entrega
                           preinstalado)::
-                        </h1>
+                        </p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
@@ -2226,7 +2226,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Sistema de soporte: </h1>
+                        <p>Sistema de soporte: </p>
                         <p className="text-end md:text-start">
                           {unit === "metric"
                             ? `${activeData?.dimensions.support ?? ""} `
@@ -2234,7 +2234,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ruedas: </h1>
+                        <p>Ruedas: </p>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.wheels ?? ""} `
@@ -2242,7 +2242,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de descarga a camión:</h1>
+                        <p>Altura de descarga a camión:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.truckHeight ?? 0) / 100).toFixed(2)} m`
@@ -2250,7 +2250,7 @@ const HotMixPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Total height (heighest point):</h1>
+                        <p>Total height (heighest point):</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
@@ -2263,9 +2263,9 @@ const HotMixPlanos = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-start w-full mt-3 md:mt-10 gap-0 md:gap-10">
                   <div className="text-white font-normal col-span-1 md:col-span-3 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         ELEVADOR ALIMENTADOR DE CANGILONES
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2306,7 +2306,7 @@ const HotMixPlanos = () => {
                     >
                       <div className="text-white font-normal col-span-1">
                         <div className="flex justify-between">
-                          <h1>Longitud:</h1>
+                          <p>Longitud:</p>
                           <p>
                             {unit === "metric"
                               ? `${((slatConveyor?.length ?? 0) / 100).toFixed(2)} m`
@@ -2314,7 +2314,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Ancho:</h1>
+                          <p>Ancho:</p>
                           <p>
                             {unit === "metric"
                               ? `${((slatConveyor?.width ?? 0) / 100).toFixed(2)} m`
@@ -2322,7 +2322,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura (en posición de trabajo):</h1>
+                          <p>Altura (en posición de trabajo):</p>
                           <p>
                             {unit === "metric"
                               ? `${((slatConveyor?.heightErec ?? 0) / 100).toFixed(2)} m`
@@ -2330,7 +2330,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Altura de descarga:</h1>
+                          <p>Altura de descarga:</p>
                           <p>
                             {unit === "metric"
                               ? `${((slatConveyor?.chain ?? 0) / 100).toFixed(2)} m`
@@ -2338,7 +2338,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div>
                         {/* <div className="flex justify-between">
-                          <h1>Height (discharge height):</h1>
+                          <p>Height (discharge height):</p>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.heightDischarge?.toFixed(1) ?? ""
@@ -2349,7 +2349,7 @@ const HotMixPlanos = () => {
                           </p>
                         </div> */}
                         <div className="flex justify-between">
-                          <h1>Ángulo de inclinación:</h1>
+                          <p>Ángulo de inclinación:</p>
                           <p>
                             {unit === "metric"
                               ? `${slatConveyor.angle ?? ""} `

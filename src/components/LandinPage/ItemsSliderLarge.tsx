@@ -72,9 +72,9 @@ export default function ItemsSliderLarge({ images }: Props) {
                   />
                 </div>
 
-                <h1 className="font-bold text-grisT text-lg md:text-2xl leading-tight line-clamp-3">
+                <h3 className="font-bold text-grisT text-lg md:text-2xl leading-tight line-clamp-3">
                   {img.title}
-                </h1>
+                </h3>
 
                 <p className="text-grisT text-sm md:text-lg leading-relaxed">
                   {img.texto}

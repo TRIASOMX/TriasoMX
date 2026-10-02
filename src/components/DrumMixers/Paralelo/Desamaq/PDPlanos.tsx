@@ -239,13 +239,13 @@ const PDPlanos = () => {
           className="mt-10 text-white"
           ref={otroElemento}
         >
-          <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
+          <h2 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
-          </h1>
+          </h2>
           <div className="flex items-center justify-center mt-10">
-            <h1 className="mr-3" id="measure">
+            <p className="mr-3" id="measure">
               UNIDAD DE MEDIDA:
-            </h1>
+            </p>
             <div
               onClick={toggleUnit}
               className="relative w-48 h-10 rounded-full border border-white cursor-pointer select-none"
@@ -403,9 +403,9 @@ const PDPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           álabes
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -453,9 +453,9 @@ const PDPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -509,9 +509,9 @@ const PDPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -591,9 +591,9 @@ const PDPlanos = () => {
                   <div className="flex flex-col items-start justify-start h-full col-span-1 w-full gap-0 md:gap-10 order-3 md:order-3">
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           quemador
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -696,9 +696,9 @@ const PDPlanos = () => {
 
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -981,9 +981,9 @@ const PDPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Dimensiones del tambor
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -1023,7 +1023,7 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1038,7 +1038,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
@@ -1052,9 +1052,9 @@ const PDPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Chasis y estructura
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -1094,7 +1094,7 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1108,11 +1108,11 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración del eje:</h1>
+                              <p>Configuración del eje:</p>
                               <p>Un eje</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1127,7 +1127,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1142,7 +1142,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura para transporte:</h1>
+                              <p>Altura para transporte:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -1163,9 +1163,9 @@ const PDPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Rango de producción
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -1205,20 +1205,20 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p>40 Tph</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p>30 Tph</p>
                             </div>
                           </div>
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Cumplimiento con normas industriales
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -1267,9 +1267,9 @@ const PDPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                             Sistema de giro
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -1332,9 +1332,9 @@ const PDPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                             Portabilidad
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -1431,9 +1431,9 @@ const PDPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           álabes
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1481,9 +1481,9 @@ const PDPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1537,9 +1537,9 @@ const PDPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1619,9 +1619,9 @@ const PDPlanos = () => {
                   <div className="flex flex-col items-start justify-start h-full col-span-1 w-full gap-0 md:gap-10 order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           quemador
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1723,9 +1723,9 @@ const PDPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2007,9 +2007,9 @@ const PDPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Dimensiones del tambor
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -2049,7 +2049,7 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2064,7 +2064,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
@@ -2078,9 +2078,9 @@ const PDPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Chasis y estructura
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -2120,7 +2120,7 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2134,11 +2134,11 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración del eje:</h1>
+                              <p>Configuración del eje:</p>
                               <p>Un eje</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2153,7 +2153,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2168,7 +2168,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura para transporte:</h1>
+                              <p>Altura para transporte:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -2189,9 +2189,9 @@ const PDPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Rango de producción
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -2231,20 +2231,20 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p>80 Tph</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p>60 Tph</p>
                             </div>
                           </div>
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Cumplimiento con normas industriales
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -2293,9 +2293,9 @@ const PDPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                             Sistema de giro
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -2358,9 +2358,9 @@ const PDPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                             Portabilidad
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -2460,9 +2460,9 @@ const PDPlanos = () => {
                     <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                       <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                             álabes
-                          </h1>
+                          </h3>
                           <button
                             className="block md:hidden"
                             onClick={() =>
@@ -2510,9 +2510,9 @@ const PDPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                             Control y operación
-                          </h1>
+                          </h3>
                           <button
                             className="block md:hidden"
                             onClick={() =>
@@ -2567,9 +2567,9 @@ const PDPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                             Componentes y sistema eléctrico
-                          </h1>
+                          </h3>
                           <button
                             className="block md:hidden"
                             onClick={() =>
@@ -2651,9 +2651,9 @@ const PDPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           quemador
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2756,9 +2756,9 @@ const PDPlanos = () => {
 
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3041,9 +3041,9 @@ const PDPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Dimensiones del tambor
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -3083,7 +3083,7 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3098,7 +3098,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
@@ -3112,9 +3112,9 @@ const PDPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Chasis y estructura
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -3154,7 +3154,7 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3168,11 +3168,11 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración del eje:</h1>
+                              <p>Configuración del eje:</p>
                               <p>Dos ejes</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3187,7 +3187,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3202,7 +3202,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura para transporte:</h1>
+                              <p>Altura para transporte:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -3223,9 +3223,9 @@ const PDPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Rango de producción
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -3265,20 +3265,20 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p>120 Tph</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p>90 Tph</p>
                             </div>
                           </div>
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Cumplimiento con normas industriales
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -3327,9 +3327,9 @@ const PDPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                             Sistema de giro
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -3392,9 +3392,9 @@ const PDPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                             Portabilidad
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -3488,9 +3488,9 @@ const PDPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           álabes
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3538,9 +3538,9 @@ const PDPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3594,9 +3594,9 @@ const PDPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3676,9 +3676,9 @@ const PDPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full gap-4 order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           quemador
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3780,9 +3780,9 @@ const PDPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -4064,9 +4064,9 @@ const PDPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Dimensiones del tambor
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -4106,7 +4106,7 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud:</h1>
+                              <p>Longitud:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4121,7 +4121,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Diámetro:</h1>
+                              <p>Diámetro:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${activeData?.dimensions.tDiametro?.toFixed(2) ?? ""} m`
@@ -4135,9 +4135,9 @@ const PDPlanos = () => {
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Chasis y estructura
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -4177,7 +4177,7 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>Longitud total (incluyendo quinta rueda):</h1>
+                              <p>Longitud total (incluyendo quinta rueda):</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4191,11 +4191,11 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Configuración del eje:</h1>
+                              <p>Configuración del eje:</p>
                               <p>Tres ejes</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura de la quinta rueda:</h1>
+                              <p>Altura de la quinta rueda:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4210,7 +4210,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Ancho total:</h1>
+                              <p>Ancho total:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4225,7 +4225,7 @@ const PDPlanos = () => {
                               </p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>Altura para transporte:</h1>
+                              <p>Altura para transporte:</p>
                               <p>
                                 {unit === "metric"
                                   ? `${
@@ -4246,9 +4246,9 @@ const PDPlanos = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Rango de producción
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -4288,20 +4288,20 @@ const PDPlanos = () => {
                             } md:max-h-full md:opacity-100 md:block`}
                           >
                             <div className="flex justify-between">
-                              <h1>3% humedad:</h1>
+                              <p>3% humedad:</p>
                               <p>160 Tph</p>
                             </div>
                             <div className="flex justify-between">
-                              <h1>5% humedad:</h1>
+                              <p>5% humedad:</p>
                               <p>120 Tph</p>
                             </div>
                           </div>
                         </div>
                         <div className="text-white font-normal flex flex-col gap-4">
                           <div className="w-full flex justify-between border-b border-b-white">
-                            <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                            <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                               Cumplimiento con normas industriales
-                            </h1>
+                            </h3>
                             <button
                               className="block md:hidden"
                               onClick={() =>
@@ -4350,9 +4350,9 @@ const PDPlanos = () => {
                     <div className="col-span-1 w-full h-full flex flex-col gap-0 md:gap-10">
                       <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                             Sistema de giro
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>
@@ -4415,9 +4415,9 @@ const PDPlanos = () => {
                       </div>
                       <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                          <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                             Portabilidad
-                          </h1>
+                          </h3>
                           <button
                             className="block"
                             onClick={() =>

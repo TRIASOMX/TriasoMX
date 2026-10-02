@@ -28,7 +28,7 @@ No hay suite de tests configurada en este proyecto todavía.
 
 ```
 src/
-├── pages/          # rutas del sitio, un .astro por página (PascalCase, ej. BeltConveyors.astro)
+├── pages/          # rutas del sitio, un .astro por página (kebab-case en español, ej. plantas-asfalto.astro)
 ├── layouts/
 │   └── Layout.astro  # layout base compartido
 ├── components/
@@ -44,7 +44,7 @@ public/
 
 ## Convenciones
 
-- Las páginas en `src/pages/` usan **PascalCase** (`ConeCrushers.astro`, no `cone-crushers.astro`) — mantener esa convención al agregar páginas nuevas.
+- Las páginas en `src/pages/` usan **kebab-case en español** (`plantas-asfalto.astro`), porque el nombre del archivo define la URL. Se están migrando una por una desde los nombres PascalCase en inglés; al renombrar una, actualizar todos sus links internos (`menuItems.js`, Footer, 404, botones, etc.). Las páginas nuevas ya van en este formato.
 - Los componentes se agrupan por feature/producto en su propia carpeta dentro de `src/components/`; si un componente es genérico y reutilizable en varias secciones, va en `unitComponents/`.
 - Componentes puramente de contenido/estáticos → `.astro`. Componentes con estado, interacción o hooks → `.tsx` (React), importados dentro del `.astro` correspondiente con la directiva `client:*` que corresponda (`client:load`, `client:visible`, etc.).
 - Colores y variables de marca se definen como variables CSS globales y se referencian en Tailwind (`blueMain`, `redBg`, `grisT`...) — no hardcodear hex codes nuevos, agregar la variable si hace falta un color nuevo.

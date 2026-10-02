@@ -18,12 +18,12 @@ export default function CostosVariables({ state, onChange }: Props) {
   return (
     <section className="bg-white rounded-xl shadow p-6 border border-gray-200 space-y-4">
       <h3 className="text-xl font-semibold text-black">
-        Rentability for the contractor
+        Rentabilidad para el contratista
       </h3>
 
       {/* Horas */}
       <label className="flex flex-col gap-1 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Monthly working hours</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Horas de trabajo al mes</span>
         <input
           type="number"
           value={horasxmes || ""}
@@ -35,7 +35,7 @@ export default function CostosVariables({ state, onChange }: Props) {
 
       {/* Totales */}
       <label className="flex flex-col gap-1 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md border-t-2 border-gray-400 pt-5">Variable costs (USD/M3)</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md border-t-2 border-gray-400 pt-5">Costos variables (USD/M3)</span>
         <input
           disabled
           value={formatCurrency(cosvariables) + " / M3"}
@@ -46,7 +46,7 @@ export default function CostosVariables({ state, onChange }: Props) {
 
       {/* RAP */}
       <label className="flex flex-col gap-1 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">% RAP to be incorporated</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">% de RAP a incorporar</span>
         <input
           type="number"
           value={rap || ""}
@@ -58,7 +58,7 @@ export default function CostosVariables({ state, onChange }: Props) {
 
       {/* Materiales */}
       <label className="flex flex-col gap-1 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Virgin aggregates (USD/M3)</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Agregados vírgenes (USD/M3)</span>
         <input
           type="number"
           value={agrv || ""}
@@ -74,7 +74,7 @@ export default function CostosVariables({ state, onChange }: Props) {
       </label>
 
       <label className="flex flex-col gap-1 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">RAP aggregates(USD/M3) </span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Agregados RAP (USD/M3) </span>
         <input
           type="number"
           value={arap || ""}
@@ -91,7 +91,7 @@ export default function CostosVariables({ state, onChange }: Props) {
 
       {/* Asfalto */}
       <label className="grid grid-cols-1 lg:grid-cols-6 md:grid-cols-6 justify-center items-center gap-5 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">Asphalt for virgin aggregates(1)</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">Asfalto para agregados vírgenes (1)</span>
         <input
           type="number"
           value={asfvir || ""}
@@ -99,7 +99,7 @@ export default function CostosVariables({ state, onChange }: Props) {
           onChange={(e) => onChange("asfvir", Number(e.target.value))}
           className="border border-gray-300 rounded-lg px-3 py-2"
         />
-        <span className="font-semibold text-sm text-start md:text-center lg:text-center text-gray-800 lg:text-md md:text-md">(gal/M3) to the price of</span>
+        <span className="font-semibold text-sm text-start md:text-center lg:text-center text-gray-800 lg:text-md md:text-md">(gal/M3) al precio de</span>
         <input
           type="number"
           value={asfpesosxlitro || ""}
@@ -107,7 +107,7 @@ export default function CostosVariables({ state, onChange }: Props) {
           onChange={(e) => onChange("asfpesosxlitro", Number(e.target.value))}
           className="border border-gray-300 rounded-lg px-3 py-2"
         />
-        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">(USD/gal) applied to 95% of the mixture </span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">(USD/gal) aplicado al 95% de la mezcla </span>
         <input
           disabled
           value={formatCurrency(tasfvir) + " / M3"}
@@ -117,7 +117,7 @@ export default function CostosVariables({ state, onChange }: Props) {
 
       {/* Rejuvenecedor */}
       <label className="grid grid-cols-1 lg:grid-cols-6 md:grid-cols-6 justify-center items-center gap-5 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">Rejuvenator(2)</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">Rejuvenecedor (2)</span>
         <input
           type="number"
           value={rejuve || ""}
@@ -125,7 +125,7 @@ export default function CostosVariables({ state, onChange }: Props) {
           onChange={(e) => onChange("rejuve", Number(e.target.value))}
           className="border border-gray-300 rounded-lg px-3 py-2"
         />
-        <span className="font-semibold text-sm text-start md:text-center lg:text-center text-gray-800 lg:text-md md:text-md">(gal/M3) to the price of</span>
+        <span className="font-semibold text-sm text-start md:text-center lg:text-center text-gray-800 lg:text-md md:text-md">(gal/M3) al precio de</span>
         
         <input
           type="number"
@@ -134,7 +134,7 @@ export default function CostosVariables({ state, onChange }: Props) {
           onChange={(e) => onChange("rejupesosxlitro", Number(e.target.value))}
           className="border border-gray-300 rounded-lg px-3 py-2"
         />
-        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">(USD/gal) applied to 5% of the mixture</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">(USD/gal) aplicado al 5% de la mezcla</span>
         <input
           disabled
           value={formatCurrency(trejuve) + " / M3"}
@@ -144,7 +144,7 @@ export default function CostosVariables({ state, onChange }: Props) {
 
       {/* Combustible */}
       <label className="grid grid-cols-1 lg:grid-cols-6 md:grid-cols-6 justify-center items-center gap-5 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">Fuel</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">Combustible</span>
         <input
           type="number"
           value={combustible || ""}
@@ -152,7 +152,7 @@ export default function CostosVariables({ state, onChange }: Props) {
           onChange={(e) => onChange("combustible", Number(e.target.value))}
           className="border border-gray-300 rounded-lg px-3 py-2"
         />
-        <span className="font-semibold text-sm text-start md:text-center lg:text-center text-gray-800 lg:text-md md:text-md">(gal/M3) to the price of</span>
+        <span className="font-semibold text-sm text-start md:text-center lg:text-center text-gray-800 lg:text-md md:text-md">(gal/M3) al precio de</span>
        
         <input
           type="number"
@@ -171,7 +171,7 @@ export default function CostosVariables({ state, onChange }: Props) {
 
       {/* Electricidad */}
       <label className="grid grid-cols-1 lg:grid-cols-8 md:grid-cols-8 items-center justify-between gap-5 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">Electricity (Kw/Hr) </span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">Electricidad (Kw/Hr) </span>
         <input
           type="number"
           value={electri || ""}
@@ -179,7 +179,7 @@ export default function CostosVariables({ state, onChange }: Props) {
           onChange={(e) => onChange("electri", Number(e.target.value))}
           className="border border-gray-300 rounded-lg px-3 py-2"
         />
-        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">(Kw/hr) to the price of</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-md md:text-md">(Kw/hr) al precio de</span>
 
         <input
           type="number"
@@ -206,8 +206,8 @@ export default function CostosVariables({ state, onChange }: Props) {
         />
       </label>
       <div className="space-y-5 pt-5">
-        <p className="text-sm text-gray-500">(1) Asphalt is not added to RAP because it already contains it.</p>
-        <p className="text-sm text-gray-500">(2) A rejuvenator is added to the RAP to rejuvenate its asphalt.</p>
+        <p className="text-sm text-gray-500">(1) Al RAP no se le agrega asfalto porque ya lo contiene.</p>
+        <p className="text-sm text-gray-500">(2) Al RAP se le agrega un rejuvenecedor para rejuvenecer su asfalto.</p>
       </div>
     </section>
   );

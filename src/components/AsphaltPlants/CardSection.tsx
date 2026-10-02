@@ -78,9 +78,9 @@ const CARDS: CardData[] = [
     scrollWeight: 0.8,
     content: (
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 pt-20">
-        <h1 className="text-2xl md:text-5xl font-bold tracking-tight mb-4 lg:mb-6">
+        <h2 className="text-2xl md:text-5xl font-bold tracking-tight mb-4 lg:mb-6">
           Desde 10 hasta 600 Tph
-        </h1>
+        </h2>
         <p className="text-sm md:text-2xl">
           Plantas de asfalto ideales para cada trabajo;
         </p>
@@ -143,9 +143,9 @@ const CARDS: CardData[] = [
     content: (
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 w-full">
         <div className="flex flex-col justify-start items-start">
-          <h1 className="text-2xl md:text-6xl italic mb-4 lg:mb-6 text-white">
+          <h2 className="text-2xl md:text-6xl italic mb-4 lg:mb-6 text-white">
             Con <span className="font-bold">Triaso</span>
-          </h1>
+          </h2>
           <p className="text-white text-sm md:text-2xl text-right">
             conviértase en el proveedor preferido de mezcla asfáltica
           </p>
@@ -154,9 +154,9 @@ const CARDS: CardData[] = [
           </p>
         </div>
         <div className="flex flex-col justify-end items-end mt-6 lg:mt-10">
-          <h1 className="text-2xl md:text-5xl font-bold tracking-tight mb-4 lg:mb-6 text-white">
+          <h2 className="text-2xl md:text-5xl font-bold tracking-tight mb-4 lg:mb-6 text-white">
             Somos expertos en lo que hacemos
-          </h1>
+          </h2>
           <p className="text-white text-sm md:text-2xl">
             Con la experiencia que tenemos con más de{" "}
             <span className="font-bold text-base md:text-3xl">320</span> plantas

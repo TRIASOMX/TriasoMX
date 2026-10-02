@@ -248,13 +248,13 @@ const BHPlanos = () => {
           className="mt-10 text-white"
           ref={otroElemento}
         >
-          <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
+          <h2 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
-          </h1>
+          </h2>
           <div className="flex items-center justify-center mt-10">
-            <h1 className="mr-3" id="measure">
+            <p className="mr-3" id="measure">
               SISTEMA DE MEDICIÓN:
-            </h1>
+            </p>
             <div
               onClick={toggleUnit}
               className="relative w-48 h-10 rounded-full border border-white cursor-pointer select-none"
@@ -359,9 +359,9 @@ const BHPlanos = () => {
                   >
                     <div className="w-full flex flex-col gap-4 text-white col-span-1">
                       <div className="w-full flex border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Capacidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See the capacity of the baghouse"
                           className="block md:hidden"
@@ -423,9 +423,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Mantenimiento y ventajas
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more abour the Maintenance and Advantages"
                           className="block md:hidden"
@@ -524,9 +524,9 @@ const BHPlanos = () => {
                   >
                     <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Operación de limpieza
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and the operation of the system"
                           className="block md:hidden"
@@ -616,9 +616,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the cleaning operation"
                           className="block md:hidden"
@@ -704,9 +704,9 @@ const BHPlanos = () => {
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the durability and safety of the system"
                         className="block md:hidden"
@@ -775,9 +775,9 @@ const BHPlanos = () => {
                   <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                     <div>
                       <div className="flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Cumplimiento con estándares de la industria
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the compliance with industry standars"
                           className="block md:hidden"
@@ -834,9 +834,9 @@ const BHPlanos = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the portability"
                         className="block md:hidden"
@@ -937,9 +937,9 @@ const BHPlanos = () => {
                   >
                     <div className="w-full flex flex-col gap-4 text-white col-span-1">
                       <div className="w-full flex border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Capacidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See the capacity of the baghouse"
                           className="block md:hidden"
@@ -1001,9 +1001,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Mantenimiento y ventajas
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more abour the Maintenance and Advantages"
                           className="block md:hidden"
@@ -1093,9 +1093,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
@@ -1169,9 +1169,9 @@ const BHPlanos = () => {
                   >
                     <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Operación de limpieza
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and the operation of the system"
                           className="block md:hidden"
@@ -1261,9 +1261,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the cleaning operation"
                           className="block md:hidden"
@@ -1348,9 +1348,9 @@ const BHPlanos = () => {
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the durability and safety of the system"
                         className="block md:hidden"
@@ -1419,9 +1419,9 @@ const BHPlanos = () => {
                   <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                     <div>
                       <div className="flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Cumplimiento con estándares de la industria
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the compliance with industry standars"
                           className="block md:hidden"
@@ -1478,9 +1478,9 @@ const BHPlanos = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the portability"
                         className="block md:hidden"
@@ -1580,9 +1580,9 @@ const BHPlanos = () => {
                   >
                     <div className="w-full flex flex-col gap-4 text-white col-span-1">
                       <div className="w-full flex border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Capacidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See the capacity of the baghouse"
                           className="block md:hidden"
@@ -1644,9 +1644,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Mantenimiento y ventajas
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more abour the Maintenance and Advantages"
                           className="block md:hidden"
@@ -1736,9 +1736,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
@@ -1812,9 +1812,9 @@ const BHPlanos = () => {
                   >
                     <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Operación de limpieza
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and the operation of the system"
                           className="block md:hidden"
@@ -1904,9 +1904,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the cleaning operation"
                           className="block md:hidden"
@@ -1991,9 +1991,9 @@ const BHPlanos = () => {
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the durability and safety of the system"
                         className="block md:hidden"
@@ -2062,9 +2062,9 @@ const BHPlanos = () => {
                   <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                     <div>
                       <div className="flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Cumplimiento con estándares de la industria
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the compliance with industry standars"
                           className="block md:hidden"
@@ -2121,9 +2121,9 @@ const BHPlanos = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the portability"
                         className="block md:hidden"
@@ -2223,9 +2223,9 @@ const BHPlanos = () => {
                   >
                     <div className="w-full flex flex-col gap-4 text-white col-span-1">
                       <div className="w-full flex border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Capacidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See the capacity of the baghouse"
                           className="block md:hidden"
@@ -2288,9 +2288,9 @@ const BHPlanos = () => {
 
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Mantenimiento y ventajas
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more abour the Maintenance and Advantages"
                           className="block md:hidden"
@@ -2380,9 +2380,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
@@ -2456,9 +2456,9 @@ const BHPlanos = () => {
                   >
                     <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Operación de limpieza
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and the operation of the system"
                           className="block md:hidden"
@@ -2548,9 +2548,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the cleaning operation"
                           className="block md:hidden"
@@ -2635,9 +2635,9 @@ const BHPlanos = () => {
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the durability and safety of the system"
                         className="block md:hidden"
@@ -2706,9 +2706,9 @@ const BHPlanos = () => {
                   <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                     <div>
                       <div className="flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Cumplimiento con estándares de la industria
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the compliance with industry standars"
                           className="block md:hidden"
@@ -2765,9 +2765,9 @@ const BHPlanos = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the portability"
                         className="block md:hidden"
@@ -2867,9 +2867,9 @@ const BHPlanos = () => {
                   >
                     <div className="w-full flex flex-col gap-4 text-white col-span-1">
                       <div className="w-full flex border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Capacidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See the capacity of the baghouse"
                           className="block md:hidden"
@@ -2931,9 +2931,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Mantenimiento y ventajas
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more abour the Maintenance and Advantages"
                           className="block md:hidden"
@@ -3023,9 +3023,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
@@ -3099,9 +3099,9 @@ const BHPlanos = () => {
                   >
                     <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Operación de limpieza
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and the operation of the system"
                           className="block md:hidden"
@@ -3191,9 +3191,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the cleaning operation"
                           className="block md:hidden"
@@ -3278,9 +3278,9 @@ const BHPlanos = () => {
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the durability and safety of the system"
                         className="block md:hidden"
@@ -3349,9 +3349,9 @@ const BHPlanos = () => {
                   <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                     <div>
                       <div className="flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Cumplimiento con estándares de la industria
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the compliance with industry standars"
                           className="block md:hidden"
@@ -3408,9 +3408,9 @@ const BHPlanos = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the portability"
                         className="block md:hidden"
@@ -3510,9 +3510,9 @@ const BHPlanos = () => {
                   >
                     <div className="w-full flex flex-col gap-4 text-white col-span-1">
                       <div className="w-full flex border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Capacidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See the capacity of the baghouse"
                           className="block md:hidden"
@@ -3574,9 +3574,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Mantenimiento y ventajas
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more abour the Maintenance and Advantages"
                           className="block md:hidden"
@@ -3666,9 +3666,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
@@ -3742,9 +3742,9 @@ const BHPlanos = () => {
                   >
                     <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Operación de limpieza
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and the operation of the system"
                           className="block md:hidden"
@@ -3834,9 +3834,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the cleaning operation"
                           className="block md:hidden"
@@ -3921,9 +3921,9 @@ const BHPlanos = () => {
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the durability and safety of the system"
                         className="block md:hidden"
@@ -3992,9 +3992,9 @@ const BHPlanos = () => {
                   <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                     <div>
                       <div className="flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Cumplimiento con estándares de la industria
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the compliance with industry standars"
                           className="block md:hidden"
@@ -4051,9 +4051,9 @@ const BHPlanos = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the portability"
                         className="block md:hidden"
@@ -4153,9 +4153,9 @@ const BHPlanos = () => {
                   >
                     <div className="w-full flex flex-col gap-4 text-white col-span-1">
                       <div className="w-full flex border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Capacidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See the capacity of the baghouse"
                           className="block md:hidden"
@@ -4217,9 +4217,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Mantenimiento y ventajas
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more abour the Maintenance and Advantages"
                           className="block md:hidden"
@@ -4309,9 +4309,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
@@ -4385,9 +4385,9 @@ const BHPlanos = () => {
                   >
                     <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Operación de limpieza
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and the operation of the system"
                           className="block md:hidden"
@@ -4477,9 +4477,9 @@ const BHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the cleaning operation"
                           className="block md:hidden"
@@ -4564,9 +4564,9 @@ const BHPlanos = () => {
                 <div className="w-full gap-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the durability and safety of the system"
                         className="block md:hidden"
@@ -4635,9 +4635,9 @@ const BHPlanos = () => {
                   <div className="flex flex-col justify-center items-center gap-4 text-white col-span-2 ">
                     <div>
                       <div className="flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Cumplimiento con estándares de la industria
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the compliance with industry standars"
                           className="block md:hidden"
@@ -4694,9 +4694,9 @@ const BHPlanos = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full lg:w-full md:w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Control y Operación
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the portability"
                         className="block md:hidden"

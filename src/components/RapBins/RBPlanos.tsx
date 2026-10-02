@@ -208,13 +208,13 @@ const RBPlanos = () => {
           className="mt-10 text-white"
           ref={otroElemento}
         >
-          <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
+          <h2 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
-          </h1>
+          </h2>
           <div className="flex items-center justify-center mt-10">
-            <h1 className="mr-3 text-white" id="measure">
+            <p className="mr-3 text-white" id="measure">
               UNIDAD:
-            </h1>
+            </p>
             <div
               onClick={toggleUnit}
               className="relative w-48 h-10 rounded-full border border-white cursor-pointer select-none"
@@ -374,9 +374,9 @@ const RBPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           SISTEMA DE ALIMENTACIÓN Y DOSIFICACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -442,9 +442,9 @@ const RBPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -534,9 +534,9 @@ const RBPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -608,9 +608,9 @@ const RBPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           PORTABILIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -694,9 +694,9 @@ const RBPlanos = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         COMPONENTES Y SISTEMA ELÉCTRICO
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -755,9 +755,9 @@ const RBPlanos = () => {
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-2 px-0 md:px-10 lg:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         CAPACIDAD OPERATIVA
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -804,9 +804,9 @@ const RBPlanos = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         CUMPLIMIENTO CON ESTÁNDARES DE LA INDUSTRIA
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1043,9 +1043,9 @@ const RBPlanos = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         DIMENSIONES DE UNIDAD INDIVIDUAL{" "}
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1085,7 +1085,7 @@ const RBPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aSingleLength", "singleLength")?.toFixed(2) ?? ""} m`
@@ -1095,7 +1095,7 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aWidth", "width")?.toFixed(2) ?? ""} m`
@@ -1105,7 +1105,7 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Largo:</h1>
+                        <p>Largo:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aSingleHeight", "singleHeight")?.toFixed(2) ?? ""} m`
@@ -1115,16 +1115,16 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         ESTRUCTURA Y CHASIS{" "}
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1164,7 +1164,7 @@ const RBPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluido el enganche):</h1>
+                        <p>Longitud total (incluido el enganche):</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aTlenght", "tLenght")?.toFixed(2) ?? ""} m`
@@ -1174,11 +1174,11 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje: </h1>
+                        <p>Configuración del eje: </p>
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aTwheel", "tWheel")?.toFixed(2) ?? ""} m`
@@ -1188,7 +1188,7 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aTstructurew", "tStructurew")?.toFixed(2) ?? ""} m`
@@ -1198,7 +1198,7 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con las tolvas en funcionamiento:</h1>
+                        <p>Altura con las tolvas en funcionamiento:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aHoperation", "hOperation")?.toFixed(2) ?? ""} m`
@@ -1211,9 +1211,9 @@ const RBPlanos = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         OPCIONES DE TOLVA
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1290,9 +1290,9 @@ const RBPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           SISTEMA DE ALIMENTACIÓN Y DOSIFICACIÓN
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the feeding and dosing system"
                           className="block md:hidden"
@@ -1359,9 +1359,9 @@ const RBPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the durability and safety"
                           className="block md:hidden"
@@ -1450,9 +1450,9 @@ const RBPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
@@ -1525,9 +1525,9 @@ const RBPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           PORTABILIDAD
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the portability"
                           className="block md:hidden"
@@ -1612,9 +1612,9 @@ const RBPlanos = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         COMPONENTES Y SISTEMA ELÉCTRICO
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the components and electrical composition"
                         className="block md:hidden"
@@ -1674,9 +1674,9 @@ const RBPlanos = () => {
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-2 px-0 md:px-10 lg:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         CAPACIDAD OPERATIVA
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the operating configuration"
                         className="block md:hidden"
@@ -1724,9 +1724,9 @@ const RBPlanos = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         CUMPLIMIENTO CON ESTÁNDARES DE LA INDUSTRIA
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the compliance with industry standards"
                         className="block md:hidden"
@@ -1964,9 +1964,9 @@ const RBPlanos = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         DIMENSIONES DE UNIDAD INDIVIDUAL
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the single unit dimensions"
                         className="block md:hidden"
@@ -2007,7 +2007,7 @@ const RBPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aSingleLength", "singleLength")?.toFixed(2) ?? ""} m`
@@ -2017,7 +2017,7 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aWidth", "width")?.toFixed(2) ?? ""} m`
@@ -2027,7 +2027,7 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Largo:</h1>
+                        <p>Largo:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aSingleHeight", "singleHeight")?.toFixed(2) ?? ""} m`
@@ -2037,16 +2037,16 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         ESTRUCTURA Y CHASIS
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the chassis and structure"
                         className="block md:hidden"
@@ -2087,7 +2087,7 @@ const RBPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluido el enganche):</h1>
+                        <p>Longitud total (incluido el enganche):</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aTlenght", "tLenght")?.toFixed(2) ?? ""} m`
@@ -2097,11 +2097,11 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje: </h1>
+                        <p>Configuración del eje: </p>
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aTwheel", "tWheel")?.toFixed(2) ?? ""} m`
@@ -2111,7 +2111,7 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aTstructurew", "tStructurew")?.toFixed(2) ?? ""} m`
@@ -2121,7 +2121,7 @@ const RBPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura con los contenedores en funcionamiento:</h1>
+                        <p>Altura con los contenedores en funcionamiento:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aHoperation", "hOperation")?.toFixed(2) ?? ""} m`
@@ -2134,9 +2134,9 @@ const RBPlanos = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                         OPCIONES DE TOLVA
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the bin options"
                         className="block md:hidden"

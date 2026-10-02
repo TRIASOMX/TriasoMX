@@ -5,7 +5,8 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 /* ------------------------------------------------------------------ */
 
 export interface Slide {
-  image: string;
+  /** Opcional: sin imagen, la tarjeta queda con fondo negro */
+  image?: string;
   title: string;
   text: string | { full: string; mobile: string };
   alt?: string;
@@ -404,19 +405,21 @@ export default function Slider({
           const isExpanded = !!expanded[i];
           return (
             <article key={i} style={cardStyle}>
-              <img
-                src={s.image}
-                alt={s.alt ?? s.title}
-                draggable={false}
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  pointerEvents: "none",
-                }}
-              />
+              {s.image && (
+                <img
+                  src={s.image}
+                  alt={s.alt ?? s.title}
+                  draggable={false}
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    pointerEvents: "none",
+                  }}
+                />
+              )}
               <div
                 style={{
                   position: "absolute",

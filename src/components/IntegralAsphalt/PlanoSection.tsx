@@ -191,13 +191,13 @@ const PlanoSection = () => {
           className="mt-10 text-white"
           ref={otroElemento}
         >
-          <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
+          <h2 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
-          </h1>
+          </h2>
           <div className="flex items-center justify-center mt-10">
-            <h1 className="mr-3" id="measure">
+            <p className="mr-3" id="measure">
               UNIDAD:
-            </h1>
+            </p>
             <div
               onClick={toggleUnit}
               className="relative w-48 h-10 rounded-full border border-white cursor-pointer select-none"
@@ -298,9 +298,9 @@ const PlanoSection = () => {
                   <div className="flex flex-col w-full h-full items-start justify-start gap-0 md:gap-10 order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           CONSTRUCCIÓN Y DISEÑO
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -355,9 +355,9 @@ const PlanoSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -451,9 +451,9 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full col-span-1 order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           SISTEMA DE QUEMADOR
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -506,9 +506,9 @@ const PlanoSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           COMPONENTES Y ELÉCTRICO
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -612,9 +612,9 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         ÁLABES
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -664,9 +664,9 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         RESISTENCIA Y SEGURIDAD
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -731,9 +731,9 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         PORTABILIDAD
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -794,9 +794,9 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         SISTEMA DE MEZCLA Y ALIMENTACIÓN
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -858,9 +858,9 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-start items-start">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         TANQUE DE ASFALTO
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -915,9 +915,9 @@ const PlanoSection = () => {
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         TASA DE PRODUCCIÓN
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -965,9 +965,9 @@ const PlanoSection = () => {
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         CUMPLIMIENTO CON NORMATIVAS INDUSTRIALES
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1216,9 +1216,9 @@ const PlanoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full mt-10">
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         CHASIS Y ESTRUCTURA
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1258,7 +1258,7 @@ const PlanoSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Largo total:</h1>
+                        <p>Largo total:</p>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -1270,11 +1270,11 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Soporte:</h1>
+                        <p>Soporte:</p>
                         <p>{activeData?.dimensions.support ?? ""}</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho del chasis:</h1>
+                        <p>Ancho del chasis:</p>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -1289,7 +1289,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -1301,7 +1301,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura total:</h1>
+                        <p>Altura total:</p>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -1318,9 +1318,9 @@ const PlanoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full mt-0 md:mt-10 gap-0 md:gap-10">
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         DIMENSIONES DEL TAMBOR
-                      </h1>
+                      </h3>
                       <button
                         className="block"
                         onClick={() =>
@@ -1360,7 +1360,7 @@ const PlanoSection = () => {
                       }`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${drumMixer[0].length?.toFixed(2) ?? ""} m`
@@ -1370,7 +1370,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
@@ -1380,7 +1380,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
@@ -1393,9 +1393,9 @@ const PlanoSection = () => {
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         DIMENSIONES DEL TANQUE DE ASFALTO
-                      </h1>
+                      </h3>
                       <button
                         className="block"
                         onClick={() =>
@@ -1435,7 +1435,7 @@ const PlanoSection = () => {
                       }`}
                     >
                       <div className="flex justify-between">
-                        <h1>Largo:</h1>
+                        <p>Largo:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].length?.toFixed(2) ?? ""} m`
@@ -1445,7 +1445,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].width?.toFixed(2) ?? ""} m`
@@ -1455,7 +1455,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Alto:</h1>
+                        <p>Alto:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].height?.toFixed(2) ?? ""} m`
@@ -1465,7 +1465,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].capcity ?? ""} L`
@@ -1476,9 +1476,9 @@ const PlanoSection = () => {
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         DIMENSIONES DE LA TOLVA
-                      </h1>
+                      </h3>
                       <button
                         className="block"
                         onClick={() =>
@@ -1518,7 +1518,7 @@ const PlanoSection = () => {
                       }`}
                     >
                       <div className="flex justify-between">
-                        <h1>Largo:</h1>
+                        <p>Largo:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].length?.toFixed(2) ?? ""} m`
@@ -1528,7 +1528,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].width?.toFixed(2) ?? ""} m`
@@ -1538,7 +1538,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Alto:</h1>
+                        <p>Alto:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].height?.toFixed(2) ?? ""} m`
@@ -1548,7 +1548,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].capcity ?? ""}`
@@ -1569,9 +1569,9 @@ const PlanoSection = () => {
                   <div className="flex flex-col w-full h-full items-start justify-start gap-0 md:gap-10 order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           CONSTRUCCIÓN Y DISEÑO
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1626,9 +1626,9 @@ const PlanoSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1719,9 +1719,9 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full col-span-1 order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           SISTEMA DE QUEMADOR
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1775,9 +1775,9 @@ const PlanoSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           COMPONENTES Y ELÉCTRICO
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1878,9 +1878,9 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         ÁLABES
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1930,9 +1930,9 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         RESISTENCIA Y SEGURIDAD
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1997,9 +1997,9 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         PORTABILIDAD
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2060,9 +2060,9 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         SISTEMA DE MEZCLA Y ALIMENTACIÓN
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2124,9 +2124,9 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-start items-start gap-5">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         TANQUE DE ASFALTO
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2181,9 +2181,9 @@ const PlanoSection = () => {
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         TASA DE PRODUCCIÓN
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2231,9 +2231,9 @@ const PlanoSection = () => {
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         CUMPLIMIENTO CON NORMATIVAS INDUSTRIALES
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2470,9 +2470,9 @@ const PlanoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full mt-10">
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         CHASIS Y ESTRUCTURA
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the chassis and structure of the system"
                         className="block md:hidden"
@@ -2513,7 +2513,7 @@ const PlanoSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Largo total (incluyendo enganche):</h1>
+                        <p>Largo total (incluyendo enganche):</p>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -2525,7 +2525,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración de ejes:</h1>
+                        <p>Configuración de ejes:</p>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.axleConfig ?? ""} `
@@ -2533,7 +2533,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Soporte:</h1>
+                        <p>Soporte:</p>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.support ?? ""} `
@@ -2541,7 +2541,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ruedas de transporte:</h1>
+                        <p>Ruedas de transporte:</p>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.wheel ?? ""} `
@@ -2549,7 +2549,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho del chasis:</h1>
+                        <p>Ancho del chasis:</p>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -2564,7 +2564,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -2576,7 +2576,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura total:</h1>
+                        <p>Altura total:</p>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -2593,9 +2593,9 @@ const PlanoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full mt-0 md:mt-10 gap-0 md:gap-10">
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         DIMENSIONES DEL TAMBOR
-                      </h1>
+                      </h3>
                       <button
                         className="block"
                         onClick={() =>
@@ -2635,7 +2635,7 @@ const PlanoSection = () => {
                       }`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${drumMixer[0].length?.toFixed(2) ?? ""} m`
@@ -2645,7 +2645,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
@@ -2655,7 +2655,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
@@ -2668,9 +2668,9 @@ const PlanoSection = () => {
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         DIMENSIONES DEL TANQUE DE ASFALTO
-                      </h1>
+                      </h3>
                       <button
                         className="block"
                         onClick={() =>
@@ -2710,7 +2710,7 @@ const PlanoSection = () => {
                       }`}
                     >
                       <div className="flex justify-between">
-                        <h1>Largo:</h1>
+                        <p>Largo:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].length?.toFixed(2) ?? ""} m`
@@ -2720,7 +2720,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].width?.toFixed(2) ?? ""} m`
@@ -2730,7 +2730,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Alto:</h1>
+                        <p>Alto:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].height?.toFixed(2) ?? ""} m`
@@ -2740,7 +2740,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].capcity ?? ""} L`
@@ -2751,9 +2751,9 @@ const PlanoSection = () => {
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         DIMENSIONES DE LA TOLVA
-                      </h1>
+                      </h3>
                       <button
                         className="block"
                         onClick={() =>
@@ -2793,7 +2793,7 @@ const PlanoSection = () => {
                       }`}
                     >
                       <div className="flex justify-between">
-                        <h1>Largo:</h1>
+                        <p>Largo:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].length?.toFixed(2) ?? ""} m`
@@ -2803,7 +2803,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].width?.toFixed(2) ?? ""} m`
@@ -2813,7 +2813,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Alto:</h1>
+                        <p>Alto:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].height?.toFixed(2) ?? ""} m`
@@ -2823,7 +2823,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].capcity ?? ""} `
@@ -2848,9 +2848,9 @@ const PlanoSection = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           CONSTRUCCIÓN Y DISEÑO
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the Durability and Safety"
                           className="block md:hidden"
@@ -2906,9 +2906,9 @@ const PlanoSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
@@ -2998,9 +2998,9 @@ const PlanoSection = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           SISTEMA DE QUEMADOR
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
@@ -3054,9 +3054,9 @@ const PlanoSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                           COMPONENTES Y ELÉCTRICO
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the portability"
                           className="block md:hidden"
@@ -3158,9 +3158,9 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         ÁLABES
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the burner system"
                         className="block md:hidden"
@@ -3211,9 +3211,9 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         RESISTENCIA Y SEGURIDAD
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the compliance with industry standards"
                         className="block md:hidden"
@@ -3279,9 +3279,9 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         PORTABILIDAD
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the burner system"
                         className="block md:hidden"
@@ -3343,9 +3343,9 @@ const PlanoSection = () => {
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2"></div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         SISTEMA DE MEZCLA Y ALIMENTACIÓN
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the compliance with industry standards"
                         className="block md:hidden"
@@ -3408,9 +3408,9 @@ const PlanoSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 mt-0 md:mt-10 justify-center items-center">
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         TANQUE DE ASFALTO
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the burner system"
                         className="block md:hidden"
@@ -3466,9 +3466,9 @@ const PlanoSection = () => {
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-2">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         TASA DE PRODUCCIÓN
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the burner system"
                         className="block md:hidden"
@@ -3517,9 +3517,9 @@ const PlanoSection = () => {
 
                   <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1 w-full">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         CUMPLIMIENTO CON NORMATIVAS INDUSTRIALES
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the compliance with industry standards"
                         className="block md:hidden"
@@ -3757,9 +3757,9 @@ const PlanoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full mt-10">
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         CHASIS Y ESTRUCTURA
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the chassis and structure of the system"
                         className="block md:hidden"
@@ -3800,7 +3800,7 @@ const PlanoSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Largo total (incluyendo quinta rueda)::</h1>
+                        <p>Largo total (incluyendo quinta rueda)::</p>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -3812,7 +3812,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración de ejes:</h1>
+                        <p>Configuración de ejes:</p>
                         <p>
                           {unit === "metric"
                             ? `${activeData?.dimensions.axleConfig ?? ""}`
@@ -3820,7 +3820,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura enganche quinta rueda</h1>
+                        <h3>Altura enganche quinta rueda</h3>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -3834,7 +3834,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Soporte:</h1>
+                        <p>Soporte:</p>
                         <p>
                           <div className="flex justify-between">
                             <p>
@@ -3846,7 +3846,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ruedas de transporte:</h1>
+                        <p>Ruedas de transporte:</p>
 
                         <div className="flex justify-between">
                           <p>
@@ -3857,7 +3857,7 @@ const PlanoSection = () => {
                         </div>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho del chasis:</h1>
+                        <p>Ancho del chasis:</p>
                         <p>
                           <div className="flex justify-between">
                             <p>
@@ -3876,7 +3876,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -3888,7 +3888,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura total:</h1>
+                        <p>Altura total:</p>
                         <p>
                           {unit === "metric"
                             ? `${
@@ -3905,9 +3905,9 @@ const PlanoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full mt-0 md:mt-10 gap-0 md:gap-10">
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         DIMENSIONES DEL TAMBOR
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the Drum Mixer Specifications"
                         className="block"
@@ -3948,7 +3948,7 @@ const PlanoSection = () => {
                       }`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${drumMixer[0].length?.toFixed(2) ?? ""} m`
@@ -3958,7 +3958,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
@@ -3968,7 +3968,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${drumMixer[0].width?.toFixed(2) ?? ""} m`
@@ -3981,9 +3981,9 @@ const PlanoSection = () => {
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         DIMENSIONES DEL TANQUE DE ASFALTO
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the Asphalt Tank specifications"
                         className="block"
@@ -4024,7 +4024,7 @@ const PlanoSection = () => {
                       }`}
                     >
                       <div className="flex justify-between">
-                        <h1>Largo:</h1>
+                        <p>Largo:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].length?.toFixed(2) ?? ""} m`
@@ -4034,7 +4034,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].width?.toFixed(2) ?? ""} m`
@@ -4044,7 +4044,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Alto:</h1>
+                        <p>Alto:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].height?.toFixed(2) ?? ""} m`
@@ -4054,7 +4054,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>
                           {unit === "metric"
                             ? `${asphalTank[0].capcity ?? ""} L`
@@ -4065,9 +4065,9 @@ const PlanoSection = () => {
                   </div>
                   <div className="flex flex-col items-start justify-center gap-4 text-white">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         DIMENSIONES DE LA TOLVA
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the Bin Units specifications"
                         className="block"
@@ -4108,7 +4108,7 @@ const PlanoSection = () => {
                       }`}
                     >
                       <div className="flex justify-between">
-                        <h1>Largo:</h1>
+                        <p>Largo:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].length?.toFixed(2) ?? ""} m`
@@ -4118,7 +4118,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].width?.toFixed(2) ?? ""} m`
@@ -4128,7 +4128,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Alto:</h1>
+                        <p>Alto:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].height?.toFixed(2) ?? ""} m`
@@ -4138,7 +4138,7 @@ const PlanoSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>
                           {unit === "metric"
                             ? `${binUnit[0].capcity ?? ""} `

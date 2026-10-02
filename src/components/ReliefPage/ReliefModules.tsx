@@ -15,7 +15,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, SplitText);
 }
 
-type Module = { name: string; title: string; text: string };
+type Module = { name: string; title: string; text: string | string[] };
 
 /* ------------------------------------------------------------------ *
  *  Índice de módulos — resumen; el detalle vive en las secciones      *
@@ -30,7 +30,11 @@ const MODULES: Module[] = [
   {
     name: "Seguridad y confiabilidad",
     title: "La planta no se detiene por una falla del sistema",
-    text: "Respaldo continuo de la configuración, operación manual siempre disponible y sincronización automática de los datos al reconectar.",
+    text: [
+      "Respaldo continuo de la configuración",
+      "Operación manual siempre disponible",
+      "Sincronización automática de los datos al reconectar",
+    ],
   },
   {
     name: "Conversión de unidades",
@@ -85,11 +89,25 @@ export default function ReliefModules() {
 
       const splits = panels.map((panel) => {
         const title = panel.querySelector<HTMLElement>(".rmod-title")!;
-        const text = panel.querySelector<HTMLElement>(".rmod-text")!;
+        const texts = Array.from(
+          panel.querySelectorAll<HTMLElement>(".rmod-text"),
+        );
+        const bullets = Array.from(
+          panel.querySelectorAll<HTMLElement>(".rmod-bullet"),
+        );
         const tSplit = new SplitText(title, { type: "lines", mask: "lines" });
-        const pSplit = new SplitText(text, { type: "lines", mask: "lines" });
-        splitInstances.push(tSplit, pSplit);
-        return { panel, lines: [...tSplit.lines, ...pSplit.lines] };
+        const pSplits = texts.map(
+          (t) => new SplitText(t, { type: "lines", mask: "lines" }),
+        );
+        splitInstances.push(tSplit, ...pSplits);
+        return {
+          panel,
+          lines: [
+            ...tSplit.lines,
+            ...bullets,
+            ...pSplits.flatMap((s) => s.lines),
+          ],
+        };
       });
 
       splits.forEach((s, i) => {
@@ -261,9 +279,23 @@ export default function ReliefModules() {
                   <h3 className="rmod-title text-[1.6rem] font-bold leading-[1.12] sm:text-3xl md:text-4xl lg:text-6xl lg:leading-[1.03] xl:text-7xl">
                     {m.title}
                   </h3>
-                  <p className="rmod-text mt-3 text-sm leading-relaxed text-[#d9d9d9] sm:text-base md:text-lg lg:mt-8 lg:max-w-2xl lg:text-2xl lg:leading-relaxed">
-                    {m.text}
-                  </p>
+                  {Array.isArray(m.text) ? (
+                    <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[#d9d9d9] sm:text-base md:text-lg lg:mt-8 lg:max-w-2xl lg:text-2xl lg:leading-relaxed">
+                      {m.text.map((item) => (
+                        <li key={item} className="flex gap-3">
+                          <span
+                            aria-hidden="true"
+                            className="rmod-bullet mt-[0.6em] h-1.5 w-1.5 shrink-0 rounded-full bg-[#89adff]"
+                          />
+                          <span className="rmod-text">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="rmod-text mt-3 text-sm leading-relaxed text-[#d9d9d9] sm:text-base md:text-lg lg:mt-8 lg:max-w-2xl lg:text-2xl lg:leading-relaxed">
+                      {m.text}
+                    </p>
+                  )}
                 </li>
               ))}
             </ol>

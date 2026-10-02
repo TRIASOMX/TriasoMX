@@ -14,12 +14,12 @@ gsap.registerPlugin(SplitText);
 //Contraflujo
 import p1 from "../../assets/images/DrumMixers/Contraflujo/CDesamac.webp";
 import p2 from "../../assets/images/DrumMixers/Contraflujo/Cplus.webp";
-import p3 from "../../assets/images/DrumMixers/Contraflujo/Cpro.webp";
+import p3 from "../../assets/images/DrumMixers/Contraflujo/PlaCfPro.webp";
 
 //Flujo paralelo
 import p4 from "../../assets/images/DrumMixers/FlujoParalelo/Desamaq/FDesamac.webp";
 import p5 from "../../assets/images/DrumMixers/FlujoParalelo/Plus/FPlus.webp";
-import p6 from "../../assets/images/DrumMixers/FlujoParalelo/Pro/FPpro.webp";
+import p6 from "../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFpPro1.webp";
 
 //Opciones
 import hero1 from "../../assets/images/DrumMixers/Gallery/DM1.webp";
@@ -1272,11 +1272,11 @@ export default function ProductSelector() {
             key={model.name}
             className="relative shrink-0 snap-center w-[78%] sm:w-[55%] md:w-auto"
           >
-            <div className="absolute -top-12 left-0 w-full h-24 z-10">
+            <div className="absolute -top-12 left-0 w-full z-10 flex justify-center">
               <img
                 src={model.image}
                 alt={model.name}
-                className="w-full h-full object-contain object-top"
+                className="w-[85%] h-auto"
                 loading="lazy"
               />
             </div>
@@ -1605,10 +1605,10 @@ export default function ProductSelector() {
       </div>
       <div className="max-w-7xl px-0 md:px-8 space-y-2 flex flex-col justify-between items-center py-10 md:py-20">
         <div className="font-bold text-black w-full">
-          <h1 className="text-lg md:text-5xl/[4rem]">
+          <h2 className="text-lg md:text-5xl/[4rem]">
             Con estos equipos usted podrá abatir las costosas horas de
             producción:
-          </h1>
+          </h2>
         </div>
       </div>
       <div

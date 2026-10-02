@@ -59,7 +59,7 @@ const CMOdom = () => {
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value} format="(,ddd)" duration={2000} />
-              <h1>-</h1>
+              <p>-</p>
               <Odometer value={value5} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
@@ -71,7 +71,7 @@ const CMOdom = () => {
           <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value4} format="(,ddd)" duration={2000} />
-              <h1>-</h1>
+              <p>-</p>
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">tons</p>
             </div>

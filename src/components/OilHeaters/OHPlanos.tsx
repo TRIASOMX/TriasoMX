@@ -129,13 +129,13 @@ const OHPlanos = () => {
         className="bg-[url('/fondopatron.webp')] bg-repeat bg-top w-full flex flex-col items-center justify-start relative bg-black overflow-hidden z-10 min-h-screen"
       >
         <header id="planosOil" className="mt-10 text-white" ref={otroElemento}>
-          <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
+          <h2 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
-          </h1>
+          </h2>
           <div className="flex items-center justify-center mt-10">
-            <h1 className="mr-3" id="measure">
+            <p className="mr-3" id="measure">
               UNIDAD:
-            </h1>
+            </p>
             <div
               onClick={toggleUnit}
               className="relative w-48 h-10 rounded-full border border-white cursor-pointer select-none"
@@ -227,9 +227,9 @@ const OHPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 w-full h-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           SISTEMA DE CALENTAMIENTO
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -282,9 +282,9 @@ const OHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CUMPLIMIENTO CON ESTÁNDARES DE LA INDUSTRIA
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -331,9 +331,9 @@ const OHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -419,9 +419,9 @@ const OHPlanos = () => {
                   <div className="flex flex-col items-start justify-start h-full col-span-1 w-full order-3 md:order-3 gap-0 md:gap-10">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -498,9 +498,9 @@ const OHPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMA ELÉCTRICO
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -572,9 +572,9 @@ const OHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RENDIMIENTO Y CAPACIDAD
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -802,9 +802,9 @@ const OHPlanos = () => {
                 </div>
                 <div className="flex flex-col  gap-4 text-white w-full lg:w-[35%] md:w-[35%] mt-10 md:mt-0">
                   <div className="w-full lg:w-[60%] md:w-[60%] flex justify-between border-b border-b-white">
-                    <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                    <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                       DIMENSIONES
-                    </h1>
+                    </h3>
                     <button
                       className="block md:hidden"
                       onClick={() =>
@@ -881,9 +881,9 @@ const OHPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full mt-10 md:mt-0">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           SISTEMA DE CALENTAMIENTO
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the design and operation"
                           className="block md:hidden"
@@ -937,9 +937,9 @@ const OHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CUMPLIMIENTO CON ESTÁNDARES DE LA INDUSTRIA
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the construction and materials"
                           className="block md:hidden"
@@ -988,9 +988,9 @@ const OHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
@@ -1075,9 +1075,9 @@ const OHPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the safety and maintenance of the system"
                           className="block md:hidden"
@@ -1155,9 +1155,9 @@ const OHPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMA ELÉCTRICO
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the electrical composition, components and capacity of the system"
                           className="block md:hidden"
@@ -1225,9 +1225,9 @@ const OHPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RENDIMIENTO Y CAPACIDAD
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the performance and capacity"
                           className="block md:hidden"
@@ -1456,9 +1456,9 @@ const OHPlanos = () => {
                 </div>
                 <div className="flex flex-col  gap-4 text-white w-full lg:w-[35%] md:w-[35%] mt-10 md:mt-0">
                   <div className="w-full lg:w-[60%] md:w-[60%] flex justify-between border-b border-b-white">
-                    <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                    <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                       DIMENSIONES
-                    </h1>
+                    </h3>
                     <button
                       className="block md:hidden"
                       onClick={() =>

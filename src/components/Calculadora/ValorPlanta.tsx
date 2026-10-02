@@ -16,10 +16,10 @@ const handleWheelScroll = (e: React.WheelEvent<HTMLInputElement>) => {
 export default function ValorPlanta({ dlls, pesos, onChange }: Props) {
   return (
     <section className="bg-white rounded-xl p-6 border border-gray-200 space-y-4">
-      <h3 className="text-xl font-semibold text-black">Asphalt Plant Value</h3>
+      <h3 className="text-xl font-semibold text-black">Valor de la planta de asfalto</h3>
 
       <label className="flex flex-col gap-1 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md ">Equipment value (USD) </span> 
+        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md ">Valor del equipo (USD) </span> 
         <input
           type="number"
           value={dlls || "" }
@@ -43,7 +43,7 @@ export default function ValorPlanta({ dlls, pesos, onChange }: Props) {
       </label> */}
 
       <label className="flex flex-col gap-1 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md ">Total value</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md ">Valor total</span>
         <input
           value={pesos.toLocaleString("es-US") + " dollars"}
           disabled

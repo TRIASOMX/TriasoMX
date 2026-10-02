@@ -56,9 +56,9 @@ const OdometerDrum = () => {
       className="max-w-[1500px] mx-auto px-8 md:px-0 py-10 md:py-20 min-h-[80vh]"
     >
       <div className="flex justify-center items-center pb-10">
-        <h1 className="text-[#4F4F4F] font-bold text-2xl md:text-4xl">
+        <h2 className="text-[#4F4F4F] font-bold text-2xl md:text-4xl">
           El equipo para arrasar con la competencia
-        </h1>
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-6 justify-center items-center">
@@ -66,7 +66,7 @@ const OdometerDrum = () => {
           <div className="flex flex-col items-center justify-center lg:items-start">
             <div className="flex text-5xl lg:text-[5rem] md:text-[3rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
               <Odometer value={value} format="(,ddd)" duration={2000} />
-              <h1>-</h1>
+              <p>-</p>
               <Odometer value={value6} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tph</p>
             </div>
@@ -81,7 +81,7 @@ const OdometerDrum = () => {
           <div className="flex flex-col items-center justify-center">
             <div className="flex text-5xl lg:text-[5rem] md:text-[3rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full">
               <Odometer value={value5} format="(,ddd)" duration={2000} />
-              <h1>-</h1>
+              <p>-</p>
               <Odometer value={value1} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">Tons</p>
             </div>
@@ -93,7 +93,7 @@ const OdometerDrum = () => {
           <div className="flex flex-col items-center justify-center">
             <div className="flex text-5xl lg:text-[5rem] md:text-[3rem] font-normal justify-center items-center lg:justify-start lg:items-baseline w-full gap-1 lg:gap-0">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
-              <h1 className="text-sm font-normal ml-3">%</h1>
+              <p className="text-sm font-normal ml-3">%</p>
             </div>
             <p className="text-[#4F4F4F] text-center lg:text-start w-full">
               Incorporación de RAP
@@ -119,12 +119,12 @@ const OdometerDrum = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center pt-10">
-        <h1 className="text-[#4F4F4F] font-bold text-2xl md:text-4xl text-center">
+        <h2 className="text-[#4F4F4F] font-bold text-2xl md:text-4xl text-center">
           Las mejores plantas de asfalto
-        </h1>
-        <h1 className="text-[#ca1c1c] font-bold text-2xl md:text-4xl text-center">
+        </h2>
+        <h2 className="text-[#ca1c1c] font-bold text-2xl md:text-4xl text-center">
           son mexicanas
-        </h1>
+        </h2>
       </div>
     </div>
   );

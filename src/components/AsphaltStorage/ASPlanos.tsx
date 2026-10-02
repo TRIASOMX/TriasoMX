@@ -203,13 +203,13 @@ const ASPlanos = () => {
           className="mt-10 text-white"
           ref={otroElemento}
         >
-          <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
+          <h2 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             ESPECIFICACIONES
-          </h1>
+          </h2>
           <div className="flex items-center justify-center mt-10">
-            <h1 className="mr-3" id="measure">
+            <p className="mr-3" id="measure">
               UNIDAD :
-            </h1>
+            </p>
             <div
               onClick={toggleUnit}
               className="relative w-48 h-10 rounded-full border border-white cursor-pointer select-none"
@@ -313,9 +313,9 @@ const ASPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Sistema de calentamiento
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the heating system"
                           className="block md:hidden"
@@ -383,9 +383,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
@@ -463,9 +463,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the portability"
                           className="block md:hidden"
@@ -555,9 +555,9 @@ const ASPlanos = () => {
                   >
                     <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Cumplimiento con estándares de la industria
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the compliance with industry standards"
                           className="block md:hidden"
@@ -605,9 +605,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the components and electrical composition"
                           className="block md:hidden"
@@ -667,9 +667,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more abour the durability and safety of the system"
                           className="block md:hidden"
@@ -752,9 +752,9 @@ const ASPlanos = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Temperatura de operación
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the operating temperature"
                         className="block md:hidden"
@@ -795,11 +795,11 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Temperatura máxima alcanzable:</h1>
+                        <p>Temperatura máxima alcanzable:</p>
                         <p> 220°C</p>
                       </div>
                       <div className="flex justify-between text-end">
-                        <h1>Sistema de calentamiento de alta eficiencia:</h1>
+                        <p>Sistema de calentamiento de alta eficiencia:</p>
                         <p>
                           Mantiene el asfalto en condiciones óptimas de trabajo.
                         </p>
@@ -997,9 +997,9 @@ const ASPlanos = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start gap-10 w-full max-w-[1550px]">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Dimensiones del tanque
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the tank dimensions"
                         className="block md:hidden"
@@ -1040,7 +1040,7 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} m`
@@ -1048,7 +1048,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
@@ -1056,7 +1056,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} m`
@@ -1064,16 +1064,16 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>{`${activeData?.dimensions.capacity ?? ""} L`}</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Chasis y estructura
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the chassis and structure"
                         className="block md:hidden"
@@ -1114,7 +1114,7 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
+                        <p>Longitud total (incluyendo quinta rueda):</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
@@ -1122,11 +1122,11 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje: </h1>
+                        <p>Configuración del eje: </p>
                         <p>Un solo eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
@@ -1134,7 +1134,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
@@ -1142,7 +1142,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura total:</h1>
+                        <p>Altura total:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
@@ -1163,9 +1163,9 @@ const ASPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Sistema de calentamiento
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1232,9 +1232,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1311,9 +1311,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1400,9 +1400,9 @@ const ASPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10  h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Cumplimiento con estándares de la industria
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1449,9 +1449,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1510,9 +1510,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1593,9 +1593,9 @@ const ASPlanos = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Temperatura de operación
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1635,11 +1635,11 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Temperatura máxima alcanzable:</h1>
+                        <p>Temperatura máxima alcanzable:</p>
                         <p> 220°C</p>
                       </div>
                       <div className="flex justify-between text-end">
-                        <h1>Sistema de calentamiento de alta eficiencia:</h1>
+                        <p>Sistema de calentamiento de alta eficiencia:</p>
                         <p>
                           Mantiene el asfalto en condiciones óptimas de trabajo.
                         </p>
@@ -1837,9 +1837,9 @@ const ASPlanos = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full gap-10 w-full max-w-[1550px]">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Dimensiones del tanque
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1879,7 +1879,7 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} m`
@@ -1887,7 +1887,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
@@ -1895,7 +1895,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} m`
@@ -1903,16 +1903,16 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>{`${activeData?.dimensions.capacity ?? ""} L`}</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Chasis y estructura
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the chassis and structure"
                         className="block md:hidden"
@@ -1953,7 +1953,7 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
+                        <p>Longitud total (incluyendo quinta rueda):</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
@@ -1961,11 +1961,11 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje: </h1>
+                        <p>Configuración del eje: </p>
                         <p>Un solo eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
@@ -1973,7 +1973,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
@@ -1981,7 +1981,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura total:</h1>
+                        <p>Altura total:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
@@ -2002,9 +2002,9 @@ const ASPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Sistema de calentamiento
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2071,9 +2071,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2150,9 +2150,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2238,9 +2238,9 @@ const ASPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Cumplimiento con estándares de la industria
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2287,9 +2287,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2348,9 +2348,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2431,9 +2431,9 @@ const ASPlanos = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Temperatura de operación
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2473,11 +2473,11 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Temperatura máxima alcanzable:</h1>
+                        <p>Temperatura máxima alcanzable:</p>
                         <p> 220°C</p>
                       </div>
                       <div className="flex justify-between text-end">
-                        <h1>Sistema de calentamiento de alta eficiencia:</h1>
+                        <p>Sistema de calentamiento de alta eficiencia:</p>
                         <p>
                           Mantiene el asfalto en condiciones óptimas de trabajo.
                         </p>
@@ -2675,9 +2675,9 @@ const ASPlanos = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full gap-10 w-full max-w-[1550px]">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Dimensiones del tanque
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2717,7 +2717,7 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} m`
@@ -2725,7 +2725,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
@@ -2733,7 +2733,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} m`
@@ -2741,16 +2741,16 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>{`${activeData?.dimensions.capacity ?? ""} L`}</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Chasis y estructura
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the chassis and structure"
                         className="block md:hidden"
@@ -2791,7 +2791,7 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
+                        <p>Longitud total (incluyendo quinta rueda):</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
@@ -2799,11 +2799,11 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje: </h1>
+                        <p>Configuración del eje: </p>
                         <p>Un solo eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
@@ -2811,7 +2811,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
@@ -2819,7 +2819,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura total:</h1>
+                        <p>Altura total:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`
@@ -2840,9 +2840,9 @@ const ASPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Sistema de calentamiento
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2909,9 +2909,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -2988,9 +2988,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3076,9 +3076,9 @@ const ASPlanos = () => {
                   <div className="flex flex-col items-start justify-start gap-0 md:gap-10 h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Cumplimiento con estándares de la industria
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3125,9 +3125,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3186,9 +3186,9 @@ const ASPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3269,9 +3269,9 @@ const ASPlanos = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Temperatura de operación
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -3311,11 +3311,11 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Temperatura máxima alcanzable:</h1>
+                        <p>Temperatura máxima alcanzable:</p>
                         <p> 220°C</p>
                       </div>
                       <div className="flex justify-between text-end">
-                        <h1>Sistema de calentamiento de alta eficiencia:</h1>
+                        <p>Sistema de calentamiento de alta eficiencia:</p>
                         <p>
                           Mantiene el asfalto en condiciones óptimas de trabajo.
                         </p>
@@ -3513,9 +3513,9 @@ const ASPlanos = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full gap-10 w-full max-w-[1550px]">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Dimensiones del tanque
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -3555,7 +3555,7 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.tanklenght ?? 0) / 100).toFixed(2)} m`
@@ -3563,7 +3563,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
@@ -3571,7 +3571,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.tangheight ?? 0) / 100).toFixed(2)} m`
@@ -3579,16 +3579,16 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>{`${activeData?.dimensions.capacity ?? ""} L`}</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Chasis y estructura
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the chassis and structure"
                         className="block md:hidden"
@@ -3629,7 +3629,7 @@ const ASPlanos = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
+                        <p>Longitud total (incluyendo quinta rueda):</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.length ?? 0) / 100).toFixed(2)} m`
@@ -3637,11 +3637,11 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje: </h1>
+                        <p>Configuración del eje: </p>
                         <p>Un solo eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.wheel ?? 0) / 100).toFixed(2)} m`
@@ -3649,7 +3649,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.width ?? 0) / 100).toFixed(2)} m`
@@ -3657,7 +3657,7 @@ const ASPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura total:</h1>
+                        <p>Altura total:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.height ?? 0) / 100).toFixed(2)} m`

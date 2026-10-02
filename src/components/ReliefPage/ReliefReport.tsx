@@ -310,7 +310,7 @@ export default function ReliefReport() {
             data-mreveal
             className="text-4xl font-bold leading-[1.03] tracking-tight md:text-5xl lg:text-6xl"
           >
-            Un informe, toda la operación
+            Menos tiempo administrando la planta, más tiempo para el negocio.
           </h2>
           <p className="mt-4 max-w-lg text-base text-grisP md:text-xl">
             Un reporte histórico de Triaso Relief, jornada por jornada.
@@ -367,7 +367,7 @@ export default function ReliefReport() {
                 <div className="mt-4 grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-3">
                   <div className="rmr-mark">
                     <p className="text-4xl font-bold tabular-nums md:text-5xl">
-                      12 480 t
+                      148 t
                     </p>
                     <p className="mt-1.5 text-sm text-grisPPP">
                       Producción acumulada
@@ -456,8 +456,8 @@ export default function ReliefReport() {
                     />
                   </div>
                   <div className="mt-1.5 flex justify-between text-xs tabular-nums text-grisPPP">
-                    <span>Encendida 41 h</span>
-                    <span>Produciendo 33 h</span>
+                    <span>Encendida 11 h</span>
+                    <span>Produciendo 14 h</span>
                   </div>
                 </div>
               </section>
@@ -640,8 +640,7 @@ export default function ReliefReport() {
                   Calidad de la mezcla entregada
                 </h3>
                 <p className="mt-2 max-w-2xl text-base text-grisPPP md:text-lg">
-                  Receta, temperatura y granulometría / humedad de la mezcla que
-                  salió.
+                  Receta, temperatura y granulometría.
                 </p>
                 <div className="rmr-mark mt-5 flex flex-wrap items-baseline gap-x-6 gap-y-1 text-base tabular-nums md:text-lg">
                   <span className="font-semibold">Receta OFAI-19</span>

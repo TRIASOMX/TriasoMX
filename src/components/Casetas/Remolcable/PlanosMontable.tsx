@@ -117,13 +117,13 @@ const DrumMixPlanos = () => {
         className="bg-[url('/fondopatron.webp')] bg-repeat bg-top w-full flex flex-col items-center justify-start relative bg-black overflow-hidden z-10 min-h-screen"
       >
         <header className="mt-10 text-white" ref={otroElemento}>
-          <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
+          <h2 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Specifications
-          </h1>
+          </h2>
           <div className="flex items-center justify-center mt-10">
-            <h1 className="mr-3" id="measure">
+            <p className="mr-3" id="measure">
               MEASURE:
-            </h1>
+            </p>
             <div
               onClick={toggleUnit}
               className="relative w-48 h-10 rounded-full border border-white cursor-pointer select-none"
@@ -227,9 +227,9 @@ const DrumMixPlanos = () => {
                   >
                     <div className="w-full flex flex-col gap-4 text-white col-span-1">
                       <div className="w-full flex border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See the capacity of the baghouse"
                           className="block md:hidden"
@@ -311,9 +311,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Medidas de la caseta de control
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the Maintenance and Advantages"
                           className="block md:hidden"
@@ -354,7 +354,7 @@ const DrumMixPlanos = () => {
                         } md:max-h-full md:opacity-100 md:block`}
                       >
                         <div className="flex justify-between w-full">
-                          <h1>Length:</h1>
+                          <p>Length:</p>
                           <p>
                             {unit === "metric"
                               ? `${cabinSize[0].length?.toFixed(1) ?? ""} m`
@@ -364,7 +364,7 @@ const DrumMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Width:</h1>
+                          <p>Width:</p>
                           <p>
                             {unit === "metric"
                               ? `${cabinSize[0].width?.toFixed(1) ?? ""} m`
@@ -374,7 +374,7 @@ const DrumMixPlanos = () => {
                           </p>
                         </div>
                         <div className="flex justify-between">
-                          <h1>Height:</h1>
+                          <p>Height:</p>
                           <p>
                             {unit === "metric"
                               ? `${cabinSize[0].height?.toFixed(1) ?? ""} m`
@@ -394,9 +394,9 @@ const DrumMixPlanos = () => {
                   >
                     <div className="flex flex-col w-full items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           PORTABILIDAD
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and the operation of the system"
                           className="block md:hidden"
@@ -447,9 +447,9 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Componentes y sistema eléctrico
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the cleaning operation"
                           className="block md:hidden"

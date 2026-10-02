@@ -61,7 +61,7 @@ const BurnerOdometer = () => {
           <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value} format="(,ddd).d" duration={2000} />
-              <h1>-</h1>
+              <p>-</p>
               <Odometer value={value3} format="(,ddd).d" duration={2000} />
               <p className="text-sm font-normal ml-3">millones</p>
             </div>
@@ -74,7 +74,7 @@ const BurnerOdometer = () => {
           <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value1} format="(,ddd).dd" duration={2000} />
-              <h1>-</h1>
+              <p>-</p>
               <Odometer value={value4} format="(,ddd).dd" duration={2000} />
               <p className="text-sm font-normal ml-3">mil</p>
             </div>
@@ -84,7 +84,7 @@ const BurnerOdometer = () => {
           <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full">
               <Odometer value={value2} format="(,ddd).dd" duration={2000} />
-              <h1>-</h1>
+              <p>-</p>
               <Odometer value={value5} format="(,ddd).dd" duration={2000} />
               <p className="text-sm font-normal ml-3">Hp</p>
             </div>

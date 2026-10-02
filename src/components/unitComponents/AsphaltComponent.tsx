@@ -49,9 +49,9 @@ export default function AsphaltComponent({ data }: Props) {
 
         <div className="w-full lg:w-[58%] flex flex-col items-center  lg:min-h-[520px] order-0 md:order-1">
           <div className="w-full text-center lg:text-left mb-4">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">
               Totalmente personalizables
-            </h1>
+            </h2>
             <p className="text-sm lg:text-lg md:text-lg font-light opacity-80">
               Tanques de asfalto desde lo más básico hasta los más equipados.
             </p>

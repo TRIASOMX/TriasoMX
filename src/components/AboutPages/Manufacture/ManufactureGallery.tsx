@@ -110,9 +110,9 @@ const ManufactureGallery = () => {
                 className="w-full h-full flex items-center justify-center bg-black/50 absolute top-0 z-20 
                     opacity-0 group-hover:opacity-100 transition-opacity duration-700"
               >
-                <h1 className="text-xs md:text-sm text-white font-bold text-center">
+                <h3 className="text-xs md:text-sm text-white font-bold text-center">
                   {element.title}
-                </h1>
+                </h3>
               </div>
             </div>
           </div>

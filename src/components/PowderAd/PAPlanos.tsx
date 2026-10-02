@@ -130,13 +130,13 @@ const PAPlanos = () => {
           className="mt-10 text-white"
           ref={otroElemento}
         >
-          <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
+          <h2 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
-          </h1>
+          </h2>
           <div className="flex items-center justify-center mt-10">
-            <h1 className="mr-3" id="measure">
+            <p className="mr-3" id="measure">
               MEDIDAS:
-            </h1>
+            </p>
             <div
               onClick={toggleUnit}
               className="relative w-48 h-10 rounded-full border border-white cursor-pointer select-none"
@@ -167,7 +167,7 @@ const PAPlanos = () => {
         <div className="w-full px-2 lg:px-8 mt-14">
           {/* Contenedor de los botones */}
           <div id="options" ref={optionsRef} className="w-full">
-            {/*<h1 className='text-white lg:text-xl text-lg text-center mb-10'>PRODUCTION CAPACITY:</h1>
+            {/*<p className='text-white lg:text-xl text-lg text-center mb-10'>PRODUCTION CAPACITY:</p>
       <div className="flex justify-center gap-2 md:gap-10">
          Botón 3 
         <button
@@ -201,9 +201,9 @@ const PAPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           SISTEMA DE ALIMENTACIÓN Y DOSIFICACIÓN
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the feeding and dosing system"
                           className="block md:hidden"
@@ -254,9 +254,9 @@ const PAPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           COMPONENTES Y SISTEMA ELÉCTRICO
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the coponents and electrical composition"
                           className="block md:hidden"
@@ -328,9 +328,9 @@ const PAPlanos = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           PORTABILIDAD
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the portability"
                           className="block md:hidden"
@@ -413,9 +413,9 @@ const PAPlanos = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white w-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CONTROL Y OPERACIÓN
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and operation of the system"
                           className="block md:hidden"
@@ -504,9 +504,9 @@ const PAPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           RESISTENCIA Y SEGURIDAD
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the durability and safety"
                           className="block md:hidden"
@@ -574,9 +574,9 @@ const PAPlanos = () => {
                     </div>
                     <div className="text-white font-normal w-full flex flex-col gap-4 justify-between h-full">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                        <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                           CUMPLIMIENTO CON ESTÁNDARES DE LA INDUSTRIA
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the compliance with industry standards"
                           className="block md:hidden"
@@ -952,9 +952,9 @@ const PAPlanos = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-10">
                       <div className="text-white font-normal flex flex-col gap-4">
                         <div className="w-full flex justify-between border-b border-b-white">
-                          <h1 className="font-bold lg:text-xl text-base w-full pb-3">
+                          <h3 className="font-bold lg:text-xl text-base w-full pb-3">
                             DIMENSIONES DE UNIDAD
-                          </h1>
+                          </h3>
                           <button
                             aria-label="See more about the bin dimensions"
                             className="block md:hidden"
@@ -995,7 +995,7 @@ const PAPlanos = () => {
                           } md:max-h-full md:opacity-100 md:block`}
                         >
                           <div className="flex justify-between">
-                            <h1>Longitud:</h1>
+                            <p>Longitud:</p>
                             <p>
                               {unit === "metric"
                                 ? `${
@@ -1022,7 +1022,7 @@ const PAPlanos = () => {
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Diámetro de tornillo: </h1>
+                            <p>Diámetro de tornillo: </p>
                             <p>
                               {unit === "metric"
                                 ? `${
@@ -1036,7 +1036,7 @@ const PAPlanos = () => {
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Altura:</h1>
+                            <p>Altura:</p>
                             <p>
                               {unit === "metric"
                                 ? `${
@@ -1051,7 +1051,7 @@ const PAPlanos = () => {
                             </p>
                           </div>
                           <div className="flex justify-between">
-                            <h1>Capacidad de tolva:</h1>
+                            <p>Capacidad de tolva:</p>
                             <p>2.6 m³ (level filled)</p>
                           </div>
                         </div>

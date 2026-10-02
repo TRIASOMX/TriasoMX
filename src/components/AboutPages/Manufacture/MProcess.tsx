@@ -2,9 +2,9 @@ const MProcess = () => {
   return (
     <section className="w-full max-w-7xl mx-auto px-8 font-bold text-grisT mt-4">
       <div className="w-full">
-        <h1 className="text-2xl md:text-4xl uppercase">
+        <h2 className="text-2xl md:text-4xl uppercase">
           proceso de fabricación
-        </h1>
+        </h2>
         <br />
         <p className="text-sm md:text-lg">
           En Triaso hemos invertido en la más moderna tecnología de fabricación

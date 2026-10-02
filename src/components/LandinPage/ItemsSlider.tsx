@@ -72,9 +72,9 @@ export default function ItemsSlider({ images }: Props) {
                   />
                 </div>
 
-                <h1 className="font-bold text-grisT text-sm md:text-base leading-tight line-clamp-2">
+                <h3 className="font-bold text-grisT text-sm md:text-base leading-tight line-clamp-2">
                   {img.title}
-                </h1>
+                </h3>
 
                 <p className="text-grisT text-xs md:text-sm leading-snug">
                   {img.texto}

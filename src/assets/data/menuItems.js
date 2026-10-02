@@ -5,7 +5,7 @@ export const menuItems = [
     children: [
       {
         title: "PLANTAS DE ASFALTO",
-        url: "/AsphaltPlant",
+        url: "/plantas-asfalto",
         children: [
           {
             title: "TAMBORES MEZCLADORES",

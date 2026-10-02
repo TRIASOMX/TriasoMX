@@ -30,12 +30,20 @@ export default function ReliefLastSection() {
           }}
         >
           <div className="max-w-md text-center">
-            <h3 className="text-lg font-bold md:text-2xl">Sistema de operación</h3>
+            <h3 className="text-lg font-bold md:text-2xl">
+              Sistema de operación
+            </h3>
             <p className="mt-1 text-xl font-semibold">Inicio de sesión único</p>
             <p className="text-xl font-semibold">para cada operador en turno</p>
             <ul className="mt-5 list-disc space-y-2 pl-5 text-start text-white/90">
-              <li>Conexión sin necesidad de internet, con acceso a respaldos automáticos.</li>
-              <li>Operación manual siempre disponible, con almacenamiento de datos de operación.</li>
+              <li>
+                Conexión sin necesidad de internet, con acceso a respaldos
+                automáticos.
+              </li>
+              <li>
+                Operación manual siempre disponible, con almacenamiento de datos
+                de operación.
+              </li>
             </ul>
           </div>
         </div>
@@ -46,12 +54,18 @@ export default function ReliefLastSection() {
           style={{ background: "#ca1c1c" }}
         >
           <div className="max-w-md text-center">
-            <h3 className="text-lg font-bold md:text-2xl">Sistema de visualización</h3>
-            <p className="mt-1 text-xl font-semibold">Acceso ilimitado para visualización</p>
+            <h3 className="text-lg font-bold md:text-2xl">
+              Sistema de visualización
+            </h3>
+            <p className="mt-1 text-xl font-semibold">
+              Acceso ilimitado para visualización
+            </p>
             <p className="text-xl font-semibold">de la planta de asfalto</p>
             <ul className="mt-5 list-disc space-y-2 pl-5 text-start text-white/90">
               <li>Conexión a través de internet</li>
-              <li>Visualización a todo dato rastreable de su planta de asfalto.</li>
+              <li>
+                Visualización a todo dato rastreable de su planta de asfalto.
+              </li>
             </ul>
           </div>
         </div>
@@ -77,20 +91,31 @@ export default function ReliefLastSection() {
           </div>
 
           <div className="space-y-5 text-center md:text-left">
-            <p data-reveal="up" className="text-base font-semibold text-[#89adff] md:text-xl">
-              Transformamos sistemas de operación obsoletos en plataformas modernas y
-              claras, llevando su planta a los estándares actuales con mayor
-              eficiencia, confiabilidad y control.
+            <p
+              data-reveal="up"
+              className="text-base font-semibold text-[#89adff] md:text-xl"
+            >
+              Transformamos sistemas de operación obsoletos en plataformas
+              modernas y claras, llevando su planta a los estándares actuales
+              con mayor eficiencia, confiabilidad y control.
             </p>
-            <p data-reveal="up" data-reveal-delay="0.08" className="text-base font-semibold text-[#d9d9d9] md:text-xl">
+            <p
+              data-reveal="up"
+              data-reveal-delay="0.08"
+              className="text-base font-semibold text-[#d9d9d9] md:text-xl"
+            >
               Sabemos que cada cliente tiene necesidades únicas; adaptamos cada
-              sistema de control —desde los puntos de acceso hasta la integración de
-              funciones— alineándolo con sus requerimientos específicos.
+              sistema de control —desde los puntos de acceso hasta la
+              integración de funciones— alineándolo con sus requerimientos
+              específicos.
             </p>
           </div>
 
           <div data-reveal="scale" className="flex items-center justify-center">
-            <h3 data-mreveal className="w-full text-center text-3xl font-bold leading-tight text-white md:w-3/4 md:text-4xl">
+            <h3
+              data-mreveal
+              className="w-full text-center text-3xl font-bold leading-tight text-white md:w-3/4 md:text-4xl"
+            >
               Disponible para monitoreo de todos los equipos Triaso®
             </h3>
           </div>
@@ -106,10 +131,6 @@ export default function ReliefLastSection() {
               height={img1.height}
             />
           </div>
-
-          <p data-reveal="up" className="text-center text-lg font-semibold text-[#d9d9d9] md:text-left md:text-2xl">
-            Menos tiempo administrando la planta, más tiempo para el negocio.
-          </p>
         </div>
       </section>
     </div>

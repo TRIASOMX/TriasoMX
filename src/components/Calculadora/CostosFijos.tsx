@@ -10,10 +10,10 @@ export default function CostosFijos({ state, onChange }: Props) {
 
   return (
     <section className="bg-white rounded-xl shadow p-6 border border-gray-200 space-y-4">
-      <h3 className="text-xl font-semibold text-black">Fixed costs</h3>
+      <h3 className="text-xl font-semibold text-black">Costos fijos</h3>
 
       <label className="flex flex-col gap-1 text-sm">
-         <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Operator and assistants</span>
+         <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Operador y ayudantes</span>
 
         <div className="relative">
           <span className="absolute left-3 top-2 text-gray-500 font-semibold">
@@ -26,13 +26,13 @@ export default function CostosFijos({ state, onChange }: Props) {
             onChange={(e) => onChange("cfOperador", Number(e.target.value))}
             className="border border-gray-300 rounded-lg pl-7 pr-3 py-2 w-full focus:ring-2 focus:ring-black outline-none"
           />
-          <span className="absolute left-40 top-[9px]">dollars/month</span>
+          <span className="absolute left-40 top-[9px]">dólares/mes</span>
         </div>
         
       </label>
 
       <label className="flex flex-col gap-1 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Maintenance</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Mantenimiento</span>
         <div className="relative">
           <span className="absolute left-3 top-2 text-gray-500 font-semibold">
             $
@@ -44,13 +44,13 @@ export default function CostosFijos({ state, onChange }: Props) {
             onChange={(e) => onChange("cfMantenimiento", Number(e.target.value))}
             className="border border-gray-300 rounded-lg pl-7 pr-3 py-2 w-full focus:ring-2 focus:ring-black outline-none"
           />
-          <span className="absolute left-40 top-[9px]">dollars/month</span>
+          <span className="absolute left-40 top-[9px]">dólares/mes</span>
         </div>
 
       </label>
 
       <label className="flex flex-col gap-1 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Operational Payloder</span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Payloader de operación</span>
         <div className="relative">
           <span className="absolute left-3 top-2 text-gray-500 font-semibold">
             $
@@ -63,15 +63,15 @@ export default function CostosFijos({ state, onChange }: Props) {
           onChange={(e) => onChange("cfPayloder", Number(e.target.value))}
           className="border border-gray-300 rounded-lg pl-7 pr-3 py-2 w-full focus:ring-2 focus:ring-black outline-none"
         />
-        <span className="absolute left-40 top-[9px]">dollars/month</span>
+        <span className="absolute left-40 top-[9px]">dólares/mes</span>
         </div>
       </label>
 
       <label className="flex flex-col gap-1 text-sm">
-        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Fixed costs (total) </span>
+        <span className="font-semibold text-sm text-gray-800 lg:text-lg md:text-md">Costos fijos (total) </span>
         <input
           disabled
-          value={formatCurrency(cf) +" dollars/month"}
+          value={formatCurrency(cf) +" dólares/mes"}
           className="border border-gray-200 bg-gray-100 rounded-lg px-3 py-2"
         />
       </label>

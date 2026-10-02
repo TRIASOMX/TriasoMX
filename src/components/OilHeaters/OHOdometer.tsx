@@ -61,9 +61,9 @@ const OHOdometer = () => {
           <div className="flex flex-col items-center lg:items-start justify-center">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center lg:justify-start items-baseline w-full gap-1 text-black">
               <Odometer value={value} format="(,ddd)" duration={2000} />
-              <h1>&</h1>
+              <p>&</p>
               <Odometer value={value5} format="(,ddd)" duration={2000} />
-              <h1>.</h1>
+              <p>.</p>
               <Odometer value={value6} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">millones de Btu/Hr</p>
             </div>

@@ -9,9 +9,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-8 py-10">
-        <h1 className="uppercase text-xl md:text-3xl font-bold">
+        <h2 className="uppercase text-xl md:text-3xl font-bold">
           Plantas de asfalto
-        </h1>
+        </h2>
       </div>
 
       <TimelineBar
@@ -87,9 +87,9 @@ const Index = () => {
           <div className="absolute inset-0 bg-black/60 w-full"></div>
 
           <div className="flex flex-col w-full max-w-7xl mx-auto px-8 justify-center items-start ">
-            <h1 className="relative font-bold text-white text-xl md:text-3xl uppercase">
+            <h2 className="relative font-bold text-white text-xl md:text-3xl uppercase">
               Infraestructura
-            </h1>
+            </h2>
 
             <div className="flex relative ">
               <div className="w-[5.7rem] lg:w-[10.4rem] border border-[#f33500]"></div>

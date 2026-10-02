@@ -375,13 +375,13 @@ const BinPlanosSection = () => {
           className="mt-10 text-white"
           ref={otroElemento}
         >
-          <h1 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
+          <h2 className="lg:text-4xl text-2xl pb-3 border-b-2 border-b-white text-center">
             Especificaciones
-          </h1>
+          </h2>
           <div className="flex items-center justify-center mt-10">
-            <h1 className="mr-3" id="measure">
+            <p className="mr-3" id="measure">
               UNIDAD DE MEDIDA:
-            </h1>
+            </p>
             <div
               onClick={toggleUnit}
               className="relative w-48 h-10 rounded-full border border-white cursor-pointer select-none"
@@ -540,9 +540,9 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Sistema de alimentación y dosificación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -608,9 +608,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -700,9 +700,9 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -791,9 +791,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -874,9 +874,9 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -935,9 +935,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Configuración de operación
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -977,16 +977,16 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Capacidad máxima de alimentación:</p>
                         <p>Hasta 60 Tph</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Cumplimiento con estándares de la industria
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1223,9 +1223,9 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Dimensiones de unidad
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1265,7 +1265,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength")?.toFixed(1) ?? ""} m`
@@ -1275,7 +1275,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth")?.toFixed(1) ?? ""} m`
@@ -1285,7 +1285,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight")?.toFixed(1) ?? ""} m`
@@ -1295,16 +1295,16 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Chasis y estructura
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1344,7 +1344,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
+                        <p>Longitud total (incluyendo quinta rueda):</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength")?.toFixed(1) ?? ""} m`
@@ -1354,11 +1354,11 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje:</h1>
+                        <p>Configuración del eje:</p>
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel")?.toFixed(1) ?? ""} m`
@@ -1368,7 +1368,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth")?.toFixed(1) ?? ""} m`
@@ -1378,7 +1378,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura para transporte:</h1>
+                        <p>Altura para transporte:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins")?.toFixed(1) ?? ""} m`
@@ -1392,9 +1392,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Opciones de tolvas
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1467,9 +1467,9 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Sistema de alimentación y dosificación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1535,9 +1535,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1626,9 +1626,9 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1716,9 +1716,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -1799,9 +1799,9 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1860,9 +1860,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Configuración de operación
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -1902,16 +1902,16 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Capacidad máxima de alimentación:</p>
                         <p>Hasta 120 TPH</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Cumplimiento con estándares de la industria
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2150,9 +2150,9 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Dimensiones de unidad
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2192,7 +2192,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength").toFixed(1)} m`
@@ -2200,7 +2200,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth").toFixed(1)} m`
@@ -2208,7 +2208,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight").toFixed(1)} m`
@@ -2216,16 +2216,16 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Chasis y estructura
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2265,7 +2265,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
+                        <p>Longitud total (incluyendo quinta rueda):</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} m`
@@ -2273,11 +2273,11 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje: </h1>
+                        <p>Configuración del eje: </p>
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} m`
@@ -2285,7 +2285,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth").toFixed(1)} m`
@@ -2293,7 +2293,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura para transporte:</h1>
+                        <p>Altura para transporte:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} m`
@@ -2304,9 +2304,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Opciones de tolvas
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -2383,9 +2383,9 @@ const BinPlanosSection = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Sistema de alimentación y dosificación
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the feeding and dosign system"
                           className="block md:hidden"
@@ -2452,9 +2452,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the durability and safety of the system"
                           className="block md:hidden"
@@ -2542,9 +2542,9 @@ const BinPlanosSection = () => {
                   >
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the control and the operation of the system"
                           className="block md:hidden"
@@ -2633,9 +2633,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           aria-label="See more about the portability"
                           className="block md:hidden"
@@ -2717,9 +2717,9 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more abou the components and electrical composition"
                         className="block md:hidden"
@@ -2779,9 +2779,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Configuración de operación
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the oprating configuration"
                         className="block md:hidden"
@@ -2822,16 +2822,16 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Capacidad máxima de alimentación:</p>
                         <p>Hasta 180 TPH</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Cumplimiento con estándares de la industria
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the compliance with industry standards"
                         className="block md:hidden"
@@ -3063,9 +3063,9 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Dimensiones de unidad
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the single unit dimensions"
                         className="block md:hidden"
@@ -3106,7 +3106,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength").toFixed(1)} m`
@@ -3114,7 +3114,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth").toFixed(1)} m`
@@ -3122,7 +3122,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight").toFixed(1)} m`
@@ -3130,16 +3130,16 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Chasis y estructura
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the Chassis and structure of the system"
                         className="block md:hidden"
@@ -3180,7 +3180,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
+                        <p>Longitud total (incluyendo quinta rueda):</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} m`
@@ -3188,11 +3188,11 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje:</h1>
+                        <p>Configuración del eje:</p>
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} m`
@@ -3200,7 +3200,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth").toFixed(1)} m`
@@ -3208,7 +3208,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura para transporte:</h1>
+                        <p>Altura para transporte:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} m`
@@ -3219,9 +3219,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Opciones de tolvas
-                      </h1>
+                      </h3>
                       <button
                         aria-label="See more about the Bin Options"
                         className="block md:hidden"
@@ -3295,9 +3295,9 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Sistema de alimentación y dosificación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3363,9 +3363,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3453,9 +3453,9 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3543,9 +3543,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -3626,9 +3626,9 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -3687,9 +3687,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Configuración de operación
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -3729,16 +3729,16 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Capacidad máxima de alimentación:</p>
                         <p>Hasta 240 TPH</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Cumplimiento con estándares de la industria
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -3977,9 +3977,9 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Dimensiones de unidad
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -4019,7 +4019,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength").toFixed(1)} m`
@@ -4027,7 +4027,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth").toFixed(1)} m`
@@ -4035,7 +4035,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight").toFixed(1)} m`
@@ -4043,16 +4043,16 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Chasis y estructura
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -4092,7 +4092,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
+                        <p>Longitud total (incluyendo quinta rueda):</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} m`
@@ -4100,11 +4100,11 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje:</h1>
+                        <p>Configuración del eje:</p>
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} m`
@@ -4112,7 +4112,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth").toFixed(1)} m`
@@ -4120,7 +4120,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura para transporte:</h1>
+                        <p>Altura para transporte:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} m`
@@ -4131,9 +4131,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Opciones de tolvas
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -4206,9 +4206,9 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Sistema de alimentación y dosificación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -4274,9 +4274,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -4364,9 +4364,9 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -4454,9 +4454,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -4537,9 +4537,9 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -4598,9 +4598,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Configuración de operación
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -4640,16 +4640,16 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Capacidad máxima de alimentación:</p>
                         <p>Hasta 300 TPH</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         Cumplimiento con estándares de la industria
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -4880,9 +4880,9 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Dimensiones de unidad
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -4922,7 +4922,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength").toFixed(1)} m`
@@ -4930,7 +4930,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth").toFixed(1)} m`
@@ -4938,7 +4938,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight").toFixed(1)} m`
@@ -4946,16 +4946,16 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Chasis y estructura
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -4995,7 +4995,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
+                        <p>Longitud total (incluyendo quinta rueda):</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} m`
@@ -5003,11 +5003,11 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje:</h1>
+                        <p>Configuración del eje:</p>
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} m`
@@ -5015,7 +5015,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth").toFixed(1)} m`
@@ -5023,7 +5023,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura para transporte:</h1>
+                        <p>Altura para transporte:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} m`
@@ -5034,9 +5034,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Opciones de tolvas
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -5109,9 +5109,9 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-start mt-10 md:mt-0 gap-0 md:gap-10 h-full w-full order-2 md:order-1">
                     <div className="flex flex-col items-start justify-center gap-4 text-white col-span-1">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Sistema de alimentación y dosificación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -5177,9 +5177,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Resistencia y seguridad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -5267,9 +5267,9 @@ const BinPlanosSection = () => {
                   <div className="flex flex-col items-start justify-between h-full col-span-1 w-full order-3 md:order-3">
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Control y operación
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -5357,9 +5357,9 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center gap-4 text-white">
                       <div className="w-full flex justify-between border-b border-b-white">
-                        <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                        <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                           Portabilidad
-                        </h1>
+                        </h3>
                         <button
                           className="block md:hidden"
                           onClick={() =>
@@ -5440,9 +5440,9 @@ const BinPlanosSection = () => {
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 justify-stretch items-start mt-0 md:mt-10">
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Componentes y sistema eléctrico
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -5501,9 +5501,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="flex flex-col justify-start gap-4 text-white col-span-2 px-0 md:px-36">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Configuración de operación
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -5543,16 +5543,16 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Capacidad máxima de alimentación:</h1>
+                        <p>Capacidad máxima de alimentación:</p>
                         <p>Hasta 360 TPH</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-start gap-4 text-white col-span-1">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Cumplimiento con estándares de la industria
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -5783,9 +5783,9 @@ const BinPlanosSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start w-full md:mt-10 md:gap-10">
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Dimensiones de unidad
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -5825,7 +5825,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud:</h1>
+                        <p>Longitud:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleLength", "singleLength").toFixed(1)} m`
@@ -5833,7 +5833,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho:</h1>
+                        <p>Ancho:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleWidth", "singleWidth").toFixed(1)} m`
@@ -5841,7 +5841,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura:</h1>
+                        <p>Altura:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("asingleHeight", "singleHeight").toFixed(1)} m`
@@ -5849,16 +5849,16 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Capacidad:</h1>
+                        <p>Capacidad:</p>
                         <p>20 tons</p>
                       </div>
                     </div>
                   </div>
                   <div className="text-white font-normal flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3 uppercase">
                         Chasis y estructura
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>
@@ -5898,7 +5898,7 @@ const BinPlanosSection = () => {
                       } md:max-h-full md:opacity-100 md:block`}
                     >
                       <div className="flex justify-between">
-                        <h1>Longitud total (incluyendo quinta rueda):</h1>
+                        <p>Longitud total (incluyendo quinta rueda):</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalLength", "totalLength").toFixed(1)} m`
@@ -5906,11 +5906,11 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Configuración del eje: </h1>
+                        <p>Configuración del eje: </p>
                         <p>Un eje</p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura de la quinta rueda:</h1>
+                        <p>Altura de la quinta rueda:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("awheel", "wheel").toFixed(1)} m`
@@ -5918,7 +5918,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Ancho total:</h1>
+                        <p>Ancho total:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("atotalWidth", "totalWidth").toFixed(1)} m`
@@ -5926,7 +5926,7 @@ const BinPlanosSection = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <h1>Altura para transporte:</h1>
+                        <p>Altura para transporte:</p>
                         <p>
                           {unit === "metric"
                             ? `${dim("aheightWithBins", "heightWithBins").toFixed(1)} m`
@@ -5937,9 +5937,9 @@ const BinPlanosSection = () => {
                   </div>
                   <div className="text-white font-normal col-span-1 md:col-span-2 flex flex-col gap-4">
                     <div className="w-full flex justify-between border-b border-b-white">
-                      <h1 className="font-bold lg:text-xl text-lg w-full pb-3">
+                      <h3 className="font-bold lg:text-xl text-lg w-full pb-3">
                         Opciones de tolvas
-                      </h1>
+                      </h3>
                       <button
                         className="block md:hidden"
                         onClick={() =>

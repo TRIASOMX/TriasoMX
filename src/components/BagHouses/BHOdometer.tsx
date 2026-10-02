@@ -86,7 +86,7 @@ const BHOdometer = () => {
           <div className="flex flex-col items-center justify-center">
             <div className="flex text-5xl lg:text-[5rem] md:text-[5rem] font-normal justify-center w-full lg:justify-start items-baseline ">
               <Odometer value={value2} format="(,ddd)" duration={2000} />
-              <h1>-</h1>
+              <p>-</p>
               <Odometer value={value3} format="(,ddd)" duration={2000} />
               <p className="text-sm font-normal ml-3">tph</p>
             </div>
@@ -116,9 +116,9 @@ const BHOdometer = () => {
 
       <div className="flex flex-col justify-center items-center py-10">
         <div>
-          <h1 className="text-2xl md:text-4xl font-bold">
+          <h2 className="text-2xl md:text-4xl font-bold">
             Cumplimiento total de las normas ecológicas
-          </h1>
+          </h2>
         </div>
         <div>
           <p className="font-thin text-[#393939] text-xl md:text-3xl">
