@@ -51,7 +51,7 @@ export default function ReliefFirstSection() {
                 className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center"
               >
                 <a
-                  href="/Contact"
+                  href="/contacto"
                   className="group inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-redBg bg-redBg px-7 py-2.5 text-sm font-semibold text-white transition-all duration-300 ease-out hover:scale-[1.03] hover:bg-transparent hover:text-redBg hover:shadow-lg sm:w-auto"
                 >
                   Solicitar demostración

@@ -9,39 +9,40 @@ export const menuItems = [
         children: [
           {
             title: "TAMBORES MEZCLADORES",
-            url: "/DrumMixers",
+            url: "/tambores-mezcladores/contraflujo-pro",
             children: [
               {
                 title: "CONTRAFLUJO",
                 children: [
                   {
                     title: "DESAMAQ",
-                    url: "/TamborMezcla/Contraflujo/ContraDesamaq",
+                    url: "/tambores-mezcladores/contraflujo-desamaq",
                   },
                   {
                     title: "PLUS",
-                    url: "/TamborMezcla/Contraflujo/ContraPlus",
+                    url: "/tambores-mezcladores/contraflujo-plus",
                   },
                   {
                     title: "PRO+",
-                    url: "/DrumMixers",
+                    url: "/tambores-mezcladores/contraflujo-pro",
                   },
                 ],
               },
               {
                 title: "FLUJO PARALELO",
+                url: "/tambores-mezcladores/paralelo-pro",
                 children: [
                   {
                     title: "DESAMAQ",
-                    url: "/TamborMezcla/Paralelo/ParaleloDesamaq",
+                    url: "/tambores-mezcladores/paralelo-desamaq",
                   },
                   {
                     title: "PLUS",
-                    url: "/TamborMezcla/Paralelo/ParaleloPlus",
+                    url: "/tambores-mezcladores/paralelo-plus",
                   },
                   {
                     title: "PRO+",
-                    url: "/TamborMezcla/Paralelo/ParaleloPro",
+                    url: "/tambores-mezcladores/paralelo-pro",
                   },
                 ],
               },
@@ -49,81 +50,81 @@ export const menuItems = [
           },
           {
             title: "CASAS DE BOLSAS (BAGHOUSES)",
-            url: "/BagHouses",
+            url: "/casas-bolsas",
           },
           {
             title: "TANQUES DE ASFALTO",
-            url: "/AsphaltStorage",
+            url: "/tanques-asfalto",
           },
           {
             title: "TOLVAS",
-            url: "/BinUnits",
+            url: "/tolvas",
             children: [
               {
                 title: "UNIDADES DE TOLVAS DE AGREGADOS",
-                url: "/BinUnits",
+                url: "/tolvas",
               },
               {
                 title: "UNIDAD DE TOLVAS DE RAP",
-                url: "/RapBins",
+                url: "/tolvas-rap",
               },
               {
                 title: "ALIMENTADORES DE ADITIVOS EN POLVO",
-                url: "/PowderAd",
+                url: "/alimentador-aditivo-polvo",
               },
             ],
           },
           {
             title: "SISTEMAS DE CALENTAMIENTO",
-            url: "/Burners",
+            url: "/quemadores",
             children: [
               {
                 title: "QUEMADORES",
-                url: "/Burners",
+                url: "/quemadores",
               },
               {
                 title: "PRECALENTADORES DE COMBUSTIBLE",
-                url: "/FuelPreHeaters",
+                url: "/precalentadores-combustible",
               },
               {
                 title: "CALDERAS",
-                url: "/OilHeaters",
+                url: "/caldera-adaptable",
               },
             ],
           },
           {
             title: "SILOS DE MEZCLA ASFÁLTICA",
-            url: "/HotMix",
+            url: "/silos-mezcla-asfaltica",
           },
           {
             title: "PLANTAS DE MEZCLADO EN FRÍO",
-            url: "/ColdMix",
+            url: "/mezcladora-frio",
           },
           {
             title: "PLANTAS DE ASFALTO DE 10 TPH INTEGRALES DE CONTRAFLUJO",
-            url: "/IntegralAphaltPlant",
+            url: "/planta-asfalto-10tph",
           },
           {
             title: "CASETA DE CONTROL",
             children: [
               {
                 title: "CASETAS MONTABLES",
-                url: "/Casetas/CasetaMontable",
+                url: "/casetas/caseta-montable",
               },
               {
                 title: "CASETAS REMOLCABLES",
-                url: "/Casetas/CasetasRemolcables",
+                url: "/casetas/casetas-remolcables",
               },
             ],
           },
-
-          {
-            title: "INCORPORADORES DE HULE",
-            url: "/IncorporadoresHule",
-          },
+          // Página aún no disponible
+          // {
+          //   title: "INCORPORADORES DE HULE",
+          //   url: "/IncorporadoresHule",
+          // },
           {
             title: "PLANTAS DE ASFALTO VIDEOS",
-            url: "/AsphaltPlantVideos",
+            url: "/videos-plantas-asfalto",
           },
         ],
       },
@@ -132,50 +133,40 @@ export const menuItems = [
         url: "/#",
         children: [
           {
-            title: "JAW CRUSHERS",
-            url: "/JawCrushers",
+            title: "TRITURADORA DE QUIJADA | MANDIBULA",
+            url: "/trituradora-quijada",
           },
           {
-            title: "CONE CRUSHERS",
-            url: "/ConeCrushers",
+            title: "TRITURADORA DE CONO",
+            url: "/trituradora-cono",
           },
           {
-            title: "INTEGRAL EQUIPPED CRUSHERS",
-            url: "/IntegralCrushers",
+            title: "TRITURADORA CON EQUIPAMIENTO INTEGRAL",
+            url: "/trituradora-integral",
           },
           {
-            title: "BALL MILLS",
-            url: "/BallMills",
+            title: "MOLINO DE BOLAS",
+            url: "/trituradora-molino",
           },
           {
-            title: "MINI CRUSHERS",
-            url: "/MiniCrushers",
+            title: "MINI TRITURADORA",
+            url: "/trituradora-mini",
           },
           {
-            title: "CONVEYORS",
-            url: "/BeltConveyors",
+            title: "TRANSPORTADORES DE CINTA",
+            url: "/trituradora-transportadores",
           },
           {
-            title: "FEEDERS",
-            url: "/",
-            children: [
-              {
-                title: "BELT FEEDERS",
-                url: "/BeltFeeders",
-              },
-              {
-                title: "VIBRATORY FEEDERS",
-                url: "/",
-              },
-            ],
+            title: "ALIMENTADORES DE BANDA",
+            url: "/trituradora-alimentadores",
           },
           {
-            title: "VIBRATORY SCREENS",
-            url: "/VibratingScreens",
+            title: "CRIBAS VIBRATORIAS",
+            url: "/criba-vibratoria",
           },
           {
             title: "TRITURADORAS VIDEOS",
-            url: "/Trituradoras",
+            url: "/trituradoras-videos",
           },
         ],
       },
@@ -187,19 +178,19 @@ export const menuItems = [
     children: [
       {
         title: "REFACCIONES",
-        url: "/Spare",
+        url: "/refacciones",
       },
       {
         title: "DISEÑO PERSONALIZADO",
-        url: "/CustomDesign",
+        url: "/diseno-personalizado",
       },
       {
         title: "MANTENIMIENTO",
-        url: "/Maintenance",
+        url: "/mantenimiento",
       },
       {
         title: "REHABILITACIÓN",
-        url: "/Rehabilitation",
+        url: "/rehabilitacion",
       },
     ],
   },
@@ -209,66 +200,66 @@ export const menuItems = [
     children: [
       {
         title: "NOSOTROS",
-        url: "/AboutUs",
+        url: "/nosotros",
       },
       {
-        title: "NEWS ROOM",
-        url: "/Newsroom",
+        title: "NEWSROOM",
+        url: "/newsroom",
       },
       {
         title: "VENTAJAS",
-        url: "/Advantages",
+        url: "/ventajas",
       },
       {
         title: "FLANCOS ESTÉTICOS",
-        url: "/AestheticSide",
+        url: "/flancos-esteticos",
       },
       {
         title: "MEJORA Y DISEÑO",
-        url: "/Improvement",
+        url: "/mejora-diseno",
       },
       {
         title: "FABRICACIÓN",
-        url: "/Manufacture",
+        url: "/fabricacion",
       },
       {
         title: "ENTREGA E INSTALACIÓN",
-        url: "/Delivery",
+        url: "/entrega-instalacion",
       },
       {
         title: "TIPS PARA COMPRAR UN EQUIPO",
-        url: "/TipsAsphalt",
+        url: "/consejos-planta-asfalto",
         children: [
           {
-            title: "ASPHALT PLANTS",
-            url: "/TipsAsphalt",
+            title: "PLANTAS DE ASFALTO",
+            url: "/consejos-planta-asfalto",
           },
         ],
       },
 
       {
-        title: "RAP RECYCLED ASPHALT PAVEMENT",
-        url: "/RapRecycled",
+        title: "RAP: PAVIMENTO DE ASFALTO RECICLADO",
+        url: "/rap",
       },
 
       {
         title: "EXPOS",
-        url: "/Expo",
+        url: "/expos",
       },
     ],
   },
   {
     title: "AUTOMATIZACIÓN",
-    url: "/",
+    url: "/triaso-relief",
     children: [
       {
         title: "TRIASO RELIEF",
-        url: "/Relief",
+        url: "/triaso-relief",
       },
     ],
   },
   {
     title: "CONTACTO",
-    url: "/Contact",
+    url: "/contacto",
   },
 ];

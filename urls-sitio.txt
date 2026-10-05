@@ -1,0 +1,72 @@
+URLs DEL SITIO TRIASO
+Generado a partir del build del 2026-10-05
+51 URLs con contenido + 1 redirect + página 404
+
+INICIO
+/
+
+PLANTAS DE ASFALTO
+/plantas-asfalto
+/tambores-mezcladores  (redirige a /tambores-mezcladores/contraflujo-pro)
+/tambores-mezcladores/contraflujo-desamaq
+/tambores-mezcladores/contraflujo-plus
+/tambores-mezcladores/contraflujo-pro
+/tambores-mezcladores/paralelo-desamaq
+/tambores-mezcladores/paralelo-plus
+/tambores-mezcladores/paralelo-pro
+/casas-bolsas
+/tanques-asfalto
+/tolvas
+/tolvas-rap
+/alimentador-aditivo-polvo
+/quemadores
+/precalentadores-combustible
+/caldera-adaptable
+/silos-mezcla-asfaltica
+/mezcladora-frio
+/planta-asfalto-10tph
+/casetas/caseta-montable
+/casetas/casetas-remolcables
+/videos-plantas-asfalto
+
+TRITURADORAS
+/trituradora-quijada
+/trituradora-cono
+/trituradora-integral
+/trituradora-molino
+/trituradora-mini
+/trituradora-transportadores
+/trituradora-alimentadores
+/criba-vibratoria
+/trituradoras-videos
+
+SERVICIO
+/refacciones
+/diseno-personalizado
+/mantenimiento
+/rehabilitacion
+
+ACERCA DE
+/nosotros
+/newsroom
+/noticias/plantas-asfalto-rap
+/noticias/menos-combustible
+/ventajas
+/flancos-esteticos
+/mejora-diseno
+/fabricacion
+/entrega-instalacion
+/consejos-planta-asfalto
+/rap
+/expos
+
+AUTOMATIZACIÓN
+/triaso-relief
+
+CONTACTO Y LEGALES
+/contacto
+/terminos-y-condiciones
+/politica-de-privacidad
+
+OTRAS
+404  (se muestra en cualquier URL que no exista)

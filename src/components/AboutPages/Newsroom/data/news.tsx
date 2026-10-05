@@ -1,8 +1,8 @@
 export const news = [
   {
-    id: "New-RAP-Recycled",
+    id: "plantas-asfalto-rap",
     title: "Plantas de asfalto reciclado RAP",
-    date: "2026-18-02",
+    date: "2026-02-18",
     image: "/images/News/RAPrecycle.webp",
 
     content: `
@@ -172,10 +172,10 @@ El uso de WMA debe alinearse correctamente con las prácticas del HMA: las tempe
     `,
   },
   {
-    id: "Nuevo: Menos combustible",
+    id: "menos-combustible",
     title:
       "¿Por qué nuestras plantas de asfalto consumen menos combustible que las de cualquier otra marca?",
-    date: "2026-17-02",
+    date: "2026-02-17",
     image: "/images/News/PlaC Quemador.webp",
     content: `
       <div>

@@ -14,7 +14,7 @@ const OdometerDesamaq = () => {
   const [, setValue4] = useState(0);
   const [value5, setValue5] = useState(0);
   const [value6, setValue6] = useState(0);
-  const [value7, setValue7] = useState(0);
+  const [, setValue7] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

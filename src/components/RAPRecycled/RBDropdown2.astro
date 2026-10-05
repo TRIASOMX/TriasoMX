@@ -1640,29 +1640,28 @@ const items = [
 <script>
   let index = 0;
   const slider = document.getElementById("slider");
-  const total = slider.children.length;
 
-  function moveSlider() {
-    slider.style.transform = `translateX(-${index * 10}%)`;
+  if (slider) {
+    const track: HTMLElement = slider;
+    const total = track.children.length;
+
+    function moveSlider() {
+      track.style.transform = `translateX(-${index * 10}%)`;
+    }
+
+    function next() {
+      index = (index + 1) % total;
+      moveSlider();
+    }
+
+    function prev() {
+      index = (index - 1 + total) % total;
+      moveSlider();
+    }
+
+    document.getElementById("next")?.addEventListener("click", next);
+    document.getElementById("prev")?.addEventListener("click", prev);
+    document.getElementById("next-mobile")?.addEventListener("click", next);
+    document.getElementById("prev-mobile")?.addEventListener("click", prev);
   }
-
-  document.getElementById("next").addEventListener("click", () => {
-    index = (index + 1) % total;
-    moveSlider();
-  });
-
-  document.getElementById("prev").addEventListener("click", () => {
-    index = (index - 1 + total) % total;
-    moveSlider();
-  });
-
-  document.getElementById("next-mobile").addEventListener("click", () => {
-    index = (index + 1) % total;
-    moveSlider();
-  });
-
-  document.getElementById("prev-mobile").addEventListener("click", () => {
-    index = (index - 1 + total) % total;
-    moveSlider();
-  });
 </script>

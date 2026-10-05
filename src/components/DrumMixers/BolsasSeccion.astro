@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import TwoColumnSection from "../unitComponents/TwoColumnSection.astro";
 import baghouse from "../../assets/images/DrumMixers/Low/bagHouses1Low.webp";
-import GridBolsas from "./GridBolsas";
+import GridBolsas, { type GridItem } from "./GridBolsas";
 import CardEmergente from "./CardEmergente.astro";
 import Tred from "../../assets/images/AsphaltStorage/redT.webp";
 import LearnBtnBlue from "../unitComponents/LearnBtnBlue.astro";
@@ -15,7 +15,7 @@ import Semarnat1 from "../../assets/images/DrumMixers/semarnat1.webp";
 import Semarnat2 from "../../assets/images/DrumMixers/semarnat2.webp";
 import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
 
-const gridItems = [
+const gridItems: GridItem[] = [
   {
     title: "Sistema de extracción de gases silencioso",
     description:

@@ -259,14 +259,15 @@ import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
   const dotsContainer = document.getElementById("slider-dots");
 
   if (slider && dotsContainer) {
-    const slidesCount = slider.children.length;
+    const track: HTMLElement = slider;
+    const slidesCount = track.children.length;
     const dots = Array.from(dotsContainer.children);
     let index = 0;
-    let resumeTimeout;
+    let resumeTimeout: ReturnType<typeof setTimeout> | undefined;
     let interval = setInterval(moveSlider, 3000);
 
     // 1. Función para actualizar visualmente los puntos
-    function updateDots(activeIndex) {
+    function updateDots(activeIndex: number) {
       dots.forEach((dot, i) => {
         if (i === activeIndex) {
           // Clases para el punto activo (más blanco y un poco más ancho)
@@ -280,10 +281,10 @@ import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
 
     function moveSlider() {
       index = (index + 1) % slidesCount;
-      const slideWidth = slider.children[0].offsetWidth;
-      const gap = parseFloat(getComputedStyle(slider).gap) || 0;
+      const slideWidth = (track.children[0] as HTMLElement).offsetWidth;
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
 
-      slider.scrollTo({
+      track.scrollTo({
         left: (slideWidth + gap) * index,
         behavior: "smooth",
       });
@@ -291,12 +292,12 @@ import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
       updateDots(index);
     }
 
-    slider.addEventListener(
+    track.addEventListener(
       "scroll",
       () => {
-        const slideWidth = slider.children[0].offsetWidth;
-        const gap = parseFloat(getComputedStyle(slider).gap) || 0;
-        const currentIndex = Math.round(slider.scrollLeft / (slideWidth + gap));
+        const slideWidth = (track.children[0] as HTMLElement).offsetWidth;
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        const currentIndex = Math.round(track.scrollLeft / (slideWidth + gap));
 
         if (currentIndex !== index) {
           index = currentIndex;
@@ -315,7 +316,7 @@ import ScheduleBtn from "../unitComponents/ScheduleBtn.astro";
       }, 2000);
     }
 
-    slider.addEventListener("touchstart", pauseAutoplay, { passive: true });
+    track.addEventListener("touchstart", pauseAutoplay, { passive: true });
     updateDots(index);
   }
 </script>

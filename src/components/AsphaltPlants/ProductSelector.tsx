@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import {
   Truck,
   CalendarClock,
-  Clock,
-  PackageCheck,
   Workflow,
 } from "lucide-react";
 import { gsap } from "gsap";
@@ -164,7 +162,7 @@ const data: Record<PlantType, PlantData> = {
       {
         name: "Desamaq",
         image: p1.src,
-        route: "/TamborMezcla/Contraflujo/ContraDesamaq",
+        route: "/tambores-mezcladores/contraflujo-desamaq",
         description: (
           <>
             Una <span className="text-black">opción más económica</span> con
@@ -205,7 +203,7 @@ const data: Record<PlantType, PlantData> = {
       {
         name: "Plus",
         image: p2.src,
-        route: "/TamborMezcla/Contraflujo/ContraPlus",
+        route: "/tambores-mezcladores/contraflujo-plus",
         description: (
           <>
             Diseñada para un
@@ -250,7 +248,7 @@ const data: Record<PlantType, PlantData> = {
             operación sin comparación.
           </>
         ),
-        route: "/DrumMixers",
+        route: "/tambores-mezcladores/contraflujo-pro",
         specs: [
           { label: "Capacidad", value: "20 ton" },
           { label: "Garantía", value: "24 meses" },
@@ -489,7 +487,7 @@ const data: Record<PlantType, PlantData> = {
       {
         name: "Desamaq",
         image: p4.src,
-        route: "/TamborMezcla/Paralelo/ParaleloDesamaq",
+        route: "/tambores-mezcladores/paralelo-desamaq",
         description: (
           <>
             Una opción
@@ -531,7 +529,7 @@ const data: Record<PlantType, PlantData> = {
       {
         name: "Plus",
         image: p5.src,
-        route: "/TamborMezcla/Paralelo/ParaleloPlus",
+        route: "/tambores-mezcladores/paralelo-plus",
         description: (
           <>
             Diseñada para un
@@ -569,7 +567,7 @@ const data: Record<PlantType, PlantData> = {
       {
         name: "Pro+",
         image: p6.src,
-        route: "/TamborMezcla/Paralelo/ParaleloPro",
+        route: "/tambores-mezcladores/paralelo-pro",
         description: (
           <>
             Nuestro modelo más

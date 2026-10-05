@@ -657,58 +657,58 @@ import LearnBtn from "../unitComponents/LearnBtn.astro";
     const nextBtn = document.getElementById("nextBtn");
     const prevBtn = document.getElementById("prevBtn");
 
-    const originalCards = Array.from(track.children);
+    if (track && nextBtn && prevBtn) {
+        const sliderTrack: HTMLElement = track;
+        const originalCards = Array.from(sliderTrack.children);
 
-    
-    originalCards.forEach((card) => {
-        const clone = card.cloneNode(true);
-        track.appendChild(clone);
-    });
+        originalCards.forEach((card) => {
+            const clone = card.cloneNode(true);
+            sliderTrack.appendChild(clone);
+        });
 
-    
-    [...originalCards].reverse().forEach((card) => {
-        const clone = card.cloneNode(true);
-        track.prepend(clone);
-    });
+        [...originalCards].reverse().forEach((card) => {
+            const clone = card.cloneNode(true);
+            sliderTrack.prepend(clone);
+        });
 
-    const cards = track.children;
+        const cards = sliderTrack.children;
 
-    let currentIndex = originalCards.length;
+        let currentIndex = originalCards.length;
 
-    function updateSlider(animate = true) {
-        const cardWidth = cards[0].offsetWidth + 16;
+        function updateSlider(animate = true) {
+            const cardWidth = (cards[0] as HTMLElement).offsetWidth + 16;
 
-        track.style.transition = animate
-            ? "transform 0.5s ease-in-out"
-            : "none";
+            sliderTrack.style.transition = animate
+                ? "transform 0.5s ease-in-out"
+                : "none";
 
-        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            sliderTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+
+        updateSlider(false);
+
+        nextBtn.addEventListener("click", () => {
+            currentIndex++;
+            updateSlider();
+
+            if (currentIndex >= originalCards.length * 2) {
+                setTimeout(() => {
+                    currentIndex = originalCards.length;
+                    updateSlider(false);
+                }, 500);
+            }
+        });
+
+        prevBtn.addEventListener("click", () => {
+            currentIndex--;
+            updateSlider();
+
+            if (currentIndex <= 0) {
+                setTimeout(() => {
+                    currentIndex = originalCards.length;
+                    updateSlider(false);
+                }, 500);
+            }
+        });
     }
-
-    
-    updateSlider(false);
-
-    nextBtn.addEventListener("click", () => {
-        currentIndex++;
-        updateSlider();
-
-        if (currentIndex >= originalCards.length * 2) {
-            setTimeout(() => {
-                currentIndex = originalCards.length;
-                updateSlider(false);
-            }, 500);
-        }
-    });
-
-    prevBtn.addEventListener("click", () => {
-        currentIndex--;
-        updateSlider();
-
-        if (currentIndex <= 0) {
-            setTimeout(() => {
-                currentIndex = originalCards.length;
-                updateSlider(false);
-            }, 500);
-        }
-    });
 </script>

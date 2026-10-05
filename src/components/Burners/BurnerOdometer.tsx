@@ -2,7 +2,6 @@ import { useEffect, useState, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 import img1 from "../../assets/images/DrumMixers/Contraflujo/Pro+/Plasma.webp";
-import FillLinkButton from "../unitComponents/FillLinkButton";
 
 const BurnerOdometer = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
