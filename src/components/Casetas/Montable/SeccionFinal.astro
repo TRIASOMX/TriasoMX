@@ -92,7 +92,7 @@ const slides = [
         </div>
         <div class="w-full hidden lg:flex md:w-auto">
           <Image
-            src="https://placehold.co/600x400/png"
+            src={casetaG1}
             width={600}
             height={400}
             alt="Baghouse cleaning system"
@@ -105,7 +105,7 @@ const slides = [
 </section>
 
 <section>
-  <Slider slides={slides} dark={true} />
+  <Slider slides={slides} dark={true} client:only />
   <div class="max-w-7xl mx-auto px-0 md:px-8">
     <div class="relative w-full rounded-2xl overflow-hidden px-8 min-h-[350px]">
       <img

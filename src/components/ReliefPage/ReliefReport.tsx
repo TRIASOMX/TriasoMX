@@ -83,6 +83,9 @@ export default function ReliefReport() {
       const done = new Set<number>();
       let travel = 0;
       let payoffStart = 0.85;
+      // Progreso en el que el footer cruza la línea de lectura (antes del zoom out).
+      let payoffAt = 0.83;
+      let payoffShown = false;
       let fitScale = 1;
       let yEnd = 0;
       let startY = 0;
@@ -96,8 +99,21 @@ export default function ReliefReport() {
           gsap.set(s, { autoAlpha: 0, clipPath: "inset(0 0 100% 0)", y: 26 }),
         );
         gsap.set(sheet, { transformOrigin: "top center", y: startY, scale: 1 });
-        gsap.set(payoff, { autoAlpha: 0 });
+        gsap.set(payoff, { autoAlpha: 0, y: 16 });
+        payoffShown = false;
         gsap.set([topFade, botFade], { autoAlpha: 1 });
+      };
+
+      const togglePayoff = (show: boolean) => {
+        if (show === payoffShown) return;
+        payoffShown = show;
+        gsap.to(payoff, {
+          autoAlpha: show ? 1 : 0,
+          y: show ? 0 : 16,
+          duration: show ? 0.6 : 0.3,
+          ease: show ? "expo.out" : "power2.out",
+          overwrite: true,
+        });
       };
 
       const reveal = (i: number) => {
@@ -215,6 +231,11 @@ export default function ReliefReport() {
             (s.offsetTop + startY - readLine) / travel,
           );
         });
+        payoffAt = gsap.utils.clamp(
+          0,
+          payoffStart - 0.02,
+          (payoff.offsetTop + startY - readLine) / travel,
+        );
       };
 
       setInitial();
@@ -241,7 +262,7 @@ export default function ReliefReport() {
               scale: 1,
             });
             gsap.set([topFade, botFade], { autoAlpha: 1 });
-            gsap.set(payoff, { autoAlpha: 0 });
+            togglePayoff(p >= payoffAt);
             stratumAt.forEach((sp, i) => {
               if (p >= sp) reveal(i);
             });
@@ -255,7 +276,7 @@ export default function ReliefReport() {
               scale: gsap.utils.interpolate(1, fitScale, e),
             });
             gsap.set([topFade, botFade], { autoAlpha: 1 - e });
-            gsap.set(payoff, { autoAlpha: e });
+            togglePayoff(true);
           }
         },
       });
@@ -630,7 +651,7 @@ export default function ReliefReport() {
                   </ul>
                 </div>
                 <p className="rmr-mark mt-4 text-base font-semibold tabular-nums md:text-lg">
-                  Mezcla total entregada: 1 262 T
+                  Mezcla total entregada: 148 T
                 </p>
               </section>
 

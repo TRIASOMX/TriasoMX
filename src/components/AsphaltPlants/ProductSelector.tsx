@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  Truck,
-  CalendarClock,
-  Workflow,
-} from "lucide-react";
+import { Truck, CalendarClock, Workflow } from "lucide-react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 
@@ -1149,14 +1145,14 @@ export default function ProductSelector() {
                 setExpandedSections({});
               }}
               className={cn(
-                "w-full relative rounded-xl px-6 pt-10 md:pt-20 pb-4 md:pb-6 text-left transition-all duration-300 border-2 cursor-pointer group",
+                "w-full relative rounded-xl mt-4 px-6 pt-10 md:pt-20 pb-4 md:pb-6 text-left transition-all duration-300 border-2 cursor-pointer group",
                 isActive
                   ? "bg-[#14427c] border-[#14427c] text-white shadow-lg"
                   : "border-border bg-card hover:border-industrial-accent/40 hover:shadow-md",
               )}
             >
               {/* Imagen flotante */}
-              <div className="absolute -top-16 md:-top-36 left-1/2 -translate-x-1/2 z-10 w-[70%] md:w-[88%]">
+              <div className="absolute -top-24 md:-top-36 left-1/2 -translate-x-1/2 z-10 w-[70%] md:w-[88%]">
                 <img
                   src={item.image}
                   alt={item.title}

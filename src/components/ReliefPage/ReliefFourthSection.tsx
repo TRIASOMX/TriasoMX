@@ -311,7 +311,7 @@ export default function ReliefFourthSection() {
             <h2
               data-reveal="up"
               data-mreveal
-              className="text-2xl font-bold md:text-4xl text-grisT text-start leading-loose"
+              className="text-2xl font-bold md:text-4xl text-grisT text-start leading-tight md:leading-normal"
             >
               Con nuestro sistema, su planta no depende de operadores
               "indispensables"

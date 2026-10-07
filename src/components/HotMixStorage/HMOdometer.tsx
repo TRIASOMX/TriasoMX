@@ -92,7 +92,7 @@ const HMOdometer = () => {
           </div>
         </div>
 
-        <div className="flex justify-center md:hidden">
+        <div className="flex justify-center md:hidden mt-4">
           <FillLinkButton href="#planosSilos" />
         </div>
       </div>

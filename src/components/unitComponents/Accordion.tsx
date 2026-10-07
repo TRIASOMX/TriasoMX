@@ -35,7 +35,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content }) => {
         style={{ maxHeight: height }}
         className="overflow-hidden transition-all duration-500 ease-in-out"
       >
-        <div className="p-2 md:p-4 text-black font-thin text-sm md:text-lg">
+        <div className="p-2 pl-4 md:p-4 text-black font-thin text-sm md:text-lg">
           {content}
         </div>
       </div>

@@ -81,7 +81,7 @@ const CARDS: CardData[] = [
     scrollWeight: 0.8,
     content: (
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 pt-20">
-        <h2 className="text-2xl md:text-5xl font-bold tracking-tight mb-4 lg:mb-6">
+        <h2 className="text-xl md:text-5xl font-bold tracking-tight mb-4 lg:mb-6">
           Desde 10 hasta 600 Tph
         </h2>
         <p className="text-sm md:text-2xl">
@@ -149,10 +149,10 @@ const CARDS: CardData[] = [
           <h2 className="text-2xl md:text-6xl italic mb-4 lg:mb-6 text-white">
             Con <span className="font-bold">Triaso</span>
           </h2>
-          <p className="text-white text-sm md:text-2xl text-right">
+          <p className="text-white text-sm md:text-2xl text-start">
             conviértase en el proveedor preferido de mezcla asfáltica
           </p>
-          <p className="text-white text-sm md:text-2xl text-right">
+          <p className="text-white text-sm md:text-2xl text-start">
             para todos los proyectos de pavimentación en su región
           </p>
         </div>
@@ -193,21 +193,8 @@ const CARDS: CardData[] = [
         <div className="space-y-2 lg:space-y-4 text-white mt-2 md:mt-4 text-sm sm:text-base">
           <p className="font-bold text-xs md:text-xl">
             Producimos la mayoría de los componentes directamente — no
-            dependemos de subcontratistas, con lo que usted obtiene ventajas
-            significativas:
+            dependemos de subcontratistas.
           </p>
-          <ul className="list-disc pl-5 text-xs md:text-xl space-y-1">
-            <li>Precios directo de fábrica</li>
-            <li>
-              Técnicos que estuvieron presentes en la fabricación del equipo y
-              lo conocen perfectamente.
-            </li>
-            <li>
-              Personalización para adaptarse a las necesidades específicas de
-              cada cliente.
-            </li>
-            <li>Disponibilidad inmediata de refacciones.</li>
-          </ul>
         </div>
         <Tagline word="PRODUCTIVA" light />
       </div>

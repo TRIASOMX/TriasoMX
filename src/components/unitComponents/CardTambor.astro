@@ -20,7 +20,7 @@ const { image, title, description } = Astro.props;
     />
   </div>
   <div
-    class="dark-overlay absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 transition-opacity duration-300 pointer-events-none"
+    class="dark-overlay absolute inset-0 bg-gradient-to-t from-black via-black/75 to-black/30 opacity-0 transition-opacity duration-300 pointer-events-none"
   >
   </div>
   <div
@@ -52,7 +52,7 @@ const { image, title, description } = Astro.props;
     <div
       class="expandible max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"
     >
-      <p class="text-white/75 text-xs leading-relaxed mt-2">
+      <p class="text-white/75 text-xs leading-snug mt-2">
         {typeof description === "string" ? (
           description
         ) : (
