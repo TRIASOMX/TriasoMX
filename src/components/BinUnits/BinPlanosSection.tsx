@@ -303,12 +303,12 @@ const BinPlanosSection = () => {
   ];
 
   const modelOptions = [
-    { id: 1, label: "1 UNIDAD" },
-    { id: 2, label: "2 UNIDADES" },
-    { id: 3, label: "3 UNIDADES" },
-    { id: 4, label: "4 UNIDADES" },
-    { id: 5, label: "5 UNIDADES" },
-    { id: 6, label: "6 UNIDADES" },
+    { id: 1, label: "1 TOLVA" },
+    { id: 2, label: "2 TOLVAS" },
+    { id: 3, label: "3 TOLVAS" },
+    { id: 4, label: "4 TOLVAS" },
+    { id: 5, label: "5 TOLVAS" },
+    { id: 6, label: "6 TOLVAS" },
   ];
 
   useClipPathScrollTrigger({

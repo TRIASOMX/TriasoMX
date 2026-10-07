@@ -2,42 +2,42 @@ export const videosRock = [
   {
     id: 1,
     videoId: "qc65wI0Fhiw",
-    title: "3' cone crusher with screen and closed circuit with grizzly feeder",
-    description: "2016 model",
+    title: "Trituradora de cono de 3' con criba y circuito cerrado, con alimentador de parrilla (grizzly)",
+    description: "Modelo 2016",
   },
   {
     id: 2,
     videoId: "91Bl37rOj-Y",
     title:
-      '30\" x 42\" jaw crusher with grizzly duster, with 4.25\" cone crusher with screen and closed circuit',
-    description: "2016 model",
+      'Trituradora de quijada de 30\" x 42\" con desempolvador de parrilla (grizzly), con trituradora de cono de 4.25\" con criba y circuito cerrado',
+    description: "Modelo 2016",
   },
   {
     id: 3,
     videoId: "N67q6vEByYs",
     title:
-      '24" x 36" jaw crusher with 4.25" cone crusher with screen and closed circuit',
-    description: "2013 model",
+      'Trituradora de quijada de 24" x 36" con trituradora de cono de 4.25" con criba y circuito cerrado',
+    description: "Modelo 2013",
   },
   {
     id: 4,
     videoId: "Fn6ak5iXBMY",
     title:
-      '30\" x 42\" jaw crusher with 3\" cone crusher with screen and closed circuit',
-    description: "2011 model",
+      'Trituradora de quijada de 30\" x 42\" con trituradora de cono de 3\" con criba y circuito cerrado',
+    description: "Modelo 2011",
   },
   {
     id: 5,
     videoId: "Gl67sWihprQ",
     title:
-      '30\" x 42\" jaw crusher with 3\" cone crusher with screen and closed circuit',
-    description: "2011 model",
+      'Trituradora de quijada de 30\" x 42\" con trituradora de cono de 3\" con criba y circuito cerrado',
+    description: "Modelo 2011",
   },
   {
     id: 6,
     videoId: "s8JoUHTEvWU",
     title:
-      "4.25' cone crusher with screen and closed circuit with feeder and dust collector",
-    description: "2010 model",
+      "Trituradora de cono de 4.25' con criba y circuito cerrado, con alimentador y colector de polvo",
+    description: "Modelo 2010",
   },
 ];

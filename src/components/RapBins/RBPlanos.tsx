@@ -137,8 +137,8 @@ const RBPlanos = () => {
   ];
 
   const modelOptions = [
-    { id: 1, label: "1 UNIDAD" },
-    { id: 2, label: "2 UNIDADES" },
+    { id: 1, label: "1 TOLVA" },
+    { id: 2, label: "2 TOLVAS" },
   ];
 
   useClipPathScrollTrigger({

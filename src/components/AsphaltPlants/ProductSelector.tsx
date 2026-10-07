@@ -7,7 +7,8 @@ import {
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 
-gsap.registerPlugin(SplitText);
+// Solo en el navegador: en el SSR de Astro no hay window.
+if (typeof window !== "undefined") gsap.registerPlugin(SplitText);
 
 //Contraflujo
 import p1 from "../../assets/images/DrumMixers/Contraflujo/CDesamac.webp";

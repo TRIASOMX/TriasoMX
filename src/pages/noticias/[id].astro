@@ -9,9 +9,19 @@ export async function getStaticPaths() {
 }
 
 const { item } = Astro.props;
+
+// Extracto para la meta descripción: contenido sin HTML, ~155 caracteres.
+const plainText = item.content.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+const description =
+  plainText.length > 155 ? `${plainText.slice(0, 152).trimEnd()}…` : plainText;
 ---
 
-<Layout>
+<Layout
+  title={`${item.title} | TRIASO`}
+  description={description}
+  image={item.image}
+  type="article"
+>
   <section class="max-w-4xl mx-auto px-6 py-20">
     <img
       src={item.image}

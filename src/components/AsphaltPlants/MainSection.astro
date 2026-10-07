@@ -5,7 +5,7 @@ import Configuraciones from "./Configuraciones.astro";
 import UltimaSeccion from "./UltimaSeccion.astro";
 ---
 
-<CardSection client:only />
-<ProductSelector client:only />
+<CardSection client:load />
+<ProductSelector client:visible />
 <Configuraciones />
 <UltimaSeccion />

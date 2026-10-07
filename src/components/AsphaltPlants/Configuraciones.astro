@@ -134,42 +134,58 @@ const configuraciones: ConfigItem[] = [
   <section
     class="w-full bg-[url('/fondopatron.webp')] bg-repeat bg-top bg-black py-16"
   >
-    <div
-      class="max-w-screen-2xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
-    >
-      <div class="text-white">
-        <h2 class="text-3xl md:text-5xl leading-loose">
-          Su mejor negocio empieza con una
-          <span class="font-bold">planta de asfalto</span>
-        </h2>
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-8">
+      <h2 class="text-white text-3xl md:text-5xl leading-loose mb-10">
+        Su mejor negocio empieza con una<br />
+        <span class="font-bold">planta de asfalto</span>
+      </h2>
 
-        <p class="mt-6 text-lg md:text-xl font-semibold">
-          Su forma de trabajar define su utilidad. <br /> Usted puede:
-        </p>
-        <ul class="mt-3 space-y-1 text-base md:text-lg list-disc list-inside">
-          <li>Comprar la mezcla a otro productor.</li>
-          <li>Producirla con una planta vieja.</li>
-          <li>Producirla con una planta nueva.</li>
-        </ul>
-        <p class="mt-4 text-base md:text-lg">
-          Ninguna de las tres deja la misma utilidad al terminar. El buen
-          negocio no está en el tendido de la carpeta, está en la producción de
-          la mezcla.
-        </p>
-        <div class="w-full mt-8 flex items-center lg:items-start">
-          <Whatsbtn />
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 items-center">
+        <div class="text-white lg:col-span-1">
+          <p class="text-lg md:text-xl font-semibold">
+            Su forma de trabajar define su utilidad. <br /> Usted puede:
+          </p>
+          <ul class="mt-3 space-y-1 text-base md:text-lg list-disc list-inside">
+            <li>Comprar la mezcla a otro productor.</li>
+            <li>Producirla con una planta vieja.</li>
+            <li>Producirla con una planta nueva.</li>
+          </ul>
+          <p class="mt-4 text-base md:text-lg">
+            Ninguna de las tres deja la misma utilidad al terminar. El buen
+            negocio no está en el tendido de la carpeta, está en la producción de
+            la mezcla.
+          </p>
+          <div class="w-full mt-8 flex items-center lg:items-start">
+            <Whatsbtn />
+          </div>
         </div>
-      </div>
 
-      <div class="grid grid-cols-2 grid-rows-2 gap-3 h-[400px] md:h-[550px]">
-        <div class="rounded-lg overflow-hidden">
-          <img src={neg2.src} alt="" class="w-full h-full object-cover" />
-        </div>
-        <div class="row-span-2 rounded-lg overflow-hidden">
-          <img src={neg1.src} alt="" class="w-full h-full object-cover" />
-        </div>
-        <div class="rounded-lg overflow-hidden">
-          <img src={neg3.src} alt="" class="w-full h-full object-cover" />
+        <!-- La imagen grande define la altura con su proporción (completa);
+             las dos de la izquierda se ajustan a ella. En móvil va arriba. -->
+        <div
+          class="lg:col-span-3 grid grid-cols-2 md:grid-cols-[1fr_2fr] md:grid-rows-2 gap-3"
+        >
+          <div
+            class="relative order-2 md:order-none aspect-video md:aspect-auto rounded-lg overflow-hidden"
+          >
+            <img src={neg2.src} alt="" class="absolute inset-0 w-full h-full object-cover" />
+          </div>
+          <div
+            class="order-1 md:order-none col-span-2 md:col-span-1 md:row-span-2 rounded-lg overflow-hidden"
+          >
+            <img
+              src={neg1.src}
+              alt=""
+              width={neg1.width}
+              height={neg1.height}
+              class="block w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="relative order-3 md:order-none aspect-video md:aspect-auto rounded-lg overflow-hidden"
+          >
+            <img src={neg3.src} alt="" class="absolute inset-0 w-full h-full object-cover" />
+          </div>
         </div>
       </div>
     </div>

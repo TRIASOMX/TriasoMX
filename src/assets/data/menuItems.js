@@ -153,7 +153,7 @@ export const menuItems = [
             url: "/trituradora-mini",
           },
           {
-            title: "TRANSPORTADORES DE CINTA",
+            title: "TRANSPORTADORES DE BANDA",
             url: "/trituradora-transportadores",
           },
           {

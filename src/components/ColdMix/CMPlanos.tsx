@@ -318,8 +318,8 @@ const CMPlanos = () => {
   });
 
   const binUnitOptions = [
-    { id: 2, label: "2 UNIDADES" },
-    { id: 3, label: "3 UNIDADES" },
+    { id: 2, label: "2 TOLVAS" },
+    { id: 3, label: "3 TOLVAS" },
   ];
 
   const dischargeOptions = [
@@ -1612,7 +1612,7 @@ const CMPlanos = () => {
                       } md:max-h-full md:opacity-100 `}
                     >
                       <div className="flex justify-between">
-                        <p>Ancho de la cinta de alimentación:</p>
+                        <p>Ancho de la banda de alimentación:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.feeding ?? 0) / 100).toFixed(2)} m`
@@ -1620,7 +1620,7 @@ const CMPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <p>Ancho de la cinta colectora: </p>
+                        <p>Ancho de la banda colectora: </p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} m`
@@ -2598,7 +2598,7 @@ const CMPlanos = () => {
                         </p>
                       </div>
                       <div className="flex justify-between">
-                        <p>Ancho de la cinta de alimentación:</p>
+                        <p>Ancho de la banda de alimentación:</p>
                         <p>
                           {unit === "metric"
                             ? `${((activeData?.dimensions.collector ?? 0) / 100).toFixed(2)} m`

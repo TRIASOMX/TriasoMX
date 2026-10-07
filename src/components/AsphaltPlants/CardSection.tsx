@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import render from "../../assets/images/AsphaltPlant/render.webp";
 
@@ -49,7 +49,8 @@ const items = [
   },
 ];
 
-gsap.registerPlugin(ScrollTrigger);
+// Solo en el navegador: en el SSR de Astro no hay window.
+if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 
 interface CardData {
   bg: string;
@@ -313,6 +314,8 @@ export default function DominoCards() {
                 if (el) cardRefs.current[index] = el;
               }}
               className="stack-card absolute left-0 w-full h-full"
+              // Antes de hidratar: solo la primera visible; GSAP sobrescribe el transform.
+              style={index > 0 ? { transform: "translateY(100vh)" } : undefined}
               data-index={index}
             >
               <div

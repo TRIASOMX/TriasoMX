@@ -11,8 +11,17 @@
 | S-5 — Un solo `<h1>` por página | ✅ Resuelto (sin commit) | 2026-09-28 | 1,696 `<h1>` convertidos en 137 archivos; ver detalle en S-5 |
 | S-2 — Idioma declarado | ✅ Resuelto (sin commit) | 2026-09-28 | `lang="es-MX"` en el Layout; páginas legales traducidas al español |
 | P-3 — `@react-pdf/renderer` en el bundle inicial | ✅ Resuelto (sin commit) | 2026-09-28 | Import dinámico al descargar; chunk de la calculadora 1,516 KB → 23 KB |
+| B-7 — Página 404 | ✅ Resuelto (commit `c2e874d`) | 2026-10-02 | `src/pages/404.astro` con Layout y enlaces rápidos; falta `noindex` |
+| B-1 — El build falla en Windows | ✅ Resuelto (sin commit) | 2026-10-05 | Slugs de noticias limpios y ruta `/noticias`; el build genera las 52 páginas |
+| S-8 — URLs y rutas | ✅ Resuelto en su mayoría (sin commit) | 2026-10-05 | Todas las rutas en kebab-case español; `/Example` eliminada; falta `trailingSlash` |
+| S-7 — Enlaces internos rotos | ✅ Resuelto (sin commit) | 2026-10-05 | 0 enlaces rotos en todo `src/` |
+| B-2 — Errores de TypeScript | ✅ Resuelto (sin commit) | 2026-10-05 | `astro check`: 0 errores, 0 advertencias |
+| S-1 — Metadatos SEO en el Layout | ✅ Resuelto con pendientes (sin commit) | 2026-10-05 | Canonical, robots, OG, Twitter y theme-color; dominio e imagen OG provisionales; falta favicon de marca |
+| S-6 — `client:only` en /plantas-asfalto | 🟡 Parcial (sin commit) | 2026-10-05 | CardSection y ProductSelector ahora con SSR; texto en el HTML 2,776 → 6,775 caracteres; falta revisión visual y el resto del sitio |
 
 Las puntuaciones y cifras del resumen reflejan el estado **antes** de las correcciones.
+
+> **Rutas renombradas (2026-10-05):** todas las URLs pasaron de PascalCase en inglés a kebab-case en español (p. ej. `/AsphaltPlant` → `/plantas-asfalto`, `/DrumMixers` → `/tambores-mezcladores/contraflujo-pro`). Los diagnósticos originales de este documento conservan los nombres viejos; la lista completa de URLs actuales está en `urls-sitio.txt`.
 
 ---
 
@@ -33,8 +42,23 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 
 ### 2.1 SEO técnico
 
-**S-1. Layout sin metadatos SEO básicos** — `src/layouts/Layout.astro`
-- Solo emite `<title>` y `<meta name="description">`. Faltan: `<link rel="canonical">`, `<meta name="robots">`, Open Graph (`og:title`, `og:description`, `og:image`, `og:url`, `og:type`, `og:locale`), Twitter Card, `theme-color`, `apple-touch-icon`/`manifest`.
+**S-1. Layout sin metadatos SEO básicos** — `src/layouts/Layout.astro` · ✅ **Resuelto con pendientes el 2026-10-05**
+- **Corrección aplicada:**
+  - `site: 'https://www.triaso.com.mx'` en `astro.config.mjs`.
+  - El Layout acepta las props tipadas `title`, `description`, `image` (import de `astro:assets` o ruta de `public/`), `type` y `noindex`.
+  - Todas las páginas emiten `canonical` (sin slash final), Open Graph completo (`og:type`, `og:site_name`, `og:locale=es_MX`, `og:url`, `og:title`, `og:description`, `og:image` con ancho/alto/alt), Twitter Card `summary_large_image` y `theme-color` (`#14427c`, el valor de `--azul-bg1`).
+  - Con `noindex` se emite `robots: noindex, follow` y se omite la canonical; lo usa la 404.
+  - La imagen OG por defecto se genera en el build desde `NewBanner.webp`: 1200×630 JPG, 120 KB.
+  - Cada noticia se comparte con su propia imagen, su título y un extracto de ~155 caracteres como descripción (`og:type=article`).
+  - También: la descripción por defecto se tradujo al español y se quitó `class="font-sans"` de `<head>` (A-6).
+- **Verificación:** `astro check` con 0 errores; el build genera 52 páginas y todas las indexables tienen canonical.
+- **Pendiente:**
+  - **Dominio provisional:** confirmar `www` o sin `www` y ajustar `site`. El otro dominio debe redirigir (301) al elegido en Vercel.
+  - **Imagen OG provisional:** reemplazar `NewBanner.webp` por un diseño 1200×630 con logo. Es un solo import en el Layout.
+  - **Favicon:** `public/favicon.svg` es el logo por defecto de Astro, no el de TRIASO. Faltan también `apple-touch-icon` (180×180) y `manifest`, que necesitan un ícono cuadrado de la marca (ver #33 en la tabla).
+  - **Títulos y descripciones por página** siguen siendo S-3: las props ya existen, falta definirlas en cada página.
+  - Después del despliegue, probar con el Sharing Debugger de Facebook y el Post Inspector de LinkedIn.
+- *Diagnóstico original —* Solo emite `<title>` y `<meta name="description">`. Faltan: `<link rel="canonical">`, `<meta name="robots">`, Open Graph (`og:title`, `og:description`, `og:image`, `og:url`, `og:type`, `og:locale`), Twitter Card, `theme-color`, `apple-touch-icon`/`manifest`.
 - Ninguna de las 33 páginas analizadas en `dist/` tiene canonical, OG ni JSON-LD.
 - **Por qué importa:** sin canonical, las variantes con/sin slash final y mayúsculas/minúsculas pueden indexarse como duplicados; sin OG, los enlaces compartidos en WhatsApp/LinkedIn/Facebook (canales que el sitio usa) salen sin imagen ni descripción.
 - **Solución:** añadir `site: "https://<dominio-final>"` en `astro.config.mjs` y en el Layout aceptar props `title`, `description`, `image`, `noindex`, emitiendo:
@@ -70,7 +94,7 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
   Allow: /
   Sitemap: https://<dominio-final>/sitemap-index.xml
   ```
-  Excluir del sitemap `/Example` (ver S-8) con la opción `filter`.
+  ~~Excluir del sitemap `/Example` (ver S-8) con la opción `filter`.~~ Ya no hace falta: `/Example` se eliminó el 2026-10-05. Sí conviene que el redirect `/tambores-mezcladores` no entre en el sitemap.
 
 **S-5. Jerarquía de encabezados rota (múltiples `<h1>`)** — varios componentes · ✅ **Resuelto el 2026-09-28**
 - **Corrección aplicada:** se conservan 35 `<h1>` (los hero: `unitComponents/HeroComponent*.astro`, `AsphaltPlants/Hero.astro`, `*FirstSection*`, `LandinPage/MainSection.astro`, `ContactPage/FormSection.astro`, legales, noticias y videos). Cada uno aparece en una sola página. El resto: 321 → `<h2>` (títulos de sección), 702 → `<h3>` (títulos de cards, tabs y grupos de planos) y 673 → `<p>` (etiquetas de dato como "Longitud:", cifras y separadores/unidades de odómetros, que no eran encabezados). Solo cambió la etiqueta; clases, `id` y textos quedan igual, y Tailwind preflight hace que no haya cambio visual.
@@ -80,17 +104,48 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - **Por qué importa:** el `<h1>` indica el tema principal de la página; decenas de h1 diluyen la señal y rompen la navegación por encabezados de lectores de pantalla.
 - **Solución:** un único `<h1>` por página (en el hero), secciones con `<h2>`, subsecciones `<h3>`. Los componentes reutilizables (cards, tabs, sliders) no deben usar `<h1>`; si se necesita el tamaño, usar clases, no la etiqueta.
 
-**S-6. Contenido crítico renderizado solo en cliente (`client:only`)** — 115 usos en `src/components/**`
+**S-6. Contenido crítico renderizado solo en cliente (`client:only`)** — 115 usos en `src/components/**` · 🟡 **Parcial el 2026-10-05**
+- **Estado actualizado (2026-10-05):** quedan 112 usos de `client:only`, frente a 47 de `client:visible` y 9 de `client:load`. Parte del diagnóstico original ya no aplica: en las páginas de trituradoras el texto de las fichas **sí** viene en el HTML, y la única isla `client:only` es la galería (`GallerySlider`), que es visual y está bien así.
+- **Corrección aplicada en `/plantas-asfalto`** (`AsphaltPlants/MainSection.astro`):
+  - `CardSection` pasó a `client:load`, porque va bajo el hero y su ScrollTrigger con `pin` debe crearse antes de llegar a él. `ProductSelector` pasó a `client:visible`.
+  - Para que el SSR funcione, `CardSection.tsx` usa ahora `import { gsap }` con nombre (el import default rompe el SSR), y los `registerPlugin` de ambos componentes quedaron dentro de `typeof window !== "undefined"`.
+  - Antes de hidratar, las tarjetas con índice > 0 arrancan en `translateY(100vh)`, como las deja GSAP, para que no se vean encimadas.
+  - **Resultado:** el texto dentro de `<main>` del HTML generado pasó de **2,776 a 6,775 caracteres**. Incluye las tarjetas de ventajas y la planta de contraflujo con sus modelos. Las otras plantas del selector aparecen al hacer clic.
+- **Pendiente:**
+  - Revisión visual en navegador de `/plantas-asfalto`: animación de tarjetas con scroll, cambio de planta, tabla y modal, sin avisos de *hydration mismatch*, también a 360 px.
+  - Inventario del resto de `client:only`: separar los que tienen texto de producto (cambiar) de los visuales o interactivos (dejar).
+- **Hallazgos relacionados (2026-10-05):**
+  - ~~Los textos de las fichas de trituradoras están en **inglés**~~ ✅ **Traducidos el 2026-10-06**. Se tradujeron a español de México los títulos, viñetas, leyendas de galería, botones de fichas técnicas, `alt` y el recuadro "Ingeniería a la medida" de las 8 fichas (quijada, cono, integral, molino, mini, transportadores, alimentadores, criba), además de los títulos de `/trituradoras-videos`. Se usó un glosario único y se cambió el símbolo `¨` por `"` en las pulgadas.
+    - **Pendiente:** los botones de fichas técnicas de quijada, cono, transportadores, alimentadores y criba abren PDFs en **inglés** (carpeta `/eng/` del servidor actual). Se resuelve junto con la migración de PDFs al sitio nuevo.
+    - **Por confirmar:** en `videosTrituradorasData.js`, dos videos dicen cono de `4.25"` y `3"` (pulgadas), mientras que las fichas usan pies (`4.25'`, `3'`). Se dejó como estaba.
+  - `src/pages/plantas-asfalto.astro` mete un `<head>` dentro del `<Layout>`, que termina dentro de `<main>` (HTML inválido). Su `preload` usa `imagesrcset` con `?width=` sobre un archivo estático, algo que Astro no procesa. Conviene eliminarlo.
+- *Diagnóstico original:*
 - Ejemplos: `AsphaltPlants/MainSection.astro`, `ProductSelector`, `CardSection`, `BallMills/FirstSectionBall.astro`, `ConeCrushers/FirstSectionCone.astro`, `JawCrushers/FirstSection.astro`, `MiniCrusher/FirstSectionMini.astro`, `IntegralCrushers/FirstSectionIntegral.astro`, `BeltConveyors/FirstSectionBelt.astro`, `Example/Section.tsx`.
 - En páginas como BallMills, ConeCrushers o JawCrushers **todo** el cuerpo es una sola isla `client:only` → el HTML servido solo contiene navbar y footer (≈3–4 K caracteres de texto, casi todo del menú).
 - **Por qué importa:** Google renderiza JS con retraso y no garantizado; otros buscadores y los previsualizadores sociales no lo hacen. Además empeora LCP (nada que pintar hasta hidratar) y CLS.
 - **Solución:** cambiar a `client:visible` (o `client:idle`) para que Astro haga SSR del componente y lo hidrate después. `client:only` solo se justifica si el componente accede a `window` durante el render; en ese caso mover ese acceso a `useEffect`. Empezar por las secciones hero/"FirstSection".
 
-**S-7. Enlaces internos rotos** — `src/components/DrumMixers/Contraflujo/Desamaq/SliderUltimaSeccion.astro:21,29,37`
-- `/Hot-mix-storage-silos`, `/RAP-bins`, `/PowderAdditives` no existen (las rutas reales son `/HotMix`, `/RapBins`, `/PowderAd`).
+**S-7. Enlaces internos rotos** — `src/components/DrumMixers/Contraflujo/Desamaq/SliderUltimaSeccion.astro:21,29,37` · ✅ **Resuelto el 2026-10-05**
+- **Corrección aplicada:** los 3 enlaces apuntan ahora a `/silos-mezcla-asfaltica`, `/tolvas-rap` y `/alimentador-aditivo-polvo`. Durante el renombrado de rutas (S-8) se revisaron todos los `href`, `url`, `route` y `cotizarHref` de `src/` contra los archivos de `src/pages/` respetando mayúsculas: 0 enlaces rotos.
+- **Pendiente:** el link-check sigue siendo manual; integrarlo al flujo de build (ver §4).
+- *Diagnóstico original —* `/Hot-mix-storage-silos`, `/RAP-bins`, `/PowderAdditives` no existen (las rutas reales eran `/HotMix`, `/RapBins`, `/PowderAd`).
 - **Solución:** corregir las URLs. Añadir un link-check al flujo de build (ver §4).
 
-**S-8. URLs y rutas**
+**S-8. URLs y rutas** · ✅ **Resuelto en su mayoría el 2026-10-05**
+- **Corrección aplicada:**
+  - Las 51 páginas con contenido usan **kebab-case en español** (`/plantas-asfalto`, `/trituradora-cono`, `/contacto`…). Se renombraron con `git mv` y se actualizaron todos los enlaces internos (`menuItems.js`, Footer, 404, botones, `ProductSelector`, `Configuraciones`…). La convención quedó documentada en `CLAUDE.md`.
+  - Los tambores pasaron de 3 niveles a 2: `/TamborMezcla/Contraflujo/ContraDesamaq` → `/tambores-mezcladores/contraflujo-desamaq` (igual para las 6 variantes). `/tambores-mezcladores` redirige a `/tambores-mezcladores/contraflujo-pro` mediante `redirects` en `astro.config.mjs`.
+  - Las casetas quedaron en `/casetas/caseta-montable` y `/casetas/casetas-remolcables`.
+  - El typo `/IntegralAphaltPlant` desapareció (ahora `/planta-asfalto-10tph`).
+  - `/Example` y su componente se eliminaron.
+  - `/IncorporadoresHule` se ocultó: se renombró a `_IncorporadoresHule.astro` (Astro no lo publica) y se comentó en el menú hasta que la página esté lista.
+  - Noticias: `/news/Nuevo: Menos combustible` → `/noticias/menos-combustible` y `/news/New-RAP-Recycled` → `/noticias/plantas-asfalto-rap` (ver B-1).
+  - No se añadieron redirecciones 301 desde las rutas viejas porque el sitio Astro aún no está desplegado.
+- **Pendiente:**
+  - Fijar `trailingSlash` + canonical (S-1).
+  - Al lanzar, crear redirecciones 301 desde las URLs del sitio actual (`triaso.com.mx/*.html`) hacia las nuevas.
+  - Dos rutas no siguen el mismo criterio que las demás: `/newsroom` (sus noticias ya están en `/noticias/...`) y algunas trituradoras sin el prefijo `trituradora-` (`/criba-vibratoria`, `/trituradoras-videos`).
+- *Diagnóstico original:*
 - URLs en PascalCase (`/AsphaltPlant`): en Vercel las rutas son sensibles a mayúsculas, así que `/asphaltplant` → 404 (**requiere verificación en producción**). Typo en ruta pública: `/IntegralAphaltPlant`.
 - `/Example` (`src/pages/Example.astro`) es una página de prueba publicada e indexable.
 - Slug de noticia inválido: `id: "Nuevo: Menos combustible"` en `src/components/AboutPages/Newsroom/data/news.*:175` genera la URL `/news/Nuevo: Menos combustible` (espacio y dos puntos). Ver también B-1.
@@ -102,7 +157,8 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - **Solución:** si no hay versión en inglés, retirar el selector. Si la hay en otro dominio (p. ej. triasous.com), enlazarlo y declarar `<link rel="alternate" hreflang="es-MX" …>` / `hreflang="en-US"` / `x-default` en ambos sitios.
 
 **S-10. Sin datos estructurados**
-- **Solución:** JSON-LD en el Layout (`Organization` con `logo`, `sameAs` a LinkedIn/Instagram/Facebook, `contactPoint`), `LocalBusiness`/`PostalAddress` en `/Contact`, `Product` en cada página de equipo (nombre, descripción, imagen, `brand`), `NewsArticle` en `news/[id].astro` (`headline`, `datePublished`, `image`) y `BreadcrumbList` en las páginas anidadas (`/TamborMezcla/...`, `/Casetas/...`).
+- **Solución:** JSON-LD en el Layout (`Organization` con `logo`, `sameAs` a LinkedIn/Instagram/Facebook, `contactPoint`), `LocalBusiness`/`PostalAddress` en `/contacto`, `Product` en cada página de equipo (nombre, descripción, imagen, `brand`), `NewsArticle` en `noticias/[id].astro` (`headline`, `datePublished`, `image`) y `BreadcrumbList` en las páginas anidadas (`/tambores-mezcladores/...`, `/casetas/...`).
+- Nota (2026-10-05): las fechas de `news.tsx` ya están en formato `AAAA-MM-DD` (antes `2026-17-02`, con día y mes invertidos), así que se pueden usar directo en `datePublished`.
 
 **S-11. Textos alternativos** — varios
 - 6 `<img>` sin atributo `alt` en `DrumMixers/BolsasSeccion.astro`, `DrumMixers/Contraflujo/Plus/BolsasSeccion.astro`, `DrumMixers/Contraflujo/Desamaq/BolsasSeccion.astro`.
@@ -136,7 +192,7 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 **P-3. `@react-pdf/renderer` en el bundle inicial (1.5 MB)** — `src/components/Calculadora/AnalisisInversion.tsx:10` · ✅ **Resuelto el 2026-09-28**
 - **Corrección aplicada:** se quitaron los imports estáticos de `@react-pdf/renderer` e `InversionPDF`; `handleDownloadPdf` los carga con `Promise.all([import('@react-pdf/renderer'), import('./InversionPDF')])` al pulsar el botón. Mientras se genera, el botón muestra el estado deshabilitado existente ("Loading PDF...") para evitar clics dobles. También se simplificó `pdf([]) + updateContainer(doc)` a `pdf(<InversionPDF …/>).toBlob()`, lo que eliminó un error de TypeScript (B-2 pasa de 34 a 33).
 - **Resultado medido en el build:** `AnalisisInversion.*.js` bajó de **1,516 KB a 23 KB**; `react-pdf.browser.*.js` (1,490 KB) e `InversionPDF.*.js` (8 KB) quedan como chunks aparte que solo se descargan al generar el PDF.
-- **Pendiente:** probar la descarga del PDF en el navegador (`/RapRecycled`); la página no se genera en el build local por B-1. Montar la calculadora con `client:visible` en lugar de `client:only` se hará junto con S-6.
+- **Pendiente:** probar la descarga del PDF en el navegador (ahora en `/rap`; desde el 2026-10-05 la página ya se genera en el build, ver B-1). Montar la calculadora con `client:visible` en lugar de `client:only` se hará junto con S-6.
 - *Diagnóstico original:*
 - `import { pdf } from '@react-pdf/renderer'` estático → `dist/_astro/AnalisisInversion.*.js` = **1,516 KB** (sin comprimir) se descarga al hidratar la calculadora (montada en `RAPRecycled/RAPReFirst.astro`), aunque el usuario nunca genere el PDF.
 - **Solución:** import dinámico en el handler:
@@ -209,12 +265,24 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 
 ### 2.4 Buenas prácticas, seguridad y mantenimiento
 
-**B-1. El build falla (Windows)** — `src/components/AboutPages/Newsroom/data/news.*:175`, `src/pages/news/[id].astro`
-- `npm run build` aborta con `ENOENT: mkdir 'dist\news\Nuevo: Menos combustible'` (los `:` no son válidos en rutas de Windows). Las páginas posteriores (Newsroom, OilHeaters, PowderAd, RapBins, Relief, Spare, TamborMezcla/*, index…) no se generan localmente; por eso el `dist/` previo estaba incompleto. En Vercel (Linux) probablemente compila, pero genera una URL con espacio y dos puntos.
+**B-1. El build falla (Windows)** — `src/components/AboutPages/Newsroom/data/news.*:175`, `src/pages/news/[id].astro` · ✅ **Resuelto el 2026-10-05**
+- **Corrección aplicada:**
+  - Los `id` de las noticias ahora son slugs: `menos-combustible` y `plantas-asfalto-rap`.
+  - La ruta se movió de `src/pages/news/` a `src/pages/noticias/`, y `NewsCard.astro` arma `/noticias/${news.id}`.
+  - Se corrigieron las fechas invertidas (`2026-17-02` → `2026-02-17`, `2026-18-02` → `2026-02-18`).
+  - `npm run build` termina sin errores y genera **52 páginas**.
+- **Pendiente:** generar los slugs con una función `slugify` en `getStaticPaths` para que una noticia nueva no vuelva a romper el build.
+- *Diagnóstico original —* `npm run build` aborta con `ENOENT: mkdir 'dist\news\Nuevo: Menos combustible'` (los `:` no son válidos en rutas de Windows). Las páginas posteriores (Newsroom, OilHeaters, PowderAd, RapBins, Relief, Spare, TamborMezcla/*, index…) no se generan localmente; por eso el `dist/` previo estaba incompleto. En Vercel (Linux) probablemente compila, pero genera una URL con espacio y dos puntos.
 - **Solución:** cambiar el `id` a un slug (`nuevo-menos-combustible`) y, a futuro, generar slugs con una función `slugify` en `getStaticPaths`.
 
-**B-2. 34 errores de TypeScript** (33 tras la corrección de P-3) (`npm run astro check`)
-- Principalmente en `Incorporadores/SeccionAnimacion.astro` (9), `BinUnits/BinGallery.astro` (8), `RAPRecycled/RBDropdown2.astro` (6), `AsphaltPlants/ProductSelector.tsx` (2) y uno en `Calculadora/AnalisisInversion.tsx`, `Calculadora/ValorPlanta.tsx`, `Burners/BurnerOdometer.tsx`, `DrumMixers/**/HotspotSection.astro`.
+**B-2. 34 errores de TypeScript** (33 tras la corrección de P-3) (`npm run astro check`) · ✅ **Resuelto el 2026-10-05**
+- **Corrección aplicada:** `astro check` pasa con **0 errores y 0 advertencias**.
+  - **Imports sin usar (5):** se quitaron `Clock`/`PackageCheck` (`ProductSelector.tsx`), `FillLinkButton` (`BurnerOdometer.tsx`) y el import de utils (`ValorPlanta.tsx`). En `OdometroFPro.tsx`, `value7` (vale 3 y nunca se muestra) se dejó como `const [, setValue7]`, igual que `value4`, por si es un dato pendiente de mostrar.
+  - **Párrafo vacío visible (1):** en `unitComponents/StackedInfoCards.astro`, `text` ahora es opcional y el `<p>` solo se renderiza si hay texto. Corrige el espacio vacío en las tarjetas de `/precalentadores-combustible`.
+  - **Scripts sin protección contra `null` (23):** `RBDropdown2.astro` (`/rap`), `BinGallery.astro` (`/tolvas`) y `Incorporadores/SeccionAnimacion.astro` (página oculta) quedaron envueltos en guardas `if (…)`, con una constante `HTMLElement` tipada y casts `as HTMLElement` para `offsetWidth`. Si falta un `id`, el script ya no truena.
+  - **Tipos (4):** en los 3 `HotspotSection.astro`, `target ? document.getElementById(target) : null`, con el mismo comportamiento que antes. En `DrumMixers/BolsasSeccion.astro`, `gridItems` se tipó como `GridItem[]`.
+- **Pendiente:** revisión visual en navegador de los sliders de `/rap` y `/tolvas`, las pestañas hotspot de tambores y las tarjetas de `/precalentadores-combustible`.
+- *Diagnóstico original —* Principalmente en `Incorporadores/SeccionAnimacion.astro` (9), `BinUnits/BinGallery.astro` (8), `RAPRecycled/RBDropdown2.astro` (6), `AsphaltPlants/ProductSelector.tsx` (2) y uno en `Calculadora/AnalisisInversion.tsx`, `Calculadora/ValorPlanta.tsx`, `Burners/BurnerOdometer.tsx`, `DrumMixers/**/HotspotSection.astro`.
 - Tipos: `'track'/'slider' is possibly 'null'`, `offsetWidth does not exist on type 'Element'`, `string | null` no asignable, tipos `CardData[]` incompatibles.
 - **Por qué importa:** son posibles `TypeError` en tiempo de ejecución (consola) si el elemento no existe, y el proyecto declara `astro check` como su única red de seguridad.
 - **Solución:** `querySelector<HTMLElement>(…)` + guardas `if (!track) return;`.
@@ -246,8 +314,10 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - **Pendiente (anotado 2026-09-28):** las páginas legales (`src/components/Legal/Privacy.astro`, en "Derechos ARCO" y "Contacto", y `src/components/Legal/Terms.astro`, en "Contacto") también indican `sales@triasous.com`. Se dejaron así a propósito; cuando se decida el correo oficial, actualizarlo en footer, `/Contact` y ambas páginas legales.
 - **Por qué importa:** el usuario llama/escribe a un destino distinto del que ve; además, datos NAP inconsistentes perjudican el SEO local. **Confirmar con el negocio** cuál es el dato correcto antes de corregir.
 
-**B-7. Página 404 y errores**
-- No existe `src/pages/404.astro`; Vercel muestra su 404 genérico sin navegación ni marca.
+**B-7. Página 404 y errores** · ✅ **Resuelto el 2026-10-02** (commit `c2e874d`)
+- **Estado:** `src/pages/404.astro` existe, usa el Layout y tiene enlaces rápidos (plantas de asfalto, trituradoras, nosotros, refacciones, contacto), ya actualizados a las rutas nuevas.
+- **`noindex` añadido el 2026-10-05** (S-1): la 404 emite `<meta name="robots" content="noindex, follow">` y no declara canonical.
+- *Diagnóstico original —* No existe `src/pages/404.astro`; Vercel muestra su 404 genérico sin navegación ni marca.
 - **Solución:** crear `404.astro` con el Layout, mensaje en español, enlaces a la home y a productos, y `noindex`.
 
 **B-8. HTML sin sanitizar** — `news/[id].astro:31` (`set:html={item.content}`), `DrumMixers/QuemadorSlider.tsx:186`, `IntegralAsphalt/SlidersCarrusel.tsx:168` (`dangerouslySetInnerHTML`)
@@ -268,61 +338,62 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 
 | # | Tarea | Categoría | Impacto | Esfuerzo | Prioridad | Archivo(s) afectado(s) |
 |---|---|---|---|---|---|---|
-| 1 | Corregir slug de noticia que rompe el build | Buenas prácticas | Alto | Bajo | 1 | `AboutPages/Newsroom/data/news.*`, `pages/news/[id].astro` |
+| 1 | ✅ **Resuelto 2026-10-05** — Corregir slug de noticia que rompe el build | Buenas prácticas | Alto | Bajo | 1 | `AboutPages/Newsroom/data/news.*`, `pages/noticias/[id].astro` |
 | 2 | Verificar y unificar teléfono/email del footer | Buenas prácticas / SEO local | Alto | Bajo | 1 | `Main/Footer.astro` |
 | 3 | ✅ **Resuelto 2026-09-28** — `lang="es-MX"` | SEO / A11y | Alto | Bajo | 1 | `layouts/Layout.astro` |
 | 4 | Añadir `site`, `robots.txt` y `@astrojs/sitemap` | SEO | Alto | Bajo | 1 | `astro.config.mjs`, `public/robots.txt` |
 | 5 | Títulos y descripciones únicos por página (props obligatorios) | SEO | Alto | Bajo | 1 | `layouts/Layout.astro`, `pages/*.astro` |
-| 6 | Canonical + Open Graph + Twitter Card en Layout | SEO | Alto | Bajo | 1 | `layouts/Layout.astro`, `public/og-default.jpg` |
-| 7 | Corregir 3 enlaces internos rotos | SEO | Medio | Bajo | 1 | `DrumMixers/Contraflujo/Desamaq/SliderUltimaSeccion.astro` |
+| 6 | ✅ **Resuelto 2026-10-05** — Canonical + Open Graph + Twitter Card en Layout (dominio e imagen OG provisionales) | SEO | Alto | Bajo | 1 | `layouts/Layout.astro`, `astro.config.mjs` |
+| 7 | ✅ **Resuelto 2026-10-05** — Corregir 3 enlaces internos rotos | SEO | Medio | Bajo | 1 | `DrumMixers/Contraflujo/Desamaq/SliderUltimaSeccion.astro` |
 | 8 | ✅ **Resuelto 2026-09-28** — Import dinámico de `@react-pdf/renderer` (−1.5 MB) | Performance | Alto | Bajo | 1 | `Calculadora/AnalisisInversion.tsx` |
 | 9 | Deduplicar scripts inline del menú móvil (−60 KB/página) | Performance | Medio | Bajo | 2 | `NavbarComp/MobileMenuItem.astro`, `MobileSubmenuWrapper.astro`, `MobileMenu.astro` |
 | 10 | `npm audit fix` + actualizar astro/swiper en el mismo mayor | Seguridad | Alto | Bajo | 2 | `package.json`, `package-lock.json` |
 | 11 | Submenú accesible por teclado (`:focus-within`, `aria-expanded`, Esc) | A11y | Alto | Bajo | 2 | `NavbarComp/LinkNavbarItem.astro` |
 | 12 | Oscurecer `--gris-textos` a ≥4.5:1 | A11y | Medio | Bajo | 2 | `styles/global.css` |
-| 13 | Crear `404.astro` | Buenas prácticas | Medio | Bajo | 2 | `pages/404.astro` |
-| 14 | Eliminar/`noindex` `/Example`; quitar selector de idioma falso | SEO | Medio | Bajo | 2 | `pages/Example.astro`, `NavbarComp/LenguageSelector.astro`, `Main/Navbar.astro` |
+| 13 | ✅ **Resuelto 2026-10-02** — Crear `404.astro` (`noindex` añadido 2026-10-05) | Buenas prácticas | Medio | Bajo | 2 | `pages/404.astro` |
+| 14 | ~~Eliminar `/Example`~~ (✅ 2026-10-05); quitar selector de idioma falso | SEO | Medio | Bajo | 2 | `NavbarComp/LenguageSelector.astro`, `Main/Navbar.astro`, `NavbarComp/MobileMenu.astro` |
 | 15 | Cabeceras de seguridad y caché en `vercel.json` | Seguridad / Performance | Medio | Bajo | 2 | `vercel.json` (nuevo) |
 | 16 | `rel="noopener noreferrer"` + `aria-hidden` en SVG del footer; skip-link | A11y | Bajo | Bajo | 3 | `Main/Footer.astro`, `layouts/Layout.astro` |
 | 17 | Desinstalar deps sin uso (`keen-slider`, `iconoir`, `@tailwindcss/vite`) | Buenas prácticas | Bajo | Bajo | 3 | `package.json` |
 | 18 | ✅ **Resuelto 2026-09-28** — Un solo `<h1>` por página; resto a `<h2>/<h3>` | SEO / A11y | Alto | Medio | 2 | `LandingPage.astro`, `LandinPage/MainSection.astro`, componentes de Manufacture, DrumMixers, HotMix, ColdMix, Expo, BinUnits, AsphaltStorage… |
 | 19 | Pasar imágenes `.src` de `.tsx` por `getImage()`/`<Image>` (WebP, anchos) | Performance | Alto | Medio | 2 | `DrumMixers/**/*Planos*.tsx`, `AsphaltPlants/CardSection.tsx`, `GallerySlider2.tsx`, `Manufacture/ManufactureGallery.tsx`… |
 | 20 | `width/height` + `loading="lazy"` en `<img>` crudos | Performance (CLS) | Alto | Medio | 2 | 452 `<img>` en `src/components/**` |
-| 21 | Cambiar `client:only` → `client:visible` en secciones de contenido/hero | SEO / Performance | Alto | Medio | 2 | `*/FirstSection*.astro`, `AsphaltPlants/MainSection.astro`, `ProductSelector.tsx`, `CardSection.tsx` |
-| 22 | Corregir 34 errores de `astro check` | Buenas prácticas | Medio | Medio | 3 | `Incorporadores/SeccionAnimacion.astro`, `BinUnits/BinGallery.astro`, `RAPRecycled/RBDropdown2.astro`… |
-| 23 | JSON-LD (Organization, LocalBusiness, Product, NewsArticle, Breadcrumb) | SEO | Medio | Medio | 3 | `layouts/Layout.astro`, `pages/Contact.astro`, páginas de producto, `news/[id].astro` |
+| 21 | 🟡 **Parcial 2026-10-05** (`/plantas-asfalto` hecho) — Cambiar `client:only` → `client:visible` en secciones de contenido/hero | SEO / Performance | Alto | Medio | 2 | `*/FirstSection*.astro`, `AsphaltPlants/MainSection.astro`, `ProductSelector.tsx`, `CardSection.tsx` |
+| 22 | ✅ **Resuelto 2026-10-05** — Corregir 34 errores de `astro check` (0 errores) | Buenas prácticas | Medio | Medio | 3 | `Incorporadores/SeccionAnimacion.astro`, `BinUnits/BinGallery.astro`, `RAPRecycled/RBDropdown2.astro`… |
+| 23 | JSON-LD (Organization, LocalBusiness, Product, NewsArticle, Breadcrumb) | SEO | Medio | Medio | 3 | `layouts/Layout.astro`, `pages/contacto.astro`, páginas de producto, `noticias/[id].astro` |
 | 24 | Vídeos: poster, IntersectionObserver (`SmartVideo`), recompresión, quitar `will-change` global | Performance | Medio | Medio | 3 | `LandinPage/MainSection.astro`, `*/Stackscroll*.tsx`, `styles/global.css` |
 | 25 | `prefers-reduced-motion` en GSAP y vídeos autoplay; botón de pausa | A11y | Medio | Medio | 3 | `components/lib/*`, componentes con vídeo |
 | 26 | `alt` descriptivos en español; completar los 6 faltantes | SEO / A11y | Medio | Medio | 3 | `DrumMixers/**/BolsasSeccion.astro`, `CardSection.tsx`, galerías |
 | 27 | Eliminar vídeos/assets sin referencia (~200 MB) y mover posters a `src/assets` | Performance / Mantenimiento | Medio | Medio | 3 | `public/Videos/Mp4/*`, `public/Videos/Webm/landingVideo2.webm`… |
 | 28 | Consolidar componentes `*Planos*.tsx` y reducir su JS | Performance | Medio | Alto | 4 | `DrumMixers/**`, `BinUnits/BinPlanosSection.tsx`, `BagHouses/BHPlanos.tsx` |
 | 29 | Analytics real con consentimiento + medición de CWV de campo | Buenas prácticas | Medio | Medio | 4 | `AboutPages/Banner/Trackedscripts.tsx` |
-| 30 | Normalizar URLs a minúsculas + redirecciones 301 + `trailingSlash` | SEO | Medio | Alto | 4 | `src/pages/**`, `vercel.json`, todos los `href` |
+| 30 | ✅ **URLs resueltas 2026-10-05** (kebab-case español); pendientes 301 al lanzar + `trailingSlash` | SEO | Medio | Alto | 4 | `astro.config.mjs`, `vercel.json` |
 | 31 | i18n real (versión EN + hreflang) si se requiere | SEO | Bajo | Alto | 5 | `astro.config.mjs` (i18n), `src/pages/en/**` |
 | 32 | Sustituir hex hardcodeados por variables CSS | Mantenimiento | Bajo | Bajo | 5 | `Main/Footer.astro`, `LandingPage.astro` |
+| 33 | Favicon, `apple-touch-icon` y `manifest` con el ícono de TRIASO (hoy el favicon es el logo de Astro) | Marca / SEO | Medio | Bajo | 2 | `public/favicon.svg`, `layouts/Layout.astro` |
 
 ---
 
 ## 4. Plan de acción sugerido
 
 ### Fase 1 — Corto plazo (1–2 semanas): quick wins
-- Desbloquear el build (#1) y confirmar/corregir datos de contacto (#2).
-- Base SEO en el Layout: ~~`lang`~~ (✅ hecho 2026-09-28), canonical, OG, títulos/descripciones por página, `robots.txt`, sitemap, enlaces rotos, `/Example` (#3–#7, #14).
+- ~~Desbloquear el build (#1)~~ (✅ hecho 2026-10-05) y confirmar/corregir datos de contacto (#2).
+- Base SEO en el Layout: ~~`lang`~~ (✅ hecho 2026-09-28), ~~canonical, OG~~ (✅ hecho 2026-10-05; falta favicon de marca, #33), títulos/descripciones por página, `robots.txt`, sitemap, ~~enlaces rotos, `/Example`~~ (✅ hecho 2026-10-05) (#3–#7, #14).
 - Performance inmediata: ~~import dinámico de react-pdf~~ (✅ hecho 2026-09-28), deduplicar scripts del menú (#8, #9).
 - Seguridad: `npm audit fix` y actualizaciones menores; `vercel.json` con cabeceras (#10, #15).
-- Accesibilidad: menú por teclado, contraste, 404, footer (#11–#13, #16, #17).
-- **Verificar en producción** (sobre el dominio final): `curl -I` de `/`, `/robots.txt`, `/sitemap-index.xml`, una ruta inexistente, `/asphaltplant` vs `/AsphaltPlant`, un `.webm` y un `.js` de `/_astro/`; ejecutar PageSpeed Insights (móvil) en `/`, `/AsphaltPlant` y `/DrumMixers` para tener la línea base de LCP/CLS/INP.
+- Accesibilidad: menú por teclado, contraste, ~~404~~ (✅ hecho 2026-10-02), footer (#11–#13, #16, #17).
+- **Verificar en producción** (sobre el dominio final): `curl -I` de `/`, `/robots.txt`, `/sitemap-index.xml`, una ruta inexistente (debe mostrar la 404 propia), `/tambores-mezcladores` (debe redirigir a `/tambores-mezcladores/contraflujo-pro`), un `.webm` y un `.js` de `/_astro/`; ejecutar PageSpeed Insights (móvil) en `/`, `/plantas-asfalto` y `/tambores-mezcladores/contraflujo-pro` para tener la línea base de LCP/CLS/INP.
 
 ### Fase 2 — Mediano plazo (1–2 meses)
 - ~~Jerarquía de encabezados (#18).~~ ✅ Hecho el 2026-09-28 (falta revisión visual en navegador).
-- Optimización de imágenes y CLS (#19, #20) empezando por DrumMixers, Manufacture y HotMix (las de más imágenes).
+- Optimización de imágenes y CLS (#19, #20) empezando por tambores mezcladores, fabricación y silos de mezcla asfáltica (las de más imágenes).
 - SSR del contenido con `client:visible` (#21), empezando por las páginas de trituradoras donde todo es `client:only`.
-- Errores de TypeScript (#22), JSON-LD (#23), vídeos (#24), reduced-motion (#25), `alt` (#26), limpieza de assets (#27).
+- ~~Errores de TypeScript (#22)~~ (✅ hecho 2026-10-05), JSON-LD (#23), vídeos (#24), reduced-motion (#25), `alt` (#26), limpieza de assets (#27).
 - Añadir al flujo de verificación del proyecto: `astro check` sin errores + `build` + un link-check sobre `dist/` y Lighthouse CI (`@lhci/cli`) con presupuestos (p. ej. JS ≤ 250 KB por página, LCP ≤ 2.5 s).
 
 ### Fase 3 — Largo plazo (trimestre)
 - Refactor de los componentes de planos (#28).
 - Analytics con consentimiento y monitoreo de CWV de campo (#29).
-- Decisión sobre URLs en minúsculas con 301 (#30) e i18n real (#31).
+- ~~URLs en minúsculas (#30)~~ (✅ hecho 2026-10-05; faltan las 301 desde el sitio actual al lanzar y `trailingSlash`) e i18n real (#31).
 - Evaluar la migración a Astro 7 / Tailwind 4 como proyecto separado, con verificación completa del sitio.
 - Limpieza de consistencia (#32) y README.
