@@ -135,7 +135,9 @@ const configuraciones: ConfigItem[] = [
     class="w-full bg-[url('/fondopatron.webp')] bg-repeat bg-top bg-black py-16"
   >
     <div class="max-w-screen-2xl mx-auto px-6 md:px-8">
-      <h2 class="text-white text-3xl md:text-5xl leading-loose mb-10">
+      <h2
+        class="text-white text-3xl md:text-5xl leading-tight md:leading-relaxed mb-10"
+      >
         Su mejor negocio empieza con una<br />
         <span class="font-bold">planta de asfalto</span>
       </h2>
@@ -152,8 +154,8 @@ const configuraciones: ConfigItem[] = [
           </ul>
           <p class="mt-4 text-base md:text-lg">
             Ninguna de las tres deja la misma utilidad al terminar. El buen
-            negocio no está en el tendido de la carpeta, está en la producción de
-            la mezcla.
+            negocio no está en el tendido de la carpeta, está en la producción
+            de la mezcla.
           </p>
           <div class="w-full mt-8 flex items-center lg:items-start">
             <Whatsbtn />
@@ -168,7 +170,11 @@ const configuraciones: ConfigItem[] = [
           <div
             class="relative order-2 md:order-none aspect-video md:aspect-auto rounded-lg overflow-hidden"
           >
-            <img src={neg2.src} alt="" class="absolute inset-0 w-full h-full object-cover" />
+            <img
+              src={neg2.src}
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
           </div>
           <div
             class="order-1 md:order-none col-span-2 md:col-span-1 md:row-span-2 rounded-lg overflow-hidden"
@@ -184,7 +190,11 @@ const configuraciones: ConfigItem[] = [
           <div
             class="relative order-3 md:order-none aspect-video md:aspect-auto rounded-lg overflow-hidden"
           >
-            <img src={neg3.src} alt="" class="absolute inset-0 w-full h-full object-cover" />
+            <img
+              src={neg3.src}
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>

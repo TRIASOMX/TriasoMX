@@ -42,6 +42,8 @@ const items = [
   {
     text: "OPERACIÓN CONTINUA",
     img: icon8,
+    // Se oculta en móvil para que la cuadrícula quede en 2 × 4.
+    hideOnMobile: true,
   },
   {
     text: "BAJO CONSUMO DE COMBUSTIBLE",
@@ -115,11 +117,11 @@ const CARDS: CardData[] = [
     scrollWeight: 1.2,
     content: (
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 space-y-4 lg:space-y-5">
-        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 place-items-center gap-3 sm:gap-5 lg:gap-8 w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 place-items-center gap-3 sm:gap-5 lg:gap-8 w-full">
           {items.map((item, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center justify-center text-center w-full ${
+              className={`${item.hideOnMobile ? "hidden sm:flex" : "flex"} flex-col items-center justify-center text-center w-full ${
                 items.length % 3 !== 0 &&
                 index >= items.length - (items.length % 3)
                   ? "last:col-span-1"
