@@ -1,5 +1,6 @@
 ---
 import ContactForm from "./ContactForm";
+import { CONTACT_EMAIL } from "../../assets/data/contacto";
 
 // El número se muestra tal cual; el enlace se arma solo con los dígitos (incluir lada de país).
 const whatsapps = ["+52 (618) 170 3580", "+52 (618) 183 0730", "+52 (618) 109 7672"];
@@ -109,6 +110,33 @@ const digits = (n: string) => n.replace(/\D/g, "");
             ))
           }
         </ul>
+      </div>
+
+      <!-- Correo -->
+      <div class="flex flex-col gap-4">
+        <h2 class="text-xl font-bold text-blueMain md:text-2xl">Correo</h2>
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          class="group flex items-center gap-3 py-3 border-b border-gray-200"
+        >
+          <svg
+            class="h-5 w-5 shrink-0 text-redBg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+            ></path>
+          </svg>
+          <span class="font-semibold text-blueSecondary group-hover:underline break-all">
+            {CONTACT_EMAIL}
+          </span>
+        </a>
       </div>
 
       <!-- Sitio de Estados Unidos -->

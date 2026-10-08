@@ -1,3 +1,7 @@
+---
+import { CONTACT_EMAIL } from "../../assets/data/contacto";
+---
+
 <div class="mt-20">
     <div class="max-w-7xl mx-auto px-8 space-y-4 pb-10">
         <div class="space-y-2">
@@ -83,7 +87,8 @@
             </ul>
             <p>
                 Para ejercer estos derechos, puede enviar una solicitud al
-                siguiente correo electrónico: sales@triasous.com
+                siguiente correo electrónico:
+                <a href={`mailto:${CONTACT_EMAIL}`} class="text-blueMain underline break-all">{CONTACT_EMAIL}</a>
             </p>
         </div>
 
@@ -101,7 +106,8 @@
             <p>
                 Si tiene alguna pregunta sobre este Aviso de Privacidad,
                 puede contactarnos mediante el formulario de contacto del Sitio
-                o por correo electrónico a: sales@triasous.com.
+                o por correo electrónico a:
+                <a href={`mailto:${CONTACT_EMAIL}`} class="text-blueMain underline break-all">{CONTACT_EMAIL}</a>.
             </p>
         </div>
     </div>

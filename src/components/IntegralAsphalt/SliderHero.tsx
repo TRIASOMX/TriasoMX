@@ -6,7 +6,7 @@ import Hero4 from "../../assets/images/IntegralAsphalt/Hero4.webp";
 
 const SliderHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
 const Sliders = [
     {

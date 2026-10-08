@@ -6,7 +6,7 @@ import { menuItems } from "../../assets/data/menuItems"
 import MobileMenu from "../NavbarComp/MobileMenu.astro"
 import Image from "astro/components/Image.astro"
 ---
-<nav class="bg-white border-b-2 border-blueMain font-sans font-bold text-black text-sm fixed z-50 w-full">
+<nav aria-label="Principal" class="bg-white border-b-2 border-blueMain font-sans font-bold text-black text-sm fixed z-50 w-full">
   <div class="max-w-screen mx-auto px-4 flex justify-between items-center h-16">
     {/* Logo */}
     <div class="flex items-center space-x-2  flex-shrink-0">
@@ -14,7 +14,7 @@ import Image from "astro/components/Image.astro"
     </div>
 
     {/* Menú principal */}
-    <div class="flex-grow justify-around hidden lg:block">
+    <div id="desktop-nav" class="flex-grow justify-around hidden lg:block">
       <div class="flex space-x-6 gap-10 items-center justify-center">
         {/* Map through menuItems to create links */}
         {menuItems.map((item) => (
@@ -29,5 +29,59 @@ import Image from "astro/components/Image.astro"
     <MobileMenu />
   </div>
 </nav>
+
+<script>
+  // Menú de escritorio: los submenús se abren por CSS (:hover / :focus-within, ver
+  // LinkNavbarItem.astro). Aquí solo se sincroniza aria-expanded y se cierra con Esc.
+  function initDesktopNav() {
+    const nav = document.getElementById("desktop-nav");
+    if (!nav) return;
+
+    const triggerOf = (item: Element) =>
+      item.querySelector<HTMLElement>(":scope > [aria-haspopup]");
+    const setExpanded = (item: Element, open: boolean) =>
+      triggerOf(item)?.setAttribute("aria-expanded", String(open));
+
+    nav.querySelectorAll<HTMLElement>(".nav-item").forEach((item) => {
+      if (!triggerOf(item)) return;
+
+      item.addEventListener("mouseenter", () => {
+        item.classList.remove("nav-closed");
+        setExpanded(item, true);
+      });
+      item.addEventListener("mouseleave", () => {
+        item.classList.remove("nav-closed");
+        if (!item.contains(document.activeElement)) setExpanded(item, false);
+      });
+      item.addEventListener("focusin", () => {
+        if (!item.classList.contains("nav-closed")) setExpanded(item, true);
+      });
+      item.addEventListener("focusout", (e) => {
+        const next = e.relatedTarget as Node | null;
+        if (next && item.contains(next)) return;
+        item.classList.remove("nav-closed");
+        setExpanded(item, false);
+      });
+    });
+
+    // Esc cierra el submenú más interno que contiene el foco y regresa el foco a su ítem padre
+    nav.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      const target = e.target as HTMLElement;
+      const parentItem = target.closest(".submenu")?.closest(".nav-item");
+      const ownItem = target.matches("[aria-haspopup]") ? target.closest(".nav-item") : null;
+      const item =
+        ownItem && triggerOf(ownItem)?.getAttribute("aria-expanded") === "true"
+          ? ownItem
+          : parentItem;
+      if (!item) return;
+      item.classList.add("nav-closed");
+      setExpanded(item, false);
+      triggerOf(item)?.focus();
+    });
+  }
+
+  initDesktopNav();
+</script>
 
 

@@ -9,9 +9,9 @@ const submenuId = `submenu-${parentTitle.toLowerCase().replace(/\s+/g, '-')}`;
 <div id={submenuId} class="submenu-level bg-bgMain overflow-y-auto">
   <!-- Botón "Atrás" -->
   <button
-    aria-label="Go back button" 
+    aria-label={`Volver desde ${parentTitle}`}
     class="flex items-center w-full gap-2 p-4 text-grisT sticky top-0 z-10 bg-bgMain"
-    onclick={`goBack('${parentId}')`}
+    data-go-back={parentId}
   >
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
       <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round"/>
@@ -26,7 +26,3 @@ const submenuId = `submenu-${parentTitle.toLowerCase().replace(/\s+/g, '-')}`;
     ))}
   </ul>
 </div>
-<script is:inline>
-  // Reinicia los listeners dentro de este submenú una vez insertado en el DOM
-  window.initSubmenuToggles?.(document.currentScript.closest('.submenu-level'));
-</script>

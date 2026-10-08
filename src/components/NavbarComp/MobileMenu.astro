@@ -135,14 +135,19 @@ import { menuItems } from "../../assets/data/menuItems";
   }
 </style>
 
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
+<script>
+  // Script único del menú móvil (Astro lo empaqueta una sola vez por página).
+  // Los clics de MobileMenuItem y MobileSubmenuWrapper se manejan por delegación
+  // mediante data-open-submenu, data-go-back y .toggle-submenu-button[data-target].
+  function initMobileMenu() {
     const menuButton = document.getElementById("mobileMenuButton");
     const menu = document.getElementById("mobileMenu");
     const backdrop = document.getElementById("mobileMenuBackdrop");
     const closeButton = document.getElementById("mobileMenuClose");
+    const mainMenu = document.getElementById("main-menu");
+    if (!menuButton || !menu) return;
 
-    const toggleMenu = (open) => {
+    const toggleMenu = (open: boolean) => {
       if (open) {
         menu.style.display = "block";
         requestAnimationFrame(() => {
@@ -153,10 +158,10 @@ import { menuItems } from "../../assets/data/menuItems";
         });
       } else {
         // Cerrar todos los submenús primero
-        document
+        menu
           .querySelectorAll(".submenu-level")
           .forEach((el) => el.classList.remove("active"));
-        document.getElementById("main-menu").classList.remove("slide-left");
+        mainMenu?.classList.remove("slide-left");
 
         menu.classList.remove("active");
         document.body.classList.remove("mobile-menu-open");
@@ -169,21 +174,46 @@ import { menuItems } from "../../assets/data/menuItems";
       }
     };
 
-    // Función global para abrir submenús
-    window.openSubmenu = (submenuId, parentId) => {
-      document.getElementById(parentId).classList.add("slide-left");
-      document.getElementById(submenuId).classList.add("active");
-    };
+    menu.addEventListener("click", (e) => {
+      const target = e.target as Element | null;
+      if (!target) return;
 
-    // Función global para volver atrás
-    window.goBack = (parentId) => {
-      document
-        .querySelector(".submenu-level.active")
-        .classList.remove("active");
-      document.getElementById(parentId).classList.remove("slide-left");
-    };
+      // Abrir submenú de primer nivel
+      const opener = target.closest<HTMLElement>("[data-open-submenu]");
+      if (opener) {
+        e.preventDefault();
+        const submenuId = opener.dataset.openSubmenu;
+        mainMenu?.classList.add("slide-left");
+        if (submenuId) document.getElementById(submenuId)?.classList.add("active");
+        return;
+      }
 
-    menuButton?.addEventListener("click", () => toggleMenu(true));
+      // Volver al nivel anterior
+      const back = target.closest<HTMLElement>("[data-go-back]");
+      if (back) {
+        menu.querySelector(".submenu-level.active")?.classList.remove("active");
+        const parentId = back.dataset.goBack;
+        if (parentId) document.getElementById(parentId)?.classList.remove("slide-left");
+        return;
+      }
+
+      // Desplegar/plegar submenús anidados
+      const toggle = target.closest<HTMLElement>(".toggle-submenu-button");
+      if (toggle) {
+        const targetId = toggle.dataset.target;
+        const submenu = targetId ? document.getElementById(targetId) : null;
+        if (!submenu) return;
+        const isOpen = submenu.classList.contains("max-h-0");
+        submenu.classList.toggle("max-h-0", !isOpen);
+        submenu.classList.toggle("max-h-[600px]", isOpen);
+        submenu.classList.toggle("opacity-0", !isOpen);
+        submenu.classList.toggle("opacity-100", isOpen);
+        submenu.classList.toggle("scale-y-95", !isOpen);
+        submenu.classList.toggle("scale-y-100", isOpen);
+      }
+    });
+
+    menuButton.addEventListener("click", () => toggleMenu(true));
     backdrop?.addEventListener("click", () => toggleMenu(false));
     closeButton?.addEventListener("click", () => toggleMenu(false));
 
@@ -192,5 +222,7 @@ import { menuItems } from "../../assets/data/menuItems";
         toggleMenu(false);
       }
     });
-  });
+  }
+
+  initMobileMenu();
 </script>

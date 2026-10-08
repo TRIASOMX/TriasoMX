@@ -1,25 +1,35 @@
 # Auditoría de calidad web — TRIASO (TriasoMX)
 
-**Fecha:** 2026-09-28 · **Rama auditada:** `preview` · **Stack:** Astro 5.9.3 (estático) + islas React 19, Tailwind 3, GSAP, Swiper, `@react-pdf/renderer` · **Hosting:** Vercel
+**Fecha:** 2026-09-28 · **Última actualización:** 2026-10-08 · **Rama auditada:** `preview` · **Stack:** Astro 5.9.3 (estático) + islas React 19, Tailwind 3, GSAP, Swiper, `@react-pdf/renderer` · **Hosting:** Hostinger (Apache)
 
-**Método:** revisión del código fuente, `npm run build` y análisis del HTML generado en `dist/` (33 páginas, ver hallazgo B-1), `npm run astro check`, `npm audit --omit=dev`, `npm outdated`. **No se pudo consultar la URL de producción** (`https://triaso-dps0wbyls-triaso-s-projects.vercel.app/`) desde este entorno: todo lo que depende de cabeceras HTTP, compresión, caché y Core Web Vitals reales está marcado como **"requiere verificación en producción"**.
+> **Cambio de hosting (2026-10-08):** el sitio se publicará en **Hostinger (Apache)**, no en Vercel. El formulario de contacto depende de `public/contacto.php` en ese servidor (staging: `staging.triaso.com.mx`). Las recomendaciones que antes iban en `vercel.json` (cabeceras, caché, redirecciones 301, slash final) ahora van en `.htaccess`; ver S-8, P-9 y B-5.
+
+**Método:** revisión del código fuente, `npm run build` y análisis del HTML generado en `dist/` (33 páginas, ver hallazgo B-1), `npm run astro check`, `npm audit --omit=dev`, `npm outdated`. **No se pudo consultar la URL de producción** (en ese momento, un deployment de Vercel) desde este entorno: todo lo que depende de cabeceras HTTP, compresión, caché y Core Web Vitals reales está marcado como **"requiere verificación en producción"**.
 
 ### Estado de las correcciones
 
 | Hallazgo | Estado | Fecha | Notas |
 |---|---|---|---|
-| S-5 — Un solo `<h1>` por página | ✅ Resuelto (sin commit) | 2026-09-28 | 1,696 `<h1>` convertidos en 137 archivos; ver detalle en S-5 |
-| S-2 — Idioma declarado | ✅ Resuelto (sin commit) | 2026-09-28 | `lang="es-MX"` en el Layout; páginas legales traducidas al español |
-| P-3 — `@react-pdf/renderer` en el bundle inicial | ✅ Resuelto (sin commit) | 2026-09-28 | Import dinámico al descargar; chunk de la calculadora 1,516 KB → 23 KB |
-| B-7 — Página 404 | ✅ Resuelto (commit `c2e874d`) | 2026-10-02 | `src/pages/404.astro` con Layout y enlaces rápidos; falta `noindex` |
-| B-1 — El build falla en Windows | ✅ Resuelto (sin commit) | 2026-10-05 | Slugs de noticias limpios y ruta `/noticias`; el build genera las 52 páginas |
-| S-8 — URLs y rutas | ✅ Resuelto en su mayoría (sin commit) | 2026-10-05 | Todas las rutas en kebab-case español; `/Example` eliminada; falta `trailingSlash` |
-| S-7 — Enlaces internos rotos | ✅ Resuelto (sin commit) | 2026-10-05 | 0 enlaces rotos en todo `src/` |
-| B-2 — Errores de TypeScript | ✅ Resuelto (sin commit) | 2026-10-05 | `astro check`: 0 errores, 0 advertencias |
-| S-1 — Metadatos SEO en el Layout | ✅ Resuelto con pendientes (sin commit) | 2026-10-05 | Canonical, robots, OG, Twitter y theme-color; dominio e imagen OG provisionales; falta favicon de marca |
-| S-6 — `client:only` en /plantas-asfalto | 🟡 Parcial (sin commit) | 2026-10-05 | CardSection y ProductSelector ahora con SSR; texto en el HTML 2,776 → 6,775 caracteres; falta revisión visual y el resto del sitio |
+| S-5 — Un solo `<h1>` por página | ✅ Resuelto (commit `c2e874d`) | 2026-09-28 | 1,696 `<h1>` convertidos en 137 archivos; ver detalle en S-5 |
+| S-2 — Idioma declarado | ✅ Resuelto (commit `c2e874d`) | 2026-09-28 | `lang="es-MX"` en el Layout; páginas legales traducidas al español |
+| P-3 — `@react-pdf/renderer` en el bundle inicial | ✅ Resuelto (commit `c2e874d`) | 2026-09-28 | Import dinámico al descargar; chunk de la calculadora 1,516 KB → 23 KB |
+| B-7 — Página 404 | ✅ Resuelto (commits `c2e874d`, `204d41d`) | 2026-10-02 | `src/pages/404.astro` con Layout, enlaces rápidos y `noindex` |
+| B-1 — El build falla en Windows | ✅ Resuelto (commit `e87648c`) | 2026-10-05 | Slugs de noticias limpios y ruta `/noticias`; el build genera las 52 páginas |
+| S-8 — URLs y rutas | ✅ Resuelto en su mayoría (commit `e87648c`) | 2026-10-05 | Todas las rutas en kebab-case español; `/Example` eliminada; falta slash final y 301 (en `.htaccess`) |
+| S-7 — Enlaces internos rotos | ✅ Resuelto (commit `e87648c`) | 2026-10-05 | 0 enlaces rotos en todo `src/` |
+| B-2 — Errores de TypeScript | ✅ Resuelto (commit `e87648c`) | 2026-10-05 | `astro check`: 0 errores, 0 advertencias (confirmado otra vez el 2026-10-08) |
+| S-1 — Metadatos SEO en el Layout | ✅ Resuelto con pendientes (commit `204d41d`) | 2026-10-05 | Canonical, robots, OG, Twitter y theme-color; dominio e imagen OG provisionales; falta favicon de marca |
+| S-6 — `client:only` en /plantas-asfalto | 🟡 Parcial (commit `204d41d`) | 2026-10-05 | CardSection y ProductSelector ahora con SSR; texto en el HTML 2,776 → 6,775 caracteres; falta revisión visual y el resto del sitio |
+| S-6 (rel.) — Fichas de trituradoras en español | ✅ Resuelto (commit `204d41d`) | 2026-10-06 | 8 fichas y `/trituradoras-videos` traducidas; los PDFs de fichas técnicas siguen en inglés |
+| B-6 — Datos de contacto contradictorios | ✅ Resuelto (teléfono `7562a62`; correo sin commit) | 2026-10-08 | Teléfono y WhatsApp unificados al +52 (618) 170 3580; correo `triaso.informes@gmail.com` en footer, legales y `/contacto` desde `assets/data/contacto.ts` |
+| Formulario de contacto propio | ✅ Hecho (commit `7562a62`) | 2026-10-07 | Zoho reemplazado por `ContactForm.tsx` + `public/contacto.php` (reCAPTCHA v2); falta probarlo en staging. Afecta B-5 y B-10 |
+| S-10 — Datos estructurados | 🟡 Parcial (commit `7562a62`) | 2026-10-08 | JSON-LD `FAQPage` en la home y `/plantas-asfalto` (`unitComponents/FAQSection.astro`); faltan `Organization`, `Product`, `NewsArticle`, `BreadcrumbList` |
+| P-4 — Scripts inline del menú móvil | ✅ Resuelto (sin commit) | 2026-10-08 | Un solo script con delegación; HTML de la home 191 KB → 132 KB; corrige un TypeError en consola; falta prueba manual en móvil |
+| B-3 — Dependencias vulnerables | 🟡 Mayormente resuelto (sin commit) | 2026-10-08 | `npm update` + `npm audit fix` dentro del mismo mayor; producción 18 → 3 vulnerabilidades; las 3 restantes requieren Astro 7 |
+| A-1 — Menú de escritorio por teclado | ✅ Resuelto (sin commit) | 2026-10-08 | `:focus-within`, `aria-haspopup`/`aria-expanded`, Esc, foco visible; agrupadores sin url ahora son `<button>` |
+| A-2 — Contraste de `--gris-textos` | ✅ Resuelto (sin commit) | 2026-10-08 | `#727272` → `#6b6b6b`: 4.41 → 4.88:1 sobre `--bg-main` |
 
-Las puntuaciones y cifras del resumen reflejan el estado **antes** de las correcciones.
+Las puntuaciones y cifras del resumen reflejan el estado **antes** de las correcciones. Los hallazgos sin marca de estado se revisaron otra vez el 2026-10-08 y **siguen abiertos**.
 
 > **Rutas renombradas (2026-10-05):** todas las URLs pasaron de PascalCase en inglés a kebab-case en español (p. ej. `/AsphaltPlant` → `/plantas-asfalto`, `/DrumMixers` → `/tambores-mezcladores/contraflujo-pro`). Los diagnósticos originales de este documento conservan los nombres viejos; la lista completa de URLs actuales está en `urls-sitio.txt`.
 
@@ -53,7 +63,7 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
   - También: la descripción por defecto se tradujo al español y se quitó `class="font-sans"` de `<head>` (A-6).
 - **Verificación:** `astro check` con 0 errores; el build genera 52 páginas y todas las indexables tienen canonical.
 - **Pendiente:**
-  - **Dominio provisional:** confirmar `www` o sin `www` y ajustar `site`. El otro dominio debe redirigir (301) al elegido en Vercel.
+  - **Dominio provisional:** confirmar `www` o sin `www` y ajustar `site`. El otro dominio debe redirigir (301) al elegido, con una regla en `.htaccess` de Hostinger.
   - **Imagen OG provisional:** reemplazar `NewBanner.webp` por un diseño 1200×630 con logo. Es un solo import en el Layout.
   - **Favicon:** `public/favicon.svg` es el logo por defecto de Astro, no el de TRIASO. Faltan también `apple-touch-icon` (180×180) y `manifest`, que necesitan un ícono cuadrado de la marca (ver #33 en la tabla).
   - **Títulos y descripciones por página** siguen siendo S-3: las props ya existen, falta definirlas en cada página.
@@ -75,19 +85,24 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 **S-2. Idioma declarado incorrecto** — `src/layouts/Layout.astro:14` · ✅ **Resuelto el 2026-09-28**
 - **Corrección aplicada:** `<html lang="es-MX">` en `src/layouts/Layout.astro`. Las páginas `/PrivacyPolicy` y `/TermsandConditions`, que estaban en inglés, se tradujeron al español (`src/components/Legal/Privacy.astro` y `Terms.astro`), con títulos iguales a los enlaces del footer ("Política de privacidad", "Términos y condiciones"). `astro check` sin errores nuevos.
 - **Textos legales corregidos (2026-09-28):** en Términos, "Nortam" (restos de una plantilla) se cambió por "Triaso"; en Política de privacidad, la sección de contacto ahora habla de "este Aviso de Privacidad" en vez de "estos Términos y Condiciones".
-- **Pendiente relacionado:** ambas páginas legales siguen usando `sales@triasous.com` como correo de contacto y para ejercer los derechos ARCO; se decidirá junto con B-6. Conviene que alguien con criterio legal revise la traducción. Los nombres de producto en inglés de los hero ("Ball Mills", "Jaw Crushers"…) se dejaron dentro del `lang` en español.
+- **Pendiente relacionado:** ~~ambas páginas legales siguen usando `sales@triasous.com` como correo de contacto y para ejercer los derechos ARCO~~ (✅ resuelto el 2026-10-08 con B-6: ahora usan `triaso.informes@gmail.com`). Conviene que alguien con criterio legal revise la traducción. Los nombres de producto en inglés de los hero ("Ball Mills", "Jaw Crushers"…) se dejaron dentro del `lang` en español.
 - *Diagnóstico original —* `<html lang="en">` pero el contenido es español. Afecta a Google (señal de idioma), traductores y lectores de pantalla (pronuncian el español con fonética inglesa).
 - **Solución:** `<html lang="es-MX">`.
 
-**S-3. Títulos ausentes, duplicados o poco descriptivos** — `src/pages/*.astro`
-- 9 páginas renderizan el título por defecto **"TRIASOUS"**: AboutUs, BallMills, BeltConveyors, ConeCrushers, Example, Expo, IntegralCrushers, MiniCrushers, `news/[id]` (además, por código, Newsroom, PrivacyPolicy, TermsandConditions y VibratingScreens tampoco pasan `title`).
+**S-3. Títulos ausentes, duplicados o poco descriptivos** — `src/pages/*.astro` · ⬜ **Abierto (revisado 2026-10-08)**
+- **Estado actual (rutas nuevas):**
+  - **Sin `title` (heredan el título por defecto):** `criba-vibratoria`, `expos`, `newsroom`, `nosotros`, `politica-de-privacidad`, `terminos-y-condiciones`, `trituradora-cono`, `trituradora-integral`, `trituradora-mini`, `trituradora-molino`, `trituradora-transportadores`.
+  - **Título en inglés o con "Page":** `alimentador-aditivo-polvo`, `caldera-adaptable`, `casas-bolsas`, `contacto` ("Contact Us"), `fabricacion`, `flancos-esteticos`, `mejora-diseno`, `mezcladora-frio`, `precalentadores-combustible`, `quemadores`, `rehabilitacion`, `silos-mezcla-asfaltica`, `tolvas`, `tolvas-rap`, `trituradora-alimentadores`, `trituradora-quijada`, `trituradoras-videos`, `ventajas`, `videos-plantas-asfalto`.
+  - **Repetidos:** "Tambor de contraflujo" en `contraflujo-desamaq`, `contraflujo-plus`, `contraflujo-pro` y también en `paralelo-pro`, que no es contraflujo.
+  - Con S-1 el Layout ya acepta `title` y `description`; falta definirlos en cada página.
+- *Diagnóstico original —* 9 páginas renderizan el título por defecto **"TRIASOUS"**: AboutUs, BallMills, BeltConveyors, ConeCrushers, Example, Expo, IntegralCrushers, MiniCrushers, `news/[id]` (además, por código, Newsroom, PrivacyPolicy, TermsandConditions y VibratingScreens tampoco pasan `title`).
 - "Tambor de contraflujo" se repite en `DrumMixers.astro`, `TamborMezcla/Contraflujo/ContraDesamaq.astro`, `ContraPlus.astro` y `TamborMezcla/Paralelo/ParaleloPro.astro` (esta última ni siquiera es contraflujo).
 - Títulos en inglés con sufijo "Page" en un sitio en español: "BagHouses Page", "Burners Page", "ColdMix Page", "Oil Heaters Page", "Rap Bins Page", "Improvement in systems and designs Page", "Aesthetic Side Panels Page".
 - Solo `index.astro` y `Maintenance.astro` pasan `description` (y la de Maintenance es "Maintenance page"); el resto hereda la descripción genérica en inglés del Layout → **descripciones duplicadas en todo el sitio**.
 - **Solución:** hacer `title` y `description` obligatorios en el Layout (tipar `Props` sin default), y definir por página un título de 50–60 caracteres con patrón `"<Producto> | TRIASO"` y una descripción única de 140–160 caracteres en español.
 
-**S-4. No existen `robots.txt` ni sitemap** — `public/`, `astro.config.mjs`
-- No hay `public/robots.txt`, ni `@astrojs/sitemap`, ni `site` configurado.
+**S-4. No existen `robots.txt` ni sitemap** — `public/`, `astro.config.mjs` · ⬜ **Abierto (revisado 2026-10-08)**
+- No hay `public/robots.txt` ni `@astrojs/sitemap`. ~~Ni `site` configurado~~: `site` ya existe desde S-1 (dominio provisional).
 - **Solución:** `npx astro add sitemap`, configurar `site`, y crear `public/robots.txt`:
   ```
   User-agent: *
@@ -105,6 +120,7 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - **Solución:** un único `<h1>` por página (en el hero), secciones con `<h2>`, subsecciones `<h3>`. Los componentes reutilizables (cards, tabs, sliders) no deben usar `<h1>`; si se necesita el tamaño, usar clases, no la etiqueta.
 
 **S-6. Contenido crítico renderizado solo en cliente (`client:only`)** — 115 usos en `src/components/**` · 🟡 **Parcial el 2026-10-05**
+- **Conteo al 2026-10-08:** 113 `client:only`, 48 `client:visible`, 9 `client:load` y 4 `client:idle`.
 - **Estado actualizado (2026-10-05):** quedan 112 usos de `client:only`, frente a 47 de `client:visible` y 9 de `client:load`. Parte del diagnóstico original ya no aplica: en las páginas de trituradoras el texto de las fichas **sí** viene en el HTML, y la única isla `client:only` es la galería (`GallerySlider`), que es visual y está bien así.
 - **Corrección aplicada en `/plantas-asfalto`** (`AsphaltPlants/MainSection.astro`):
   - `CardSection` pasó a `client:load`, porque va bajo el hero y su ScrollTrigger con `pin` debe crearse antes de llegar a él. `ProductSelector` pasó a `client:visible`.
@@ -118,7 +134,7 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
   - ~~Los textos de las fichas de trituradoras están en **inglés**~~ ✅ **Traducidos el 2026-10-06**. Se tradujeron a español de México los títulos, viñetas, leyendas de galería, botones de fichas técnicas, `alt` y el recuadro "Ingeniería a la medida" de las 8 fichas (quijada, cono, integral, molino, mini, transportadores, alimentadores, criba), además de los títulos de `/trituradoras-videos`. Se usó un glosario único y se cambió el símbolo `¨` por `"` en las pulgadas.
     - **Pendiente:** los botones de fichas técnicas de quijada, cono, transportadores, alimentadores y criba abren PDFs en **inglés** (carpeta `/eng/` del servidor actual). Se resuelve junto con la migración de PDFs al sitio nuevo.
     - **Por confirmar:** en `videosTrituradorasData.js`, dos videos dicen cono de `4.25"` y `3"` (pulgadas), mientras que las fichas usan pies (`4.25'`, `3'`). Se dejó como estaba.
-  - `src/pages/plantas-asfalto.astro` mete un `<head>` dentro del `<Layout>`, que termina dentro de `<main>` (HTML inválido). Su `preload` usa `imagesrcset` con `?width=` sobre un archivo estático, algo que Astro no procesa. Conviene eliminarlo.
+  - `src/pages/plantas-asfalto.astro` mete un `<head>` dentro del `<Layout>`, que termina dentro de `<main>` (HTML inválido). Su `preload` usa `imagesrcset` con `?width=` sobre un archivo estático, algo que Astro no procesa. Conviene eliminarlo. *(Sigue igual al 2026-10-08.)*
 - *Diagnóstico original:*
 - Ejemplos: `AsphaltPlants/MainSection.astro`, `ProductSelector`, `CardSection`, `BallMills/FirstSectionBall.astro`, `ConeCrushers/FirstSectionCone.astro`, `JawCrushers/FirstSection.astro`, `MiniCrusher/FirstSectionMini.astro`, `IntegralCrushers/FirstSectionIntegral.astro`, `BeltConveyors/FirstSectionBelt.astro`, `Example/Section.tsx`.
 - En páginas como BallMills, ConeCrushers o JawCrushers **todo** el cuerpo es una sola isla `client:only` → el HTML servido solo contiene navbar y footer (≈3–4 K caracteres de texto, casi todo del menú).
@@ -142,26 +158,30 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
   - Noticias: `/news/Nuevo: Menos combustible` → `/noticias/menos-combustible` y `/news/New-RAP-Recycled` → `/noticias/plantas-asfalto-rap` (ver B-1).
   - No se añadieron redirecciones 301 desde las rutas viejas porque el sitio Astro aún no está desplegado.
 - **Pendiente:**
-  - Fijar `trailingSlash` + canonical (S-1).
-  - Al lanzar, crear redirecciones 301 desde las URLs del sitio actual (`triaso.com.mx/*.html`) hacia las nuevas.
+  - Fijar `trailingSlash` en `astro.config.mjs`. La canonical ya existe (S-1) y no lleva slash final. En Hostinger, forzar el mismo criterio con una regla `RewriteRule` en `.htaccess`.
+  - Al lanzar, crear redirecciones 301 en `.htaccess` (`Redirect 301` o `RewriteRule … [R=301,L]`) desde las URLs del sitio actual (`triaso.com.mx/*.html`) hacia las nuevas. Hay que integrarlas en el `.htaccess` de la raíz que ya existe en el servidor, que tiene una lista blanca de archivos PHP (incluye `contacto.php`), sin romper esa regla.
   - Dos rutas no siguen el mismo criterio que las demás: `/newsroom` (sus noticias ya están en `/noticias/...`) y algunas trituradoras sin el prefijo `trituradora-` (`/criba-vibratoria`, `/trituradoras-videos`).
 - *Diagnóstico original:*
 - URLs en PascalCase (`/AsphaltPlant`): en Vercel las rutas son sensibles a mayúsculas, así que `/asphaltplant` → 404 (**requiere verificación en producción**). Typo en ruta pública: `/IntegralAphaltPlant`.
 - `/Example` (`src/pages/Example.astro`) es una página de prueba publicada e indexable.
 - Slug de noticia inválido: `id: "Nuevo: Menos combustible"` en `src/components/AboutPages/Newsroom/data/news.*:175` genera la URL `/news/Nuevo: Menos combustible` (espacio y dos puntos). Ver también B-1.
 - Sin `trailingSlash` configurado → `/AsphaltPlant` y `/AsphaltPlant/` pueden servirse ambas (**requiere verificación en producción**).
-- **Solución:** slugs en minúsculas con guiones (`nuevo-menos-combustible`); fijar `trailingSlash: "never"` (o `"always"`) + canonical; eliminar o poner `noindex` a `/Example`. Cambiar las rutas a minúsculas es un cambio de mayor esfuerzo: si se hace, añadir redirecciones 301 en `vercel.json` desde las URLs antiguas.
+- **Solución:** slugs en minúsculas con guiones (`nuevo-menos-combustible`); fijar `trailingSlash: "never"` (o `"always"`) + canonical; eliminar o poner `noindex` a `/Example`. Cambiar las rutas a minúsculas es un cambio de mayor esfuerzo: si se hace, añadir redirecciones 301 desde las URLs antiguas (hoy: en `.htaccess`, ver nota de hosting).
 
 **S-9. Internacionalización simulada** — `src/components/NavbarComp/LenguageSelector.astro`
 - ES y EN apuntan ambos a `/`; la detección de idioma usa `window` dentro del frontmatter (que se ejecuta en build, donde `window` no existe), por lo que siempre resuelve "es".
 - **Solución:** si no hay versión en inglés, retirar el selector. Si la hay en otro dominio (p. ej. triasous.com), enlazarlo y declarar `<link rel="alternate" hreflang="es-MX" …>` / `hreflang="en-US"` / `x-default` en ambos sitios.
 
-**S-10. Sin datos estructurados**
+**S-10. Sin datos estructurados** · 🟡 **Parcial el 2026-10-08** (commit `7562a62`)
+- **Avance:** `src/components/unitComponents/FAQSection.astro` emite JSON-LD `FAQPage` (prop `withSchema`) y se usa en la home (`LandingPage.astro`) y en `/plantas-asfalto` (`AsphaltPlants/UltimaSeccion.astro`).
+  - Nota: desde 2023 Google solo muestra resultados enriquecidos de FAQ para sitios de gobierno y salud. El marcado es válido y no estorba, pero no dará fragmentos enriquecidos; lo prioritario sigue siendo `Organization` y `Product`.
+  - Si `FAQSection` se usa en más páginas, emitir el schema una sola vez por página.
+- **Pendiente:** el resto de la solución de abajo.
 - **Solución:** JSON-LD en el Layout (`Organization` con `logo`, `sameAs` a LinkedIn/Instagram/Facebook, `contactPoint`), `LocalBusiness`/`PostalAddress` en `/contacto`, `Product` en cada página de equipo (nombre, descripción, imagen, `brand`), `NewsArticle` en `noticias/[id].astro` (`headline`, `datePublished`, `image`) y `BreadcrumbList` en las páginas anidadas (`/tambores-mezcladores/...`, `/casetas/...`).
 - Nota (2026-10-05): las fechas de `news.tsx` ya están en formato `AAAA-MM-DD` (antes `2026-17-02`, con día y mes invertidos), así que se pueden usar directo en `datePublished`.
 
-**S-11. Textos alternativos** — varios
-- 6 `<img>` sin atributo `alt` en `DrumMixers/BolsasSeccion.astro`, `DrumMixers/Contraflujo/Plus/BolsasSeccion.astro`, `DrumMixers/Contraflujo/Desamaq/BolsasSeccion.astro`.
+**S-11. Textos alternativos** — varios · ⬜ **Abierto (revisado 2026-10-08)**
+- 6 `<img>` sin atributo `alt` (las imágenes de Semarnat, siguen así) en `DrumMixers/BolsasSeccion.astro`, `DrumMixers/Contraflujo/Plus/BolsasSeccion.astro`, `DrumMixers/Contraflujo/Desamaq/BolsasSeccion.astro`.
 - 161 `alt=""` en código; muchos son iconos decorativos (correcto), pero p. ej. `AsphaltPlants/CardSection.tsx:128` (`<img src={item.img.src} alt="">`) acompaña contenido informativo. En `dist/`, AsphaltPlantVideos tiene 18 `alt=""`, IncorporadoresHule 8.
 - Los `alt` existentes están en inglés genérico ("Asphalt Plant", "Custom design equipment") en un sitio en español.
 - **Solución:** `alt` descriptivo en español para imágenes de producto ("Planta de asfalto móvil TRIASO de 120 t/h"), `alt=""` solo para decorativas.
@@ -206,8 +226,23 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
   ```
   y montar la calculadora con `client:visible`.
 
-**P-4. Scripts inline duplicados en cada página (~60 KB/página)** — `src/components/NavbarComp/MobileMenuItem.astro:55`, `MobileSubmenuWrapper.astro:29`
-- `<script is:inline>` dentro de un componente que se renderiza por cada ítem del menú → la función `initSubmenuToggles` (988 bytes) aparece **~60 veces** en el HTML de cada página. Scripts inline totales ≈ 69 KB de los ~135 KB del HTML base.
+**P-4. Scripts inline duplicados en cada página (~60 KB/página)** — `src/components/NavbarComp/MobileMenuItem.astro:55`, `MobileSubmenuWrapper.astro:29` · ✅ **Resuelto el 2026-10-08** (sin commit)
+- **Corrección aplicada:**
+  - Se eliminaron los `<script is:inline>` de `MobileMenuItem.astro` y `MobileSubmenuWrapper.astro`.
+  - `MobileMenu.astro` usa ahora un solo `<script>` normal (TypeScript, empaquetado y deduplicado por Astro) con **un listener de clic delegado** en `#mobileMenu`.
+  - Los `onclick="openSubmenu(…)"` y `onclick="goBack(…)"` se cambiaron por atributos `data-open-submenu` y `data-go-back`. Los submenús anidados siguen usando `.toggle-submenu-button[data-target]`.
+  - Se quitaron las funciones globales `window.openSubmenu`, `window.goBack` y `window.initSubmenuToggles`.
+  - El botón "Atrás" pasó de `aria-label="Go back button"` a "Volver desde <sección>".
+- **Bug corregido de paso:** los 4 scripts de `MobileSubmenuWrapper` llamaban a `document.currentScript.closest('.submenu-level')`. Como el `<script>` era hermano del `div` y no hijo, eso devolvía `null` e `initSubmenuToggles(null)` lanzaba un **TypeError en consola en cada página**.
+- **Resultado medido en el build** (`dist/index.html`):
+  - El HTML bajó de **191 KB a 132 KB** (−59 KB).
+  - Los scripts inline bajaron de **68 KB en 72 bloques a 11 KB en 10**.
+  - Quedan 0 copias de `initSubmenuToggles`.
+  - `astro check` da 0 errores; el build genera 52 páginas.
+- **Pendiente:**
+  - Prueba manual a ancho móvil: abrir y cerrar (hamburguesa, ✕, fondo, `Esc`), abrir un submenú por el texto y por la flecha, "Atrás", desplegar un submenú anidado, y reabrir el menú tras cerrarlo con un submenú abierto.
+  - `LenguageSelector.astro` también usa `is:inline` y se renderiza 2 veces (~1.3 KB); se resuelve con S-9.
+- *Diagnóstico original —* `<script is:inline>` dentro de un componente que se renderiza por cada ítem del menú → la función `initSubmenuToggles` (988 bytes) aparece **~60 veces** en el HTML de cada página. Scripts inline totales ≈ 69 KB de los ~135 KB del HTML base.
 - **Solución:** mover el script a `MobileMenu.astro` como `<script>` normal (sin `is:inline`, Astro lo deduplica y lo empaqueta) usando delegación de eventos sobre el contenedor del menú.
 
 **P-5. Bundles JS grandes por componente de planos** — `dist/_astro`
@@ -215,6 +250,7 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - **Solución:** revisar si esos componentes embeben SVG/datos grandes que podrían ser `.astro` estático con un script pequeño para las pestañas; consolidar los ~8 componentes `*Planos*.tsx` en uno parametrizado (ya comparten patrón); usar `client:visible` para que carguen al hacer scroll.
 
 **P-6. Vídeos** — `public/Videos/`
+- **Avance (2026-10-08, commit `7562a62`):** los 6 `HotspotSection.astro` de tambores mezcladores usan el nuevo `unitComponents/ResponsiveVideo.tsx`, con fuente y `poster` distintos para móvil y escritorio. Siguen pendientes el hero de la home, los `Stackscroll*.tsx` y la regla global `will-change` de `global.css`.
 - Hero de la home (`LandinPage/MainSection.astro:53`): `<video autoplay preload="none">` con solo `HeroVideo.webm` (3.3 MB), sin fuente MP4 (Safari antiguo) ni `poster`. La imagen de fondo `/Gallery/customdes.webp` está en `public/` (sin `srcset`, un único tamaño para móvil y escritorio).
 - `Stackscroll*.tsx` (FuelPreHeaters, Incorporadores, PowderAd) usan `autoPlay` sin `preload` ni `poster`. `CMVideo.webm` pesa 11.7 MB.
 - `global.css`: `video { will-change: transform; transform: translate3d(0,0,0) }` fuerza una capa GPU por cada vídeo de la página.
@@ -231,18 +267,36 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - Banderas del selector de idioma: `mxIcon` 506×505 px y `usaIcon` 225×225 mostradas a 16 px (`w-4`) → pasar `width={32}` a `<Image>`.
 
 **P-9. Compresión, caché, CDN** — **requiere verificación en producción**
-- Vercel sirve por defecto con CDN, Brotli/gzip y `cache-control: public, max-age=31536000, immutable` para `/_astro/*` (hasheados). Los archivos de `public/` (vídeos, `Gallery/`) **no** tienen hash, por lo que Vercel los sirve con caché corta por defecto. Verificar con `curl -I` y, si procede, añadir en `vercel.json` `headers` con `max-age` largo para `/Videos/(.*)` y `/Gallery/(.*)`.
+- **Actualizado 2026-10-08 (hosting en Hostinger):** Apache no aplica las reglas de caché que Vercel ponía por defecto. Hay que configurarlas en `.htaccess`:
+  - `mod_expires` / `mod_headers`: `Cache-Control: public, max-age=31536000, immutable` para `/_astro/*`, que llevan hash.
+  - Caché larga (p. ej. 30 días) para `/Videos/` y `/Gallery/`, que no llevan hash.
+  - `no-cache` para los `.html`.
+  - Compresión con `mod_deflate` o Brotli, según lo que permita el plan de Hostinger.
+  - Verificar con `curl -I` sobre el dominio final. Valorar un CDN (Cloudflare o el de Hostinger) para los vídeos.
+- *Diagnóstico original —* Vercel sirve por defecto con CDN, Brotli/gzip y `cache-control: public, max-age=31536000, immutable` para `/_astro/*` (hasheados). Los archivos de `public/` (vídeos, `Gallery/`) **no** tienen hash, por lo que Vercel los sirve con caché corta por defecto. Verificar con `curl -I` y, si procede, añadir en `vercel.json` `headers` con `max-age` largo para `/Videos/(.*)` y `/Gallery/(.*)`.
 
 ---
 
 ### 2.3 Accesibilidad (aprox. WCAG 2.1 AA)
 
-**A-1. Menú de escritorio no operable con teclado** — `src/components/NavbarComp/LinkNavbarItem.astro`
-- Los submenús se muestran solo con `.nav-item:hover > .submenu` (visibility: hidden). Con Tab, el foco entra en enlaces invisibles; no hay `aria-expanded` ni `aria-haspopup`. Incumple 2.1.1 (Teclado) y 2.4.7 (Foco visible).
+**A-1. Menú de escritorio no operable con teclado** — `src/components/NavbarComp/LinkNavbarItem.astro` · ✅ **Resuelto el 2026-10-08** (sin commit)
+- **Corrección aplicada:**
+  - **CSS** (`LinkNavbarItem.astro`): `.nav-item:focus-within > .submenu` abre igual que `:hover`, así que al tabular sobre un ítem se despliega su submenú y Tab entra en él. La clase `.nav-item.nav-closed` lo fuerza cerrado tras pulsar Esc.
+  - **Agrupadores sin `url`** ("CONTRAFLUJO" y similares) se renderizaban como `<a>` sin `href`, imposibles de enfocar con Tab, y sus submenús quedaban inaccesibles. Ahora son `<button type="button">` con el mismo estilo.
+  - **ARIA:** los ítems con hijos llevan `aria-haspopup="true"` y `aria-expanded`, sincronizado por un script único en `Main/Navbar.astro` (mouse y foco). La flecha SVG lleva `aria-hidden`. El `<nav>` tiene `aria-label="Principal"`.
+  - **Esc** cierra el submenú más interno que contiene el foco y regresa el foco a su ítem padre.
+  - **Foco visible:** `focus-visible:ring-2 focus-visible:ring-blueMain` en cada ítem.
+  - Sin cambios visuales con el mouse.
+- **Pendiente:**
+  - Prueba manual en navegador: Tab por todo el menú, Esc en cada nivel, y lector de pantalla si es posible.
+  - No se añadieron flechas ←/→ entre ítems (patrón *menubar* completo). Con Tab y Esc ya se cumple 2.1.1.
+- *Diagnóstico original —*- Los submenús se muestran solo con `.nav-item:hover > .submenu` (visibility: hidden). Con Tab, el foco entra en enlaces invisibles; no hay `aria-expanded` ni `aria-haspopup`. Incumple 2.1.1 (Teclado) y 2.4.7 (Foco visible).
 - **Solución:** añadir `.nav-item:focus-within > .submenu { opacity:1; visibility:visible }`, un `<button aria-expanded>` para desplegar, cierre con `Esc`, y envolver la barra en `<header>` + `<nav aria-label="Principal">`.
 
-**A-2. Contraste insuficiente** — `src/styles/global.css` (`--gris-textos: #727272`)
-- `#727272` sobre el fondo `#f4f5f6` (`--bg-main`) ≈ **4.4:1** (< 4.5:1 para texto normal). Se usa como `text-grisP` en párrafos (p. ej. `ContactPage/FormSection.astro`). En el footer (`bg-[#111827]`), `hover:text-gray-400` es aceptable, pero verificar textos `text-gray-500` si los hay.
+**A-2. Contraste insuficiente** — `src/styles/global.css` (`--gris-textos: #727272`) · ✅ **Resuelto el 2026-10-08** (sin commit)
+- **Corrección aplicada:** `--gris-textos` pasó de `#727272` a `#6b6b6b` (`text-grisP`). Contraste calculado: **4.41 → 4.88:1** sobre `--bg-main` (`#f4f5f6`) y **4.81 → 5.33:1** sobre blanco. Ambos cumplen AA (4.5:1). La diferencia de tono es mínima.
+- **Pendiente:** revisar el resto de combinaciones con axe o Lighthouse en navegador (p. ej. `text-gray-500` sobre fondos grises, textos sobre imágenes).
+- *Diagnóstico original —*- `#727272` sobre el fondo `#f4f5f6` (`--bg-main`) ≈ **4.4:1** (< 4.5:1 para texto normal). Se usa como `text-grisP` en párrafos (p. ej. `ContactPage/FormSection.astro`). En el footer (`bg-[#111827]`), `hover:text-gray-400` es aceptable, pero verificar textos `text-gray-500` si los hay.
 - **Solución:** oscurecer `--gris-textos` a `#6b6b6b` o menos (≥4.6:1). Verificar el resto de combinaciones con axe/Lighthouse (**requiere verificación en navegador**).
 
 **A-3. Indicadores de foco eliminados** — 53 `focus:outline-none` en `src/components/**`
@@ -287,29 +341,52 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - **Por qué importa:** son posibles `TypeError` en tiempo de ejecución (consola) si el elemento no existe, y el proyecto declara `astro check` como su única red de seguridad.
 - **Solución:** `querySelector<HTMLElement>(…)` + guardas `if (!track) return;`.
 
-**B-3. Dependencias vulnerables** (`npm audit --omit=dev`: 18 — 3 críticas, 12 altas, 1 moderada, 2 bajas)
-- Críticas: `astro <=7.2.7` (X-Forwarded-Host reflejado), `swiper 6.5.1–12.1.1` (prototype pollution), `tar`. Altas: `vite`, `rollup`, `sharp` (libvips), `postcss`, `devalue`, `h3`, `picomatch`, etc. Como el sitio es estático, la mayoría afectan al entorno de desarrollo/build, no a visitantes; **swiper** sí se ejecuta en el navegador.
+**B-3. Dependencias vulnerables** (`npm audit --omit=dev`: 18 — 3 críticas, 12 altas, 1 moderada, 2 bajas) · 🟡 **Mayormente resuelto el 2026-10-08** (sin commit)
+- **Corrección aplicada:** `npm update` (respeta los rangos `^` de `package.json`, sin cambiar de versión mayor) + `npm audit fix` sin `--force`. Solo cambió `package-lock.json`.
+  - Versiones nuevas: `astro 5.9.3 → 5.18.2`, `swiper 12.1.1 → 12.2.0`, `@astrojs/react 4.3 → 4.4.2`, `@react-pdf/renderer 4.3 → 4.9.0`, `react/react-dom 19.1 → 19.3.0`, `gsap 3.13 → 3.15.0`, `tailwindcss 3.4.17 → 3.4.19`.
+  - **Swiper**, la única dependencia vulnerable que corre en el navegador del visitante, quedó corregido.
+  - **Resultado:** producción (`--omit=dev`) **18 → 3** (1 crítica, 1 alta, 1 baja); total con dev 20 → 11.
+- **Restantes** (solo se corrigen con Astro 7, cambio mayor):
+  - `astro <=7.2.7` (crítica): XSS en `define:vars` y *replay* en server islands. **No aplica hoy:** `define:vars` solo se usa en `unitComponents/DiagonalHero.astro` con un valor fijo, sin datos del usuario, y el sitio no usa server islands.
+  - `sharp` (alta, libvips) y `esbuild` (baja, servidor de desarrollo en Windows): solo corren en build o en desarrollo, nunca en el sitio publicado.
+- **Efecto secundario corregido:** al actualizar dejó de instalarse `@types/node` como dependencia transitiva y aparecieron 2 errores de `astro check` por `NodeJS.Timeout` en `IntegralAsphalt/SliderHero.tsx` y `unitComponents/SmartVideo.tsx`. Se cambiaron a `ReturnType<typeof setInterval/setTimeout>`, el tipo correcto en el navegador. `astro check` vuelve a 0 errores.
+- **Pendiente:** probar en navegador las secciones con Swiper, GSAP y la descarga del PDF de la calculadora, que recibieron actualizaciones menores. Evaluar Astro 7 como proyecto aparte (Fase 3).
+- *Diagnóstico original —*- Críticas: `astro <=7.2.7` (X-Forwarded-Host reflejado), `swiper 6.5.1–12.1.1` (prototype pollution), `tar`. Altas: `vite`, `rollup`, `sharp` (libvips), `postcss`, `devalue`, `h3`, `picomatch`, etc. Como el sitio es estático, la mayoría afectan al entorno de desarrollo/build, no a visitantes; **swiper** sí se ejecuta en el navegador.
 - **Solución:** `npm audit fix`; actualizar dentro del mayor: `astro 5.9.3 → 5.18.x`, `swiper 12.1.1 → 12.2.0`, `@astrojs/react 4.3 → 4.4`, `@react-pdf/renderer 4.3 → 4.9`, `react/react-dom 19.1 → 19.3`, `gsap 3.13 → 3.15`. Evaluar después Astro 7 por separado.
 
 **B-4. Dependencias sin uso / conflictivas** — `package.json`
 - `keen-slider`, `iconoir` y `@tailwindcss/vite` (Tailwind **v4**) no se importan en ningún archivo; el proyecto usa Tailwind **v3** vía `@astrojs/tailwind`. `@types/react*` están en `dependencies` en lugar de `devDependencies`.
 - **Solución:** `npm uninstall keen-slider iconoir @tailwindcss/vite` y mover los `@types` a dev.
 
-**B-5. Cabeceras de seguridad** — **requiere verificación en producción**
-- No hay `vercel.json`, por lo que no se configuran CSP, `X-Frame-Options`/`frame-ancestors`, `Referrer-Policy`, `Permissions-Policy` ni `X-Content-Type-Options`. Vercel añade HSTS en sus dominios por defecto.
-- **Solución propuesta** (`vercel.json`, ajustar CSP a los orígenes reales: Zoho Forms, Google Maps, YouTube si se usa en las galerías de vídeo):
-  ```json
-  { "headers": [{ "source": "/(.*)", "headers": [
-    { "key": "X-Content-Type-Options", "value": "nosniff" },
-    { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-    { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
-    { "key": "Content-Security-Policy", "value": "frame-ancestors 'self'; frame-src https://forms.zohopublic.com https://www.google.com https://www.youtube-nocookie.com" }
-  ]}]}
+**B-5. Cabeceras de seguridad** — **requiere verificación en producción** · ⬜ **Abierto (actualizado 2026-10-08)**
+- No se configuran CSP, `X-Frame-Options`/`frame-ancestors`, `Referrer-Policy`, `Permissions-Policy` ni `X-Content-Type-Options`. Con Hostinger tampoco hay HSTS automático: activarlo cuando HTTPS esté forzado en el dominio final.
+- **Cambios desde la auditoría original:**
+  - El hosting pasó a Hostinger (Apache), así que las cabeceras van en `.htaccess`, no en `vercel.json`.
+  - El formulario de contacto ya no es un iframe de Zoho (commit `7562a62`). Ahora usa `public/contacto.php` con **reCAPTCHA v2**, que necesita `www.google.com/recaptcha/` y `www.gstatic.com/recaptcha/`.
+- **Solución propuesta** (`.htaccess` con `mod_headers`; ajustar `frame-src` a los orígenes reales: reCAPTCHA, Google Maps, YouTube en las galerías de vídeo):
+  ```apache
+  <IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    Header always set Content-Security-Policy "frame-ancestors 'self'; frame-src https://www.google.com https://www.youtube-nocookie.com https://www.youtube.com"
+    # Activar solo cuando HTTPS esté forzado en el dominio final:
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  </IfModule>
   ```
-- Nota: la URL facilitada (`triaso-dps0wbyls-…vercel.app`) es un *deployment* de Vercel; estas URLs suelen servirse con `X-Robots-Tag: noindex` y no representan el dominio de producción final. Repetir la verificación sobre el dominio definitivo.
+  Si más adelante se añade `script-src`, incluir `https://www.google.com/recaptcha/` y `https://www.gstatic.com/recaptcha/`.
+- **Seguridad del formulario:** confirmar que `triaso-config.php` (credenciales) queda fuera de `public_html` y que ningún archivo con secretos entra a `public/` (Astro copia `public/` completo a `dist/`).
+- *Nota original —* la URL facilitada entonces (`triaso-dps0wbyls-…vercel.app`) era un *deployment* de Vercel. Repetir la verificación sobre el dominio definitivo de Hostinger.
 
-**B-6. Datos de contacto contradictorios** — `src/components/Main/Footer.astro:110–125`
-- El enlace `href=" tel:+12486134885"` (con espacio inicial) marca un número de EE. UU., pero el texto visible es **+52 (618)-109-7672**.
+**B-6. Datos de contacto contradictorios** — `src/components/Main/Footer.astro:110–125` · ✅ **Resuelto el 2026-10-08** (teléfono en commit `7562a62`; correo sin commit)
+- **Correo corregido (2026-10-08):**
+  - **Decisión del negocio:** el correo público oficial es **`triaso.informes@gmail.com`**.
+  - Quedó en una sola constante, `CONTACT_EMAIL`, en `src/assets/data/contacto.ts`. La usan el footer (`href` y texto ahora coinciden), el Aviso de privacidad (derechos ARCO y Contacto) y los Términos (Contacto). En las páginas legales ahora es un enlace `mailto:`.
+  - `/contacto` muestra un bloque nuevo "Correo" con el mismo estilo que los teléfonos.
+  - Ya no queda ningún `sales@triasous.com` en `src/` ni en `dist/`. El enlace a `www.triasous.com` de `/contacto` se conserva a propósito: es la tarjeta "¿Buscas el sitio de Estados Unidos?".
+  - **Recomendación (no bloqueante):** un correo con el dominio `triaso.com.mx` (el formulario ya envía a `informes@triaso.com.mx`) da más confianza y ayuda al SEO local. Con la constante, cambiarlo es una sola línea.
+- **Teléfono corregido:** el teléfono del footer es ahora `tel:+526181703580`, que coincide con el texto visible "+52 (618) 170 3580" (también se quitó el espacio inicial del `href`). El botón de WhatsApp pasó de un número de EE. UU. a `wa.me/526181703580`. `/contacto` lista ese mismo número como principal.
+- *Diagnóstico original —* El enlace `href=" tel:+12486134885"` (con espacio inicial) marca un número de EE. UU., pero el texto visible es **+52 (618)-109-7672**.
 - El enlace `mailto:sales@triasous.com` muestra el texto **triaso.informes@gmail.com**; en `/Contact` se usa `mailto:triaso.informes@gmail.com`.
 - **Pendiente (anotado 2026-09-28):** las páginas legales (`src/components/Legal/Privacy.astro`, en "Derechos ARCO" y "Contacto", y `src/components/Legal/Terms.astro`, en "Contacto") también indican `sales@triasous.com`. Se dejaron así a propósito; cuando se decida el correo oficial, actualizarlo en footer, `/Contact` y ambas páginas legales.
 - **Por qué importa:** el usuario llama/escribe a un destino distinto del que ve; además, datos NAP inconsistentes perjudican el SEO local. **Confirmar con el negocio** cuál es el dato correcto antes de corregir.
@@ -325,12 +402,12 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 
 **B-9. Consentimiento de cookies sin analytics real** — `src/components/AboutPages/Banner/Trackedscripts.tsx`
 - El único script "rastreado" es un `console.log('Cargo de script')` de prueba; no hay analytics real ni medición de CWV de campo.
-- **Solución:** sustituir por la herramienta de analytics elegida (p. ej. Vercel Web Analytics/Speed Insights o GA4) respetando el consentimiento; eliminar el `console.log`.
+- **Solución:** sustituir por la herramienta de analytics elegida (p. ej. GA4 o Plausible; Vercel Analytics ya no aplica con Hostinger) respetando el consentimiento; eliminar el `console.log`.
 
 **B-10. Consistencia de código**
 - Colores hardcodeados contra la convención del proyecto: `bg-[#111827]` y `bg-[#075e54]` en el footer, colores de cards en `LandingPage.astro` (`#595959`, `#00840d`). Clase inexistente `max-w-screen` en `Main/Navbar.astro:10`.
 - Error de ortografía en nombres de componente (`LenguageSelector`, `LandinPage/`) — cosmético.
-- Responsive: viewport correcto y clases mobile-first en general; revisar manualmente en 360 px las secciones con `min-h-[720px]` (iframe de contacto) (**requiere verificación en navegador**).
+- Responsive: viewport correcto y clases mobile-first en general. ~~Revisar en 360 px las secciones con `min-h-[720px]` (iframe de contacto)~~: el iframe de Zoho ya no existe (2026-10-07). Revisar en 360 px el formulario nuevo (`ContactForm.tsx`) y el widget de reCAPTCHA, que mide 304 px de ancho (**requiere verificación en navegador**).
 
 ---
 
@@ -339,20 +416,20 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 | # | Tarea | Categoría | Impacto | Esfuerzo | Prioridad | Archivo(s) afectado(s) |
 |---|---|---|---|---|---|---|
 | 1 | ✅ **Resuelto 2026-10-05** — Corregir slug de noticia que rompe el build | Buenas prácticas | Alto | Bajo | 1 | `AboutPages/Newsroom/data/news.*`, `pages/noticias/[id].astro` |
-| 2 | Verificar y unificar teléfono/email del footer | Buenas prácticas / SEO local | Alto | Bajo | 1 | `Main/Footer.astro` |
+| 2 | ✅ **Resuelto 2026-10-08** (teléfono, WhatsApp y correo `triaso.informes@gmail.com` unificados) — Verificar y unificar teléfono/email del footer | Buenas prácticas / SEO local | Alto | Bajo | 1 | `Main/Footer.astro`, `Legal/Privacy.astro`, `Legal/Terms.astro`, `ContactPage/FormSection.astro` |
 | 3 | ✅ **Resuelto 2026-09-28** — `lang="es-MX"` | SEO / A11y | Alto | Bajo | 1 | `layouts/Layout.astro` |
-| 4 | Añadir `site`, `robots.txt` y `@astrojs/sitemap` | SEO | Alto | Bajo | 1 | `astro.config.mjs`, `public/robots.txt` |
+| 4 | Añadir `robots.txt` y `@astrojs/sitemap` (`site` ya existe desde S-1) | SEO | Alto | Bajo | 1 | `astro.config.mjs`, `public/robots.txt` |
 | 5 | Títulos y descripciones únicos por página (props obligatorios) | SEO | Alto | Bajo | 1 | `layouts/Layout.astro`, `pages/*.astro` |
 | 6 | ✅ **Resuelto 2026-10-05** — Canonical + Open Graph + Twitter Card en Layout (dominio e imagen OG provisionales) | SEO | Alto | Bajo | 1 | `layouts/Layout.astro`, `astro.config.mjs` |
 | 7 | ✅ **Resuelto 2026-10-05** — Corregir 3 enlaces internos rotos | SEO | Medio | Bajo | 1 | `DrumMixers/Contraflujo/Desamaq/SliderUltimaSeccion.astro` |
 | 8 | ✅ **Resuelto 2026-09-28** — Import dinámico de `@react-pdf/renderer` (−1.5 MB) | Performance | Alto | Bajo | 1 | `Calculadora/AnalisisInversion.tsx` |
-| 9 | Deduplicar scripts inline del menú móvil (−60 KB/página) | Performance | Medio | Bajo | 2 | `NavbarComp/MobileMenuItem.astro`, `MobileSubmenuWrapper.astro`, `MobileMenu.astro` |
-| 10 | `npm audit fix` + actualizar astro/swiper en el mismo mayor | Seguridad | Alto | Bajo | 2 | `package.json`, `package-lock.json` |
-| 11 | Submenú accesible por teclado (`:focus-within`, `aria-expanded`, Esc) | A11y | Alto | Bajo | 2 | `NavbarComp/LinkNavbarItem.astro` |
-| 12 | Oscurecer `--gris-textos` a ≥4.5:1 | A11y | Medio | Bajo | 2 | `styles/global.css` |
+| 9 | ✅ **Resuelto 2026-10-08** — Deduplicar scripts inline del menú móvil (−59 KB/página; corrige un TypeError en consola) | Performance | Medio | Bajo | 2 | `NavbarComp/MobileMenuItem.astro`, `MobileSubmenuWrapper.astro`, `MobileMenu.astro` |
+| 10 | ✅ **Resuelto 2026-10-08** (prod. 18 → 3; resto requiere Astro 7) — `npm audit fix` + actualizar astro/swiper en el mismo mayor | Seguridad | Alto | Bajo | 2 | `package.json`, `package-lock.json` |
+| 11 | ✅ **Resuelto 2026-10-08** — Submenú accesible por teclado (`:focus-within`, `aria-expanded`, Esc) | A11y | Alto | Bajo | 2 | `NavbarComp/LinkNavbarItem.astro`, `Main/Navbar.astro` |
+| 12 | ✅ **Resuelto 2026-10-08** (4.88:1) — Oscurecer `--gris-textos` a ≥4.5:1 | A11y | Medio | Bajo | 2 | `styles/global.css` |
 | 13 | ✅ **Resuelto 2026-10-02** — Crear `404.astro` (`noindex` añadido 2026-10-05) | Buenas prácticas | Medio | Bajo | 2 | `pages/404.astro` |
 | 14 | ~~Eliminar `/Example`~~ (✅ 2026-10-05); quitar selector de idioma falso | SEO | Medio | Bajo | 2 | `NavbarComp/LenguageSelector.astro`, `Main/Navbar.astro`, `NavbarComp/MobileMenu.astro` |
-| 15 | Cabeceras de seguridad y caché en `vercel.json` | Seguridad / Performance | Medio | Bajo | 2 | `vercel.json` (nuevo) |
+| 15 | Cabeceras de seguridad y caché en `.htaccess` (hosting en Hostinger) | Seguridad / Performance | Medio | Bajo | 2 | `public/.htaccess` o el `.htaccess` de la raíz del servidor |
 | 16 | `rel="noopener noreferrer"` + `aria-hidden` en SVG del footer; skip-link | A11y | Bajo | Bajo | 3 | `Main/Footer.astro`, `layouts/Layout.astro` |
 | 17 | Desinstalar deps sin uso (`keen-slider`, `iconoir`, `@tailwindcss/vite`) | Buenas prácticas | Bajo | Bajo | 3 | `package.json` |
 | 18 | ✅ **Resuelto 2026-09-28** — Un solo `<h1>` por página; resto a `<h2>/<h3>` | SEO / A11y | Alto | Medio | 2 | `LandingPage.astro`, `LandinPage/MainSection.astro`, componentes de Manufacture, DrumMixers, HotMix, ColdMix, Expo, BinUnits, AsphaltStorage… |
@@ -360,14 +437,14 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 | 20 | `width/height` + `loading="lazy"` en `<img>` crudos | Performance (CLS) | Alto | Medio | 2 | 452 `<img>` en `src/components/**` |
 | 21 | 🟡 **Parcial 2026-10-05** (`/plantas-asfalto` hecho) — Cambiar `client:only` → `client:visible` en secciones de contenido/hero | SEO / Performance | Alto | Medio | 2 | `*/FirstSection*.astro`, `AsphaltPlants/MainSection.astro`, `ProductSelector.tsx`, `CardSection.tsx` |
 | 22 | ✅ **Resuelto 2026-10-05** — Corregir 34 errores de `astro check` (0 errores) | Buenas prácticas | Medio | Medio | 3 | `Incorporadores/SeccionAnimacion.astro`, `BinUnits/BinGallery.astro`, `RAPRecycled/RBDropdown2.astro`… |
-| 23 | JSON-LD (Organization, LocalBusiness, Product, NewsArticle, Breadcrumb) | SEO | Medio | Medio | 3 | `layouts/Layout.astro`, `pages/contacto.astro`, páginas de producto, `noticias/[id].astro` |
-| 24 | Vídeos: poster, IntersectionObserver (`SmartVideo`), recompresión, quitar `will-change` global | Performance | Medio | Medio | 3 | `LandinPage/MainSection.astro`, `*/Stackscroll*.tsx`, `styles/global.css` |
+| 23 | 🟡 **Parcial 2026-10-08** (`FAQPage` en home y `/plantas-asfalto`) — JSON-LD (Organization, LocalBusiness, Product, NewsArticle, Breadcrumb) | SEO | Medio | Medio | 3 | `layouts/Layout.astro`, `pages/contacto.astro`, páginas de producto, `noticias/[id].astro` |
+| 24 | 🟡 **Avance 2026-10-08** (`ResponsiveVideo` en tambores) — Vídeos: poster, IntersectionObserver (`SmartVideo`), recompresión, quitar `will-change` global | Performance | Medio | Medio | 3 | `LandinPage/MainSection.astro`, `*/Stackscroll*.tsx`, `styles/global.css` |
 | 25 | `prefers-reduced-motion` en GSAP y vídeos autoplay; botón de pausa | A11y | Medio | Medio | 3 | `components/lib/*`, componentes con vídeo |
 | 26 | `alt` descriptivos en español; completar los 6 faltantes | SEO / A11y | Medio | Medio | 3 | `DrumMixers/**/BolsasSeccion.astro`, `CardSection.tsx`, galerías |
 | 27 | Eliminar vídeos/assets sin referencia (~200 MB) y mover posters a `src/assets` | Performance / Mantenimiento | Medio | Medio | 3 | `public/Videos/Mp4/*`, `public/Videos/Webm/landingVideo2.webm`… |
 | 28 | Consolidar componentes `*Planos*.tsx` y reducir su JS | Performance | Medio | Alto | 4 | `DrumMixers/**`, `BinUnits/BinPlanosSection.tsx`, `BagHouses/BHPlanos.tsx` |
 | 29 | Analytics real con consentimiento + medición de CWV de campo | Buenas prácticas | Medio | Medio | 4 | `AboutPages/Banner/Trackedscripts.tsx` |
-| 30 | ✅ **URLs resueltas 2026-10-05** (kebab-case español); pendientes 301 al lanzar + `trailingSlash` | SEO | Medio | Alto | 4 | `astro.config.mjs`, `vercel.json` |
+| 30 | ✅ **URLs resueltas 2026-10-05** (kebab-case español); pendientes 301 al lanzar + `trailingSlash` | SEO | Medio | Alto | 4 | `astro.config.mjs`, `.htaccess` |
 | 31 | i18n real (versión EN + hreflang) si se requiere | SEO | Bajo | Alto | 5 | `astro.config.mjs` (i18n), `src/pages/en/**` |
 | 32 | Sustituir hex hardcodeados por variables CSS | Mantenimiento | Bajo | Bajo | 5 | `Main/Footer.astro`, `LandingPage.astro` |
 | 33 | Favicon, `apple-touch-icon` y `manifest` con el ícono de TRIASO (hoy el favicon es el logo de Astro) | Marca / SEO | Medio | Bajo | 2 | `public/favicon.svg`, `layouts/Layout.astro` |
@@ -377,18 +454,19 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 ## 4. Plan de acción sugerido
 
 ### Fase 1 — Corto plazo (1–2 semanas): quick wins
-- ~~Desbloquear el build (#1)~~ (✅ hecho 2026-10-05) y confirmar/corregir datos de contacto (#2).
+- ~~Desbloquear el build (#1) y confirmar/corregir datos de contacto (#2).~~ ✅ Hecho (2026-10-05 y 2026-10-08).
 - Base SEO en el Layout: ~~`lang`~~ (✅ hecho 2026-09-28), ~~canonical, OG~~ (✅ hecho 2026-10-05; falta favicon de marca, #33), títulos/descripciones por página, `robots.txt`, sitemap, ~~enlaces rotos, `/Example`~~ (✅ hecho 2026-10-05) (#3–#7, #14).
-- Performance inmediata: ~~import dinámico de react-pdf~~ (✅ hecho 2026-09-28), deduplicar scripts del menú (#8, #9).
-- Seguridad: `npm audit fix` y actualizaciones menores; `vercel.json` con cabeceras (#10, #15).
-- Accesibilidad: menú por teclado, contraste, ~~404~~ (✅ hecho 2026-10-02), footer (#11–#13, #16, #17).
-- **Verificar en producción** (sobre el dominio final): `curl -I` de `/`, `/robots.txt`, `/sitemap-index.xml`, una ruta inexistente (debe mostrar la 404 propia), `/tambores-mezcladores` (debe redirigir a `/tambores-mezcladores/contraflujo-pro`), un `.webm` y un `.js` de `/_astro/`; ejecutar PageSpeed Insights (móvil) en `/`, `/plantas-asfalto` y `/tambores-mezcladores/contraflujo-pro` para tener la línea base de LCP/CLS/INP.
+- ~~Performance inmediata: import dinámico de react-pdf, deduplicar scripts del menú (#8, #9).~~ ✅ Hecho (2026-09-28 y 2026-10-08).
+- Seguridad: ~~`npm audit fix` y actualizaciones menores (#10)~~ (✅ hecho 2026-10-08); `.htaccess` con cabeceras y caché (#15).
+- Accesibilidad: ~~menú por teclado, contraste~~ (✅ hecho 2026-10-08), ~~404~~ (✅ hecho 2026-10-02), footer (#11–#13, #16, #17).
+- **Probar el formulario de contacto en `staging.triaso.com.mx`**: envío correcto, reCAPTCHA, registro en la base de datos y correo recibido; también el caso de error.
+- **Verificar en producción** (sobre el dominio final en Hostinger): `curl -I` de `/`, `/robots.txt`, `/sitemap-index.xml`, una ruta inexistente (debe mostrar la 404 propia), `/tambores-mezcladores` (debe redirigir a `/tambores-mezcladores/contraflujo-pro`), un `.webm` y un `.js` de `/_astro/`; ejecutar PageSpeed Insights (móvil) en `/`, `/plantas-asfalto` y `/tambores-mezcladores/contraflujo-pro` para tener la línea base de LCP/CLS/INP.
 
 ### Fase 2 — Mediano plazo (1–2 meses)
 - ~~Jerarquía de encabezados (#18).~~ ✅ Hecho el 2026-09-28 (falta revisión visual en navegador).
 - Optimización de imágenes y CLS (#19, #20) empezando por tambores mezcladores, fabricación y silos de mezcla asfáltica (las de más imágenes).
 - SSR del contenido con `client:visible` (#21), empezando por las páginas de trituradoras donde todo es `client:only`.
-- ~~Errores de TypeScript (#22)~~ (✅ hecho 2026-10-05), JSON-LD (#23), vídeos (#24), reduced-motion (#25), `alt` (#26), limpieza de assets (#27).
+- ~~Errores de TypeScript (#22)~~ (✅ hecho 2026-10-05), JSON-LD (#23, `FAQPage` hecho), vídeos (#24, tambores hechos), reduced-motion (#25), `alt` (#26), limpieza de assets (#27).
 - Añadir al flujo de verificación del proyecto: `astro check` sin errores + `build` + un link-check sobre `dist/` y Lighthouse CI (`@lhci/cli`) con presupuestos (p. ej. JS ≤ 250 KB por página, LCP ≤ 2.5 s).
 
 ### Fase 3 — Largo plazo (trimestre)

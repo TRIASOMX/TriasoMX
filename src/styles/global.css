@@ -16,7 +16,7 @@
   /* Rojo de botones e iconos */
   --gris-titulos: #393939;
   /* Gris obscuro para titulos */
-  --gris-textos: #727272;
+  --gris-textos: #6b6b6b; /* antes #727272 (4.4:1 sobre --bg-main); #6b6b6b da ≈4.9:1 y cumple WCAG AA */
   /* Gris para menu*/
   --gris-textos2: #d9d9d9;
   /* Gris claro para textos */

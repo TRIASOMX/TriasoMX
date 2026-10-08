@@ -1,15 +1,19 @@
 ---
 // src/components/LinkNavbarItem.astro
+// El estado aria-expanded y el cierre con Esc los maneja el script de Main/Navbar.astro.
 import LinkNavbarItem from './LinkNavbarItem.astro';
 
 type MenuItem = {
   title: string;
-  url: string;
+  url?: string;
   children?: MenuItem[];
 };
 
 const { item, depth = 0 } = Astro.props;
 const hasChildren = item.children && item.children.length > 0;
+// Los ítems sin url (p. ej. "CONTRAFLUJO") son solo agrupadores: se renderizan como
+// <button> para que se puedan enfocar con Tab y abrir su submenú desde el teclado.
+const Tag = item.url ? 'a' : 'button';
 ---
 <!-- Cada nivel de menú tiene su propio grupo -->
 <style is:global>
@@ -31,10 +35,18 @@ const hasChildren = item.children && item.children.length > 0;
     transform: translateY(0);
   }
 
-  .nav-item:hover > .submenu {
+  /* Se abre con el mouse o cuando el foco del teclado está dentro del ítem */
+  .nav-item:hover > .submenu,
+  .nav-item:focus-within > .submenu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+  }
+
+  /* Cerrado con Esc aunque el foco siga en el ítem (va después para ganar la cascada) */
+  .nav-item.nav-closed > .submenu {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .submenu {
@@ -51,16 +63,21 @@ const hasChildren = item.children && item.children.length > 0;
 </style>
 
 <div class="nav-item">
-  <a
+  <Tag
     href={item.url}
+    type={item.url ? undefined : 'button'}
+    aria-haspopup={hasChildren ? 'true' : undefined}
+    aria-expanded={hasChildren ? 'false' : undefined}
     class={`
       flex items-center justify-between gap-2
       px-4 py-3
       font-bold
       ${depth === 0 ? 'text-gray-900' : 'text-gray-600'}
       hover:text-redBg hover:bg-amber-50
+      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blueMain
       rounded-lg
       transition-colors
+      ${item.url ? '' : 'w-full text-left'}
       ${hasChildren ? 'pr-2' : ''}
     `}
   >
@@ -73,11 +90,12 @@ const hasChildren = item.children && item.children.length > 0;
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
+        aria-hidden="true"
       >
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
     )}
-  </a>
+  </Tag>
 
   {hasChildren && (
     <ul class="submenu">
