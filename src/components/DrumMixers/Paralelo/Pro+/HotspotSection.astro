@@ -2,9 +2,8 @@
 import DropdownItem from "../../../unitComponents/DropdownItem.astro";
 import BannerParalelo from "../../../../../public/BannerParalelo.webp";
 import CTASectionAstroComponent from "../../../unitComponents/CTASection.astro";
-import poster from "../../../../../public/Videos/Webm/Posters/landing1.webp";
 import { Image } from "astro:assets";
-import SmartVideo from "../../../unitComponents/SmartVideo";
+import ResponsiveVideo from "../../../unitComponents/ResponsiveVideo";
 import DMProv1 from "../../../../assets/images/DrumMixers/DMProv1.webp";
 import obracivil from "../../../../assets/images/DrumMixers/obracivil.webp";
 import obracivil2 from "../../../../assets/images/DrumMixers/obracivil2.webp";
@@ -129,11 +128,12 @@ const ParaleloPro = [
 <section class="max-w-7xl mx-auto px-8">
   <AlabeSection />
 
-  <SmartVideo
+  <ResponsiveVideo
     client:visible
-    src="/Videos/Webm/landingVideo.webm"
+    src="/Videos/Webm/Alabes/AlabesFpProDesk.webm"
     aspectRatio="16/9"
-    poster={poster.src}
+    mobileSrc="/Videos/Webm/Alabes/AlabesFpProMov.webm"
+    mobileAspectRatio="9/16"
     autoplayOnMobile={false}
     isLoop={false}
   />

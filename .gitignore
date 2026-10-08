@@ -26,3 +26,10 @@ Thumbs.db
 # jetbrains setting folder
 .idea/
 src/assets/images/landingVideo2.mp4
+
+# Referencia del formulario legacy (contiene credenciales reales; no debe estar en public/)
+legacy-form/
+public/_formulario-legacy/
+
+# Config con secretos del formulario de contacto (se sube a mano fuera de public_html)
+triaso-config.php

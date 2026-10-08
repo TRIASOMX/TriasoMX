@@ -1,7 +1,6 @@
 ---
-import poster from "../../../../../public/Videos/Webm/Posters/landing1.webp";
 import { Image } from "astro:assets";
-import SmartVideo from "../../../unitComponents/SmartVideo";
+import ResponsiveVideo from "../../../unitComponents/ResponsiveVideo";
 import CasetaSeccion from "../../CasetaSeccion.astro";
 import DropdownItem from "../../../unitComponents/DropdownItem.astro";
 
@@ -373,11 +372,12 @@ const desamaqPanels2 = [
       </p>
     </div>
   </div>
-  <SmartVideo
+  <ResponsiveVideo
     client:visible
-    src="/Videos/Webm/landingVideo.webm"
+    src="/Videos/Webm/Alabes/AlabesCfPlusDesk.webm"
     aspectRatio="16/9"
-    poster={poster.src}
+    mobileSrc="/Videos/Webm/Alabes/AlabesCfPlusMov.webm"
+    mobileAspectRatio="9/16"
     autoplayOnMobile={false}
     isLoop={false}
   />

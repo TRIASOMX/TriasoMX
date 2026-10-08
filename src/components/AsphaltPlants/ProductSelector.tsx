@@ -1240,7 +1240,7 @@ export default function ProductSelector() {
         </h2>
         <br />
         <p
-          className="pb-0 md:pb-16"
+          className="pb-0 md:pb-24"
           style={{
             fontSize: "clamp(0.875rem, 2vw, 1rem)",
             color: "#000000",
@@ -1267,11 +1267,13 @@ export default function ProductSelector() {
             key={model.name}
             className="relative shrink-0 snap-center w-[78%] sm:w-[55%] md:w-auto"
           >
-            <div className="absolute -top-12 left-0 w-full z-10 flex justify-center">
+            {/* Anclada por abajo: todas las imágenes comparten la misma base
+                (el inicio del contenido de la card) aunque tengan distinta altura. */}
+            <div className="absolute bottom-[calc(100%-3rem)] left-0 w-full z-10 flex justify-center items-end">
               <img
                 src={model.image}
                 alt={model.name}
-                className="w-[85%] h-auto"
+                className="w-[85%] h-auto block"
                 loading="lazy"
               />
             </div>

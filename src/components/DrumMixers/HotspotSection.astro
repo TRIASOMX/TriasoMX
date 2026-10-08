@@ -1,9 +1,8 @@
 ---
 import DropdownItem from "../unitComponents/DropdownItem.astro";
 import CTASection from "../unitComponents/CTASection.astro";
-import poster from "../../../public/Videos/Webm/Posters/landing1.webp";
 import { Image } from "astro:assets";
-import SmartVideo from "../unitComponents/SmartVideo";
+import ResponsiveVideo from "../unitComponents/ResponsiveVideo";
 import DMProv1 from "../../assets/images/DrumMixers/DMProv1.webp";
 import obracivil from "../../assets/images/DrumMixers/obracivil.webp";
 import obracivil2 from "../../assets/images/DrumMixers/obracivil2.webp";
@@ -144,11 +143,12 @@ const drumMixersPanels = [
 <section class="max-w-7xl mx-auto px-8">
   <AlabeSection />
 
-  <SmartVideo
+  <ResponsiveVideo
     client:visible
-    src="/Videos/Webm/landingVideo.webm"
+    src="/Videos/Webm/Alabes/AlabesCfProDesk.webm"
     aspectRatio="16/9"
-    poster={poster.src}
+    mobileSrc="/Videos/Webm/Alabes/AlabesCfProMov.webm"
+    mobileAspectRatio="9/16"
     autoplayOnMobile={false}
     isLoop={false}
   />

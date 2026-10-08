@@ -6,6 +6,7 @@ import ItemsSliderLarge from "./LandinPage/ItemsSliderLarge";
 import TriasoOSSection from "./LandinPage/TriasoOSSection.astro";
 import StackedInfoCards from "./unitComponents/StackedInfoCards.astro";
 import ImageAnimationLanding from "./LandinPage/ImageAnimationLanding.astro";
+import FAQSection from "./unitComponents/FAQSection.astro";
 
 const images1 = [
   {
@@ -84,6 +85,43 @@ const cards = [
     textColor: "#ffffff",
   },
 ];
+const faqs = [
+  {
+    question: "¿Triaso ofrece instalación y puesta en marcha?",
+    answer:
+      "Sí. Triaso ofrece asistencia para la instalación y puesta en marcha de sus equipos para asegurar su correcta integración y funcionamiento.",
+  },
+  {
+    question: "¿Ofrecen capacitación para los operadores?",
+    answer:
+      "Sí. Triaso brinda capacitación para que los operadores conozcan el funcionamiento, operación y supervisión de los equipos y del sistema de automatización.",
+  },
+  {
+    question: "¿Triaso ofrece soporte técnico después de la instalación?",
+    answer:
+      "Sí. Triaso ofrece soporte técnico para atender necesidades relacionadas con la operación, mantenimiento y funcionamiento de los equipos después de su puesta en marcha.",
+  },
+  {
+    question: "¿Puedo comprar refacciones directamente con Triaso?",
+    answer:
+      "Sí. Triaso suministra refacciones para sus equipos y puede ayudar a identificar los componentes necesarios de acuerdo con el modelo y configuración de la planta.",
+  },
+  {
+    question: "¿Triaso fabrica equipos individuales además de plantas completas?",
+    answer:
+      "Sí. Además de plantas completas, Triaso fabrica equipos individuales que pueden integrarse a instalaciones nuevas o existentes.",
+  },
+  {
+    question: "¿Triaso puede modernizar o ampliar una planta existente?",
+    answer:
+      "Sí. Dependiendo de las características de la planta, Triaso puede desarrollar soluciones para modernizar, ampliar o incorporar nuevos equipos y sistemas.",
+  },
+  {
+    question: "¿Puedo visitar una planta Triaso en operación antes de comprar?",
+    answer:
+      "Es posible coordinar visitas a instalaciones de referencia, sujeto a disponibilidad, ubicación y autorización del propietario de la planta. Consulte con nuestro equipo comercial para conocer las opciones disponibles.",
+  },
+];
 ---
 
 <div class="w-full">
@@ -133,4 +171,6 @@ const cards = [
       </div>
     </div>
   </section>
+
+  <FAQSection items={faqs} />
 </div>

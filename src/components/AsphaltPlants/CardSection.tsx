@@ -165,8 +165,8 @@ const CARDS: CardData[] = [
             <span className="font-bold text-base md:text-3xl">320</span> plantas
             de
           </p>
-          <p className="text-white text-sm md:text-2xl">
-            de asfalto fabricadas, desde{" "}
+          <p className="text-white text-sm md:text-2xl text-start md:text-end w-full">
+            asfalto fabricadas, desde{" "}
             <span className="font-bold text-base md:text-3xl">1997</span>
           </p>
         </div>

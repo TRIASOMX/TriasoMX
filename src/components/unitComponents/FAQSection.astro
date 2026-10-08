@@ -1,0 +1,187 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface Props {
+  items: FAQItem[];
+  /** Texto de la pastilla sobre el título. Pasa "" para ocultarla. */
+  kicker?: string;
+  title?: string;
+  /** Segunda línea del título. */
+  subtitle?: string;
+  /** Abre la primera pregunta al cargar. */
+  openFirst?: boolean;
+  /** Agrega el JSON-LD FAQPage para que Google pueda mostrar las preguntas. */
+  withSchema?: boolean;
+  class?: string;
+}
+
+const {
+  items = [],
+  kicker = "FAQs",
+  title = "Preguntas frecuentes",
+  subtitle = "Todo lo que necesita saber",
+  openFirst = true,
+  withSchema = true,
+  class: className = "",
+} = Astro.props;
+
+// Nombre único por instancia para que `name` agrupe solo sus propios <details>
+// (un solo item abierto a la vez).
+const groupName = `faq-${Math.random().toString(36).slice(2, 8)}`;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+
+<section class={`faq-section relative w-full overflow-hidden py-20 md:py-28 ${className}`}>
+  <div class="faq-glow" aria-hidden="true"></div>
+
+  <div class="relative max-w-3xl mx-auto px-6 md:px-8">
+    <header class="flex flex-col items-center text-center">
+      {
+        kicker && (
+          <span class="faq-pill text-xs md:text-sm font-semibold text-blueMain px-4 py-1.5 rounded-full">
+            {kicker}
+          </span>
+        )
+      }
+      <h2 class="mt-5 text-3xl md:text-5xl font-semibold text-blueMain leading-[1.1] tracking-[-0.02em] [text-wrap:balance]">
+        {title}
+        {subtitle && <span class="block">{subtitle}</span>}
+      </h2>
+    </header>
+
+    <div class="mt-10 md:mt-14 flex flex-col gap-3">
+      {
+        items.map((item, i) => (
+          <details
+            name={groupName}
+            open={openFirst && i === 0}
+            class="faq-item group rounded-2xl"
+          >
+            <summary class="flex items-center justify-between gap-6 px-5 md:px-6 py-4 md:py-5 cursor-pointer list-none select-none rounded-2xl text-[0.95rem] md:text-base font-bold text-grisT">
+              <span>{item.question}</span>
+              <svg
+                class="faq-icon w-3.5 h-3.5 flex-shrink-0 text-blueMain"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden="true"
+              >
+                <line class="faq-icon-v" x1="8" y1="1" x2="8" y2="15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                <line x1="1" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </summary>
+            <p class="px-5 md:px-6 pb-5 md:pb-6 -mt-1 pr-12 max-w-[65ch] text-sm md:text-[0.95rem] text-[#4F4F4F] leading-relaxed">
+              {item.answer}
+            </p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+
+  {withSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />}
+</section>
+
+<style>
+  /* Fondo: lavado azul de marca (#14427c) muy diluido, con dos arcos suaves
+     que encuadran el título, como en la referencia. */
+  .faq-section {
+    background:
+      linear-gradient(180deg, rgb(20 66 124 / 0.07) 0%, rgb(20 66 124 / 0.02) 60%, #ffffff 100%);
+    interpolate-size: allow-keywords;
+  }
+
+  .faq-section ::selection {
+    background: rgb(20 66 124 / 0.18);
+  }
+
+  .faq-glow {
+    position: absolute;
+    inset: -20% -10% auto;
+    height: 90%;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 38% 70% at 50% 0%, rgb(20 66 124 / 0.10), transparent 70%),
+      radial-gradient(ellipse 30% 85% at 12% 10%, rgb(255 255 255 / 0.9), transparent 70%),
+      radial-gradient(ellipse 30% 85% at 88% 10%, rgb(255 255 255 / 0.9), transparent 70%);
+  }
+
+  .faq-pill {
+    background: #ffffff;
+    border: 1px solid rgb(20 66 124 / 0.14);
+    box-shadow: 0 1px 2px rgb(20 66 124 / 0.08);
+  }
+
+  .faq-item {
+    background: rgb(255 255 255 / 0.78);
+    border: 1px solid rgb(20 66 124 / 0.12);
+    box-shadow: 0 1px 2px rgb(20 66 124 / 0.04);
+    transition:
+      border-color 0.25s ease,
+      background-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .faq-item:hover {
+    border-color: rgb(20 66 124 / 0.24);
+  }
+
+  .faq-item[open] {
+    background: #ffffff;
+    border-color: rgb(20 66 124 / 0.22);
+    box-shadow: 0 6px 20px -8px rgb(20 66 124 / 0.18);
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary:focus-visible {
+    outline: 2px solid #14427c;
+    outline-offset: 2px;
+  }
+
+  /* + → − : la línea vertical se colapsa al abrir. */
+  .faq-icon-v {
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .faq-item[open] .faq-icon-v {
+    transform: scaleY(0);
+  }
+
+  /* Animación de apertura donde el navegador la soporte (Chrome/Edge);
+     en el resto simplemente abre sin transición. */
+  .faq-item::details-content {
+    block-size: 0;
+    overflow: hidden;
+    transition:
+      block-size 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+      content-visibility 0.4s allow-discrete;
+  }
+
+  .faq-item[open]::details-content {
+    block-size: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-item,
+    .faq-item::details-content,
+    .faq-icon-v {
+      transition: none;
+    }
+  }
+</style>
