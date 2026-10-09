@@ -95,7 +95,7 @@ const OdometerMontable = () => {
           <div className="lg:w-3/5">
             <img
               src={montable.src}
-              alt="Baghouse Odometer"
+              alt="Caseta de control montable TRIASO"
               className="rounded-lg"
             />
           </div>

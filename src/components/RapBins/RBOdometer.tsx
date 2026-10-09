@@ -90,7 +90,7 @@ const RPOdometer = () => {
           <div className="w-4/6 pt-10 lg:pt-0 md:pt-0">
             <img
               src={img1.src}
-              alt="Back of the RAP (Reclaimed Asphalt Pavement) Bin Unit"
+              alt="Vista trasera de la tolva de RAP (pavimento asfáltico recuperado)"
             />
           </div>
           {/* <a

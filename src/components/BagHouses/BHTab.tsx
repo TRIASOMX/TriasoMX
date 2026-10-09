@@ -5,9 +5,9 @@ const images = [
   {
     id: 0,
     src: "/Gallery/baghouses3.webp",
-    alt: "Baghouse mounted on the same chasis as the drum mixer",
+    alt: "Casa de bolsas montada en el mismo chasis que el tambor mezclador",
   },
-  { id: 1, src: "/Gallery/baghouses2.webp", alt: "Baghouse self-contained" },
+  { id: 1, src: "/Gallery/baghouses2.webp", alt: "Casa de bolsas independiente" },
 ];
 
 export default function Tab() {

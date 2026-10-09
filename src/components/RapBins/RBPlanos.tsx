@@ -181,7 +181,7 @@ const RBPlanos = () => {
           <img
             src={RAPMain2.src}
             className="absolute top-0 left-0 w-full h-full object-contain"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 2 ? "block" : "none",
               opacity: activeTab === 2 ? 1 : 0,
@@ -192,7 +192,7 @@ const RBPlanos = () => {
             ref={imgRef}
             src={RAPMain.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen superior"
+            alt="Plano técnico de la tolva de RAP"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>

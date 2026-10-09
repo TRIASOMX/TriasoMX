@@ -165,7 +165,7 @@ const PlanoSection = () => {
             ref={blueRef}
             src={reinforcedBlue.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 3 ? "block" : "none",
               opacity: activeTab === 3 ? 1 : 0,
@@ -176,7 +176,7 @@ const PlanoSection = () => {
             ref={imgRef}
             src={reinfo1.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen superior"
+            alt="Plano técnico de la planta de asfalto integral de 10 t/h"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>

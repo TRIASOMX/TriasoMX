@@ -176,7 +176,7 @@ const ASPlanos = () => {
           <img
             src={AS12.src}
             className="absolute top-0 left-0 w-full h-full object-contain"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 1 ? "block" : "none",
               opacity: activeTab === 1 ? 1 : 0,
@@ -187,7 +187,7 @@ const ASPlanos = () => {
             ref={imgRef}
             src={ATMain.src}
             className="absolute top-0 left-0 w-full h-full object-contain"
-            alt="Imagen superior"
+            alt="Plano técnico de el tanque de almacenamiento de asfalto"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>

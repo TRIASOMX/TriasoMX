@@ -248,7 +248,7 @@ const DrumMixPlanos = () => {
           <img
             src={tab1Main.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 3 ? "block" : "none",
               opacity: activeTab === 3 ? 1 : 0,
@@ -259,7 +259,7 @@ const DrumMixPlanos = () => {
             ref={imgRef}
             src={tab3Main2.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen superior"
+            alt="Plano técnico de el tambor mezclador de contraflujo Pro+"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>

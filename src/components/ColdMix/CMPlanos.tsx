@@ -374,7 +374,7 @@ const CMPlanos = () => {
           <img
             src={M2.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 3 ? "block" : "none",
               opacity: activeTab === 3 ? 1 : 0,
@@ -385,7 +385,7 @@ const CMPlanos = () => {
             ref={imgRef}
             src={tolva3Main.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen superior"
+            alt="Plano técnico de la planta de mezcla en frío"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>
@@ -1284,13 +1284,13 @@ const CMPlanos = () => {
                       {mountedVersion === "wheels" ? (
                         <img
                           src={FW.src}
-                          alt="Mounted on wheels"
+                          alt="Montada sobre ruedas"
                           className="h-[250px] w-auto"
                         />
                       ) : (
                         <img
                           src={FL.src}
-                          alt="Mounted on legs"
+                          alt="Montada sobre patas"
                           className="h-[250px] w-auto"
                         />
                       )}

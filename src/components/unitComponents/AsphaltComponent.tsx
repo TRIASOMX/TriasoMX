@@ -60,7 +60,7 @@ export default function AsphaltComponent({ data }: Props) {
           <div className="w-full flex items-center justify-center h-[220px] sm:h-[340px] lg:h-[420px]">
             <img
               src={image?.src ?? image}
-              alt="Asphalt Storage Tank"
+              alt="Tanque de almacenamiento de asfalto"
               className="max-w-full max-h-full w-auto h-full object-contain"
             />
           </div>

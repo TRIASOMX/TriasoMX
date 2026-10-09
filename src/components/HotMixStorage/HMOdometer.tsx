@@ -88,7 +88,7 @@ const HMOdometer = () => {
 
         <div className="flex flex-col items-end justify-center col-span-1 md:col-span-4">
           <div className="w-3/5 md:w-3/5 self-center">
-            <img src={single.src} alt="Back of a Hot-Mix storage silo" />
+            <img src={single.src} alt="Vista trasera de un silo de mezcla asfáltica" />
           </div>
         </div>
 

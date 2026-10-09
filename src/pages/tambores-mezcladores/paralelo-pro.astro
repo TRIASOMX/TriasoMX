@@ -2,6 +2,11 @@
 import Layout from "../../layouts/Layout.astro";
 import OdometroFPro from "../../components/DrumMixers/Paralelo/Pro+/OdometroFPro";
 import FPProPlanos from "../../components/DrumMixers/Paralelo/Pro+/FPProPlanos";
+import { webpUrls } from "../../components/lib/optimizeImages";
+import planos_tab3Main2 from "../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/PlaFpPRO_VA.png";
+import planos_tab1Main from "../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/BpPlaFp_PRO_VA.png";
+import planos_tab1Left from "../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/BpPlaFp_PRO_VT.png";
+import planos_tab2Left from "../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/BpPlaFp_PRO_VL.png";
 import HeroComponentV1 from "../../components/unitComponents/HeroComponentV1.astro";
 import DropdownComponent from "../../components/unitComponents/DropdownComponent.astro";
 import OsDrumSection from "../../components/DrumMixers/OsDrumSection.astro";
@@ -45,6 +50,14 @@ const cards = [
     textColor: "#ffffff",
   },
 ];
+
+// Planos optimizados a WebP (≤1200 px) para FPProPlanos
+const planosImages = await webpUrls({
+  tab3Main2: planos_tab3Main2,
+  tab1Main: planos_tab1Main,
+  tab1Left: planos_tab1Left,
+  tab2Left: planos_tab2Left,
+});
 ---
 
 <Layout title="Tambor de contraflujo">
@@ -129,7 +142,7 @@ const cards = [
 
   <LavadoraSeccion />
 
-  <FPProPlanos client:only />
+  <FPProPlanos client:only images={planosImages} />
 
   <UltimaSeccion />
 </Layout>

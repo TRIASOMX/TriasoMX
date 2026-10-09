@@ -8,6 +8,10 @@ import slider4 from "../../../../assets/images/DrumMixers/Contraflujo/Pro+/Aisla
 import slider5 from "../../../../assets/images/DrumMixers/thrustrollers.webp";
 import slider7 from "../../../../assets/images/DrumMixers/extrare.webp";
 import bigSlider2 from "../../../../assets/images/RapBins/Low/cdcd.png";
+import { webpUrl } from "../../../lib/optimizeImages";
+
+// Imagen pesada optimizada a WebP (≤800 px) en el build
+const bigSlider2Url = await webpUrl(bigSlider2, 800);
 ---
 
 <!-- <section class="py-10">
@@ -490,7 +494,7 @@ import bigSlider2 from "../../../../assets/images/RapBins/Low/cdcd.png";
           class="w-full sm:w-48 md:w-56 lg:w-64 h-40 sm:h-48 md:h-56 flex items-center justify-center shrink-0"
         >
           <img
-            src={bigSlider2.src}
+            src={bigSlider2Url}
             alt="Tolvas de RAP"
             class="max-w-full max-h-full object-contain"
           />

@@ -95,7 +95,7 @@ const BurnerOdometer = () => {
           <div className="">
             <img
               src={img1.src}
-              alt="Bin Unit Odometer"
+              alt="Quemador TRIASO con precalentador de combustible encendido"
               className=" rounded-xl md:min-h-[50vh]"
             />
           </div>

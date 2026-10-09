@@ -95,7 +95,7 @@ const OHOdometer = () => {
 
         <div className="flex flex-col items-center justify-center gap-6 py-14">
           <div>
-            <img src={single.src} alt="Front of an oil heater system" />
+            <img src={single.src} alt="Vista frontal de una caldera de aceite térmico" />
           </div>
         </div>
       </div>

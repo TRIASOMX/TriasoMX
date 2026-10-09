@@ -95,7 +95,7 @@ const PrecalentadoresOdometro = () => {
           <div className="lg:w-3/5">
             <img
               src={heroImg.src}
-              alt="Baghouse Odometer"
+              alt="Precalentador de combustible TRIASO"
               className="rounded-lg"
             />
           </div>

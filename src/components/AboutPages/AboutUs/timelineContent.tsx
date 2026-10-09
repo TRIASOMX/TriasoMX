@@ -64,7 +64,7 @@ const TimelineContent: React.FC<TimelineContentProps> = ({
                         <div className="mt-4 aspect-[16/9] overflow-hidden rounded-lg bg-muted">
                           <img
                             src={event.image}
-                            alt={event.title}
+                            alt={event.title || event.description || ""}
                             className="w-full h-full object-contain"
                           />
                         </div>

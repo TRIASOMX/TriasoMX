@@ -91,7 +91,7 @@ const OdometerRemolcable = () => {
           <div className="lg:w-3/5">
             <img
               src={HeroImage.src}
-              alt="Caseta Odometer"
+              alt="Caseta de control remolcable TRIASO"
               className="rounded-lg"
             />
           </div>

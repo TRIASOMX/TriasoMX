@@ -12,6 +12,13 @@ import UltimaSeccion from "../../components/DrumMixers/UltimaSeccion.astro";
 import HeroImage2 from "../../assets/images/DrumMixers/FlujoParalelo/Plus/FPlus.webp";
 import SliderTamborCom from "../../components/DrumMixers/Paralelo/Plus/SliderTamborFPlus.astro";
 import FPPlusPlanos from "../../components/DrumMixers/Paralelo/Plus/FPPlusPlanos";
+import { webpUrls } from "../../components/lib/optimizeImages";
+import planos_tolva3Main from "../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/PlaFpPlus_TI_VA.png";
+import planos_tolva3Blue from "../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/BpPlaFpPlus_TI_VA.png";
+import planos_tolva1L1 from "../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Tm_FpP/BpPlaFpPlus_TM_VL.png";
+import planos_tolva1L2 from "../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/BpPlaFpPlus_TI_VL.png";
+import planos_tolva1F from "../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/BpPlaFpPlus_TI_VT.png";
+import planos_tolva1Main from "../../assets/images/DrumMixers/Contraflujo/Plus/CfPTm_Blueprint/Bp_Pla_Cf_Plus_TM_VA.png";
 import LearnBtnBlue from "../../components/unitComponents/LearnBtnBlue.astro";
 
 const cards = [
@@ -44,6 +51,16 @@ const cards = [
     textColor: "#ffffff",
   },
 ];
+
+// Planos optimizados a WebP (≤1200 px) para FPPlusPlanos
+const planosImages = await webpUrls({
+  tolva3Main: planos_tolva3Main,
+  tolva3Blue: planos_tolva3Blue,
+  tolva1L1: planos_tolva1L1,
+  tolva1L2: planos_tolva1L2,
+  tolva1F: planos_tolva1F,
+  tolva1Main: planos_tolva1Main,
+});
 ---
 
 <Layout title="Tambor de Paralelo Plus">
@@ -125,7 +142,7 @@ const cards = [
 
   <LavadoraSeccion />
 
-  <FPPlusPlanos client:only />
+  <FPPlusPlanos client:only images={planosImages} />
 
   <UltimaSeccion />
 </Layout>

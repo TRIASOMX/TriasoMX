@@ -103,7 +103,7 @@ const BHOdometer = () => {
           <div className="lg:w-3/5 self-end">
             <img
               src={bagHouseMain.src}
-              alt="Baghouse Odometer"
+              alt="Casa de bolsas TRIASO"
               className="rounded-lg"
             />
           </div>

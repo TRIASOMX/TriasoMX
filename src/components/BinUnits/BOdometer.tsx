@@ -95,7 +95,7 @@ const BOdometer = () => {
           <div className="w-4/6">
             <img
               src={single.src}
-              alt="Bin Unit Odometer"
+              alt="Tolvas de agregados TRIASO"
               className=" object-cover rounded-xl"
             />
           </div>

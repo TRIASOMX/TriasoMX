@@ -348,7 +348,7 @@ const BinPlanosSection = () => {
           <img
             src={tolva3Blue.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 3 ? "block" : "none",
               opacity: activeTab === 3 ? 1 : 0,
@@ -359,7 +359,7 @@ const BinPlanosSection = () => {
             ref={imgRef}
             src={tolva3Main.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen superior"
+            alt="Plano técnico de las tolvas de agregados"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>

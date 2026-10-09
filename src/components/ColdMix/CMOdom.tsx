@@ -100,7 +100,7 @@ const CMOdom = () => {
           <div>
             <img
               src={single.src}
-              alt="Back of a cold mix asphalt plant"
+              alt="Vista trasera de una planta de mezcla en frío"
               className="w-full max-w-[600px]"
             />
           </div>

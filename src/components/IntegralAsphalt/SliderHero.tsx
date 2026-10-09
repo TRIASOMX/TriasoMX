@@ -81,7 +81,7 @@ const Sliders = [
           <div key={index} className="w-full flex-shrink-0 relative">
             <img
               src={slide.img.src}
-              alt={`slide-${index}`}
+              alt=""
               className="w-full object-cover h-[300px] md:h-[600px]"
               fetchPriority="high"
             />

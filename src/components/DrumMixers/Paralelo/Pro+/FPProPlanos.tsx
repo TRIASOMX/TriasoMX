@@ -1,15 +1,11 @@
 import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import tab3Main2 from "../../../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/PlaFpPRO_VA.png";
 import tab6Right from "../../../../assets/images/DrumMixers/tab6Right.webp";
 import tab6Left from "../../../../assets/images/DrumMixers/tab6Left.webp";
 import tab5Main from "../../../../assets/images/DrumMixers/tab5Main.webp";
 import tab5Left from "../../../../assets/images/DrumMixers/tab5Left.webp";
-import tab1Main from "../../../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/BpPlaFp_PRO_VA.png";
-import tab1Left from "../../../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/BpPlaFp_PRO_VT.png";
 import tab1Right from "../../../../assets/images/DrumMixers/tab5Right.webp";
-import tab2Left from "../../../../assets/images/DrumMixers/FlujoParalelo/Pro/PlaFp_PRO/BpPlaFp_PRO_VL.png";
 import tab6Main from "../../../../assets/images/DrumMixers/tab6M.webp";
 import { useClipPathScrollTrigger } from "../../../../components/lib/useClipPathScrollTrigger.tsx";
 
@@ -122,7 +118,11 @@ const toggleConfig = [
 ];
 gsap.registerPlugin(ScrollTrigger);
 
-const DrumMixPlanos = () => {
+// Las URLs de los planos (PNG pesados) se optimizan a WebP en el build desde la página .astro
+// con webpUrls() de components/lib/optimizeImages.ts y llegan aquí como prop.
+type PlanosImages = Record<"tab3Main2" | "tab1Main" | "tab1Left" | "tab2Left", string>;
+
+const DrumMixPlanos = ({ images }: { images: PlanosImages }) => {
   //tabs states
   const [activeTab, setActiveTab] = useState(3);
   //animation
@@ -213,9 +213,9 @@ const DrumMixPlanos = () => {
              z-20 w-[250px] h-[450px]"
         >
           <img
-            src={tab1Main.src}
+            src={images.tab1Main}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 3 ? "block" : "none",
               opacity: activeTab === 3 ? 1 : 0,
@@ -224,9 +224,9 @@ const DrumMixPlanos = () => {
           />
           <img
             ref={imgRef}
-            src={tab3Main2.src}
+            src={images.tab3Main2}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen superior"
+            alt="Plano técnico de el tambor mezclador de flujo paralelo Pro+"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>
@@ -562,7 +562,7 @@ const DrumMixPlanos = () => {
                   </div>
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     <img
-                      src={tab1Main.src}
+                      src={images.tab1Main}
                       alt=""
                       className="w-[250px] h-auto"
                     />
@@ -811,7 +811,7 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="w-[372px] h-[285px] flex items-center justify-center">
                       <img
-                        src={tab1Left.src}
+                        src={images.tab1Left}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -932,7 +932,7 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="h-[285px] w-[744px] flex justify-center items-center">
                       <img
-                        src={tab2Left.src}
+                        src={images.tab2Left}
                         alt=""
                         className="h-full w-auto"
                       />
@@ -1648,7 +1648,7 @@ const DrumMixPlanos = () => {
                   </div>
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     <img
-                      src={tab1Main.src}
+                      src={images.tab1Main}
                       alt=""
                       className="w-[250px] h-auto"
                     />
@@ -1895,7 +1895,7 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="w-[372px] h-[285px] flex items-center justify-center">
                       <img
-                        src={tab1Left.src}
+                        src={images.tab1Left}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -2016,7 +2016,7 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="h-[285px] w-[744px] flex justify-center items-center">
                       <img
-                        src={tab2Left.src}
+                        src={images.tab2Left}
                         alt=""
                         className="h-full w-auto"
                       />
@@ -3006,7 +3006,7 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="w-[372px] h-[285px] flex items-center justify-center">
                       <img
-                        src={tab1Left.src}
+                        src={images.tab1Left}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -3127,7 +3127,7 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="h-[285px] w-[744px] flex justify-center items-center">
                       <img
-                        src={tab2Left.src}
+                        src={images.tab2Left}
                         alt=""
                         className="h-full w-auto"
                       />
@@ -3866,7 +3866,7 @@ const DrumMixPlanos = () => {
                   </div>
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     <img
-                      src={tab1Main.src}
+                      src={images.tab1Main}
                       alt=""
                       className="w-[250px] h-auto"
                     />
@@ -4117,7 +4117,7 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="w-[372px] h-[285px] flex items-center justify-center">
                       <img
-                        src={tab1Left.src}
+                        src={images.tab1Left}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -4238,7 +4238,7 @@ const DrumMixPlanos = () => {
                     </div>
                     <div className="h-[285px] w-[744px] flex justify-center items-center">
                       <img
-                        src={tab2Left.src}
+                        src={images.tab2Left}
                         alt=""
                         className="h-full w-auto"
                       />

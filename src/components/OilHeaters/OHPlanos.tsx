@@ -107,7 +107,7 @@ const OHPlanos = () => {
           <img
             src={BPCalderaVS1.src}
             className="absolute top-0 left-0 w-[85%] h-full object-contain"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 3 ? "block" : "none",
               opacity: activeTab === 3 ? 1 : 0,
@@ -118,7 +118,7 @@ const OHPlanos = () => {
             ref={imgRef}
             src={OilHeaterVAB.src}
             className="absolute top-0 left-0 w-[85%] h-full object-contain"
-            alt="Imagen superior"
+            alt="Plano técnico de la caldera de aceite térmico"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>

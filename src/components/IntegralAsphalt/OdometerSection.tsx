@@ -95,7 +95,7 @@ const OdometerSection = () => {
           <div>
             <img
               src={singleLow.src}
-              alt="Back of a Integral asphalt plant of 10 Tph"
+              alt="Vista trasera de la planta de asfalto integral de 10 t/h"
             />
           </div>
         </div>

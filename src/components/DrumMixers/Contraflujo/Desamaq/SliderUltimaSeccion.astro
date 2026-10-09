@@ -2,7 +2,11 @@
 import tanqueAsfalto from "../../../../assets/images/AsphaltStorage/SliderStorage/P-3a.webp";
 import silo from "../../../../assets/images/HotMix/siloBG.webp";
 import rapBin from "../../../../assets/images/RapBins/Low/cdcd.png";
+import { webpUrl } from "../../../lib/optimizeImages";
 import powderAd from "../../../../assets/images/PowderA/Gallery/PAF1.webp";
+
+// Imagen pesada optimizada a WebP (≤800 px) en el build
+const rapBinUrl = await webpUrl(rapBin, 800);
 const slides = [
   {
     id: 1,
@@ -25,7 +29,7 @@ const slides = [
     title: "Tolvas de RAP",
     description:
       "Diseñadas para almacenamiento preciso y la dosificación controlada de pavimento asfáltico recuperado (RAP) en la producción del tambor mezclador",
-    image: rapBin.src,
+    image: rapBinUrl,
     url: "/tolvas-rap",
   },
   {

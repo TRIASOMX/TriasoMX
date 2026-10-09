@@ -104,7 +104,7 @@ const PAPlanos = () => {
           <img
             src={imgPlano1.src}
             className="absolute top-0 left-0 min-w-[310px] h-full"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 3 ? "block" : "none",
               opacity: activeTab === 3 ? 1 : 0,
@@ -115,7 +115,7 @@ const PAPlanos = () => {
             ref={imgRef}
             src={imgSuperior.src}
             className="absolute top-0 left-0 min-w-[310px] h-full"
-            alt="Imagen superior"
+            alt="Plano técnico de el alimentador de aditivos en polvo"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>

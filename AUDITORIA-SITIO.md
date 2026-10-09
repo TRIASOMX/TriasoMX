@@ -28,6 +28,10 @@
 | B-3 — Dependencias vulnerables | 🟡 Mayormente resuelto (sin commit) | 2026-10-08 | `npm update` + `npm audit fix` dentro del mismo mayor; producción 18 → 3 vulnerabilidades; las 3 restantes requieren Astro 7 |
 | A-1 — Menú de escritorio por teclado | ✅ Resuelto (sin commit) | 2026-10-08 | `:focus-within`, `aria-haspopup`/`aria-expanded`, Esc, foco visible; agrupadores sin url ahora son `<button>` |
 | A-2 — Contraste de `--gris-textos` | ✅ Resuelto (sin commit) | 2026-10-08 | `#727272` → `#6b6b6b`: 4.41 → 4.88:1 sobre `--bg-main` |
+| A-5 — Enlaces externos del footer + skip-link | ✅ Resuelto (sin commit) | 2026-10-08 | `rel="noopener noreferrer"`, aviso de pestaña nueva, SVG `aria-hidden`; "Saltar al contenido" + `<main id="main">` |
+| B-4 — Dependencias sin uso | ✅ Resuelto (sin commit) | 2026-10-08 | Desinstalados `keen-slider`, `iconoir`, `@tailwindcss/vite`; `@types/react*` a dev |
+| S-11 — Textos alternativos | ✅ Resuelto (sin commit) | 2026-10-08 | 0 `<img>` sin `alt` en el HTML; ~150 textos traducidos; alts copiados de otras páginas corregidos imagen por imagen; placeholder visible en `/caldera-adaptable` (móvil) pendiente de foto |
+| P-1 — Imágenes sin optimizar | 🟡 Parcial (sin commit) | 2026-10-08 | Helper `lib/optimizeImages.ts`; planos de tambores, `sedenaBG` y `cdcd` a WebP: 14.6 → 3.5 MB; falta revisión visual y galerías |
 
 Las puntuaciones y cifras del resumen reflejan el estado **antes** de las correcciones. Los hallazgos sin marca de estado se revisaron otra vez el 2026-10-08 y **siguen abiertos**.
 
@@ -180,8 +184,36 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - **Solución:** JSON-LD en el Layout (`Organization` con `logo`, `sameAs` a LinkedIn/Instagram/Facebook, `contactPoint`), `LocalBusiness`/`PostalAddress` en `/contacto`, `Product` en cada página de equipo (nombre, descripción, imagen, `brand`), `NewsArticle` en `noticias/[id].astro` (`headline`, `datePublished`, `image`) y `BreadcrumbList` en las páginas anidadas (`/tambores-mezcladores/...`, `/casetas/...`).
 - Nota (2026-10-05): las fechas de `news.tsx` ya están en formato `AAAA-MM-DD` (antes `2026-17-02`, con día y mes invertidos), así que se pueden usar directo en `datePublished`.
 
-**S-11. Textos alternativos** — varios · ⬜ **Abierto (revisado 2026-10-08)**
-- 6 `<img>` sin atributo `alt` (las imágenes de Semarnat, siguen así) en `DrumMixers/BolsasSeccion.astro`, `DrumMixers/Contraflujo/Plus/BolsasSeccion.astro`, `DrumMixers/Contraflujo/Desamaq/BolsasSeccion.astro`.
+**S-11. Textos alternativos** — varios · ✅ **Resuelto el 2026-10-08** (sin commit)
+- **Resultado medido en el HTML generado** (sin comentarios ni `_formulario-legacy`):
+  - **1,242 `<img>`: 0 sin `alt`**, 861 con descripción y 381 decorativas (`alt=""`).
+  - El único inglés que queda son nombres propios de expos ("World of Asphalt, Houston", "THE BIG 5, Dubai").
+  - `astro check` da 0 errores; el build genera 52 páginas.
+- **Corrección aplicada:**
+  - **6 imágenes de Semarnat sin `alt`:** son tablas de resultados de emisiones, así que el `alt` resume los datos. Por ejemplo, NOM-085: SO₂ 24.36/10.16 ppmV, NOₓ 182.16/53.39 y CO 372.45/259.24, por debajo de los límites. NOM-043: 114.8 frente a 410 y 128.5 frente a 431.
+  - **Unos 150 textos en inglés traducidos al español**, con un glosario coherente con el resto del sitio (casa de bolsas, tolvas de agregados, álabes, caldera de aceite térmico, collarín de RAP…). Incluye los `alt` en datos y props (`alt:`, `altTitle`, `caption`, `title`, `altText`) de las galerías de fabricación y planta de asfalto, los pies de foto de casa de bolsas y las figuras técnicas de `/rap`.
+  - **`alt` copiados de otra página, corregidos tras ver cada imagen:**
+    - "Baghouse" / "Baghouse cleaning system" aparecía en casetas (era la consola de control), calderas (tuberías y armado), el precalentador, el collarín de RAP, la lavadora de finos y 8 secciones *hotspot* de tambores (tolvas sobre remolque, planta en patio de fábrica, planta de noche…).
+    - "Bin Unit Odometer" en quemadores era el quemador con precalentador.
+    - "Customizable Bin Unit Diagram" en tanques era el tanque sobre remolque.
+    - Renders de tolvas estaban etiquetados como "Tambor mezclador en una obra".
+  - **Genéricos reemplazados:**
+    - "Placeholder" visibles: 3 ilustraciones de atomización en quemadores, silo autoerigible, consola y tableta de RAP, banner de rehabilitación.
+    - "Map": mapa mundial de entregas.
+    - "Selected image": plano del silo.
+    - Las 4 fotos de diseño a la medida y las 3 de configuraciones de planta, que tenían `alt=""`.
+  - **Dinámicos:**
+    - `GallerySlider` usa el pie de foto o "Imagen N de M" en lugar de "Slide N"; las miniaturas van como decorativas, porque el botón ya tiene `aria-label`.
+    - `BinSelector`: "Plano de N tolvas con paneles estéticos / sin paneles".
+    - Línea de tiempo de `/nosotros`: sus 28 imágenes salían sin `alt` porque los eventos no tienen `title`; ahora usan la descripción.
+  - **Decorativas (`alt=""`):** íconos junto a texto ("Watch icon", "Lock icon", la "T roja" de los títulos…), fondos de hero, la capa azul duplicada de los planos con efecto de revelado y los hero de slider con texto encima.
+  - **Planos técnicos:** el plano a color que se revela sobre el azul se describe como "Plano técnico de <producto>" en los 18 componentes de planos.
+- **Pendiente / notas:**
+  - Las vistas secundarias de los planos (lateral, trasera…) siguen con `alt=""`. Sus nombres de archivo (`VL`, `VT`, `VA`) no permiten saber con certeza qué vista son, y las medidas ya están en texto al lado. Si se quiere, se pueden etiquetar con el equipo de ingeniería.
+  - **Imagen de relleno visible:** en `/caldera-adaptable`, en móvil (`OilHeaters/OHPrecision.astro`, bloque `lg:hidden`), se muestra `https://placehold.co/600x400/png`. Falta la foto real; se le dejó `alt=""` mientras tanto.
+  - La página oculta `_IncorporadoresHule` y sus componentes (`Incorporadores/*`) no se tocaron.
+  - Cuando se agreguen imágenes nuevas, escribir el `alt` en español desde el inicio. Revisar que no se copie el de otra página, porque fue la causa de la mayoría de los errores encontrados.
+- *Diagnóstico original —* 6 `<img>` sin atributo `alt` en `DrumMixers/BolsasSeccion.astro`, `DrumMixers/Contraflujo/Plus/BolsasSeccion.astro`, `DrumMixers/Contraflujo/Desamaq/BolsasSeccion.astro`.
 - 161 `alt=""` en código; muchos son iconos decorativos (correcto), pero p. ej. `AsphaltPlants/CardSection.tsx:128` (`<img src={item.img.src} alt="">`) acompaña contenido informativo. En `dist/`, AsphaltPlantVideos tiene 18 `alt=""`, IncorporadoresHule 8.
 - Los `alt` existentes están en inglés genérico ("Asphalt Plant", "Custom design equipment") en un sitio en español.
 - **Solución:** `alt` descriptivo en español para imágenes de producto ("Planta de asfalto móvil TRIASO de 120 t/h"), `alt=""` solo para decorativas.
@@ -192,8 +224,24 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 
 > Core Web Vitals (LCP, CLS, INP) reales: **requiere verificación en producción** (PageSpeed Insights / CrUX / pestaña Performance). Lo siguiente son estimaciones basadas en el código.
 
-**P-1. Imágenes pesadas servidas sin optimizar (`.src` en React)** — 465 usos de `.src` en `src/components/**`
-- Patrón: `import img from "…/foo.png"` + `<img src={img.src}>` en `.tsx`. `img.src` apunta al **archivo original**; Astro no lo redimensiona ni convierte a WebP/AVIF.
+**P-1. Imágenes pesadas servidas sin optimizar (`.src` en React)** — 465 usos de `.src` en `src/components/**` · 🟡 **Parcial el 2026-10-08** (sin commit)
+- **Estado al 2026-10-08:** hay 411 usos de `.src` en 66 archivos `.tsx`. Medido en el build, el peso estaba concentrado: **31 PNG/JPG = 14.7 MB**, y casi todos son los planos de tambores mezcladores. Los otros ~720 archivos ya son WebP.
+- **Corrección aplicada (lo de mayor impacto):**
+  - **Helper nuevo:** `src/components/lib/optimizeImages.ts`, con `webpUrl(img, maxWidth, quality)` y `webpUrls({...})`. Usa `getImage()` para convertir a WebP (calidad 85) con un ancho máximo, sin ampliar nunca. Solo se importa desde el frontmatter de `.astro`.
+  - **Planos de tambores (5 componentes):** `FPPlusPlanos`, `PDPlanos`, `PlanosPlusCf`, `PlanosCf` y `FPProPlanos` son islas `client:only` y no pueden optimizar por sí mismas. Sus 28 imports PNG se movieron a la página `.astro` (`tambores-mezcladores/*.astro`), que calcula las URLs WebP (≤1200 px; se muestran a ~300–350 px) y las pasa como prop `images`. En el `.tsx`, `tolva1Main.src` → `images.tolva1Main`, con un tipo `PlanosImages` estricto.
+  - **`sedenaBG.jpg`:** 4000 px, 1.3 MB, en `/tanques-asfalto`. Ahora WebP ≤1600 px, **155 KB**.
+  - **`RapBins/Low/cdcd.png`:** 576 KB, en 5 sliders de tambores. Ahora WebP ≤800 px, **56 KB**.
+- **Resultado medido:**
+  - **29 imágenes: 14.6 MB → 3.5 MB (−76 %)**.
+  - Por página, solo planos: `paralelo-pro` 3.61 → 0.69 MB, `paralelo-desamaq` 3.10 → 0.73 MB, `contraflujo-plus` 2.89 → 0.89 MB, `paralelo-plus` 2.26 → 0.77 MB, `contraflujo-desamaq` 1.65 → 0.51 MB.
+  - `astro check` da 0 errores; el build genera 52 páginas.
+- **Notas:**
+  - Astro sigue copiando los PNG originales a `dist/_astro` (28 archivos sin ninguna referencia). El navegador no los descarga; solo ocupan espacio en el servidor.
+  - Para quitarlos del deploy habría que convertir los originales de `src/assets` a WebP. También bajaría el peso del repo, porque hay PNG de 5–9 MB.
+- **Pendiente:**
+  - **Revisión visual** de los planos en las 5 páginas de tambores, sobre todo la nitidez de líneas finas a calidad 85. Si se ven borrosos, subir `quality` a 90 en `webpUrls(...)` de esa página.
+  - Hay ~380 `.src` restantes en `.tsx` que ya son WebP pero sin redimensionar (galerías: `AsphaltPlants/CardSection.tsx`, `GallerySlider2.tsx`, `Manufacture/ManufactureGallery.tsx`…), además de 21 WebP de más de 400 KB (13 MB; p. ej. `Hero1.webp` 920 KB, `Silo-SF200TBpL.webp` 882 KB). Se resuelven con el mismo helper, componente por componente.
+- *Diagnóstico original —* Patrón: `import img from "…/foo.png"` + `<img src={img.src}>` en `.tsx`. `img.src` apunta al **archivo original**; Astro no lo redimensiona ni convierte a WebP/AVIF.
 - Resultado medido en `dist/_astro`: **17 MB de PNG/JPG** sin transformar; los mayores: `obracivil2.png` 1.99 MB, `PlaFpPRO_VA.png` 1.97 MB, `PlaFpDes_TI_VA.png` 1.61 MB, `sedenaBG.jpg` 1.32 MB, `Bp_Pla_Cf_Plus_TM_VT.png` 0.86 MB. En `src/assets` hay 95 PNG que suman 157 MB (originales de 5–9 MB en `DrumMixers/**/Blueprint_*`).
 - Archivos representativos: `DrumMixers/Paralelo/Plus/FPPlusPlanos.tsx`, `DrumMixers/Paralelo/Desamaq/PDPlanos.tsx`, `DrumMixers/Contraflujo/Plus/PlanosPlusCf.tsx`, `DrumMixers/Contraflujo/Desamaq/PlanosCf.tsx`, `AsphaltPlants/CardSection.tsx`, `AsphaltPlants/GallerySlider2.tsx`, `AboutPages/Manufacture/ManufactureGallery.tsx`.
 - **Solución:** en el `.astro` padre, generar las variantes con `getImage()` de `astro:assets` y pasarlas como props a la isla:
@@ -300,6 +348,7 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - **Solución:** oscurecer `--gris-textos` a `#6b6b6b` o menos (≥4.6:1). Verificar el resto de combinaciones con axe/Lighthouse (**requiere verificación en navegador**).
 
 **A-3. Indicadores de foco eliminados** — 53 `focus:outline-none` en `src/components/**`
+- **Avance (2026-10-08):** el skip-link "Saltar al contenido" y `id="main"` ya están en el Layout (ver A-5). El menú de escritorio ya usa `focus-visible:ring` (A-1). Sigue pendiente unificar los `focus:outline-none` restantes.
 - En varios casos se sustituye por `focus:ring-2`, pero no en todos (p. ej. `AsphaltPlants/CasetaSection.astro` ×6, `Burners/BTabSection.astro` ×3, `Calculadora/CostosFijos.tsx` ×3).
 - **Solución:** usar `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blueMain` como patrón único; añadir un "Saltar al contenido" (`<a href="#main" class="sr-only focus:not-sr-only">`) en el Layout y `id="main"` al `<main>`.
 
@@ -307,8 +356,13 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - Solo `ReliefPage/*`, `TipsAsphalt/ConsejosGuide.astro`, `CookieBanner.astro` y parte de `global.css` lo respetan. Las animaciones GSAP de `components/lib` y los vídeos autoplay del resto no. Incumple 2.3.3 (AAA) y afecta a usuarios con trastornos vestibulares; los vídeos autoplay en bucle > 5 s sin control de pausa incumplen **2.2.2 (AA)**.
 - **Solución:** en la utilidad de animación de `components/lib`, salir temprano si `matchMedia('(prefers-reduced-motion: reduce)').matches`; en vídeos, no hacer autoplay en ese caso y ofrecer botón de pausa.
 
-**A-5. Enlaces externos y footer** — `src/components/Main/Footer.astro`
-- `target="_blank"` sin `rel="noopener noreferrer"` ni aviso de "se abre en nueva pestaña" (WhatsApp, LinkedIn, Instagram, Facebook).
+**A-5. Enlaces externos y footer** — `src/components/Main/Footer.astro` · ✅ **Resuelto el 2026-10-08** (sin commit)
+- **Corrección aplicada:**
+  - Los 4 enlaces externos del footer (WhatsApp, LinkedIn, Instagram, Facebook) llevan `rel="noopener noreferrer"` y avisan que se abren en una pestaña nueva: texto `sr-only` en WhatsApp y `aria-label="… (se abre en una pestaña nueva)"` en las redes.
+  - Se quitó el `<title>whatsapp</title>` del SVG y se añadió `aria-hidden="true" focusable="false"`, así que ya no hay lectura duplicada. Los íconos de lucide de las redes también llevan `aria-hidden`.
+  - **Skip-link (A-3):** el Layout tiene un enlace "Saltar al contenido" como primer elemento enfocable. Es invisible hasta recibir foco y aparece como botón blanco arriba a la izquierda. El `<main>` tiene `id="main"` y `tabindex="-1"`.
+- **Pendiente:** el resto de `target="_blank"` del sitio fuera del footer no se revisó en este cambio. Los íconos de lucide (`Facebook`, `Instagram`, `Linkedin`) están marcados como obsoletos en `lucide-react`: es un *hint*, no un error, y habrá que cambiarlos por SVG propios al actualizar lucide.
+- *Diagnóstico original —* `target="_blank"` sin `rel="noopener noreferrer"` ni aviso de "se abre en nueva pestaña" (WhatsApp, LinkedIn, Instagram, Facebook).
 - El SVG de WhatsApp incluye `<title>whatsapp</title>` junto al texto "WhatsApp" → lectura duplicada; añadir `aria-hidden="true"` al SVG.
 
 **A-6. Elementos semánticos y ARIA**
@@ -354,8 +408,14 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - *Diagnóstico original —*- Críticas: `astro <=7.2.7` (X-Forwarded-Host reflejado), `swiper 6.5.1–12.1.1` (prototype pollution), `tar`. Altas: `vite`, `rollup`, `sharp` (libvips), `postcss`, `devalue`, `h3`, `picomatch`, etc. Como el sitio es estático, la mayoría afectan al entorno de desarrollo/build, no a visitantes; **swiper** sí se ejecuta en el navegador.
 - **Solución:** `npm audit fix`; actualizar dentro del mayor: `astro 5.9.3 → 5.18.x`, `swiper 12.1.1 → 12.2.0`, `@astrojs/react 4.3 → 4.4`, `@react-pdf/renderer 4.3 → 4.9`, `react/react-dom 19.1 → 19.3`, `gsap 3.13 → 3.15`. Evaluar después Astro 7 por separado.
 
-**B-4. Dependencias sin uso / conflictivas** — `package.json`
-- `keen-slider`, `iconoir` y `@tailwindcss/vite` (Tailwind **v4**) no se importan en ningún archivo; el proyecto usa Tailwind **v3** vía `@astrojs/tailwind`. `@types/react*` están en `dependencies` en lugar de `devDependencies`.
+**B-4. Dependencias sin uso / conflictivas** — `package.json` · ✅ **Resuelto el 2026-10-08** (sin commit)
+- **Corrección aplicada:**
+  - Se confirmó con `grep` que `keen-slider`, `iconoir` y `@tailwindcss/vite` no se usan en `src/` ni en la configuración, y se desinstalaron con `npm uninstall`.
+  - `@types/react` y `@types/react-dom` pasaron a `devDependencies`.
+  - Quedan 9 dependencias de producción.
+  - `astro check` y el build siguen sin errores.
+- También se quitó keen-slider de la sección Stack de `CLAUDE.md`.
+- *Diagnóstico original —* `keen-slider`, `iconoir` y `@tailwindcss/vite` (Tailwind **v4**) no se importan en ningún archivo; el proyecto usa Tailwind **v3** vía `@astrojs/tailwind`. `@types/react*` están en `dependencies` en lugar de `devDependencies`.
 - **Solución:** `npm uninstall keen-slider iconoir @tailwindcss/vite` y mover los `@types` a dev.
 
 **B-5. Cabeceras de seguridad** — **requiere verificación en producción** · ⬜ **Abierto (actualizado 2026-10-08)**
@@ -430,17 +490,17 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 | 13 | ✅ **Resuelto 2026-10-02** — Crear `404.astro` (`noindex` añadido 2026-10-05) | Buenas prácticas | Medio | Bajo | 2 | `pages/404.astro` |
 | 14 | ~~Eliminar `/Example`~~ (✅ 2026-10-05); quitar selector de idioma falso | SEO | Medio | Bajo | 2 | `NavbarComp/LenguageSelector.astro`, `Main/Navbar.astro`, `NavbarComp/MobileMenu.astro` |
 | 15 | Cabeceras de seguridad y caché en `.htaccess` (hosting en Hostinger) | Seguridad / Performance | Medio | Bajo | 2 | `public/.htaccess` o el `.htaccess` de la raíz del servidor |
-| 16 | `rel="noopener noreferrer"` + `aria-hidden` en SVG del footer; skip-link | A11y | Bajo | Bajo | 3 | `Main/Footer.astro`, `layouts/Layout.astro` |
-| 17 | Desinstalar deps sin uso (`keen-slider`, `iconoir`, `@tailwindcss/vite`) | Buenas prácticas | Bajo | Bajo | 3 | `package.json` |
+| 16 | ✅ **Resuelto 2026-10-08** — `rel="noopener noreferrer"` + `aria-hidden` en SVG del footer; skip-link | A11y | Bajo | Bajo | 3 | `Main/Footer.astro`, `layouts/Layout.astro` |
+| 17 | ✅ **Resuelto 2026-10-08** (+ `@types` a dev) — Desinstalar deps sin uso (`keen-slider`, `iconoir`, `@tailwindcss/vite`) | Buenas prácticas | Bajo | Bajo | 3 | `package.json` |
 | 18 | ✅ **Resuelto 2026-09-28** — Un solo `<h1>` por página; resto a `<h2>/<h3>` | SEO / A11y | Alto | Medio | 2 | `LandingPage.astro`, `LandinPage/MainSection.astro`, componentes de Manufacture, DrumMixers, HotMix, ColdMix, Expo, BinUnits, AsphaltStorage… |
-| 19 | Pasar imágenes `.src` de `.tsx` por `getImage()`/`<Image>` (WebP, anchos) | Performance | Alto | Medio | 2 | `DrumMixers/**/*Planos*.tsx`, `AsphaltPlants/CardSection.tsx`, `GallerySlider2.tsx`, `Manufacture/ManufactureGallery.tsx`… |
+| 19 | 🟡 **Parcial 2026-10-08** (planos de tambores + sedenaBG + cdcd: 14.6 → 3.5 MB; faltan galerías WebP sin redimensionar) — Pasar imágenes `.src` de `.tsx` por `getImage()`/`<Image>` (WebP, anchos) | Performance | Alto | Medio | 2 | `lib/optimizeImages.ts`, `DrumMixers/**/*Planos*.tsx`, `AsphaltPlants/CardSection.tsx`, `GallerySlider2.tsx`, `Manufacture/ManufactureGallery.tsx`… |
 | 20 | `width/height` + `loading="lazy"` en `<img>` crudos | Performance (CLS) | Alto | Medio | 2 | 452 `<img>` en `src/components/**` |
 | 21 | 🟡 **Parcial 2026-10-05** (`/plantas-asfalto` hecho) — Cambiar `client:only` → `client:visible` en secciones de contenido/hero | SEO / Performance | Alto | Medio | 2 | `*/FirstSection*.astro`, `AsphaltPlants/MainSection.astro`, `ProductSelector.tsx`, `CardSection.tsx` |
 | 22 | ✅ **Resuelto 2026-10-05** — Corregir 34 errores de `astro check` (0 errores) | Buenas prácticas | Medio | Medio | 3 | `Incorporadores/SeccionAnimacion.astro`, `BinUnits/BinGallery.astro`, `RAPRecycled/RBDropdown2.astro`… |
 | 23 | 🟡 **Parcial 2026-10-08** (`FAQPage` en home y `/plantas-asfalto`) — JSON-LD (Organization, LocalBusiness, Product, NewsArticle, Breadcrumb) | SEO | Medio | Medio | 3 | `layouts/Layout.astro`, `pages/contacto.astro`, páginas de producto, `noticias/[id].astro` |
 | 24 | 🟡 **Avance 2026-10-08** (`ResponsiveVideo` en tambores) — Vídeos: poster, IntersectionObserver (`SmartVideo`), recompresión, quitar `will-change` global | Performance | Medio | Medio | 3 | `LandinPage/MainSection.astro`, `*/Stackscroll*.tsx`, `styles/global.css` |
 | 25 | `prefers-reduced-motion` en GSAP y vídeos autoplay; botón de pausa | A11y | Medio | Medio | 3 | `components/lib/*`, componentes con vídeo |
-| 26 | `alt` descriptivos en español; completar los 6 faltantes | SEO / A11y | Medio | Medio | 3 | `DrumMixers/**/BolsasSeccion.astro`, `CardSection.tsx`, galerías |
+| 26 | ✅ **Resuelto 2026-10-08** (0 `<img>` sin `alt`; ~150 textos traducidos; alts copiados mal corregidos) — `alt` descriptivos en español; completar los 6 faltantes | SEO / A11y | Medio | Medio | 3 | `DrumMixers/**/BolsasSeccion.astro`, `CardSection.tsx`, galerías |
 | 27 | Eliminar vídeos/assets sin referencia (~200 MB) y mover posters a `src/assets` | Performance / Mantenimiento | Medio | Medio | 3 | `public/Videos/Mp4/*`, `public/Videos/Webm/landingVideo2.webm`… |
 | 28 | Consolidar componentes `*Planos*.tsx` y reducir su JS | Performance | Medio | Alto | 4 | `DrumMixers/**`, `BinUnits/BinPlanosSection.tsx`, `BagHouses/BHPlanos.tsx` |
 | 29 | Analytics real con consentimiento + medición de CWV de campo | Buenas prácticas | Medio | Medio | 4 | `AboutPages/Banner/Trackedscripts.tsx` |
@@ -458,15 +518,15 @@ El sitio tiene un diseño rico y un catálogo de producto extenso, pero hoy est�
 - Base SEO en el Layout: ~~`lang`~~ (✅ hecho 2026-09-28), ~~canonical, OG~~ (✅ hecho 2026-10-05; falta favicon de marca, #33), títulos/descripciones por página, `robots.txt`, sitemap, ~~enlaces rotos, `/Example`~~ (✅ hecho 2026-10-05) (#3–#7, #14).
 - ~~Performance inmediata: import dinámico de react-pdf, deduplicar scripts del menú (#8, #9).~~ ✅ Hecho (2026-09-28 y 2026-10-08).
 - Seguridad: ~~`npm audit fix` y actualizaciones menores (#10)~~ (✅ hecho 2026-10-08); `.htaccess` con cabeceras y caché (#15).
-- Accesibilidad: ~~menú por teclado, contraste~~ (✅ hecho 2026-10-08), ~~404~~ (✅ hecho 2026-10-02), footer (#11–#13, #16, #17).
+- Accesibilidad: ~~menú por teclado, contraste~~ (✅ hecho 2026-10-08), ~~404~~ (✅ hecho 2026-10-02), ~~footer y skip-link, deps sin uso~~ (✅ hecho 2026-10-08) (#11–#13, #16, #17).
 - **Probar el formulario de contacto en `staging.triaso.com.mx`**: envío correcto, reCAPTCHA, registro en la base de datos y correo recibido; también el caso de error.
 - **Verificar en producción** (sobre el dominio final en Hostinger): `curl -I` de `/`, `/robots.txt`, `/sitemap-index.xml`, una ruta inexistente (debe mostrar la 404 propia), `/tambores-mezcladores` (debe redirigir a `/tambores-mezcladores/contraflujo-pro`), un `.webm` y un `.js` de `/_astro/`; ejecutar PageSpeed Insights (móvil) en `/`, `/plantas-asfalto` y `/tambores-mezcladores/contraflujo-pro` para tener la línea base de LCP/CLS/INP.
 
 ### Fase 2 — Mediano plazo (1–2 meses)
 - ~~Jerarquía de encabezados (#18).~~ ✅ Hecho el 2026-09-28 (falta revisión visual en navegador).
-- Optimización de imágenes y CLS (#19, #20) empezando por tambores mezcladores, fabricación y silos de mezcla asfáltica (las de más imágenes).
+- Optimización de imágenes y CLS (#19, #20) empezando por tambores mezcladores, fabricación y silos de mezcla asfáltica (las de más imágenes). *Avance 2026-10-08: planos de tambores hechos con `lib/optimizeImages.ts`; siguen fabricación, silos y galerías.*
 - SSR del contenido con `client:visible` (#21), empezando por las páginas de trituradoras donde todo es `client:only`.
-- ~~Errores de TypeScript (#22)~~ (✅ hecho 2026-10-05), JSON-LD (#23, `FAQPage` hecho), vídeos (#24, tambores hechos), reduced-motion (#25), `alt` (#26), limpieza de assets (#27).
+- ~~Errores de TypeScript (#22)~~ (✅ hecho 2026-10-05), JSON-LD (#23, `FAQPage` hecho), vídeos (#24, tambores hechos), reduced-motion (#25), ~~`alt` (#26)~~ (✅ hecho 2026-10-08), limpieza de assets (#27).
 - Añadir al flujo de verificación del proyecto: `astro check` sin errores + `build` + un link-check sobre `dist/` y Lighthouse CI (`@lhci/cli`) con presupuestos (p. ej. JS ≤ 250 KB por página, LCP ≤ 2.5 s).
 
 ### Fase 3 — Largo plazo (trimestre)

@@ -221,7 +221,7 @@ const BHPlanos = () => {
           <img
             src={bgPlanos.src}
             className="absolute left-0 top-0 w-full h-full object-contain"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 1 ? "block" : "none",
               opacity: activeTab === 1 ? 1 : 0,
@@ -232,7 +232,7 @@ const BHPlanos = () => {
             ref={imgRef}
             src={bgFront.src}
             className="absolute top-0 left-0 w-full h-full object-contain  "
-            alt="Imagen superior"
+            alt="Plano técnico de la casa de bolsas"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>

@@ -1,12 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import tolva3Main from "../../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/Blueprint_Ti_FpD/PlaFpDes_TI_VA.png";
-import tolva3Blue from "../../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/Blueprint_Ti_FpD/BpFpDes_TI_VA.png";
-import tolva1L2 from "../../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/Blueprint_Ti_FpD/BpFpDes_TI_VL.png";
-import tolva1L1 from "../../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/BlueprintTm_FpD/BpPlaFpDes_TM_VL.png";
-import tolva1F from "../../../../assets/images/DrumMixers/FlujoParalelo/Desamaq/Blueprint_Ti_FpD/BpPlaFpDes_TM_VT.png";
-import tolva1Main from "../../../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTm_Blueprint/Bp_Pla_Cf_Des_TM_VA.png";
 import { useClipPathScrollTrigger } from "../../../../components/lib/useClipPathScrollTrigger.tsx";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,7 +73,11 @@ const toggleConfig = [
   },
 ];
 
-const PDPlanos = () => {
+// Las URLs de los planos (PNG pesados) se optimizan a WebP en el build desde la página .astro
+// con webpUrls() de components/lib/optimizeImages.ts y llegan aquí como prop.
+type PlanosImages = Record<"tolva3Main" | "tolva3Blue" | "tolva1L2" | "tolva1L1" | "tolva1F" | "tolva1Main", string>;
+
+const PDPlanos = ({ images }: { images: PlanosImages }) => {
   //tabs states
   const [activeTab, setActiveTab] = useState(3);
 
@@ -206,9 +204,9 @@ const PDPlanos = () => {
           {panelOption === "withPanels" ? (
             <div>
               <img
-                src={tolva3Blue.src}
+                src={images.tolva3Blue}
                 className="absolute top-0 left-0 w-full h-full object-cover"
-                alt="Imagen de fondo"
+                alt=""
                 style={{
                   display: activeTab === 3 ? "block" : "none",
                   opacity: activeTab === 3 ? 1 : 0,
@@ -217,9 +215,9 @@ const PDPlanos = () => {
               />
               <img
                 ref={imgRef}
-                src={tolva3Main.src}
+                src={images.tolva3Main}
                 className="absolute top-0 left-0 w-full h-full object-cover"
-                alt="Imagen superior"
+                alt="Plano técnico de el tambor mezclador de flujo paralelo Desamaq"
                 style={{ clipPath: "inset(0% 0% 0% 0%)" }}
               />
             </div>
@@ -576,13 +574,13 @@ const PDPlanos = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     {panelOption === "withPanels" ? (
                       <img
-                        src={tolva3Blue.src}
+                        src={images.tolva3Blue}
                         alt="Dinámica con paneles"
                         className="w-[300px]"
                       />
                     ) : (
                       <img
-                        src={tolva1Main.src}
+                        src={images.tolva1Main}
                         alt="Dinámica sin paneles"
                         className="w-[300px]"
                       />
@@ -834,7 +832,7 @@ const PDPlanos = () => {
                     </div>
                     <div className="min-w-[272px] h-[300px] flex items-center justify-center">
                       <img
-                        src={tolva1F.src}
+                        src={images.tolva1F}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -959,13 +957,13 @@ const PDPlanos = () => {
                     <div className="h-[300px] min-w-[644px] flex justify-center items-center">
                       {panelOption === "withPanels" ? (
                         <img
-                          src={tolva1L2.src}
+                          src={images.tolva1L2}
                           alt="Dinámica con paneles"
                           className="h-[300px] w-auto"
                         />
                       ) : (
                         <img
-                          src={tolva1L1.src}
+                          src={images.tolva1L1}
                           alt="Dinámica sin paneles"
                           className="h-[300px] w-auto"
                         />
@@ -1604,13 +1602,13 @@ const PDPlanos = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     {panelOption === "withPanels" ? (
                       <img
-                        src={tolva3Blue.src}
+                        src={images.tolva3Blue}
                         alt="Dinámica con paneles"
                         className="w-[300px]"
                       />
                     ) : (
                       <img
-                        src={tolva1Main.src}
+                        src={images.tolva1Main}
                         alt="Dinámica sin paneles"
                         className="w-[300px]"
                       />
@@ -1861,7 +1859,7 @@ const PDPlanos = () => {
                     </div>
                     <div className="min-w-[272px] h-[300px] flex items-center justify-center">
                       <img
-                        src={tolva1F.src}
+                        src={images.tolva1F}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -1986,13 +1984,13 @@ const PDPlanos = () => {
                     <div className="h-[300px] min-w-[644px] flex justify-center items-center">
                       {panelOption === "withPanels" ? (
                         <img
-                          src={tolva1L2.src}
+                          src={images.tolva1L2}
                           alt="Dinámica con paneles"
                           className="h-[300px] w-auto"
                         />
                       ) : (
                         <img
-                          src={tolva1L1.src}
+                          src={images.tolva1L1}
                           alt="Dinámica sin paneles"
                           className="h-[300px] w-auto"
                         />
@@ -2638,7 +2636,7 @@ const PDPlanos = () => {
                       <div></div>
                     ) : (
                       <img
-                        src={tolva1Main.src}
+                        src={images.tolva1Main}
                         alt="Dinámica sin paneles"
                         className="w-[300px]"
                       />
@@ -2894,7 +2892,7 @@ const PDPlanos = () => {
                     </div>
                     <div className="min-w-[272px] h-[300px] flex items-center justify-center">
                       <img
-                        src={tolva1F.src}
+                        src={images.tolva1F}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -3019,13 +3017,13 @@ const PDPlanos = () => {
                     <div className="h-[300px] min-w-[644px] flex justify-center items-center">
                       {panelOption === "withPanels" ? (
                         <img
-                          src={tolva1L2.src}
+                          src={images.tolva1L2}
                           alt="Dinámica con paneles"
                           className="h-[300px] w-auto"
                         />
                       ) : (
                         <img
-                          src={tolva1L1.src}
+                          src={images.tolva1L1}
                           alt="Dinámica sin paneles"
                           className="h-[300px] w-auto"
                         />
@@ -3661,13 +3659,13 @@ const PDPlanos = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     {panelOption === "withPanels" ? (
                       <img
-                        src={tolva3Blue.src}
+                        src={images.tolva3Blue}
                         alt="Dinámica con paneles"
                         className="w-[300px]"
                       />
                     ) : (
                       <img
-                        src={tolva1Main.src}
+                        src={images.tolva1Main}
                         alt="Dinámica sin paneles"
                         className="w-[300px]"
                       />
@@ -3918,7 +3916,7 @@ const PDPlanos = () => {
                     </div>
                     <div className="min-w-[272px] h-[300px] flex items-center justify-center">
                       <img
-                        src={tolva1F.src}
+                        src={images.tolva1F}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -4043,13 +4041,13 @@ const PDPlanos = () => {
                     <div className="h-[300px] min-w-[644px] flex justify-center items-center">
                       {panelOption === "withPanels" ? (
                         <img
-                          src={tolva1L2.src}
+                          src={images.tolva1L2}
                           alt="Dinámica con paneles"
                           className="h-[300px] w-auto"
                         />
                       ) : (
                         <img
-                          src={tolva1L1.src}
+                          src={images.tolva1L1}
                           alt="Dinámica sin paneles"
                           className="h-[300px] w-auto"
                         />

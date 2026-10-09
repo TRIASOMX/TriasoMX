@@ -71,7 +71,7 @@ export default function BinSelector() {
           <img
             key={currentImage}
             src={currentImage}
-            alt={`Bins ${selectedBins} - ${panelType}`}
+            alt={`Plano de ${selectedBins} tolvas ${panelType === "aesthetic" ? "con paneles estéticos" : "sin paneles"}`}
             className="w-full md:max-w-[1100px] bin-image-fade"
           />
         </div>

@@ -109,7 +109,7 @@ const OdometerDrum = () => {
 
         <div className="flex flex-col items-center justify-center col-span-1 md:col-span-4">
           <div>
-            <img src={odoImg.src} alt="Odometer Drum" className="rounded-2xl" />
+            <img src={odoImg.src} alt="Tambor mezclador TRIASO" className="rounded-2xl" />
           </div>
         </div>
 

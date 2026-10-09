@@ -96,7 +96,7 @@ const FPHPlanos = () => {
           <img
             src={PreBP1.src}
             className="absolute top-0 left-0 w-full h-full object-contain"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 3 ? "block" : "none",
               opacity: activeTab === 3 ? 1 : 0,
@@ -107,7 +107,7 @@ const FPHPlanos = () => {
             ref={imgRef}
             src={PreIMG.src}
             className="absolute top-0 left-0 w-full h-full object-contain"
-            alt="Imagen superior"
+            alt="Plano técnico de el precalentador de combustible"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>
@@ -660,7 +660,7 @@ const FPHPlanos = () => {
                     <div className="w-[372px] h-[285px] flex items-center justify-center">
                       <img
                         src={PreBP3.src}
-                        alt="Fuel pre-heater"
+                        alt="Precalentador de combustible"
                         className="max-w-full max-h-full object-contain"
                       />
                     </div>
@@ -777,7 +777,7 @@ const FPHPlanos = () => {
                     <div className="h-[285px] w-[744px] flex justify-center items-center">
                       <img
                         src={PreBP2.src}
-                        alt="Fuel pre-heater"
+                        alt="Precalentador de combustible"
                         className="h-full w-auto"
                       />
                     </div>

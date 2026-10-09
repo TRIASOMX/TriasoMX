@@ -97,7 +97,7 @@ const ASOdometer = () => {
           <div className="py-6 md:py-0 w-full flex justify-center">
             <img
               src={ASOdom.src}
-              alt="Back of an Asphalt Storage Tank"
+              alt="Vista trasera de un tanque de almacenamiento de asfalto"
               className="w-auto max-w-full max-h-[70vh] md:max-h-[85vh] object-contain"
             />
           </div>

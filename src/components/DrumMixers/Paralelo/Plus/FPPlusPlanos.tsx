@@ -1,12 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import tolva3Main from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/PlaFpPlus_TI_VA.png";
-import tolva3Blue from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/BpPlaFpPlus_TI_VA.png";
-import tolva1L1 from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Tm_FpP/BpPlaFpPlus_TM_VL.png";
-import tolva1L2 from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/BpPlaFpPlus_TI_VL.png";
-import tolva1F from "../../../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/BpPlaFpPlus_TI_VT.png";
-import tolva1Main from "../../../../assets/images/DrumMixers/Contraflujo/Plus/CfPTm_Blueprint/Bp_Pla_Cf_Plus_TM_VA.png";
 import { useClipPathScrollTrigger } from "../../../../components/lib/useClipPathScrollTrigger.tsx";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -113,7 +107,11 @@ const toggleConfig = [
   },
 ];
 
-const BinPlanosSection = () => {
+// Las URLs de los planos (PNG pesados) se optimizan a WebP en el build desde la página .astro
+// con webpUrls() de components/lib/optimizeImages.ts y llegan aquí como prop.
+type PlanosImages = Record<"tolva3Main" | "tolva3Blue" | "tolva1L1" | "tolva1L2" | "tolva1F" | "tolva1Main", string>;
+
+const BinPlanosSection = ({ images }: { images: PlanosImages }) => {
   //tabs states
   const [activeTab, setActiveTab] = useState(3);
 
@@ -243,9 +241,9 @@ const BinPlanosSection = () => {
           {panelOption === "withPanels" ? (
             <div>
               <img
-                src={tolva3Blue.src}
+                src={images.tolva3Blue}
                 className="absolute top-0 left-0 w-full h-full object-cover"
-                alt="Imagen de fondo"
+                alt=""
                 style={{
                   display: activeTab === 3 ? "block" : "none",
                   opacity: activeTab === 3 ? 1 : 0,
@@ -254,9 +252,9 @@ const BinPlanosSection = () => {
               />
               <img
                 ref={imgRef}
-                src={tolva3Main.src}
+                src={images.tolva3Main}
                 className="absolute top-0 left-0 w-full h-full object-cover"
-                alt="Imagen superior"
+                alt="Plano técnico de el tambor mezclador de flujo paralelo Plus"
                 style={{ clipPath: "inset(0% 0% 0% 0%)" }}
               />
             </div>
@@ -637,13 +635,13 @@ const BinPlanosSection = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     {panelOption === "withPanels" ? (
                       <img
-                        src={tolva3Blue.src}
+                        src={images.tolva3Blue}
                         alt="Dinámica con paneles"
                         className="w-[300px]"
                       />
                     ) : (
                       <img
-                        src={tolva1Main.src}
+                        src={images.tolva1Main}
                         alt="Dinámica sin paneles"
                         className="w-[300px]"
                       />
@@ -900,7 +898,7 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="min-w-[272px] h-[300px] flex items-center justify-center">
                       <img
-                        src={tolva1F.src}
+                        src={images.tolva1F}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -1025,13 +1023,13 @@ const BinPlanosSection = () => {
                     <div className="h-[300px] min-w-[644px] flex justify-center items-center">
                       {panelOption === "withPanels" ? (
                         <img
-                          src={tolva1L2.src}
+                          src={images.tolva1L2}
                           alt="Dinámica con paneles"
                           className="h-[300px] w-auto"
                         />
                       ) : (
                         <img
-                          src={tolva1L1.src}
+                          src={images.tolva1L1}
                           alt="Dinámica sin paneles"
                           className="h-[300px] w-auto"
                         />
@@ -1731,13 +1729,13 @@ const BinPlanosSection = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     {panelOption === "withPanels" ? (
                       <img
-                        src={tolva3Blue.src}
+                        src={images.tolva3Blue}
                         alt="Dinámica con paneles"
                         className="w-[300px]"
                       />
                     ) : (
                       <img
-                        src={tolva1Main.src}
+                        src={images.tolva1Main}
                         alt="Dinámica sin paneles"
                         className="w-[300px]"
                       />
@@ -1993,7 +1991,7 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="min-w-[272px] h-[300px] flex items-center justify-center">
                       <img
-                        src={tolva1F.src}
+                        src={images.tolva1F}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -2118,13 +2116,13 @@ const BinPlanosSection = () => {
                     <div className="h-[300px] min-w-[644px] flex justify-center items-center">
                       {panelOption === "withPanels" ? (
                         <img
-                          src={tolva1L2.src}
+                          src={images.tolva1L2}
                           alt="Dinámica con paneles"
                           className="h-[300px] w-auto"
                         />
                       ) : (
                         <img
-                          src={tolva1L1.src}
+                          src={images.tolva1L1}
                           alt="Dinámica sin paneles"
                           className="h-[300px] w-auto"
                         />
@@ -2835,7 +2833,7 @@ const BinPlanosSection = () => {
                       <div className="w-full"></div>
                     ) : (
                       <img
-                        src={tolva1Main.src}
+                        src={images.tolva1Main}
                         alt="Dinámica sin paneles"
                         className="w-[300px]"
                       />
@@ -3096,7 +3094,7 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="min-w-[272px] h-[300px] flex items-center justify-center">
                       <img
-                        src={tolva1F.src}
+                        src={images.tolva1F}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -3221,13 +3219,13 @@ const BinPlanosSection = () => {
                     <div className="h-[300px] min-w-[644px] flex justify-center items-center">
                       {panelOption === "withPanels" ? (
                         <img
-                          src={tolva1L2.src}
+                          src={images.tolva1L2}
                           alt="Dinámica con paneles"
                           className="h-[300px] w-auto"
                         />
                       ) : (
                         <img
-                          src={tolva1L1.src}
+                          src={images.tolva1L1}
                           alt="Dinámica sin paneles"
                           className="h-[300px] w-auto"
                         />
@@ -3928,13 +3926,13 @@ const BinPlanosSection = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     {panelOption === "withPanels" ? (
                       <img
-                        src={tolva3Blue.src}
+                        src={images.tolva3Blue}
                         alt="Dinámica con paneles"
                         className="w-[300px]"
                       />
                     ) : (
                       <img
-                        src={tolva1Main.src}
+                        src={images.tolva1Main}
                         alt="Dinámica sin paneles"
                         className="w-[300px]"
                       />
@@ -4191,7 +4189,7 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="min-w-[272px] h-[300px] flex items-center justify-center">
                       <img
-                        src={tolva1F.src}
+                        src={images.tolva1F}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -4316,13 +4314,13 @@ const BinPlanosSection = () => {
                     <div className="h-[300px] min-w-[644px] flex justify-center items-center">
                       {panelOption === "withPanels" ? (
                         <img
-                          src={tolva1L2.src}
+                          src={images.tolva1L2}
                           alt="Dinámica con paneles"
                           className="h-[300px] w-auto"
                         />
                       ) : (
                         <img
-                          src={tolva1L1.src}
+                          src={images.tolva1L1}
                           alt="Dinámica sin paneles"
                           className="h-[300px] w-auto"
                         />
@@ -5021,13 +5019,13 @@ const BinPlanosSection = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     {panelOption === "withPanels" ? (
                       <img
-                        src={tolva3Blue.src}
+                        src={images.tolva3Blue}
                         alt="Dinámica con paneles"
                         className="w-[300px]"
                       />
                     ) : (
                       <img
-                        src={tolva1Main.src}
+                        src={images.tolva1Main}
                         alt="Dinámica sin paneles"
                         className="w-[300px]"
                       />
@@ -5283,7 +5281,7 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="min-w-[272px] h-[300px] flex items-center justify-center">
                       <img
-                        src={tolva1F.src}
+                        src={images.tolva1F}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -5408,13 +5406,13 @@ const BinPlanosSection = () => {
                     <div className="h-[300px] min-w-[644px] flex justify-center items-center">
                       {panelOption === "withPanels" ? (
                         <img
-                          src={tolva1L2.src}
+                          src={images.tolva1L2}
                           alt="Dinámica con paneles"
                           className="h-[300px] w-auto"
                         />
                       ) : (
                         <img
-                          src={tolva1L1.src}
+                          src={images.tolva1L1}
                           alt="Dinámica sin paneles"
                           className="h-[300px] w-auto"
                         />
@@ -6114,13 +6112,13 @@ const BinPlanosSection = () => {
                   <div className="col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     {panelOption === "withPanels" ? (
                       <img
-                        src={tolva3Blue.src}
+                        src={images.tolva3Blue}
                         alt="Dinámica con paneles"
                         className="w-[300px]"
                       />
                     ) : (
                       <img
-                        src={tolva1Main.src}
+                        src={images.tolva1Main}
                         alt="Dinámica sin paneles"
                         className="w-[300px]"
                       />
@@ -6377,7 +6375,7 @@ const BinPlanosSection = () => {
                     </div>
                     <div className="min-w-[272px] h-[300px] flex items-center justify-center">
                       <img
-                        src={tolva1F.src}
+                        src={images.tolva1F}
                         alt=""
                         className="max-w-full max-h-full object-contain"
                       />
@@ -6502,13 +6500,13 @@ const BinPlanosSection = () => {
                     <div className="h-[300px] min-w-[644px] flex justify-center items-center">
                       {panelOption === "withPanels" ? (
                         <img
-                          src={tolva1L2.src}
+                          src={images.tolva1L2}
                           alt="Dinámica con paneles"
                           className="h-[300px] w-auto"
                         />
                       ) : (
                         <img
-                          src={tolva1L1.src}
+                          src={images.tolva1L1}
                           alt="Dinámica sin paneles"
                           className="h-[300px] w-auto"
                         />

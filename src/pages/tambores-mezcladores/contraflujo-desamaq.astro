@@ -11,6 +11,13 @@ import HotspotSectionContra from "../../components/DrumMixers/Contraflujo/Desama
 import UltimaSeccion from "../../components/DrumMixers/UltimaSeccion.astro";
 
 import PlanosCf from "../../components/DrumMixers/Contraflujo/Desamaq/PlanosCf";
+import { webpUrls } from "../../components/lib/optimizeImages";
+import planos_tolva3Main from "../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTi_Blueprint/Pla_Cf_Des_TI_VA.png";
+import planos_tolva3Blue from "../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTi_Blueprint/Bp_Pla_Cf_Des_TI_VA.png";
+import planos_tolva1L2 from "../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTi_Blueprint/Bp_Pla_Cf_Des_TI_VL.png";
+import planos_tolva1L1 from "../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTm_Blueprint/Bp_Pla_Cf_Des_TM_VL.png";
+import planos_tolva1F from "../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTi_Blueprint/Bp_Pla_Cf_Des_TI_VT.png";
+import planos_tolva1Main from "../../assets/images/DrumMixers/Contraflujo/Desamaq/CfDTm_Blueprint/Bp_Pla_Cf_Des_TM_VA.png";
 import SliderTamborCom from "../../components/DrumMixers/Contraflujo/Desamaq/SliderTambores.astro";
 
 import HeroComponentV1 from "../../components/unitComponents/HeroComponentV1.astro";
@@ -52,6 +59,16 @@ const cards = [
     textColor: "#ffffff",
   },
 ];
+
+// Planos optimizados a WebP (≤1200 px) para PlanosCf
+const planosImages = await webpUrls({
+  tolva3Main: planos_tolva3Main,
+  tolva3Blue: planos_tolva3Blue,
+  tolva1L2: planos_tolva1L2,
+  tolva1L1: planos_tolva1L1,
+  tolva1F: planos_tolva1F,
+  tolva1Main: planos_tolva1Main,
+});
 ---
 
 <Layout title="Tambor de contraflujo">
@@ -135,7 +152,7 @@ const cards = [
 
   <BolsasSeccion />
 
-  <PlanosCf client:only />
+  <PlanosCf client:only images={planosImages} />
 
   <UltimaSeccion />
 </Layout>

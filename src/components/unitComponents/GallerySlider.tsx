@@ -149,7 +149,7 @@ export default function GallerySlider({
             <img
               ref={imageRef}
               src={slides[currentIndex].image}
-              alt={`Slide ${currentIndex + 1}`}
+              alt={slides[currentIndex].caption || `Imagen ${currentIndex + 1} de ${slides.length}`}
               className=" max-h-[200px] lg:max-h-[400px] object-contain mx-auto"
             />
           </div>
@@ -185,7 +185,7 @@ export default function GallerySlider({
               >
                 <img
                   src={slide.image}
-                  alt={`Thumbnail ${index + 1}`}
+                  alt=""
                   className="h-20 w-auto object-cover"
                 />
               </button>
@@ -270,7 +270,7 @@ export default function GallerySlider({
         <div className="relative flex-1 w-full flex items-center justify-center">
           <img
             src={slides[currentIndex].image}
-            alt={`Slide ${currentIndex + 1} en pantalla completa`}
+            alt={slides[currentIndex].caption || `Imagen ${currentIndex + 1} de ${slides.length}`}
             className="lg:max-h-[90vh] max-w-full object-contain"
           />
         </div>

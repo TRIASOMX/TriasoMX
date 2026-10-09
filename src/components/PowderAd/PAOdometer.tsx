@@ -85,7 +85,7 @@ const PAOdometer = () => {
 
         <div className="flex flex-col items-center justify-center col-span-1 md:col-span-4">
           <div>
-            <img src={img1.src} alt="Powder Additives VL" />
+            <img src={img1.src} alt="Alimentador de aditivos en polvo TRIASO" />
           </div>
         </div>
 

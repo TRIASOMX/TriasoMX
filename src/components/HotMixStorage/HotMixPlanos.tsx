@@ -262,7 +262,7 @@ const HotMixPlanos = () => {
           <img
             src={HMainBS1.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display:
                 activeVersion === "50tons" && activeTab === 1
@@ -279,7 +279,7 @@ const HotMixPlanos = () => {
             ref={imgRef}
             src={HMainS1.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen superior"
+            alt="Plano técnico de el silo de mezcla asfáltica"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>
@@ -1644,7 +1644,7 @@ const HotMixPlanos = () => {
                   <div className="col-span-1 md:col-span-2 flex items-start justify-center w-full h-full order-1 md:order-2">
                     <img
                       src={selectedImage}
-                      alt="Selected image"
+                      alt="Plano técnico del silo de mezcla asfáltica seleccionado"
                       className="w-[120px] h-[600px]"
                     />
                   </div>

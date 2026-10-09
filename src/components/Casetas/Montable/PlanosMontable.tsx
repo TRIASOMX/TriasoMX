@@ -96,7 +96,7 @@ const DrumMixPlanos = () => {
           <img
             src={mainBlueP.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen de fondo"
+            alt=""
             style={{
               display: activeTab === 3 ? "block" : "none",
               opacity: activeTab === 3 ? 1 : 0,
@@ -107,7 +107,7 @@ const DrumMixPlanos = () => {
             ref={imgRef}
             src={mainCaseta.src}
             className="absolute top-0 left-0 w-full h-full object-cover"
-            alt="Imagen superior"
+            alt="Plano técnico de la caseta de control montable"
             style={{ clipPath: "inset(0% 0% 0% 0%)" }}
           />
         </div>

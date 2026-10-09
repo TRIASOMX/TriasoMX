@@ -45,7 +45,7 @@ const heroImgClass =
       isOptimizedImage ? (
         <Image
           src={heroImage as ImageMetadata}
-          alt="Hero Image"
+          alt=""
           class={heroImgClass}
           loading="eager"
           fetchpriority="high"
@@ -53,7 +53,7 @@ const heroImgClass =
       ) : (
         <img
           src={heroImage as string}
-          alt="Hero Image"
+          alt=""
           class={heroImgClass}
           loading="eager"
           fetchpriority="high"

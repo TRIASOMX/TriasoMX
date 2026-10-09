@@ -8,7 +8,7 @@ Sitio web informativo de TRIASO, construido con Astro.
 - **UI interactiva**: React 19 (`.tsx`) montado dentro de páginas `.astro`
 - **Estilos**: Tailwind CSS 3 (config en `tailwind.config.mjs`, colores custom vía variables CSS `--azul-bg1`, `--rojo-btn`, etc.)
 - **Animación**: GSAP, `scrollAnimations.tsx` por sección
-- **Carruseles/sliders**: Swiper, keen-slider
+- **Carruseles/sliders**: Swiper
 - **PDF**: `@react-pdf/renderer` (usado en la Calculadora de inversión)
 - **TypeScript**: modo `strict` (extiende `astro/tsconfigs/strict`)
 
@@ -48,6 +48,7 @@ public/
 - Los componentes se agrupan por feature/producto en su propia carpeta dentro de `src/components/`; si un componente es genérico y reutilizable en varias secciones, va en `unitComponents/`.
 - Componentes puramente de contenido/estáticos → `.astro`. Componentes con estado, interacción o hooks → `.tsx` (React), importados dentro del `.astro` correspondiente con la directiva `client:*` que corresponda (`client:load`, `client:visible`, etc.).
 - Colores y variables de marca se definen como variables CSS globales y se referencian en Tailwind (`blueMain`, `redBg`, `grisT`...) — no hardcodear hex codes nuevos, agregar la variable si hace falta un color nuevo.
+- Imágenes en islas React (`.tsx`): no usar `import img from "…png"` + `img.src` (sirve el original sin optimizar). Calcular la URL en el frontmatter del `.astro` con `webpUrl()`/`webpUrls()` de `src/components/lib/optimizeImages.ts` y pasarla como prop. En `.astro` estático, preferir `<Image>`/`<Picture>`.
 - Formateo de números/moneda: usar las utilidades de `src/components/lib/utils.tsx` (`formatNumber`, `formatCurrency`, `parseNumber`) en vez de reimplementar.
 
 ## Verificación
