@@ -1,23 +1,39 @@
 ---
 export interface Props {
   cotizarHref: string;
-  compararHref: string;
+  /** Sin href no se muestra el botón "Comparar" */
+  compararHref?: string;
+  /** Color del botón "Cotizar". Por defecto negro */
+  cotizarColor?: "black" | "red" | "blue";
 }
 
-const { cotizarHref, compararHref } = Astro.props;
+const { cotizarHref, compararHref, cotizarColor = "black" } = Astro.props;
+
+const cotizarStyles = {
+  black: {
+    link: "bg-black hover:bg-white",
+    text: "text-white hover:text-black",
+  },
+  red: { link: "bg-redBg hover:bg-redBgHover", text: "text-white" },
+  blue: { link: "bg-blueMain hover:bg-blueMainHover", text: "text-white" },
+}[cotizarColor];
 ---
 
 <div class="flex flex-row justify-center items-center gap-5 py-4">
   <a
     href={cotizarHref}
-    class="bg-black rounded-lg w-36 text-center transition-all duration-300 hover:bg-white"
+    class={`${cotizarStyles.link} rounded-lg w-36 text-center transition-all duration-300`}
   >
-    <p class="py-3 font-semibold text-white hover:text-black">Cotizar</p>
+    <p class={`py-3 font-semibold ${cotizarStyles.text}`}>Cotizar</p>
   </a>
-  <a
-    href={compararHref}
-    class="bg-white rounded-lg w-36 text-center transition-all duration-300 hover:bg-black"
-  >
-    <p class="py-3 font-semibold text-black hover:text-white">Comparar</p>
-  </a>
+  {
+    compararHref && (
+      <a
+        href={compararHref}
+        class="bg-white rounded-lg w-36 text-center transition-all duration-300 hover:bg-black"
+      >
+        <p class="py-3 font-semibold text-black hover:text-white">Comparar</p>
+      </a>
+    )
+  }
 </div>

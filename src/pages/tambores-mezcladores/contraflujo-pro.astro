@@ -12,6 +12,41 @@ import BolsasSeccion from "../../components/DrumMixers/BolsasSeccion.astro";
 import hero2 from "../../assets/images/DrumMixers/Contraflujo/Cpro.webp";
 import UltimaSeccion from "../../components/DrumMixers/UltimaSeccion.astro";
 import SliderTamborCom from "../../components/DrumMixers/SliderTamborCom.astro";
+import GallerySlider from "../../components/unitComponents/GallerySlider";
+import { webpUrl } from "../../components/lib/optimizeImages";
+import dm1 from "../../assets/images/DrumMixers/Gallery/DM1.webp";
+import dm2 from "../../assets/images/DrumMixers/Gallery/DM2.webp";
+import dm3 from "../../assets/images/DrumMixers/Gallery/DM3.webp";
+import dm4 from "../../assets/images/DrumMixers/Gallery/DM4.webp";
+import dm5 from "../../assets/images/DrumMixers/Gallery/DM5.webp";
+import dm6 from "../../assets/images/DrumMixers/Gallery/DM6.webp";
+import dm7 from "../../assets/images/DrumMixers/Gallery/DM7.webp";
+import dm8 from "../../assets/images/DrumMixers/Gallery/DM8.webp";
+import dm9 from "../../assets/images/DrumMixers/Gallery/DM9.webp";
+import dm10 from "../../assets/images/DrumMixers/Gallery/DM10.webp";
+import dm11 from "../../assets/images/DrumMixers/Gallery/DM11.webp";
+
+const drumGallery = [
+  { src: dm1, caption: "Tambor mezclador de 80 Tmph, de contraflujo, en posición de trabajo" },
+  { src: dm2, caption: "Tambor mezclador de 80 Tmph, de contraflujo, en posición de trabajo" },
+  { src: dm3, caption: "Tambor mezclador de 80 Tmph, de contraflujo, en posición de transporte" },
+  { src: dm4, caption: "Tambor mezclador de 80 Tmph, de contraflujo, en posición de transporte" },
+  { src: dm5, caption: "Tambor mezclador de 140 Tmph, de contraflujo, en posición de trabajo" },
+  { src: dm6, caption: "Tambor mezclador de 140 Tmph, de contraflujo, en posición de trabajo" },
+  { src: dm7, caption: "Tambor mezclador de 140 Tmph, de contraflujo, en posición de transporte" },
+  { src: dm8, caption: "Tambor mezclador de 140 Tmph, de contraflujo, con pugmill, en posición de trabajo" },
+  { src: dm9, caption: "Tambor mezclador de 140 Tmph, de contraflujo, con pugmill, en posición de trabajo" },
+  { src: dm10, caption: "Tambor mezclador de 140 Tmph, de contraflujo, con pugmill, en posición de transporte" },
+  { src: dm11, caption: "Tambor mezclador de 140 Tmph, de contraflujo, con pugmill, en posición de trabajo con RAP" },
+];
+
+// La galería usa el caption como título y como alt de cada imagen
+const gallerySlides = await Promise.all(
+  drumGallery.map(async ({ src, caption }) => ({
+    image: await webpUrl(src, 1600),
+    caption,
+  })),
+);
 
 const cards = [
   {
@@ -135,6 +170,10 @@ const cards = [
   <QuemadorSeccion />
 
   <BolsasSeccion />
+
+  <section>
+    <GallerySlider client:visible slides={gallerySlides} />
+  </section>
 
   <DrumMixPlanos client:only />
 

@@ -12,7 +12,14 @@ import UltimaSeccion from "../../components/DrumMixers/UltimaSeccion.astro";
 import HeroImage2 from "../../assets/images/DrumMixers/FlujoParalelo/Plus/FPlus.webp";
 import SliderTamborCom from "../../components/DrumMixers/Paralelo/Plus/SliderTamborFPlus.astro";
 import FPPlusPlanos from "../../components/DrumMixers/Paralelo/Plus/FPPlusPlanos";
-import { webpUrls } from "../../components/lib/optimizeImages";
+import { webpUrl, webpUrls } from "../../components/lib/optimizeImages";
+import GallerySlider from "../../components/unitComponents/GallerySlider";
+import fpPlusTrabA from "../../assets/images/DrumMixers/FlujoParalelo/Plus/GallerySlider/trab_a.webp";
+import fpPlusTrabB from "../../assets/images/DrumMixers/FlujoParalelo/Plus/GallerySlider/trab_b.webp";
+import fpPlusTranspA from "../../assets/images/DrumMixers/FlujoParalelo/Plus/GallerySlider/transp_a.webp";
+import fpPlusTranspB from "../../assets/images/DrumMixers/FlujoParalelo/Plus/GallerySlider/transp_b.webp";
+import fpPlusTranspC from "../../assets/images/DrumMixers/FlujoParalelo/Plus/GallerySlider/transp_c.webp";
+import fpPlusTranspD from "../../assets/images/DrumMixers/FlujoParalelo/Plus/GallerySlider/transp_d.webp";
 import planos_tolva3Main from "../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/PlaFpPlus_TI_VA.png";
 import planos_tolva3Blue from "../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Ti_FpP/BpPlaFpPlus_TI_VA.png";
 import planos_tolva1L1 from "../../assets/images/DrumMixers/FlujoParalelo/Plus/Blueprint_Tm_FpP/BpPlaFpPlus_TM_VL.png";
@@ -61,6 +68,23 @@ const planosImages = await webpUrls({
   tolva1F: planos_tolva1F,
   tolva1Main: planos_tolva1Main,
 });
+
+const drumGallery = [
+  { src: fpPlusTrabA, caption: "Tambor mezclador de 140 Tmph, con su elevador desplegado para trabajar" },
+  { src: fpPlusTrabB, caption: "Tambor mezclador de 140 Tmph, con su elevador desplegado para trabajar" },
+  { src: fpPlusTranspA, caption: "Tambor mezclador de 140 Tmph, con su elevador retraído para transporte" },
+  { src: fpPlusTranspB, caption: "Tambor mezclador de 140 Tmph, con su elevador retraído para transporte" },
+  { src: fpPlusTranspC, caption: "Tambor mezclador de 140 Tmph, con su elevador retraído para transporte" },
+  { src: fpPlusTranspD, caption: "Tambor mezclador de 140 Tmph, con su elevador retraído para transporte" },
+];
+
+// La galería usa el caption como título y como alt de cada imagen
+const gallerySlides = await Promise.all(
+  drumGallery.map(async ({ src, caption }) => ({
+    image: await webpUrl(src, 1600),
+    caption,
+  })),
+);
 ---
 
 <Layout title="Tambor de Paralelo Plus">
@@ -141,6 +165,10 @@ const planosImages = await webpUrls({
   <QuemadorSeccion />
 
   <LavadoraSeccion />
+
+  <section>
+    <GallerySlider client:visible slides={gallerySlides} />
+  </section>
 
   <FPPlusPlanos client:only images={planosImages} />
 
